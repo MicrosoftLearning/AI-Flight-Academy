@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: The Imagineer Hack
-  text: Build the agent. Ship it live.
-  tagline: A 2-hour hands-on hack for Global Skilling Team Week. Pick your altitude, snap together the building blocks, and walk out with a working agent you built yourself.
+  text: From everyday task to working agent.
+  tagline: Two hours, your tools, and a real problem to crack. Pick how you want to build, and walk out with an agent that's yours.
   image:
     src: /hero.svg
     alt: The Imagineer Hack
