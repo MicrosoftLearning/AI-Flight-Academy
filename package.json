@@ -1,0 +1,16 @@
+{
+  "name": "team-week-imagineer-hack",
+  "version": "1.0.0",
+  "private": true,
+  "description": "The Imagineer Hack — a 2-hour hands-on agent-building hack for Global Skilling Team Week.",
+  "devDependencies": {
+    "markdownlint-cli2": "^0.22.0",
+    "vitepress": "^2.0.0-alpha.12"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "lint:md": "markdownlint-cli2 \"docs/**/*.md\" \"#docs/node_modules\""
+  }
+}
