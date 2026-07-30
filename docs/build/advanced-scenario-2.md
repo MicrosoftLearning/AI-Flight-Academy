@@ -112,7 +112,7 @@ Madaan et al. (2023): self-critique improves quality only when the critique is s
 
 ## Steps 8 and 9 — the two shared beats
 
-Around halfway the room stops for a **team checkpoint**, and at ~55 minutes a **twist** lands. Both are on the [Scenario 2 brief](/scenarios/scenario-2-greenlight#two-beats-everyone-hits).
+Around halfway the room stops for a **team checkpoint**, and at ~55 minutes a **twist** lands. Both are on the [Scenario 2 brief](/scenarios/scenario-2#two-beats-everyone-hits).
 
 ---
 
@@ -182,4 +182,4 @@ The guardrail is roughly ten lines. Do not build a framework. Remove the evidenc
 - [ ] The coverage matrix — one piece served for one audience, abandoned for another
 - [ ] The PR check turning red because an audience was left unserved, green after the fix
 
-[← Back to start](/) · [Scenario 2 brief](/scenarios/scenario-2-greenlight)
+[← Back to start](/) · [Scenario 2 brief](/scenarios/scenario-2)

@@ -104,7 +104,7 @@ Liu et al. (2023) found models attend worst to instructions in the middle of a l
 
 ## Steps 8 and 9 — the two shared beats
 
-Around halfway the room stops for a **team checkpoint**, and at ~55 minutes a **twist** lands. Both are on the [Scenario 2 brief](/scenarios/scenario-2-greenlight#two-beats-everyone-hits).
+Around halfway the room stops for a **team checkpoint**, and at ~55 minutes a **twist** lands. Both are on the [Scenario 2 brief](/scenarios/scenario-2#two-beats-everyone-hits).
 
 ---
 
@@ -176,4 +176,4 @@ Madaan et al. (2023) showed self-critique improves quality — but only when the
 - [ ] The Adaptive Card in Teams with Approve and Send back
 - [ ] Someone else reseating the published council with their own audiences
 
-[← Back to start](/) · [Scenario 2 brief](/scenarios/scenario-2-greenlight)
+[← Back to start](/) · [Scenario 2 brief](/scenarios/scenario-2)

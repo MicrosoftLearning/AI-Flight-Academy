@@ -120,7 +120,7 @@ Take the passage two seats scored in opposite directions and make them argue it 
 
 ## Steps 8 and 9 — the two shared beats
 
-Around halfway the room stops for a **team checkpoint**, and at ~55 minutes a **twist** lands. Both are on the [Scenario 2 brief](/scenarios/scenario-2-greenlight#two-beats-everyone-hits).
+Around halfway the room stops for a **team checkpoint**, and at ~55 minutes a **twist** lands. Both are on the [Scenario 2 brief](/scenarios/scenario-2#two-beats-everyone-hits).
 
 ---
 
@@ -176,4 +176,4 @@ Route the digest to a chat or channel you created for this exercise — not a li
 - [ ] A transformation plan that changes a *format*, not just words
 - [ ] The scheduled convene arriving without you asking for it
 
-[← Back to start](/) · [Scenario 2 brief](/scenarios/scenario-2-greenlight)
+[← Back to start](/) · [Scenario 2 brief](/scenarios/scenario-2)

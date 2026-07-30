@@ -37,7 +37,7 @@ const altitudes: Altitude[] = [
 // Scenarios are placeholders until the LT locks them.
 const scenarios: Scenario[] = [
   { id: "scenario-1", emoji: "🧬", label: "Scenario 1", sub: "The Digital Twin — WIP" },
-  { id: "scenario-2", emoji: "🎯", label: "Scenario 2", sub: "TBD" },
+  { id: "scenario-2", emoji: "�", label: "Scenario 2", sub: "The Greenlight — WIP" },
   { id: "scenario-3", emoji: "🎯", label: "Scenario 3", sub: "TBD" },
 ];
 
