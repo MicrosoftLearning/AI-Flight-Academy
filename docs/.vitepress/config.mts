@@ -25,12 +25,12 @@ export default defineConfig({
         ],
       },
       { text: "Submit", link: "/submit/" },
+      { text: "Guides", link: "/bricks/" },
       {
         text: "Resources",
         items: [
           { text: "Downloads", link: "/resources/downloads" },
           { text: "Where This Comes From", link: "/resources/research" },
-          { text: "Reference guides", link: "/bricks/" },
           { text: "For facilitators", link: "/facilitator/" },
           { text: "More", link: "/resources/" },
         ],
@@ -53,8 +53,8 @@ export default defineConfig({
       ],
       "/bricks/": [
         {
-          text: "Reference guides",
-          items: [{ text: "Overview", link: "/bricks/" }],
+          text: "Step-by-step guides",
+          items: [{ text: "All guides", link: "/bricks/" }],
         },
         {
           text: "🟢 Cowork",

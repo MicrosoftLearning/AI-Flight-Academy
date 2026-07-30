@@ -47,6 +47,10 @@ Grab these now — you'll need the first one in about two minutes.
   </a>
 </div>
 
+::: tip Want every step spelled out?
+This page gets you through the build, with the essentials expandable in place. There are also **[full step-by-step guides](/bricks/)** covering every click and setting — open one in a new tab and keep it beside this page.
+:::
+
 ---
 
 ## 1 · Install Twin Forge
@@ -92,7 +96,10 @@ Skills live in OneDrive at `/Documents/Cowork/skills/{name}/`. A skill can carry
 
 **The reason this matters:** it's the [Agent Skills open standard](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/blob/main/Allfiles/twin-forge/SKILL.md). The same file is read by VS Code Copilot, Claude Code, Gemini CLI, Cursor and 30+ other tools. You're not writing something trapped in one product.
 
-**Want to make your own later?** Cowork → Customize → Skills → **Add ▾** → **Create new** walks you through it. Or just say *"build me a skill that…"* in chat and it'll draft one with you.
+**Want to make your own later?** Cowork → Customize → Skills → **Add ▾** → **Create new** walks you through it. Or just say *"build me a skill that…"* in chat and it'll draft one with you.
+
+<a href="/Team-Week-Imagineer-Hack/bricks/cowork-build-skill" target="_blank" rel="noreferrer">📖 Write a reusable Cowork skill — full guide (opens in a new tab) ↗</a>
+
 :::
 
 ## 2 · Pick your data
@@ -165,7 +172,10 @@ typical response time by sender.
 
 **Two rules:** ask for *one* source at a time, and tell it not to summarize before returning. Summaries lose exactly the detail you need.
 
-Keep the prompts that work — you'll want to run them again.
+Keep the prompts that work — you'll want to run them again.
+
+<a href="/Team-Week-Imagineer-Hack/bricks/cowork-connect-source" target="_blank" rel="noreferrer">📖 Connect Cowork to a data source — full guide (opens in a new tab) ↗</a>
+
 :::
 
 
@@ -232,11 +242,15 @@ Cowork proposes a **"Set up trigger?"** card showing *When*, *Run in*, *What it 
 
 Triggers fire on incoming email or a Teams message/@mention, and the default is **draft-and-approve** — it prepares the action and asks first. Leave that on.
 
-**Before you arm anything:** run the skill manually on new input once and check the output still holds up. Automating something unreliable just makes it unreliable on a schedule.
+**Before you arm anything:** run the skill manually on new input once and check the output still holds up. Automating something unreliable just makes it unreliable on a schedule.
+
+<a href="/Team-Week-Imagineer-Hack/bricks/cowork-rerun-skill" target="_blank" rel="noreferrer">📖 Re-run a skill on new inputs — full guide (opens in a new tab) ↗</a>
+
 :::
 
 ---
 
+<a href="/Team-Week-Imagineer-Hack/bricks/cowork-formatted-output" target="_blank" rel="noreferrer">📖 Produce a formatted output — full guide (opens in a new tab) ↗</a>
 ## Show it off
 
 60–90 seconds. Hit these:

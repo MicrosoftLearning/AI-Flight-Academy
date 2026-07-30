@@ -60,6 +60,10 @@ Work in your own copy, not in the repo folder.
 
 **Check this first, before anything else:** open Copilot Chat in VS Code and confirm you can switch to **Agent** mode. It's an org-managed setting and it may be off. If it is, use the Copilot CLI instead — everything here works either way.
 
+::: tip Want every step spelled out?
+This page gets you through the build. There are also **[full step-by-step guides](/bricks/)** for each part — open one in a new tab and keep it beside this page.
+:::
+
 ---
 
 ## 1 · Split the work
@@ -124,6 +128,8 @@ Either way, extract these four:
 
 ::: danger Don't build a Graph integration
 Azure AD app registration plus MSAL will take 30–60 minutes and eat your session. Roughly a third of teams that try it never get past it. Let Cowork retrieve, or use the persona pack. Your working style is slow-moving data — a monthly snapshot is plenty.
+
+<a href="/Team-Week-Imagineer-Hack/bricks/advanced-work-iq" target="_blank" rel="noreferrer">📖 Ground on live data with Work IQ — full guide (opens in a new tab) ↗</a>
 :::
 
 ## 4 · Write the agents
@@ -187,7 +193,10 @@ agents: ['ambition', 'obligation', 'capacity']
 copilot -p "Run the council on this dilemma: <text>" --allow-all-tools
 ```
 
-On Windows the command line caps at 8191 characters, so long prompts have to go through a file — `twinlib.py` in the starter repo handles that for you.
+On Windows the command line caps at 8191 characters, so long prompts have to go through a file — `twinlib.py` in the starter repo handles that for you.
+
+<a href="/Team-Week-Imagineer-Hack/bricks/advanced-setup" target="_blank" rel="noreferrer">📖 Set up Scout / GitHub Copilot — full guide (opens in a new tab) ↗</a>
+
 :::
 
 ## 5 · Expose it as a server
@@ -237,7 +246,10 @@ if __name__ == "__main__":
 
 Then `Ctrl+Shift+P` → **MCP: List Servers** → start it. Switch Copilot Chat to **Agent** mode and your tools appear under the 🔧 icon.
 
-**Two transports, two audiences.** `stdio` for local editors. `streamable-http` is the shape a Cowork connector needs — JSON-RPC 2.0 over HTTPS. Production would also need TLS and OAuth; local is fine today.
+**Two transports, two audiences.** `stdio` for local editors. `streamable-http` is the shape a Cowork connector needs — JSON-RPC 2.0 over HTTPS. Production would also need TLS and OAuth; local is fine today.
+
+<a href="/Team-Week-Imagineer-Hack/bricks/advanced-mcp-connector" target="_blank" rel="noreferrer">📖 Build a custom connector (MCP) — full guide (opens in a new tab) ↗</a>
+
 :::
 
 ## 6 · Add the guardrail
@@ -275,7 +287,10 @@ def check_boundary(action: str, recipient: str = "") -> str:
 
 Note it returns **the rule and where it came from**, not just a verdict — so a calling agent can explain itself, and a human can audit it.
 
-**Try this in your demo:** have another agent ask your twin to explain why the person is out next week. Watching it return `NEVER` — with a citation — is the moment the room understands the difference between a boundary and a polite request.
+**Try this in your demo:** have another agent ask your twin to explain why the person is out next week. Watching it return `NEVER` — with a citation — is the moment the room understands the difference between a boundary and a polite request.
+
+<a href="/Team-Week-Imagineer-Hack/bricks/advanced-guardrail" target="_blank" rel="noreferrer">📖 Add a guardrail / output check — full guide (opens in a new tab) ↗</a>
+
 :::
 
 ## 7 · ⚡ The twist
