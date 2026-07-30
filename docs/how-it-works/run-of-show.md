@@ -8,7 +8,7 @@ Facilitator-facing agenda for the two-hour hack.
 
 | Time | Segment | What happens |
 | ---- | ------- | ------------ |
-| 0:00–0:05 | Welcome | Frame the day: AI is competent in general, weak in the last mile. Today, teams build that last mile. |
+| 0:00–0:05 | Welcome | Frame the problem: Copilot personalizes by inference, which you cannot inspect, correct, or carry between tools. Teams write that layer explicitly. |
 | 0:05–0:10 | Pick path | Participants choose Path A, their own twin, or Path B, Avery Washington's synthetic persona pack. Reinforce privacy. |
 | 0:10–0:15 | Seal your answers | Everyone answers the forced-choice dilemmas and sets them aside. These are for the final reveal, not scoring. |
 | 0:15–0:30 | Bootstrap v0.1 | Use the Twin Forge skill, a downloadable Cowork skill that interviews the participant and emits `soul.md` v0.1. Avery Washington teams use the persona pack. |

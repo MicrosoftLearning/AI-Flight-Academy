@@ -6,12 +6,12 @@ title: How the Hack Works
 
 You have two hours to turn a real work problem into a working agent.
 
-You will pick a scenario, pick an altitude, follow the building blocks, and demo what you built. Coaches will roam. Your team will make choices together. The goal is not polish. The goal is a working thing you understand well enough to keep using.
+You pick a scenario, pick how you want to build, and demo what you made. Coaches are in the room throughout. Aim for something that works and that you understand well enough to keep using, not something polished.
 
 ## The flow
 
 1. **Pick a scenario** — start with a real Microsoft work problem.
-2. **Pick your altitude** — Base, Builder, or Advanced.
+2. **Pick how you want to build** — Cowork with no code, or real code in VS Code.
 3. **Choose your data path** — use your own data privately, or use the provided synthetic pack.
 4. **Build the smallest working version** — get to v0.1 fast.
 5. **Test it on a real prompt** — see where it breaks.
@@ -22,7 +22,7 @@ You will pick a scenario, pick an altitude, follow the building blocks, and demo
 
 - **Nothing sends.** Your agent drafts for human review. It does not send email, book meetings, or make commitments on your behalf.
 - **Keep private data private.** If you use your own Microsoft 365 data, keep it on your own screen.
-- **Build small.** A short, sharp spec usually beats a long one.
+- **Build small.** A short spec outperforms a long one.
 - **Use observed behavior.** What you actually did last time matters more than what you wish you did.
 - **Portability matters.** Prefer files and formats you can carry across tools.
 
@@ -30,7 +30,7 @@ You will pick a scenario, pick an altitude, follow the building blocks, and demo
 
 Done means you can run your agent on a fresh prompt and get useful output that reflects the scenario.
 
-For Scenario 1, that means a portable twin spec — `soul.md`, `voice.md`, and `revealed.md` — plus an agent that uses it to draft, decide, or critique in a way that feels specific to the person it represents.
+For Scenario 1, that means a portable twin spec — `soul.md`, `voice.md`, and `revealed.md` — plus an agent that uses it to draft, decide, or critique in a way that is specific to the person it represents.
 
 ## What you'll walk out with
 

@@ -14,9 +14,9 @@ Same scenario, three ways in. Pick whichever fits how you like to work — no tr
 
 ## Not sure?
 
-- **Never built an agent before?** 🟢 Cowork. It's guided the whole way, and a sharp Cowork build beats a rushed code one.
+- **Never built an agent before?** 🟢 Cowork. It is guided end to end and needs no setup.
 - **You live in a terminal or VS Code?** 🟣 Code.
 
-::: tip Everyone ends up with the same thing
-All three produce the same portable spec. The tracks differ in how you get there and how far you push it.
+::: tip All three produce the same artifact
+The portable spec is identical. The tracks differ in what you build around it.
 :::

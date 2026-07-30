@@ -8,10 +8,6 @@ title: Resources
 
 **[⬇ Downloads](/resources/downloads)** — Twin Forge, the Avery Washington persona pack, and the Advanced starter repo.
 
-## Why the scenario works the way it does
-
-**[Where This Comes From](/resources/research)** — the thinking behind the scenario, what's peer reviewed, what isn't, and the limits worth stating out loud.
-
 ## Reference hacks
 
 - [Agent Academy](https://github.com/microsoft/agent-academy) — self-paced guided missions (Copilot Studio)

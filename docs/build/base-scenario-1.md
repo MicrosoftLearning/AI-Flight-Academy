@@ -8,25 +8,27 @@ title: The Digital Twin — Cowork
 
 **You'll build this in Cowork. No code, and no experience needed.**
 
-## Why
+## What you're solving
 
-AI can write any email. It can't write *your* email.
+Copilot already personalizes. It has memory, and Work IQ reads your mail, calendar, and files. That covers a lot.
 
-It knows everything about your company and nothing about you — so every draft needs a rewrite, and the time you saved disappears in the last mile.
+What it doesn't have is anything you've explicitly **decided**. How you rank priorities when two of them collide. Which promises you protect. What you'd never send without checking first. That gets inferred from what you've already done — you can't inspect it, you can't correct it, and it doesn't move with you when you switch tools.
 
-**The last mile is you.** Today you're going to write that part down.
+So you re-supply the same context every session, and rewrite the output when you don't.
+
+Today you write it down once, in a file you control.
 
 ## What you'll walk out with
 
-A one-page spec of how you actually work — and any AI tool can read it.
+A one-page spec of how you work, in plain text, that any AI tool can read.
 
 | File | What it holds |
 | --- | --- |
 | **soul** | How you decide. Your priorities, and what you do when two of them collide. |
 | **voice** | How you write. Real emails of yours, and the patterns inside them. |
-| **revealed** | What your calendar says about you — versus what you say about you. |
+| **revealed** | What your calendar shows about how you actually spend time. |
 
-It's plain text, it's yours, and it works in Cowork, VS Code, and 30+ other AI tools without changing a thing.
+It's yours, you can edit it, and it works in Cowork, VS Code, and 30+ other AI tools without changing anything.
 
 ## Before you start
 
@@ -137,7 +139,7 @@ Every question is *"what did you actually do last time?"* — not *"what do you 
 
 Your first draft is too long. Cut it to about one page.
 
-This feels wrong and it's the single highest-value thing you'll do. Longer isn't better. Anthropic [found while building Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback) that broad principles worked better than long, specific ones — the longer versions actually reduced effectiveness. And ["Lost in the Middle"](https://arxiv.org/abs/2307.03172) (peer-reviewed, *Transactions of the ACL*) showed models pay least attention to whatever sits in the middle of a long prompt.
+Cutting is the highest-value thing you'll do here. Longer is not better. Anthropic [found while building Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback) that broad principles worked better than long, specific ones — the longer versions actually reduced effectiveness. And ["Lost in the Middle"](https://arxiv.org/abs/2307.03172) (peer-reviewed, *Transactions of the ACL*) showed models pay least attention to whatever sits in the middle of a long prompt.
 
 **Cut anything that isn't a rule you'd actually apply.**
 
@@ -145,11 +147,9 @@ This feels wrong and it's the single highest-value thing you'll do. Longer isn't
 
 Open your voice file. If it *describes* your writing — "professional but friendly" — replace that with **actual emails you sent.** Five to ten, pasted exactly as you wrote them.
 
-Don't tidy them up. The dropped apostrophes, the dashes, the way you sign off — that's the whole signal.
+Do not tidy them up. The dropped apostrophes, the dash habits, the signoff — those are the specifics a description would lose.
 
-When you write, you make hundreds of small choices you've never consciously noticed — how you open, whether you bullet or run on, what you do with dashes, how you sign off. You can't list them. But they're all sitting there in your sent folder.
-
-Showing beats describing.
+Most people cannot accurately describe their own writing. The openers, the sentence length, the punctuation habits — you use them without deciding to, so you cannot list them from memory. Your sent folder already contains them.
 
 ::: details Getting good samples out of Cowork
 There's nothing to connect and no auth to set up — Cowork already reaches your mail, calendar, Teams, files and org chart through Work IQ. It only ever sees what you can see.
@@ -189,13 +189,13 @@ Your twin needs to know what you do when two good things collide. Most first dra
 | I'm responsive to leadership. | When an exec ask conflicts with a peer promise, reply to the exec within the hour, protect the peer's deadline, offer a smaller same-day version. |
 | I collaborate well. | When two people both say theirs is top priority, I decide and tell them. I don't escalate it. |
 
-A value tells an agent nothing. **A rule tells it what to do.**
+A value cannot be applied. A rule can.
 
 ## 7 · Compare with your team
 
 Ten minutes, together. Everyone built their own twin — now build a better *shape* for all of them.
 
-Each person shows **one rule that worked** and **one that's still vague.** Steal shamelessly. Agree on what belongs in a good soul file. Keep your own answers; share the structure.
+Each person shows **one rule that worked** and **one that's still vague.** Copy what works. Agree on what belongs in a soul file. Keep your own answers; share the structure.
 
 ## 8 · ⚡ The twist
 
@@ -207,7 +207,7 @@ You already promised a peer their launch review notes by 4 PM.
 Use my twin: what do I do, what do I say to each of them, and what gets cut?
 ```
 
-The goal isn't a polite answer. It's whether your twin makes **your** tradeoff — and can say what it gave up.
+You are checking one thing: does it make **your** tradeoff, and can it state what it gave up?
 
 If it can't, you've found your next missing rule. Add it and run it again.
 
@@ -262,8 +262,8 @@ Triggers fire on incoming email or a Teams message/@mention, and the default is 
 - [ ] The exec-vs-peer conflict, and what your twin decided
 - [ ] Your scheduled prompt or trigger
 
-::: tip The best demo isn't the most complex one
-It's the one where someone reads a draft your twin wrote and says *"yeah, that sounds like you."*
+::: tip What to aim for in the demo
+Someone who knows you reads a draft your twin wrote and recognises it. That lands harder than showing more features.
 :::
 
 ## Stuck?
@@ -279,4 +279,4 @@ It's the one where someone reads a draft your twin wrote and says *"yeah, that s
 
 ---
 
-[← Back to start](/) · [What this scenario is about](/scenarios/scenario-1) · [Where this comes from](/resources/research)
+[← Back to start](/) · [What this scenario is about](/scenarios/scenario-1)

@@ -4,30 +4,30 @@ title: Scenario 1 · The Digital Twin
 
 # Scenario 1 — The Digital Twin
 
-## The problem (villain's complaint)
+## The problem
 
-I use AI all day, and somehow I still do the last mile myself.
+Copilot personalizes already. It has memory, and Work IQ reads mail, calendar, and files. That gets a draft most of the way.
 
-It can write an email. It cannot write *my* email. It can summarize a thread. It misses the thing I would have flagged. It knows Microsoft in the abstract, but it does not know how I make tradeoffs, who I protect, what I never send without checking, or when I cut scope to hold a date.
+What it does not have is what a person has explicitly decided: how they rank priorities that conflict, which commitments they protect, what they never send without checking, when they cut scope instead of moving a date. Those get inferred from past activity. You cannot inspect the inference, you cannot correct it directly, and it does not follow you from one tool to the next.
 
-So every draft becomes a rewrite. Every summary needs a pass. The productivity gain evaporates right where the work gets personal.
+The result is a rewrite on most drafts, and the same context re-supplied in every session.
 
 ## What 'done' looks like
 
-You build a portable digital twin spec and an agent that can run on it.
+You build a portable digital twin spec and an agent that runs on it.
 
 Your twin is three files:
 
 - **`soul.md`** — how you decide: identity, priority stack, decision rules, stakeholder table, boundaries, capacity, and blind spots.
 - **`voice.md`** — how you write: 5–10 real sent-email samples, plus the style rules those samples imply.
-- **`revealed.md`** — what your calendar says about you, compared with what you say about yourself.
+- **`revealed.md`** — what your calendar shows about how you actually spend time.
 
-These files use the **Agent Skills open standard**: `SKILL.md` plus a `references/` folder. The same files should run in Cowork, VS Code Copilot, and the GitHub Copilot CLI without rewriting them.
+These files use the **Agent Skills open standard**: `SKILL.md` plus a `references/` folder. The same files run in Cowork, VS Code Copilot, and the GitHub Copilot CLI without rewriting them.
 
-Done means your twin can draft or advise in a way that feels recognizably like you — and you can point to the specific rule, sample, or calendar pattern that made it behave that way.
+Done means the twin drafts or advises in a way you would recognise as yours, and you can point to the specific rule, sample, or calendar pattern that produced it.
 
 ::: tip The reveal is not a score
-At the start, you answer a few forced-choice work dilemmas and seal them. At the end, your twin answers the same dilemmas cold. You compare the answers to learn what it understood, what it missed, and what needs correction.
+At the start, you answer a few forced-choice work dilemmas and seal them. At the end, your twin answers the same dilemmas cold. Compare the two to see what it understood, what it missed, and what needs correcting.
 :::
 
 ## The data
@@ -38,7 +38,7 @@ Choose one path.
 
 Use your own Microsoft 365 data: sent mail, calendar patterns, and your own recollection of recent decisions.
 
-This is the strongest experience because the last mile is real. Keep it private. Work in your own tenant, use only your own screen, and do not paste personal data into shared spaces.
+This produces the most accurate twin, because the evidence is real. Keep it private. Work in your own tenant, use only your own screen, and do not paste personal data into shared spaces.
 
 Use:
 
@@ -75,7 +75,3 @@ In Base, everyone builds their own twin, but the team converges on the shared sc
 
 In Advanced, the team builds one integrated system. Each person owns one council agent — Ambition, Obligation, Capacity, Arbiter, or Critic — and all agents share one `soul.md`.
 :::
-
----
-
-Why this scenario is designed the way it is: [Where This Comes From](/resources/research).

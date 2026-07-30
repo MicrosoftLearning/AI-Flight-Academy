@@ -10,13 +10,13 @@ title: The Digital Twin — Code
 
 You get the contract and the plumbing. You write the agents.
 
-## Why
+## What you're solving
 
-AI can write any email. It can't write *your* email.
+Copilot already personalizes. It has memory, and Work IQ reads your mail, calendar, and files.
 
-It knows everything about your company and nothing about you — so every draft needs a rewrite, and the time you saved disappears in the last mile.
+What it doesn't have is anything you've explicitly decided — how you rank competing priorities, which promises you protect, what you'd refuse outright. That gets inferred, you can't inspect or correct it, and it doesn't travel between tools.
 
-But there's a second problem, and it's the one you'll solve here: **a person's judgment isn't one voice. It's an argument.** When you decide what to do on a Monday, you're negotiating between ambition, obligation, and capacity. A single prompt can role-play one of those. It can't run the argument.
+There's a second problem this track solves: **a decision under conflict isn't one voice.** When an exec ask lands on top of a peer promise, you're weighing ambition against obligation against capacity. A single prompt can role-play one of those at a time. It can't run the argument and tell you what it overruled.
 
 ## What your team will have built
 
@@ -24,13 +24,13 @@ One system, not five. Everyone shares a single spec, and each person owns one ag
 
 | Piece | What it does |
 | --- | --- |
-| **The spec** | Three plain-text files: how the person decides, how they write, what their calendar reveals |
+| **The spec** | Three plain-text files: how the person decides, how they write, what their calendar shows |
 | **The council** | Three agents that argue, one that decides and **publishes what it overruled** |
 | **The critic** | Watches a miss, works out which line of the spec caused it, proposes a patch |
 | **The server** | Exposes the whole thing as MCP tools, so any agent can call it |
-| **The guardrail** | Refuses to act outside the spec's boundaries — enforced at the tool, not suggested in a prompt |
+| **The guardrail** | Refuses actions outside the spec's boundaries — enforced at the tool, not suggested in a prompt |
 
-The same spec folder also runs in Cowork and the CLI unmodified. That portability is the point.
+The same spec folder runs in Cowork and the CLI unmodified.
 
 ## Before you start
 
@@ -97,7 +97,7 @@ Three files, shared by everyone. Get a rough version fast, then improve it all s
 
 A value tells an agent nothing. A tiebreaker tells it what to do.
 
-**voice** — 5–10 real sent emails, verbatim, plus the rules those samples imply. Don't clean them up; the quirks are the whole signal.
+**voice** — 5–10 real sent emails, verbatim, plus the rules those samples imply. Do not clean them up; the punctuation and signoff habits are the part a description would lose.
 
 **revealed** — what the calendar actually shows.
 
@@ -303,7 +303,7 @@ You already promised a peer their launch review notes by 4 PM.
 Decide what to do, what to say to each of them, and what gets cut.
 ```
 
-You're not looking for the nicest answer. You're looking for **the argument** — three positions, one decision, and a clear statement of what got overruled and why.
+You are checking for three positions, one decision, and an explicit statement of what got overruled and why.
 
 ## 8 · Let the critic patch it
 
@@ -314,7 +314,7 @@ HARD CAP: net growth of +2 lines.
 Human approves before anything is written.
 ```
 
-The cap is the whole point. Without it, a critic "fixes" every miss by making the spec fatter, and a fatter spec is a worse spec.
+Without the cap, the critic fixes every miss by adding lines, and the spec degrades as it grows.
 
 ::: tip Say the honest limit out loud in your demo
 The **file** gets better. The **model** doesn't learn. Every run reloads an improved file. That's real and useful, and it isn't training — claiming otherwise is the fastest way to lose a technical room.
@@ -335,8 +335,8 @@ The **file** gets better. The **model** doesn't learn. Every run reloads an impr
 - [ ] One critic patch, +2 lines or fewer
 - [ ] The same spec folder running somewhere else — CLI, VS Code, or Cowork
 
-::: tip The moment that lands
-Not the architecture. It's the dissent — showing what your twin *decided against*, and why. A single prompt can't produce that, and everyone in the room can see it.
+::: tip Lead with the dissent
+Show what the twin decided against and why. That is the part a single prompt cannot produce, and it is visible in one screen.
 :::
 
 ## Stuck?
@@ -353,4 +353,4 @@ Not the architecture. It's the dissent — showing what your twin *decided again
 
 ---
 
-[← Back to start](/) · [What this scenario is about](/scenarios/scenario-1) · [Where this comes from](/resources/research)
+[← Back to start](/) · [What this scenario is about](/scenarios/scenario-1)
