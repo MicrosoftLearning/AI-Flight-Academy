@@ -103,7 +103,6 @@ export default defineConfig({
           items: [
             { text: "Overview", link: "/how-it-works/" },
             { text: "Run of Show", link: "/how-it-works/run-of-show" },
-            { text: "Scoring & Judging", link: "/how-it-works/scoring" },
           ],
         },
       ],
