@@ -26,7 +26,6 @@ export default defineConfig({
       },
       { text: "Building Blocks", link: "/bricks/" },
       { text: "Scenarios", link: "/scenarios/" },
-      { text: "Facilitators", link: "/facilitator/" },
       { text: "Submit", link: "/submit/" },
       {
         text: "Resources",

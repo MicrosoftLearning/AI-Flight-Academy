@@ -1,230 +1,242 @@
 ---
-title: 🟣 Advanced · Code-Extended — Scenario 1
+title: The Digital Twin — Code
 ---
 
-<!-- markdownlint-disable MD013 MD025 -->
+<!-- markdownlint-disable MD013 MD025 MD033 -->
 
-# 🟣 Advanced · Code-Extended
+# 🧬 The Digital Twin
 
-## Scenario 1 — Digital Twin Council
+**You'll build this in code — VS Code, GitHub Copilot, and the Copilot CLI.**
 
-**Building with:** VS Code, GitHub Copilot, Copilot CLI, MCP, and Work IQ
+You get the contract and the plumbing. You write the agents.
 
-::: tip Get the files
-Twin Forge, the Avery Washington persona pack, and the starter repo are all on the [Downloads page](/resources/downloads).
+## Why
+
+AI can write any email. It can't write *your* email.
+
+It knows everything about your company and nothing about you — so every draft needs a rewrite, and the time you saved disappears in the last mile.
+
+But there's a second problem, and it's the one you'll solve here: **a person's judgment isn't one voice. It's an argument.** When you decide what to do on a Monday, you're negotiating between ambition, obligation, and capacity. A single prompt can role-play one of those. It can't run the argument.
+
+## What your team will have built
+
+One system, not five. Everyone shares a single spec, and each person owns one agent that reasons over it.
+
+| Piece | What it does |
+| --- | --- |
+| **The spec** | Three plain-text files: how the person decides, how they write, what their calendar reveals |
+| **The council** | Three agents that argue, one that decides and **publishes what it overruled** |
+| **The critic** | Watches a miss, works out which line of the spec caused it, proposes a patch |
+| **The server** | Exposes the whole thing as MCP tools, so any agent can call it |
+| **The guardrail** | Refuses to act outside the spec's boundaries — enforced at the tool, not suggested in a prompt |
+
+The same spec folder also runs in Cowork and the CLI unmodified. That portability is the point.
+
+## Before you start
+
+<div class="lab-grid lab-grid-2">
+  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/digital-twin-starter">
+    <span class="lab-card-emoji">📦</span>
+    <span class="lab-card-title">Starter repo</span>
+    <span class="lab-card-desc">Schema, MCP skeleton, council runner, test harness. The contract — not the solution.</span>
+    <span class="lab-card-cta">Get it →</span>
+  </a>
+  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack">
+    <span class="lab-card-emoji">🗂️</span>
+    <span class="lab-card-title">Avery Washington</span>
+    <span class="lab-card-desc">Optional. A made-up marketing manager with a fake inbox and calendar — use them instead of your own data.</span>
+    <span class="lab-card-cta">Get it →</span>
+  </a>
+</div>
+
+```bash
+git clone https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack.git
+cd Team-Week-Imagineer-Hack/Allfiles/digital-twin-starter
+```
+
+::: warning Copy it out before you edit
+Work in your own copy, not in the repo folder.
 :::
 
-You will build one team system: a portable digital twin with a council of agents that argue over a real tradeoff and an arbiter that makes the call.
+**Check this first, before anything else:** open Copilot Chat in VS Code and confirm you can switch to **Agent** mode. It's an org-managed setting and it may be off. If it is, use the Copilot CLI instead — everything here works either way.
 
-## 1 · Your mission
+---
 
-Build a digital twin: a one-page spec of how a person works, plus agents that run on it. The same folder should run in Cowork, VS Code Copilot, and the GitHub Copilot CLI without changing the core files.
+## 1 · Split the work
 
-Your shared twin has three files:
+Five people, five agents, one shared spec. Decide this in the first two minutes.
 
-1. `soul.md` — how the person decides: priority stack, decision rules, stakeholders, boundaries, capacity, and blind spots.
-2. `voice.md` — how the person writes: 5-10 sent-email samples or synthetic samples, quoted verbatim, plus inferred style rules.
-3. `revealed.md` — what the calendar says versus what the person says.
-
-::: tip Advanced team model
-Do not build five separate twins. Build one shared system. Each teammate owns one agent in the council, and all five agents share the same `soul.md`.
-:::
-
-## 2 · What you'll demonstrate
-
-You will demonstrate the Advanced spine from the [🟣 Advanced · Code-Extended level page](/levels/advanced/):
-
-- A custom connector / tool: an MCP server that exposes the twin as callable tools.
-- Grounding on live data: Work IQ evidence distilled into `revealed.md`.
-- One guardrail: `check_boundary` returns `ALLOW`, `ASK_FIRST`, or `NEVER` before action leaves the system.
-
-You should also show the portability spine: the same Agent Skills folder works across Cowork, VS Code Copilot, and the GitHub Copilot CLI.
-
-## 3 · Assembly map — snap these blocks together
-
-Start from the starter repo at `/Allfiles/digital-twin-starter/`. Copy it into your own working folder before editing.
-
-### Step 0 — Divide the council
-
-| Owner | Agent | Job | Return shape |
+| Who | Agent | Argues for | Returns |
 | --- | --- | --- | --- |
-| Teammate 1 | `ambition.agent.md` | Argues for visible, strategic, reusable work. | Position, because, cost if ignored. |
-| Teammate 2 | `obligation.agent.md` | Argues for promises already made and people waiting. | Position, because, cost if ignored. |
-| Teammate 3 | `capacity.agent.md` | Argues from measured load and calendar reality. | Position, because, cost if ignored. |
-| Teammate 4 | `arbiter.agent.md` | Invokes the three drives, applies `soul.md`, decides in voice, publishes dissent. | Decision, draft, dissent, confidence, gap. |
-| Teammate 5 | `critic.agent.md` | Diagnoses misses and proposes tiny spec patches for approval. | Root cause, diff, net lines. |
+| 1 | **Ambition** | The visible, strategic, reusable work | position · because · cost if ignored |
+| 2 | **Obligation** | Promises already made, people waiting | position · because · cost if ignored |
+| 3 | **Capacity** | What the calendar says you can actually absorb | position · because · cost if ignored |
+| 4 | **Arbiter** | Nothing — it decides, in voice, and publishes the dissent | decision · draft · dissent · confidence · gap |
+| 5 | **Critic** | Nothing — it diagnoses misses and patches the spec | root cause · diff · net lines |
 
-If you have fewer than five people, combine Critic with Arbiter. If you have more, add a test owner and a demo owner.
+**Fewer than five?** Fold the Critic into the Arbiter. **More?** Add someone on tests and someone on the demo.
 
-### Step 1 — Set up the agent workbench
-
-Use [Set up Scout / GitHub Copilot](/bricks/advanced-setup).
-
-You need:
-
-```text
-.github/agents/
-  ambition.agent.md
-  obligation.agent.md
-  capacity.agent.md
-  arbiter.agent.md
-  critic.agent.md
-.vscode/mcp.json
-digital-twin/
-  SKILL.md
-  references/
-    soul.md
-    voice.md
-    revealed.md
-```
-
-::: warning What will eat your clock
-The orchestrator will not reliably delegate unless its instructions say: `You MUST invoke each agent as a subagent before synthesizing.` Put that sentence in `arbiter.agent.md`.
+::: tip The drives should be biased
+Ambition shouldn't be balanced. Neither should Obligation or Capacity. Each one argues its corner as hard as it can — the Arbiter is where nuance happens. Balanced sub-agents produce mush.
 :::
 
-### Step 2 — Build the portable spec
+## 2 · Write the spec
 
-Create or refine:
+Three files, shared by everyone. Get a rough version fast, then improve it all session.
 
-1. `soul.md` — keep it close to one page. Write tiebreakers, not values.
-2. `voice.md` — include samples, then style rules inferred from the samples.
-3. `revealed.md` — include measured behavior from Work IQ or the persona pack.
+**soul** — how the person decides. Aim for about a page. The critical part is **tiebreakers, not values**:
 
-Bad rule:
+| ❌ Value | ✅ Tiebreaker |
+| --- | --- |
+| I value responsiveness. | When a same-day exec ask collides with a peer promise, cut scope before slipping the peer. |
+| I care about quality. | When a claim can't be verified before the deadline, cut that section and hold the date. |
 
-```text
-I value responsiveness.
-```
+A value tells an agent nothing. A tiebreaker tells it what to do.
 
-Good rule:
+**voice** — 5–10 real sent emails, verbatim, plus the rules those samples imply. Don't clean them up; the quirks are the whole signal.
 
-```text
-When a same-day executive ask collides with a peer promise, cut scope before slipping the peer promise.
-```
+**revealed** — what the calendar actually shows.
 
-### Step 3 — Ground the twin
-
-Use [Ground on live data with Work IQ](/bricks/advanced-work-iq).
-
-Choose one path:
-
-- **Path A — Own data:** ask Cowork's native Work IQ to summarize your last ~30 days of calendar and recent sent-mail style. Export the distilled result. Do not demo raw private entries.
-- **Path B — Avery Washington pack:** use the synthetic marketing manager data at `/Allfiles/persona-pack/`.
-
-Extract:
-
-- Time allocation by category.
-- Response latency by sender as the honest stakeholder ranking.
-- Accept / decline / tentative ratios.
-- Self-organized vs invited ratio.
-
-### Step 4 — Add the MCP connector
-
-Use [Build a custom connector (MCP)](/bricks/advanced-mcp-connector).
-
-Expose thin tools first:
-
-```text
-soul_spec()
-voice_rules()
-revealed_behavior()
-check_boundary(action, recipient)
-soul_gap()
-```
-
-Add thick tools only if you have time:
-
-```text
-twin_decide(situation)
-twin_draft(recipient, intent)
-propose_soul_patch(what_the_twin_said, what_the_person_would_do)
-```
-
-::: warning Keep connector tools thin
-Verbose subagents blow the context window. Force short structured returns. Connector-shaped tools should answer in under 30 seconds.
+::: tip Shorter really is better
+Resist adding one more clause. Anthropic [found while building Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback) that broad principles beat long specific ones. ["Lost in the Middle"](https://arxiv.org/abs/2307.03172) (peer-reviewed, *Transactions of the ACL*) showed models pay least attention to whatever's in the middle of a long prompt. Your spec is a prompt.
 :::
 
-### Step 5 — Add the guardrail
+## 3 · Ground it in real behavior
 
-Use [Add a guardrail / output check](/bricks/advanced-guardrail).
+This is the half a person can't self-report. Pull it from evidence.
 
-`check_boundary` must return:
+**Your own data** — let Cowork's Work IQ do the retrieval and export the summary. Ask for percentages, not raw entries:
+
+```text
+Summarize my last 30 days of calendar: time by category, accept/decline/tentative
+ratio, self-organized vs invited ratio, recurring load. Use percentages.
+Leave out private meeting titles.
+```
+
+**Avery Washington** — the persona pack has a 30-day calendar with everything already in it.
+
+Either way, extract these four:
+
+- time by category
+- **response latency by sender** — the honest stakeholder ranking, whatever the org chart says
+- accept / decline / tentative ratio
+- self-organized vs. invited
+
+::: danger Don't build a Graph integration
+Azure AD app registration plus MSAL will take 30–60 minutes and eat your session. Roughly a third of teams that try it never get past it. Let Cowork retrieve, or use the persona pack. Your working style is slow-moving data — a monthly snapshot is plenty.
+:::
+
+## 4 · Write the agents
+
+Five files in `.github/agents/`. The starter repo has the required frontmatter and return contract for each — the bodies are yours.
+
+::: warning This one will cost you 20 minutes if you miss it
+The Arbiter won't actually delegate unless you tell it to, in those words:
+
+```text
+You MUST invoke each agent as a subagent before synthesizing.
+```
+
+Without that line it'll just answer directly and you'll wonder why the council never runs.
+:::
+
+Two more that bite:
+
+- **Force short returns.** Three verbose sub-agents will blow the Arbiter's context window before it reasons.
+- **Run with `--allow-all-tools`** in your own repo, or you'll spend the session clicking approval prompts.
+
+## 5 · Expose it as a server
+
+Build the MCP server so anything can call your twin — Cowork, VS Code, Claude, an agent nobody's written yet.
+
+**Thin tools first.** These just read files, so they're instant and free:
+
+```text
+soul_spec()   voice_rules()   revealed_behavior()
+check_boundary(action, recipient)   soul_gap()
+```
+
+**Thick tools if you have time.** These spend model calls:
+
+```text
+twin_decide(situation)   twin_draft(recipient, intent)
+propose_soul_patch(what_it_said, what_they_would_do)
+```
+
+The split matters: Cowork connectors need answers in **under 30 seconds**, which the thin tools clear easily and `twin_decide` never will.
+
+## 6 · Add the guardrail
+
+One check that runs before anything leaves the system:
 
 ```text
 ALLOW | ASK_FIRST | NEVER
-rule: <governing rule>
-source: <file and section>
+rule:   <the rule that governs this>
+source: <which file and section>
 ```
 
-Enforce it before send, share, commit, decline, or external communication. This is a tool boundary, not a prompt suggestion.
+Run it before any send, share, commit, decline, or external message.
 
-### Step 6 — Run the council from the CLI
+**Enforce it at the tool, not in a prompt.** That's the difference between a suggestion and a boundary — yours has to hold even when the caller is an agent you didn't write.
 
-Use the CLI for repeatable tests.
+## 7 · ⚡ The twist
 
-```powershell
-copilot -p "Read the arbiter task from this repo and run the council on the dilemma." --allow-all-tools
+Your facilitator will hand this out partway through. Run it through the full council:
+
+```text
+A senior executive wants a new customer narrative by 3 PM today.
+You already promised a peer their launch review notes by 4 PM.
+Decide what to do, what to say to each of them, and what gets cut.
 ```
 
-::: warning Approval prompts eat the hack
-Use `--allow-all-tools` for the local hack repo or you will sit in approval prompts instead of building. Long prompts on Windows should go through a file, not the command line.
+You're not looking for the nicest answer. You're looking for **the argument** — three positions, one decision, and a clear statement of what got overruled and why.
+
+## 8 · Let the critic patch it
+
+Find one thing the twin got wrong. Have the Critic diagnose **which line of the spec caused it** — not "the answer was bad."
+
+```text
+HARD CAP: net growth of +2 lines.
+Human approves before anything is written.
+```
+
+The cap is the whole point. Without it, a critic "fixes" every miss by making the spec fatter, and a fatter spec is a worse spec.
+
+::: tip Say the honest limit out loud in your demo
+The **file** gets better. The **model** doesn't learn. Every run reloads an improved file. That's real and useful, and it isn't training — claiming otherwise is the fastest way to lose a technical room.
 :::
 
-### Step 7 — Mid-build twist, at about 55 minutes
+---
 
-Run this conflict through the council:
+## Show it off
 
-```text
-A senior executive asks for a new customer narrative by 3 PM today. You already promised a peer that you would finish launch review notes by 4 PM. Use the twin to decide what to do, what to say to each person, and what scope to cut.
-```
+60–90 seconds. Hit these:
 
-The point is not to produce the nicest answer. The point is to show the argument: ambition, obligation, capacity, arbiter, dissent, and boundary check.
+- [ ] The folder — spec, agents, server
+- [ ] **One thing the calendar revealed that self-report would never have caught**
+- [ ] The council: who owns what, and the short return shape
+- [ ] The twist, run live
+- [ ] Arbiter output — **especially the dissent**
+- [ ] The guardrail returning `NEVER` on something
+- [ ] One critic patch, +2 lines or fewer
+- [ ] The same spec folder running somewhere else — CLI, VS Code, or Cowork
 
-### Step 8 — Patch one miss
+::: tip The moment that lands
+Not the architecture. It's the dissent — showing what your twin *decided against*, and why. A single prompt can't produce that, and everyone in the room can see it.
+:::
 
-Have the Critic diagnose one failure. It must propose a diff, not rewrite the whole spec.
+## Stuck?
 
-```text
-HARD CAP: net growth is +2 lines or less.
-Human approval required before writing.
-```
+| What you're seeing | What to do |
+| --- | --- |
+| Agent mode is missing in VS Code | Org-managed setting. Use the Copilot CLI instead |
+| The Arbiter answers without consulting anyone | Add "You MUST invoke each agent as a subagent before synthesizing" |
+| Output truncates, context blows up | Sub-agents are too verbose — force short structured returns |
+| Endless approval prompts | `--allow-all-tools`, in your own repo only |
+| Long prompts fail on Windows | Command line caps at 8191 chars — pass via a file. `twinlib.py` does this |
+| Custom agents aren't picked up | They must be in `.github/agents/` with the right frontmatter |
+| Every drive agrees with every other | They're too balanced. Make each one biased |
 
-## 4 · The data
+---
 
-Use one of two paths.
-
-### Path A — Your own Microsoft 365 data
-
-Use Cowork's Work IQ to retrieve and summarize. Keep the final artifact safe.
-
-```text
-Summarize my last 30 days of calendar by category, organizer type, accept/decline/tentative ratio, self-organized vs invited ratio, and recurring meeting load. Use percentages. Do not include private meeting titles in the final output.
-```
-
-```text
-Find 5-10 sent emails that show my normal writing style. Quote only samples I approve for this hack artifact. Infer style rules from the samples.
-```
-
-### Path B — Avery Washington persona pack
-
-Use `/Allfiles/persona-pack/`. Avery Washington is synthetic. This path is safer for demos and faster for teams that do not want to use personal work data.
-
-### Starter repo
-
-Use `/Allfiles/digital-twin-starter/` for the initial folder shape, scripts, agent files, and MCP server skeleton. Do not edit that folder directly. Copy it into your team workspace.
-
-## 5 · Demo checklist
-
-Show these in 60-90 seconds:
-
-- [ ] The folder: `SKILL.md`, `soul.md`, `voice.md`, `revealed.md`, `.github/agents/*.agent.md`, and `mcp_server.py`.
-- [ ] Which data path you used: own data or Avery Washington.
-- [ ] One measured finding in `revealed.md` that self-report would have missed.
-- [ ] The council division of labor and the short return shape from each subagent.
-- [ ] The mid-build twist: executive ask colliding with peer promise.
-- [ ] Arbiter output with decision, draft, dissent, confidence, and gap.
-- [ ] `check_boundary` returning `ALLOW`, `ASK_FIRST`, or `NEVER` with source.
-- [ ] One Critic patch with net growth of +2 lines or less.
-- [ ] The same core folder running from either VS Code agent mode or the Copilot CLI.
-
-[← Back to start](/) · [Scenario 1 brief](/scenarios/scenario-1)
+[← Back to start](/) · [What this scenario is about](/scenarios/scenario-1) · [Where this comes from](/resources/research)
