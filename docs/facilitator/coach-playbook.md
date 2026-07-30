@@ -91,3 +91,18 @@ Force one shared `soul.md`. The Arbiter owns tiebreakers. The Critic checks whet
 ::: tip Coach sentence
 "Show me the last real example, then show me the smallest rule that would have predicted it."
 :::
+
+## Tooling traps (verified on a live tenant)
+
+These are real, we hit them in testing. Call them out at the start of the Base track and you'll save the room twenty minutes.
+
+| Symptom | Cause | Fix |
+| --- | --- | --- |
+| Uploaded a skill, nothing happened, no error | The upload was a `.zip`. It fails **silently** | Upload the `SKILL.md` file on its own |
+| Skill installed but Cowork ignores it | The session was already open | Start a **new** Cowork session — skills load at session start |
+| Agent says it can't find reference files | Companion files don't travel with a `.md` upload | Everything must be inline in `SKILL.md` |
+| Path B: "persona pack isn't available" | The pack isn't in the Cowork workspace | Download it and **attach** the files to the session |
+
+::: tip What a healthy run looks like
+Twin Forge builds a 5-step plan, pulls sent mail and calendar through Work IQ, then asks behavioral questions one at a time. If it starts asking "what do you value?", it isn't running the skill — check that it actually loaded.
+:::

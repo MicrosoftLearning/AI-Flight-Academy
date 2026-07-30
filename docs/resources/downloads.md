@@ -14,11 +14,16 @@ Paste the folder's GitHub URL into [download-directory.github.io](https://downlo
 
 | What | Why you need it | Get it |
 | --- | --- | --- |
-| **Twin Forge skill** | Bootstraps a v0.1 twin in ~12 minutes. Upload it into Cowork and say *"Start Twin Forge."* | [Allfiles/twin-forge](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/twin-forge) |
+| **Twin Forge skill** | Bootstraps a v0.1 twin in ~12 minutes. Upload it into Cowork and say *"Start Twin Forge."* | [SKILL.md](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/blob/main/Allfiles/twin-forge/SKILL.md) |
 | **Marcus Webb persona pack** | Path B data if you'd rather not use your own. | [Allfiles/persona-pack](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack) |
 
-**Installing Twin Forge:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill**.
-Or drop the folder in OneDrive at `/Documents/Cowork/skills/twin-forge/`, then start a **new session** — Cowork discovers skills at session start.
+**Installing Twin Forge:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill** → pick `SKILL.md`. Then **start a new session** — skills are discovered at session start.
+
+::: warning Upload the .md on its own
+Tested on a live tenant: `.zip` uploads silently fail. `SKILL.md` is fully self-contained, so there's nothing else to bundle.
+:::
+
+Or drop it in OneDrive at `/Documents/Cowork/skills/twin-forge/SKILL.md`.
 
 ## 🟣 Advanced · Scout / GitHub Copilot
 

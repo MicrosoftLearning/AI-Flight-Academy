@@ -50,12 +50,20 @@ By the end, you should be able to show Cowork using your twin to handle a confli
 
 ### Step 0 — Install Twin Forge
 
-1. Download or open the provided skill folder at `/Allfiles/twin-forge/`.
+1. Download **`SKILL.md`** from the [Downloads page](/resources/downloads).
 2. In Cowork, go to **Customize** → **Skills** → **Add ▾** → **Upload skill**.
-3. Upload the Twin Forge skill package, or manually copy it to OneDrive at `/Documents/Cowork/skills/twin-forge/`.
-4. Start a **new Cowork session**.
+3. Upload the `.md` file on its own. You'll see **"Skill uploaded — twin-forge."**
+4. Start a **new Cowork session** — skills are only discovered at session start.
 5. Say: `Start Twin Forge and help me build a v0.1 digital twin.`
 6. Choose Path A or Path B when asked.
+
+::: warning Upload the .md, not a .zip
+We tested this on a live tenant: `.zip` uploads silently fail — the dialog just closes and no skill appears. Everything Twin Forge needs is inside `SKILL.md`.
+
+Taking **Path B?** The Marcus Webb pack isn't in your Cowork workspace by default — download it and **attach the files** when Twin Forge asks.
+:::
+
+![Twin Forge installed under Your skills in the Cowork Customize page](/img/twin-forge-uploaded.png)
 
 Goal: a v0.1 twin in about 12 minutes.
 
