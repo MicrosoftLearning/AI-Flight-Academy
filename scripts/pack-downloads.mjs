@@ -51,6 +51,10 @@ const jobs = [
     src: join(root, "Allfiles", "scenario-1-digital-twin", "persona-pack"),
     zip: "avery-persona-pack.zip",
   },
+  {
+    src: join(root, "Allfiles", "scenario-2-greenlight", "the-greenlight-starter"),
+    zip: "the-greenlight-starter.zip",
+  },
 ];
 
 for (const j of jobs) {
