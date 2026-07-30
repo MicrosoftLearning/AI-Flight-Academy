@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "digital-twin": {
+      "type": "stdio",
+      "command": "python",
+      "args": ["${workspaceFolder}/mcp_server.py"],
+      "cwd": "${workspaceFolder}"
+    }
+  }
+}
