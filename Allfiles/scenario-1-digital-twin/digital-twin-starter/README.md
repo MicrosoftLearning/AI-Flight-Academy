@@ -29,7 +29,7 @@ There is deliberately **no score and no leaderboard**. Mismatches are the output
 ## Quickstart
 
 ```powershell
-cd Allfiles/digital-twin-starter
+cd Allfiles/scenario-1-digital-twin/digital-twin-starter
 Copy-Item digital-twin/references/soul.template.md digital-twin/references/soul.md
 Copy-Item digital-twin/references/voice.template.md digital-twin/references/voice.md
 Copy-Item digital-twin/references/revealed.template.md digital-twin/references/revealed.md

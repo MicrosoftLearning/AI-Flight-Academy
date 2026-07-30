@@ -24,7 +24,7 @@ Ask the user which path they want:
 
 If Path A, say you will only use data they can already access.
 
-If Path B, ask them to attach the persona pack files or paste the contents. The pack lives in the hack repo under `Allfiles/persona-pack/` and is **not** in their workspace by default, so they must attach it. If they can't, offer Path A instead.
+If Path B, ask them to attach the persona pack files or paste the contents. The pack lives in the hack repo under `Allfiles/scenario-1-digital-twin/persona-pack/` and is **not** in their workspace by default, so they must attach it. If they can't, offer Path A instead.
 
 ## Step 2 — Gather evidence
 

@@ -118,7 +118,7 @@ Cowork decides which skill to load by reading the **description** — so put the
 
 Skills live in OneDrive at `/Documents/Cowork/skills/{name}/`. A skill can carry a `references/` folder (loaded into context when needed) and a `scripts/` folder (executed, not read).
 
-**The reason this matters:** it's the [Agent Skills open standard](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/blob/main/Allfiles/twin-forge/SKILL.md). The same file is read by VS Code Copilot, Claude Code, Gemini CLI, Cursor and 30+ other tools. You're not writing something trapped in one product.
+**The reason this matters:** it's the [Agent Skills open standard](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/blob/main/Allfiles/scenario-1-digital-twin/twin-forge/SKILL.md). The same file is read by VS Code Copilot, Claude Code, Gemini CLI, Cursor and 30+ other tools. You're not writing something trapped in one product.
 
 **Want to make your own later?** Cowork → Customize → Skills → **Add ▾** → **Create new** walks you through it. Or just say *"build me a skill that…"* in chat and it'll draft one with you.
 

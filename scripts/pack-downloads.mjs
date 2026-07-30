@@ -1,5 +1,9 @@
-// Packages the Allfiles folders into docs/public/downloads/ so the site serves
-// them directly - participants never touch GitHub or run git clone.
+// Packages participant assets from Allfiles/<scenario>/ into
+// docs/public/downloads/ so the site serves them directly - participants never
+// touch GitHub or run git clone.
+//
+// Adding a scenario: add its folders to jobs (zipped) or singles (copied
+// as-is), then link them from docs/resources/downloads.md.
 //
 // Runs automatically before docs:dev and docs:build, so the downloads can't
 // drift from the source files.
@@ -39,8 +43,14 @@ function zipFolder(srcDir, zipPath) {
 }
 
 const jobs = [
-  { src: join(root, "Allfiles", "digital-twin-starter"), zip: "digital-twin-starter.zip" },
-  { src: join(root, "Allfiles", "persona-pack"), zip: "avery-persona-pack.zip" },
+  {
+    src: join(root, "Allfiles", "scenario-1-digital-twin", "digital-twin-starter"),
+    zip: "digital-twin-starter.zip",
+  },
+  {
+    src: join(root, "Allfiles", "scenario-1-digital-twin", "persona-pack"),
+    zip: "avery-persona-pack.zip",
+  },
 ];
 
 for (const j of jobs) {
@@ -55,8 +65,14 @@ for (const j of jobs) {
 
 // Twin Forge ships as a single .md - Cowork's skill upload rejects .zip.
 const singles = [
-  { src: join(root, "Allfiles", "twin-forge", "SKILL.md"), name: "twin-forge-SKILL.md" },
-  { src: join(root, "Allfiles", "twin-test", "twin-test.md"), name: "twin-test.md" },
+  {
+    src: join(root, "Allfiles", "scenario-1-digital-twin", "twin-forge", "SKILL.md"),
+    name: "twin-forge-SKILL.md",
+  },
+  {
+    src: join(root, "Allfiles", "scenario-1-digital-twin", "twin-test", "twin-test.md"),
+    name: "twin-test.md",
+  },
 ];
 
 for (const s of singles) {

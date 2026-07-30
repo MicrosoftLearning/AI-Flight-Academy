@@ -36,7 +36,7 @@ Also triggers on: *build my digital twin*, *create my soul spec*, *forge my twin
 
 ## Using Path B (Avery Washington)
 
-The persona pack **isn't in your Cowork workspace by default.** Download it from `Allfiles/persona-pack/` and **attach the files** to your session when Twin Forge asks. If you can't, take Path A instead.
+The persona pack **isn't in your Cowork workspace by default.** Download it from `Allfiles/scenario-1-digital-twin/persona-pack/` and **attach the files** to your session when Twin Forge asks. If you can't, take Path A instead.
 
 ## Troubleshooting
 
