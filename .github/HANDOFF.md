@@ -2,7 +2,7 @@
 
 > **Purpose of this file.** A complete handoff for continuing work on the *Greenlight* scenario in a fresh VS Code / GitHub Copilot session. It captures the genesis, the design decisions and *why* they were made, the exact repo state, and the open work. Read it top to bottom once; after that it's a reference.
 >
-> Written 2026-07-30 at the end of a Microsoft Scout chat session. Not participant-facing — it lives at the scenario root, outside the installable `the-greenlight/` kit.
+> Written 2026-07-30 at the end of a Microsoft Scout chat session. Not participant-facing. **Now lives at `.github/HANDOFF.md`** (moved out of the participant download folder). See the SESSION UPDATE block below for the latest state.
 
 ---
 
@@ -12,6 +12,44 @@
 - **The idea:** instead of teaching *one* reviewer to know *one* audience (that's The Critic), you seat a **council of audience personas** who each **nominate rubric criteria tied to their own outcome**, back every score with **evidence + source + confidence**, **debate** the conflicts, and produce a **transformation plan** — which is then **re-scored by the same council** to "greenlight" it.
 - **Where it lives:** fork `dahans-msft2/Team-Week-Imagineer-Hack`, branch **`scenario-2-greenlight`**, everything pushed. `upstream` (MicrosoftLearning) never touched.
 - **State:** kit + facilitator materials + docs (scenario page + 3 build pages) all complete, committed, pushed. No dead links. JSON validates.
+
+---
+
+## 0.5 · SESSION UPDATE — 2026-07-30 (session 2, VS Code / Copilot)
+
+> **Read this first — it supersedes anything below that conflicts.** The genesis/design sections (§1–§4) are still accurate history. The repo-state, hazards, and open-items sections (§5–§9) have been partly overtaken by the changes here.
+
+### Two framing changes
+- **The Greenlight is now the SOLE Scenario 2.** The Critic / Screening Room take is **not shipping**. All "alternate take / pick one" framing has been removed from the site. Treat the "two takes" table in §1 as history only.
+- **The repo now lives OFF OneDrive** at **`C:\repos\Team-Week-Imagineer-Hack`** (fresh clone). OneDrive caused constant file-lock failures and a corrupted `node_modules`. The old OneDrive copy under `...\Imagineer-Hack\work` is stale — delete it.
+
+### What shipped this session (branch `scenario-2-greenlight`, all pushed)
+1. **Rebased `scenario-2-greenlight` onto `origin/main`.** Main had independently reorganized `Allfiles/` into per-scenario folders; resolved by taking **main's newer scenario-1 content** and preserving this branch's whole `Allfiles/scenario-2-greenlight/` tree as clean renames. The pre-rebase SHAs listed in §6 are obsolete.
+2. **Removed the redundant `Allfiles/scenario-2-tbd/`** placeholder (Greenlight *is* Scenario 2). `scenario-3-tbd/` kept.
+3. **Added `Allfiles/scenario-2-greenlight/README.md`** in the house format, and updated `Allfiles/README.md` to list Greenlight.
+4. **Moved this handoff** to `.github/HANDOFF.md`.
+5. **Built the Advanced starter `Allfiles/scenario-2-greenlight/the-greenlight-starter/`** (was empty): `README.md`, `AGENTS.md`, `.gitignore`, `the-greenlight.code-workspace`, `council/retail.example.json` (a seat as data), `checks.py` (two working deterministic checks + a `check_table_width` TODO stub), `greenlightlib.py` (load seats, run wired checks, validate evidence, coverage matrix), `run.ps1` (council runner skeleton), and `.github/agents/`. Wired into `scripts/pack-downloads.mjs` → `the-greenlight-starter.zip`.
+6. **The three council agents ship as SKELETONS** (`.github/agents/{seat-scorer,judge,greenlight}.agent.md`): frontmatter + method + output contract written, with **one real design TODO each** (seat-scorer: how a wired check combines with the model score; judge: does REVISE count as served/abandoned; greenlight: what earns a format change vs a wording fix). Rationale: unlike the digital-twin scenario where writing agents IS the exercise, here the agents are generic machinery — the real work is seats-as-data + checks + coverage + PR gate.
+7. **Wired The Greenlight into the docs site.** Consolidated the brief into the generic slug **`docs/scenarios/scenario-2.md`** (dropped `scenario-2-greenlight.md`), repointed the 3 build pages' brief links to `/scenarios/scenario-2`, and updated `docs/scenarios/index.md`, the `config.mts` sidebar, and `PathPicker.vue`. **`npm run docs:build` passes clean (no dead links).**
+
+### Current state
+- **Latest commit:** `2ae8b8e` on `scenario-2-greenlight` (== `origin/scenario-2-greenlight`). Working tree clean.
+- `node_modules` fresh at C:\repos; VitePress build green in ~18s.
+- **Local-only leftover:** branch `backup/scenario-2-greenlight-prerebase` exists ONLY in the old OneDrive copy (pre-rebase snapshot, disposable). Push it before deleting that copy if you want to keep it.
+
+### Open items still outstanding (supersedes §8 where they overlap)
+- **Downloads not fully wired for Scenario 2.** `docs/resources/downloads.md` is still Scenario-1-only. The starter zips, but the **`data-pack` and the `the-greenlight` skill are NOT yet in `scripts/pack-downloads.mjs`**, and there's no Scenario 2 download card. The starter's `run.ps1`/checks expect sibling `../data-pack` and `../the-greenlight`, so those two must be wired for the Advanced download set to work end-to-end.
+- **Prove v4** (scheduled/triggered convene in a real tenant) — still the Base finish line, still unproven.
+- **Validate the JUDGING-RUBRIC weights** against ~10 sample submissions.
+- **Confirm "persona-lization" framing** with Cameron Percy.
+
+### Quick-start for the next session
+```powershell
+cd C:\repos\Team-Week-Imagineer-Hack
+git switch scenario-2-greenlight
+npm install          # fresh, off OneDrive
+npm run docs:dev     # preview the site
+```
 
 ---
 
@@ -170,7 +208,7 @@ The solo critic's pre-scored verdicts (the "number to beat") are baked into `the
 ## 6. Exact git / repo state
 
 - **Remotes:** `origin` = `https://github.com/dahans-msft2/Team-Week-Imagineer-Hack.git` (Darrin's **fork** — the only push target). `upstream` = `MicrosoftLearning/Team-Week-Imagineer-Hack.git` (**never pushed to**).
-- **Working repo path (Windows):** `C:\Users\dahans\OneDrive - Microsoft\Documents\Microsoft Scout\Imagineer-Hack\work`
+- **Working repo path (Windows):** `C:\repos\Team-Week-Imagineer-Hack` (moved off OneDrive — see the SESSION UPDATE block). The old `...\OneDrive - Microsoft\...\Imagineer-Hack\work` copy is stale.
 - **Commit identity used** (matches Darrin's existing commits; required because GitHub blocks the private `@microsoft.com` email): `dahans-msft2 <49003767+dahans-msft2@users.noreply.github.com>`.
 - **Branches** (all on the fork):
   - `main` — upstream baseline; Scenario 1 (Digital Twin) locked. **Neither the data-pack nor any Scenario 2 kit exists on `main`.**
@@ -229,7 +267,7 @@ From the BRIEF's open-items list plus session notes:
 ## 9. Quick-start for the next session
 
 ```powershell
-cd "C:\Users\dahans\OneDrive - Microsoft\Documents\Microsoft Scout\Imagineer-Hack\work"
+cd C:\repos\Team-Week-Imagineer-Hack
 git fetch origin
 git switch scenario-2-greenlight
 git config user.email "49003767+dahans-msft2@users.noreply.github.com"   # if not already set
