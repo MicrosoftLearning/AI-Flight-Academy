@@ -5,8 +5,15 @@ title: 🔵 Builder · Agent-Orchestrated — Scenario 1
 # 🔵 Builder · Agent-Orchestrated
 ## Scenario 1 — TBD
 
-::: warning Assembly map — pending scenario lock
-This is your build landing page for the altitude + scenario you picked. The scenario specifics are still being finalized with leadership; the structure below is ready to fill.
+::: warning Builder track coming soon
+Scenario 1 is locked — **The Digital Twin** — but the Copilot Studio build path for it is still being written.
+
+In the meantime you can build this scenario at either of the other two altitudes:
+
+- [🟢 Base · Copilot-Crafted](/build/base-scenario-1) — Microsoft 365 Copilot + Cowork, fully guided
+- [🟣 Advanced · Code-Extended](/build/advanced-scenario-1) — Scout + GitHub Copilot
+
+Read the [Scenario 1 brief](/scenarios/scenario-1) for what you'd be building.
 :::
 
 **Building with:** Copilot Studio
