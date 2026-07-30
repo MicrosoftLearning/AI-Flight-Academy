@@ -10,7 +10,7 @@ title: Resources
 
 ## Why the scenario works the way it does
 
-**[The Research](/resources/research)** — the studies behind the design, with links. Why bootstrapping is given away, why shorter specs beat longer ones, and why pasting real emails beats describing your voice.
+**[Where This Comes From](/resources/research)** — the thinking behind the scenario, what's peer reviewed, what isn't, and the limits worth stating out loud.
 
 ## Reference hacks
 

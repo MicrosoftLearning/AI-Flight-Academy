@@ -40,7 +40,7 @@ The team keeps adding principles, exceptions, and prose. The twin gets less cons
 
 **Why it matters**
 
-Anthropic's [Constitutional AI](https://arxiv.org/abs/2212.08073) work found that longer, more specific principles could damage or reduce generalization and effectiveness. Liu et al.'s ["Lost in the Middle"](https://arxiv.org/abs/2307.03172) showed that models attend worst to instructions buried mid-context. [Park et al. 2024](https://arxiv.org/abs/2411.10109) also suggests persona bootstrapping is already strong; the hard part is compression.
+Anthropic [reported while building Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback) that broad principles worked better than long, specific ones, and that the longer versions reduced effectiveness. ["Lost in the Middle"](https://arxiv.org/abs/2307.03172) (peer-reviewed, *Transactions of the ACL*) showed models attend worst to instructions buried mid-context.
 
 **How to coach**
 
@@ -54,7 +54,7 @@ Ask for the one tiebreaker that matters. Move examples into references. Keep `so
 
 **Why it matters**
 
-[Jemama & Kumar (2025)](https://arxiv.org/abs/2509.24930) report that few-shot prompting on real writing yields **up to 23.5× higher style-matching accuracy** than zero-shot description — and that completion-style prompting reaches 99.9% agreement with the original author. The practical lesson: pasting real examples beats describing vibes.
+A description is the writer's *theory* of their own writing, and it's usually wrong — people can't see their own tells. The evidence is already sitting in their sent folder. Samples carry the specifics a description never will: the exact signoff, the punctuation habits, how the register shifts between an exec and a teammate.
 
 **How to coach**
 

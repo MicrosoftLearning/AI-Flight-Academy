@@ -1,66 +1,65 @@
 ---
-title: The Research
+title: Where This Comes From
 ---
 
-# The Research
+# Where This Comes From
 
-Everything the Digital Twin scenario claims, and where it comes from. All open-access.
+The thinking behind the Digital Twin scenario, and how much weight each source can carry.
 
-## Bootstrapping a persona is already solved
+::: warning A note on sources
+Most AI research circulates as **preprints** on arXiv — posted by the authors, not peer reviewed. That doesn't make it wrong, but it isn't settled science, and we don't build claims on it.
 
-**[LLM Agents Grounded in Self-Reports Enable General-Purpose Simulation of Individuals](https://arxiv.org/abs/2411.10109)** · Park et al., 2024 · Stanford, n=1,052
-
-Built agents of 1,052 real people and scored them against each person's *own* consistency answering the same questions two weeks apart.
-
-| Agent built from | Match |
-| --- | --- |
-| Demographics only | 74% |
-| A survey battery | 82% |
-| A 2-hour interview | 83% |
-| Both | 86% |
-
-**Why it matters here:** the intake *method* barely moves the number. That's why we hand you Twin Forge instead of making you fill out a form — bootstrapping isn't the hard part, so we spend the session on what is.
-
-It also gives us a floor. An agent that knows only your job title scores 74%. **A twin built from what you say you value can land below that.**
-
-## Shorter specs work better
-
-**[Constitutional AI: Harmlessness from AI Feedback](https://arxiv.org/abs/2212.08073)** · Bai et al., 2022 · Anthropic
-
-Broad principles outperformed long specific ones. In Anthropic's own words, longer and more specific principles "damaged or reduced generalization and effectiveness."
-
-**[Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172)** · Liu et al., 2023
-
-Attention follows a U-curve. Content at the start or end of a prompt gets used; content in the middle gets missed. In one test, a model with the answer buried mid-context scored *below* the same model given no context at all.
-
-**Why it matters here:** compression isn't tidying up. A shorter soul file is a **better** soul file, and that's counterintuitive enough that people need to be told.
-
-## Show your writing, don't describe it
-
-**[How Well Do LLMs Imitate Human Writing Style?](https://arxiv.org/abs/2509.24930)** · Jemama & Kumar, 2025
-
-Across five models and four prompting strategies: few-shot prompting on real writing produced **up to 23.5× higher style-matching accuracy** than zero-shot description. Completion-style prompting reached 99.9% agreement with the original author. Prompting strategy mattered more than model size.
-
-One honest caveat from the same paper: high-fidelity imitation isn't the same as sounding human. Real essays averaged a perplexity of 29.5; matched model output averaged 15.2. **The style transfers. The unpredictability doesn't.**
-
-**Why it matters here:** "professional but warm" does nothing. Ten real emails do almost everything.
-
-## Models default to a generic professional
-
-**[Whose Opinions Do Language Models Reflect?](https://arxiv.org/abs/2303.17548)** · Santurkar et al., 2023
-
-Left alone, model outputs converge on an aggregate consensus voice rather than any specific individual.
-
-**Why it matters here:** this is exactly what you'll watch happen. Your first twin will pick the well-adjusted answer — escalate to your manager, slip the date, send the considerate status note — because that's the average. Your job is to overwrite the average with what you actually do.
-
-## Agents that improve their own spec
-
-For the 🟣 Advanced track's critic agent:
-
-- **[Reflexion](https://arxiv.org/abs/2303.11366)** · Shinn et al., 2023 — an agent writes a verbal post-mortem of its failure and reads it back on the next attempt.
-- **[Self-Refine](https://arxiv.org/abs/2303.17651)** · Madaan et al., 2023 — generate, critique your own output, revise. One model, three roles.
-- **[MemGPT / Letta](https://arxiv.org/abs/2310.08560)** · Packer et al., 2023 — an agent that edits its own memory file as it runs. The closest prior art to a self-patching soul file.
-
-::: warning The honest limit
-The **file** gets better. The **model** doesn't learn. Every run reloads an improved file — that's a real and useful thing, and it isn't training. Say so in your demo.
+Below, anything stated as fact is either **peer reviewed** or **published by the lab that ran the work**. Everything else is listed as further reading, clearly marked, with no claims attached.
 :::
+
+## What we'll actually stand behind
+
+### Where instructions sit in a prompt changes whether they're followed
+
+**[Lost in the Middle: How Language Models Use Long Contexts](https://arxiv.org/abs/2307.03172)** · Liu et al.
+*Peer reviewed — Transactions of the Association for Computational Linguistics.*
+
+Model attention follows a U-curve. Content at the beginning or end of a prompt gets used; content in the middle is most likely to be missed — even when it's exactly what's needed.
+
+**Why it matters here:** a long soul file buries its own best rules. Compression isn't tidying up, it's the work.
+
+### Broad principles beat long, specific ones
+
+**[Constitutional AI: Harmlessness from AI Feedback](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback)** · Anthropic
+*Published by Anthropic on their own research site.*
+
+While developing the technique, Anthropic reported that a short, broad principle worked notably well, and that writing longer and more specific versions tended to *reduce* effectiveness.
+
+**Why it matters here:** the instinct to add one more clause is the instinct to make it worse.
+
+## What we observed building it ourselves
+
+Not research — one build, one person. Useful as a story, not as evidence:
+
+The first twin we made was worse than no twin at all, because its author wrote down who he *wanted* to be. The spec said he escalated priority conflicts; in practice he just decided and told people after. It said he'd never ship anything unverified; in practice he cut scope and protected the date.
+
+Rewriting those rules from what he actually did was the moment it started sounding like him. **That gap — between the self you describe and the self your calendar records — is the whole scenario.**
+
+## Further reading
+
+Preprints and project pages. Interesting, relevant, **not peer reviewed** — read them as ideas, not findings.
+
+| | |
+| --- | --- |
+| [Reflexion](https://arxiv.org/abs/2303.11366) | An agent writes a plain-language post-mortem of its own failure and reads it back on the next attempt |
+| [Self-Refine](https://arxiv.org/abs/2303.17651) | Generate, critique your own output, revise. One model, three roles |
+| [MemGPT / Letta](https://arxiv.org/abs/2310.08560) | An agent that manages and edits its own memory as it runs |
+| [Whose Opinions Do Language Models Reflect?](https://arxiv.org/abs/2303.17548) | Left alone, model output drifts toward an aggregate voice rather than any specific person |
+| [Generative Agent Simulations of 1,000 People](https://arxiv.org/abs/2411.10109) | Building agents of real individuals from interviews and surveys, and measuring how closely they match |
+
+These informed the 🟣 Advanced track's critic agent and the general shape of the scenario. None of them is doing any load-bearing work in what we claim.
+
+## The honest limits
+
+Say these out loud in your demo. They make it stronger, not weaker.
+
+**The file gets better. The model doesn't learn.** A self-patching spec is real and genuinely useful, but every run simply reloads an improved file. Nothing is being trained.
+
+**Sounding like you isn't being you.** A twin can match your phrasing closely and still be more predictable and less surprising than you are. It drafts. You decide.
+
+**Your twin only knows what you've written down.** It can't infer what you've never done, what you're deliberately trying to change, or what you'd refuse outright — unless you tell it.

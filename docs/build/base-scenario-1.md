@@ -102,7 +102,7 @@ Every question is *"what did you actually do last time?"* — not *"what do you 
 
 Your first draft is too long. Cut it to about one page.
 
-This feels wrong and it's the single highest-value thing you'll do. Longer specs perform measurably *worse* — Anthropic found that longer, more specific instructions [damaged the model's ability to generalize](https://arxiv.org/abs/2212.08073), and separate research found instructions buried in the middle of a long prompt [get ignored almost entirely](https://arxiv.org/abs/2307.03172).
+This feels wrong and it's the single highest-value thing you'll do. Longer isn't better. Anthropic [found while building Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback) that broad principles worked better than long, specific ones — the longer versions actually reduced effectiveness. And ["Lost in the Middle"](https://arxiv.org/abs/2307.03172) (peer-reviewed, *Transactions of the ACL*) showed models pay least attention to whatever sits in the middle of a long prompt.
 
 **Cut anything that isn't a rule you'd actually apply.**
 
@@ -114,7 +114,9 @@ Open your voice file. If it *describes* your writing — "professional but frien
 
 Don't tidy them up. The dropped apostrophes, the dashes, the way you sign off — that's the whole signal.
 
-Pasting real writing is [roughly 23× more accurate](https://arxiv.org/abs/2509.24930) at matching your style than describing it.
+When you write, you make hundreds of small choices you've never consciously noticed — how you open, whether you bullet or run on, what you do with dashes, how you sign off. You can't list them. But they're all sitting there in your sent folder.
+
+Showing beats describing.
 
 <small>[Full guide →](/bricks/cowork-connect-source)</small>
 
@@ -194,4 +196,4 @@ It's the one where someone reads a draft your twin wrote and says *"yeah, that s
 
 ---
 
-[← Back to start](/) · [What this scenario is about](/scenarios/scenario-1) · [The research behind it](/resources/research)
+[← Back to start](/) · [What this scenario is about](/scenarios/scenario-1) · [Where this comes from](/resources/research)

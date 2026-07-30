@@ -33,7 +33,7 @@ export default defineConfig({
         items: [
           { text: "Overview", link: "/resources/" },
           { text: "⬇ Downloads", link: "/resources/downloads" },
-          { text: "The Research", link: "/resources/research" },
+          { text: "Where This Comes From", link: "/resources/research" },
         ],
       },
     ],

@@ -78,4 +78,4 @@ In Advanced, the team builds one integrated system. Each person owns one council
 
 ---
 
-Why this scenario is designed the way it is: [The Research](/resources/research).
+Why this scenario is designed the way it is: [Where This Comes From](/resources/research).
