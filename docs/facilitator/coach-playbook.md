@@ -40,7 +40,7 @@ The team keeps adding principles, exceptions, and prose. The twin gets less cons
 
 **Why it matters**
 
-Anthropic's Constitutional AI work found that longer, more specific principles could damage or reduce generalization and effectiveness. Liu et al.'s "Lost in the Middle" work showed that models attend worst to instructions buried mid-context. Park et al. 2024 also suggests persona bootstrapping is already strong; the hard part is compression.
+Anthropic's [Constitutional AI](https://arxiv.org/abs/2212.08073) work found that longer, more specific principles could damage or reduce generalization and effectiveness. Liu et al.'s ["Lost in the Middle"](https://arxiv.org/abs/2307.03172) showed that models attend worst to instructions buried mid-context. [Park et al. 2024](https://arxiv.org/abs/2411.10109) also suggests persona bootstrapping is already strong; the hard part is compression.
 
 **How to coach**
 
@@ -54,7 +54,7 @@ Ask for the one tiebreaker that matters. Move examples into references. Keep `so
 
 **Why it matters**
 
-Jemama & Kumar 2025 report that few-shot prompting on real writing can be far more accurate for style matching than zero-shot description. HyPerAlign 2025 reports strong preference wins from a handful of samples. The practical lesson: pasting real examples beats describing vibes.
+[Jemama & Kumar (2025)](https://arxiv.org/abs/2509.24930) report that few-shot prompting on real writing yields **up to 23.5× higher style-matching accuracy** than zero-shot description — and that completion-style prompting reaches 99.9% agreement with the original author. The practical lesson: pasting real examples beats describing vibes.
 
 **How to coach**
 

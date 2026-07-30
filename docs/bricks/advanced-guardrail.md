@@ -113,10 +113,10 @@ Do not write "please be careful" in a prompt and call it a guardrail. Put the ch
 
 7. Cite the idea honestly if you explain it in your demo.
 
-   - Reflexion (arXiv:2303.11366): agents improve future attempts through verbal feedback.
-   - Self-Refine (arXiv:2303.17651): generate, critique, refine loops.
-   - Constitutional AI: behavior is shaped by explicit principles.
-   - MemGPT / Letta: memory is managed as external state.
+   - [Reflexion](https://arxiv.org/abs/2303.11366) (Shinn et al., 2023): agents improve future attempts through verbal feedback.
+   - [Self-Refine](https://arxiv.org/abs/2303.17651) (Madaan et al., 2023): generate, critique, refine loops.
+   - [Constitutional AI](https://arxiv.org/abs/2212.08073) (Bai et al., 2022): behavior is shaped by explicit principles.
+   - [MemGPT / Letta](https://arxiv.org/abs/2310.08560): memory is managed as external state.
 
    ::: warning Honest limit
    The file gets better. The model does not learn. Every future run must reload the improved file.

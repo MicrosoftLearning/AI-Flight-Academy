@@ -10,6 +10,8 @@ Use this to extract decision rules for `soul.md`.
 
 A hand-built twin once scored below a generic-agent baseline because the author wrote down who he wanted to be. His spec said he escalated priority conflicts; in reality, he decided. It said he would never ship unverified work; in reality, he cut scope and held the date. Rewriting the rules from observed behavior moved the twin from 60% to 87%.
 
+The baseline is real: [Park et al. (2024)](https://arxiv.org/abs/2411.10109), across 1,052 people, found that an agent given only someone's demographics matched them 74% as well as they matched themselves two weeks later. Interview-built agents reached 83%, survey-built 82%, and both combined 86%. **A twin built from stated values can land under 74% — worse than knowing nothing about the person.**
+
 So do not ask, "What do you value?" Ask, "What did you actually do last time?"
 
 ## Behavioral questions

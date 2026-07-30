@@ -75,3 +75,7 @@ In Base, everyone builds their own twin, but the team converges on the shared sc
 
 In Advanced, the team builds one integrated system. Each person owns one council agent — Ambition, Obligation, Capacity, Arbiter, or Critic — and all agents share one `soul.md`.
 :::
+
+---
+
+Why this scenario is designed the way it is: [The Research](/resources/research).
