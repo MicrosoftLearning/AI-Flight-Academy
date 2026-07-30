@@ -1,23 +1,22 @@
 ---
-title: Pick Your Altitude
+title: Pick how you want to build
 ---
 
-# Pick Your Altitude
+# Pick how you want to build
 
-All three altitudes solve the same scenario — they're just different ways to build, so pick whichever fits how you like to work.
+Same scenario, three ways in. Pick whichever fits how you like to work — no track is a lesser version of another.
 
-| Altitude | Build with | You'll be doing | Scenario 1 |
+| | Build with | You'll be | |
 | --- | --- | --- | --- |
-| [🟢 **Base** · Copilot-Crafted](/levels/base/) | Microsoft 365 Copilot + Cowork | Writing instructions, not code. Fully guided. | [Start →](/build/base-scenario-1) |
-| [🔵 **Builder** · Agent-Orchestrated](/levels/builder/) | Copilot Studio | Wiring agents together in a low-code maker studio. | Coming soon |
-| [🟣 **Advanced** · Code-Extended](/levels/advanced/) | Scout + GitHub Copilot | Real code. You get a contract and a harness, not a solution. | [Start →](/build/advanced-scenario-1) |
+| 🟢 **Cowork** | Microsoft 365 Copilot | Writing instructions, not code. Guided end to end. | **[Start →](/build/base-scenario-1)** |
+| 🔵 **Copilot Studio** | Copilot Studio | Wiring agents in a low-code maker studio. | Coming soon |
+| 🟣 **Code** | VS Code + GitHub Copilot | Writing real code. You get a contract, not a solution. | **[Start →](/build/advanced-scenario-1)** |
 
-## Which one is right for me?
+## Not sure?
 
-- **Never built an agent?** Base. It's guided end to end, and a sharp Base build beats a rushed Advanced one.
-- **Comfortable in a maker studio?** Builder.
-- **You live in VS Code or a terminal?** Advanced.
+- **Never built an agent before?** 🟢 Cowork. It's guided the whole way, and a sharp Cowork build beats a rushed code one.
+- **You live in a terminal or VS Code?** 🟣 Code.
 
-::: tip No altitude is a lesser version
-Every altitude produces the same portable artifact. The tracks just differ in how you get there — and how far you push it.
+::: tip Everyone ends up with the same thing
+All three produce the same portable spec. The tracks differ in how you get there and how far you push it.
 :::

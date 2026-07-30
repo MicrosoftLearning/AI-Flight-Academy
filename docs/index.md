@@ -36,23 +36,23 @@ hero:
 
 <!-- markdownlint-disable MD033 -->
 <div class="lab-grid">
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/scenarios/">
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/scenarios/scenario-1">
     <span class="lab-card-emoji">🎯</span>
     <span class="lab-card-title">1 · Pick a scenario</span>
-    <span class="lab-card-desc">A real, relatable Microsoft work problem on safe, sanitized data. Coming soon.</span>
+    <span class="lab-card-desc">Scenario 1 is The Digital Twin — a spec of how you work that any AI tool can read.</span>
     <span class="lab-card-cta">See scenarios →</span>
   </a>
   <a class="lab-card" href="/Team-Week-Imagineer-Hack/levels/">
     <span class="lab-card-emoji">🎚️</span>
-    <span class="lab-card-title">2 · Pick your altitude</span>
-    <span class="lab-card-desc">Base, Builder, or Advanced — how deep you want to build.</span>
-    <span class="lab-card-cta">Pick altitude →</span>
+    <span class="lab-card-title">2 · Pick how to build</span>
+    <span class="lab-card-desc">Cowork with no code, or real code in VS Code. Same result, different route.</span>
+    <span class="lab-card-cta">Compare →</span>
   </a>
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/bricks/">
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/levels/">
     <span class="lab-card-emoji">🧱</span>
-    <span class="lab-card-title">3 · Follow the how-to guides</span>
-    <span class="lab-card-desc">Short, step-by-step guides for each part of your build. Use the ones your solution needs.</span>
-    <span class="lab-card-cta">Browse guides →</span>
+    <span class="lab-card-title">3 · Follow your build page</span>
+    <span class="lab-card-desc">Everything you need is on one page, start to finish. No hunting around.</span>
+    <span class="lab-card-cta">Start building →</span>
   </a>
   <a class="lab-card" href="/Team-Week-Imagineer-Hack/submit/">
     <span class="lab-card-emoji">🚀</span>
@@ -68,7 +68,7 @@ hero:
 
 ## Start here — build your path
 
-<p class="home-section-intro is-wide">Pick your altitude, then your scenario, and we'll take you straight to your build page. All three altitudes solve the same problem — they're just different ways to build, so pick whichever fits how you like to work.</p>
+<p class="home-section-intro is-wide">Two clicks and you're building. All three routes solve the same problem — pick whichever fits how you like to work.</p>
 
 <PathPicker />
 

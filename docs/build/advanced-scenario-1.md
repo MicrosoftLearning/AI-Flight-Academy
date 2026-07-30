@@ -35,13 +35,13 @@ The same spec folder also runs in Cowork and the CLI unmodified. That portabilit
 ## Before you start
 
 <div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/digital-twin-starter">
+  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/digital-twin-starter" target="_blank" rel="noreferrer">
     <span class="lab-card-emoji">📦</span>
     <span class="lab-card-title">Starter repo</span>
     <span class="lab-card-desc">Schema, MCP skeleton, council runner, test harness. The contract — not the solution.</span>
     <span class="lab-card-cta">Get it →</span>
   </a>
-  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack">
+  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack" target="_blank" rel="noreferrer">
     <span class="lab-card-emoji">🗂️</span>
     <span class="lab-card-title">Avery Washington</span>
     <span class="lab-card-desc">Optional. A made-up marketing manager with a fake inbox and calendar — use them instead of your own data.</span>
@@ -145,6 +145,51 @@ Two more that bite:
 - **Force short returns.** Three verbose sub-agents will blow the Arbiter's context window before it reasons.
 - **Run with `--allow-all-tools`** in your own repo, or you'll spend the session clicking approval prompts.
 
+::: details Agent file anatomy
+Each agent is a markdown file in `.github/agents/` with frontmatter declaring what it can reach:
+
+```md
+---
+name: capacity
+description: Argues from measured load. Subagent — never replies to the user.
+tools: ['read']
+---
+
+You are one of three competing drives. You are CAPACITY.
+
+Read `digital-twin/references/revealed.md` FIRST, then `soul.md`.
+You argue from measured reality, not stated intent.
+
+You are biased. That is your job. Do not be balanced.
+
+**You are a subagent. Do NOT reply to the user. Return your position to the arbiter.**
+
+Return exactly:
+POSITION: <one sentence>
+BECAUSE: <two sentences max, citing a measured number>
+COST IF IGNORED: <one sentence>
+```
+
+The Arbiter is the only one that talks to the user, and it declares its children:
+
+```md
+---
+name: arbiter
+description: Polls the drives, decides in voice, publishes the dissent.
+tools: ['read', 'edit', 'agent']
+agents: ['ambition', 'obligation', 'capacity']
+---
+```
+
+**Running it from the CLI:**
+
+```powershell
+copilot -p "Run the council on this dilemma: <text>" --allow-all-tools
+```
+
+On Windows the command line caps at 8191 characters, so long prompts have to go through a file — `twinlib.py` in the starter repo handles that for you.
+:::
+
 ## 5 · Expose it as a server
 
 Build the MCP server so anything can call your twin — Cowork, VS Code, Claude, an agent nobody's written yet.
@@ -165,6 +210,36 @@ propose_soul_patch(what_it_said, what_they_would_do)
 
 The split matters: Cowork connectors need answers in **under 30 seconds**, which the thin tools clear easily and `twin_decide` never will.
 
+::: details Building the server
+```python
+from mcp.server.mcpserver import MCPServer
+
+mcp = MCPServer(name="digital-twin", version="1.0.0")
+
+@mcp.tool(description="How this person decides. Call before drafting or prioritizing anything.")
+def soul_spec() -> str:
+    return (REFS / "soul.md").read_text(encoding="utf-8")
+
+if __name__ == "__main__":
+    mcp.run(transport="stdio")            # VS Code, Claude Desktop
+    # mcp.run(transport="streamable-http", host="127.0.0.1", port=8848)
+```
+
+**The `description` is not documentation** — it's how a calling agent decides whether to use your tool. Write it as an instruction: *"Call this before drafting anything on their behalf."*
+
+**Wire it into VS Code** with `.vscode/mcp.json` (already in the starter):
+
+```json
+{ "servers": { "digital-twin": {
+  "type": "stdio", "command": "python",
+  "args": ["${workspaceFolder}/mcp_server.py"] } } }
+```
+
+Then `Ctrl+Shift+P` → **MCP: List Servers** → start it. Switch Copilot Chat to **Agent** mode and your tools appear under the 🔧 icon.
+
+**Two transports, two audiences.** `stdio` for local editors. `streamable-http` is the shape a Cowork connector needs — JSON-RPC 2.0 over HTTPS. Production would also need TLS and OAuth; local is fine today.
+:::
+
 ## 6 · Add the guardrail
 
 One check that runs before anything leaves the system:
@@ -178,6 +253,30 @@ source: <which file and section>
 Run it before any send, share, commit, decline, or external message.
 
 **Enforce it at the tool, not in a prompt.** That's the difference between a suggestion and a boundary — yours has to hold even when the caller is an agent you didn't write.
+
+::: details What a guardrail looks like
+```python
+@mcp.tool(description="Check whether an action is allowed before taking it. "
+                      "Call before any send, commit, decline, or external message.")
+def check_boundary(action: str, recipient: str = "") -> str:
+    a = f"{action} {recipient}".lower()
+
+    if any(k in a for k in ("why", "reason", "travel", "calendar", "ooo")):
+        return ("NEVER\nrule: never disclose calendar reasons or travel. "
+                "A decline says WHEN I'm free, never WHY I'm not.\n"
+                "source: soul.md > Boundaries")
+
+    if any(k in a for k in ("external", "customer", "commit", "deadline")):
+        return ("ASK_FIRST\nrule: anything external, or any date commitment.\n"
+                "source: soul.md > Boundaries")
+
+    return "ALLOW\nrule: no boundary governs this\nsource: soul.md > Boundaries"
+```
+
+Note it returns **the rule and where it came from**, not just a verdict — so a calling agent can explain itself, and a human can audit it.
+
+**Try this in your demo:** have another agent ask your twin to explain why the person is out next week. Watching it return `NEVER` — with a citation — is the moment the room understands the difference between a boundary and a polite request.
+:::
 
 ## 7 · ⚡ The twist
 

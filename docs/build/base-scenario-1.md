@@ -33,13 +33,13 @@ It's plain text, it's yours, and it works in Cowork, VS Code, and 30+ other AI t
 Grab these now — you'll need the first one in about two minutes.
 
 <div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/blob/main/Allfiles/twin-forge/SKILL.md">
+  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/blob/main/Allfiles/twin-forge/SKILL.md" target="_blank" rel="noreferrer">
     <span class="lab-card-emoji">⚡</span>
     <span class="lab-card-title">Twin Forge</span>
     <span class="lab-card-desc">A skill we built that interviews you and drafts your first twin. Download the file, then click Raw → Save.</span>
     <span class="lab-card-cta">Get it →</span>
   </a>
-  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack">
+  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack" target="_blank" rel="noreferrer">
     <span class="lab-card-emoji">🗂️</span>
     <span class="lab-card-title">Avery Washington</span>
     <span class="lab-card-desc">Optional. A made-up marketing manager with a fake inbox and calendar — use them instead of your own data.</span>
@@ -65,6 +65,34 @@ You'll see **"Skill uploaded — twin-forge."**
 **Upload the file on its own.** Don't zip it. Zipped uploads fail silently — nothing appears and you get no error.
 
 **Start a new Cowork session afterwards.** Cowork only looks for new skills when a session begins, so an already-open one won't see it.
+:::
+
+::: details How skills work, if you're curious
+A Cowork skill is one markdown file: a bit of YAML at the top telling Cowork *when* to load it, then plain instructions.
+
+```md
+---
+name: meeting-brief
+description: Use this when I ask for a meeting brief, prep notes, or a stakeholder summary.
+---
+
+# Meeting Brief
+
+When this skill runs, you MUST:
+1. Identify the meeting, attendees, and goal.
+2. Pull relevant calendar, email, and file context.
+3. Return the output in the shape below.
+
+Never invent missing context. If evidence is thin, say what's missing.
+```
+
+Cowork decides which skill to load by reading the **description** — so put the phrases you'd actually type in there.
+
+Skills live in OneDrive at `/Documents/Cowork/skills/{name}/`. A skill can carry a `references/` folder (loaded into context when needed) and a `scripts/` folder (executed, not read).
+
+**The reason this matters:** it's the [Agent Skills open standard](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/blob/main/Allfiles/twin-forge/SKILL.md). The same file is read by VS Code Copilot, Claude Code, Gemini CLI, Cursor and 30+ other tools. You're not writing something trapped in one product.
+
+**Want to make your own later?** Cowork → Customize → Skills → **Add ▾** → **Create new** walks you through it. Or just say *"build me a skill that…"* in chat and it'll draft one with you.
 :::
 
 ## 2 · Pick your data
@@ -106,8 +134,6 @@ This feels wrong and it's the single highest-value thing you'll do. Longer isn't
 
 **Cut anything that isn't a rule you'd actually apply.**
 
-<small>Want the mechanics of editing a skill? [Full guide →](/bricks/cowork-build-skill)</small>
-
 ## 5 · Give it your voice
 
 Open your voice file. If it *describes* your writing — "professional but friendly" — replace that with **actual emails you sent.** Five to ten, pasted exactly as you wrote them.
@@ -118,7 +144,30 @@ When you write, you make hundreds of small choices you've never consciously noti
 
 Showing beats describing.
 
-<small>[Full guide →](/bricks/cowork-connect-source)</small>
+::: details Getting good samples out of Cowork
+There's nothing to connect and no auth to set up — Cowork already reaches your mail, calendar, Teams, files and org chart through Work IQ. It only ever sees what you can see.
+
+The trick is asking for a shape you can reuse, not a summary:
+
+```text
+Find my last 10 sent emails. Return one row per email with: date, recipient,
+subject, the exact greeting, the exact signoff, and three verbatim phrases
+that sound like me. Do not summarize before returning the table.
+```
+
+Then for the behavioral half:
+
+```text
+Summarize my calendar for the last 30 days. Group time by category, and give me
+the percentage I marked tentative, the percentage I organized myself, and my
+typical response time by sender.
+```
+
+**Two rules:** ask for *one* source at a time, and tell it not to summarize before returning. Summaries lose exactly the detail you need.
+
+Keep the prompts that work — you'll want to run them again.
+:::
+
 
 ## 6 · Give it judgment
 
@@ -164,7 +213,27 @@ Pick one and set it up:
 Cowork drafts and waits for your approval. Keep it that way today.
 :::
 
-<small>[Full guide →](/bricks/cowork-rerun-skill)</small>
+::: details Setting up a schedule or a trigger
+**Schedule** — just describe it in chat:
+
+```text
+Send me a focus plan every weekday at 9 AM.
+```
+
+Manage them at **Cowork → Scheduled**, which has a **Runs** tab and a **Manage schedules** tab. You get up to five.
+
+**Trigger** — describe the event instead:
+
+```text
+When my manager emails me about the launch, draft a reply in my voice.
+```
+
+Cowork proposes a **"Set up trigger?"** card showing *When*, *Run in*, *What it does*, and the permissions it needs. Review it, then arm it.
+
+Triggers fire on incoming email or a Teams message/@mention, and the default is **draft-and-approve** — it prepares the action and asks first. Leave that on.
+
+**Before you arm anything:** run the skill manually on new input once and check the output still holds up. Automating something unreliable just makes it unreliable on a schedule.
+:::
 
 ---
 
