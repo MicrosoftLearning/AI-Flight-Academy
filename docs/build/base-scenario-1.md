@@ -35,17 +35,17 @@ It's yours, you can edit it, and it works in Cowork, VS Code, and 30+ other AI t
 Grab these now — you'll need the first one in about two minutes.
 
 <div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/blob/main/Allfiles/twin-forge/SKILL.md" target="_blank" rel="noreferrer">
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/twin-forge-SKILL.md" download="SKILL.md">
     <span class="lab-card-emoji">⚡</span>
     <span class="lab-card-title">Twin Forge</span>
-    <span class="lab-card-desc">A skill we built that interviews you and drafts your first twin. Download the file, then click Raw → Save.</span>
-    <span class="lab-card-cta">Get it →</span>
+    <span class="lab-card-desc">A skill that interviews you and drafts your first twin. Downloads as SKILL.md — upload that file straight into Cowork.</span>
+    <span class="lab-card-cta">Download SKILL.md →</span>
   </a>
-  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack" target="_blank" rel="noreferrer">
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/avery-persona-pack.zip" download>
     <span class="lab-card-emoji">🗂️</span>
     <span class="lab-card-title">Avery Washington</span>
     <span class="lab-card-desc">Optional. A made-up marketing manager with a fake inbox and calendar — use them instead of your own data.</span>
-    <span class="lab-card-cta">Get it →</span>
+    <span class="lab-card-cta">Download .zip →</span>
   </a>
 </div>
 

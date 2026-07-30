@@ -35,27 +35,40 @@ The same spec folder runs in Cowork and the CLI unmodified.
 ## Before you start
 
 <div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/digital-twin-starter" target="_blank" rel="noreferrer">
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/digital-twin-starter.zip" download>
     <span class="lab-card-emoji">📦</span>
     <span class="lab-card-title">Starter repo</span>
     <span class="lab-card-desc">Schema, MCP skeleton, council runner, test harness. The contract — not the solution.</span>
-    <span class="lab-card-cta">Get it →</span>
+    <span class="lab-card-cta">Download .zip →</span>
   </a>
-  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack" target="_blank" rel="noreferrer">
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/avery-persona-pack.zip" download>
     <span class="lab-card-emoji">🗂️</span>
     <span class="lab-card-title">Avery Washington</span>
     <span class="lab-card-desc">Optional. A made-up marketing manager with a fake inbox and calendar — use them instead of your own data.</span>
-    <span class="lab-card-cta">Get it →</span>
+    <span class="lab-card-cta">Download .zip →</span>
   </a>
 </div>
 
-```bash
-git clone https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack.git
-cd Team-Week-Imagineer-Hack/Allfiles/digital-twin-starter
+Unzip it wherever you keep projects, then open the folder in VS Code. **No cloning, no repo to fork.**
+
+::: details Prefer one line in a terminal?
+**PowerShell** — downloads, unzips, and opens it in VS Code:
+
+```powershell
+$u='https://microsoftlearning.github.io/Team-Week-Imagineer-Hack/downloads/digital-twin-starter.zip'
+$z="$env:TEMP\dts.zip"; iwr $u -OutFile $z
+Expand-Archive $z -DestinationPath "$HOME\digital-twin" -Force
+code "$HOME\digital-twin\digital-twin-starter"
 ```
 
-::: warning Copy it out before you edit
-Work in your own copy, not in the repo folder.
+**macOS / Linux:**
+
+```bash
+curl -L -o /tmp/dts.zip https://microsoftlearning.github.io/Team-Week-Imagineer-Hack/downloads/digital-twin-starter.zip
+unzip -q /tmp/dts.zip -d ~/digital-twin && code ~/digital-twin/digital-twin-starter
+```
+
+Add the persona pack the same way, swapping in `avery-persona-pack.zip`.
 :::
 
 **Check this first, before anything else:** open Copilot Chat in VS Code and confirm you can switch to **Agent** mode. It's an org-managed setting and it may be off. If it is, use the Copilot CLI instead — everything here works either way.

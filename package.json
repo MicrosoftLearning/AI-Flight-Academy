@@ -8,8 +8,9 @@
     "vitepress": "^2.0.0-alpha.12"
   },
   "scripts": {
-    "docs:dev": "vitepress dev docs",
-    "docs:build": "vitepress build docs",
+    "pack": "node scripts/pack-downloads.mjs",
+    "docs:dev": "npm run pack && vitepress dev docs",
+    "docs:build": "npm run pack && vitepress build docs",
     "docs:preview": "vitepress preview docs",
     "lint:md": "markdownlint-cli2 \"docs/**/*.md\" \"#docs/node_modules\""
   }
