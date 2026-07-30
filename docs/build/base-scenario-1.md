@@ -1,187 +1,197 @@
 ---
-title: 🟢 Base · Copilot-Crafted — Scenario 1
+title: The Digital Twin — Cowork
 ---
 
-<!-- markdownlint-disable MD013 MD025 -->
+<!-- markdownlint-disable MD013 MD025 MD033 -->
 
-# 🟢 Base · Copilot-Crafted
+# 🧬 The Digital Twin
 
-## Scenario 1 — Digital Twin
+**You'll build this in Cowork. No code, and no experience needed.**
 
-**Building with:** Microsoft 365 Copilot + Cowork
+## Why
 
-::: tip Get the files
-Twin Forge, the Marcus Webb persona pack, and the starter repo are all on the [Downloads page](/resources/downloads).
+AI can write any email. It can't write *your* email.
+
+It knows everything about your company and nothing about you — so every draft needs a rewrite, and the time you saved disappears in the last mile.
+
+**The last mile is you.** Today you're going to write that part down.
+
+## What you'll walk out with
+
+A one-page spec of how you actually work — and any AI tool can read it.
+
+| File | What it holds |
+| --- | --- |
+| **soul** | How you decide. Your priorities, and what you do when two of them collide. |
+| **voice** | How you write. Real emails of yours, and the patterns inside them. |
+| **revealed** | What your calendar says about you — versus what you say about you. |
+
+It's plain text, it's yours, and it works in Cowork, VS Code, and 30+ other AI tools without changing a thing.
+
+## Before you start
+
+Grab these now — you'll need the first one in about two minutes.
+
+<div class="lab-grid lab-grid-2">
+  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/blob/main/Allfiles/twin-forge/SKILL.md">
+    <span class="lab-card-emoji">⚡</span>
+    <span class="lab-card-title">Twin Forge</span>
+    <span class="lab-card-desc">A skill we built that interviews you and drafts your first twin. Download the file, then click Raw → Save.</span>
+    <span class="lab-card-cta">Get it →</span>
+  </a>
+  <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack">
+    <span class="lab-card-emoji">🗂️</span>
+    <span class="lab-card-title">Marcus Webb</span>
+    <span class="lab-card-desc">Optional. A made-up marketing manager with a fake inbox and calendar — use him instead of your own data.</span>
+    <span class="lab-card-cta">Get it →</span>
+  </a>
+</div>
+
+---
+
+## 1 · Install Twin Forge
+
+1. Open Microsoft 365 Copilot and click the **Cowork** tab.
+2. In the left menu, click **Customize**.
+3. Click the **Skills** tab.
+4. Click the arrow next to **Add**, then **Upload skill**.
+5. Choose the `SKILL.md` file you downloaded.
+
+You'll see **"Skill uploaded — twin-forge."**
+
+![Twin Forge showing under Your skills on the Cowork Customize page](/img/twin-forge-uploaded.png)
+
+::: warning Two things that will trip you up
+**Upload the file on its own.** Don't zip it. Zipped uploads fail silently — nothing appears and you get no error.
+
+**Start a new Cowork session afterwards.** Cowork only looks for new skills when a session begins, so an already-open one won't see it.
 :::
 
-You will build a small, portable digital twin: a one-page spec of how you work, plus a Cowork skill that can run against it.
+## 2 · Pick your data
 
-## 1 · Your mission
-
-Create a digital twin that captures how a person decides, writes, and actually spends time. Then use Cowork to run that twin on a realistic work conflict.
-
-Your twin has three files:
-
-1. `soul.md` — how the person decides: identity, priority stack, decision rules, stakeholders, boundaries, capacity, and blind spots.
-2. `voice.md` — how the person writes: 5-10 real sent emails or synthetic samples, quoted verbatim, plus the style rules those samples imply.
-3. `revealed.md` — what the calendar shows versus what the person says about themselves.
-
-You can build from either data path:
-
-- **Path A — Your own data:** use Work IQ through Cowork to pull your sent mail, calendar, Teams, files, and people context.
-- **Path B — Marcus Webb persona:** use the synthetic marketing manager pack at `/Allfiles/persona-pack/`.
-
-::: tip Team model
-Each person builds their own twin. The team collaborates on the schema: what belongs in `soul.md`, what makes a useful tiebreaker, and what a good blind spot looks like.
-:::
-
-## 2 · What you'll demonstrate
-
-You will demonstrate the Base altitude functions from the [🟢 Base · Copilot-Crafted level page](/levels/base/):
-
-- Pull from a data source.
-- Author a reusable Cowork skill.
-- Produce a clean, formatted output.
-- Re-run it on new inputs.
-
-By the end, you should be able to show Cowork using your twin to handle a conflict: an executive ask collides with a promise to a peer.
-
-## 3 · Assembly map — snap these blocks together
-
-### Step 0 — Install Twin Forge
-
-1. Download **`SKILL.md`** from the [Downloads page](/resources/downloads).
-2. In Cowork, go to **Customize** → **Skills** → **Add ▾** → **Upload skill**.
-3. Upload the `.md` file on its own. You'll see **"Skill uploaded — twin-forge."**
-4. Start a **new Cowork session** — skills are only discovered at session start.
-5. Say: `Start Twin Forge and help me build a v0.1 digital twin.`
-6. Choose Path A or Path B when asked.
-
-::: warning Upload the .md, not a .zip
-We tested this on a live tenant: `.zip` uploads silently fail — the dialog just closes and no skill appears. Everything Twin Forge needs is inside `SKILL.md`.
-
-Taking **Path B?** The Marcus Webb pack isn't in your Cowork workspace by default — download it and **attach the files** when Twin Forge asks.
-:::
-
-![Twin Forge installed under Your skills in the Cowork Customize page](/img/twin-forge-uploaded.png)
-
-Goal: a v0.1 twin in about 12 minutes.
-
-### Step 1 — Connect the evidence
-
-Use [Connect Cowork to a data source](/bricks/cowork-connect-source).
-
-Ask Cowork for:
-
-1. Last ~10 sent emails for voice evidence.
-2. Last ~30 days of calendar for revealed behavior.
-3. Relevant Teams or file context only if it helps explain the work.
-
-### Step 2 — Build or edit the skill
-
-Use [Write a reusable Cowork skill](/bricks/cowork-build-skill).
-
-Twin Forge bootstraps the first pass. You improve it by making the rules shorter, clearer, and more testable.
-
-### Step 3 — Format the twin
-
-Use [Produce a formatted output](/bricks/cowork-formatted-output).
-
-Keep the three files stable:
-
-1. `soul.md`
-2. `voice.md`
-3. `revealed.md`
-
-### Step 4 — Attack surface: COMPRESS
-
-Cut `soul.md` hard. A good version is about one page.
-
-Why: Anthropic's Constitutional AI work found that longer, more specific principles can damage or reduce generalization and effectiveness. Liu et al.'s "Lost in the Middle" work also shows that instructions buried in the middle of context are attended to worst. Short specs travel better.
-
-### Step 5 — Attack surface: VOICE
-
-Replace description with evidence.
-
-Why: Jemama & Kumar (2025) found few-shot examples from real writing can be up to 23.5x more accurate for style matching than zero-shot descriptions. In plain English: describing your voice does almost nothing; pasting 10 real emails does almost everything.
-
-### Step 6 — Attack surface: JUDGMENT
-
-Add decision rules that resolve conflicts.
-
-Bad rule: `I value accuracy.`
-
-Good rule: `When an unverified claim threatens a committed date, cut scope and hold the date.`
-
-### Step 7 — Team checkpoint
-
-At about the halfway point, meet as a team for 10 minutes.
-
-1. Each person shows one field from `soul.md` that helped.
-2. Each person shows one weak or vague rule.
-3. Steal the best fields from each other.
-4. Agree on the shared schema your team will use.
-5. Keep the instances individual.
-
-### Step 8 — Mid-build twist
-
-At about 55 minutes, test this conflict:
+Start a **new** Cowork session and say:
 
 ```text
-A senior executive asks for a new customer narrative by 3 PM today. You already promised a peer that you would finish launch review notes by 4 PM. Use my twin to decide what to do, what to say to each person, and what scope to cut.
+Start Twin Forge and help me build a v0.1 digital twin.
 ```
 
-The point is not to be "nice." The point is to see whether your twin can make a grounded tradeoff.
+It'll ask which you want:
 
-### Step 9 — Re-run and arm one trigger
+**Your own data** — Twin Forge reads your sent mail and calendar. Nothing is set up, nothing is shared, and it only sees what you can already see. This makes the better twin, because it's really you.
 
-Use [Re-run a skill on new inputs](/bricks/cowork-rerun-skill).
+**Marcus Webb** — the made-up marketing manager. Pick this if you'd rather not use your own work data. Download his pack and **attach the files** when Twin Forge asks; it can't see them otherwise.
 
-Pick one:
+## 3 · Get your first draft
 
-1. **Scheduled prompt:** `Every weekday at 9 AM, compare today's calendar to my soul.md capacity rules and draft a focus plan.`
-2. **Event-driven task:** trigger when an incoming email or Teams @mention asks for urgent help. Keep the default draft-and-approve flow.
+Twin Forge takes it from here, about 12 minutes:
 
-::: warning Approval matters
-Cowork may draft a response, but nothing should send without your approval during this hack.
+- reads your last ~10 sent emails and ~30 days of calendar
+- asks you around 8 quick questions, one at a time
+- shows you where what you *said* and what your calendar *shows* disagree
+- writes your three files
+
+::: tip Answer honestly, not aspirationally
+Every question is *"what did you actually do last time?"* — not *"what do you value?"* If you describe your best self, you'll get a twin of someone else.
 :::
 
-## 4 · The data
+**You now have a v0.1 twin. Everything from here is you making it good — and that's the actual hack.**
 
-Choose one path.
+---
 
-### Path A — Your own Microsoft 365 data
+## 4 · Make it shorter
 
-Use Cowork's Work IQ grounding. It can reason over your mail, sent mail, calendar, Teams chats and channels, OneDrive and SharePoint files, and people/org chart context. It only sees what you can see.
+Your first draft is too long. Cut it to about one page.
 
-Use safe prompts:
+This feels wrong and it's the single highest-value thing you'll do. Longer specs perform measurably *worse* — Anthropic found that longer, more specific instructions damaged the model's ability to generalize, and separate research ("Lost in the Middle") found instructions buried in the middle of a long prompt get ignored almost entirely.
+
+**Cut anything that isn't a rule you'd actually apply.**
+
+<small>Want the mechanics of editing a skill? [Full guide →](/bricks/cowork-build-skill)</small>
+
+## 5 · Give it your voice
+
+Open your voice file. If it *describes* your writing — "professional but friendly" — replace that with **actual emails you sent.** Five to ten, pasted exactly as you wrote them.
+
+Don't tidy them up. The dropped apostrophes, the dashes, the way you sign off — that's the whole signal.
+
+Pasting real writing is roughly **23× more accurate** at matching your style than describing it.
+
+<small>[Full guide →](/bricks/cowork-connect-source)</small>
+
+## 6 · Give it judgment
+
+Your twin needs to know what you do when two good things collide. Most first drafts have values where rules should be.
+
+| ❌ This is a value | ✅ This is a rule |
+| --- | --- |
+| I value accuracy. | When an unverified claim threatens a committed date, cut scope and hold the date. |
+| I'm responsive to leadership. | When an exec ask conflicts with a peer promise, reply to the exec within the hour, protect the peer's deadline, offer a smaller same-day version. |
+| I collaborate well. | When two people both say theirs is top priority, I decide and tell them. I don't escalate it. |
+
+A value tells an agent nothing. **A rule tells it what to do.**
+
+## 7 · Compare with your team
+
+Ten minutes, together. Everyone built their own twin — now build a better *shape* for all of them.
+
+Each person shows **one rule that worked** and **one that's still vague.** Steal shamelessly. Agree on what belongs in a good soul file. Keep your own answers; share the structure.
+
+## 8 · ⚡ The twist
+
+Your facilitator will hand this out partway through. Give it to your twin:
 
 ```text
-Find my last 10 sent emails. Quote the relevant style samples verbatim. Do not include confidential content in the final demo.
+A senior executive wants a new customer narrative by 3 PM today.
+You already promised a peer their launch review notes by 4 PM.
+Use my twin: what do I do, what do I say to each of them, and what gets cut?
 ```
 
-```text
-Summarize my last 30 days of calendar by category, organizer, tentative percentage, self-organized percentage, and recurring meetings.
-```
+The goal isn't a polite answer. It's whether your twin makes **your** tradeoff — and can say what it gave up.
 
-### Path B — Marcus Webb persona pack
+If it can't, you've found your next missing rule. Add it and run it again.
 
-Use the synthetic data at `/Allfiles/persona-pack/`. Marcus Webb is a fictional marketing manager. Use this path if you do not want to use your own work data or if you need a clean demo dataset.
+## 9 · Make it run without you
 
-::: info Research note
-Park et al. (2024, arXiv:2411.10109, n=1,052) found interview-built agents reached 83%, survey-built agents 82%, combined agents 86%, and demographics-only agents 74%. Bootstrapping is not the hard part. The hard part is refining what the first pass misses.
+Pick one and set it up:
+
+**On a schedule** — *"Every weekday at 9 AM, compare my calendar to my capacity rules and draft a focus plan."*
+
+**On a trigger** — fires when an email arrives or someone @mentions you in Teams.
+
+::: warning Nothing sends on its own
+Cowork drafts and waits for your approval. Keep it that way today.
 :::
 
-## 5 · Demo checklist
+<small>[Full guide →](/bricks/cowork-rerun-skill)</small>
 
-Show these in 60-90 seconds:
+---
 
-- [ ] Which data path you used: your own data or Marcus Webb.
-- [ ] Your `soul.md`, trimmed to about one page.
-- [ ] Your `voice.md`, with verbatim samples and inferred rules.
-- [ ] Your `revealed.md`, including one gap between stated behavior and calendar evidence.
-- [ ] The executive-versus-peer conflict and Cowork's recommended tradeoff.
-- [ ] One re-run on new input.
-- [ ] One armed scheduled prompt or event-driven trigger, with draft-and-approve explained.
+## Show it off
 
-[← Back to start](/) · [Scenario 1 brief](/scenarios/scenario-1)
+60–90 seconds. Hit these:
+
+- [ ] Whose twin — yours or Marcus's
+- [ ] Your soul file, about a page
+- [ ] Your voice file, with real samples in it
+- [ ] **One thing your calendar revealed that surprised you**
+- [ ] The exec-vs-peer conflict, and what your twin decided
+- [ ] Your scheduled prompt or trigger
+
+::: tip The best demo isn't the most complex one
+It's the one where someone reads a draft your twin wrote and says *"yeah, that sounds like you."*
+:::
+
+## Stuck?
+
+| What you're seeing | What to do |
+| --- | --- |
+| Cowork ignores Twin Forge | Start a **new** session — skills only load at the start |
+| Upload seemed to do nothing | Upload the `.md` file, not a zip |
+| "I can't find the reference files" | You've got an old copy — re-download it |
+| Marcus's data can't be found | Attach the pack files to the session |
+| Twin sounds like a stranger | Your voice file is descriptions, not real emails. Go back to step 5 |
+| Twin gives wishy-washy answers | Your soul file has values, not rules. Go back to step 6 |
+
+---
+
+[← Back to start](/) · [What this scenario is about](/scenarios/scenario-1)
