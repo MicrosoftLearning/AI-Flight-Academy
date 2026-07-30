@@ -40,7 +40,7 @@ The team keeps adding principles, exceptions, and prose. The twin gets less cons
 
 **Why it matters**
 
-Anthropic's Constitutional AI work found that longer, more specific principles could damage or reduce generalization and effectiveness. Liu et al.'s "Lost in the Middle" work showed that models attend worst to instructions buried mid-context. Park et al. 2024 also suggests persona bootstrapping is already strong; the hard part is compression.
+Anthropic [reported while building Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback) that broad principles worked better than long, specific ones, and that the longer versions reduced effectiveness. ["Lost in the Middle"](https://arxiv.org/abs/2307.03172) (peer-reviewed, *Transactions of the ACL*) showed models attend worst to instructions buried mid-context.
 
 **How to coach**
 
@@ -54,11 +54,11 @@ Ask for the one tiebreaker that matters. Move examples into references. Keep `so
 
 **Why it matters**
 
-Jemama & Kumar 2025 report that few-shot prompting on real writing can be far more accurate for style matching than zero-shot description. HyPerAlign 2025 reports strong preference wins from a handful of samples. The practical lesson: pasting real examples beats describing vibes.
+A description is the writer's *theory* of their own writing, and it's usually wrong — people can't see their own tells. The evidence is already sitting in their sent folder. Samples carry the specifics a description never will: the exact signoff, the punctuation habits, how the register shifts between an exec and a teammate.
 
 **How to coach**
 
-Have them paste 5–10 sent emails or use Marcus Webb samples. Then extract rules the samples prove: opener, signoff, sentence length, punctuation, directness, and register by recipient.
+Have them paste 5–10 sent emails or use Avery Washington samples. Then extract rules the samples prove: opener, signoff, sentence length, punctuation, directness, and register by recipient.
 
 ## Failure mode: tooling eats the room
 
@@ -68,7 +68,7 @@ The team is debugging setup at 0:45 and has no working twin.
 
 **How to coach**
 
-Shrink the tool surface. Use Cowork and the Twin Forge skill. If needed, switch to the Marcus Webb pack. The learning target is the portable spec, not a perfect integration.
+Shrink the tool surface. Use Cowork and the Twin Forge skill. If needed, switch to the Avery Washington pack. The learning target is the portable spec, not a perfect integration.
 
 ## Failure mode: Advanced teams do not integrate
 
@@ -90,4 +90,19 @@ Force one shared `soul.md`. The Arbiter owns tiebreakers. The Critic checks whet
 
 ::: tip Coach sentence
 "Show me the last real example, then show me the smallest rule that would have predicted it."
+:::
+
+## Tooling traps (verified on a live tenant)
+
+These are real, we hit them in testing. Call them out at the start of the Base track and you'll save the room twenty minutes.
+
+| Symptom | Cause | Fix |
+| --- | --- | --- |
+| Uploaded a skill, nothing happened, no error | The upload was a `.zip`. It fails **silently** | Upload the `SKILL.md` file on its own |
+| Skill installed but Cowork ignores it | The session was already open | Start a **new** Cowork session — skills load at session start |
+| Agent says it can't find reference files | Companion files don't travel with a `.md` upload | Everything must be inline in `SKILL.md` |
+| Path B: "persona pack isn't available" | The pack isn't in the Cowork workspace | Download it and **attach** the files to the session |
+
+::: tip What a healthy run looks like
+Twin Forge builds a 5-step plan, pulls sent mail and calendar through Work IQ, then asks behavioral questions one at a time. If it starts asking "what do you value?", it isn't running the skill — check that it actually loaded.
 :::

@@ -1,40 +1,13 @@
 ---
-title: Advanced · Code-Extended
+title: Pick how you want to build
 ---
 
-# 🟣 Advanced · Code-Extended
+# Pick how you want to build
 
-**Build with:** Scout + GitHub Copilot.
+This page moved. Head straight to your build page:
 
-You write real code. You get the contract and the harness — not the solution.
+- 🟢 **[Cowork — no code](/build/base-scenario-1)**
+- 🟣 **[Code — VS Code + GitHub Copilot](/build/advanced-scenario-1)**
+- 🔵 Copilot Studio — coming soon
 
-## Assembly map
-
-| Scenario | Go here |
-| --- | --- |
-| **🧬 Scenario 1 · The Digital Twin** | **[Start building →](/build/advanced-scenario-1)** |
-| Scenario 2 | Coming soon |
-| Scenario 3 | Coming soon |
-
-::: tip Grab the starter repo first
-Schema, MCP server skeleton, council runner, and test harness are on the [Downloads page](/resources/downloads).
-:::
-
-## What you'll demonstrate (the spine)
-
-- [ ] A custom connector / tool
-- [ ] Grounded on live data (Work IQ)
-- [ ] One guardrail that checks the output
-
-## Building blocks for this altitude
-
-- [Set up Scout / GitHub Copilot](/bricks/advanced-setup)
-- [Build a custom connector (MCP)](/bricks/advanced-mcp-connector)
-- [Ground on live data with Work IQ](/bricks/advanced-work-iq)
-- [Add a guardrail / output check](/bricks/advanced-guardrail)
-
-## How your team splits the work
-
-For Scenario 1, the team builds **one** system. Each person owns one agent in a council — Ambition, Obligation, Capacity, Arbiter, or Critic — and everyone shares a single `soul.md`. You have to integrate. That's the point.
-
-See [the build page](/build/advanced-scenario-1) for who owns what.
+Or [compare the three](/levels/).

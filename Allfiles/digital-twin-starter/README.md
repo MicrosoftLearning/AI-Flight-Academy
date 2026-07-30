@@ -4,6 +4,28 @@ Build a portable **digital twin**: a compact spec for how someone works, plus ag
 
 This starter gives you the plumbing. You write the spec and the council agents.
 
+## The test harness — start here
+
+**Before you write anything**, seal your answers:
+
+```powershell
+python test/take_test.py
+```
+
+Fifteen forced-choice work dilemmas. Answer fast — what you *actually* did last time, not what you'd like to have done. It flags anything that took over 25 seconds, because a deliberated answer is an aspirational one.
+
+That writes `test/sealed-answers.md`. Don't open it again until the end.
+
+**At the end of the session**, have the twin answer the same fifteen cold:
+
+```powershell
+python test/compare.py
+```
+
+You get a line-by-line diff, and every mismatch names the `soul.md` field that dilemma was probing — so a miss points straight at the rule to fix.
+
+There is deliberately **no score and no leaderboard**. Mismatches are the output. The useful ones are where the twin picked the sensible, well-adjusted answer and you wouldn't have.
+
 ## Quickstart
 
 ```powershell

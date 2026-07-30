@@ -8,9 +8,9 @@ Use this to extract decision rules for `soul.md`.
 
 ## Why behavioral
 
-A hand-built twin once scored below a generic-agent baseline because the author wrote down who he wanted to be. His spec said he escalated priority conflicts; in reality, he decided. It said he would never ship unverified work; in reality, he cut scope and held the date. Rewriting the rules from observed behavior moved the twin from 60% to 87%.
+When we built one of these ourselves, the first version was worse than useless — because the author wrote down who they *wanted* to be. Their spec said they escalated priority conflicts; in reality, they just decided. It said they'd never ship unverified work; in reality, they cut scope and held the date. Rewriting those rules from what they actually did was what made the twin recognizable.
 
-So do not ask, "What do you value?" Ask, "What did you actually do last time?"
+So don't ask, "What do you value?" Ask, "What did you actually do last time?"
 
 ## Behavioral questions
 

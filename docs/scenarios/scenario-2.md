@@ -8,7 +8,7 @@ title: Scenario 2 (TBD)
 This scenario is not yet locked. Placeholder structure below.
 :::
 
-## The problem (villain's complaint)
+## The problem
 
 > **TODO** — one paragraph, in the voice of the person who feels the pain. Real Microsoft work, generic enough to apply across teams.
 

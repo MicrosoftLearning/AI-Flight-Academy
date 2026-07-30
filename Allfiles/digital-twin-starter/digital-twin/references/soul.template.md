@@ -4,7 +4,7 @@
 
 ## Identity
 
-<!-- Role, scope, current season of work, what success means. Example subject for workshops: Marcus Webb, synthetic marketing manager. -->
+<!-- Role, scope, current season of work, what success means. Example subject for workshops: Avery Washington, synthetic marketing manager. -->
 
 ## Priority stack
 

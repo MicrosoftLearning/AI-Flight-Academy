@@ -23,7 +23,7 @@ A real Graph path means Azure AD app registration, permissions, admin consent qu
    | --- | --- | --- |
    | A · Cowork Work IQ | You can use your own tenant data. | Ask Cowork to retrieve and summarize, then export the result. |
    | B · Snapshot, do not stream | You need repeatability. | Generate one markdown snapshot from ~30 days of calendar. Regenerate monthly. |
-   | C · Persona pack | You need safe demo data. | Use the Marcus Webb persona pack at `/Allfiles/persona-pack/`. |
+   | C · Persona pack | You need safe demo data. | Use the Avery Washington persona pack at `/Allfiles/persona-pack/`. |
 
 2. Pull the evidence you need, not everything you can access.
 

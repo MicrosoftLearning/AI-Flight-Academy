@@ -1,33 +1,35 @@
 ---
-title: Building Blocks
+title: Step-by-step guides
 ---
 
-# Building Blocks
+# Step-by-step guides
 
-Building blocks are short, reusable **how-to guides** — each covers one function (like "add a topic with a trigger"). They're written once and work for **any** scenario. Pick the blocks your altitude and scenario need, and snap them together.
+Full walkthroughs for each part of a build — every click, every prompt, every setting.
 
-> **How to use these:** Your [altitude page](/levels/) lists the blocks you're expected to demonstrate. Learn the mechanic here, then apply it to your scenario's data.
+::: tip How these fit with your build page
+Your build page ([🟢 Cowork](/build/base-scenario-1) · [🟣 Code](/build/advanced-scenario-1)) gets you through the hack top to bottom, with the essentials expandable in place.
 
-## 🟢 Base · Cowork
+**These are the complete versions.** Open one in a new tab and keep it beside your build page if you want every step spelled out — or come back to them after the hack when you're building something of your own.
+:::
 
-- [Connect Cowork to a data source](/bricks/cowork-connect-source)
-- [Write a reusable Cowork skill](/bricks/cowork-build-skill)
-- [Produce a formatted output](/bricks/cowork-formatted-output)
-- [Re-run a skill on new inputs](/bricks/cowork-rerun-skill)
+## 🟢 Cowork
 
-## 🔵 Builder · Copilot Studio
+| Guide | Use it when |
+| --- | --- |
+| [Connect Cowork to a data source](/bricks/cowork-connect-source) | You need to pull your mail, calendar, or files — and get it back in a shape you can reuse |
+| [Write a reusable Cowork skill](/bricks/cowork-build-skill) | You're creating or editing a skill and want the full anatomy, limits, and sharing options |
+| [Produce a formatted output](/bricks/cowork-formatted-output) | Your output needs to come back the same way every time |
+| [Re-run a skill on new inputs](/bricks/cowork-rerun-skill) | You want it to run on a schedule, or fire on an email or @mention |
 
-- [Create an agent + solution](/bricks/studio-create-agent)
-- [Add a topic with a trigger](/bricks/studio-topic-trigger)
-- [Ground on a knowledge source](/bricks/studio-knowledge-grounding)
-- [Build two agents that hand off](/bricks/studio-multi-agent)
-- [Add an agent flow](/bricks/studio-agent-flow)
-- [Send an Adaptive Card to Teams](/bricks/studio-adaptive-card)
-- [Publish your agent](/bricks/studio-publish)
+## 🟣 Code
 
-## 🟣 Advanced · Scout / GitHub Copilot
+| Guide | Use it when |
+| --- | --- |
+| [Set up Scout / GitHub Copilot](/bricks/advanced-setup) | Getting agent mode, the CLI, and custom agent files working |
+| [Build a custom connector (MCP)](/bricks/advanced-mcp-connector) | Exposing your twin as tools other agents can call |
+| [Ground on live data with Work IQ](/bricks/advanced-work-iq) | Turning real calendar and mail behavior into evidence |
+| [Add a guardrail / output check](/bricks/advanced-guardrail) | Stopping an agent doing something it shouldn't |
 
-- [Set up Scout / GitHub Copilot](/bricks/advanced-setup)
-- [Build a custom connector (MCP)](/bricks/advanced-mcp-connector)
-- [Ground on live data with Work IQ](/bricks/advanced-work-iq)
-- [Add a guardrail / output check](/bricks/advanced-guardrail)
+## 🔵 Copilot Studio
+
+Coming soon.

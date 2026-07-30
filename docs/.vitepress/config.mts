@@ -17,22 +17,21 @@ export default defineConfig({
       { text: "Home", link: "/" },
       { text: "How the Hack Works", link: "/how-it-works/" },
       {
-        text: "Levels",
+        text: "Start Building",
         items: [
-          { text: "🟢 Base · Copilot-Crafted", link: "/levels/base/" },
-          { text: "🔵 Builder · Agent-Orchestrated", link: "/levels/builder/" },
-          { text: "🟣 Advanced · Code-Extended", link: "/levels/advanced/" },
+          { text: "🟢 Cowork — no code", link: "/build/base-scenario-1" },
+          { text: "🟣 Code — VS Code + Copilot", link: "/build/advanced-scenario-1" },
+          { text: "🔵 Copilot Studio (coming soon)", link: "/build/builder-scenario-1" },
         ],
       },
-      { text: "Building Blocks", link: "/bricks/" },
-      { text: "Scenarios", link: "/scenarios/" },
-      { text: "Facilitators", link: "/facilitator/" },
       { text: "Submit", link: "/submit/" },
+      { text: "Guides", link: "/bricks/" },
       {
         text: "Resources",
         items: [
-          { text: "Overview", link: "/resources/" },
-          { text: "⬇ Downloads", link: "/resources/downloads" },
+          { text: "Downloads", link: "/resources/downloads" },
+          { text: "For facilitators", link: "/facilitator/" },
+          { text: "More", link: "/resources/" },
         ],
       },
     ],
@@ -53,11 +52,11 @@ export default defineConfig({
       ],
       "/bricks/": [
         {
-          text: "Building Blocks",
-          items: [{ text: "Overview", link: "/bricks/" }],
+          text: "Step-by-step guides",
+          items: [{ text: "All guides", link: "/bricks/" }],
         },
         {
-          text: "🟢 Base · Cowork",
+          text: "🟢 Cowork",
           items: [
             { text: "Connect Cowork to a data source", link: "/bricks/cowork-connect-source" },
             { text: "Write a reusable Cowork skill", link: "/bricks/cowork-build-skill" },
@@ -66,7 +65,7 @@ export default defineConfig({
           ],
         },
         {
-          text: "🔵 Builder · Copilot Studio",
+          text: "🔵 Copilot Studio (coming soon)",
           items: [
             { text: "Create an agent + solution", link: "/bricks/studio-create-agent" },
             { text: "Add a topic with a trigger", link: "/bricks/studio-topic-trigger" },
@@ -78,7 +77,7 @@ export default defineConfig({
           ],
         },
         {
-          text: "🟣 Advanced · Scout / GitHub Copilot",
+          text: "🟣 Code",
           items: [
             { text: "Set up Scout / GitHub Copilot", link: "/bricks/advanced-setup" },
             { text: "Build a custom connector (MCP)", link: "/bricks/advanced-mcp-connector" },
@@ -104,7 +103,6 @@ export default defineConfig({
           items: [
             { text: "Overview", link: "/how-it-works/" },
             { text: "Run of Show", link: "/how-it-works/run-of-show" },
-            { text: "Scoring & Judging", link: "/how-it-works/scoring" },
           ],
         },
       ],

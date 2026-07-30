@@ -1,45 +1,56 @@
-# Twin Forge Cowork skill
+# Twin Forge — a Cowork skill
 
-Twin Forge walks you through building a digital twin and emits three files: `soul.md`, `voice.md`, and `revealed.md`.
+Twin Forge interviews you and builds a **v0.1 digital twin** in about 12 minutes: `soul.md`, `voice.md`, and `revealed.md`.
 
-## Install by upload
+::: tip Tested
+Verified end to end on a live tenant — upload, trigger, Work IQ retrieval, behavioral interview.
+:::
 
-1. Download the `twin-forge` folder.
-2. Open M365 Copilot at `m365.cloud.microsoft`.
-3. Go to **Cowork** → **Customize** → **Skills**.
-4. Select **Add ▾** → **Upload skill**.
-5. Upload `SKILL.md`, a `.zip`, or a `.skill` package. If you use the whole folder, zip it first so the `references/` files stay with the skill.
-6. Start a **new Cowork session**.
+## Install
 
-## Install manually
+1. Download **`SKILL.md`** from this folder.
+2. Open Microsoft 365 Copilot → the **Cowork** tab.
+3. **Customize** → **Skills** → **Add ▾** → **Upload skill**.
+4. Choose `SKILL.md`. You'll see **"Skill uploaded — twin-forge."**
+5. **Start a new Cowork session.** Skills are discovered at session start, so an already-open session won't see it.
 
-Copy this folder to OneDrive:
+> ⚠️ **Upload the `.md` file on its own.** In testing, `.zip` uploads silently failed — the dialog closed and no skill appeared. Everything Twin Forge needs is inside `SKILL.md`, so there's nothing else to bundle.
 
-```text
-/Documents/Cowork/skills/twin-forge/
-  SKILL.md
-  references/
-    soul-schema.md
-    voice-schema.md
-    interview-questions.md
-```
+**Alternative — OneDrive.** Copy `SKILL.md` to `/Documents/Cowork/skills/twin-forge/SKILL.md`, then start a new session.
 
-Cowork discovers custom skills automatically at the start of each session.
-
-## Invoke it
-
-Say:
+## Run it
 
 ```text
 Start Twin Forge and help me build a v0.1 digital twin.
 ```
 
-Other trigger phrases: `build my digital twin`, `create my soul spec`, `create my voice spec`, or `build the Marcus Webb twin`.
+Also triggers on: *build my digital twin*, *create my soul spec*, *forge my twin*, *build the Avery Washington twin*.
+
+## What happens
+
+1. **Picks a path** — your own M365 data, or the Avery Washington persona.
+2. **Gathers evidence** — your last ~10 sent emails and ~30 days of calendar, via Work IQ. No setup, no auth.
+3. **Interviews you** — ~8 behavioral questions, one at a time. Always *"what did you actually do last time?"*, never *"what do you value?"*
+4. **Reconciles** — shows you the gap between what you said and what your calendar shows.
+5. **Writes the three files.**
+
+## Using Path B (Avery Washington)
+
+The persona pack **isn't in your Cowork workspace by default.** Download it from `Allfiles/persona-pack/` and **attach the files** to your session when Twin Forge asks. If you can't, take Path A instead.
 
 ## Troubleshooting
 
-- If Cowork does not pick it up, start a **new** Cowork session. Skills are discovered at session start.
-- Confirm the file is named `SKILL.md`.
-- Confirm the frontmatter includes `name` and `description`.
-- Confirm the folder path is `/Documents/Cowork/skills/twin-forge/`.
-- If uploading, use **Cowork** → **Customize** → **Skills** → **Add ▾** → **Upload skill**.
+| Problem | Fix |
+| --- | --- |
+| Skill doesn't trigger | Start a **new** session — skills load at session start |
+| Upload seems to do nothing | Use the `.md` file, not a `.zip` |
+| Says it can't find reference files | You have an old version. `SKILL.md` is now fully self-contained |
+| Path B can't find the persona | Attach the pack files to the session |
+
+## What good output looks like
+
+- **`soul.md`** ≈ one page, with real tiebreakers (*"when X conflicts with Y, choose Z"*) — not values like *"I value accuracy."*
+- **`voice.md`** with **verbatim** samples. If it tidied up your punctuation, it's wrong — the quirks are the signal.
+- **`revealed.md`** citing actual numbers from your calendar.
+
+Twin Forge gets you to v0.1. **The compression is yours** — cut it hard.

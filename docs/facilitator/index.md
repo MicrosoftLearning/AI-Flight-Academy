@@ -14,7 +14,7 @@ Use these pages to run Scenario 1 in the room.
 
 - [ ] Confirm the room can access Cowork, VS Code Copilot, and the GitHub Copilot CLI.
 - [ ] Share the Twin Forge Cowork skill download location.
-- [ ] Share the Marcus Webb persona pack location for anyone choosing Path B.
+- [ ] Share the Avery Washington persona pack location for anyone choosing Path B.
 - [ ] Print the role cards.
 - [ ] Print or share the sealed dilemma set.
 - [ ] Prepare the mid-build constraint: exec ask versus peer promise.

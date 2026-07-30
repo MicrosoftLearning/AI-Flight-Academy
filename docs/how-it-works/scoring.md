@@ -4,14 +4,10 @@ title: Scoring & Judging
 
 # Scoring & Judging
 
-> **TODO** — the rubric. Starting point adapted from the Agents League 6-criteria model; tune weights for a 2-hour format.
+::: info Not in play for this event
+There's no rubric, no points, and no leaderboard for Scenario 1.
 
-| Criterion | What judges look for | Weight |
-| --------- | -------------------- | ------ |
-| Build | Does it work? Is the flow logical? | TBD |
-| Impact | Clear before/after with evidence | TBD |
-| Storytelling | Can anyone understand the demo? | TBD |
-| Creativity | Novel approach for the chosen tool | TBD |
-| Teamwork | Whole table contributed | TBD |
+Teams do a **reveal** instead: everyone answers fifteen forced-choice work dilemmas at the start, seals them, and at the end their twin answers the same fifteen cold. The mismatches show which rules need fixing. That's a learning signal, not a score.
 
-> **TODO** — decide gamification: badges tied to Team Week passport, "Hidden Mickey" bonus, reaction storm, etc.
+See [Run of show](/how-it-works/run-of-show) for how it fits the two hours.
+:::

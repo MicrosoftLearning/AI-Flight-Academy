@@ -4,40 +4,75 @@ title: Downloads
 
 # Downloads
 
-Everything you need for **Scenario 1 · The Digital Twin**. Grab what your path needs — you can download a single folder without cloning the whole repo.
+Everything for **Scenario 1 · The Digital Twin**. Files download straight from this site — no GitHub account, no cloning.
 
-::: tip Fastest way to get a folder
-Paste the folder's GitHub URL into [download-directory.github.io](https://download-directory.github.io/) and it hands you a `.zip`. Or clone the repo once and use the `Allfiles` folder locally.
+::: tip Do this first, whichever track you pick
+<a href="/Team-Week-Imagineer-Hack/downloads/twin-test.md" download>📝 <strong>The Twin Test</strong></a> — fifteen forced-choice work situations. Answer them before you build, compare at the end. Four minutes.
 :::
 
-## 🟢 Base · Cowork
+## 🟢 Cowork
 
-| What | Why you need it | Get it |
-| --- | --- | --- |
-| **Twin Forge skill** | Bootstraps a v0.1 twin in ~12 minutes. Upload it into Cowork and say *"Start Twin Forge."* | [Allfiles/twin-forge](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/twin-forge) |
-| **Marcus Webb persona pack** | Path B data if you'd rather not use your own. | [Allfiles/persona-pack](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack) |
+<div class="lab-grid lab-grid-2">
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/twin-forge-SKILL.md" download="SKILL.md">
+    <span class="lab-card-emoji">⚡</span>
+    <span class="lab-card-title">Twin Forge</span>
+    <span class="lab-card-desc">Interviews you and drafts your first twin. Upload this file straight into Cowork.</span>
+    <span class="lab-card-cta">Download SKILL.md →</span>
+  </a>
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/avery-persona-pack.zip" download>
+    <span class="lab-card-emoji">🗂️</span>
+    <span class="lab-card-title">Avery Washington</span>
+    <span class="lab-card-desc">Synthetic persona — inbox, calendar, goals. Use instead of your own data.</span>
+    <span class="lab-card-cta">Download .zip →</span>
+  </a>
+</div>
 
-**Installing Twin Forge:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill**.
-Or drop the folder in OneDrive at `/Documents/Cowork/skills/twin-forge/`, then start a **new session** — Cowork discovers skills at session start.
+**Installing Twin Forge:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill** → pick the downloaded `SKILL.md`. Then **start a new session** — skills are only discovered at session start.
 
-## 🟣 Advanced · Scout / GitHub Copilot
+::: warning Upload the .md, not a .zip
+Tested on a live tenant: `.zip` skill uploads fail silently. `SKILL.md` is self-contained, so there's nothing else to bundle.
+:::
 
-| What | Why you need it | Get it |
-| --- | --- | --- |
-| **Starter repo** | Schema, MCP server skeleton, council runner, test harness. The contract — not the solution. | [Allfiles/digital-twin-starter](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/digital-twin-starter) |
-| **Marcus Webb persona pack** | Path B data. | [Allfiles/persona-pack](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack) |
+## 🟣 Code
 
-```bash
-git clone https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack.git
-cd Team-Week-Imagineer-Hack/Allfiles/digital-twin-starter
+<div class="lab-grid lab-grid-2">
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/digital-twin-starter.zip" download>
+    <span class="lab-card-emoji">📦</span>
+    <span class="lab-card-title">Starter repo</span>
+    <span class="lab-card-desc">Schema, MCP skeleton, council runner, test harness, and a VS Code workspace file.</span>
+    <span class="lab-card-cta">Download .zip →</span>
+  </a>
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/avery-persona-pack.zip" download>
+    <span class="lab-card-emoji">🗂️</span>
+    <span class="lab-card-title">Avery Washington</span>
+    <span class="lab-card-desc">Synthetic persona data, same pack.</span>
+    <span class="lab-card-cta">Download .zip →</span>
+  </a>
+</div>
+
+Unzip, then open `digital-twin.code-workspace` in VS Code — it comes with agent mode and the right extension recommendations already set.
+
+::: details One-line setup in a terminal
+**PowerShell:**
+
+```powershell
+$u='https://microsoftlearning.github.io/Team-Week-Imagineer-Hack/downloads/digital-twin-starter.zip'
+$z="$env:TEMP\dts.zip"; iwr $u -OutFile $z
+Expand-Archive $z -DestinationPath "$HOME\digital-twin" -Force
+code "$HOME\digital-twin\digital-twin-starter\digital-twin.code-workspace"
 ```
 
-::: warning Copy before you edit
-Work in a copy of `digital-twin-starter`, not in the repo folder itself.
+**macOS / Linux:**
+
+```bash
+curl -L -o /tmp/dts.zip https://microsoftlearning.github.io/Team-Week-Imagineer-Hack/downloads/digital-twin-starter.zip
+unzip -q /tmp/dts.zip -d ~/digital-twin
+code ~/digital-twin/digital-twin-starter/digital-twin.code-workspace
+```
 :::
 
 ## 🧑‍🏫 Facilitators
 
 - [Facilitator kit](/facilitator/) — role cards, interview script, coach playbook
 - [Run of show](/how-it-works/run-of-show)
-- **Spoilers:** `Allfiles/persona-pack/calendar/summary-stats.md` gives away Marcus's planted contradictions. Hand it to stuck teams only.
+- **Spoilers:** inside the persona pack, `calendar/summary-stats.md` gives away the planted contradictions. Hand it to stuck teams only.
