@@ -10,6 +10,10 @@ title: 🟢 Base · Copilot-Crafted — Scenario 1
 
 **Building with:** Microsoft 365 Copilot + Cowork
 
+::: tip Get the files
+Twin Forge, the Marcus Webb persona pack, and the starter repo are all on the [Downloads page](/resources/downloads).
+:::
+
 You will build a small, portable digital twin: a one-page spec of how you work, plus a Cowork skill that can run against it.
 
 ## 1 · Your mission

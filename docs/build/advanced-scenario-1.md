@@ -10,6 +10,10 @@ title: 🟣 Advanced · Code-Extended — Scenario 1
 
 **Building with:** VS Code, GitHub Copilot, Copilot CLI, MCP, and Work IQ
 
+::: tip Get the files
+Twin Forge, the Marcus Webb persona pack, and the starter repo are all on the [Downloads page](/resources/downloads).
+:::
+
 You will build one team system: a portable digital twin with a council of agents that argue over a real tradeoff and an arbiter that makes the call.
 
 ## 1 · Your mission
