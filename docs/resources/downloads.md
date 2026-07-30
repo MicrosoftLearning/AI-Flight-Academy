@@ -6,6 +6,10 @@ title: Downloads
 
 Everything for **Scenario 1 · The Digital Twin**. Files download straight from this site — no GitHub account, no cloning.
 
+::: tip Do this first, whichever track you pick
+<a href="/Team-Week-Imagineer-Hack/downloads/twin-test.md" download>📝 <strong>The Twin Test</strong></a> — fifteen forced-choice work situations. Answer them before you build, compare at the end. Four minutes.
+:::
+
 ## 🟢 Cowork
 
 <div class="lab-grid lab-grid-2">

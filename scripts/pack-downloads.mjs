@@ -54,11 +54,19 @@ for (const j of jobs) {
 }
 
 // Twin Forge ships as a single .md - Cowork's skill upload rejects .zip.
-const forge = join(root, "Allfiles", "twin-forge", "SKILL.md");
-if (existsSync(forge)) {
-  const dest = join(out, "twin-forge-SKILL.md");
-  copyFileSync(forge, dest);
-  console.log(`  ${"twin-forge-SKILL.md".padEnd(28)} ${(statSync(dest).size / 1024).toFixed(1)} KB`);
+const singles = [
+  { src: join(root, "Allfiles", "twin-forge", "SKILL.md"), name: "twin-forge-SKILL.md" },
+  { src: join(root, "Allfiles", "twin-test", "twin-test.md"), name: "twin-test.md" },
+];
+
+for (const s of singles) {
+  if (!existsSync(s.src)) {
+    console.warn(`  skip (missing): ${s.src}`);
+    continue;
+  }
+  const dest = join(out, s.name);
+  copyFileSync(s.src, dest);
+  console.log(`  ${s.name.padEnd(28)} ${(statSync(dest).size / 1024).toFixed(1)} KB`);
 }
 
 console.log("packaged -> docs/public/downloads/");

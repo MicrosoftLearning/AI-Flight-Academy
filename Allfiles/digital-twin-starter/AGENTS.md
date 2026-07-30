@@ -17,7 +17,7 @@ Use the synthetic example name **Avery Washington** in examples. Do not introduc
 - `mcp_server.py` — MCP thin tools plus TODO thick-tool stubs.
 - `twinlib.py` — Copilot CLI large-prompt helper.
 - `run.ps1` — local council runner.
-- `test/` — sealed forced-choice comparison harness.
+- `test/` — the sealed-answer harness. `take_test.py` records the human's gut answers to 15 dilemmas BEFORE the build; `compare.py` runs the twin over the same 15 at the end and diffs them, naming the soul.md field behind each mismatch. No score is produced, by design.
 
 ## Council output contracts
 

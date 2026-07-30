@@ -79,7 +79,23 @@ This page gets you through the build. There are also **[full step-by-step guides
 
 ---
 
-## 1 · Split the work
+## 1 · Seal your answers
+
+**Do this before you build anything.** It takes four minutes and you can't do it later.
+
+```powershell
+python test/take_test.py
+```
+
+Fifteen forced-choice work dilemmas. Answer fast and honestly — what you *actually* did last time, not what you'd like to have done. It writes `test/sealed-answers.md` and you don't look at it again until the end.
+
+::: warning Don't deliberate
+The script flags any answer that took more than 25 seconds. A considered answer is an aspirational one, and aspirational answers make the comparison worthless.
+:::
+
+At the end of the session your twin answers the same fifteen cold, and you diff them. That's not a score — it's the fastest way to find which rules you got wrong.
+
+## 2 · Split the work
 
 Five people, five agents, one shared spec. Decide this in the first two minutes.
 
@@ -97,7 +113,7 @@ Five people, five agents, one shared spec. Decide this in the first two minutes.
 Ambition shouldn't be balanced. Neither should Obligation or Capacity. Each one argues its corner as hard as it can — the Arbiter is where nuance happens. Balanced sub-agents produce mush.
 :::
 
-## 2 · Write the spec
+## 3 · Write the spec
 
 Three files, shared by everyone. Get a rough version fast, then improve it all session.
 
@@ -118,7 +134,7 @@ A value tells an agent nothing. A tiebreaker tells it what to do.
 Resist adding one more clause. Anthropic [found while building Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback) that broad principles beat long specific ones. ["Lost in the Middle"](https://arxiv.org/abs/2307.03172) (peer-reviewed, *Transactions of the ACL*) showed models pay least attention to whatever's in the middle of a long prompt. Your spec is a prompt.
 :::
 
-## 3 · Ground it in real behavior
+## 4 · Ground it in real behavior
 
 This is the half a person can't self-report. Pull it from evidence.
 
@@ -145,7 +161,7 @@ Azure AD app registration plus MSAL will take 30–60 minutes and eat your sessi
 <a href="/Team-Week-Imagineer-Hack/bricks/advanced-work-iq" target="_blank" rel="noreferrer">📖 Ground on live data with Work IQ — full guide (opens in a new tab) ↗</a>
 :::
 
-## 4 · Write the agents
+## 5 · Write the agents
 
 Five files in `.github/agents/`. The starter repo has the required frontmatter and return contract for each — the bodies are yours.
 
@@ -212,7 +228,7 @@ On Windows the command line caps at 8191 characters, so long prompts have to go 
 
 :::
 
-## 5 · Expose it as a server
+## 6 · Expose it as a server
 
 Build the MCP server so anything can call your twin — Cowork, VS Code, Claude, an agent nobody's written yet.
 
@@ -265,7 +281,7 @@ Then `Ctrl+Shift+P` → **MCP: List Servers** → start it. Switch Copilot Chat 
 
 :::
 
-## 6 · Add the guardrail
+## 7 · Add the guardrail
 
 One check that runs before anything leaves the system:
 
@@ -306,7 +322,7 @@ Note it returns **the rule and where it came from**, not just a verdict — so a
 
 :::
 
-## 7 · ⚡ The twist
+## 8 · ⚡ The twist
 
 Your facilitator will hand this out partway through. Run it through the full council:
 
@@ -318,7 +334,7 @@ Decide what to do, what to say to each of them, and what gets cut.
 
 You are checking for three positions, one decision, and an explicit statement of what got overruled and why.
 
-## 8 · Let the critic patch it
+## 9 · Let the critic patch it
 
 Find one thing the twin got wrong. Have the Critic diagnose **which line of the spec caused it** — not "the answer was bad."
 
@@ -332,6 +348,22 @@ Without the cap, the critic fixes every miss by adding lines, and the spec degra
 ::: tip Say the honest limit out loud in your demo
 The **file** gets better. The **model** doesn't learn. Every run reloads an improved file. That's real and useful, and it isn't training — claiming otherwise is the fastest way to lose a technical room.
 :::
+
+## 10 · The reveal
+
+Last thing. Your twin answers the fifteen dilemmas you sealed at the start, cold:
+
+```powershell
+python test/compare.py
+```
+
+You get a line-by-line comparison, and for every mismatch it names **which field of `soul.md` that dilemma was probing** — so a miss points straight at the rule to fix.
+
+::: tip This isn't a score
+There's no percentage and no leaderboard. Mismatches are the useful output: each one is a place where what you wrote down doesn't match what you'd actually do. Expect several. The interesting ones are where the twin picked the sensible, well-adjusted answer and you wouldn't have.
+:::
+
+Fix one and re-run it if you have time. That's the whole loop in miniature.
 
 ---
 
@@ -347,6 +379,7 @@ The **file** gets better. The **model** doesn't learn. Every run reloads an impr
 - [ ] The guardrail returning `NEVER` on something
 - [ ] One critic patch, +2 lines or fewer
 - [ ] The same spec folder running somewhere else — CLI, VS Code, or Cowork
+- [ ] **One dilemma your twin got wrong**, and the rule you'd add because of it
 
 ::: tip Lead with the dissent
 Show what the twin decided against and why. That is the part a single prompt cannot produce, and it is visible in one screen.
