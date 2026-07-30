@@ -8,13 +8,15 @@ title: Downloads
 These files are still being tested and may be updated before the event. Re-download on the day.
 :::
 
-Everything for **Scenario 1 · The Digital Twin**. Files download straight from this site — no GitHub account, no cloning.
+Everything for the Imagineer Hack scenarios. Files download straight from this site — no GitHub account, no cloning.
+
+## Scenario 1 · The Digital Twin
 
 ::: tip Do this first, whichever track you pick
 <a href="/Team-Week-Imagineer-Hack/downloads/twin-test.md" download>📝 <strong>The Twin Test</strong></a> — fifteen forced-choice work situations. Answer them before you build, compare at the end. Four minutes.
 :::
 
-## 🟢 Cowork
+### 🟢 Cowork
 
 <div class="lab-grid lab-grid-2">
   <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/twin-forge-SKILL.md" download="SKILL.md">
@@ -37,7 +39,7 @@ Everything for **Scenario 1 · The Digital Twin**. Files download straight from 
 Tested on a live tenant: `.zip` skill uploads fail silently. `SKILL.md` is self-contained, so there's nothing else to bundle.
 :::
 
-## 🟣 Code
+### 🟣 Code
 
 <div class="lab-grid lab-grid-2">
   <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/digital-twin-starter.zip" download>
@@ -72,6 +74,80 @@ code "$HOME\digital-twin\digital-twin-starter\digital-twin.code-workspace"
 curl -L -o /tmp/dts.zip https://microsoftlearning.github.io/Team-Week-Imagineer-Hack/downloads/digital-twin-starter.zip
 unzip -q /tmp/dts.zip -d ~/digital-twin
 code ~/digital-twin/digital-twin-starter/digital-twin.code-workspace
+```
+:::
+
+## Scenario 2 · Greenlight
+
+Seat a **council of audiences** over a piece of content so the verdicts split, then have the room decide what to build. Both tracks share the same **data pack** — five articles, four example audience cards, and a style guide.
+
+### 🟢 Cowork
+
+<div class="lab-grid lab-grid-2">
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/the-greenlight.zip" download>
+    <span class="lab-card-emoji">🟢</span>
+    <span class="lab-card-title">Greenlight</span>
+    <span class="lab-card-desc">The Greenlight skill with a council that seats new audiences, convenes for reviews, and greenlights content.</span>
+    <span class="lab-card-cta">Download .zip →</span>
+  </a>
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/greenlight-data-pack.zip" download>
+    <span class="lab-card-emoji">🗂️</span>
+    <span class="lab-card-title">Data pack</span>
+    <span class="lab-card-desc">Five types of content, four audience cards, and a style guide. The content the council scores.</span>
+    <span class="lab-card-cta">Download .zip →</span>
+  </a>
+</div>
+
+**Installing Greenlight:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill** → pick the downloaded `SKILL.md`. Then **start a new session** — skills are only discovered at session start. Then point Cowork to the data pack and say **`seat the council and review P4.`**
+
+### 🟣 Code
+
+<div class="lab-grid lab-grid-3">
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/the-greenlight-starter.zip" download>
+    <span class="lab-card-emoji">📦</span>
+    <span class="lab-card-title">Starter repo</span>
+    <span class="lab-card-desc">Council runner, deterministic checks, seat-as-data example, and a VS Code workspace file.</span>
+    <span class="lab-card-cta">Download .zip →</span>
+  </a>
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/the-greenlight.zip" download>
+    <span class="lab-card-emoji">🟢</span>
+    <span class="lab-card-title">The Greenlight skill</span>
+    <span class="lab-card-desc">Same skill — the seat / convene / greenlight verbs and the solo-critic control.</span>
+    <span class="lab-card-cta">Download .zip →</span>
+  </a>
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/greenlight-data-pack.zip" download>
+    <span class="lab-card-emoji">🗂️</span>
+    <span class="lab-card-title">Data pack</span>
+    <span class="lab-card-desc">The content the council scores.</span>
+    <span class="lab-card-cta">Download .zip →</span>
+  </a>
+</div>
+
+Unzip all three so `the-greenlight-starter`, `the-greenlight`, and `data-pack` sit **side by side** — the runner and `checks.py` expect the data pack as a sibling. Then open `the-greenlight.code-workspace` in VS Code.
+
+::: details One-line setup in a terminal
+**PowerShell:**
+
+```powershell
+$base='https://microsoftlearning.github.io/Team-Week-Imagineer-Hack/downloads'
+$dest="$HOME\the-greenlight"
+foreach ($n in 'the-greenlight-starter','the-greenlight','greenlight-data-pack') {
+  $z="$env:TEMP\$n.zip"; iwr "$base/$n.zip" -OutFile $z
+  Expand-Archive $z -DestinationPath $dest -Force
+}
+code "$dest\the-greenlight-starter\the-greenlight.code-workspace"
+```
+
+**macOS / Linux:**
+
+```bash
+base=https://microsoftlearning.github.io/Team-Week-Imagineer-Hack/downloads
+dest=~/the-greenlight
+for n in the-greenlight-starter the-greenlight greenlight-data-pack; do
+  curl -L -o /tmp/$n.zip $base/$n.zip
+  unzip -q /tmp/$n.zip -d $dest
+done
+code $dest/the-greenlight-starter/the-greenlight.code-workspace
 ```
 :::
 
