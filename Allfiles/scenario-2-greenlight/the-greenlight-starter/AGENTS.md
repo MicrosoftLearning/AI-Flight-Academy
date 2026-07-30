@@ -11,7 +11,7 @@ Use the synthetic data in `../data-pack/` (five articles P1–P5, four audience 
 ## File layout
 
 - `council/*.json` — the seats, as data. Each seat: `seat_id`, `audience`, `card`, `outcome`, `thresholds`, and `criteria` (each with `the_bar`, `protects_outcome`, `fatal`, 0–3 `anchors`, `watch_for`, and optional wired `checks`). `retail.example.json` is illustrative — copy it to `retail.json` to seat it.
-- `.github/agents/README.md` — the assignment for the three agents participants write. Bodies are intentionally TODO.
+- `.github/agents/*.agent.md` — three ready-to-run agents (seat-scorer, judge, greenlight); each ships with the contract written and one design TODO to sharpen. `README.md` indexes them.
 - `checks.py` — deterministic checks (the countable half). Two work; one is a TODO stub.
 - `greenlightlib.py` — loads seats, runs wired checks, validates evidence, builds the coverage matrix.
 - `run.ps1` — the local council runner.

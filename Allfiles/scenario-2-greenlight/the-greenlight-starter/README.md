@@ -25,7 +25,7 @@ A language model catches what's contextual. Code catches what's countable. These
 cd Allfiles/scenario-2-greenlight/the-greenlight-starter
 Copy-Item council/retail.example.json council/retail.json   # seat Retail for real
 # now seat at least ONE more audience with a DIFFERENT outcome (e.g. Compliance)
-# then write the three agents described in .github/agents/README.md
+# the three agents ship ready to run — sharpen the one TODO in each (.github/agents/)
 python checks.py --piece P4-exec-summary
 pwsh ./run.ps1 -Piece P4-exec-summary
 ```
@@ -35,7 +35,7 @@ The runner needs the sibling `../data-pack/` (articles + cards) and `../the-gree
 ## What you build
 
 - `council/*.json` — one seat per audience: an **outcome** and the criteria that protect it, with 0–3 anchors. Copy `retail.example.json`, then add more. **At least two seats with different outcomes** — or nothing can disagree.
-- `.github/agents/*.agent.md` — the three agents that score, judge, and greenlight. Bodies are yours; see `.github/agents/README.md`.
+- `.github/agents/*.agent.md` — three ready-to-run agents (score, judge, greenlight). Each ships with the contract written and **one design TODO to sharpen**; see `.github/agents/README.md`.
 - Your own deterministic checks in `checks.py` — anything countable on a seat's card, threshold drawn from the card.
 
 ## Council model
