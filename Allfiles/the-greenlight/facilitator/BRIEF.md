@@ -3,7 +3,7 @@
 **Owner:** Darrin Hanson · **Scenario:** Slide 9, Content & Insights · **Alternate take on Scenario 2**
 **Constraints:** 2 hours · ~500–600 people · mixed-skill teams · most seeing these tools for the first time
 
-> **This is a skilling event first and a useful hack second.** Every phase exists because it teaches a transferable AI capability. The content problem is the vehicle. Where *The Screening Room* teaches a single audience **lens**, *The Greenlight* teaches **multi-agent orchestration** — a council of audiences that scores, debates, and decides. **Run one or the other; they are separate.**
+> **This is a skilling event first and a useful hack second.** Every phase exists because it teaches a transferable AI capability. The content problem is the vehicle. Where *The Critic* teaches a single audience **lens**, *The Greenlight* teaches **multi-agent orchestration** — a council of audiences that scores, debates, and decides. **Run one or the other; they are separate.**
 
 ---
 
@@ -219,7 +219,7 @@ Full weights in `JUDGING-RUBRIC.json`.
 | 1 | ⚠️ **Scheduled/triggered runs in a real attendee tenant.** v4 is Base's finish line. Prove it before instructions are written. |
 | 2 | **Copilot Studio's fate.** Three-path structure makes Studio a parallel tail, not a prerequisite. Remove it and the other two paths are untouched. |
 | 3 | **Team size.** 600 ÷ teams of what? Drives the clock and the seats-per-team guidance. |
-| 4 | **Screening Room vs Greenlight.** These are two takes on Scenario 2. Decide whether both ship (as a choice) or one is primary. |
+| 4 | **The Critic vs The Greenlight.** These are two takes on Scenario 2. Decide whether both ship (as a choice) or one is primary. |
 | 5 | **Cameron's intent** — confirm "persona-lization" is the slide-9 outcome, and that the orchestration-forward framing lands. |
 | 6 | **Debate cost in 2 hours.** Multi-agent debate can overwhelm beginners — v1 is deliberately achievable as sequential voices in one Cowork thread. Watch the Base clock in pilot. |
 | 7 | **No Foundry** — confirmed out. Nothing here needs it. |

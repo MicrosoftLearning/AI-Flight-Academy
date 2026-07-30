@@ -4,7 +4,7 @@
 
 **2 hours. Any tool. Start here.**
 
-> **This is the alternate take on Scenario 2.** Where *The Screening Room* teaches **one** reviewer to know **one** audience, **The Greenlight** seats a **room of audiences** who each nominate what matters, argue it out with evidence, and decide what to build. Same slide-9 need — *persona-lization* — a different, orchestration-forward technique. **Pick one. They are separate.**
+> **This is the alternate take on Scenario 2.** Where *The Critic* teaches **one** reviewer to know **one** audience, **The Greenlight** seats a **room of audiences** who each nominate what matters, argue it out with evidence, and decide what to build. Same slide-9 need — *persona-lization* — a different, orchestration-forward technique. **Pick one. They are separate.**
 
 ---
 

@@ -5,7 +5,7 @@ title: Scenario 2 · The Greenlight
 # Scenario 2 — The Greenlight
 
 ::: tip Alternate take on Scenario 2
-This is the **council** take on Content Health — a room of audiences that scores, debates, and decides what to build. The **lens** take (*The Screening Room*) solves the same slide-9 need with a single audience reviewer. **Pick one. They are separate.**
+This is the **council** take on Content Health — a room of audiences that scores, debates, and decides what to build. The **lens** take (*The Critic*) solves the same slide-9 need with a single audience reviewer. **Pick one. They are separate.**
 :::
 
 ## The problem (villain's complaint)
