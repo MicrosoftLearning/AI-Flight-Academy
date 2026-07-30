@@ -8,9 +8,9 @@ Same scenario, three ways in. Pick whichever fits how you like to work — no tr
 
 | | Build with | You'll be | |
 | --- | --- | --- | --- |
-| 🟢 **Cowork** | Microsoft 365 Copilot | Writing instructions, not code. Guided end to end. | **[Start →](/build/base-scenario-1)** |
+| 🟢 **Cowork** | Microsoft 365 Copilot | Writing instructions, not code. Guided end to end. | **[Start →](/build/base-scenario-1)** 🚧 |
 | 🔵 **Copilot Studio** | Copilot Studio | Wiring agents in a low-code maker studio. | Coming soon |
-| 🟣 **Code** | VS Code + GitHub Copilot | Writing real code. You get a contract, not a solution. | **[Start →](/build/advanced-scenario-1)** |
+| 🟣 **Code** | VS Code + GitHub Copilot | Writing real code. You get a contract, not a solution. | **[Start →](/build/advanced-scenario-1)** 🚧 |
 
 ## Not sure?
 
@@ -19,4 +19,8 @@ Same scenario, three ways in. Pick whichever fits how you like to work — no tr
 
 ::: tip All three produce the same artifact
 The portable spec is identical. The tracks differ in what you build around it.
+:::
+
+::: warning 🚧 Scenario 1 is a work in progress
+Both build paths are drafted and being tested. Expect changes before the event.
 :::

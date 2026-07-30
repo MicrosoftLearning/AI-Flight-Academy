@@ -10,6 +10,6 @@ Each scenario is a **real, relatable Microsoft work problem** on safe, sanitized
 Scenarios 2 and 3 are still being finalized with the leadership team and business managers. Scenario 1 is locked.
 :::
 
-- 🔒 [Scenario 1 — The Digital Twin](/scenarios/scenario-1)
+- 🚧 [Scenario 1 — The Digital Twin](/scenarios/scenario-1) — **work in progress**
 - [Scenario 2 (TBD)](/scenarios/scenario-2)
 - [Scenario 3 (TBD)](/scenarios/scenario-3)

@@ -6,6 +6,9 @@ title: The Digital Twin — Cowork
 
 # 🧬 The Digital Twin
 
+::: warning 🚧 Work in progress
+Scenario 1 is still being built and tested. Steps, downloads, and screenshots may change before the event. If something here doesn't match what you see on screen, that's on us — tell a coach.
+:::
 **You'll build this in Cowork. No code, and no experience needed.**
 
 ## What you're solving

@@ -4,6 +4,10 @@ title: Downloads
 
 # Downloads
 
+::: warning 🚧 Work in progress
+These files are still being tested and may be updated before the event. Re-download on the day.
+:::
+
 Everything for **Scenario 1 · The Digital Twin**. Files download straight from this site — no GitHub account, no cloning.
 
 ::: tip Do this first, whichever track you pick

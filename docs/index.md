@@ -39,7 +39,7 @@ hero:
   <a class="lab-card" href="/Team-Week-Imagineer-Hack/scenarios/scenario-1">
     <span class="lab-card-emoji">🎯</span>
     <span class="lab-card-title">1 · Pick a scenario</span>
-    <span class="lab-card-desc">Scenario 1 is The Digital Twin — a spec of how you work that any AI tool can read.</span>
+    <span class="lab-card-desc">🚧 Scenario 1 is The Digital Twin — a spec of how you work that any AI tool can read. Still in progress.</span>
     <span class="lab-card-cta">See scenarios →</span>
   </a>
   <a class="lab-card" href="/Team-Week-Imagineer-Hack/levels/">

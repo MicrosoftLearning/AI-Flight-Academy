@@ -4,6 +4,10 @@ title: Scenario 1 · The Digital Twin
 
 # Scenario 1 — The Digital Twin
 
+::: warning 🚧 Work in progress
+This scenario is drafted and being tested. Details may change before the event.
+:::
+
 ## The problem
 
 Copilot personalizes already. It has memory, and Work IQ reads mail, calendar, and files. That gets a draft most of the way.

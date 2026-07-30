@@ -19,8 +19,8 @@ export default defineConfig({
       {
         text: "Start Building",
         items: [
-          { text: "🟢 Cowork — no code", link: "/build/base-scenario-1" },
-          { text: "🟣 Code — VS Code + Copilot", link: "/build/advanced-scenario-1" },
+          { text: "🟢 Cowork — no code (WIP)", link: "/build/base-scenario-1" },
+          { text: "🟣 Code — VS Code + Copilot (WIP)", link: "/build/advanced-scenario-1" },
           { text: "🔵 Copilot Studio (coming soon)", link: "/build/builder-scenario-1" },
         ],
       },
@@ -91,7 +91,7 @@ export default defineConfig({
           text: "Scenarios",
           items: [
             { text: "Overview", link: "/scenarios/" },
-            { text: "Scenario 1 · The Digital Twin", link: "/scenarios/scenario-1" },
+            { text: "Scenario 1 · The Digital Twin (WIP)", link: "/scenarios/scenario-1" },
             { text: "Scenario 2 (TBD)", link: "/scenarios/scenario-2" },
             { text: "Scenario 3 (TBD)", link: "/scenarios/scenario-3" },
           ],
