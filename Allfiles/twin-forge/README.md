@@ -24,17 +24,17 @@ Verified end to end on a live tenant — upload, trigger, Work IQ retrieval, beh
 Start Twin Forge and help me build a v0.1 digital twin.
 ```
 
-Also triggers on: *build my digital twin*, *create my soul spec*, *forge my twin*, *build the Marcus Webb twin*.
+Also triggers on: *build my digital twin*, *create my soul spec*, *forge my twin*, *build the Avery Washington twin*.
 
 ## What happens
 
-1. **Picks a path** — your own M365 data, or the Marcus Webb persona.
+1. **Picks a path** — your own M365 data, or the Avery Washington persona.
 2. **Gathers evidence** — your last ~10 sent emails and ~30 days of calendar, via Work IQ. No setup, no auth.
 3. **Interviews you** — ~8 behavioral questions, one at a time. Always *"what did you actually do last time?"*, never *"what do you value?"*
 4. **Reconciles** — shows you the gap between what you said and what your calendar shows.
 5. **Writes the three files.**
 
-## Using Path B (Marcus Webb)
+## Using Path B (Avery Washington)
 
 The persona pack **isn't in your Cowork workspace by default.** Download it from `Allfiles/persona-pack/` and **attach the files** to your session when Twin Forge asks. If you can't, take Path A instead.
 

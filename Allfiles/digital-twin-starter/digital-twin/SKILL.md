@@ -1,7 +1,7 @@
 ---
 name: digital-twin
 description: |
-  Use for trigger phrases like "what would Marcus do", "draft in my voice",
+  Use for trigger phrases like "what would Avery do", "draft in my voice",
   "run the digital twin", "decide like me", or "check my boundary rules".
 ---
 

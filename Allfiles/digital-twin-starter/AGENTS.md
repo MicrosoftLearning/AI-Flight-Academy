@@ -6,7 +6,7 @@ This repo is the Advanced Microsoft hackathon starter for a **digital twin**: a 
 
 The twin is not a chatbot persona. It is a small set of markdown files that capture how a person decides, writes, overcommits, protects boundaries, and resolves tradeoffs. Agents must read the spec, cite the governing rule, and admit gaps instead of inventing preferences.
 
-Use the synthetic example name **Marcus Webb** in examples. Do not introduce real personal data.
+Use the synthetic example name **Avery Washington** in examples. Do not introduce real personal data.
 
 ## File layout
 

@@ -11,7 +11,7 @@ title: 🟣 Advanced · Code-Extended — Scenario 1
 **Building with:** VS Code, GitHub Copilot, Copilot CLI, MCP, and Work IQ
 
 ::: tip Get the files
-Twin Forge, the Marcus Webb persona pack, and the starter repo are all on the [Downloads page](/resources/downloads).
+Twin Forge, the Avery Washington persona pack, and the starter repo are all on the [Downloads page](/resources/downloads).
 :::
 
 You will build one team system: a portable digital twin with a council of agents that argue over a real tradeoff and an arbiter that makes the call.
@@ -109,7 +109,7 @@ Use [Ground on live data with Work IQ](/bricks/advanced-work-iq).
 Choose one path:
 
 - **Path A — Own data:** ask Cowork's native Work IQ to summarize your last ~30 days of calendar and recent sent-mail style. Export the distilled result. Do not demo raw private entries.
-- **Path B — Marcus Webb pack:** use the synthetic marketing manager data at `/Allfiles/persona-pack/`.
+- **Path B — Avery Washington pack:** use the synthetic marketing manager data at `/Allfiles/persona-pack/`.
 
 Extract:
 
@@ -205,9 +205,9 @@ Summarize my last 30 days of calendar by category, organizer type, accept/declin
 Find 5-10 sent emails that show my normal writing style. Quote only samples I approve for this hack artifact. Infer style rules from the samples.
 ```
 
-### Path B — Marcus Webb persona pack
+### Path B — Avery Washington persona pack
 
-Use `/Allfiles/persona-pack/`. Marcus Webb is synthetic. This path is safer for demos and faster for teams that do not want to use personal work data.
+Use `/Allfiles/persona-pack/`. Avery Washington is synthetic. This path is safer for demos and faster for teams that do not want to use personal work data.
 
 ### Starter repo
 
@@ -218,7 +218,7 @@ Use `/Allfiles/digital-twin-starter/` for the initial folder shape, scripts, age
 Show these in 60-90 seconds:
 
 - [ ] The folder: `SKILL.md`, `soul.md`, `voice.md`, `revealed.md`, `.github/agents/*.agent.md`, and `mcp_server.py`.
-- [ ] Which data path you used: own data or Marcus Webb.
+- [ ] Which data path you used: own data or Avery Washington.
 - [ ] One measured finding in `revealed.md` that self-report would have missed.
 - [ ] The council division of labor and the short return shape from each subagent.
 - [ ] The mid-build twist: executive ask colliding with peer promise.

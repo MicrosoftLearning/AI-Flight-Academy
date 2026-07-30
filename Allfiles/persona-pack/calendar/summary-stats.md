@@ -1,5 +1,5 @@
 ---
-title: Marcus Webb Calendar Summary Stats
+title: Avery Washington Calendar Summary Stats
 ---
 
 # Calendar Summary Stats
@@ -25,10 +25,10 @@ This file gives away the answers. It is intended for facilitators or teams that 
 | Category | Hours | Notes |
 |---|---:|---|
 | Recurring status meetings | 19.5 | Leadership standups, PMM status syncs, weekly planning, office hours |
-| Atlas launch execution | 13.5 | War rooms, launch gates, page copy, go/no-go, launch prep |
+| Lantern launch execution | 13.5 | War rooms, launch gates, page copy, go/no-go, launch prep |
 | Sales enablement / Sales pressure | 13.25 | Deck reviews, sales walkthroughs, adoption reviews, fire drills |
-| Customer calls with Tessa or Jordan | 10.0 | Every listed customer call includes Marcus |
-| Agency / Fenwick work | 8.75 | SOW, creative reviews, asset QA, closeout |
+| Customer calls with Maya or Caleb | 10.0 | Every listed customer call includes Avery |
+| Agency / First Up Consultants work | 8.75 | SOW, creative reviews, asset QA, closeout |
 | Demand gen / MQL quality | 7.25 | MQL target, routing, paid media, SDR quality |
 | Protected strategy blocks | 12.0 scheduled | 9.0 declined, 3.0 tentative, 0 accepted |
 
@@ -36,10 +36,10 @@ This file gives away the answers. It is intended for facilitators or teams that 
 
 ## Customer-call coverage
 
-| Direct report | Customer calls listed | Calls Marcus attended | Coverage |
+| Direct report | Customer calls listed | Calls Avery attended | Coverage |
 |---|---:|---:|---:|
-| Tessa Lin | 7 | 7 | 100% |
-| Jordan Beck | 6 | 6 | 100% |
+| Maya Robinson | 7 | 7 | 100% |
+| Caleb Miller | 6 | 6 | 100% |
 
 ## Friday strategy block status
 
@@ -56,14 +56,14 @@ Calculated from received messages and matching sent replies in the inbox corpus.
 
 | Sender | Avg response latency | Pattern |
 |---|---:|---|
-| Priya Raghavan | 8 minutes | Marcus replies almost immediately |
-| Dan Kowalski | 32 minutes | Fast when escalated, usually defensive |
-| Helen Park | 74 minutes | Same-day, collaborative |
-| Ravi Chandra | 82 minutes | Same-day when claims block launch |
-| Amara Osei | 18 minutes | Fast when agency work is on critical path |
-| Tessa Lin | 24 hours 37 minutes | Often next day despite supportive tone |
-| Jordan Beck | 2 days 18 hours | Delayed unless tied to Sales escalation |
+| Victoria Burke | 8 minutes | Avery replies almost immediately |
+| Graham Barnes | 32 minutes | Fast when escalated, usually defensive |
+| Serena Davis | 74 minutes | Same-day, collaborative |
+| Miguel Reyes | 82 minutes | Same-day when claims block launch |
+| Amara White | 18 minutes | Fast when agency work is on critical path |
+| Maya Robinson | 24 hours 37 minutes | Often next day despite supportive tone |
+| Caleb Miller | 2 days 18 hours | Delayed unless tied to Sales escalation |
 
 ## Facilitator note
 
-Useful digital-twin rules should separate Marcus's stated identity from observable behavior: who gets instant attention, which commitments survive pressure, and which phrases signal friction versus trust.
+Useful digital-twin rules should separate Avery's stated identity from observable behavior: who gets instant attention, which commitments survive pressure, and which phrases signal friction versus trust.

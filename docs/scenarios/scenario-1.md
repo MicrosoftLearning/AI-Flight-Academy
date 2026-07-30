@@ -46,9 +46,9 @@ Use:
 - recent calendar patterns for `revealed.md`
 - recent tradeoffs and decisions for `soul.md`
 
-### Path B — Build Marcus Webb's twin
+### Path B — Build Avery Washington's twin
 
-Use the **Marcus Webb persona pack**: a synthetic marketing manager with a fake inbox, calendar, and goals doc.
+Use the **Avery Washington persona pack**: a synthetic marketing manager with a fake inbox, calendar, and goals doc.
 
 Pick this path if you cannot or do not want to use your own data. It exercises the same skills without personal data. See the Base build page for details: [/build/base-scenario-1](/build/base-scenario-1).
 

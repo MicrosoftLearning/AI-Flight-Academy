@@ -6,7 +6,7 @@ title: Resources
 
 ## Get the files
 
-**[⬇ Downloads](/resources/downloads)** — Twin Forge, the Marcus Webb persona pack, and the Advanced starter repo.
+**[⬇ Downloads](/resources/downloads)** — Twin Forge, the Avery Washington persona pack, and the Advanced starter repo.
 
 ## Why the scenario works the way it does
 

@@ -58,7 +58,7 @@ A description is the writer's *theory* of their own writing, and it's usually wr
 
 **How to coach**
 
-Have them paste 5–10 sent emails or use Marcus Webb samples. Then extract rules the samples prove: opener, signoff, sentence length, punctuation, directness, and register by recipient.
+Have them paste 5–10 sent emails or use Avery Washington samples. Then extract rules the samples prove: opener, signoff, sentence length, punctuation, directness, and register by recipient.
 
 ## Failure mode: tooling eats the room
 
@@ -68,7 +68,7 @@ The team is debugging setup at 0:45 and has no working twin.
 
 **How to coach**
 
-Shrink the tool surface. Use Cowork and the Twin Forge skill. If needed, switch to the Marcus Webb pack. The learning target is the portable spec, not a perfect integration.
+Shrink the tool surface. Use Cowork and the Twin Forge skill. If needed, switch to the Avery Washington pack. The learning target is the portable spec, not a perfect integration.
 
 ## Failure mode: Advanced teams do not integrate
 

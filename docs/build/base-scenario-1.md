@@ -41,8 +41,8 @@ Grab these now — you'll need the first one in about two minutes.
   </a>
   <a class="lab-card" href="https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack">
     <span class="lab-card-emoji">🗂️</span>
-    <span class="lab-card-title">Marcus Webb</span>
-    <span class="lab-card-desc">Optional. A made-up marketing manager with a fake inbox and calendar — use him instead of your own data.</span>
+    <span class="lab-card-title">Avery Washington</span>
+    <span class="lab-card-desc">Optional. A made-up marketing manager with a fake inbox and calendar — use them instead of your own data.</span>
     <span class="lab-card-cta">Get it →</span>
   </a>
 </div>
@@ -79,7 +79,7 @@ It'll ask which you want:
 
 **Your own data** — Twin Forge reads your sent mail and calendar. Nothing is set up, nothing is shared, and it only sees what you can already see. This makes the better twin, because it's really you.
 
-**Marcus Webb** — the made-up marketing manager. Pick this if you'd rather not use your own work data. Download his pack and **attach the files** when Twin Forge asks; it can't see them otherwise.
+**Avery Washington** — the made-up marketing manager. Pick this if you'd rather not use your own work data. Download their pack and **attach the files** when Twin Forge asks; it can't see them otherwise.
 
 ## 3 · Get your first draft
 
@@ -172,7 +172,7 @@ Cowork drafts and waits for your approval. Keep it that way today.
 
 60–90 seconds. Hit these:
 
-- [ ] Whose twin — yours or Marcus's
+- [ ] Whose twin — yours or Avery's
 - [ ] Your soul file, about a page
 - [ ] Your voice file, with real samples in it
 - [ ] **One thing your calendar revealed that surprised you**
@@ -190,7 +190,7 @@ It's the one where someone reads a draft your twin wrote and says *"yeah, that s
 | Cowork ignores Twin Forge | Start a **new** session — skills only load at the start |
 | Upload seemed to do nothing | Upload the `.md` file, not a zip |
 | "I can't find the reference files" | You've got an old copy — re-download it |
-| Marcus's data can't be found | Attach the pack files to the session |
+| Avery's data can't be found | Attach the pack files to the session |
 | Twin sounds like a stranger | Your voice file is descriptions, not real emails. Go back to step 5 |
 | Twin gives wishy-washy answers | Your soul file has values, not rules. Go back to step 6 |
 

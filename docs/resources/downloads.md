@@ -15,7 +15,7 @@ Paste the folder's GitHub URL into [download-directory.github.io](https://downlo
 | What | Why you need it | Get it |
 | --- | --- | --- |
 | **Twin Forge skill** | Bootstraps a v0.1 twin in ~12 minutes. Upload it into Cowork and say *"Start Twin Forge."* | [SKILL.md](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/blob/main/Allfiles/twin-forge/SKILL.md) |
-| **Marcus Webb persona pack** | Path B data if you'd rather not use your own. | [Allfiles/persona-pack](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack) |
+| **Avery Washington persona pack** | Path B data if you'd rather not use your own. | [Allfiles/persona-pack](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack) |
 
 **Installing Twin Forge:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill** → pick `SKILL.md`. Then **start a new session** — skills are discovered at session start.
 
@@ -30,7 +30,7 @@ Or drop it in OneDrive at `/Documents/Cowork/skills/twin-forge/SKILL.md`.
 | What | Why you need it | Get it |
 | --- | --- | --- |
 | **Starter repo** | Schema, MCP server skeleton, council runner, test harness. The contract — not the solution. | [Allfiles/digital-twin-starter](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/digital-twin-starter) |
-| **Marcus Webb persona pack** | Path B data. | [Allfiles/persona-pack](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack) |
+| **Avery Washington persona pack** | Path B data. | [Allfiles/persona-pack](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/tree/main/Allfiles/persona-pack) |
 
 ```bash
 git clone https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack.git
@@ -45,4 +45,4 @@ Work in a copy of `digital-twin-starter`, not in the repo folder itself.
 
 - [Facilitator kit](/facilitator/) — role cards, interview script, coach playbook
 - [Run of show](/how-it-works/run-of-show)
-- **Spoilers:** `Allfiles/persona-pack/calendar/summary-stats.md` gives away Marcus's planted contradictions. Hand it to stuck teams only.
+- **Spoilers:** `Allfiles/persona-pack/calendar/summary-stats.md` gives away Avery's planted contradictions. Hand it to stuck teams only.

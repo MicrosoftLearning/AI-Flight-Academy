@@ -1,6 +1,6 @@
 ---
 name: twin-forge
-description: Use this skill when the user says build my digital twin, start twin forge, create my soul spec, create my voice spec, create my revealed behavior file, interview me for a digital twin, forge my twin, make a portable work twin, or build the Marcus Webb twin.
+description: Use this skill when the user says build my digital twin, start twin forge, create my soul spec, create my voice spec, create my revealed behavior file, interview me for a digital twin, forge my twin, make a portable work twin, or build the Avery Washington twin.
 ---
 
 # Twin Forge
@@ -20,7 +20,7 @@ A good `soul.md` is about **one page**. Longer specs measurably perform worse �
 Ask the user which path they want:
 
 - **Path A** — build from their own Microsoft 365 data through Work IQ.
-- **Path B** — build from the Marcus Webb synthetic persona pack.
+- **Path B** — build from the Avery Washington synthetic persona pack.
 
 If Path A, say you will only use data they can already access.
 

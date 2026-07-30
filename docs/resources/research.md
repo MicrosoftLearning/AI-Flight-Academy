@@ -36,9 +36,9 @@ While developing the technique, Anthropic reported that a short, broad principle
 
 Not research — one build, one person. Useful as a story, not as evidence:
 
-The first twin we made was worse than no twin at all, because its author wrote down who he *wanted* to be. The spec said he escalated priority conflicts; in practice he just decided and told people after. It said he'd never ship anything unverified; in practice he cut scope and protected the date.
+The first twin we made was worse than no twin at all, because its author wrote down who they *wanted* to be. The spec said they escalated priority conflicts; in practice they just decided and told people after. It said they'd never ship anything unverified; in practice they cut scope and protected the date.
 
-Rewriting those rules from what he actually did was the moment it started sounding like him. **That gap — between the self you describe and the self your calendar records — is the whole scenario.**
+Rewriting those rules from what they actually did was the moment it started sounding like them. **That gap — between the self you describe and the self your calendar records — is the whole scenario.**
 
 ## Further reading
 
