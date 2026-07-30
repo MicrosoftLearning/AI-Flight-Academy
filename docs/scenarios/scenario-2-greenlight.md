@@ -4,11 +4,7 @@ title: Scenario 2 · The Greenlight
 
 # Scenario 2 — The Greenlight
 
-::: tip Alternate take on Scenario 2
-This is the **council** take on Content Health — a room of audiences that scores, debates, and decides what to build. The **lens** take (*The Critic*) solves the same slide-9 need with a single audience reviewer. **Pick one. They are separate.**
-:::
-
-## The problem (villain's complaint)
+## The problem
 
 > Our agents write content. Our evals check whether it's accurate, clear, and roughly the right level — and they pass almost everything. They review with **one implied reader**, an average of everyone that exists nowhere. So competent content aimed at the wrong reader passes every time. Four blind passes of the provided reviewer over five articles: not one flagged the worst piece as a reject — a governance whitepaper filed against a store lead. One verdict can't say *"ship it for Compliance, reject it for Retail,"* so it split the difference and missed.
 
