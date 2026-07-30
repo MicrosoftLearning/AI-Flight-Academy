@@ -76,4 +76,4 @@ Change that one line on the seat. Re-convene all five pieces.
 - [🔵 Builder · Copilot Studio](/build/builder-scenario-2)
 - [🟣 Advanced · Scout · VS Code](/build/advanced-scenario-2)
 
-*Kit, brief, judging rubric and path guide live under `Allfiles/the-greenlight/`.*
+*Kit, brief, judging rubric and path guide live under `Allfiles/scenario-2-greenlight/the-greenlight/`.*
