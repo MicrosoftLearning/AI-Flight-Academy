@@ -26,8 +26,15 @@ export default defineConfig({
       },
       { text: "Building Blocks", link: "/bricks/" },
       { text: "Scenarios", link: "/scenarios/" },
+      { text: "Facilitators", link: "/facilitator/" },
       { text: "Submit", link: "/submit/" },
-      { text: "Resources", link: "/resources/" },
+      {
+        text: "Resources",
+        items: [
+          { text: "Overview", link: "/resources/" },
+          { text: "⬇ Downloads", link: "/resources/downloads" },
+        ],
+      },
     ],
     search: {
       provider: "local",
@@ -85,7 +92,7 @@ export default defineConfig({
           text: "Scenarios",
           items: [
             { text: "Overview", link: "/scenarios/" },
-            { text: "Scenario 1 (TBD)", link: "/scenarios/scenario-1" },
+            { text: "Scenario 1 · The Digital Twin", link: "/scenarios/scenario-1" },
             { text: "Scenario 2 (TBD)", link: "/scenarios/scenario-2" },
             { text: "Scenario 3 (TBD)", link: "/scenarios/scenario-3" },
           ],
@@ -98,6 +105,18 @@ export default defineConfig({
             { text: "Overview", link: "/how-it-works/" },
             { text: "Run of Show", link: "/how-it-works/run-of-show" },
             { text: "Scoring & Judging", link: "/how-it-works/scoring" },
+          ],
+        },
+      ],
+      "/facilitator/": [
+        {
+          text: "Facilitator Kit",
+          items: [
+            { text: "Overview", link: "/facilitator/" },
+            { text: "Role Cards", link: "/facilitator/role-cards" },
+            { text: "Interview Script", link: "/facilitator/interview-script" },
+            { text: "Coach Playbook", link: "/facilitator/coach-playbook" },
+            { text: "Run of Show", link: "/how-it-works/run-of-show" },
           ],
         },
       ],

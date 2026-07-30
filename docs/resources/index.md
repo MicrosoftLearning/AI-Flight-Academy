@@ -4,7 +4,9 @@ title: Resources
 
 # Resources
 
-> **TODO** — official docs, guides, and links to go deeper before, during, and after the hack.
+## Get the files
+
+**[⬇ Downloads](/resources/downloads)** — Twin Forge, the Marcus Webb persona pack, and the Advanced starter repo.
 
 ## Reference hacks
 

@@ -1,0 +1,93 @@
+---
+title: Coach Playbook
+---
+
+# Coach Playbook
+
+Use this when teams get stuck.
+
+## Failure mode: they wrote down who they want to be
+
+**What it looks like**
+
+The spec is noble, generic, and wrong. It says things like "always escalate priority conflicts" or "never ship unverified work" even when the person's real behavior says otherwise.
+
+**How to coach**
+
+Let them hit it. It is the best learning moment of the day.
+
+Ask the twin a sealed dilemma. When it misses, ask: "What real behavior would have predicted your answer?" Patch from that behavior.
+
+## Failure mode: instruction interference
+
+**What it looks like**
+
+A small patch fixes one thing and breaks two others. One real example: adding the word "tentative" to explain a calendar pattern made the twin passive in unrelated decisions.
+
+**How to coach**
+
+Re-test old prompts after each meaningful edit. Keep patches local. Prefer a narrow rule over a broad adjective.
+
+::: warning Watch adjectives
+Words like tentative, aggressive, careful, strategic, and collaborative can bleed everywhere. Tie them to a situation.
+:::
+
+## Failure mode: the spec is too long
+
+**What it looks like**
+
+The team keeps adding principles, exceptions, and prose. The twin gets less consistent.
+
+**Why it matters**
+
+Anthropic's Constitutional AI work found that longer, more specific principles could damage or reduce generalization and effectiveness. Liu et al.'s "Lost in the Middle" work showed that models attend worst to instructions buried mid-context. Park et al. 2024 also suggests persona bootstrapping is already strong; the hard part is compression.
+
+**How to coach**
+
+Ask for the one tiebreaker that matters. Move examples into references. Keep `soul.md` short enough to scan.
+
+## Failure mode: they describe voice instead of proving it
+
+**What it looks like**
+
+`voice.md` says "warm, concise, executive-ready" but includes no real samples.
+
+**Why it matters**
+
+Jemama & Kumar 2025 report that few-shot prompting on real writing can be far more accurate for style matching than zero-shot description. HyPerAlign 2025 reports strong preference wins from a handful of samples. The practical lesson: pasting real examples beats describing vibes.
+
+**How to coach**
+
+Have them paste 5–10 sent emails or use Marcus Webb samples. Then extract rules the samples prove: opener, signoff, sentence length, punctuation, directness, and register by recipient.
+
+## Failure mode: tooling eats the room
+
+**What it looks like**
+
+The team is debugging setup at 0:45 and has no working twin.
+
+**How to coach**
+
+Shrink the tool surface. Use Cowork and the Twin Forge skill. If needed, switch to the Marcus Webb pack. The learning target is the portable spec, not a perfect integration.
+
+## Failure mode: Advanced teams do not integrate
+
+**What it looks like**
+
+Each council owner builds a separate agent with separate rules. The final answer sounds like five opinions stapled together.
+
+**How to coach**
+
+Force one shared `soul.md`. The Arbiter owns tiebreakers. The Critic checks whether the final answer follows the shared spec.
+
+## Timing rails
+
+- **By 0:30:** v0.1 twin exists.
+- **By 0:50:** first working draft exists.
+- **By 1:20:** stop expanding; port or integrate.
+- **By 1:40:** demo path is chosen.
+- **By 2:00:** reveal is complete and each participant has one correction to make next.
+
+::: tip Coach sentence
+"Show me the last real example, then show me the smallest rule that would have predicted it."
+:::
