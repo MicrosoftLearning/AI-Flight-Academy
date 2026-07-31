@@ -24,7 +24,7 @@ In **Base**, the part you build is one file:
 
 - **`THE-COUNCIL.md`** — your council's audience profiles. For each one, write its **goal** and what the content must do to get them there.
 
-The provided skill reviews the content from each audience's point of view. Every judgement includes a **quote**, a **source**, and a **confidence** rating. Where audiences disagree, it shows the conflict side by side and proposes what to build instead. **Builder** and **Advanced** teams automate more of this same process.
+The provided skill reviews the content from each audience's point of view. Every judgement includes a **quote**, a **source**, and a **confidence** rating. Where audiences disagree, it shows the conflict side by side, proposes what to build instead, and helps you make it — down to the message to the person waiting on it. From there you can set the review to run on its own; **Builder** and **Advanced** teams take that further, up to a gate that blocks content until every audience is served.
 
 With the supplied pack, the same content should get **different verdicts from different audiences**. With your own content, the council should show whether audiences agree for good reasons or need different treatment. Every verdict points to the text and the audience need behind it. A replacement is ready only when the audience it serves would accept it.
 

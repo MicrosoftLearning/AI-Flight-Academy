@@ -147,12 +147,18 @@ Once you have chosen the countable requirement, ask Copilot in VS Code to write 
 For example: **“Add the `check_table_width` TODO in `checks.py`. Read the maximum columns from the Retail seat data, not a fixed number. Then run it against the five supplied articles and show me one failure.”**
 </details>
 
-## 7 · Compare, plan, and re-score
+## 7 · Close the loop, in code
 📘 [Add a guardrail / output check](/bricks/advanced-guardrail)
 
-Have the judge identify a passage two audiences treat differently. Then use the greenlight agent to write a replacement plan for an audience the original does not serve. The answer can be a shorter guide, checklist, video, or another format.
+Have the judge identify a passage two audiences treat differently. Then use the greenlight agent to turn a rejecting audience's failed criteria into a replacement plan — a different format is a valid answer.
 
-Re-score that plan using the same audience criteria. It is ready only when the audience that needed the replacement would accept it. Add validation using `greenlightlib.py` so a score without a quote, source, or confidence fails the run.
+In the Cowork track, a person asks for this once. Here you make it a repeatable part of the system:
+
+- Generate the replacement asset the plan describes, not just its spec.
+- Re-score the real draft in code, on the same criteria, with the same evidence rules — `greenlightlib.validate_scorecard` fails any score missing a quote, source, or confidence.
+- Take the next real action: open a pull request with the new asset, write the result into the run summary, and notify the owner through a connector.
+
+The loop is done when the audience that rejected the original would accept its replacement — and the system, not a person, carried it there.
 
 ## 8 · Show the coverage
 
@@ -160,14 +166,16 @@ Run the council across all five articles and every seated audience. Use `coverag
 
 The goal is not to make every audience disagree. It is to make the system explicit about when one piece can serve several audiences and when it needs different treatment.
 
-## 9 · Gate the pull request
+## 9 · Gate the pull request — automation, elevated
 📘 [Build a custom connector (MCP)](/bricks/advanced-mcp-connector) · [Add a guardrail / output check](/bricks/advanced-guardrail)
 
-Wire the council into a pull-request check. The check should fail when an audience is left unserved and pass when the coverage plan addresses that gap.
+In the Cowork track, the review runs on a schedule when a file lands in an inbox. Here the same idea becomes publish-time governance: an event — a pull request, or a new file in the repo — runs the whole council automatically, and the merge stays blocked until every seated audience clears. On pass, the pipeline routes the greenlit portfolio and notifies the people waiting on it.
+
+Wire the council into a pull-request check: it fails when an audience is left unserved and passes when the coverage plan addresses that gap.
 
 The council can propose a change, but it cannot merge its own work. A human approves the result.
 
-**Done when:** a pull request fails because the plan does not serve an audience, then passes after the fix.
+**Done when:** a pull request fails because the plan does not serve an audience, then passes after the fix — with no one running the council by hand.
 
 ---
 
@@ -179,8 +187,8 @@ The council can propose a change, but it cannot merge its own work. A human appr
 - [ ] The runner producing a separate, evidence-backed scorecard for each seat
 - [ ] One deterministic check that draws its threshold from an audience seat
 - [ ] One passage where the judge explains why audiences agree or disagree
-- [ ] A replacement plan re-scored by the audience it is meant to serve
-- [ ] The coverage matrix and the pull-request check
+- [ ] A replacement asset generated, re-scored, and delivered by the pipeline
+- [ ] The coverage matrix and the automatic pull-request gate
 
 ::: tip What to aim for in the demo
 Lead with the moment one piece of content looks right for one audience and wrong for another. That is the thing a single generic review cannot show.

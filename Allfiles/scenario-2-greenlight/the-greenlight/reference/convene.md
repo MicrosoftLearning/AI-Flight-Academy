@@ -1,84 +1,82 @@
-# CONVENE
+# Review
 
-## 🎞️ Pass 1 — the whole council scores a subject, then debates
+## Every audience reviews the same piece, then you compare
 
-You convene the council over one **subject** (a piece from `../data-pack/content/`, or anything the participant pastes — a blog, a doc, a video script). Every **seat** in `THE-COUNCIL.md` scores it against **its own** criteria. Then the room **debates** where the verdicts split.
+You're reviewing one piece — something from `../data-pack/content/`, or anything the participant pastes in (a blog post, a doc, a video script). Every audience in `THE-COUNCIL.md` judges it by *its own* needs. Then you look at where they agree and where they don't.
 
-This is the heart of the exercise. **The output is not one verdict — it's N verdicts, one per seat, and the disagreement between them.**
+This is the heart of the exercise. The result isn't one verdict — it's one per audience, and the interesting part is where they differ.
 
 ---
 
-## What you do, in order
+## What to do, in order
 
 ### 1. Load the room
-Read `THE-COUNCIL.md`. Get every seat, its outcome, and its criteria. If there's only one seat, stop and say: *"A council of one can't disagree. Seat another audience with a different outcome first — say `seat the council`."*
+Read `THE-COUNCIL.md`. Get every audience, its goal, and what it needs. If there's only one audience, stop and say: "One audience can't disagree with itself. Add another with a different goal first — ask to seat the council."
 
-### 2. Score the subject, one seat at a time
-For **each seat**, produce a scorecard against **that seat's** criteria only. Do the seats **independently** — a later seat must not soften an earlier seat's verdict. Each score carries the three backings:
+### 2. Score the piece, one audience at a time
+For each audience, judge the piece against *that audience's* needs only. Do them independently — a later audience shouldn't soften an earlier one. Each point carries:
 
-| Field | |
-|---|---|
-| **score** | 0–3, or `INSUFFICIENT_CONTEXT` |
-| **evidence** | a direct quote from the subject — the text that caused the score. **No quote, no score.** |
-| **source** | what backs the judgement: a line from this seat's audience card, a style-guide rule, a URL — or `UNVERIFIED` and what you searched for |
-| **confidence** | `High` · `Medium` · `Low`. `Low` on a fatal criterion → this seat abstains (escalate to human), does not force a verdict |
-| **fix** | required when score ≤ 1: specific and actionable, for **this** audience |
+- **A score** — 0 to 3, or "not enough to judge."
+- **A quote** — the exact words from the piece that earned it. No quote, no score.
+- **A reason** — a line from the audience's profile, a style rule, or a link. If there's nothing, say so and note what you looked for.
+- **A confidence** — high, medium, or low. Low confidence on a deal-breaker means this audience asks a person instead of forcing a verdict.
+- **A fix** — whenever a score is low, say what would raise it, specifically, for this audience.
 
-Then the seat's **verdict** (SHIP / REVISE / REJECT) by the thresholds in `THE-COUNCIL.md`.
+Then give the audience's overall verdict — Ship, Revise, or Reject — by the bars in `THE-COUNCIL.md`.
 
-### 3. Build the council table
+### 3. Put it in a table
 
-| Seat | Verdict | Score | Fatal trip? | One-line reason (with a quote) |
-|---|:---:|:---:|:---:|---|
-| 🛒 Retail | REJECT | 0.8 | ✅ actionable_standing_up | *"Over an eight-week pilot… control posture"* — a page of governance prose; they never reach an action |
-| 🏦 Compliance | SHIP | 2.7 | — | *"should not be recorded as a control"* — exactly the audit rigor they need |
+| Audience | Verdict | Deal-breaker hit? | One-line reason (with a quote) |
+|---|:---:|:---:|---|
+| 🛒 Retail | Reject | yes — usable on the floor | "Over an eight-week pilot…" — a page of background before any action |
+| 🏦 Compliance | Ship | — | "should not be recorded as a control" — exactly the rigor they need |
 
-### 4. Run the debate
-This is what makes it a council and not four evaluators in parallel. Surface the **real conflicts** — places where two seats scored the *same text* in opposite directions.
+### 4. Talk through the disagreements
+This is what makes it a room and not a stack of separate reviews. Find the real clashes — the same passage that one audience loved and another didn't.
 
-For each conflict:
+For each one:
 
-> **The clash:** 🛒 Retail scored `actionable_standing_up` = 0 on *"[quote]"* · 🏦 Compliance scored `audit_defensible` = 3 on the *same passage*.
-> **🛒 argues:** *"[the Retail seat's case, from its outcome and card — with its source and confidence]"*
-> **🏦 answers:** *"[the Compliance seat's case]"*
-> **What it exposes:** the passage isn't good or bad — it's **right for one outcome and fatal for another.** That's not a defect to fix in place; it's a signal the subject must **fork** into different assets. (That's what `greenlight` does with it.)
+> **The clash:** Retail scored "usable on the floor" a 0 on "[quote]." Compliance scored the *same passage* a 3.
+> **Retail's case:** "[why, from its goal and profile — with the reason and confidence]"
+> **Compliance's case:** "[its side]"
+> **What it shows:** the passage isn't simply good or bad — it's right for one goal and wrong for another. That's not a fix-in-place; it's a sign the piece needs to become different things for different people. (That's what the plan does next.)
 
-> ⚠️ **Debate is evidence-bound.** Every move in the debate cites a quote and a source. A seat is not allowed to "feel" something is wrong — it argues from its card and the text. A seat with only `Low` confidence must say so and defer rather than push a verdict it can't back.
+Keep it grounded: every point cites a quote and a reason. An audience doesn't get to just "feel" something is off — it argues from its profile and the text. If it's only low-confidence, it says so and holds back.
 
-### 5. The coverage line
-Close with who the subject, **as it stands**, actually serves:
+### 5. Say who's covered
+Close with who the piece, as it stands, actually serves:
 
-> **Served as-is:** 🏦 Compliance. **Not served:** 🛒 Retail (fatal), 🏭 Manufacturing (fatal). **Abstained:** none.
-> A single reviewer gave this one verdict. The room gives you three — and two of them are the people this was filed *for.*
+> **Served as-is:** Compliance. **Not served:** Retail (deal-breaker), Manufacturing (deal-breaker). **Held back:** none.
+> A single reviewer gives one verdict. The room gives you three — and two of them are the people this was written for.
 
 ---
 
 ## Compare to the solo critic
 
-Always end by putting the room next to `reference/solo.md`'s pre-scored verdict for that piece:
+Always end by putting the room next to the solo critic's score for that piece (in `reference/solo.md`):
 
-> **Solo critic said:** REVISE (one verdict, one implied reader).
-> **The council says:** REJECT for Retail, SHIP for Compliance, REJECT for Manufacturing.
-> **What the council saw that the solo critic couldn't:** the same competent prose is a different thing to each audience. One verdict had to average them, and the average hid a fatal miss.
+> **Solo critic said:** Revise — one verdict, one imagined reader.
+> **The room says:** Reject for Retail, Ship for Compliance.
+> **What the room saw that the solo critic couldn't:** the same solid writing is a different thing to each audience. One verdict had to average them, and the average hid a real miss.
 
-If the council's verdicts are **identical across every seat**, say so plainly — that's the failure mode:
+If every audience lands on the same verdict, say so plainly — that's the thing to fix:
 
-> ⚠️ **Every seat returned the same verdict.** Right now this is one reviewer in costumes. Either the seats aren't judging for different outcomes, or the criteria aren't reading the cards. Look at your sharpest audience's hardest constraint — that's a criterion the others wouldn't share.
-
----
-
-## Rules
-
-- **Score seats independently.** Never let one seat's verdict bleed into another's. Different outcomes must be free to disagree.
-- **No quote, no score. No score without a source and a confidence.** Enforce all three every time.
-- **Name the conflict, don't smooth it.** The disagreement is the product. Do not resolve it into a compromise verdict — surface it.
-- **Don't invent capabilities.** A feature that appears nowhere in the subject is an accuracy problem, not an assumption.
-- **The subject can be anything.** A pasted blog or video script is a valid subject. The five pieces are just the ones with a known solo-critic score to beat.
+> Every audience reached the same verdict. Right now this is one reviewer in different hats. Either the audiences aren't judging for different goals, or their needs aren't reading the profiles. Look at your most demanding audience's hardest need — that's usually one the others wouldn't share.
 
 ---
 
-## When to run
+## A few rules
 
-- After seating or changing any seat — this is the feedback loop.
-- Start with `P4-exec-summary`. It's the piece the solo critic can't handle, and the Retail↔Compliance split is the sharpest in the pack.
-- Before `greenlight` — the failures this pass surfaces are the spec the transformation plan is built from.
+- **Judge each audience on its own.** Don't let one verdict bleed into another.
+- **Quote, reason, confidence — every time.**
+- **Name the disagreement; don't smooth it over.** The clash is the useful part. Don't blend it into one compromise verdict.
+- **Don't invent features.** Something that isn't in the piece is an accuracy problem, not an assumption.
+- **Anything can be the piece.** A pasted blog or script is fine. The five provided pieces just happen to have a known solo-critic score to compare against.
+
+---
+
+## When to run it
+
+- After adding or changing any audience — this is the feedback loop.
+- Start with the executive summary (P4). It's the piece the solo critic can't handle, and the Retail-vs-Compliance split is the clearest.
+- Before you ask for a plan — the gaps this turns up are what the plan is built from.
