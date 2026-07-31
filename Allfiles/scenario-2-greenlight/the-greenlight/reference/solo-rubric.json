@@ -1,0 +1,104 @@
+{
+  "$schema": "./solo-rubric.schema.json",
+  "rubric_id": "the-greenlight-solo-critic",
+  "version": "0.1",
+  "name": "THE GREENLIGHT — Solo Critic (the control)",
+  "what_this_is": "The 'before' in the before/after. A SINGLE reviewer with ONE implied reader, scoring content for competence only. The council the participant builds (THE-COUNCIL.md) is measured against this. DO NOT EDIT — changing it moves both sides of the comparison.",
+  "design_driver": "A single reviewer holds one implied audience — an average of everyone, a person who exists nowhere. It therefore cannot express 'good content aimed at the wrong reader' as a verdict, because it has no second reader to disagree with. The council fixes this by seating many audiences, each with its own verdict. P4 is the proof: a polished governance whitepaper filed against a store lead, which the solo critic returns as REVISE (competent) and can never see as REJECT-for-Retail / SHIP-for-Compliance at once.",
+
+  "scale": {
+    "type": "ordinal",
+    "no_half_points": true,
+    "values": [
+      { "score": 0, "label": "Fail",     "meaning": "Actively wrong or harmful to the reader." },
+      { "score": 1, "label": "Weak",     "meaning": "Present but unreliable. A reviewer would send it back." },
+      { "score": 2, "label": "Adequate", "meaning": "Acceptable. Not memorable, not a problem." },
+      { "score": 3, "label": "Strong",   "meaning": "Does the job well enough to publish as-is." }
+    ]
+  },
+
+  "criteria": [
+    {
+      "id": "accurate",
+      "name": "Accurate",
+      "question": "Is every factual claim true, current, and verifiable?",
+      "fatal": true,
+      "weight": 3,
+      "anchors": {
+        "0": "Contains a claim that is false, or a capability that does not exist.",
+        "1": "Claims stated with more confidence than the source supports, including any unverifiable capability.",
+        "2": "Accurate and verifiable; a few could use a citation.",
+        "3": "Every claim accurate and traceable to something real."
+      },
+      "watch_for": "Confident tone is not evidence. An unverifiable capability is a 1 or INSUFFICIENT_CONTEXT, never a 2."
+    },
+    {
+      "id": "clear",
+      "name": "Clear",
+      "question": "Can a reader follow it on one pass, without re-reading?",
+      "fatal": false,
+      "weight": 2,
+      "anchors": {
+        "0": "Incoherent, or steps in an unfollowable order.",
+        "1": "Requires re-reading; jargon appears before it is defined.",
+        "2": "Understandable throughout.",
+        "3": "Genuinely easy to follow; complexity sequenced well."
+      },
+      "watch_for": "Fluent writing that says nothing still fails this."
+    },
+    {
+      "id": "right_level",
+      "name": "Right level",
+      "question": "Is it pitched at a competent professional — not wildly too advanced or too basic?",
+      "fatal": false,
+      "weight": 2,
+      "anchors": {
+        "0": "Unusable for a general professional reader — far too advanced or far too basic.",
+        "1": "Noticeably mispitched in places.",
+        "2": "Broadly appropriate for a competent reader.",
+        "3": "Well pitched for a general professional audience."
+      },
+      "watch_for": "This criterion averages all readers into one. It CANNOT be too advanced for one audience and too basic for another at the same time — so it splits the difference and passes content that is wrong for specific readers. That blind spot is the reason the council exists."
+    }
+  ],
+
+  "verdict": {
+    "method": "Weighted average, then gates.",
+    "gates": [
+      "Any fatal criterion at 0 -> REJECT.",
+      "Two or more criteria at 1 or below -> REVISE (minimum).",
+      "Any criterion returned INSUFFICIENT_CONTEXT -> cannot be SHIP; escalate to human."
+    ],
+    "thresholds": {
+      "SHIP": "Weighted average >= 2.5 and no gate triggered.",
+      "REVISE": "Weighted average >= 1.5, or any gate short of reject.",
+      "REJECT": "Weighted average < 1.5, or a fatal gate triggered."
+    }
+  },
+
+  "already_scored": {
+    "note": "Four blind passes. One verdict per piece — the solo critic has no way to emit a per-audience verdict. This is the control the council is measured against.",
+    "pieces": [
+      { "content_id": "P1-retail-learn-unit",     "declares": "AC-01", "solo_verdict": "SHIP",   "tell": "Genuinely fine. Stable control." },
+      { "content_id": "P2-health-howto",          "declares": "AC-03", "solo_verdict": "REVISE", "tell": "Competent; a claim or two wants a citation." },
+      { "content_id": "P3-manufacturing-announce","declares": "AC-04", "solo_verdict": "REVISE", "tell": "Reads well; can't see the segmented plant network can't reach half of it." },
+      { "content_id": "P4-exec-summary",          "declares": "AC-01", "solo_verdict": "REVISE", "tell": "THE TELL. Polished governance whitepaper filed against a store lead. REJECT-for-Retail and SHIP-for-Compliance at once — one verdict cannot hold both, so it misses." },
+      { "content_id": "P5-quickstart",            "declares": "AC-01", "solo_verdict": "SHIP",   "tell": "Short, followable, fine for the declared reader." }
+    ],
+    "headline": "Not one solo pass flagged P4 as a reject. A single reviewer cannot say 'excellent, and wrong for this room.' A council can."
+  },
+
+  "output_contract": {
+    "why": "The council's per-seat scorecards reuse this same shape, plus a 'seat' and a 'source' and 'confidence' per score. One contract makes the whole thing gradeable across Cowork, Studio, and VS Code.",
+    "required_fields": {
+      "content_id": "which piece",
+      "audience": "the implied reader (solo) OR the seat (council)",
+      "verdict": "SHIP | REVISE | REJECT",
+      "overall_score": "weighted average, one decimal",
+      "criteria": [
+        { "id": "criterion id", "score": "0-3 or INSUFFICIENT_CONTEXT", "evidence": "direct quote from the content", "fix": "required when score <= 1" }
+      ],
+      "top_fixes": "the three highest-value changes, ranked"
+    }
+  }
+}

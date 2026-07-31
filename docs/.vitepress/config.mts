@@ -92,7 +92,7 @@ export default defineConfig({
           items: [
             { text: "Overview", link: "/scenarios/" },
             { text: "Scenario 1 · The Digital Twin (WIP)", link: "/scenarios/scenario-1" },
-            { text: "Scenario 2 (TBD)", link: "/scenarios/scenario-2" },
+            { text: "Scenario 2 · The Greenlight (WIP)", link: "/scenarios/scenario-2" },
             { text: "Scenario 3 (TBD)", link: "/scenarios/scenario-3" },
           ],
         },

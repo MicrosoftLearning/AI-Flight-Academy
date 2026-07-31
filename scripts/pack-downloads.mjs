@@ -12,8 +12,9 @@
 // elsewhere, both of which ship with the platform / CI image.
 
 import { execFileSync } from "node:child_process";
-import { copyFileSync, existsSync, mkdirSync, rmSync, statSync } from "node:fs";
-import { join } from "node:path";
+import { copyFileSync, cpSync, existsSync, mkdirSync, mkdtempSync, rmSync, statSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { basename, join } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = fileURLToPath(new URL("..", import.meta.url));
@@ -23,22 +24,38 @@ const isWin = process.platform === "win32";
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
 
-function zipFolder(srcDir, zipPath) {
-  if (isWin) {
-    execFileSync(
-      "powershell",
-      [
-        "-NoProfile",
-        "-Command",
-        `$ProgressPreference='SilentlyContinue'; Compress-Archive -Path '${srcDir}' -DestinationPath '${zipPath}' -Force`,
-      ],
-      { stdio: "pipe" }
-    );
-  } else {
-    // zip from the parent so the archive contains the folder itself
-    const parent = join(srcDir, "..");
-    const name = srcDir.split(/[\\/]/).pop();
-    execFileSync("zip", ["-qr", zipPath, name], { cwd: parent, stdio: "pipe" });
+function zipFolder(srcDir, zipPath, exclude = []) {
+  // When excluding subpaths, stage a filtered copy under the folder's own name
+  // so the archive still contains a correctly-named top-level folder.
+  let toZip = srcDir;
+  let stageParent = null;
+  if (exclude.length) {
+    stageParent = mkdtempSync(join(tmpdir(), "pack-"));
+    toZip = join(stageParent, basename(srcDir));
+    cpSync(srcDir, toZip, { recursive: true });
+    for (const rel of exclude) {
+      rmSync(join(toZip, rel), { recursive: true, force: true });
+    }
+  }
+  try {
+    if (isWin) {
+      execFileSync(
+        "powershell",
+        [
+          "-NoProfile",
+          "-Command",
+          `$ProgressPreference='SilentlyContinue'; Compress-Archive -Path '${toZip}' -DestinationPath '${zipPath}' -Force`,
+        ],
+        { stdio: "pipe" }
+      );
+    } else {
+      // zip from the parent so the archive contains the folder itself
+      const parent = join(toZip, "..");
+      const name = toZip.split(/[\\/]/).pop();
+      execFileSync("zip", ["-qr", zipPath, name], { cwd: parent, stdio: "pipe" });
+    }
+  } finally {
+    if (stageParent) rmSync(stageParent, { recursive: true, force: true });
   }
 }
 
@@ -51,6 +68,21 @@ const jobs = [
     src: join(root, "Allfiles", "scenario-1-digital-twin", "persona-pack"),
     zip: "avery-persona-pack.zip",
   },
+  {
+    src: join(root, "Allfiles", "scenario-2-greenlight", "the-greenlight-starter"),
+    zip: "the-greenlight-starter.zip",
+  },
+  {
+    // Ships the skill without facilitator/ - that folder holds the grading
+    // rubric and design brief, which participants must not see.
+    src: join(root, "Allfiles", "scenario-2-greenlight", "the-greenlight"),
+    zip: "the-greenlight.zip",
+    exclude: ["facilitator"],
+  },
+  {
+    src: join(root, "Allfiles", "scenario-2-greenlight", "data-pack"),
+    zip: "greenlight-data-pack.zip",
+  },
 ];
 
 for (const j of jobs) {
@@ -59,7 +91,7 @@ for (const j of jobs) {
     continue;
   }
   const dest = join(out, j.zip);
-  zipFolder(j.src, dest);
+  zipFolder(j.src, dest, j.exclude ?? []);
   console.log(`  ${j.zip.padEnd(28)} ${(statSync(dest).size / 1024).toFixed(1)} KB`);
 }
 

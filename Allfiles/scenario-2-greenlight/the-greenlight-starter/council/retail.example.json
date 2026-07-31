@@ -1,0 +1,42 @@
+{
+  "$comment": "One seat = one audience. This is the illustrative Retail seat. Copy it to council/retail.json (drop '.example') to seat it, then add at least one MORE seat with a DIFFERENT outcome. Criteria mirror the shape of ../the-greenlight/reference/solo-rubric.json. 'checks' wires deterministic checks (checks.py) whose thresholds are pulled FROM THIS CARD, not hardcoded.",
+  "seat_id": "retail",
+  "audience": "\ud83d\uded2 Retail Store Operations Lead",
+  "card": "AC-01",
+  "outcome": "A floor associate can act on this in one short standing read, and re-teach it to a supervisor — so it gets adopted without a training session that will never be scheduled.",
+  "thresholds": { "SHIP": 2.5, "REVISE": 1.5, "REJECT": 1.5 },
+  "criteria": [
+    {
+      "id": "actionable_standing_up",
+      "the_bar": "A distracted reader reaches the first useful action in the first two lines and finishes in under ~6 minutes standing up.",
+      "protects_outcome": "If they can't act before the first interruption, they never come back — there is no session two.",
+      "fatal": true,
+      "anchors": {
+        "0": "No action reachable without a page of prose, or it assumes a desk and uninterrupted time.",
+        "1": "Action exists but is buried past the fold, or needs re-reading.",
+        "2": "Action is near the top and followable standing up.",
+        "3": "First two lines say what it does for them; steps are doable one-handed, interrupted, on a phone."
+      },
+      "watch_for": "Well-written long-form. Fluency is not brevity; an 800-word explainer fails this for a reason a competence check never flags.",
+      "checks": [
+        { "fn": "check_reading_time", "args": { "minutes_budget": 6 } }
+      ]
+    },
+    {
+      "id": "within_their_authority",
+      "the_bar": "Every instructed action is something this reader can do with the access they have.",
+      "protects_outcome": "An instruction to open an admin center or install software isn't 'advanced' for this reader — it's impossible, so the whole piece stops working.",
+      "fatal": true,
+      "anchors": {
+        "0": "Requires admin rights, install, or budget the reader can never get.",
+        "1": "Requires an approval or a person the reader has to go find.",
+        "2": "Fully within the reader's standing access.",
+        "3": "Explicitly names what needs the DM's sign-off and what doesn't."
+      },
+      "watch_for": "'Reach out to your IT admin.' AC-01's store has no IT admin — that's a dead end, not a workaround.",
+      "checks": [
+        { "fn": "check_requires_install", "args": {} }
+      ]
+    }
+  ]
+}
