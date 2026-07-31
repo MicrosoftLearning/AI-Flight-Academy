@@ -1,185 +1,202 @@
 ---
-title: 🟣 Advanced · Code-Extended — Scenario 2
+title: The Greenlight — Code
 ---
 
-# 🟣 Advanced · Code-Extended
+# 🟣 The Greenlight
 
-## Scenario 2 — The Greenlight
+::: warning 🚧 Work in progress
+Scenario 2 is still being built and tested. Steps, downloads, and screenshots may change before the event.
+:::
+**You'll build this in code — VS Code, GitHub Copilot, and the Copilot CLI.**
 
-**Building with:** Scout + GitHub Copilot
+You get the contracts and the plumbing. You write the council.
 
-## 1 · Your mission
+## What you're solving
 
-Build a **council** in a repo — many audience seats scoring one subject in parallel, a judge that diffs them, a transformation plan re-scored on the same rubric — and gate a pull request until every seated audience is served.
+One review is not enough when different audiences need different things from the same content. A formal explainer might help a compliance officer make a careful decision and still be unusable for a store manager who needs one practical action during a busy shift.
 
-## 2 · What you'll demonstrate
+This track solves a second problem too: a model is good at contextual judgement, but not simple, repeatable checks. Your system combines both. The model explains whether content works for an audience; code checks what is countable, such as reading time or a blocked prerequisite.
 
-See the required functions for this altitude on the [🟣 Advanced · Code-Extended level page](/levels/advanced/).
+## What your team will have built
+
+One system, not a collection of prompts. Every audience uses the same content and output contract.
+
+| Piece | What it does |
+| --- | --- |
+| **The seats** | JSON files describing each audience, its outcome, and its criteria. |
+| **The scorer** | Produces one evidence-backed scorecard for each audience. |
+| **The judge** | Compares scorecards and reports conflicts and coverage. |
+| **The checks** | Tests countable requirements using thresholds from the audience data. |
+| **The gate** | Blocks a pull request until the plan serves every audience you chose to support. |
+
+The solo critic remains unchanged. It is the baseline that gives one verdict; your council shows who the content serves and who it does not.
+
+## Before you start
+
+Download all three and unzip them into one folder. Keep `the-greenlight-starter`, `the-greenlight`, and `data-pack` **side by side**.
+
+<div class="lab-grid lab-grid-3">
+	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/the-greenlight-starter.zip" download>
+		<span class="lab-card-emoji">📦</span>
+		<span class="lab-card-title">Starter repo</span>
+		<span class="lab-card-desc">Runner, two working checks, an example seat, three agent contracts, and a VS Code workspace.</span>
+		<span class="lab-card-cta">Download .zip →</span>
+	</a>
+	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/the-greenlight.zip" download>
+		<span class="lab-card-emoji">🟢</span>
+		<span class="lab-card-title">Greenlight skill</span>
+		<span class="lab-card-desc">The audience-review method and the unchanged solo-critic baseline.</span>
+		<span class="lab-card-cta">Download .zip →</span>
+	</a>
+	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/greenlight-data-pack.zip" download>
+		<span class="lab-card-emoji">🗂️</span>
+		<span class="lab-card-title">Content pack</span>
+		<span class="lab-card-desc">Five articles, four audience profiles, and a style guide. Use it instead of real work data.</span>
+		<span class="lab-card-cta">Download .zip →</span>
+	</a>
+</div>
+
+Open `the-greenlight.code-workspace` in VS Code. Then open Copilot Chat and confirm you can switch to **Agent** mode. If your organisation has disabled it, use the Copilot CLI instead; the starter's runner calls it directly.
+
+::: tip Want every step spelled out?
+This page gets you through the build. There are also **[full step-by-step guides](/bricks/)** for Scout setup, Work IQ, guardrails, and connectors.
+:::
 
 ---
 
-## 3 · Assembly map — snap these blocks together
+## 1 · Run the starter checks
 
-Steps 1–4 give you a room that disagrees in about 35 minutes. Everything after that makes it sharp.
+Open a terminal in `the-greenlight-starter` and run:
 
-### Step 1 — Set up the repo and get the data in
-📘 [Set up Scout / GitHub Copilot](/bricks/advanced-setup)
+```powershell
+python checks.py
+python checks.py --piece P4-exec-summary
+```
 
-**Goal:** a project repo containing the **`the-greenlight`** skill, the **`the-greenlight-starter`** folder (your council runner and checks live here), and the **`data-pack`** folder (five articles, four example audience cards, style guide).
+Two checks already work: reading time and blocked prerequisites. One is left as a TODO. Read `checks.py` before changing it.
 
-### Step 2 — See what the solo critic says
-*~5 minutes*
+The important rule is already built in: thresholds come from an audience seat, not from code. A reading-time check gets its time budget from the audience data. Do not hardcode a universal number.
 
-**Goal:** you've seen the solo critic's verdict on all five articles. The machine-readable control is `the-greenlight/reference/solo-rubric.json`.
+## 2 · Split the work
 
-| Piece | Solo verdict |
-|---|---|
-| Training unit (P1) | SHIP |
-| How-to (P2) | REVISE |
-| Blog post (P3) | REVISE |
-| **Executive summary (P4)** | **REVISE** |
-| Quickstart (P5) | SHIP |
+Four people can work in parallel. Fewer teams can combine roles; larger teams can add testing and demo ownership.
 
-**P4 is the tell.** One implied reader can't emit *"REJECT for Retail, SHIP for Compliance"* at once. Your council can, because each seat gets its own verdict.
+| Who | Owns | Starts in |
+| --- | --- | --- |
+| 1 | Two or more audience seats, with distinct outcomes and anchored criteria | `council/` |
+| 2 | The per-seat scorer and its deterministic checks | `seat-scorer.agent.md`, `checks.py` |
+| 3 | The judge that compares scorecards and reports coverage | `judge.agent.md` |
+| 4 | The replacement-plan re-score and the PR gate | `greenlight.agent.md`, `run.ps1` |
 
-### Step 3 — Seat the audiences (as data)
+All roles share the solo critic's output contract. Read it; never edit it.
+
+## 3 · Add the audience seats
 📘 [Ground on live data with Work IQ](/bricks/advanced-work-iq)
-*~12 minutes*
 
-**Goal:** two or more seats defined in `THE-COUNCIL.md` (or a `council/*.json` per seat) — each an audience with a one-line **outcome** and criteria that protect it, with 0/1/2/3 anchors. Ground a real seat on Work IQ where you can; correct what it gets wrong.
+Copy the example Retail seat so it becomes a real seat:
 
-**Work IQ grounding belongs here — at the start, seating real audiences — not bolted on at the end.**
+```powershell
+Copy-Item council/retail.example.json council/retail.json
+```
 
-> *Stuck?* → **"Seat Retail and Compliance as JSON — each with an outcome and one criterion, with 0–3 anchors — in the shape solo-rubric.json uses, plus a seat id."**
+Then add at least one more audience with a different outcome, such as Compliance. Each seat needs an outcome and criteria with 0–3 anchors. A criterion must be specific to that audience: “is it clear?” is too general; “can a floor associate find the first action in two lines?” is useful.
 
-### Step 4 — Score the subject from every seat, in parallel
-*~15 minutes*
+Use Work IQ to help draft a real internal audience profile when that helps. Treat it as a first draft and correct it with people who know that audience.
 
-**Goal:** a runner that loads every seat and scores one article against **each seat's** criteria, emitting structured per-seat JSON (reuse the `output_contract` from `solo-rubric.json`, plus a `seat`, a `source`, and a `confidence` per score).
+## 4 · Finish the three agents
 
-| Seat | Solo critic | Council | Why |
-|---|---|---|---|
-| 🛒 Retail | REVISE | **REJECT** | *"quote from the content"* |
-| 🏦 Compliance | REVISE | **SHIP** | *"quote from the content"* |
+The starter includes a scorer, judge, and greenlight agent. Their input and output contracts are already written. Each has one design decision left for you:
 
-> **You never change the solo critic.** It's the "before." Everything you build is the council.
+- decide how a failed deterministic check affects a scorer's judgement
+- decide how the judge treats an audience that needs revision
+- decide when a plan needs a different format rather than better wording
 
-**Done when:** the runner emits two different verdicts for two seats on P4.
+Keep their returns structured and short. The scorer returns one scorecard per seat; the judge compares them without re-scoring; the greenlight agent creates a replacement plan and checks it against the same audience criteria.
 
-> *Stuck?* → **"Write a runner that scores one article against every seat in THE-COUNCIL.md and prints one scorecard per seat as JSON."**
+## 5 · Run the first review
 
----
+Start with P4, the executive summary:
 
-## Attack surfaces
+```powershell
+pwsh ./run.ps1 -Piece P4-exec-summary
+```
 
-### Step 5 — Attack surface: NARROW
+The runner loads every seated audience, runs deterministic checks, asks the scorer for one scorecard per audience, then asks the judge to compare them.
 
-**Cut each seat's criteria to what protects its outcome.** A criterion that scores the same for any audience belongs in `solo-rubric.json`, not a seat.
+With the supplied pack, Retail and Compliance should reach different conclusions for good reasons. Every score needs a direct quote, source, and confidence rating. If information is missing, the score must say so rather than guess.
 
-| ❌ Weak seat criterion | ✅ Strong seat criterion |
-|---|---|
-| Is it clear? | Can a floor associate reach the first action in two lines, standing up? |
-| Is it accurate? | Does every claim carry the source Compliance needs to survive an audit? |
-
-The test: swap the seat's card — would the score change? If no, cut it.
-
-::: info Why this matters
-Liu et al. (2023): models attend worst to instructions buried in a long context. A bloated seat drops its load-bearing constraint. Keep each seat lean.
+::: warning Leave the baseline alone
+`the-greenlight/reference/solo-rubric.json` is the control. Editing it changes the before-and-after comparison. Read its output contract, but never change it.
 :::
 
-### Step 6 — Attack surface: EVIDENCE
+## 6 · Add checks the model should not do
 
-**Every score carries a quote, a source, and a confidence.** `Low` confidence on a fatal criterion → that seat abstains. At this altitude, EVIDENCE applies to code too: your deterministic checks (Step 10) cite the card line that justifies each threshold.
+Look for countable requirements on an audience seat, then add checks in `checks.py`. Examples:
 
-| ❌ Assertion | ✅ Backed |
-|---|---|
-| Wrong for Retail | *"Step 4 requires admin rights. Card: 'cannot get admin rights, ever.' Confidence: High."* |
-| Unsupported claim | *"No source found. UNVERIFIED. Confidence: Low → abstain."* |
+- a time budget becomes a reading-time check
+- an action the audience cannot perform becomes a blocked-prerequisite check
+- a phone-reading constraint becomes a table-width check
 
-**Done when:** a score is marked `UNVERIFIED` or a seat abstains rather than guessing.
+Test every check against content that should fail. The starter already gives you two working examples and a `check_table_width` TODO; do not build a framework.
 
-::: info Why this matters
-Madaan et al. (2023): self-critique improves quality only when the critique is separate from the first answer. Your judge (Step 10) and your greenlight re-score (Step 11) are that separation.
-:::
+<details>
+<summary>Stuck writing the Python?</summary>
 
-### Step 7 — Attack surface: CONFLICT — the debate
+Once you have chosen the countable requirement, ask Copilot in VS Code to write the check in `checks.py`. Include the audience seat and the content that should fail, and tell it to read the threshold from the seat data rather than hardcode it.
 
-**A council that agrees with itself is one reviewer in costumes.** Make two seats argue the same passage, each with a quote. Check the piece the solo critic scored **highest** — does any seat still object?
+For example: **“Add the `check_table_width` TODO in `checks.py`. Read the maximum columns from the Retail seat data, not a fixed number. Then run it against the five supplied articles and show me one failure.”**
+</details>
 
-**Done when:** the runner surfaces one real conflict — the same passage, scored opposite, defended both ways.
-
----
-
-## Steps 8 and 9 — the two shared beats
-
-Around halfway the room stops for a **team checkpoint**, and at ~55 minutes a **twist** lands. Both are on the [Scenario 2 brief](/scenarios/scenario-2#two-beats-everyone-hits).
-
----
-
-## Step 10 — A judge, plus the checks a model shouldn't be doing
-
-**Goal:** a **judge step** that diffs the per-seat scorecards and reports conflicts and coverage — and **deterministic checks** alongside the model's judgement, because code catches what's countable and the model catches what's contextual.
-
-Write your checks into `the-greenlight-starter/`. Look for anything countable on a seat's card, and draw the threshold **from the card, not a hardcoded value**:
-
-- Retail *"6 minutes, standing"* → reading-time check per seat's time budget
-- Retail *"can't install anything"* → instructions containing "install"
-- Retail *"on a phone"* → tables wider than N columns
-
-**You are not expected to hand-write Python.** Describe each check to Copilot or Scout — **but test it against content you know should fail.**
-
-**Done when:** at least two articles fail at least one deterministic check tied to a seat's card.
-
-> *Stuck?* → **"Find two countable things on the Retail card. Write a Python function for each that pulls its threshold from the card, and run them across the five articles."**
-
-### Step 11 — Greenlight: re-score the plan on the same rubric
+## 7 · Compare, plan, and re-score
 📘 [Add a guardrail / output check](/bricks/advanced-guardrail)
 
-**Goal:** for every seat that rejected a piece, generate the asset spec (the format call included), then **re-run that seat's same criteria** against it. An asset is greenlit only when the seat that rejected the original would now pass it. Add validation that fails the run when any score lacks a quote or a source.
+Have the judge identify a passage two audiences treat differently. Then use the greenlight agent to write a replacement plan for an audience the original does not serve. The answer can be a shorter guide, checklist, video, or another format.
 
-::: warning Over-building
-The guardrail is roughly ten lines. Do not build a framework. Remove the evidence from one score and the run should refuse to complete.
+Re-score that plan using the same audience criteria. It is ready only when the audience that needed the replacement would accept it. Add validation using `greenlightlib.py` so a score without a quote, source, or confidence fails the run.
+
+## 8 · Show the coverage
+
+Run the council across all five articles and every seated audience. Use `coverage_matrix` in `greenlightlib.py` to show which audiences each article serves and which it leaves behind.
+
+The goal is not to make every audience disagree. It is to make the system explicit about when one piece can serve several audiences and when it needs different treatment.
+
+## 9 · Gate the pull request
+📘 [Build a custom connector (MCP)](/bricks/advanced-mcp-connector) · [Add a guardrail / output check](/bricks/advanced-guardrail)
+
+Wire the council into a pull-request check. The check should fail when an audience is left unserved and pass when the coverage plan addresses that gap.
+
+The council can propose a change, but it cannot merge its own work. A human approves the result.
+
+**Done when:** a pull request fails because the plan does not serve an audience, then passes after the fix.
+
+---
+
+## Show it off
+
+60–90 seconds. Show:
+
+- [ ] Two seats as data, with distinct outcomes and anchored criteria
+- [ ] The runner producing a separate, evidence-backed scorecard for each seat
+- [ ] One deterministic check that draws its threshold from an audience seat
+- [ ] One passage where the judge explains why audiences agree or disagree
+- [ ] A replacement plan re-scored by the audience it is meant to serve
+- [ ] The coverage matrix and the pull-request check
+
+::: tip What to aim for in the demo
+Lead with the moment one piece of content looks right for one audience and wrong for another. That is the thing a single generic review cannot show.
 :::
 
-**Done when:** a proposed asset is re-scored to a pass by the seat that rejected the original — and the run fails if a score has no evidence.
+## Stuck?
 
-### Step 12 — The coverage matrix
+| What you're seeing | What to do |
+| --- | --- |
+| The runner says there are not enough seats | Copy `retail.example.json` to `retail.json`, then add a second seat with a different outcome. |
+| The runner cannot find the article or rubric | Keep `the-greenlight-starter`, `the-greenlight`, and `data-pack` side by side. |
+| Every audience gets the same result | Make the audience criteria more specific to their outcomes. |
+| A score has no evidence | Require a quote, source, and confidence; `greenlightlib.validate_scorecard` checks this. |
+| A check always uses the same number | Move the threshold into the audience seat and pass it to the check. |
+| Copilot asks too many approvals | Use `--allow-all-tools` only in your own exercise repo. |
 
-**Goal:** one command scores all five articles × all seats and emits a ranked **coverage dashboard** — who's served, who's abandoned, per piece.
+---
 
-**Done when:** the matrix shows at least one piece that serves one audience and abandons another.
-
-### Step 13 — Gate the pull request 🏁
-📘 [Build a custom connector (MCP)](/bricks/advanced-mcp-connector) · 📘 [Add a guardrail / output check](/bricks/advanced-guardrail)
-
-**Goal:** the council runs on a PR and turns it **red until every seated audience clears its threshold** (or the plan covers them). Deterministic checks and seat verdicts both run.
-
-**The thing that wrote the plan is not allowed to merge it.** The council proposes; the gate blocks; a human approves.
-
-**Done when a pull request fails because the plan left an audience unserved — and passes after the fix.**
-
-## 4 · The data
-
-| Folder | What's in it |
-|---|---|
-| `the-greenlight/` | The skill + `reference/solo-rubric.json` (the control). You edit `THE-COUNCIL.md`. |
-| `the-greenlight-starter/` | Where your council runner and deterministic checks live |
-| `data-pack/content/` | The five articles |
-| `data-pack/audience-cards/` | Four example audience cards — the seats |
-| `data-pack/style-guide/` | The house style rules |
-
-## 5 · Demo checklist
-
-- [ ] Your seats as data — each with an outcome and anchored criteria
-- [ ] Where a seat came from — the parts Work IQ found, and the parts you corrected
-- [ ] A criterion you cut during NARROW because it would score the same for any audience
-- [ ] The runner emitting per-seat scorecards — REJECT for Retail, SHIP for Compliance on P4
-- [ ] A score marked `UNVERIFIED` or a seat abstaining on low confidence
-- [ ] **The twist** — what happened when one audience's constraint changed
-- [ ] Two deterministic checks that pull thresholds from a seat's card and fail on content they should
-- [ ] The judge diffing the seats — one conflict, same passage, opposite verdicts
-- [ ] The greenlight re-score — an asset passing the seat that rejected its original
-- [ ] The coverage matrix — one piece served for one audience, abandoned for another
-- [ ] The PR check turning red because an audience was left unserved, green after the fix
-
-[← Back to start](/) · [Scenario 2 brief](/scenarios/scenario-2)
+[← Back to start](/) · [What this scenario is about](/scenarios/scenario-2)

@@ -1,179 +1,191 @@
 ---
-title: 🟢 Base · Copilot-Crafted — Scenario 2
+title: The Greenlight — Cowork
 ---
 
-# 🟢 Base · Copilot-Crafted
-## Scenario 2 — The Greenlight
+# 🟢 The Greenlight
 
-**Building with:** Microsoft 365 Copilot + Cowork
+::: warning 🚧 Work in progress
+Scenario 2 is still being built and tested. Steps, downloads, and screenshots may change before the event.
+:::
+**You'll build this in Cowork. No code, and no experience needed.**
 
-## 1 · Your mission
+## What you're solving
 
-Seat a **council of audiences** in Cowork, convene it over a piece of content so the verdicts split, then have the room decide what to build — and set it to run on its own.
+Copilot can write clear, accurate content. What it cannot know by itself is whether that content works for the people who need to use it.
 
-## 2 · What you'll demonstrate
+A long, formal write-up might be exactly what a compliance team needs and completely impractical for a busy store manager. One general-purpose review can miss that difference. Today you build a way to review the same content from more than one audience's point of view.
 
-See the required functions for this altitude on the [🟢 Base · Copilot-Crafted level page](/levels/base/).
+## What you'll walk out with
+
+A reusable council that reviews content for the audiences it is meant to serve.
+
+| What you make | What it does |
+| --- | --- |
+| **Your council** | Names at least two audiences, what each needs, and what the content must do for them. |
+| **A review** | Shows what each audience thinks, with a quote from the content and the reason behind it. |
+| **A plan** | Turns any gaps into practical changes or a new format. |
+
+The council lives in `THE-COUNCIL.md`. You can edit it, reuse it on new content, and add real audiences later.
+
+## Before you start
+
+Grab these now — you'll need them in the first few minutes.
+
+<div class="lab-grid lab-grid-2">
+	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/the-greenlight.zip" download>
+		<span class="lab-card-emoji">🟢</span>
+		<span class="lab-card-title">Greenlight</span>
+		<span class="lab-card-desc">The Cowork skill that guides the review and creates the council file.</span>
+		<span class="lab-card-cta">Download .zip →</span>
+	</a>
+	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/greenlight-data-pack.zip" download>
+		<span class="lab-card-emoji">🗂️</span>
+		<span class="lab-card-title">Content pack</span>
+		<span class="lab-card-desc">Five articles, four audience profiles, and a style guide. Use it instead of real work data.</span>
+		<span class="lab-card-cta">Download .zip →</span>
+	</a>
+</div>
+
+::: tip Want every step spelled out?
+This page gets you through the build. There are also **[full step-by-step guides](/bricks/)** covering Cowork skills, data sources, and scheduled runs.
+:::
 
 ---
 
-## 3 · Assembly map — snap these blocks together
+## 1 · Install Greenlight
 
-Steps 1–4 give you a room that disagrees in about 35 minutes. Everything after that makes it sharp.
+1. Unzip `the-greenlight.zip` and find `SKILL.md` inside the `the-greenlight` folder.
+2. Open Microsoft 365 Copilot and select the **Cowork** tab.
+3. In the left menu, select **Customize**, then **Skills**.
+4. Select the arrow next to **Add**, then **Upload skill**.
+5. Choose the `SKILL.md` file you downloaded.
 
-### Step 1 — Get the files into Cowork
+Start a **new** Cowork session after the upload. Cowork only looks for new skills when a session begins.
+
+::: warning Two things that will trip you up
+**Upload `SKILL.md`, not the zip.** Cowork does not use zipped skill uploads.
+
+**Keep the content pack nearby.** You will attach its files to the Cowork session in the next step; Cowork cannot see them until you do.
+:::
+
+### Step 2 — Choose the content to review
 📘 [Connect Cowork to a data source](/bricks/cowork-connect-source)
 
-**Goal:** the **`the-greenlight`** skill is installed, and Cowork can read all five articles, the four example audience cards, and the style guide from the **`data-pack`** folder.
+Use the provided content pack unless your team has a suitable piece of real content and an audience profile in mind.
 
-### Step 2 — See what the solo critic says
-*~5 minutes*
+Add the `data-pack` folder to a new Cowork session and then ask Greenlight to help you review the **executive summary (P4)**.
 
-**Goal:** you've seen the solo critic's verdict on all five articles. Say **`run the solo critic`**.
+## 3 · See the starting point
 
-| Piece | Solo verdict |
+Ask Greenlight to show you the solo critic's review of the five articles. This is your **baseline**: one general-purpose reviewer looking at each article as if it has one typical reader.
+
+| Piece | Starting review |
 |---|---|
-| Training unit (P1) | SHIP |
-| How-to (P2) | REVISE |
-| Blog post (P3) | REVISE |
-| **Executive summary (P4)** | **REVISE** |
-| Quickstart (P5) | SHIP |
+| Training unit (P1) | Ready to use |
+| How-to (P2) | Needs work |
+| Blog post (P3) | Needs work |
+| **Executive summary (P4)** | **Needs work** |
+| Quickstart (P5) | Ready to use |
 
-**Look hard at P4** — a governance whitepaper filed against a store lead. The solo critic sees competent prose and says "tidy it up." It holds **one implied reader**, so it can't say *"reject it for Retail, ship it for Compliance"* at once. That blind spot is your whole opening.
+Look at P4. It is a careful, formal summary. The solo critic sees solid writing and says it needs a few changes. Your council will show why it can work for one audience and fail another.
 
-::: info Why this matters
-Zheng et al. (2023) documented that models acting as judges carry consistent biases — they favour longer, fluent answers. A single reviewer averages every audience into one reader who exists nowhere, and passes content aimed at the wrong person.
+> **Do not edit the solo critic.** It is the “before” you compare your council against.
+
+## 4 · Add two audiences
+
+Ask Greenlight to help you add two audiences to `THE-COUNCIL.md`. For each one, write:
+
+- the result that audience needs from the content
+- one or two things the content must do to get them there
+
+Start with **Retail** and **Compliance** from the content pack. Retail needs practical steps it can use during a busy day. Compliance needs enough detail to make a responsible decision. They are a useful pair because they need different things from the same content.
+
+::: tip Use a real audience when it helps
+Cowork can use Work IQ to help you draft a profile from the work information you already have access to. Treat that as a first draft and correct it with what you know about the audience.
 :::
 
-### Step 3 — Seat two audiences who want *different things*
-*~12 minutes*
+## 5 · Review the executive summary
 
-**Goal:** two seats in `THE-COUNCIL.md`, each with a one-line **outcome** and at least one criterion that protects it. Say **`seat the council`**.
+Ask Greenlight to review P4 for both audiences. It should show a separate result for each one.
 
-Start with the sharpest clash in the pack: **🛒 Retail** (outcome: *adopts it without a training session — there won't be one*) versus **🏦 Compliance** (outcome: *a rollout decision that survives an audit*). If you serve a real audience, seat that instead — Cowork will use Work IQ to fill what it can before asking you.
+| Audience | What a useful result might show |
+| --- | --- |
+| Retail | The article is too formal or too long to help someone who needs immediate steps. |
+| Compliance | The same detail may be useful because it explains the decision and its limits. |
 
-> *Stuck?* → **"Using the-greenlight skill, seat two audiences whose outcomes clash — Retail and Compliance — and nominate one outcome-protecting criterion each."**
+For the supplied pack, you should see a meaningful difference between the two audiences. With your own content, agreement can be valid too — as long as the council explains why.
 
-### Step 4 — Convene the room and watch it split
-*~15 minutes*
+## 6 · Make the audiences specific
 
-**Goal:** every seat scores P4 against its own criteria. Say **`convene the room over P4`**.
+Read the items in `THE-COUNCIL.md`. Each one should protect a real audience need, not general writing quality.
 
-| Seat | Solo critic | The council | Why |
-|---|---|---|---|
-| 🛒 Retail | REVISE | **REJECT** | *"quote from the content"* — a page of governance prose they'll never finish standing up |
-| 🏦 Compliance | REVISE | **SHIP** | *"quote from the content"* — exactly the audit rigor they need |
+| Too general | Specific to an audience |
+| --- | --- |
+| Is it clear? | Can a floor associate find the first action in two lines? |
+| Is it accurate? | Does each important claim include the source a compliance reviewer needs? |
 
-> **You never edit the solo critic.** It's the one-verdict "before" you're measuring against. Everything you build lives in `THE-COUNCIL.md`.
+Ask yourself: **would this give the same result for every audience?** If so, remove it or make it more specific.
 
-**Done when:** the same piece gets two different verdicts from two seats.
+## 7 · Check the evidence
 
-> *Stuck?* → **"Convene both seats over P4 and show me where their verdicts disagree, with a quote from each."**
+Every result needs three things:
 
----
+- a **quote** from the content
+- a **source** for the audience need, such as its profile or the style guide
+- a **confidence** rating
 
-## Attack surfaces
+If the information is missing, say so. Do not make the council guess.
 
-### Step 5 — Attack surface: NARROW
-
-**Cut each seat's criteria to what actually protects its outcome.**
-
-A criterion that would score the same for any audience belongs to the solo critic, not a seat.
-
-| ❌ Weak seat criterion | ✅ Strong seat criterion |
-|---|---|
-| Is it clear? | Can a floor associate reach the first action in two lines, standing up? |
-| Is it accurate? | Does every claim carry the source Compliance needs to survive an audit? |
-
-The test on every criterion: **swap the seat's card — would the score change?** If no, cut it or sharpen it.
-
-::: info Why this matters
-Liu et al. (2023) found models attend worst to instructions buried in the middle of a long context — the "lost in the middle" effect. A bloated seat doesn't disagree more sharply; it makes its one load-bearing constraint easier to skip.
+::: tip A useful prompt
+Ask Greenlight: “For each audience result, show the exact quote, the audience need behind it, and how confident you are.”
 :::
 
-### Step 6 — Attack surface: EVIDENCE
+## 8 · Compare, plan, and test again
 
-**Every score carries three things: a quote, a source, and a confidence.**
+Put the two audience reviews side by side. Find one passage that works for one audience and not the other. Discuss why, using the quote and the audience profiles rather than personal preference.
 
-- **Quote** — the exact text that caused the score. No quote, no score.
-- **Source** — what makes the seat right: a line from its audience card, a style rule, a doc link — or `UNVERIFIED`.
-- **Confidence** — `High` / `Medium` / `Low`. `Low` on a fatal criterion → that seat **abstains** rather than forcing a verdict.
+For an audience the original does not serve, ask Greenlight what to make instead. The answer might be a shorter guide, a checklist, a video, or a different format altogether. Then ask it to review that plan for the same audience. The plan is ready only when the audience it is meant to serve would accept it.
 
-| ❌ Assertion | ✅ Backed |
-|---|---|
-| Wrong for Retail | *"Step 4 requires admin rights. Card: 'cannot get admin rights, ever.' Confidence: High."* |
-| Unsupported claim | *"No source found for this figure. UNVERIFIED — searched the style guide and the card. Confidence: Low → abstain."* |
+Try the council on another article from the pack, or add another audience. The goal is not to make every audience disagree; it is to understand when the same content can serve several audiences and when it needs different treatment. If your two audiences always agree, return to step 6 and make their needs more specific.
 
-**Done when:** at least one seat abstains or marks a score `UNVERIFIED` rather than guessing.
-
-> *Stuck?* → **"For every score each seat gives, add the quote, the source, and a confidence. Have any seat with Low confidence on a fatal criterion abstain."**
-
-### Step 7 — Attack surface: CONFLICT — the debate
-
-**A council that agrees with itself is one reviewer in costumes.** The point is the disagreement.
-
-Take the passage two seats scored in opposite directions and make them argue it — each from its card, each with a quote. Then take the piece the solo critic scored **highest** and check whether any seat still objects. If every seat agrees on everything, your seats aren't judging for different outcomes.
-
-**Done when:** the room surfaces one real conflict — the same passage, scored opposite, defended both ways.
-
----
-
-## Steps 8 and 9 — the two shared beats
-
-Around halfway the room stops for a **team checkpoint**, and at ~55 minutes a **twist** lands. Both are on the [Scenario 2 brief](/scenarios/scenario-2#two-beats-everyone-hits).
-
----
-
-## Step 10 — Sweep every audience
-
-**Goal:** all five articles convened against all four example seats — around 20 verdicts in one table.
-
-| Article | 🛒 Retail | 🏦 Compliance | 🏥 Health | 🏭 Manufacturing |
-|---|:---:|:---:|:---:|:---:|
-| Executive summary (P4) | REJECT | **SHIP** | REVISE | REVISE |
-| Blog post (P3) | REVISE | REVISE | REVISE | **REJECT** |
-
-**Done when:** the same article gets two different verdicts for two different seats.
-
-### Step 11 — Greenlight: turn the failures into a plan
-
-**Goal:** for every seat that rejected a piece, the room proposes an **asset** — what to build, in what format — then re-scores it. Say **`greenlight it`**.
-
-The failures *are* the spec. If Retail failed P4 on modality, the note isn't "trim paragraph three" — it's *"this shouldn't be a document; Retail needs a 90-second video."* Then re-read that asset's spec against Retail's **same criteria** to confirm it would now pass.
-
-**Done when:** at least one proposal changes the *format*, not just the words — and the seat that rejected the original would pass its replacement.
-
-### Step 12 — Set the council loose 🏁
+## 9 · Make it run without you
 📘 [Re-run a skill on new inputs](/bricks/cowork-rerun-skill)
 
-**Goal:** the council convenes on a schedule against a folder of content, and the transformation plan lands in a chat or channel you set up for this.
+Once you trust the council, ask Cowork to run it on a schedule against a folder of draft content and send you the results.
 
-::: warning Approval matters
-Route the digest to a chat or channel you created for this exercise — not a live team channel, and not an individual colleague. Nothing the council writes should reach a real author without you reading it first.
+::: warning Nothing sends on its own
+Route results to a chat or channel you created for this exercise. Read the council's suggestions before sharing them with a real author.
 :::
 
-**Done when it convenes tomorrow morning without you.**
+**Done when:** you receive a scheduled review without having to ask for it.
 
-## 4 · The data
+---
 
-| Folder | What's in it |
-|---|---|
-| `the-greenlight/` | The skill. Install this first. You only edit `THE-COUNCIL.md`. |
-| `data-pack/content/` | The five articles |
-| `data-pack/audience-cards/` | Four example audience cards — the seats |
-| `data-pack/style-guide/` | The house style rules |
+## Show it off
 
-## 5 · Demo checklist
+60–90 seconds. Show:
 
-- [ ] Your two seats, and the one-line outcome each one defends
-- [ ] Where a seat came from — the parts Work IQ found, and the parts you corrected
-- [ ] A criterion you cut during NARROW because it would score the same for any audience
-- [ ] P4 convened — REJECT for Retail, SHIP for Compliance, with a quote from each
-- [ ] A score where a seat abstained or marked `UNVERIFIED` instead of guessing
-- [ ] The debate — one passage two seats scored opposite, argued both ways
-- [ ] **The twist** — what happened when one audience's constraint changed
-- [ ] The cross-audience sweep — one article, two different verdicts
-- [ ] A transformation plan that changes a *format*, not just words
-- [ ] The scheduled convene arriving without you asking for it
+- [ ] The two audiences you added and what each needs
+- [ ] One audience requirement you made more specific
+- [ ] P4 reviewed from both points of view, with a quote for each
+- [ ] One place the audiences agreed or disagreed, and why
+- [ ] Your plan for content that did not serve an audience
+- [ ] Your scheduled review, if you set one up
 
-[← Back to start](/) · [Scenario 2 brief](/scenarios/scenario-2)
+::: tip What to aim for in the demo
+Show the moment the council changed your understanding of the content. That is more convincing than showing every feature.
+:::
+
+## Stuck?
+
+| What you're seeing | What to do |
+| --- | --- |
+| Cowork ignores Greenlight | Start a **new** Cowork session — skills load at the start. |
+| Upload seemed to do nothing | Upload `SKILL.md`, not the zip. |
+| Cowork cannot see the articles | Attach the content-pack files to the session. |
+| Both audiences give the same answer | Make their needs more specific, then review again. |
+| A result has no evidence | Ask for the exact quote, source, and confidence. |
+
+---
+
+[← Back to start](/) · [What this scenario is about](/scenarios/scenario-2)
