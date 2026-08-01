@@ -1,36 +1,33 @@
 # The Greenlight
 
-## Content Health — a council of audiences decides what to build
+## Review content from several audiences at once, then decide what to make
 
 **2 hours. Any tool. Start here.**
 
-> **This is the alternate take on Scenario 2.** Where *The Critic* teaches **one** reviewer to know **one** audience, **The Greenlight** seats a **room of audiences** who each nominate what matters, argue it out with evidence, and decide what to build. Same slide-9 need — *persona-lization* — a different, orchestration-forward technique. **Pick one. They are separate.**
+> **This is the alternate take on Scenario 2.** *The Critic* teaches one reviewer to know one audience well. *The Greenlight* seats a small room of audiences who each judge the same content for their own goal, back it up with evidence, and decide what to build. Same idea — making content work for real, specific people — a different, more orchestration-heavy approach. Pick one; they're separate.
 
 ---
 
 ## The problem
 
-Our agents write content. Our evals check whether it's accurate, clear, and roughly the right level.
+Our agents write content, and our checks tell us whether it's accurate, clear, and roughly the right level. They pass almost everything.
 
-**They pass almost everything.**
-
-They review with **one implied reader** — a competent generalist who never exists. So *"good content for the wrong room"* sails through, and a governance whitepaper filed against a store lead comes back **REVISE** instead of *"this person will never read this."*
+That's because they review with one imagined reader — a capable generalist who doesn't really exist. So "good content aimed at the wrong reader" sails through. A detailed governance write-up handed to a busy store lead comes back "revise" instead of "this person will never read this."
 
 ## Your job
 
-> **One reviewer has one point of view. Real content serves many audiences at once.**
-> **Seat the room. Let every audience score it against *their* outcome — and decide, together, what to build.**
+> One reviewer keeps one reader in mind. Real content has to work for several at once.
+> Seat the room. Let every audience judge it for *their* goal — and decide together what to build.
 
-You are building a **greenlight council**: two or more audience personas who each **nominate the criteria that matter to them**, back every claim with **evidence, a source, and a confidence level**, **debate** where they disagree, and end by proposing a **transformation plan** — the assets, in the formats each audience would actually finish.
+You're building a small council: two or more audiences who each say what they need, back every point with a quote and a reason, talk through where they disagree, and end with a plan — what to make, in the format each audience would actually use.
 
 ---
 
 ## The one idea that makes it work
 
-> ### A criterion is a bar that protects one audience's outcome.
-> Not *"is this good?"* — **"will this get *my* people to the outcome they need?"** Every seat is judging the same subject **for a different result.** That's why the room disagrees. That disagreement is the product.
+> Each thing an audience cares about protects *that audience's goal* — not "is this good?" but "will this get *my* people where they need to go?"
 
-A solo reviewer has one "for what." A council has one per seat. **Same subject, many verdicts** — the thing a single evaluator structurally cannot produce.
+Every audience judges the same content for a different result. That's why the room disagrees, and the disagreement is the useful part. One reviewer has one goal in mind; a room has one per audience — same content, several verdicts.
 
 ---
 
@@ -38,9 +35,9 @@ A solo reviewer has one "for what." A council has one per seat. **Same subject, 
 
 | | |
 |:---:|---|
-| **1** | **Pick your path** → [`facilitator/PICK-YOUR-PATH.md`](facilitator/PICK-YOUR-PATH.md) — 🟢 Cowork · 🔵 Copilot Studio · 🟣 Scout + VS Code |
-| **2** | **Install the skill** → drop the [`the-greenlight/`](.) folder into your tool |
-| **3** | **Say** *"seat the council"* — or ask *"what do I do next?"* if you'd rather be walked through it |
+| **1** | **Pick your track** → [`facilitator/PICK-YOUR-PATH.md`](facilitator/PICK-YOUR-PATH.md) — 🟢 Cowork · 🔵 Microsoft Scout · 🟣 VS Code |
+| **2** | **Install the skill** → add the [`the-greenlight/`](.) folder to your tool |
+| **3** | **Say** *"seat the council"* — or ask *"what do I do next?"* to be walked through it |
 
 ---
 
@@ -48,71 +45,78 @@ A solo reviewer has one "for what." A council has one per seat. **Same subject, 
 
 | | |
 |---|---|
-| `SKILL.md` | **The skill.** Routes to a mode, carries the rules. One install. |
-| **`THE-COUNCIL.md`** | 🎬 **Your work product.** The roster and every nominated criterion lands here. ✏️ **you edit this** |
-| `reference/next.md` | 🧭 What to do now, whether you're done, what to submit |
-| `reference/seat.md` | 🎤 Seats a persona and helps it nominate criteria |
-| `reference/solo.md` | ⚖️ The solo critic — one implied reader, already scored. ⛔ **never edit** |
-| `reference/convene.md` | 🎞️ Pass 1 — the whole council scores a subject, then debates |
-| `reference/greenlight.md` | 🟢 Pass 2 — the transformation plan, then the re-score that greenlights it |
-| `../data-pack/` | 5 content pieces · 4 example audience cards · style guide |
+| `SKILL.md` | The skill. Points to the right file and carries the rules. One install. |
+| **`THE-COUNCIL.md`** | **Your file to edit.** Your audiences and what each one needs live here. |
+| `reference/next.md` | What to do now, whether you're done, what to hand in |
+| `reference/seat.md` | Add an audience and what it cares about |
+| `reference/solo.md` | The solo critic — one imagined reader, already scored. Don't edit it. |
+| `reference/convene.md` | The review — every audience judges a piece, then you compare |
+| `reference/greenlight.md` | The plan — turn the gaps into what to make, then check it |
+| `../data-pack/` | 5 content pieces · 4 example audience profiles · style guide |
 
 ---
 
-## The loop
+## The rhythm
 
-**Seat a persona → nominate its criteria → `convene` over the subject → watch the room disagree → `greenlight` the plan → re-run.**
+**Add an audience → say what it needs → review a piece → see where the room disagrees → plan what to make → run it again.**
 
-Every version ends with a re-run. You never know whether the room got sharper until you convene it again.
+Every round ends with another review. You won't know if the room got sharper until you run it again.
 
 ---
 
-## Two passes, one rubric
+## How it fits together
 
 ```
-        THE SUBJECT  (a blog · a doc · a video script · P1–P5)
+        THE PIECE  (a blog · a doc · a video script · P1–P5)
                           │
         ┌─────────────────┼─────────────────┐
-     🛒 Retail         🏦 Finance         🏭 Mfg      ← each seat nominates criteria
-     (adoption,        (audit-safe,       (plant-floor,     for its OWN outcome
-      no training)      zero guess)        offline)
+     🛒 Retail         🏦 Compliance      🏭 Manufacturing   ← each audience judges it
+     (use it, no        (would hold up      (reaches the           for its OWN goal
+      training)          in an audit)        line, offline)
                           │
-        ═════ PASS 1 · convene · score the SUBJECT ═════
-     🛒 REJECT         🏦 SHIP            🏭 REJECT   ← same piece, different verdicts
+        ═════ Review · every audience scores the piece ═════
+     🛒 Reject         🏦 Ship            🏭 Reject   ← same piece, different verdicts
                           │
-                the failures are the spec
+                 the gaps tell you what to make
                           ▼
-              THE TRANSFORMATION PLAN
-     "Retail → 90-sec video · Mfg → laminated job aid ·
-      Finance → already served, ship as-is"
+                     THE PLAN
+     "Retail → 90-sec video · Manufacturing → one-page job aid ·
+      Compliance → already served, keep as-is"
                           ▼
-        ═════ PASS 2 · greenlight · score the PLAN ═════
-     🛒 PASS   🏭 PASS   →   ✅ GREENLIT
+        ═════ Check · every audience scores the plan ═════
+     🛒 Pass   🏭 Pass   →   ✅ Good to go
 ```
 
-**Pass 1 scores the subject. Pass 2 scores the plan. Same criteria both times.** The council that vetoes a piece is the council that clears its replacement — that's what *greenlight* means.
+The review scores the piece; the check scores the plan — same needs both times. The room that turns a piece down is the room that clears its replacement.
 
 ---
 
 ## What you're building toward
 
-| | Feature | | Feature |
-|:---:|---|:---:|---|
-| **v1** | Seat the council | **v5** | Swap the roster |
-| **v2** | The debate | **v6** | Coverage matrix |
-| **v3** | Transformation plan | **v7** | The greenlight gate |
-| **v4** | Automate | | |
+The first three are the assignment, the same for everyone:
 
-**v1–v3 is the assignment.** Where you finish depends on your path — the skill knows which, and will tell you.
+| | |
+|:---:|---|
+| **1** | Seat the council |
+| **2** | The review with receipts |
+| **3** | The plan |
 
-> **Higher isn't automatically more points.** A three-seat council with sharp, evidence-backed criteria in Cowork beats a generic multi-agent harness in VS Code. The judging is built to make that happen.
+After that, each track climbs its own way:
+
+- **Base (Cowork):** the review runs on its own.
+- **Builder (Scout):** a live dashboard, easy to run, then extra features.
+- **Advanced (VS Code):** unattended runs, full coverage, and a ship gate.
+
+The skill will tell you where your track finishes.
+
+> **Higher isn't automatically better.** A sharp three-audience council in Cowork beats a generic multi-agent setup in VS Code. The judging is built to reward that.
 
 ---
 
-## The self-check
+## The check worth repeating
 
-> **If every seat returns the same verdict on every piece, you don't have a council — you have one reviewer wearing four hats.** Either the seats aren't judging for different outcomes, or the criteria aren't reading the cards.
+> If every audience reaches the same verdict on every piece, you don't have a room — you have one reviewer wearing different hats. Either the audiences aren't judging for different goals, or their needs aren't reading the profiles.
 
 ---
 
-*All content in `../data-pack/` is fictional and contains deliberate defects. See [`../data-pack/DISCLAIMER.md`](../data-pack/DISCLAIMER.md).*
+*Everything in `../data-pack/` is made up and contains deliberate flaws. See [`../data-pack/DISCLAIMER.md`](../data-pack/DISCLAIMER.md).*

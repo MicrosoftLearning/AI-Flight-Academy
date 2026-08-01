@@ -9,27 +9,24 @@ Scenario 2 is still being built and tested. Steps, downloads, and screenshots ma
 :::
 **You'll build this in code — VS Code, GitHub Copilot, and the Copilot CLI.**
 
-You get the contracts and the plumbing. You write the council.
+You start from a working council dashboard. You make it yours, prove the code catches what the model can't, then pick a path to take it further.
+
+![Screenshot of the starter project - The Greenlight Dashboard.](./media/the-greenlight-dashboard.png)
 
 ## What you're solving
 
-One review is not enough when different audiences need different things from the same content. A formal explainer might help a compliance officer make a careful decision and still be unusable for a store manager who needs one practical action during a busy shift.
+A single review from a single perspective is not enough when different audiences need so many different things from the same content. A formal explainer might help a compliance officer make a careful decision and still be unusable for a store manager who needs one practical action during a busy shift.
 
-This track solves a second problem too: a model is good at contextual judgement, but not simple, repeatable checks. Your system combines both. The model explains whether content works for an audience; code checks what is countable, such as reading time or a blocked prerequisite.
+This track solves a second problem too: a model is good at contextual judgement, but it can also make things up. Your council pairs both — the model explains whether content works for an audience, and code checks what is countable, so a hallucinated verdict gets caught.
 
 ## What your team will have built
 
-One system, not a collection of prompts. Every audience uses the same content and output contract.
-
 | Piece | What it does |
 | --- | --- |
-| **The seats** | JSON files describing each audience, its outcome, and its criteria. |
-| **The scorer** | Produces one evidence-backed scorecard for each audience. |
-| **The judge** | Compares scorecards and reports conflicts and coverage. |
-| **The checks** | Tests countable requirements using thresholds from the audience data. |
-| **The gate** | Blocks a pull request until the plan serves every audience you chose to support. |
-
-The solo critic remains unchanged. It is the baseline that gives one verdict; your council shows who the content serves and who it does not.
+| **The board** (provided) | A live dashboard: drop content, every seated audience reviews it, and a plan reconvenes until every audience is served. |
+| **Your council** | Your real audiences as `council/*.json` — the room reviewing your content. |
+| **The checks** | Deterministic checks (`checks.py`) shown next to each verdict — code catching what the model might wave through. |
+| **Your path** | Either a **live seat editor** on the board, or a **PR submission** that ships the greenlit plan for approval. |
 
 ## Before you start
 
@@ -39,7 +36,7 @@ Download all three and unzip them into one folder. Keep `the-greenlight-starter`
 	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/the-greenlight-starter.zip" download>
 		<span class="lab-card-emoji">📦</span>
 		<span class="lab-card-title">Starter repo</span>
-		<span class="lab-card-desc">Runner, two working checks, an example seat, three agent contracts, and a VS Code workspace.</span>
+		<span class="lab-card-desc">The dashboard, a seated council, the checks, and the MCP server — with the build paths left as TODOs.</span>
 		<span class="lab-card-cta">Download .zip →</span>
 	</a>
 	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/the-greenlight.zip" download>
@@ -56,145 +53,258 @@ Download all three and unzip them into one folder. Keep `the-greenlight-starter`
 	</a>
 </div>
 
-Open `the-greenlight.code-workspace` in VS Code. Then open Copilot Chat and confirm you can switch to **Agent** mode. If your organisation has disabled it, use the Copilot CLI instead; the starter's runner calls it directly.
+You'll need three tools installed. On Windows the fastest way is `winget` from a privileged (Administrator) terminal:
 
-::: tip Want every step spelled out?
-This page gets you through the build. There are also **[full step-by-step guides](/bricks/)** for Scout setup, Work IQ, guardrails, and connectors.
-:::
+```powershell
+winget install OpenJS.NodeJS.LTS     # Node — runs the board
+winget install Python.Python.3.12    # Python 3 — runs the checks
+# reopen your terminal so Node is on PATH, then:
+npm install -g @github/copilot       # GitHub Copilot CLI — the board calls it
+```
+
+Prefer installers? Grab [Node.js](https://nodejs.org/), [Python 3](https://www.python.org/downloads/), and the [GitHub Copilot CLI](https://www.npmjs.com/package/@github/copilot). Then run `copilot` once and sign in.
+
+**Node** is required to start the board; **Python 3** is only needed once you wire the checks in Step 4 (until then the board runs and the checks show "not wired"). Open the **the-greenlight-starter** project in VS Code.
 
 ---
 
-## 1 · Run the starter checks
+## The starting point
 
-Open a terminal in `the-greenlight-starter` and run:
+Now that you have the project downloaded, it's time to get started on the build.
 
-```powershell
-python checks.py
-python checks.py --piece P4-exec-summary
-```
+::: tip The board points out what to build
+Anywhere the board shows an amber **“not wired”** marker — the checks column, **Submit to hack repo**, and **Manage council seats** — that's a build path. The two buttons even offer a **📋 Copy prompt for Copilot Chat** that hands you a ready-made prompt to build the feature.
+:::
 
-Two checks already work: reading time and blocked prerequisites. One is left as a TODO. Read `checks.py` before changing it.
+### 1 · Start the board
 
-The important rule is already built in: thresholds come from an audience seat, not from code. A reading-time check gets its time budget from the audience data. Do not hardcode a universal number.
-
-## 2 · Split the work
-
-Four people can work in parallel. Fewer teams can combine roles; larger teams can add testing and demo ownership.
-
-| Who | Owns | Starts in |
-| --- | --- | --- |
-| 1 | Two or more audience seats, with distinct outcomes and anchored criteria | `council/` |
-| 2 | The per-seat scorer and its deterministic checks | `seat-scorer.agent.md`, `checks.py` |
-| 3 | The judge that compares scorecards and reports coverage | `judge.agent.md` |
-| 4 | The replacement-plan re-score and the PR gate | `greenlight.agent.md`, `run.ps1` |
-
-All roles share the solo critic's output contract. Read it; never edit it.
-
-## 3 · Add the audience seats
-📘 [Ground on live data with Work IQ](/bricks/advanced-work-iq)
-
-Copy the example Retail seat so it becomes a real seat:
+Open a terminal and navigate to the folder where you extracted your zip files.
 
 ```powershell
-Copy-Item council/retail.example.json council/retail.json
+cd the-greenlight-starter/dashboard
+npm install
+npm start
 ```
 
-Then add at least one more audience with a different outcome, such as Compliance. Each seat needs an outcome and criteria with 0–3 anchors. A criterion must be specific to that audience: “is it clear?” is too general; “can a floor associate find the first action in two lines?” is useful.
+Open `http://localhost:4173`. The startup line confirms your Copilot CLI is found and signed in. If it isn't, install it and sign in, then restart.
 
-Use Work IQ to help draft a real internal audience profile when that helps. Treat it as a first draft and correct it with people who know that audience.
+### 2 · Convene the council
 
-## 4 · Finish the three agents
+Drop the executive summary (`data-pack/content/P4-exec-summary.md`) onto the board. Watch the seats split on the same document — Retail rejects it outright as an unusable wall of prose, while Compliance ships it: that same control detail is exactly the audit rigor they need. Each verdict comes with a quote and a confidence. Iterate on a remediation plan until the entire council greenlights it, then copy your plan to work on later.
 
-The starter includes a scorer, judge, and greenlight agent. Their input and output contracts are already written. Each has one design decision left for you:
-
-- decide how a failed deterministic check affects a scorer's judgement
-- decide how the judge treats an audience that needs revision
-- decide when a plan needs a different format rather than better wording
-
-Keep their returns structured and short. The scorer returns one scorecard per seat; the judge compares them without re-scoring; the greenlight agent creates a replacement plan and checks it against the same audience criteria.
-
-## 5 · Run the first review
-
-Start with P4, the executive summary:
-
-```powershell
-pwsh ./run.ps1 -Piece P4-exec-summary
-```
-
-The runner loads every seated audience, runs deterministic checks, asks the scorer for one scorecard per audience, then asks the judge to compare them.
-
-With the supplied pack, Retail and Compliance should reach different conclusions for good reasons. Every score needs a direct quote, source, and confidence rating. If information is missing, the score must say so rather than guess.
+No code yet: this is the council working out of the box.
 
 ::: warning Leave the baseline alone
-`the-greenlight/reference/solo-rubric.json` is the control. Editing it changes the before-and-after comparison. Read its output contract, but never change it.
+`the-greenlight/reference/solo-rubric.json` is the control — the one-verdict "before." Read it; never edit it.
 :::
 
-## 6 · Add checks the model should not do
+### 3 · Seat an audience that bites
 
-Look for countable requirements on an audience seat, then add checks in `checks.py`. Examples:
+A **seat** is one audience, written as a small JSON file in `council/`. It names who they are, what they need from the content (`outcome`), and the specific bars the content has to clear for *them* (`criteria`).
 
-- a time budget becomes a reading-time check
-- an action the audience cannot perform becomes a blocked-prerequisite check
-- a phone-reading constraint becomes a table-width check
+Four sample seats ship. Add one for an audience *you* write for. The trick is the criteria: write bars that are true for **your** audience but not for everyone — that's what makes your seat *disagree* with another on the same piece. (A bar any audience would score the same is just "good writing," and that belongs to the solo critic, not a seat.)
 
-Test every check against content that should fail. The starter already gives you two working examples and a `check_table_width` TODO; do not build a framework.
+A seat looks like this — trimmed here; `council/retail.example.json` is the full shape:
 
-<details>
-<summary>Stuck writing the Python?</summary>
+```json
+{
+  "seat_id": "execs",
+  "audience": "📊 Leadership reader",
+  "outcome": "Can skim it in two minutes and know what decision it's asking for.",
+  "criteria": [
+    {
+      "id": "decision_up_front",
+      "the_bar": "The ask is in the first two sentences, not buried on page two.",
+      "fatal": true,
+      "anchors": { "0": "No clear ask anywhere", "3": "Opens with the decision and why now" }
+    }
+  ]
+}
+```
 
-Once you have chosen the countable requirement, ask Copilot in VS Code to write the check in `checks.py`. Include the audience seat and the content that should fail, and tell it to read the threshold from the seat data rather than hardcode it.
+- **`outcome`** — what this reader needs the content to *do* for them.
+- **`criteria`** — the bars that protect that outcome. `fatal: true` means a score of 0 on it forces a Reject, whatever the average.
+- **`anchors`** — what a 0 versus a 3 looks like, so anyone would score it the same way.
 
-For example: **“Add the `check_table_width` TODO in `checks.py`. Read the maximum columns from the Retail seat data, not a fixed number. Then run it against the five supplied articles and show me one failure.”**
-</details>
+You don't have to write this by hand. Open **Copilot**, **Cowork**, or **Scout** — something that knows *you* — and give it `retail.example.json` so it can match the shape — and ask it:
 
-## 7 · Compare, plan, and re-score
-📘 [Add a guardrail / output check](/bricks/advanced-guardrail)
+> Create `my-audience.json` for _[your audience]_, in the same shape as `retail.example.json` — an `outcome` and two `criteria` with anchors, one marked `fatal`.
 
-Have the judge identify a passage two audiences treat differently. Then use the greenlight agent to write a replacement plan for an audience the original does not serve. The answer can be a shorter guide, checklist, video, or another format.
+Place the new audience file in the `/council` folder. Pick any name that isn't already in `council/` so you add a seat instead of overwriting one, then hit **Reload council** on the board.
 
-Re-score that plan using the same audience criteria. It is ready only when the audience that needed the replacement would accept it. Add validation using `greenlightlib.py` so a score without a quote, source, or confidence fails the run.
+**Done when:** your seat returns a different verdict than another seat on the same piece.
 
-## 8 · Show the coverage
+### 4 · Wire the deterministic checks
 
-Run the council across all five articles and every seated audience. Use `coverage_matrix` in `greenlightlib.py` to show which audiences each article serves and which it leaves behind.
+The model judges context, **but** it can also make things up. Deterministic checks are the countable half — reading time, blocked steps, table width — things that *code* can prove. This step lights up a **check result on each seat, right next to the model's verdict**. Two parts: connect the checks to the board, then add one of your own.
 
-The goal is not to make every audience disagree. It is to make the system explicit about when one piece can serve several audiences and when it needs different treatment.
+**a) Connect the checks — `check_content.py`**
 
-## 9 · Gate the pull request
-📘 [Build a custom connector (MCP)](/bricks/advanced-mcp-connector) · [Add a guardrail / output check](/bricks/advanced-guardrail)
+The board runs this file and reads the JSON it prints. It's a stub right now. It has to load the seats, run each seat's wired checks against the dropped content, and print this shape:
 
-Wire the council into a pull-request check. The check should fail when an audience is left unserved and pass when the coverage plan addresses that gap.
+```json
+{
+  "seats": [
+    {
+      "seat_id": "retail",
+      "audience": "🛒 Retail Store Operations Lead",
+      "checks": [
+        { "criterion": "actionable_standing_up", "check": "check_reading_time",
+          "passed": false, "detail": "1240 words is about 6.2 min (budget 6 min)" }
+      ]
+    }
+  ]
+}
+```
 
-The council can propose a change, but it cannot merge its own work. A human approves the result.
+`greenlightlib` already loads the seats and runs the checks — you're mostly reshaping its output:
 
-**Done when:** a pull request fails because the plan does not serve an audience, then passes after the fix.
+```python
+import greenlightlib as g
+from pathlib import Path
+
+def check_file(content_path):
+    text = Path(content_path).read_text(encoding="utf-8")
+    seats = []
+    for seat in g.load_seats():                       # reads council/*.json
+        results = g.run_checks_for_seat(seat, text)   # runs the wired checks
+        seats.append({
+            "seat_id":  seat["seat_id"],
+            "audience": seat["audience"],
+            "checks": [
+                {"criterion": r["criterion"], "check": r["check"],
+                 "passed": r["passed"], "detail": r["detail"]}
+                for r in results
+            ],
+        })
+    return {"seats": seats}
+```
+
+The stub's docstring has the exact contract and the `print(...)` wrapper that hands this to the board.
+
+**b) Add a check of your own — `checks.py`**
+
+A check is just a function: it takes the content and a threshold **from the seat's card**, and returns `passed` plus a one-line `detail`. `check_reading_time` is the pattern to copy:
+
+```python
+def check_reading_time(text, minutes_budget, wpm=200):
+    words = _word_count(text)
+    minutes = round(words / wpm, 1)
+    return {
+        "passed": minutes <= minutes_budget,
+        "detail": f"{words} words is about {minutes} min (budget {minutes_budget} min)",
+    }
+```
+
+Finish the `check_table_width` TODO the same way — count each markdown table's columns and fail any wider than `max_cols` (which comes from the card, never hardcoded). Then wire it onto an audience by adding it to a criterion's `checks` in that seat's `council/*.json`:
+
+```json
+"checks": [ { "fn": "check_table_width", "args": { "max_cols": 4 } } ]
+```
+
+Reload the board and the new check shows up next to that seat's verdict.
+
+Stuck on either half? **Open GitHub Copilot Chat in VS Code** and build it together — it can see `greenlightlib.py`, `checks.py`, and `check_content.py`, so point it at the stub's docstring or the `check_table_width` TODO and let it draft the code with you.
+
+**Done when:** you drop a piece and a code-caught FAIL shows next to a model verdict.
 
 ---
+
+## Pick a path
+
+You've got a working, checked council seated with your own audiences. Now take it further. **Completing either path — A or B — is your finish line.**
+
+- **Path A is front-end** (a UI in the browser — JS and a little Node).
+- **Path B is back-end** (Node, git, and the `gh` CLI). Both are scaffolded, and the board hands you a one-click Copilot prompt for each.
+
+Pick the one that matches how you like to build; the bonus is for teams who want to push further.
+
+<PathChooser
+  a-emoji="🪑"
+  a-title="Path A · Edit the council from the board"
+  a-desc="Build a seat editor in the browser — add, edit, and remove audiences live, no hand-editing JSON. Front-end (JS + a little Node)."
+  b-emoji="🏁"
+  b-title="Path B · Ship it as a PR"
+  b-desc="Turn a greenlit plan into a governed pull request into the hack submission repo. The council proposes; a human approves. Back-end (Node, git, gh)."
+>
+
+<template #pathA>
+
+### Path A — edit the council from the board
+
+Right now, seating an audience means hand-editing `council/*.json`. This path builds a small **seat editor** into the board so anyone can add, edit, and remove audiences live.
+
+There are two pieces. The **endpoints** are the small part — sanitize the id, then write (or delete) the seat file:
+
+```js
+// dashboard/server.js — POST /api/council/seat (stubbed)
+const id = String(req.body.seat_id).replace(/[^a-z0-9-_]/gi, "");   // stay inside the folder
+fs.writeFileSync(path.join(COUNCIL_DIR, `${id}.json`), JSON.stringify(req.body, null, 2));
+```
+
+The **editor UI** is the real work — a form for the seat shape (outcome, thresholds, a list of criteria) that POSTs to those endpoints. Don't hand-build it: click **✎ Manage council seats** on the board for a one-click Copilot prompt that scaffolds the whole dialog, then reload.
+
+**Done when:** you add a new audience from the browser and it reviews the next piece.
+
+</template>
+
+<template #pathB>
+
+### Path B — ship the plan as a pull request
+
+A greenlit plan should land somewhere real. This path wires the board's **🏁 Submit** button to open a pull request into the hack submission repo — the council proposes, a human approves (never auto-merge).
+
+A green plan already holds the drafted assets and a coverage summary; assemble them and open the PR with `gh`:
+
+```js
+// dashboard/server.js — POST /api/plan/:planId/submit (stubbed)
+const assets = plan.items.filter(i => i.status === "make_new");   // the drafted replacements
+// ...write each asset to a branch, use composePlanMarkdown(plan) as the PR body...
+spawn(GH_BIN, ["pr", "create", "--repo", SUBMISSION_REPO, "--base", SUBMISSION_BASE,
+               "--title", title, "--body-file", bodyPath]);
+```
+
+`SUBMISSION_REPO` is a placeholder — keep it safe: only push when a real repo is configured, otherwise write the ready-to-push bundle. Click **🏁 Submit** on a green plan for a one-click Copilot prompt to build it.
+
+**Done when:** a green plan opens a PR (or writes the bundle) into the submission repo, with the coverage summary as the description.
+
+</template>
+
+</PathChooser>
+
+---
+
+## Bonus — make the council callable by other agents (MCP)
+
+The board is one surface. An **MCP server** exposes the council as tools so your *other* agents — Cowork, Scout, a VS Code chat agent — can convene it too. The starter ships `mcp_server.py` with the thin tools (`list_council`, `run_checks`, `solo_baseline`) already working and two left as TODOs.
+
+- **Run it:** `python mcp_server.py` (stdio) or `python mcp_server.py --http`, then call `list_council` / `run_checks` from an MCP client to prove the plumbing with no model needed.
+- **Implement `convene(content_path)`** (score every seat) and **`greenlight(review)`** (plan, then re-score) — the tips point to the same Copilot-CLI pattern the board uses in `dashboard/server.js`.
+- **Wire it into Cowork or Scout** and convene your council from *another* agent.
 
 ## Show it off
 
 60–90 seconds. Show:
 
-- [ ] Two seats as data, with distinct outcomes and anchored criteria
-- [ ] The runner producing a separate, evidence-backed scorecard for each seat
-- [ ] One deterministic check that draws its threshold from an audience seat
-- [ ] One passage where the judge explains why audiences agree or disagree
-- [ ] A replacement plan re-scored by the audience it is meant to serve
-- [ ] The coverage matrix and the pull-request check
+- [ ] Your own audiences seated on the board, with distinct goals
+- [ ] The council splitting on a piece — different verdicts, each with a quote
+- [ ] A code-caught check FAIL sitting next to a model verdict
+- [ ] Your path: adding a seat live from the board (A), or a green plan opening a PR (B)
+- [ ] Bonus: another agent convening your council through MCP
 
 ::: tip What to aim for in the demo
-Lead with the moment one piece of content looks right for one audience and wrong for another. That is the thing a single generic review cannot show.
+Lead with the moment one piece of content looks right for one audience and wrong for another — then show the code catching what the model missed.
 :::
 
 ## Stuck?
 
 | What you're seeing | What to do |
 | --- | --- |
-| The runner says there are not enough seats | Copy `retail.example.json` to `retail.json`, then add a second seat with a different outcome. |
-| The runner cannot find the article or rubric | Keep `the-greenlight-starter`, `the-greenlight`, and `data-pack` side by side. |
+| The board won't start | Check Node is installed and run `npm install` in `dashboard/` first. |
+| Startup says the CLI is missing | Install the GitHub Copilot CLI and sign in, then restart the server. |
+| The board can't find the council | Keep `the-greenlight-starter`, `the-greenlight`, and `data-pack` side by side. |
 | Every audience gets the same result | Make the audience criteria more specific to their outcomes. |
-| A score has no evidence | Require a quote, source, and confidence; `greenlightlib.validate_scorecard` checks this. |
-| A check always uses the same number | Move the threshold into the audience seat and pass it to the check. |
+| Seats show “code checks · not wired” | Expected until you implement `check_content.py` — that wires the deterministic checks onto each verdict. |
 | Copilot asks too many approvals | Use `--allow-all-tools` only in your own exercise repo. |
 
 ---

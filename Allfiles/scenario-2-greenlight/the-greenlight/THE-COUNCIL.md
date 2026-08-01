@@ -1,89 +1,72 @@
-# THE COUNCIL
+# The Council
 
-## 🎬 Your work product — the greenlight council
+This is the file you edit. Every audience you add and everything they care about lives here. The skill reads this file when it reviews a piece and when it builds a plan.
 
-**This is the only file you edit.** Every persona you seat and every criterion they nominate lands here. The skill reads this file when it runs `convene` and `greenlight`.
-
-> **Start empty on purpose.** At v0 the room has no seats. You add them. A council of one is just the solo critic with extra steps — seat at least two audiences who want *different outcomes*, or the room can't disagree.
+**It starts empty on purpose.** You add the audiences. Add at least two who want *different things* — if everyone wants the same thing, the room can't disagree, and the disagreement is the whole point.
 
 ---
 
 ## How this file works
 
-Each **seat** is one audience. Each seat **nominates criteria** — the bars that protect *its* outcome. When you `convene`, every seat scores the subject against its own criteria, and the room debates where they disagree.
+Each **seat** is one audience. Under each seat you list what that audience needs from the content. When you run a review, every audience judges the same piece by its own needs, and you get to see where they agree and where they don't.
 
-Copy the block below for each audience you seat. Fill it in with `seat`, or by hand.
-
----
-
-## SEAT TEMPLATE — copy this per audience
-
-```
-### 🎫 Seat: [emoji] [audience name]   ·   card: [AC-0X or "custom"]
-
-**The outcome this seat defends:**
-> [One sentence. What is this audience trying to accomplish? What does "it worked" look like FOR THEM?
->  e.g. "A store lead adopts Copilot summarization without a training session — because there won't be one."]
-
-**Nominated criteria** (at least one per seat; the sharpest seats have 2–3):
-
-- **id:** [short_snake_case]
-  **the bar:** [what must be true of the subject — phrased so a human could check it]
-  **protects the outcome:** [why this bar matters for THIS audience's result — the "for what"]
-  **anchors:**
-    - 0 (fail): [subject actively blocks the outcome]
-    - 1 (weak): [present but the audience will struggle]
-    - 2 (ok):   [acceptable for this audience]
-    - 3 (strong): [the subject nails it for this audience]
-  **fatal?:** [yes / no — if yes, a 0 here forces this seat to REJECT no matter the total]
-  **watch_for:** [the trap — where a lazy reviewer would wave this through]
-```
-
-> ### 🎯 The test every criterion must pass
-> **Would this criterion score the subject differently for a *different* audience?**
-> If no, it's a solo-critic criterion (accurate / clear / competent) — it belongs to `reference/solo.md`, not to a seat. Cut it or sharpen it until the answer is yes.
+Copy the block below for each audience. Fill it in yourself, or ask the skill to help.
 
 ---
 
-## THE ROSTER
+## Copy this for each audience
 
-<!-- Seat your audiences below. Delete this comment and the example once you have your own. -->
+```
+### Seat: [audience name]
 
-### 🎫 Seat: 🛒 Retail Store Operations Lead · card: AC-01   *(example — replace or keep)*
+Their goal: [One sentence — what does a win look like for this audience? Not "they liked it."
+             What did the content help them do or decide?]
 
-**The outcome this seat defends:**
-> A floor associate can act on this in one short standing read, and re-teach it to a supervisor — so it gets adopted without a training session that will never be scheduled.
+What they need from the content (one to three things):
 
-**Nominated criteria:**
+1. [short name for it]
+   - What good looks like: [what the content has to do, in a way someone could actually check]
+   - Why it matters to them: [what happens to their goal if the content gets this wrong]
+   - How to score it: 0 = doesn't do it · 1 = barely · 2 = good enough · 3 = nails it
+   - Deal-breaker? [yes / no — if yes, getting this wrong sinks the piece for this
+                    audience no matter what else is good]
+   - Easy to miss: [the trap — where a quick read would wave this through]
+```
 
-- **id:** actionable_standing_up
-  **the bar:** A distracted reader can reach the first useful action within the first two lines, and finish in under ~6 minutes standing up.
-  **protects the outcome:** If they can't act before the first interruption, they never come back to it — there is no session two.
-  **anchors:**
-    - 0 (fail): No action is reachable without reading a page of prose first, or the piece assumes a desk and uninterrupted time.
-    - 1 (weak): The action exists but is buried past the fold, or needs re-reading.
-    - 2 (ok): Action is near the top and followable standing up.
-    - 3 (strong): First two lines say what it does for them; steps are doable one-handed, interrupted, on a phone.
-  **fatal?:** yes
-  **watch_for:** Well-written long-form. Fluency is not brevity. A beautiful 800-word explainer fails this for a reason a competence check will never flag.
+> **A quick test for each need:** would it matter more to this audience than to a different one? If yes, keep it. If it's the same for everyone — accurate, clear, well-written — that's general writing quality. Leave it to the solo critic and find what's specific to *this* audience.
 
-- **id:** within_their_authority
-  **the bar:** Every instructed action is something this reader can actually do with the access they have.
-  **protects the outcome:** An instruction to open an admin center or install software isn't "advanced" for this reader — it's impossible, so the whole piece stops working.
-  **anchors:**
-    - 0 (fail): Requires admin rights, install, or budget the reader can never get.
-    - 1 (weak): Requires an approval or a person the reader has to go find.
-    - 2 (ok): Fully within the reader's standing access.
-    - 3 (strong): Explicitly names what needs the DM's sign-off and what doesn't.
-  **fatal?:** yes
-  **watch_for:** "Reach out to your IT admin." AC-01's store has no IT admin. That's a dead end, not a workaround.
+---
+
+## The roster
+
+<!-- Add your audiences below. Delete this example once you have your own. -->
+
+### Seat: 🛒 Retail store lead · profile: AC-01  (example — replace or keep)
+
+Their goal: Someone on the floor can act on this in one short, standing read and pass it on to a teammate — so it gets used without a training session that's never going to happen.
+
+What they need from the content:
+
+1. Usable on the floor
+   - What good looks like: the first useful action shows up in the first couple of lines, and the whole thing takes only a few minutes to read standing up.
+   - Why it matters to them: if they can't act before the first interruption, they don't come back to it.
+   - How to score it: 0 = a page of reading before any action · 3 = says what to do right away, doable one-handed on a phone.
+   - Deal-breaker? yes
+   - Easy to miss: a long, well-written explainer. Nicely written isn't the same as quick to act on.
+
+2. Things they can actually do
+   - What good looks like: every step is something this person can do with the access they already have.
+   - Why it matters to them: "open the admin center" isn't advanced for this reader — it's impossible, so the piece stops working.
+   - How to score it: 0 = needs admin rights or budget they'll never get · 3 = clearly separates what needs a manager's sign-off from what doesn't.
+   - Deal-breaker? yes
+   - Easy to miss: "ask your IT admin." This store doesn't have one.
 
 ---
 
 <!--
-Seat at least one MORE audience with a DIFFERENT outcome (e.g. 🏦 AC-02 Compliance, whose outcome is
-"a rollout that survives an audit" — for whom a governance whitepaper PASSES where it fails Retail).
-That contrast is the whole point. Convene the room and watch the verdicts split.
+Now add at least one MORE audience with a DIFFERENT goal — for example a Compliance lead
+whose goal is "a rollout that would hold up in an audit," and who might be fine with the very
+same detailed write-up that doesn't work for Retail. That contrast is the point.
 -->
 
 ---
@@ -92,17 +75,17 @@ That contrast is the whole point. Convene the room and watch the verdicts split.
 
 | Setting | Value | Notes |
 |---|---|---|
-| **Quorum for greenlight** | every seated audience clears its threshold | v7 gate uses this. Lower it deliberately if you want a "majority ships" room, and say why. |
-| **Verdict thresholds** | SHIP ≥ 2.5 · REVISE ≥ 1.5 · REJECT < 1.5 | Per seat. A fatal 0 forces REJECT for that seat regardless of total. |
-| **Abstention** | `Low` confidence on a fatal criterion → that seat escalates to a human, does not force a verdict | Guessing is how a false greenlight happens. |
+| When is a piece good to ship? | every audience clears its bar | Lower this on purpose if you want a "most audiences is enough" room — and say why. |
+| Verdicts | Ship (2.5+) · Revise (1.5+) · Reject (under 1.5) | Per audience. A deal-breaker scored 0 means Reject for that audience, whatever the average. |
+| When unsure | low confidence on a deal-breaker → ask a person, don't force a verdict | Guessing is how a bad "ship" slips through. |
 
 ---
 
-## Where this goes next
+## Where to go next
 
-| You have… | Do |
+| You have… | Do this |
 |---|---|
-| One seat | Seat another with a *different* outcome — say `seat the council` |
-| Two+ seats | `convene` over a piece (start with `P4-exec-summary`) and watch the room split |
-| A split verdict | `greenlight` — turn the failures into a transformation plan, then re-score it |
-| A working room | Ask `next` — how far can you climb on your path? |
+| One audience | Add another with a *different* goal — ask to seat the council. |
+| Two or more | Review a piece (start with the executive summary, P4) and see where they split. |
+| A split | Ask for a plan — turn what didn't work into something that would, then check it. |
+| A working room | Ask what's next for your track. |

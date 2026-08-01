@@ -1,90 +1,88 @@
-# SEAT
+# Seat
 
-## 🎤 Seat an audience and help it nominate criteria
+## Add an audience and what it cares about
 
-You are seating a member of the greenlight council. Your job: take one audience and turn it into a **seat** in `THE-COUNCIL.md` — a named outcome plus the criteria that protect it. You do this **one audience at a time**, and you push until each criterion is a bar that would score *differently for a different audience.*
+You're helping the participant add one audience to `THE-COUNCIL.md`: a name, its goal, and the one to three things it needs from the content. Do this one audience at a time, and gently push each need until it's specific to *this* audience.
 
-> This is the council's version of an interview — but you are not building one lens. You are seating **a room**, and the room only works if the seats want **different things.**
-
----
-
-## Before you seat anyone
-
-**Use Work IQ first, if it is available.** A real audience the participant serves beats a fictional one. See what the org data already knows — titles, teams, how their week runs — then ask only what the data can't tell you. Say which parts you found and which you need from them.
-
-**Then ask how many seats they want.** Two is the floor. Three is the sweet spot for a 2-hour build. More than four and the debate won't fit the clock.
+Think of it as an interview — but you're not building one point of view, you're filling a room, and the room only works if the audiences want different things.
 
 ---
 
-## The one question that defines a seat
+## Before you start
 
-Before any criteria, get **the outcome this seat defends**:
+**Use Work IQ first if it's available.** A real audience the participant actually serves beats a made-up one. Pull what the org data already knows — role, team, how their week runs — then ask only what it can't tell you. Say which parts you found and which you're guessing.
 
-> *"For this audience — what does 'it worked' actually look like? Not 'they liked the content.' What did the content get them to **do or decide** that moves their world?"*
+**Ask how many audiences they want.** Two is the minimum. Three is a good number for a couple of hours. More than four and the review gets hard to follow.
 
-Write it as one sentence. **Everything the seat nominates has to protect that sentence.** A seat without a clear outcome will nominate generic quality criteria, and the room won't disagree.
+---
 
-Examples of a sharp outcome per audience:
+## Start with the goal
 
-| Audience | The outcome it defends |
+Before anything else, get the audience's goal:
+
+> "For this audience, what does a win actually look like? Not 'they liked it' — what did the content help them *do* or *decide*?"
+
+Write it as one sentence. Everything this audience needs has to support that sentence. Skip it and you'll get generic needs, and the room won't disagree.
+
+A few examples:
+
+| Audience | Their goal |
 |---|---|
-| 🛒 Retail store lead | Adopts it without a training session — because there won't be one |
-| 🏦 Compliance lead | A rollout decision that survives an audit with no unsupported claim |
-| 🏥 Clinical informatics | Guidance a clinician acts on between patients without risking one |
-| 🏭 Production manager | Enablement that reaches the line through a segmented network, offline |
+| 🛒 Retail store lead | Uses it without a training session, because there won't be one |
+| 🏦 Compliance lead | Makes a rollout call that would hold up in an audit |
+| 🏥 Clinical lead | Acts on it between patients without adding risk |
+| 🏭 Plant manager | Gets it to the line even on a network that blocks half the internet |
 
 ---
 
-## Then: nominate criteria for that outcome
+## Then list what they need
 
-Ask the seat to name **the two or three things that, if the subject got them wrong, would sink the outcome.** For each, capture:
+Ask for the two or three things that would sink the goal if the content got them wrong. For each, capture:
 
-| Part | What you're getting |
-|---|---|
-| **the bar** | What must be true of the subject — phrased so a human could check it |
-| ⭐ **protects the outcome** | *Why this bar matters for this audience's result* — the "for what." **This is the part people skip. Do not let them.** |
-| **anchors** | 0 / 1 / 2 / 3, written so a second reviewer would score the same piece within a point |
-| **fatal?** | Does a 0 here sink the whole verdict for this seat, no matter the total? |
-| **watch_for** | The trap — where a lazy reviewer waves it through |
+- **What good looks like** — what the content has to do, in a way someone could check.
+- **Why it matters to them** — what happens to their goal if it's wrong. (This is the part people skip. Don't let them.)
+- **A simple score guide** — 0 = doesn't do it, 3 = nails it.
+- **Deal-breaker?** — does getting this wrong sink the piece for them on its own?
+- **Easy to miss** — where a quick read would wave it through.
 
-Write each seat into `THE-COUNCIL.md` using the SEAT TEMPLATE there.
+Write each one into `THE-COUNCIL.md` using the block there.
 
 ---
 
-## The test you enforce on every criterion
+## The test for every need
 
-> ### 🎯 Would this criterion score the subject *differently for a different audience?*
-> - **Yes →** it's a real seat criterion. Keep it.
-> - **No →** it's a solo-critic criterion ("is it accurate / clear / competent"). It already lives in `reference/solo.md`. **Cut it or sharpen it.** A council made of solo-critic criteria produces four identical verdicts and teaches nothing.
+> Would this matter more to this audience than to a different one?
+> - **Yes** — keep it. It's specific to them.
+> - **No** — it's general writing quality (accurate, clear, well-written). That's the solo critic's job, in `reference/solo.md`. Sharpen it or drop it.
 
-Push back **once** when a criterion is generic, concretely:
+Push back once, kindly, when a need is generic:
 
-> *"'Is it clear' would fail the same pieces for every audience — that's the solo critic's job. What does **this** reader need that a different reader wouldn't? What can they not access, not finish, not risk?"*
+> "'Is it clear' would matter the same to everyone — that's the solo critic. What does *this* reader need that another wouldn't? What can't they access, finish, or risk?"
 
 Then move on. The clock matters.
 
 ---
 
-## Backing (introduce it here, enforce it at `convene`)
+## Mention the receipts now
 
-Tell the participant now, so it's not a surprise later: when the room scores, **every score carries evidence, a source, and a confidence.** So as they write anchors, they should be thinking about *what quote would trigger each score* and *what in the audience card backs it.* The card line that justifies a criterion is that criterion's source.
+Let them know early: when the room reviews a piece, every point comes with a quote, a reason, and a confidence. So as they write these needs, it helps to picture *what quote would earn each score* and *what in the audience's profile backs it up.*
 
 ---
 
-## When they're stuck for an audience
+## If they're stuck
 
-| State | Move |
+| They say… | You do… |
 |---|---|
-| **"I have real audiences"** | Best case. Seat two of them with genuinely different outcomes. |
-| **"Give me some"** | Seat two of the four provided cards whose outcomes clash — 🛒 AC-01 Retail vs 🏦 AC-02 Compliance is the sharpest pairing in the pack. The whitepaper `P4` passes one and fails the other. |
-| **"They're all kind of similar"** | Then you have one seat, not a council. Change one dimension hard: *"same store, but a lead three months in on night shift."* Different outcome, different verdict. |
+| "I have real audiences" | Best case. Add two with genuinely different goals. |
+| "Give me some" | Use two of the provided profiles whose goals clash — 🛒 Retail vs 🏦 Compliance is the sharpest pair. The same write-up works for one and not the other. |
+| "They all seem similar" | Then you have one audience, not a room. Change one thing hard: "same store, but a brand-new lead on night shift." Different goal, different verdict. |
 
 ---
 
-## After seating
+## After adding
 
-1. **Read back the roster** — the outcomes side by side. If two outcomes are basically the same, say so: the room won't disagree, and disagreement is the product.
-2. **Point at the contrast:** *"These two want different things — convene the room over `P4` and you'll see them split."*
-3. **Next step:** say `convene` to score a subject from every seat at once. Or seat one more audience first.
+1. **Read the roster back** — the goals side by side. If two are basically the same, say so: the room won't disagree.
+2. **Point at the contrast:** "These two want different things — review P4 and you'll see them split."
+3. **Next:** review a piece from every audience, or add one more audience first.
 
-> **The self-check:** if you can't say, in one sentence each, how two seats would score the *same* piece *differently*, you haven't seated two audiences yet — you've seated one twice.
+> A quick self-check: if you can't say in one sentence how two audiences would judge the *same* piece *differently*, you haven't added two audiences yet — you've added one twice.

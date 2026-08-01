@@ -37,12 +37,12 @@
 
 | | **🟢 BASE** | **🔵 BUILDER** | **🟣 ADVANCED** |
 |---|---|---|---|
-| **Build in** | Cowork | Copilot Studio | Scout · GitHub Copilot · VS Code |
-| **You'd say** | *"I use Copilot every day, I've never built anything with it."* | *"I've built a flow. I want something my team can reuse."* | *"Just let me have a repo."* |
+| **Build in** | Cowork | Microsoft Scout | VS Code · GitHub Copilot |
+| **You'd say** | *"I use Copilot every day, I've never built anything with it."* | *"I want to build something my team can reuse, without a repo."* | *"Just let me have a repo."* |
 | **Comfort with code** | None needed | Little to none | It's how you think |
-| **Finish line** | **v4 — Automate** | **v5 — Swap the roster** | **v7 — Gate** |
-| **The sentence you earn** | *"Paste a blog, the room tells us what to build and drops it in our channel."* | *"My teammate ran the council Monday with her own audiences."* | *"A PR went red because the plan left Manufacturing with nothing."* |
-| **What'll stop you** | The blank page — seating a second audience that truly disagrees | Instruction drift across seats | Yourself — building the harness, forgetting the seats must bite |
+| **Finish line** | **v4 — Automate** | **A runnable dashboard** | **v7 — Gate** |
+| **The sentence you earn** | *"Paste a blog, the room tells us what to build and drops it in our channel."* | *"We dropped a draft on the board and watched two audiences disagree on the spot."* | *"A PR went red because the plan left Manufacturing with nothing."* |
+| **What'll stop you** | The blank page — seating a second audience that truly disagrees | The board's setup on the day — Node and the CLI signed in | Yourself — building the harness, forgetting the seats must bite |
 | **Time to first result** | ~10 min | ~25 min | ~30 min |
 
 **Still not sure?** Start at Base. Once the council disagrees, rebuilding it one level up is fast — you already solved the hard part (the seats and their criteria).
@@ -51,15 +51,15 @@
 
 ## How the same rung looks in three tools
 
-| Rung | 🟢 **Cowork** | 🔵 **Copilot Studio** | 🟣 **Scout · VS Code** |
+| Rung | 🟢 **Cowork** | 🔵 **Microsoft Scout** | 🟣 **VS Code** |
 |---|---|---|---|
-| **v1 Seat** | Ask Cowork to voice 2–3 seats in turn from the cards, each written into `THE-COUNCIL.md` | Each seat a knowledge-grounded topic/agent | Parallel persona agents, structured per-seat scorecards |
-| **v2 Debate** | Seats "respond to what the others said"; you moderate; each cites quote + source + confidence | A synthesizer agent surfaces the conflicts | Orchestrator fans out; a judge agent diffs positions; abstain on low confidence |
-| **v3 Plan + greenlight** | The room agrees the plan; re-reads each asset's spec to confirm it clears | A Responder drafts asset stubs; the classifier re-scores | Pipeline emits the plan, generates outlines, re-runs the rubric |
-| **v4 Automate** | Scheduled convene → plan digest into Teams | Agent Flow on a trigger → Adaptive Card | Scheduled action or folder watcher |
-| **v5 Swap** | Export the skill; someone reseats the roster | Publish; someone reseats and runs | Push repo; clone + swap `THE-COUNCIL.md` |
-| **v6 Matrix** | Convene across the folder | Flow iterates the library | One command, all pieces × all seats, ranked |
-| **v7 Gate** | Scheduled convene flags before publish — a soft gate | Approval flow: nothing moves until every seat passes | PR check turns red until quorum |
+| **v1 Seat** | Ask Cowork to voice 2–3 seats in turn from the cards, each written into `THE-COUNCIL.md` | Seat the audiences in `THE-COUNCIL.md`; the skill runs in Scout | Parallel persona agents, structured per-seat scorecards |
+| **v2 Debate** | Seats "respond to what the others said"; you moderate; each cites quote + source + confidence | Convene the skill in Scout; the seats split, each with quote + source + confidence | Orchestrator fans out; a judge agent diffs positions; abstain on low confidence |
+| **v3 Plan + greenlight** | The room agrees the plan; re-reads each asset's spec to confirm it clears | The skill greenlights — a per-audience plan, re-scored | Pipeline emits the plan, generates outlines, re-runs the rubric |
+| **v4 Automate** | Scheduled convene → plan digest into Teams | A live dashboard (GitHub Copilot CLI backend) runs as a one-command app or scheduled task | Scheduled action or folder watcher |
+| **v5 Swap** | Export the skill; someone reseats the roster | Share the board; a teammate runs it and reseats the roster | Push repo; clone + swap `THE-COUNCIL.md` |
+| **v6 Matrix** | Convene across the folder | A coverage view on the board — every piece × every seat | One command, all pieces × all seats, ranked |
+| **v7 Gate** | Scheduled convene flags before publish — a soft gate | Approval step: nothing moves until every seat passes | PR check turns red until quorum |
 
 > **Capability is allowed to differ.** A Cowork council is three voices in one thread; a VS Code council is parallel agents with a judge and a hard gate. Both are honest answers to the same rung.
 
@@ -79,7 +79,7 @@
 |---|---|
 | **Job families** | Content developer · PM · marketing · learning designer · support lead · business ops |
 | **Your edge** | ⭐ **Knowing what different audiences actually need** — the expertise this council runs on |
-| **Never done** | Written a skill · opened Copilot Studio · touched a repo |
+| **Never done** | Written a skill · built an agent · touched a repo |
 
 ## The build — rung by rung
 | Rung | What you do | How you know it worked |
@@ -105,73 +105,73 @@
 
 ---
 
-# 🔵 BUILDER · Copilot Studio
+# 🔵 BUILDER · Microsoft Scout
 
 ## Pick this if
 | ✔ | |
 |:---:|---|
-| 1 | You've built a Power Automate flow, or clicked around Copilot Studio |
+| 1 | You've built an automation or an app before, or you want to |
 | 2 | You think about *who else needs this* before how to build it |
-| 3 | You want something you can send a link to |
+| 3 | You want something people can watch, not just read |
 
-## The build — rung by rung
-| Rung | What you do | How you know it worked |
+## The build — step by step
+| Step | What you do | How you know it worked |
 |:---:|---|---|
-| **v1** | Each seat a knowledge-grounded agent; audience cards + style guide as sources | Two agents score `P4` differently |
-| **v2** | A synthesizer agent reviews the seat scorecards and surfaces the conflicts | The synthesizer names a clash, not a compromise |
-| **v3** | A Responder drafts asset stubs; the classifier re-scores them | Output has format calls + a greenlight re-score |
-| **v4** | Agent Flow on a trigger → Adaptive Card into Teams | Fires unattended on new content |
-| **v5** 🏁 | Publish; someone reseats the roster with their audiences and runs it | A person who wasn't at the hack runs the council |
+| **1** | Import the skill, seat two audiences that disagree | Two seats, different goals |
+| **2** | Convene the council on `P4` in Scout | The seats split, each with a quote |
+| **3** | Ask Scout to build a live dashboard, with GitHub Copilot CLI running the skill behind it | You feed the board a piece and the seats light up |
+| **4** 🏁 | Make it a one-command app or a scheduled task | A teammate starts the board in one step |
+| **Bonus** | Add features to the board | Something new works on the board |
 
 ## Where it goes wrong
 | | |
 |---|---|
-| ⚠️ **Sticking point** | **Instruction drift across seats** — the agents blur into one voice |
-| 🧭 **Guide's move** | Keep each seat's outcome in its instructions as a hard rule. Test one piece early. State "quote + source + confidence, every score" as non-negotiable. |
+| ⚠️ **Sticking point** | **The board won't start** — Node, dependencies, or the CLI not signed in |
+| 🧭 **Guide's move** | Convene in the Scout conversation first, so the council is proven before any app. Then get the board up — and if it fights the machine, the review still stands. |
 
 ## Done
 | | |
 |---|---|
-| **Finish line** | **v5 — Swap the roster.** *"My teammate ran the council Monday with her own audiences."* |
-| 🎁 **The moment** | Watching someone reseat the room and get a different, correct set of verdicts |
+| **Finish line** | **A runnable dashboard.** *"We dropped a draft on the board and watched two audiences disagree on the spot."* |
+| 🎁 **The moment** | Dropping one piece on the board and seeing two seats light up in different colors |
 
-> ### ⚠️ This level is designed to lift out
-> If Copilot Studio comes out of the hack, nothing here is stranded — the rungs are tool-agnostic. Replacement path: "Cowork, deeper" (scheduled convenes + Graph tie-ins), same brief, finish at v5.
+> ### ⚠️ This level stays tool-agnostic
+> Copilot Studio is out; the Builder path now uses **Microsoft Scout** to build the board and **GitHub Copilot CLI** to run the council behind it. If the tools ever shift, the flow — seat, convene, visualize, run — still holds.
 
 ---
 
-# 🟣 ADVANCED · Scout · GitHub Copilot · VS Code
+# 🟣 ADVANCED · VS Code · GitHub Copilot
 
 ## Pick this if
 | ✔ | |
 |:---:|---|
 | 1 | You have VS Code open right now |
 | 2 | Your instinct on "score five pieces from four points of view" was *"fan out and collect"* |
-| 3 | You want the whole set ranked, with a gate |
+| 3 | You want a live board you can extend — then make it reusable or ship it |
 
-## The build — rung by rung
-| Rung | What you do | How you know it worked |
+## The build — shared spine, then a path
+| Step | What you do | How you know it worked |
 |:---:|---|---|
-| **v1** | `THE-COUNCIL.md` seats → a prompt that loads each seat's card + criteria | Per-seat scorecards disagree on `P4` |
-| **v2** | Orchestrator fans out to seat agents; a judge sub-agent diffs positions; abstain on low confidence | Scorecards show the same passage scored opposite, with sources |
-| **v3** | A generation step emits the plan + asset outlines; re-run the rubric | Greenlight re-score passes only when the rejecting seat would now pass |
-| **v4** | Scheduled action / folder watcher convenes unattended | Plan appears without a human trigger |
-| **v5** | Push the repo; someone clones, swaps the roster, runs it | Another person produces the council output from your code |
-| **v6** | One command: all pieces × all seats, ranked coverage dashboard | HTML/JSON dashboard of served vs. abandoned |
-| **v7** 🏁 | PR check turns red until every seated audience clears threshold | A PR carrying an under-serving plan is blocked |
+| **Board** | `npm start` the dashboard; drop `P4` and watch the seated council score it | Per-seat verdicts disagree on `P4` — REJECT-for-Retail + SHIP-for-Compliance |
+| **Seats** | Add the audiences you write for as `council/*.json`; reload the council | Your own seats appear on the board with distinct goals |
+| **Checks** | Implement `check_content.py` so a code-caught fail shows next to each model verdict | A red ✗ lands where the model waved something through |
+| **Path A · MCP** | Implement `convene`/`greenlight` in `mcp_server.py`; wire it into Cowork or Scout | Another agent convenes your council through the server |
+| **Path B · PR** 🏁 | Turn a greenlit plan into a pull request; a human approves | A PR carrying the plan opens for review |
+
+*Pick one path as your finish line. The bonus: edit the council from the board itself.*
 
 ## Where it goes wrong
 | | |
 |---|---|
-| ⚠️ **Sticking point** | **You** — a beautiful orchestration whose four seats return the same verdict |
-| **Why it matters** | distinct_seats (weight 3) + severity_discrimination (weight 4) = 35% of your score. No architecture catches the `P4` split if the seats don't bite. |
+| ⚠️ **Sticking point** | **You** — a working board whose four seats return the same verdict |
+| **Why it matters** | distinct_seats (weight 3) + severity_discrimination (weight 4) = 35% of your score. No board catches the `P4` split if the seats don't bite. |
 | 🧭 **Guide's move** | Interrupt at 20 min: *"name two seats and predict their verdicts on P4. If they match, stop building and fix the seats."* |
 
 ## Done
 | | |
 |---|---|
-| **Finish line** | **v7 — Gate.** *"A PR went red because the plan left Manufacturing with nothing."* |
-| **Bar** | A repo with a working gate · a ranked coverage dashboard · P4 = REJECT-for-Retail + SHIP-for-Compliance with quoted evidence |
+| **Finish line** | **Your path** — a council others can call (MCP), or a greenlit plan shipped as a PR. *"A PR went red because the plan left Manufacturing with nothing."* |
+| **Bar** | Your own seats on the board · a code-caught check FAIL next to a model verdict · P4 = REJECT-for-Retail + SHIP-for-Compliance with quoted evidence · one path taken |
 | 🎬 **Video bonus** | Skip ClipChamp — install **HyperFrames**, get an animated walkthrough with AI voiceover |
 
 ---

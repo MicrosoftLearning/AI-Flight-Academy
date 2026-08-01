@@ -71,6 +71,16 @@ const jobs = [
   {
     src: join(root, "Allfiles", "scenario-2-greenlight", "the-greenlight-starter"),
     zip: "the-greenlight-starter.zip",
+    // The dashboard's deps and runtime output are regenerated (npm install /
+    // at runtime), never shipped. Same for Python bytecode caches.
+    exclude: [
+      "dashboard/node_modules",
+      "dashboard/uploads",
+      "dashboard/runs",
+      "dashboard/plans",
+      "dashboard/submissions",
+      "__pycache__",
+    ],
   },
   {
     // Ships the skill without facilitator/ - that folder holds the grading

@@ -1,0 +1,6 @@
+# The Greenlight starter — Python dependencies.
+#   pip install -r requirements.txt
+#
+# Only the MCP server needs a third-party package; checks.py and greenlightlib.py
+# use the standard library only.
+mcp>=2.0.0,<3.0.0

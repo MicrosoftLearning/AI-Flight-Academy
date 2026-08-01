@@ -1,0 +1,37 @@
+{
+  "seat_id": "clinical",
+  "audience": "🏥 Clinical Informatics Manager",
+  "card": "AC-03",
+  "outcome": "Cut documentation burden with no path where PHI ends up where it shouldn't — and hand the care team something short enough they'll actually use it at the bedside.",
+  "thresholds": { "SHIP": 2.5, "REVISE": 1.5, "REJECT": 1.5 },
+  "criteria": [
+    {
+      "id": "phi_boundary_named",
+      "the_bar": "The piece names exactly what identifiable patient information must never be entered, and states the approved data flow.",
+      "protects_outcome": "'Paste the details in and Copilot summarizes' is a reportable breach here; content that never names what must not be pasted has failed this reader even if every sentence is true.",
+      "fatal": true,
+      "anchors": {
+        "0": "Gives an example that would contain PHI if a real person tried it.",
+        "1": "Says 'be careful with sensitive data' without naming what must never be entered.",
+        "2": "Names that identifiable patient information must not be entered.",
+        "3": "Names it, states the approved data flow, and says what happens during a downtime event."
+      },
+      "watch_for": "'Always verify AI output' offered as the safety control — they need to know what happens when someone doesn't.",
+      "checks": []
+    },
+    {
+      "id": "splits_for_the_bedside",
+      "the_bar": "There is a clinician-facing version the care team can absorb in under 90 seconds, separate from the deep version for the manager.",
+      "protects_outcome": "This reader is not the end of the chain; content that can't be split into something a clinician will absorb dies at their desk.",
+      "fatal": false,
+      "anchors": {
+        "0": "A single monolithic document that serves neither the manager nor the clinician.",
+        "1": "One document with a 'summary' that still needs several minutes.",
+        "2": "A short front and a deep back in one artifact.",
+        "3": "Two artifacts — the deep version for the manager and a 90-second bedside version for the care team."
+      },
+      "watch_for": "Twenty uninterrupted minutes assumed during a shift. It will not happen.",
+      "checks": []
+    }
+  ]
+}

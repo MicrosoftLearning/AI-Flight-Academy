@@ -5,8 +5,8 @@ Seats are DATA (council/*.json). This module loads them, runs the deterministic
 checks wired to each criterion, validates that every score carries evidence, and
 rolls per-seat scorecards into a coverage matrix.
 
-The MODEL does the scoring (see run.ps1 and .github/agents/). This is the countable
-half — the part a language model should not be doing.
+The MODEL does the scoring (the dashboard and mcp_server.py drive that). This is
+the countable half — the part a language model should not be doing.
 """
 
 from __future__ import annotations

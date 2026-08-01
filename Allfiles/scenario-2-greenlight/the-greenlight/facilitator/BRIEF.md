@@ -107,15 +107,15 @@ The features are the same whichever tool you're in. **How you build each one is 
 
 ### The same rung in three tools
 
-| | 🟢 **BASE** — Cowork | 🔵 **BUILDER** — Copilot Studio | 🟣 **ADVANCED** — Scout · VS Code |
+| | 🟢 **BASE** — Cowork | 🔵 **BUILDER** — Microsoft Scout | 🟣 **ADVANCED** — VS Code · GitHub Copilot |
 |---|---|---|---|
-| **v1 Seat** | Ask Cowork to voice 2–3 seats in turn from the cards, writing each into `THE-COUNCIL.md` | Each seat a knowledge-grounded topic/agent | Parallel persona agents emitting structured per-seat scorecards |
-| **v2 Debate** | The seats "respond to what the others said," you moderate; each cites a quote + source | A synthesizer agent reviews the seat scorecards and surfaces conflicts | Orchestrator fans out, a judge agent diffs positions, abstention on low confidence |
-| **v3 Plan + greenlight** | Room agrees the plan; re-reads each asset's spec to confirm it clears | A Responder agent drafts asset stubs; the classifier re-scores | Pipeline emits the plan, generates asset outlines, re-runs the rubric |
-| **v4 Automate** | Scheduled convene → plan digest into Teams | Agent Flow on a trigger → Adaptive Card | Scheduled action / folder watcher |
-| **v5 Swap** | Export the skill; someone reseats the roster | Publish; someone reseats and runs | Push repo; clone + swap `THE-COUNCIL.md` |
-| **v6 Matrix** | Convene across the folder | Flow iterates the library | One command, all pieces × all seats, ranked |
-| **v7 Gate** | Scheduled convene flags before publish — a soft gate | Approval flow: nothing moves until every seat passes | PR check turns red until quorum |
+| **v1 Seat** | Ask Cowork to voice 2–3 seats in turn from the cards, writing each into `THE-COUNCIL.md` | Seat the audiences in `THE-COUNCIL.md`; the skill runs in Scout | Parallel persona agents emitting structured per-seat scorecards |
+| **v2 Debate** | The seats "respond to what the others said," you moderate; each cites a quote + source | Convene the skill in Scout; the seats split, each with a quote + source | Orchestrator fans out, a judge agent diffs positions, abstention on low confidence |
+| **v3 Plan + greenlight** | Room agrees the plan; re-reads each asset's spec to confirm it clears | The skill greenlights — a per-audience plan, re-scored | Pipeline emits the plan, generates asset outlines, re-runs the rubric |
+| **v4 Automate** | Scheduled convene → plan digest into Teams | A live dashboard (GitHub Copilot CLI backend) runs as an app or scheduled task | Scheduled action / folder watcher |
+| **v5 Swap** | Export the skill; someone reseats the roster | Share the board; a teammate runs it and reseats the roster | Push repo; clone + swap `THE-COUNCIL.md` |
+| **v6 Matrix** | Convene across the folder | A coverage view on the board — every piece × every seat | One command, all pieces × all seats, ranked |
+| **v7 Gate** | Scheduled convene flags before publish — a soft gate | Approval step: nothing moves until every seat passes | PR check turns red until quorum |
 
 > **Capability is allowed to differ.** A Cowork council is three voices in one thread re-reading a plan; a VS Code council is parallel agents with a judge and a hard gate. Both are honest answers to the same rung.
 
@@ -124,7 +124,7 @@ The features are the same whichever tool you're in. **How you build each one is 
 | | Finish line | The sentence you get to say |
 |---|---|---|
 | 🟢 **Base** | v4 — automate | *"Paste a blog and the room tells us what to build, for whom, and drops it in our channel."* |
-| 🔵 **Builder** | v5 — swap the roster | *"My teammate ran the council Monday with her own audiences and I wasn't in the room."* |
+| 🔵 **Builder** | a runnable dashboard | *"We dropped a draft on the board and watched two audiences disagree on the spot."* |
 | 🟣 **Advanced** | v7 — the gate | *"A pull request went red because the plan left Manufacturing with nothing."* |
 
 **Reaching your path's finish line is shipping the assignment.** v1–v3 is the assignment at every level; everything above is the tail.
@@ -217,7 +217,7 @@ Full weights in `JUDGING-RUBRIC.json`.
 | # | |
 |:---:|---|
 | 1 | ⚠️ **Scheduled/triggered runs in a real attendee tenant.** v4 is Base's finish line. Prove it before instructions are written. |
-| 2 | **Copilot Studio's fate.** Three-path structure makes Studio a parallel tail, not a prerequisite. Remove it and the other two paths are untouched. |
+| 2 | **Builder tool.** Copilot Studio is out; the Builder path now uses **Microsoft Scout**. The three-path structure is unchanged — the rungs are tool-agnostic. |
 | 3 | **Team size.** 600 ÷ teams of what? Drives the clock and the seats-per-team guidance. |
 | 4 | **The Critic vs The Greenlight.** These are two takes on Scenario 2. Decide whether both ship (as a choice) or one is primary. |
 | 5 | **Cameron's intent** — confirm "persona-lization" is the slide-9 outcome, and that the orchestration-forward framing lands. |

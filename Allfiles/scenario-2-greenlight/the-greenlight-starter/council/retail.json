@@ -1,15 +1,11 @@
 {
-  "$comment": "One seat = one audience. This is the illustrative Retail seat — and the shape to copy. To add an audience, copy it to council/<your-audience>.json (a NEW name) and rewrite it for them, keeping a DIFFERENT outcome from the other seats so the room can disagree. THE #1 RULE: every criterion must be one that ANOTHER audience would score differently — a bar that scores the same for any reader is generic writing quality (the solo critic's job, not a seat's), so cut it. That disagreement is the entire point. Each field below carries its own note; when you ask Copilot or Cowork to draft a seat, give it the real audience and their constraints and keep every criterion tied to THIS audience's outcome. (All keys starting with '$' are comments — the loader ignores them.)",
   "seat_id": "retail",
-  "audience": "\ud83d\uded2 Retail Store Operations Lead",
+  "audience": "🛒 Retail Store Operations Lead",
   "card": "AC-01",
-  "$outcome_note": "outcome = the concrete result THIS audience needs from the content, in their world — not 'good content'. Write it as what changes for them when the piece works.",
   "outcome": "A floor associate can act on this in one short standing read, and re-teach it to a supervisor — so it gets adopted without a training session that will never be scheduled.",
-  "$thresholds_note": "Verdict bars for THIS seat, applied to the 0-3 average: SHIP = good enough to ship; REVISE sits below it; a fatal criterion scored 0 forces REJECT regardless of the average. A forgiving audience can lower SHIP (e.g. 2.0); a demanding one can raise it. The dashboard reads these per seat.",
   "thresholds": { "SHIP": 2.5, "REVISE": 1.5, "REJECT": 1.5 },
   "criteria": [
     {
-      "$comment": "A criterion = one bar that protects the outcome. 'the_bar' is the testable rule; 'protects_outcome' is why it matters for this reader; 'fatal': true means a 0 here forces REJECT whatever the average; 'anchors' define 0-3 concretely so two reviewers score alike; 'watch_for' is the plausible-looking failure that fools a generic reviewer; 'checks' wires a deterministic check (see checks.py) whose threshold comes from THIS card's args, never hardcoded.",
       "id": "actionable_standing_up",
       "the_bar": "A distracted reader reaches the first useful action in the first two lines and finishes in under ~6 minutes standing up.",
       "protects_outcome": "If they can't act before the first interruption, they never come back — there is no session two.",

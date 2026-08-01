@@ -24,7 +24,7 @@ In **Base**, the part you build is one file:
 
 - **`THE-COUNCIL.md`** — your council's audience profiles. For each one, write its **goal** and what the content must do to get them there.
 
-The provided skill reviews the content from each audience's point of view. Every judgement includes a **quote**, a **source**, and a **confidence** rating. Where audiences disagree, it shows the conflict side by side and proposes what to build instead. **Builder** and **Advanced** teams automate more of this same process.
+The provided skill reviews the content from each audience's point of view. Every judgement includes a **quote**, a **source**, and a **confidence** rating. Where audiences disagree, it shows the conflict side by side, proposes what to build instead, and helps you make it — down to the message to the person waiting on it. From there you can set the review to run on its own; **Builder** and **Advanced** teams take that further, up to a gate that blocks content until every audience is served.
 
 With the supplied pack, the same content should get **different verdicts from different audiences**. With your own content, the council should show whether audiences agree for good reasons or need different treatment. Every verdict points to the text and the audience need behind it. A replacement is ready only when the audience it serves would accept it.
 
@@ -52,7 +52,7 @@ Use:
 
 Use a real piece your team actually publishes — a help article, a launch post, a policy doc — and review it for audiences you actually serve.
 
-Pick this if you'd rather work with something real. Work IQ can draft an audience profile from the work signals you have access to; correct it with people who know that audience. It is available in Cowork on Base and Scout on Advanced. Keep data in your own tenant and out of shared spaces.
+Pick this if you'd rather work with something real. Work IQ can draft an audience profile from the work signals you have access to; correct it with people who know that audience. It is available in Cowork on Base and Scout on Builder. Keep data in your own tenant and out of shared spaces.
 
 ## Assembly maps
 
@@ -64,11 +64,11 @@ Use the building blocks for your altitude.
   3. [Produce a formatted output](/bricks/cowork-formatted-output)
   4. [Re-run a skill on new inputs](/bricks/cowork-rerun-skill)
 
-- **🔵 Builder:**
-  1. [Create an agent + solution](/bricks/studio-create-agent)
-  2. [Ground on a knowledge source](/bricks/studio-knowledge-grounding)
-  3. [Build two agents that hand off](/bricks/studio-multi-agent)
-  4. [Publish your agent](/bricks/studio-publish)
+- **🔵 Builder (Microsoft Scout):**
+  1. Import the Greenlight skill and seat your audiences
+  2. Convene the council on a piece and watch the verdicts split
+  3. Have Scout build a live dashboard, run by GitHub Copilot CLI
+  4. Make it a one-command app or a scheduled task
 
 - **🟣 Advanced:**
   1. [Advanced setup](/bricks/advanced-setup)
@@ -87,5 +87,5 @@ In Advanced, the team builds one system. Each person owns an audience reviewer, 
 Pick your altitude:
 
 - [🟢 Base · Cowork](/build/base-scenario-2)
-- [🔵 Builder · Copilot Studio](/build/builder-scenario-2)
-- [🟣 Advanced · Scout · VS Code](/build/advanced-scenario-2)
+- [🔵 Builder · Microsoft Scout](/build/builder-scenario-2)
+- [🟣 Advanced · VS Code · GitHub Copilot](/build/advanced-scenario-2)

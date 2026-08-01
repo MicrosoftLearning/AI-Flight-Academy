@@ -54,16 +54,15 @@ This page gets you through the build. There are also **[full step-by-step guides
 
 ## 1 · Install Greenlight
 
-1. Unzip `the-greenlight.zip` and find `SKILL.md` inside the `the-greenlight` folder.
-2. Open Microsoft 365 Copilot and select the **Cowork** tab.
-3. In the left menu, select **Customize**, then **Skills**.
-4. Select the arrow next to **Add**, then **Upload skill**.
-5. Choose the `SKILL.md` file you downloaded.
+1. Open Microsoft 365 Copilot and select the **Cowork** tab.
+2. In the left menu, select **Customize**, then **Skills**.
+3. Select the arrow next to **Add**, then **Upload skill**.
+4. Drag in the whole `the-greenlight.zip` file you downloaded.
 
 Start a **new** Cowork session after the upload. Cowork only looks for new skills when a session begins.
 
 ::: warning Two things that will trip you up
-**Upload `SKILL.md`, not the zip.** Cowork does not use zipped skill uploads.
+**Upload the whole `the-greenlight.zip`, not just `SKILL.md`.** The zip carries the reference files and `THE-COUNCIL.md` the skill needs; a lone `SKILL.md` cannot see them.
 
 **Keep the content pack nearby.** You will attach its files to the Cowork session in the next step; Cowork cannot see them until you do.
 :::
@@ -73,11 +72,11 @@ Start a **new** Cowork session after the upload. Cowork only looks for new skill
 
 Use the provided content pack unless your team has a suitable piece of real content and an audience profile in mind.
 
-Add the `data-pack` folder to a new Cowork session and then ask Greenlight to help you review the **executive summary (P4)**.
+Drag or upload the `data-pack` zip to a new Cowork session and then ask **Greenlight** to introduce itself.
 
 ## 3 · See the starting point
 
-Ask Greenlight to show you the solo critic's review of the five articles. This is your **baseline**: one general-purpose reviewer looking at each article as if it has one typical reader.
+Ask Greenlight to show you the **solo critic's** review of the five articles. This is your **baseline**: one general-purpose reviewer looking at each article as if it has one typical reader.
 
 | Piece | Starting review |
 |---|---|
@@ -101,10 +100,10 @@ Ask Greenlight to help you add two audiences to `THE-COUNCIL.md`. For each one, 
 Start with **Retail** and **Compliance** from the content pack. Retail needs practical steps it can use during a busy day. Compliance needs enough detail to make a responsible decision. They are a useful pair because they need different things from the same content.
 
 ::: tip Use a real audience when it helps
-Cowork can use Work IQ to help you draft a profile from the work information you already have access to. Treat that as a first draft and correct it with what you know about the audience.
+Cowork can use Work IQ to help you draft a profile from the work information you already have access to.  Build a profile on yourself or an audience you serve. Treat that as a first draft and correct it with what you know about the audience. Say - "Cowork - build an audience card about me from WorkIQ."
 :::
 
-## 5 · Review the executive summary
+## 5 · Convene the council
 
 Ask Greenlight to review P4 for both audiences. It should show a separate result for each one.
 
@@ -114,6 +113,10 @@ Ask Greenlight to review P4 for both audiences. It should show a separate result
 | Compliance | The same detail may be useful because it explains the decision and its limits. |
 
 For the supplied pack, you should see a meaningful difference between the two audiences. With your own content, agreement can be valid too — as long as the council explains why.
+
+::: tip Give it somethign real
+Attach a real document you're working on, point it to a Microsoft product announcement, video transcript, or training module.
+:::
 
 ## 6 · Make the audiences specific
 
@@ -140,24 +143,34 @@ If the information is missing, say so. Do not make the council guess.
 Ask Greenlight: “For each audience result, show the exact quote, the audience need behind it, and how confident you are.”
 :::
 
-## 8 · Compare, plan, and test again
+## 8 · Close the loop
 
-Put the two audience reviews side by side. Find one passage that works for one audience and not the other. Discuss why, using the quote and the audience profiles rather than personal preference.
+You have a review. Now turn it into something you can use. This is a loop, not a single step — keep going until every audience is served, then put the result to work.
 
-For an audience the original does not serve, ask Greenlight what to make instead. The answer might be a shorter guide, a checklist, a video, or a different format altogether. Then ask it to review that plan for the same audience. The plan is ready only when the audience it is meant to serve would accept it.
+The path looks like this. You don't have to follow it word for word; let Greenlight guide you:
 
-Try the council on another article from the pack, or add another audience. The goal is not to make every audience disagree; it is to understand when the same content can serve several audiences and when it needs different treatment. If your two audiences always agree, return to step 6 and make their needs more specific.
+1. **Plan.** For an audience the content does not serve, ask Greenlight what to make instead. The answer might be a shorter guide, a checklist, a video, or a different format altogether.
+2. **Check the plan.** Ask the council to review that plan for the same audience, before anything is written.
+3. **Make it.** Ask Cowork to draft the asset the plan describes.
+4. **Review it again.** Bring the new draft back to the council. Keep going until the audience that rejected the original would accept its replacement.
+5. **Put it to work.** Once everything is greenlit, ask Cowork to take the next real step — draft the emails to the stakeholders who need to know, or a Teams message to the one person waiting on it.
+
+That last step is the point of the whole exercise: the review does not end in a verdict, it ends in the content and the messages that move the work forward.
+
+When you want to go further, try the council on another article from the pack, or add another audience. The goal is not to make every audience disagree; it is to understand when the same content can serve several audiences and when it needs different treatment. If your two audiences always agree, return to step 6 and make their needs more specific.
 
 ## 9 · Make it run without you
 📘 [Re-run a skill on new inputs](/bricks/cowork-rerun-skill)
 
-Once you trust the council, ask Cowork to run it on a schedule against a folder of draft content and send you the results.
+Once you trust the council, ask Cowork to run it on a schedule so reviews happen without you. Point it at whatever your content actually arrives in — a folder of drafts, or email attachments.
 
-::: warning Nothing sends on its own
-Route results to a chat or channel you created for this exercise. Read the council's suggestions before sharing them with a real author.
-:::
+The powerful version is a real trigger. Try something like:
 
-**Done when:** you receive a scheduled review without having to ask for it.
+> "On a schedule, run the Greenlight council on any new email attachment whose subject contains **[your keyword]**, and send me the review."
+
+Now a draft that lands in your inbox gets reviewed for every audience before you have even opened it — and you decide what to do with the result.
+
+**Done when:** a new file shows up through your trigger and you get the council's review back without asking.
 
 ---
 
@@ -169,7 +182,8 @@ Route results to a chat or channel you created for this exercise. Read the counc
 - [ ] One audience requirement you made more specific
 - [ ] P4 reviewed from both points of view, with a quote for each
 - [ ] One place the audiences agreed or disagreed, and why
-- [ ] Your plan for content that did not serve an audience
+- [ ] An asset you rebuilt for an audience and got greenlit
+- [ ] The email or Teams message you turned the result into
 - [ ] Your scheduled review, if you set one up
 
 ::: tip What to aim for in the demo
@@ -181,7 +195,7 @@ Show the moment the council changed your understanding of the content. That is m
 | What you're seeing | What to do |
 | --- | --- |
 | Cowork ignores Greenlight | Start a **new** Cowork session — skills load at the start. |
-| Upload seemed to do nothing | Upload `SKILL.md`, not the zip. |
+| Upload seemed to do nothing | Upload the whole `the-greenlight.zip`, not just `SKILL.md`. |
 | Cowork cannot see the articles | Attach the content-pack files to the session. |
 | Both audiences give the same answer | Make their needs more specific, then review again. |
 | A result has no evidence | Ask for the exact quote, source, and confidence. |
