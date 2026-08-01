@@ -69,11 +69,22 @@ def check_requires_install(text: str, blocked: list[str] | None = None) -> dict:
 
 
 def check_table_width(text: str, max_cols: int) -> dict:
-    """TODO: fail when a markdown table is wider than max_cols.
+    """TODO  ·  Path: Deterministic checks + expansion.
 
-    A phone reader (AC-01) can't scroll a 6-column table. Find markdown table header
-    rows, count columns, and fail any wider than max_cols. Pull max_cols from the
-    seat card's screen constraint — do not hardcode it.
+    Fail when a markdown table is wider than max_cols — a phone reader (AC-01)
+    can't scroll a 6-column table. Pull max_cols from the seat card's screen
+    constraint; do not hardcode it.
+
+    TIPS (a start for you / your Copilot session):
+      - A markdown table header row looks like `| a | b | c |`, followed by a
+        separator row like `| --- | --- | --- |`. Column count ≈ the number of
+        `|`-separated cells (mind the leading/trailing pipes).
+      - Scan lines, find rows whose next line is a `---`/`:--` separator, count
+        their columns, and fail if any exceeds max_cols.
+      - Return the same shape the other checks do:
+          {"passed": bool, "widest": <int>, "budget": max_cols, "detail": "..."}
+      - Wire it into a seat: add {"fn": "check_table_width", "args": {"max_cols": N}}
+        to a criterion's "checks" in that audience's council/*.json.
     """
     raise NotImplementedError(
         "TODO: implement check_table_width(text, max_cols). Count columns per markdown "

@@ -35,7 +35,7 @@ Every audience judges the same content for a different result. That's why the ro
 
 | | |
 |:---:|---|
-| **1** | **Pick your track** → [`facilitator/PICK-YOUR-PATH.md`](facilitator/PICK-YOUR-PATH.md) — 🟢 Cowork · 🔵 Copilot Studio · 🟣 VS Code |
+| **1** | **Pick your track** → [`facilitator/PICK-YOUR-PATH.md`](facilitator/PICK-YOUR-PATH.md) — 🟢 Cowork · 🔵 Microsoft Scout · 🟣 VS Code |
 | **2** | **Install the skill** → add the [`the-greenlight/`](.) folder to your tool |
 | **3** | **Say** *"seat the council"* — or ask *"what do I do next?"* to be walked through it |
 
@@ -93,14 +93,21 @@ The review scores the piece; the check scores the plan — same needs both times
 
 ## What you're building toward
 
-| | | | |
-|:---:|---|:---:|---|
-| **1** | Seat the council | **5** | Hand it to someone else |
-| **2** | The review with receipts | **6** | Cover every piece |
-| **3** | The plan | **7** | The ship gate |
-| **4** | Runs on its own | | |
+The first three are the assignment, the same for everyone:
 
-Steps 1–3 are the assignment. Where you finish depends on your track — the skill will tell you.
+| | |
+|:---:|---|
+| **1** | Seat the council |
+| **2** | The review with receipts |
+| **3** | The plan |
+
+After that, each track climbs its own way:
+
+- **Base (Cowork):** the review runs on its own.
+- **Builder (Scout):** a live dashboard, easy to run, then extra features.
+- **Advanced (VS Code):** unattended runs, full coverage, and a ship gate.
+
+The skill will tell you where your track finishes.
 
 > **Higher isn't automatically better.** A sharp three-audience council in Cowork beats a generic multi-agent setup in VS Code. The judging is built to reward that.
 

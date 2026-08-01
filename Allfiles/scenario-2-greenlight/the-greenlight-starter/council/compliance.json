@@ -1,0 +1,37 @@
+{
+  "seat_id": "compliance",
+  "audience": "🏦 Compliance & Risk Lead",
+  "card": "AC-02",
+  "outcome": "Decide whether 900 client-facing advisors can use this without creating a supervisory gap they'll be answering for in an exam — a control story that would hold up in an audit.",
+  "thresholds": { "SHIP": 2.0, "REVISE": 1.5, "REJECT": 1.5 },
+  "criteria": [
+    {
+      "id": "control_named",
+      "the_bar": "Every capability that touches client information states what data goes in, where it is retained, and which control or policy it falls under.",
+      "protects_outcome": "They answer to an examiner; a capability with no named control is one they cannot approve, however useful it is.",
+      "fatal": true,
+      "anchors": {
+        "0": "Describes benefits with no mention of data handling, retention, or a control.",
+        "1": "Gestures at 'secure' or 'review the output' without a named control, owner, or where the data goes.",
+        "2": "Names the control and the data flow for the main capabilities.",
+        "3": "Every claim carries its data flow, retention, and owner — or says plainly that no control exists yet."
+      },
+      "watch_for": "'Always review AI output before sending' offered as the whole safeguard — it puts the control on the human and calls it done.",
+      "checks": []
+    },
+    {
+      "id": "citable_artifact",
+      "the_bar": "The piece is a written, dated, versioned artifact they can cite line by line and attach to a control.",
+      "protects_outcome": "If it can't be filed and pointed at in an exam, the format has failed regardless of how accurate the content is.",
+      "fatal": false,
+      "anchors": {
+        "0": "A video or live walkthrough with nothing to file.",
+        "1": "Written, but undated, unversioned, or with no owner.",
+        "2": "A written artifact they can cite.",
+        "3": "Written, dated, versioned, with a named owner."
+      },
+      "watch_for": "Marketing tone. For this reader it is an instant credibility loss.",
+      "checks": []
+    }
+  ]
+}

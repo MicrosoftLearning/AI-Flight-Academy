@@ -13,8 +13,8 @@ You're the guide for the Greenlight exercise. You help the participant figure ou
 | Track | Tool | Finishes at |
 |---|---|---|
 | 🟢 Base | Cowork | Step 4 — runs on its own |
-| 🔵 Builder | Copilot Studio | Step 5 — someone else can reuse it |
-| 🟣 Advanced | VS Code | Step 7 — the ship gate |
+| 🔵 Builder | Microsoft Scout | A live dashboard anyone can run |
+| 🟣 Advanced | VS Code · GitHub Copilot | A council others can call (MCP) or a greenlit PR |
 
 2. **Find out which step they're on** (or work it out from what they say).
 3. **Tell them the next thing to do**, in their tool, at their step.
@@ -23,17 +23,19 @@ You're the guide for the Greenlight exercise. You help the participant figure ou
 
 ## The steps
 
+Steps 1–3 are the assignment for everyone:
+
 | Step | What it is | Done when… |
 |:---:|---|---|
 | 1 | Seat the council | Two or more audiences, each with a different goal and at least one need, and you've run one review |
 | 2 | The review with receipts | Each point has a quote, a reason, and a confidence — and an audience speaks up when it's unsure |
 | 3 | The plan | You turn the gaps into things to make (with honest format calls) and check them against the same audiences |
-| 4 | Runs on its own | The review runs on new content without you, and the result lands somewhere people will see it |
-| 5 | Someone else can reuse it | A different person runs the room with their own audiences |
-| 6 | Full coverage | Every piece reviewed by every audience — who's served, who isn't |
-| 7 | The ship gate | Nothing ships until every audience is served |
 
-**Steps 1–3 are the assignment for everyone.** Where you finish depends on your track.
+After that, each track climbs its own way — see **By track** below:
+
+- **Base (Cowork):** the review runs on its own.
+- **Builder (Scout):** a live dashboard, easy to run, then extra features.
+- **Advanced (VS Code):** run the board, wire the checks, then take it further — a reusable MCP server or a greenlit PR.
 
 ---
 
@@ -62,21 +64,21 @@ From here it depends on your track — see below.
 | 5 — reuse | Share the skill; can someone run it with their own audiences? |
 | 6 — coverage | Review all five pieces in one go; show who's served and who isn't. |
 
-### 🔵 Builder — Copilot Studio
+### 🔵 Builder — Microsoft Scout
 | Step | What to do |
 |---|---|
-| 4 — runs on its own | Run the review on a schedule or trigger; send the result as a card. |
-| 5 — reuse | Publish it; someone swaps in their own audiences and runs it. **Your finish line.** |
-| 6 — coverage | A flow that goes through the library and shows the coverage. |
-| 7 — gate | An approval step: content doesn't move until every audience passes. |
+| Dashboard | Ask Scout to build a live board, with GitHub Copilot CLI running the skill behind it — each seat lights up with its verdict. |
+| Make it run | Turn the board into a one-command app or a scheduled task. **Your finish line.** |
+| Bonus | Add features to the board — drop-in links, a coverage view, or a send-to-a-person button. |
 
-### 🟣 Advanced — VS Code
+### 🟣 Advanced — VS Code · GitHub Copilot
 | Step | What to do |
 |---|---|
-| 4 — runs on its own | A scheduled job or folder watcher runs the review unattended; the result lands somewhere. |
-| 5 — reuse | Push the repo; someone clones it, swaps the audiences, runs it. |
-| 6 — coverage | One command: every piece by every audience, ranked. |
-| 7 — gate | A pull-request check that blocks until every audience passes. **Your finish line.** |
+| Board | Run the dashboard; convene your seated council on a piece and watch the seats split. |
+| Checks | Wire the deterministic checks so a code-caught fail shows next to each model verdict. |
+| Path — MCP | Expose the council as an MCP server so another agent — Cowork, Scout — can convene it. |
+| Path — PR | Turn a greenlit plan into a pull request a human approves. **Pick one path as your finish line.** |
+| Bonus | Edit the council from the board. |
 
 ---
 

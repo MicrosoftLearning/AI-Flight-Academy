@@ -1,14 +1,14 @@
 # The Greenlight Starter — Advanced Track
 
-Build a **council** in a repo: many audience seats scoring one subject in parallel, a judge that diffs them, a transformation plan re-scored on the same rubric, and a PR gate that stays red until every seated audience is served.
+Build a **council** you can run: many audience seats scoring one subject at once on a live board, deterministic checks catching what the model can't, then a path that takes it further — a reusable MCP server or a greenlit pull request.
 
-This starter gives you the plumbing. You write the seats, the agents, and the scoring.
+This starter gives you the plumbing and a working board. You write the seats, the checks, and your path.
 
-> Seats are **data** (`council/*.json`). Agents are **code** (`.github/agents/`). The solo critic is the **control** (`../the-greenlight/reference/solo-rubric.json`) — you read it, never edit it.
+> Seats are **data** (`council/*.json`). The checks are **code** (`checks.py`, `check_content.py`). The solo critic is the **control** (`../the-greenlight/reference/solo-rubric.json`) — you read it, never edit it.
 
-## The deterministic checks — start here
+## The deterministic checks
 
-**Before you wire any model scoring**, run the countable half:
+Run the countable half on its own:
 
 ```powershell
 python checks.py                       # all five articles
@@ -19,33 +19,33 @@ python checks.py --piece P4-exec-summary
 
 A language model catches what's contextual. Code catches what's countable. These are the countable part — test them against content you know should fail.
 
-## Quickstart
+## Start the board
 
 ```powershell
-cd Allfiles/scenario-2-greenlight/the-greenlight-starter
-Copy-Item council/retail.example.json council/retail.json   # seat Retail for real
-# now seat at least ONE more audience with a DIFFERENT outcome (e.g. Compliance)
-# the three agents ship ready to run — sharpen the one TODO in each (.github/agents/)
-python checks.py --piece P4-exec-summary
-pwsh ./run.ps1 -Piece P4-exec-summary
+cd Allfiles/scenario-2-greenlight/the-greenlight-starter/dashboard
+npm install
+npm start
 ```
 
-The runner needs the sibling `../data-pack/` (articles + cards) and `../the-greenlight/` (the skill + solo rubric). In the hack repo the three folders sit side by side; keep them that way.
+Open `http://localhost:4173` and drop a piece on the board — every seated audience scores it at once. The startup line confirms the GitHub Copilot CLI is found and signed in; the board shells out to it to run the council.
+
+The board needs the sibling `../data-pack/` (articles + cards) and `../../the-greenlight/` (the skill + solo rubric). In the hack repo the folders sit side by side; keep them that way.
 
 ## What you build
 
-- `council/*.json` — one seat per audience: an **outcome** and the criteria that protect it, with 0–3 anchors. Copy `retail.example.json`, then add more. **At least two seats with different outcomes** — or nothing can disagree.
-- `.github/agents/*.agent.md` — three ready-to-run agents (score, judge, greenlight). Each ships with the contract written and **one design TODO to sharpen**; see `.github/agents/README.md`.
+- `council/*.json` — one seat per audience: an **outcome** and the criteria that protect it, with 0–3 anchors. Four sample seats ship; add the audiences you actually write for. `retail.example.json` is the copyable shape. **At least two seats with different outcomes** — or nothing can disagree.
+- `check_content.py` — the bridge the board calls to run each seat's wired checks (a TODO stub; `greenlightlib` does the heavy lifting).
 - Your own deterministic checks in `checks.py` — anything countable on a seat's card, threshold drawn from the card.
+- Your path — `mcp_server.py` to make the council callable by other agents, or the PR submission route in `dashboard/server.js` to ship a greenlit plan.
 
 ## Council model
 
 | Piece | Kind | Job |
 |---|---|---|
 | `council/*.json` | data | One audience seat — outcome + anchored criteria (checks may be wired in) |
-| `seat-scorer.agent.md` | agent | Score one article against **one seat's** criteria; emit a per-seat scorecard with quote + source + confidence |
-| `judge.agent.md` | agent | Diff the scorecards — report conflicts (same passage, opposite verdicts) and coverage |
-| `greenlight.agent.md` | agent | Spec the replacement asset for each rejected piece, then re-run that seat's same criteria against it |
+| `dashboard/` | app | The live board — drop content, every seat scores it, a plan reconvenes until every audience is served |
+| `checks.py` / `check_content.py` | code | The countable half — thresholds drawn from the card, shown next to each verdict |
+| `mcp_server.py` | server | Exposes the council as MCP tools so other agents can convene it |
 
 `greenlightlib.py` wires the checks to seats, validates that no score ships without evidence, and rolls the scorecards into a coverage matrix.
 

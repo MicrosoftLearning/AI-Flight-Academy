@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Greenlight — Live Council Dashboard</title>
+<link rel="stylesheet" href="styles.css" />
+<link rel="icon" href="data:," />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-dot"></span>
+      <div>
+        <h1>The Greenlight</h1>
+        <p class="subtitle">Live council dashboard · seated from <code id="council-path">council/*.json</code></p>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <span id="council-status" class="council-status">loading council…</span>
+      <button id="manage-seats" class="btn btn-ghost needs-build" title="Not wired yet — a build path. Implement POST/DELETE /api/council/seat in server.js to add, edit, and remove seats from here.">✎ Manage council seats <span class="build-flag">not wired</span></button>
+      <button id="refresh-council" class="btn btn-ghost" title="Re-read council/*.json">↻ Reload council</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="council-row" id="council-row" aria-label="Seated council">
+      <!-- seat cards injected here -->
+    </section>
+
+    <div class="intake-row" id="intake-row">
+      <section class="convene-panel">
+        <div class="dropzone" id="dropzone">
+          <div class="dropzone-inner">
+            <div class="dropzone-icon">📄</div>
+            <p><strong>Drop a document</strong> to convene the council on it</p>
+            <p class="dropzone-or">— or —</p>
+            <div class="url-row">
+              <input id="url-input" type="url" placeholder="https://example.com/article-to-review" />
+              <button id="url-convene-btn" class="btn btn-primary">Convene on link</button>
+            </div>
+            <input id="file-input" type="file" hidden />
+            <button id="browse-btn" class="btn btn-secondary">Browse a file…</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="results-panel" id="results-panel" hidden>
+        <div class="results-header">
+          <h2 id="results-heading">Verdict</h2>
+          <div class="coverage" id="coverage"></div>
+        </div>
+        <div class="run-meta" id="run-meta">
+          <span class="spinner" id="run-status-spinner"></span>
+          <span id="run-status-text"></span>
+          <button id="toggle-log" class="btn btn-ghost btn-sm">Show deliberation log</button>
+        </div>
+        <pre id="run-log" class="run-log" hidden></pre>
+        <div class="disagreement" id="disagreement" hidden></div>
+        <div class="all-green-note" id="all-green-note" hidden>✅ Every audience already ships this — nothing to plan.</div>
+      </section>
+    </div>
+
+    <section class="greenlight-panel" id="greenlight-panel" hidden>
+      <div class="plan-header">
+        <h2>🚦 The Greenlight</h2>
+        <div id="greenlight-banner" class="plan-banner"></div>
+      </div>
+      <p class="greenlight-intro" id="greenlight-intro">Some audiences didn't ship this piece. Build a remediation plan and reconvene the council on it — repeat until every seat is served.</p>
+
+      <div class="greenlight-action-row">
+        <button id="greenlight-action-btn" class="btn btn-primary">🚦 Greenlight it — build a remediation plan</button>
+        <span class="spinner" id="greenlight-spinner" hidden></span>
+        <button id="toggle-plan-log" class="btn btn-ghost btn-sm" hidden>Show log</button>
+      </div>
+      <pre id="plan-log" class="run-log" hidden></pre>
+
+      <div class="export-row" id="export-row" hidden>
+        <div class="export-celebrate">🎉</div>
+        <span class="export-label" id="export-label">📄 Plan for <strong id="export-content-label"></strong> is ready</span>
+        <div class="export-actions">
+          <button id="export-md-btn" class="btn btn-secondary btn-sm" type="button">📄 View / copy as Markdown</button>
+          <button id="export-json-btn" class="btn btn-secondary btn-sm" type="button">📄 View / copy as JSON</button>
+          <button id="submit-pr-btn" class="btn btn-sm needs-build" type="button" title="Not wired yet — a build path. Implement POST /api/plan/:planId/submit in server.js to open a PR from a greenlit plan.">🏁 Submit to hack repo <span class="build-flag">not wired</span></button>
+        </div>
+        <span id="export-error" class="export-error" hidden></span>
+        <span id="submit-status" class="submit-status" hidden></span>
+      </div>
+
+      <div class="plan-items" id="plan-items"></div>
+    </section>
+
+    <!-- Export modal — deliberately view + copy-to-clipboard only, never a file
+         download or new window/tab. Some embedded/webview hosts (this dashboard
+         is often viewed inside one) don't support native download flows, and a
+         download-triggering link/blob click can misbehave badly there (up to
+         closing/crashing the view). Clipboard copy is a plain script call with
+         no navigation, so it works everywhere. -->
+    <div class="modal-overlay" id="export-modal-overlay" hidden>
+      <div class="modal-box">
+        <div class="modal-header">
+          <h3 id="export-modal-title">Plan export</h3>
+          <button id="export-modal-close" class="btn btn-ghost btn-sm" type="button">✕ Close</button>
+        </div>
+        <div class="modal-body">
+          <div class="modal-status" id="export-modal-status">Loading…</div>
+          <textarea id="export-modal-text" class="modal-textarea" readonly hidden></textarea>
+        </div>
+        <div class="modal-footer">
+          <button id="export-modal-copy" class="btn btn-primary btn-sm" type="button">📋 Copy to clipboard</button>
+          <span id="export-modal-copy-status" class="modal-copy-status"></span>
+        </div>
+      </div>
+    </div>
+
+    <section class="history-panel">
+      <div class="history-header" id="history-header">
+        <h3>Past runs <span class="history-count" id="history-count"></span></h3>
+        <span class="history-toggle-all" id="history-toggle-all">▾</span>
+      </div>
+      <div id="history-list" class="history-list">
+        <p class="muted">No runs yet — drop something on the council above.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

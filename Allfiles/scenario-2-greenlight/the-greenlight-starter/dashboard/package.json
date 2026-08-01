@@ -1,0 +1,14 @@
+{
+  "name": "greenlight-dashboard",
+  "version": "1.0.0",
+  "description": "Live browser dashboard for THE GREENLIGHT skill — seats the council, convenes on dropped documents/links, runs GitHub Copilot CLI to score them, and shows each audience's verdict.",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "multer": "^2.0.0"
+  }
+}

@@ -1,179 +1,157 @@
 ---
-title: 🔵 Builder · Agent-Orchestrated — Scenario 2
+title: The Greenlight — Scout
 ---
 
-# 🔵 Builder · Agent-Orchestrated
-## Scenario 2 — The Greenlight
+# 🔵 The Greenlight
 
-**Building with:** Copilot Studio
+::: warning 🚧 Work in progress
+Scenario 2 is still being built and tested. Steps, downloads, and screenshots may change before the event.
+:::
+**You'll build this in Microsoft Scout, with GitHub Copilot CLI running the council behind a live dashboard. Scout does the building — you won't hand-write the app.**
 
-## 1 · Your mission
+You run the council, then turn it into something you can watch.
 
-Build a published **council of agents** — each voicing an audience — that scores a piece from every seat at once, debates the conflicts, and proposes a transformation plan. Then have someone who wasn't at the hack reseat it with their own audiences and run it.
+## What you're solving
 
-## 2 · What you'll demonstrate
+One review is not enough when different audiences need different things from the same content. A formal explainer might help a compliance officer make a careful decision and still be unusable for a store manager who needs one practical action during a busy shift.
 
-See the required functions for this altitude on the [🔵 Builder · Agent-Orchestrated level page](/levels/builder/).
+A single reviewer pictures one average reader and misses that gap. Here you seat a council of audiences, review the same content from each point of view, and put the whole room on a live board so the disagreement is something you can see.
 
----
+## What you'll walk out with
 
-## 3 · Assembly map — snap these blocks together
+| What you make | What it does |
+| --- | --- |
+| **Your council** | Two or more audiences and what each one needs, in `THE-COUNCIL.md`. |
+| **A review** | Shows what each audience thinks, with a quote, a source, and a confidence. |
+| **A live dashboard** | Each seat lights up with its verdict as you feed the board content. |
+| **A one-step run** | A simple way to start the board — a command or a scheduled task. |
 
-Steps 1–4 give you a room that disagrees in about 35 minutes. Everything after that makes it sharp.
+The solo critic stays unchanged — the one-verdict "before" you compare against.
 
-### Step 1 — Install the skill and see the data
-📘 [Create an agent + solution](/bricks/studio-create-agent)
+## Before you start
 
-**Goal:** the **`the-greenlight`** skill is installed, and your agent can access all five articles, the four example audience cards, and the style guide from the **`data-pack`** folder.
+Download both and keep them side by side.
 
-### Step 2 — See what the solo critic says
-*~5 minutes*
+<div class="lab-grid lab-grid-2">
+	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/the-greenlight.zip" download>
+		<span class="lab-card-emoji">🔵</span>
+		<span class="lab-card-title">Greenlight skill</span>
+		<span class="lab-card-desc">The council method and the unchanged solo-critic baseline.</span>
+		<span class="lab-card-cta">Download .zip →</span>
+	</a>
+	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/greenlight-data-pack.zip" download>
+		<span class="lab-card-emoji">🗂️</span>
+		<span class="lab-card-title">Content pack</span>
+		<span class="lab-card-desc">Five articles, four audience profiles, and a style guide. Use it instead of real work data.</span>
+		<span class="lab-card-cta">Download .zip →</span>
+	</a>
+</div>
 
-**Goal:** you've seen the solo critic's verdict on all five articles.
-
-| Piece | Solo verdict |
-|---|---|
-| Training unit (P1) | SHIP |
-| How-to (P2) | REVISE |
-| Blog post (P3) | REVISE |
-| **Executive summary (P4)** | **REVISE** |
-| Quickstart (P5) | SHIP |
-
-**Look hard at P4.** One reviewer, one implied reader — it can't hold *"reject for Retail, ship for Compliance"* at the same time, so it splits the difference and misses.
-
-### Step 3 — Seat two audiences who want *different things*
-*~12 minutes*
-
-**Goal:** two seats defined — each an audience with a one-line **outcome** and at least one criterion that protects it. Start with **🛒 Retail** vs **🏦 Compliance**; use a real audience you serve if you have one (Work IQ fills what it can first).
-
-> *Stuck?* → **"Using the-greenlight skill, seat two audiences whose outcomes clash and nominate one outcome-protecting criterion each."**
-
-### Step 4 — Two seat-agents that score the same piece
-📘 [Ground on a knowledge source](/bricks/studio-knowledge-grounding)
-
-**Goal:** two Copilot Studio agents — one per seat — each grounded on **its own** audience card + the style guide as **knowledge sources**, each with a **topic** that accepts a content piece and returns a scorecard against that seat's criteria. Every new criterion describes what a 0, 1, 2 and 3 look like.
-
-| Seat | Solo critic | Seat-agent | Why |
-|---|---|---|---|
-| 🛒 Retail | REVISE | **REJECT** | *"quote from the content"* |
-| 🏦 Compliance | REVISE | **SHIP** | *"quote from the content"* |
-
-> **You never change the solo critic.** It's the "before." Everything you build is the council.
-
-**Test early.** Score ONE piece with each seat-agent. Did each use *its own* criteria — or did they blur into one voice? If they agree on everything, the seats aren't grounded on different outcomes.
-
-**Done when:** the two seat-agents return different verdicts on P4.
+Open Microsoft Scout and add the Greenlight skill. The dashboard step later also uses **GitHub Copilot CLI** and **Node** — Scout installs what the app needs, but the CLI has to be signed in and working.
 
 ---
 
-## Attack surfaces
+## 1 · Import the skill, seat your members, and convene the council
 
-### Step 5 — Attack surface: NARROW
+1. Extract `the-greenlight.zip` skill to a folder.
+1. Add `the-greenlight` skill to Scout by going to **Extensions** and select **Import**
+1. Drag the extracted skill **folder** into Scout:
+   ![Screenshot of the Import Skill dialog window in Microsoft Scout.](./media/scout-import-skill-folder.png)
+1. Start a new chat in Scout and upload **data-pack.zip**.
+   <!-- ![alt text](./media/scout-upload-file.png) -->
 
-**Cut each seat's criteria to what protects its outcome.** A criterion that scores the same for any audience belongs to the solo critic.
+## 2 · Seat the council
 
-| ❌ Weak seat criterion | ✅ Strong seat criterion |
-|---|---|
-| Is it clear? | Can a floor associate reach the first action in two lines, standing up? |
-| Is it accurate? | Does every claim carry the source Compliance needs to survive an audit? |
+Add at least two audiences to `THE-COUNCIL.md` — the provided profiles (start with **Retail** and **Compliance**) or custom audiences you actually care about. They need different goals, or the room can't disagree.
 
-The test: swap the seat's card — would the score change? If no, cut it.
+Ask Scout something like, *"Use Greenlight to seat all audiences in the data pack to the council."*
 
-::: info Why this matters
-Liu et al. (2023) found models attend worst to instructions in the middle of a long context. A bloated seat-agent applies four of its five criteria and quietly drops the load-bearing one.
+::: tip Use a real audience when it helps
+Work IQ can draft a profile from work information you already have access to. Treat it as a first draft and correct it with people who know that audience.
 :::
 
-### Step 6 — Attack surface: EVIDENCE
+## 3 · Convene the council
 
-**Every score carries a quote, a source, and a confidence.** A doc link, a card line, or a style rule — or `UNVERIFIED`. `Low` confidence on a fatal criterion → that seat abstains.
+Before any dashboard, ask Scout to run the council on the **executive summary (P4)**. You should see the seats split — Retail and Compliance reaching different verdicts, each with a quote, a source, and a confidence.
 
-| ❌ Assertion | ✅ Backed |
-|---|---|
-| Wrong for Retail | *"Step 4 requires admin rights. Card: 'cannot get admin rights, ever.' Confidence: High."* |
-| Unsupported claim | *"No source found. UNVERIFIED — searched the card and style guide. Confidence: Low → abstain."* |
+Do this first on purpose: the core result is done here, with nothing to install. The dashboard makes it visible — it doesn't replace it.
 
-**Done when:** at least one seat abstains or marks `UNVERIFIED` instead of guessing.
+| Piece | Solo critic | Council |
+|---|---|---|
+| **Executive summary (P4)** | Needs work (one verdict) | **Reject for Retail · Ship for Compliance** |
 
-### Step 7 — Attack surface: CONFLICT — the debate
+> **Do not change the solo critic.** It is the "before" you compare your council against.
 
-**A council that agrees with itself is worthless.** Take the passage two seats scored opposite and make them argue it, each with a quote. Then check the piece the solo critic scored **highest** — does any seat still object?
+**Done when:** two seats return different verdicts on P4, each with a quote.
 
-**Done when:** the room surfaces one real conflict — the same passage, scored opposite, defended both ways.
+## 4 · Build the dashboard
 
----
+Now make the disagreement visible. Ask Scout to build a local web dashboard for the council, using **GitHub Copilot CLI as the backend** that runs the Greenlight skill.
 
-## Steps 8 and 9 — the two shared beats
+Describe what you want:
 
-Around halfway the room stops for a **team checkpoint**, and at ~55 minutes a **twist** lands. Both are on the [Scenario 2 brief](/scenarios/scenario-2#two-beats-everyone-hits).
+- a card for each seat that lights up with its verdict — green for ship, amber for revise, red for reject
+- the quote and confidence behind each seat's call, on its card
+- a place to drop in a document or paste a link for the council to review
+- the conflicts and who's served, at a glance
 
----
+Scout scaffolds the app and wires it to the Copilot CLI backend. When you feed the board a piece, the CLI runs the council and the cards update.
 
-## Step 10 — A synthesizer agent that runs the room
-📘 [Build two agents that hand off](/bricks/studio-multi-agent)
-
-**Goal:** a **synthesizer agent** downstream of the seats. It collects every seat's scorecard, surfaces the conflicts (not a compromise), and states the coverage: who's served as-is, who isn't.
-
-Content → **seat-agents** (fan out) → **synthesizer** (collect + diff).
-
-**Done when:** the synthesizer names a clash between two seats rather than averaging them.
-
-> *Stuck?* → **"Build an agent that takes both seat scorecards and reports where they disagree on the same passage, plus who the piece serves and who it abandons."**
-
-### Step 11 — A responder agent that proposes the plan
-📘 [Build two agents that hand off](/bricks/studio-multi-agent)
-
-**Goal:** a **responder agent** that turns the failures into a **transformation plan** — an asset per under-served seat, with the honest format call (*"this shouldn't be a document"*) — then re-scores each asset against that seat's **same criteria** to greenlight it.
-
-Content → seat-agents → synthesizer → **responder**.
-
-::: info Why this matters
-Madaan et al. (2023) showed self-critique improves quality — but only when the critique step is separate from the first answer. A separate responder that re-scores on the same rubric is what makes "greenlight" mean something.
+::: warning If the app won't start
+Setups vary — Node versions, dependencies, CLI sign-in. If the dashboard won't run on your machine, keep going in the Scout conversation; the council still works there. Get the board up if you can, but don't let it block the review.
 :::
 
-**Done when:** the responder proposes at least one different-format asset and re-scores it to a pass.
+**Done when:** you feed the dashboard a piece and watch the seats light up with their verdicts.
 
-### Step 12 — Put the plan in front of a human
-📘 [Send an Adaptive Card to Teams](/bricks/studio-adaptive-card)
+## 5 · Make it easy to run
 
-**Goal:** the plan arrives in Teams as an **Adaptive Card** — the split verdicts, the coverage line, and the proposed assets — with **Approve** and **Send back** actions.
+Turn the dashboard into something you start in one step, so a teammate can open the board without wiring it up again. Ask Scout for either:
 
-**Done when:** both buttons are there and respond when pressed.
+- a single **start command** — install once, then one command boots the server and opens the browser, or
+- a **scheduled task** that launches it so the board is always there.
 
-### Step 13 — Route the decision
-📘 [Add an agent flow](/bricks/studio-agent-flow) · 📘 [Add a topic with a trigger](/bricks/studio-topic-trigger)
+::: tip Unsure how? Ask Scout!
+Ask Scout what the right option is for your situation. One solution doesn't fit everyone's needs, much like the different audiences in this exercise. Ironic, don't you think?
+:::
 
-**Goal:** an agent flow that convenes the council on a trigger (new content) and acts on the button pressed — approved plans move on, sent-back plans return with the assets attached.
+**Done when:** you (or a teammate) can start the board in one step and drop in new content.
 
-**Done when:** the council fires unattended on new content and the routed decision lands.
+## Go further — the bonus
 
-### Step 14 — Publish and hand over the room 🏁
-📘 [Publish your agent](/bricks/studio-publish)
+Once the board runs, the bonus is adding features to it. Keep each one small and let Scout build it:
 
-**Goal:** the council is published, and someone who wasn't at the hack **reseats it with their own audiences** and runs it.
+- drag a document or paste a link straight onto the board to convene without the conversation
+- a coverage view — every article by every audience, at a glance
+- a history, so you can watch a piece improve after a rebuild
+- a button that sends the greenlit plan to a person
 
-**Done when someone who wasn't there swaps the roster and gets their own split verdicts.**
+---
 
-## 4 · The data
+## Show it off
 
-| Folder | What's in it |
-|---|---|
-| `the-greenlight/` | The skill. Install this first. You only edit `THE-COUNCIL.md`. |
-| `data-pack/content/` | The five articles |
-| `data-pack/audience-cards/` | Four example audience cards — the seats |
-| `data-pack/style-guide/` | The house style rules |
+60–90 seconds. Show:
 
-## 5 · Demo checklist
+- [ ] The two audiences you seated and the goal each one defends
+- [ ] P4 splitting the council in the conversation, each seat with a quote
+- [ ] The dashboard lighting up each seat's verdict on a piece you feed it
+- [ ] One conflict and the coverage, visible at a glance
+- [ ] The board started in one step — a command or a schedule
+- [ ] Any feature you added to the board in the bonus round
 
-- [ ] Your two seats, and the one-line outcome each one defends
-- [ ] Where a seat came from — the parts Work IQ found, and the parts you corrected
-- [ ] A criterion you cut during NARROW because it would score the same for any audience
-- [ ] P4 scored REJECT by the Retail seat and SHIP by the Compliance seat, each with a quote
-- [ ] A score where a seat abstained or marked `UNVERIFIED`
-- [ ] **The twist** — what happened when one audience's constraint changed
-- [ ] The seat-agents → synthesizer → responder chain running end to end
-- [ ] The synthesizer naming a conflict, not a compromise
-- [ ] A transformation plan with a different-format asset, re-scored to a pass
-- [ ] The Adaptive Card in Teams with Approve and Send back
-- [ ] Someone else reseating the published council with their own audiences
+::: tip What to aim for in the demo
+Drop one piece into the board and let two seats disagree in real time. That is the thing a single generic review can never show.
+:::
 
-[← Back to start](/) · [Scenario 2 brief](/scenarios/scenario-2)
+## Stuck?
+
+| What you're seeing | What to do |
+| --- | --- |
+| Scout ignores the skill | Start a new session — skills load at the start. |
+| Both seats give the same verdict | Give them different goals and make their needs specific. |
+| The dashboard won't start | Check that GitHub Copilot CLI is signed in and Node is available; meanwhile, convene in the Scout conversation. |
+| The board shows nothing back | Confirm the skill is imported and the CLI can run it on its own first. |
+| The council can't see the article | Give Scout the content pack, and point the board at the same files. |
+
+---
+
+[← Back to start](/) · [What this scenario is about](/scenarios/scenario-2)

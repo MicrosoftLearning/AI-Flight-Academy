@@ -71,19 +71,21 @@ They won't know if the room got sharper until they run it again, so nudge them t
 
 ## What they're building toward
 
-Roughly in order. `reference/next.md` has the detail and where each track finishes.
+Steps 1–3 are the core, the same for everyone:
 
 | Step | What it is |
 |:---:|---|
 | 1 | Seat two or three audiences, each with a different goal |
 | 2 | Have them review with quotes, reasons, and confidence — and speak up when unsure |
 | 3 | Turn the gaps into a plan for what to make instead, then check it |
-| 4 | Have the review run on its own on new content |
-| 5 | Hand the council to someone else to use with their own audiences |
-| 6 | Review every piece against every audience to see who's covered |
-| 7 | Don't let content ship until every audience is served |
 
-Steps 1–3 are the core. Where they finish depends on their track.
+After that, each track climbs its own way:
+
+- **Base (Cowork):** make the review run on its own on new content.
+- **Builder (Scout):** put the council on a live dashboard, make it easy to run, then add features.
+- **Advanced (VS Code):** run it unattended, show coverage across every piece and audience, and gate publishing until every audience is served.
+
+`reference/next.md` has the detail and where each track finishes.
 
 ---
 
