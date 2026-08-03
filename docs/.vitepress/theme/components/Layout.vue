@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import DefaultTheme from "vitepress/theme";
-import BuildBadge from "./BuildBadge.vue";
+import BuildBar from "./BuildBar.vue";
 
 const { Layout } = DefaultTheme;
 </script>
@@ -8,7 +8,7 @@ const { Layout } = DefaultTheme;
 <template>
   <Layout>
     <template #doc-before>
-      <BuildBadge />
+      <BuildBar />
     </template>
   </Layout>
 </template>

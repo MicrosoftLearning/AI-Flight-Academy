@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import { navBuildItems, buildSidebars } from "./data/paths";
+import { navBuildItems, isBuildPage } from "./data/paths";
 
 export default defineConfig({
   title: "The Imagineer Hack",
@@ -7,6 +7,14 @@ export default defineConfig({
     "A 2-hour hands-on agent-building hack for Global Skilling Team Week. Pick your altitude, snap together the building blocks, ship a working agent.",
   base: "/Team-Week-Imagineer-Hack/",
   cleanUrls: true,
+  // Build pages swap the cross-page sidebar for their own steps in the left rail.
+  transformPageData(pageData) {
+    if (isBuildPage(pageData.relativePath)) {
+      pageData.frontmatter.sidebar = false;
+      pageData.frontmatter.aside = "left";
+      pageData.frontmatter.outline = [2, 3];
+    }
+  },
   head: [
     [
       "link",
@@ -37,7 +45,6 @@ export default defineConfig({
     },
     outline: { level: [2, 3] },
     sidebar: {
-      ...buildSidebars(),
       "/levels/": [
         {
           text: "Pick Your Altitude",

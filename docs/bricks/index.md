@@ -12,8 +12,7 @@ Your [build page](/#start-here) gets you through the hack top to bottom, with th
 **These are the complete versions.** Open one in a new tab and keep it beside your build page if you want every step spelled out — or come back to them after the hack when you're building something of your own.
 :::
 
-## 🟢 Cowork
-
+## 🟢 Cowork {#cowork}
 | Guide | Use it when |
 | --- | --- |
 | [Connect Cowork to a data source](/bricks/cowork-connect-source) | You need to pull your mail, calendar, or files — and get it back in a shape you can reuse |
@@ -21,8 +20,7 @@ Your [build page](/#start-here) gets you through the hack top to bottom, with th
 | [Produce a formatted output](/bricks/cowork-formatted-output) | Your output needs to come back the same way every time |
 | [Re-run a skill on new inputs](/bricks/cowork-rerun-skill) | You want it to run on a schedule, or fire on an email or @mention |
 
-## 🟣 Code
-
+## 🟣 Code {#code}
 | Guide | Use it when |
 | --- | --- |
 | [Set up Scout / GitHub Copilot](/bricks/advanced-setup) | Getting agent mode, the CLI, and custom agent files working |
@@ -30,6 +28,5 @@ Your [build page](/#start-here) gets you through the hack top to bottom, with th
 | [Ground on live data with Work IQ](/bricks/advanced-work-iq) | Turning real calendar and mail behavior into evidence |
 | [Add a guardrail / output check](/bricks/advanced-guardrail) | Stopping an agent doing something it shouldn't |
 
-## 🔵 Copilot Studio
-
+## 🔵 Copilot Studio {#copilot-studio}
 Coming soon.

@@ -12,8 +12,8 @@ export interface Track {
   sub: string;
   tool: string;
   desc: string;
-  /** Step-by-step guides in /bricks/ that apply to this track. */
-  guides: { text: string; link: string }[];
+  /** Section of /bricks/ holding the step-by-step guides for this track. */
+  guidesLink: string;
 }
 
 export interface Scenario {
@@ -34,12 +34,7 @@ export const tracks: Track[] = [
     sub: "Copilot-Crafted",
     tool: "Microsoft 365 Copilot + Cowork",
     desc: "Build with Microsoft 365 Copilot and Cowork. Turn a repetitive task into a reusable skill that runs itself. No code, all impact.",
-    guides: [
-      { text: "Connect Cowork to a data source", link: "/bricks/cowork-connect-source" },
-      { text: "Write a reusable Cowork skill", link: "/bricks/cowork-build-skill" },
-      { text: "Produce a formatted output", link: "/bricks/cowork-formatted-output" },
-      { text: "Re-run a skill on new inputs", link: "/bricks/cowork-rerun-skill" },
-    ],
+    guidesLink: "/bricks/#cowork",
   },
   {
     id: "builder",
@@ -49,15 +44,7 @@ export const tracks: Track[] = [
     sub: "Agent-Orchestrated",
     tool: "Copilot Studio / Scout",
     desc: "Wire up a little team of agents that hand off to each other, ground on real files, and fire an alert to Teams.",
-    guides: [
-      { text: "Create an agent + solution", link: "/bricks/studio-create-agent" },
-      { text: "Add a topic with a trigger", link: "/bricks/studio-topic-trigger" },
-      { text: "Ground on a knowledge source", link: "/bricks/studio-knowledge-grounding" },
-      { text: "Build two agents that hand off", link: "/bricks/studio-multi-agent" },
-      { text: "Add an agent flow", link: "/bricks/studio-agent-flow" },
-      { text: "Send an Adaptive Card to Teams", link: "/bricks/studio-adaptive-card" },
-      { text: "Publish your agent", link: "/bricks/studio-publish" },
-    ],
+    guidesLink: "/bricks/#copilot-studio",
   },
   {
     id: "advanced",
@@ -67,12 +54,7 @@ export const tracks: Track[] = [
     sub: "Code-Extended",
     tool: "VS Code + GitHub Copilot",
     desc: "Build with Scout and GitHub Copilot. Add a custom connector, ground on live data with Work IQ, and put a guardrail on the output.",
-    guides: [
-      { text: "Set up Scout / GitHub Copilot", link: "/bricks/advanced-setup" },
-      { text: "Build a custom connector (MCP)", link: "/bricks/advanced-mcp-connector" },
-      { text: "Ground on live data with Work IQ", link: "/bricks/advanced-work-iq" },
-      { text: "Add a guardrail / output check", link: "/bricks/advanced-guardrail" },
-    ],
+    guidesLink: "/bricks/#code",
   },
 ];
 
@@ -165,56 +147,10 @@ export function navBuildItems() {
 }
 
 /**
- * Cockpit sidebar for a single build page. The build page is self-contained —
- * it already opens with the problem and the outcome — so there is no "brief"
- * link to bounce you to a longer copy of what you're reading.
+ * Build pages don't get a cross-page sidebar. Mid-build the left rail is the
+ * page's own steps (VitePress outline, moved left), and the handful of
+ * cross-page links live in the toolbar at the top of the page.
  */
-export function buildPageSidebar(trackId: string, scenarioId: string) {
-  const track = getTrack(trackId)!;
-  const scenario = getScenario(scenarioId)!;
-  const others = tracks.filter((t) => t.id !== trackId);
-
-  return [
-    {
-      text: `${scenario.emoji} ${scenario.label} · ${scenario.name}`,
-      items: [
-        {
-          text: `${track.emoji} ${track.label} — your build page`,
-          link: buildLink(trackId, scenarioId),
-        },
-      ],
-    },
-    {
-      text: "Same scenario, different altitude",
-      collapsed: true,
-      items: others.map((t) => ({
-        text: `${t.emoji} ${t.label}${suffix(t.id, scenarioId)}`,
-        link: buildLink(t.id, scenarioId),
-      })),
-    },
-    {
-      text: `Guides for ${track.emoji} ${track.label}`,
-      collapsed: true,
-      items: track.guides,
-    },
-    {
-      text: "Finish line",
-      items: [
-        { text: "⬇️ Downloads", link: "/resources/downloads" },
-        { text: "🚀 Submit your project", link: "/submit/" },
-      ],
-    },
-    { text: "🧭 Switch path", link: CHOOSER },
-  ];
-}
-
-/** One sidebar per build route. */
-export function buildSidebars(): Record<string, ReturnType<typeof buildPageSidebar>> {
-  const out: Record<string, any> = {};
-  for (const s of scenarios) {
-    for (const t of tracks) {
-      out[buildLink(t.id, s.id)] = buildPageSidebar(t.id, s.id);
-    }
-  }
-  return out;
+export function isBuildPage(relativePath: string): boolean {
+  return /^build\/(base|builder|advanced)-scenario-\d+\.md$/.test(relativePath);
 }
