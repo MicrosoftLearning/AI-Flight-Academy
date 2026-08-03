@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import { navBuildItems, buildSidebar } from "./data/paths";
+import { navBuildItems, buildSidebars } from "./data/paths";
 
 export default defineConfig({
   title: "The Imagineer Hack",
@@ -35,8 +35,9 @@ export default defineConfig({
     search: {
       provider: "local",
     },
+    outline: { level: [2, 3] },
     sidebar: {
-      "/build/": buildSidebar(),
+      ...buildSidebars(),
       "/levels/": [
         {
           text: "Pick Your Altitude",

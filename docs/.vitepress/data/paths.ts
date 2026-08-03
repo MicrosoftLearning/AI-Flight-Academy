@@ -12,6 +12,8 @@ export interface Track {
   sub: string;
   tool: string;
   desc: string;
+  /** Step-by-step guides in /bricks/ that apply to this track. */
+  guides: { text: string; link: string }[];
 }
 
 export interface Scenario {
@@ -32,6 +34,12 @@ export const tracks: Track[] = [
     sub: "Copilot-Crafted",
     tool: "Microsoft 365 Copilot + Cowork",
     desc: "Build with Microsoft 365 Copilot and Cowork. Turn a repetitive task into a reusable skill that runs itself. No code, all impact.",
+    guides: [
+      { text: "Connect Cowork to a data source", link: "/bricks/cowork-connect-source" },
+      { text: "Write a reusable Cowork skill", link: "/bricks/cowork-build-skill" },
+      { text: "Produce a formatted output", link: "/bricks/cowork-formatted-output" },
+      { text: "Re-run a skill on new inputs", link: "/bricks/cowork-rerun-skill" },
+    ],
   },
   {
     id: "builder",
@@ -41,6 +49,15 @@ export const tracks: Track[] = [
     sub: "Agent-Orchestrated",
     tool: "Copilot Studio / Scout",
     desc: "Wire up a little team of agents that hand off to each other, ground on real files, and fire an alert to Teams.",
+    guides: [
+      { text: "Create an agent + solution", link: "/bricks/studio-create-agent" },
+      { text: "Add a topic with a trigger", link: "/bricks/studio-topic-trigger" },
+      { text: "Ground on a knowledge source", link: "/bricks/studio-knowledge-grounding" },
+      { text: "Build two agents that hand off", link: "/bricks/studio-multi-agent" },
+      { text: "Add an agent flow", link: "/bricks/studio-agent-flow" },
+      { text: "Send an Adaptive Card to Teams", link: "/bricks/studio-adaptive-card" },
+      { text: "Publish your agent", link: "/bricks/studio-publish" },
+    ],
   },
   {
     id: "advanced",
@@ -50,6 +67,12 @@ export const tracks: Track[] = [
     sub: "Code-Extended",
     tool: "VS Code + GitHub Copilot",
     desc: "Build with Scout and GitHub Copilot. Add a custom connector, ground on live data with Work IQ, and put a guardrail on the output.",
+    guides: [
+      { text: "Set up Scout / GitHub Copilot", link: "/bricks/advanced-setup" },
+      { text: "Build a custom connector (MCP)", link: "/bricks/advanced-mcp-connector" },
+      { text: "Ground on live data with Work IQ", link: "/bricks/advanced-work-iq" },
+      { text: "Add a guardrail / output check", link: "/bricks/advanced-guardrail" },
+    ],
   },
 ];
 
@@ -138,8 +161,8 @@ export function navBuildItems() {
   ];
 }
 
-/** Sidebar shown on every /build/ page so you can hop scenarios and tracks. */
-export function buildSidebar() {
+/** Chooser sidebar for the /build/ hub — the one place breadth is wanted. */
+export function buildHubSidebar() {
   return [
     {
       text: "Build pages",
@@ -154,4 +177,64 @@ export function buildSidebar() {
       })),
     })),
   ];
+}
+
+/**
+ * Cockpit sidebar for a single build page: only the scenario you're in, the
+ * guides for your track, and the finish line. Everything else is deliberately
+ * out of sight — mid-hack you want focus, not a directory.
+ */
+export function buildPageSidebar(trackId: string, scenarioId: string) {
+  const track = getTrack(trackId)!;
+  const scenario = getScenario(scenarioId)!;
+  const others = tracks.filter((t) => t.id !== trackId);
+
+  return [
+    {
+      text: `${scenario.emoji} ${scenario.label} · ${scenario.name}`,
+      items: [
+        {
+          text: `${track.emoji} ${track.label} — your build page`,
+          link: buildLink(trackId, scenarioId),
+        },
+        { text: "The scenario brief", link: `/scenarios/${scenarioId}` },
+      ],
+    },
+    {
+      text: "Same scenario, different altitude",
+      collapsed: true,
+      items: others.map((t) => ({
+        text: `${t.emoji} ${t.label}${suffix(t.id, scenarioId)}`,
+        link: buildLink(t.id, scenarioId),
+      })),
+    },
+    {
+      text: `Guides for ${track.emoji} ${track.label}`,
+      collapsed: true,
+      items: track.guides,
+    },
+    {
+      text: "Finish line",
+      items: [
+        { text: "⬇️ Downloads", link: "/resources/downloads" },
+        { text: "🚀 Submit your project", link: "/submit/" },
+      ],
+    },
+    { text: "← All scenarios", link: "/build/" },
+  ];
+}
+
+/**
+ * One sidebar per build route, plus the hub. Specific keys have more path
+ * segments than "/build", so VitePress resolves them first.
+ */
+export function buildSidebars(): Record<string, ReturnType<typeof buildPageSidebar>> {
+  const out: Record<string, any> = {};
+  for (const s of scenarios) {
+    for (const t of tracks) {
+      out[buildLink(t.id, s.id)] = buildPageSidebar(t.id, s.id);
+    }
+  }
+  out["/build"] = buildHubSidebar();
+  return out;
 }
