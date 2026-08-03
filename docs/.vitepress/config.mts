@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { navBuildItems, buildSidebar } from "./data/paths";
 
 export default defineConfig({
   title: "The Imagineer Hack",
@@ -18,11 +19,7 @@ export default defineConfig({
       { text: "How the Hack Works", link: "/how-it-works/" },
       {
         text: "Start Building",
-        items: [
-          { text: "🟢 Cowork — no code (WIP)", link: "/build/base-scenario-1" },
-          { text: "🟣 Code — VS Code + Copilot (WIP)", link: "/build/advanced-scenario-1" },
-          { text: "🔵 Copilot Studio (coming soon)", link: "/build/builder-scenario-1" },
-        ],
+        items: navBuildItems(),
       },
       { text: "Submit", link: "/submit/" },
       { text: "Guides", link: "/bricks/" },
@@ -39,6 +36,7 @@ export default defineConfig({
       provider: "local",
     },
     sidebar: {
+      "/build/": buildSidebar(),
       "/levels/": [
         {
           text: "Pick Your Altitude",

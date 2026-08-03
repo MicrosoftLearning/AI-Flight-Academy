@@ -56,6 +56,11 @@ Use the **Avery Washington persona pack**: a synthetic marketing manager with a 
 
 Pick this path if you cannot or do not want to use your own data. It exercises the same skills without personal data. See the Base build page for details: [/build/base-scenario-1](/build/base-scenario-1).
 
+## Build paths
+
+<!-- markdownlint-disable MD033 -->
+<BuildMatrix scenario="scenario-1" />
+
 ## Assembly maps
 
 Use the building blocks for your altitude.

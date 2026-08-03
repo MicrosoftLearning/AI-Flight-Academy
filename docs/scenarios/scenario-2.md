@@ -86,6 +86,5 @@ In Advanced, the team builds one system. Each person owns an audience reviewer, 
 
 Pick your altitude:
 
-- [🟢 Base · Cowork](/build/base-scenario-2)
-- [🔵 Builder · Microsoft Scout](/build/builder-scenario-2)
-- [🟣 Advanced · VS Code · GitHub Copilot](/build/advanced-scenario-2)
+<!-- markdownlint-disable MD033 -->
+<BuildMatrix scenario="scenario-2" />
