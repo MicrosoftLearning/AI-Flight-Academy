@@ -24,7 +24,7 @@ Read the [Scenario 1 brief](/scenarios/scenario-1) for what you'd be building.
 
 ## 2 · What you'll demonstrate
 
-See the required functions for this altitude on the [🔵 Builder · Agent-Orchestrated level page](/levels/builder/).
+See the required functions for this altitude on the [track comparison](/levels/).
 
 ## 3 · Assembly map — snap these blocks together
 

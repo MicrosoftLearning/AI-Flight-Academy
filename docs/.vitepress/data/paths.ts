@@ -147,10 +147,13 @@ function suffix(trackId: string, scenarioId: string): string {
   return label ? ` (${label})` : "";
 }
 
+/** The single chooser lives on the home page. Everything points at it. */
+export const CHOOSER = "/#start-here";
+
 /** "Start Building" nav dropdown: one group per scenario, one item per track. */
 export function navBuildItems() {
   return [
-    { text: "All build pages", link: "/build/" },
+    { text: "🧭 Pick your path", link: CHOOSER },
     ...scenarios.map((s) => ({
       text: `${s.emoji} ${s.label} · ${s.name}`,
       items: tracks.map((t) => ({
@@ -161,28 +164,10 @@ export function navBuildItems() {
   ];
 }
 
-/** Chooser sidebar for the /build/ hub — the one place breadth is wanted. */
-export function buildHubSidebar() {
-  return [
-    {
-      text: "Build pages",
-      items: [{ text: "Pick your path", link: "/build/" }],
-    },
-    ...scenarios.map((s) => ({
-      text: `${s.emoji} ${s.label} · ${s.name}`,
-      collapsed: false,
-      items: tracks.map((t) => ({
-        text: `${t.emoji} ${t.label}${suffix(t.id, s.id)}`,
-        link: buildLink(t.id, s.id),
-      })),
-    })),
-  ];
-}
-
 /**
- * Cockpit sidebar for a single build page: only the scenario you're in, the
- * guides for your track, and the finish line. Everything else is deliberately
- * out of sight — mid-hack you want focus, not a directory.
+ * Cockpit sidebar for a single build page. The build page is self-contained —
+ * it already opens with the problem and the outcome — so there is no "brief"
+ * link to bounce you to a longer copy of what you're reading.
  */
 export function buildPageSidebar(trackId: string, scenarioId: string) {
   const track = getTrack(trackId)!;
@@ -197,7 +182,6 @@ export function buildPageSidebar(trackId: string, scenarioId: string) {
           text: `${track.emoji} ${track.label} — your build page`,
           link: buildLink(trackId, scenarioId),
         },
-        { text: "The scenario brief", link: `/scenarios/${scenarioId}` },
       ],
     },
     {
@@ -220,14 +204,11 @@ export function buildPageSidebar(trackId: string, scenarioId: string) {
         { text: "🚀 Submit your project", link: "/submit/" },
       ],
     },
-    { text: "← All scenarios", link: "/build/" },
+    { text: "🧭 Switch path", link: CHOOSER },
   ];
 }
 
-/**
- * One sidebar per build route, plus the hub. Specific keys have more path
- * segments than "/build", so VitePress resolves them first.
- */
+/** One sidebar per build route. */
 export function buildSidebars(): Record<string, ReturnType<typeof buildPageSidebar>> {
   const out: Record<string, any> = {};
   for (const s of scenarios) {
@@ -235,6 +216,5 @@ export function buildSidebars(): Record<string, ReturnType<typeof buildPageSideb
       out[buildLink(t.id, s.id)] = buildPageSidebar(t.id, s.id);
     }
   }
-  out["/build"] = buildHubSidebar();
   return out;
 }

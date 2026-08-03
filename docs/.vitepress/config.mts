@@ -41,12 +41,7 @@ export default defineConfig({
       "/levels/": [
         {
           text: "Pick Your Altitude",
-          items: [
-            { text: "Overview", link: "/levels/" },
-            { text: "🟢 Base · Copilot-Crafted", link: "/levels/base/" },
-            { text: "🔵 Builder · Agent-Orchestrated", link: "/levels/builder/" },
-            { text: "🟣 Advanced · Code-Extended", link: "/levels/advanced/" },
-          ],
+          items: [{ text: "Which track is right for me?", link: "/levels/" }],
         },
       ],
       "/bricks/": [

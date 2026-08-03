@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute, withBase } from "vitepress";
-import { getTrack, getScenario, statusFor, statusLabel } from "../../data/paths";
+import { getTrack, getScenario, statusFor, statusLabel, CHOOSER } from "../../data/paths";
 
 const route = useRoute();
 
@@ -28,7 +28,7 @@ const parsed = computed(() => {
       <span class="build-badge-tool">{{ parsed.track.tool }}</span>
     </span>
     <span v-if="parsed.status" class="build-badge-status">{{ parsed.status }}</span>
-    <a class="build-badge-switch" :href="withBase('/build/')">Switch path →</a>
+    <a class="build-badge-switch" :href="withBase(CHOOSER)">Switch path →</a>
   </div>
 </template>
 

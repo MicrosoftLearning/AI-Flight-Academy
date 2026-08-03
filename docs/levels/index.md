@@ -1,31 +1,26 @@
 ---
-title: Pick how you want to build
+title: Which track is right for me?
 ---
 
-# Pick how you want to build
+# Which track is right for me?
 
-Same scenario, three ways in. Pick whichever fits how you like to work — no track is a lesser version of another.
+Same scenario, three ways in. No track is a lesser version of another — they
+differ in the tools you use, not in how much you accomplish.
 
-| | Build with | You'll be | |
-| --- | --- | --- | --- |
-| 🟢 **Cowork** | Microsoft 365 Copilot | Writing instructions, not code. Guided end to end. | **[Start →](/build/)** |
-| 🔵 **Copilot Studio / Scout** | Copilot Studio or Scout | Wiring agents in a low-code maker studio. | **[Start →](/build/)** |
-| 🟣 **Code** | VS Code + GitHub Copilot | Writing real code. You get a contract, not a solution. | **[Start →](/build/)** |
-
-## Your build page, by scenario
-
-<!-- markdownlint-disable MD033 -->
-<BuildMatrix />
+| | You'll build with | You'll spend the time |
+| --- | --- | --- |
+| 🟢 **Base** · Copilot-Crafted | Microsoft 365 Copilot + Cowork | Writing instructions, not code. Guided end to end. |
+| 🔵 **Builder** · Agent-Orchestrated | Copilot Studio or Scout | Wiring agents together in a low-code maker studio. |
+| 🟣 **Advanced** · Code-Extended | VS Code + GitHub Copilot | Writing real code. You get a contract, not a solution. |
 
 ## Not sure?
 
-- **Never built an agent before?** 🟢 Cowork. It is guided end to end and needs no setup.
-- **You live in a terminal or VS Code?** 🟣 Code.
+- **Never built an agent before?** 🟢 **Base**. It's guided end to end and needs no setup.
+- **Want to see agents hand off to each other?** 🔵 **Builder**.
+- **You live in a terminal or VS Code?** 🟣 **Advanced**.
 
 ::: tip All three produce the same artifact
 The portable spec is identical. The tracks differ in what you build around it.
 :::
 
-::: warning 🚧 Scenarios are a work in progress
-Build paths are drafted and being tested. Expect changes before the event.
-:::
+Ready? [**Pick your scenario and track →**](/#start-here)

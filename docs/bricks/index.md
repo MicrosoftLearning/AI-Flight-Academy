@@ -7,7 +7,7 @@ title: Step-by-step guides
 Full walkthroughs for each part of a build — every click, every prompt, every setting.
 
 ::: tip How these fit with your build page
-Your [build page](/build/) gets you through the hack top to bottom, with the essentials expandable in place.
+Your [build page](/#start-here) gets you through the hack top to bottom, with the essentials expandable in place.
 
 **These are the complete versions.** Open one in a new tab and keep it beside your build page if you want every step spelled out — or come back to them after the hack when you're building something of your own.
 :::

@@ -10,6 +10,9 @@ hero:
     alt: The Imagineer Hack
   actions:
     - theme: brand
+      text: Start building
+      link: /#start-here
+    - theme: alt
       text: How the hack works
       link: /how-it-works/
 ---
@@ -36,7 +39,7 @@ hero:
 
 <!-- markdownlint-disable MD033 -->
 <div class="lab-grid">
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/scenarios/scenario-1">
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/scenarios/">
     <span class="lab-card-emoji">🎯</span>
     <span class="lab-card-title">1 · Pick a scenario</span>
     <span class="lab-card-desc">🚧 Scenario 1 is The Digital Twin, Scenario 2 is The Greenlight. Both still in progress.</span>
@@ -48,7 +51,7 @@ hero:
     <span class="lab-card-desc">Cowork with no code, or real code in VS Code. Same result, different route.</span>
     <span class="lab-card-cta">Compare →</span>
   </a>
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/build/">
+  <a class="lab-card" href="/Team-Week-Imagineer-Hack/#start-here">
     <span class="lab-card-emoji">🧱</span>
     <span class="lab-card-title">3 · Follow your build page</span>
     <span class="lab-card-desc">Everything you need is on one page, start to finish. No hunting around.</span>
@@ -66,7 +69,7 @@ hero:
 
 <div class="home-section">
 
-## Start here — build your path
+## Start here — build your path {#start-here}
 
 <p class="home-section-intro is-wide">Two clicks and you're building. All three routes solve the same problem — pick whichever fits how you like to work.</p>
 
