@@ -90,13 +90,9 @@ Open `http://localhost:4173`. The startup line confirms your Copilot CLI is foun
 
 ### 2 · Convene the council
 
-Drop the executive summary (`data-pack/content/P4-exec-summary.md`) onto the board. Watch the seats split on the same document — Retail rejects it outright as an unusable wall of prose, while Compliance ships it: that same control detail is exactly the audit rigor they need. Each verdict comes with a quote and a confidence. Iterate on a remediation plan until the entire council greenlights it, then copy your plan to work on later.
+Drop the executive summary (`data-pack/content/P4-exec-summary.md`) onto the board. A single general-purpose reviewer — the **solo critic**, whose scores ship recorded in the pack — could only call this one flat *REVISE*. Your council splits it instead: Retail rejects it outright as an unusable wall of prose, while Compliance ships it — that same control detail is exactly the audit rigor they need. Each verdict comes with a quote and a confidence. Iterate on a remediation plan until the whole council greenlights it, then copy your plan to work on later.
 
-No code yet: this is the council working out of the box.
-
-::: warning Leave the baseline alone
-`the-greenlight/reference/solo-rubric.json` is the control — the one-verdict "before." Read it; never edit it.
-:::
+No code yet — one flat verdict becomes a room that disagrees.
 
 ### 3 · Seat an audience that bites
 
@@ -287,7 +283,7 @@ The board is one surface. An **MCP server** exposes the council as tools so your
 60–90 seconds. Show:
 
 - [ ] Your own audiences seated on the board, with distinct goals
-- [ ] The council splitting on a piece — different verdicts, each with a quote
+- [ ] The same piece: the solo critic's one flat verdict, then your council splitting it — each seat with a quote
 - [ ] A code-caught check FAIL sitting next to a model verdict
 - [ ] Your path: adding a seat live from the board (A), or a green plan opening a PR (B)
 - [ ] Bonus: another agent convening your council through MCP

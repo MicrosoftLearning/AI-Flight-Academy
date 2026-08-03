@@ -51,7 +51,7 @@ Open Microsoft Scout and add the Greenlight skill. The dashboard step later also
 
 ---
 
-## 1 · Import the skill, seat your members, and convene the council
+## 1 · Import the skill and load the content
 
 1. Extract `the-greenlight.zip` skill to a folder.
 1. Add `the-greenlight` skill to Scout by going to **Extensions** and select **Import**
@@ -62,27 +62,33 @@ Open Microsoft Scout and add the Greenlight skill. The dashboard step later also
 
 ## 2 · Seat the council
 
-Add at least two audiences to `THE-COUNCIL.md` — the provided profiles (start with **Retail** and **Compliance**) or custom audiences you actually care about. They need different goals, or the room can't disagree.
+A **seat** is one audience — who they are, the outcome they need from the content, and the specific bars it has to clear for *them*. Seating a council means putting two or more of these in `THE-COUNCIL.md` so the same piece gets judged from each point of view at once.
 
-Ask Scout something like, *"Use Greenlight to seat all audiences in the data pack to the council."*
+The goal isn't to *list* audiences — it's to seat ones that **disagree**. Give each a different outcome and needs that are true for them but not for everyone (a bar any reader would score the same is just "good writing," and the solo critic already covers that). That difference is what makes the room split on a piece instead of nodding along.
 
-::: tip Use a real audience when it helps
-Work IQ can draft a profile from work information you already have access to. Treat it as a first draft and correct it with people who know that audience.
+Start with the provided profiles — **Retail** and **Compliance** are the sharpest pair — or add custom audiences you actually write for. Ask Scout to do the seating:
+
+> *"Use Greenlight to seat the Retail and Compliance audiences from the data pack onto the council."*
+
+**Done when:** `THE-COUNCIL.md` holds two or more audiences with clearly different goals.
+
+::: tip Seat a real audience with Work IQ
+Scout is grounded in your Microsoft 365 work through **Work IQ** — nothing to connect and no sign-in to set up, and it only ever sees what you already can (your mail, sent mail, calendar, Teams, files, and org chart). Ask it to draft an audience profile from those real signals — *"Scout, build an audience card for [a role you write for] from Work IQ that mimics the audiences in THE-COUNCIL.md"* — then treat it as a first draft and correct it with people who know that audience. Keep the data in your own tenant, out of shared spaces.
 :::
 
 ## 3 · Convene the council
 
-Before any dashboard, ask Scout to run the council on the **executive summary (P4)**. You should see the seats split — Retail and Compliance reaching different verdicts, each with a quote, a source, and a confidence.
+**Convening** is the heart of the exercise: hand the seated council a piece of content and have every audience judge it against *its own* criteria at the same time. Each seat returns a verdict — Ship, Revise, or Reject — and has to back it with a **quote** from the piece, a **source** (a line from its profile or the style guide), and a **confidence**. A seat that isn't sure says so instead of guessing.
 
-Do this first on purpose: the core result is done here, with nothing to install. The dashboard makes it visible — it doesn't replace it.
+Ask Scout to convene on the **executive summary (P4)** — the piece chosen to prove the point. It's a polished governance write-up: exactly what a Compliance reader wants, and unusable for a Retail floor lead who needs one action in a short standing read. A single reviewer can only average that into a mushy "needs work." A council says both things at once, with receipts:
 
 | Piece | Solo critic | Council |
 |---|---|---|
 | **Executive summary (P4)** | Needs work (one verdict) | **Reject for Retail · Ship for Compliance** |
 
-> **Do not change the solo critic.** It is the "before" you compare your council against.
+That split — the same document, opposite verdicts, each evidence-backed — *is* the result of this step. The thinking is done here, with nothing installed; everything after is about making it visible and repeatable. (The solo critic's scores ship recorded — they're the fixed "before," so leave them as-is.)
 
-**Done when:** two seats return different verdicts on P4, each with a quote.
+**Done when:** two seats return different verdicts on P4, each with a quote behind it.
 
 ## 4 · Build the dashboard
 
@@ -90,12 +96,21 @@ Now make the disagreement visible. Ask Scout to build a local web dashboard for 
 
 Describe what you want:
 
-- a card for each seat that lights up with its verdict — green for ship, amber for revise, red for reject
+- a card or avatar for each seat that lights up with its verdict — green for ship, amber for revise, red for reject
 - the quote and confidence behind each seat's call, on its card
 - a place to drop in a document or paste a link for the council to review
 - the conflicts and who's served, at a glance
+- a creative theme for the council or a custom name
 
 Scout scaffolds the app and wires it to the Copilot CLI backend. When you feed the board a piece, the CLI runs the council and the cards update.
+
+::: details Stuck on the prompt? Start with this
+Paste this into Scout, then adjust from there:
+
+> Build me a local web dashboard for the Greenlight council. Use **GitHub Copilot CLI as the backend** to run the Greenlight skill: a small **Node** web server that shells out to `copilot`, with a plain HTML/CSS/JS front-end — no build step, minimal dependencies, so it starts with one command. Show a card for each seat in `THE-COUNCIL.md` that lights up with its verdict (green = ship, amber = revise, red = reject) and shows that seat's quote and confidence. Add a place to drop in a document or paste a link, and a summary of the conflicts and who's served. Start simple — I'll ask for more.
+
+The real trick is to **start small and layer on**: get the cards lighting up on one piece first, then ask for one addition at a time (a theme, a coverage view, animations) instead of everything in a single prompt.
+:::
 
 ::: warning If the app won't start
 Setups vary — Node versions, dependencies, CLI sign-in. If the dashboard won't run on your machine, keep going in the Scout conversation; the council still works there. Get the board up if you can, but don't let it block the review.
@@ -124,6 +139,7 @@ Once the board runs, the bonus is adding features to it. Keep each one small and
 - a coverage view — every article by every audience, at a glance
 - a history, so you can watch a piece improve after a rebuild
 - a button that sends the greenlit plan to a person
+- animations for when the council is deliberating or different verdicts
 
 ---
 
@@ -132,7 +148,7 @@ Once the board runs, the bonus is adding features to it. Keep each one small and
 60–90 seconds. Show:
 
 - [ ] The two audiences you seated and the goal each one defends
-- [ ] P4 splitting the council in the conversation, each seat with a quote
+- [ ] The solo critic's one verdict on P4, then your council splitting it — each seat with a quote
 - [ ] The dashboard lighting up each seat's verdict on a piece you feed it
 - [ ] One conflict and the coverage, visible at a glance
 - [ ] The board started in one step — a command or a schedule
