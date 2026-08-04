@@ -14,6 +14,8 @@ export interface Track {
   desc: string;
   /** Section of /bricks/ holding the step-by-step guides for this track. */
   guidesLink: string;
+  /** The guides themselves, for the sidebar. */
+  guides: { text: string; link: string }[];
 }
 
 export interface Scenario {
@@ -35,6 +37,12 @@ export const tracks: Track[] = [
     tool: "Microsoft 365 Copilot + Cowork",
     desc: "Build with Microsoft 365 Copilot and Cowork. Turn a repetitive task into a reusable skill that runs itself. No code, all impact.",
     guidesLink: "/bricks/#cowork",
+    guides: [
+      { text: "Connect to a data source", link: "/bricks/cowork-connect-source" },
+      { text: "Write a reusable skill", link: "/bricks/cowork-build-skill" },
+      { text: "Produce a formatted output", link: "/bricks/cowork-formatted-output" },
+      { text: "Re-run a skill on new inputs", link: "/bricks/cowork-rerun-skill" },
+    ],
   },
   {
     id: "builder",
@@ -45,6 +53,15 @@ export const tracks: Track[] = [
     tool: "Copilot Studio / Scout",
     desc: "Wire up a little team of agents that hand off to each other, ground on real files, and fire an alert to Teams.",
     guidesLink: "/bricks/#copilot-studio",
+    guides: [
+      { text: "Create an agent + solution", link: "/bricks/studio-create-agent" },
+      { text: "Add a topic with a trigger", link: "/bricks/studio-topic-trigger" },
+      { text: "Ground on a knowledge source", link: "/bricks/studio-knowledge-grounding" },
+      { text: "Two agents that hand off", link: "/bricks/studio-multi-agent" },
+      { text: "Add an agent flow", link: "/bricks/studio-agent-flow" },
+      { text: "Adaptive Card to Teams", link: "/bricks/studio-adaptive-card" },
+      { text: "Publish your agent", link: "/bricks/studio-publish" },
+    ],
   },
   {
     id: "advanced",
@@ -55,6 +72,12 @@ export const tracks: Track[] = [
     tool: "VS Code + GitHub Copilot",
     desc: "Build with Scout and GitHub Copilot. Add a custom connector, ground on live data with Work IQ, and put a guardrail on the output.",
     guidesLink: "/bricks/#code",
+    guides: [
+      { text: "Set up Scout / GitHub Copilot", link: "/bricks/advanced-setup" },
+      { text: "Build a custom connector (MCP)", link: "/bricks/advanced-mcp-connector" },
+      { text: "Ground on live data with Work IQ", link: "/bricks/advanced-work-iq" },
+      { text: "Add a guardrail / output check", link: "/bricks/advanced-guardrail" },
+    ],
   },
 ];
 
@@ -147,9 +170,80 @@ export function navBuildItems() {
 }
 
 /**
- * Build pages don't get a cross-page sidebar. Mid-build the left rail is the
- * page's own steps (VitePress outline, moved left), and the handful of
- * cross-page links live in the toolbar at the top of the page.
+ * One sidebar for the whole site, organised by scenario. Each scenario expands
+ * to its three paths, so the structure teaches the model of the hack: pick a
+ * scenario, then pick how you build it. VitePress auto-expands the group
+ * containing the current page and highlights it, so arriving from the top nav
+ * lands you in the right place with the right branch already open.
+ */
+export function globalSidebar(openScenario?: string, openGuideTrack?: string) {
+  return [
+    {
+      text: "The Imagineer Hack",
+      items: [
+        { text: "Home", link: "/" },
+        { text: "How the hack works", link: "/how-it-works/" },
+        { text: "Run of show", link: "/how-it-works/run-of-show" },
+        { text: "Which path is right for me?", link: "/levels/" },
+      ],
+    },
+    {
+      text: "Scenarios",
+      items: scenarios.map((s) => ({
+        text: `${s.emoji} ${s.name}`,
+        collapsed: s.id !== openScenario,
+        items: [
+          { text: "The brief", link: `/scenarios/${s.id}` },
+          ...tracks.map((t) => ({
+            text: `${t.emoji} ${t.label}${suffix(t.id, s.id)}`,
+            link: buildLink(t.id, s.id),
+          })),
+        ],
+      })),
+    },
+    {
+      text: "Guides",
+      items: tracks.map((t) => ({
+        text: `${t.emoji} ${t.label}`,
+        collapsed: t.id !== openGuideTrack,
+        items: t.guides,
+      })),
+    },
+    {
+      text: "Finish line",
+      items: [
+        { text: "Downloads", link: "/resources/downloads" },
+        { text: "Submit your project", link: "/submit/" },
+        { text: "For facilitators", link: "/facilitator/" },
+      ],
+    },
+  ];
+}
+
+/**
+ * A sidebar per route, so the branch you need is already open when you land —
+ * computed at build time rather than left to client-side hydration. Keys with
+ * more path segments win, so the specific routes beat the "/" default.
+ */
+export function sidebars(): Record<string, ReturnType<typeof globalSidebar>> {
+  const out: Record<string, any> = {};
+  for (const s of scenarios) {
+    for (const t of tracks) {
+      out[buildLink(t.id, s.id)] = globalSidebar(s.id);
+    }
+    out[`/scenarios/${s.id}`] = globalSidebar(s.id);
+  }
+  for (const t of tracks) {
+    for (const g of t.guides) {
+      out[g.link] = globalSidebar(undefined, t.id);
+    }
+  }
+  out["/"] = globalSidebar();
+  return out;
+}
+
+/**
+ * Build pages sit in the sidebar like everything else; nothing special needed.
  */
 export function isBuildPage(relativePath: string): boolean {
   return /^build\/(base|builder|advanced)-scenario-\d+\.md$/.test(relativePath);

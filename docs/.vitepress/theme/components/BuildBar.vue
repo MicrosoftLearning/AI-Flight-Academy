@@ -28,9 +28,6 @@ const parsed = computed(() => {
       <span v-if="parsed.status" class="build-bar-status">{{ parsed.status }}</span>
     </div>
     <nav class="build-bar-links">
-      <a :href="withBase(parsed.track.guidesLink)">Guides</a>
-      <a :href="withBase('/resources/downloads')">Downloads</a>
-      <a :href="withBase('/submit/')">Submit</a>
       <a :href="withBase(CHOOSER)">Switch path</a>
     </nav>
   </div>
