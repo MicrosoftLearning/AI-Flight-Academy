@@ -9,6 +9,7 @@ title: Build a custom connector (MCP)
 **Tool:** Python + MCP + VS Code / GitHub Copilot
 **Source status:** Advanced connector
 
+<!-- #region guide -->
 An MCP server turns your local spec into callable tools. Instead of pasting context into every prompt, you expose small functions like `read_policy()`, `check_boundary()`, or `lookup_customer_context()`.
 
 ## Steps
@@ -114,3 +115,4 @@ An MCP server turns your local spec into callable tools. Instead of pasting cont
 ## Apply it to your scenario
 
 Expose the smallest stable facts your scenario needs. Good MCP tools are boring and reliable: read the spec, return the current rule, check the boundary, list the known gaps. Let the calling agent do the creative work.
+<!-- #endregion guide -->

@@ -43,3 +43,7 @@ See the required functions for this altitude on the [track comparison](/levels/)
 - [ ] TODO — what to show in your 60-second demo
 
 [← Back to start](/) · [Scenario 1 brief](/scenarios/scenario-1)
+
+## Guides for this track {#guides}
+
+<!--@include: ../.vitepress/partials/guides-builder.md-->

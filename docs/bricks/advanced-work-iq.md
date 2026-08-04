@@ -9,6 +9,7 @@ title: Ground on live data with Work IQ
 **Tool:** Cowork Work IQ + exported markdown
 **Source status:** Advanced grounding
 
+<!-- #region guide -->
 Live work data is powerful. It is also the easiest place to lose the whole session. The goal is not to build a full Microsoft Graph integration. The goal is to ground your spec in evidence.
 
 ::: warning Do not spend the hack on Graph auth
@@ -86,3 +87,4 @@ A real Graph path means Azure AD app registration, permissions, admin consent qu
 ## Apply it to your scenario
 
 Use Work IQ to create the evidence layer. Your agent can only reason from stated preferences unless you add observed behavior. `revealed.md` is where the scenario becomes grounded instead of aspirational.
+<!-- #endregion guide -->

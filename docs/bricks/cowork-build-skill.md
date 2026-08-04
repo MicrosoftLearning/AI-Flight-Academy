@@ -9,6 +9,7 @@ title: Write a reusable Cowork skill
 **Tool:** Cowork  
 **Source status:** Liftable from Agent Academy — Cowork Collective
 
+<!-- #region guide -->
 A Cowork skill is a reusable instruction file. It tells Cowork when to load the skill, what role to play, what steps to follow, and what output to produce.
 
 ![Cowork Customize page, Skills tab, Add menu open](/img/cowork-customize-skills.png)
@@ -109,3 +110,4 @@ Cowork uses the **Agent Skills open standard**. The same `SKILL.md` format is re
 ## Apply it to your scenario
 
 Turn the repeated part of your scenario into a skill. If you would give the same instructions twice, put them in `SKILL.md`: when to run, what evidence to pull, what rules to follow, and what output to return.
+<!-- #endregion guide -->

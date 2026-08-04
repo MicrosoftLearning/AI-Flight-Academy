@@ -9,6 +9,7 @@ title: Connect Cowork to a data source
 **Tool:** Cowork  
 **Source status:** Liftable from Agent Academy — Cowork Collective
 
+<!-- #region guide -->
 Cowork is already grounded in your Microsoft 365 work through **Work IQ**. There is no connector to install and no custom auth to build. Cowork can use what the signed-in user can already access: mail, sent mail, calendar, Teams chats and channels, OneDrive and SharePoint files, and people/org chart data.
 
 ::: tip Why this matters
@@ -52,3 +53,4 @@ Cowork only sees what the signed-in user can see. Do not add credentials, secret
 ## Apply it to your scenario
 
 For any scenario, start by naming the evidence you need. Ask Cowork to pull that evidence from Work IQ, return it in a stable shape, and keep the raw examples available so your skill can reason from facts instead of vibes.
+<!-- #endregion guide -->

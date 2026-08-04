@@ -306,3 +306,7 @@ Lead with the moment one piece of content looks right for one audience and wrong
 ---
 
 [← Back to start](/) · [What this scenario is about](/scenarios/scenario-2)
+
+## Guides for this track {#guides}
+
+<!--@include: ../.vitepress/partials/guides-advanced.md-->

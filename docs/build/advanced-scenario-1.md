@@ -403,3 +403,7 @@ Show what the twin decided against and why. That is the part a single prompt can
 ---
 
 [← Back to start](/) · [What this scenario is about](/scenarios/scenario-1)
+
+## Guides for this track {#guides}
+
+<!--@include: ../.vitepress/partials/guides-advanced.md-->

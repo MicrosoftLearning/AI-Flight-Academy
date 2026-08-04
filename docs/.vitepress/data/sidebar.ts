@@ -99,9 +99,16 @@ export function globalSidebar(
 
   const guidesSection = track
     ? {
+        // On a build page the guides are inlined into the page itself, so
+        // these link to anchors rather than navigating away and back.
         text: `Guides for ${track.emoji} ${track.label}`,
         collapsed: true,
-        items: track.guides,
+        items: track.guides.map((g) => ({
+          text: g.text,
+          link: opts.steps && opts.scenario
+            ? `${buildLink(track.id, opts.scenario)}#g-${g.link.split("/").pop()}`
+            : g.link,
+        })),
       }
     : {
         text: "Guides",

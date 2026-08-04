@@ -9,6 +9,7 @@ title: Re-run a skill on new inputs
 **Tool:** Cowork  
 **Source status:** Author from scratch (short)
 
+<!-- #region guide -->
 A reusable skill gets more valuable when you run it again: on a new file, a new meeting, a new email, a new week, or a new trigger.
 
 ## Steps
@@ -33,3 +34,4 @@ For event-driven tasks, Cowork's default is draft-and-approve. It can prepare an
 ## Apply it to your scenario
 
 Choose one moment where your scenario should repeat. It might be every morning, before every meeting, when a customer email arrives, or when someone @mentions you. Re-run the skill manually first. Then arm one schedule or trigger only after the output is reliable.
+<!-- #endregion guide -->

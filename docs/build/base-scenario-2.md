@@ -203,3 +203,7 @@ Show the moment the council changed your understanding of the content. That is m
 ---
 
 [← Back to start](/) · [What this scenario is about](/scenarios/scenario-2)
+
+## Guides for this track {#guides}
+
+<!--@include: ../.vitepress/partials/guides-base.md-->
