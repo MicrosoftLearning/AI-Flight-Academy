@@ -176,7 +176,60 @@ export function navBuildItems() {
  * containing the current page and highlights it, so arriving from the top nav
  * lands you in the right place with the right branch already open.
  */
-export function globalSidebar(openScenario?: string, openGuideTrack?: string) {
+/**
+ * The sidebar is scoped to the choice you've made. Once you're in a scenario,
+ * the other scenarios disappear — you see your scenario's three paths and
+ * nothing else, with one link back out. Same for guides once you've picked a
+ * track. Before you've chosen, everything is listed.
+ */
+export function globalSidebar(opts: { scenario?: string; track?: string } = {}) {
+  const scenario = opts.scenario ? getScenario(opts.scenario) : undefined;
+  const track = opts.track ? getTrack(opts.track) : undefined;
+
+  const scenarioSection = scenario
+    ? {
+        // Scoped: only the scenario you're in.
+        text: `${scenario.emoji} ${scenario.name}`,
+        items: [
+          { text: "The brief", link: `/scenarios/${scenario.id}` },
+          ...tracks.map((t) => ({
+            text: `${t.emoji} ${t.label}${suffix(t.id, scenario.id)}`,
+            link: buildLink(t.id, scenario.id),
+          })),
+          { text: "↔ Switch scenario", link: CHOOSER },
+        ],
+      }
+    : {
+        // Unscoped: browsing, so show them all.
+        text: "Scenarios",
+        items: scenarios.map((s) => ({
+          text: `${s.emoji} ${s.name}`,
+          collapsed: true,
+          items: [
+            { text: "The brief", link: `/scenarios/${s.id}` },
+            ...tracks.map((t) => ({
+              text: `${t.emoji} ${t.label}${suffix(t.id, s.id)}`,
+              link: buildLink(t.id, s.id),
+            })),
+          ],
+        })),
+      };
+
+  const guidesSection = track
+    ? {
+        text: `Guides for ${track.emoji} ${track.label}`,
+        collapsed: true,
+        items: track.guides,
+      }
+    : {
+        text: "Guides",
+        items: tracks.map((t) => ({
+          text: `${t.emoji} ${t.label}`,
+          collapsed: true,
+          items: t.guides,
+        })),
+      };
+
   return [
     {
       text: "The Imagineer Hack",
@@ -187,28 +240,8 @@ export function globalSidebar(openScenario?: string, openGuideTrack?: string) {
         { text: "Which path is right for me?", link: "/levels/" },
       ],
     },
-    {
-      text: "Scenarios",
-      items: scenarios.map((s) => ({
-        text: `${s.emoji} ${s.name}`,
-        collapsed: s.id !== openScenario,
-        items: [
-          { text: "The brief", link: `/scenarios/${s.id}` },
-          ...tracks.map((t) => ({
-            text: `${t.emoji} ${t.label}${suffix(t.id, s.id)}`,
-            link: buildLink(t.id, s.id),
-          })),
-        ],
-      })),
-    },
-    {
-      text: "Guides",
-      items: tracks.map((t) => ({
-        text: `${t.emoji} ${t.label}`,
-        collapsed: t.id !== openGuideTrack,
-        items: t.guides,
-      })),
-    },
+    scenarioSection,
+    guidesSection,
     {
       text: "Finish line",
       items: [
@@ -221,21 +254,21 @@ export function globalSidebar(openScenario?: string, openGuideTrack?: string) {
 }
 
 /**
- * A sidebar per route, so the branch you need is already open when you land —
- * computed at build time rather than left to client-side hydration. Keys with
- * more path segments win, so the specific routes beat the "/" default.
+ * A sidebar per route, so what you see is already scoped to your choice when
+ * you land — computed at build time rather than left to client-side state.
+ * Keys with more path segments win, so specific routes beat the "/" default.
  */
 export function sidebars(): Record<string, ReturnType<typeof globalSidebar>> {
   const out: Record<string, any> = {};
   for (const s of scenarios) {
     for (const t of tracks) {
-      out[buildLink(t.id, s.id)] = globalSidebar(s.id);
+      out[buildLink(t.id, s.id)] = globalSidebar({ scenario: s.id, track: t.id });
     }
-    out[`/scenarios/${s.id}`] = globalSidebar(s.id);
+    out[`/scenarios/${s.id}`] = globalSidebar({ scenario: s.id });
   }
   for (const t of tracks) {
     for (const g of t.guides) {
-      out[g.link] = globalSidebar(undefined, t.id);
+      out[g.link] = globalSidebar({ track: t.id });
     }
   }
   out["/"] = globalSidebar();
