@@ -17,7 +17,7 @@ This is your build landing page for the altitude + scenario you picked. The scen
 
 ## 2 · What you'll demonstrate
 
-See the required functions for this altitude on the [🔵 Builder · Agent-Orchestrated level page](/levels/builder/).
+See the required functions for this altitude on the [track comparison](/levels/).
 
 ## 3 · Assembly map — snap these blocks together
 
@@ -36,3 +36,7 @@ See the required functions for this altitude on the [🔵 Builder · Agent-Orche
 - [ ] TODO — what to show in your 60-second demo
 
 [← Back to start](/) · [Scenario 3 brief](/scenarios/scenario-3)
+
+## Guides for this track {#guides}
+
+<!--@include: ../.vitepress/partials/guides-builder.md-->

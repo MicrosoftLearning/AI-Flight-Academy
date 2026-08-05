@@ -9,6 +9,7 @@ title: Add a guardrail / output check
 **Tool:** Python + MCP + GitHub Copilot
 **Source status:** Advanced guardrail
 
+<!-- #region guide -->
 A guardrail is a tool call that runs before anything leaves the system. It returns `ALLOW`, `ASK_FIRST`, or `NEVER`, plus the rule that governed the decision.
 
 ::: tip Enforce at the tool boundary
@@ -129,3 +130,4 @@ Do not write "please be careful" in a prompt and call it a guardrail. Put the ch
 ## Apply it to your scenario
 
 Put one real boundary in front of your scenario's highest-risk action. If your agent drafts messages, check before send. If it changes files, check before commit. If it exposes personal context, check before disclosure.
+<!-- #endregion guide -->

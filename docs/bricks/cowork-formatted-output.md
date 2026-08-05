@@ -9,6 +9,7 @@ title: Produce a formatted output
 **Tool:** Cowork  
 **Source status:** Mostly liftable from Agent Academy
 
+<!-- #region guide -->
 A good Cowork run should produce something you can reuse: a brief, a table, a document, a spreadsheet, a PDF, a draft email, or a checklist. The trick is to define the shape before Cowork writes.
 
 ## Steps
@@ -54,3 +55,4 @@ Re-running only works when the output shape is predictable. If yesterday's answe
 ## Apply it to your scenario
 
 Pick the artifact your scenario needs at demo time. Then define its contract in the skill: section names, field names, length limits, and missing-data behavior. Use Word, Excel, PDF, or Email only when that format makes the result easier to use.
+<!-- #endregion guide -->

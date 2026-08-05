@@ -318,3 +318,7 @@ Someone who knows you reads a draft your twin wrote and recognises it. That land
 ---
 
 [← Back to start](/) · [What this scenario is about](/scenarios/scenario-1)
+
+## Guides for this track {#guides}
+
+<!--@include: ../.vitepress/partials/guides-base.md-->

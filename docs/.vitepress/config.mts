@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import { navBuildItems, sidebars, isBuildPage } from "./data/sidebar";
 
 export default defineConfig({
   title: "The Imagineer Hack",
@@ -6,6 +7,13 @@ export default defineConfig({
     "A 2-hour hands-on agent-building hack for Global Skilling Team Week. Pick your altitude, snap together the building blocks, ship a working agent.",
   base: "/Team-Week-Imagineer-Hack/",
   cleanUrls: true,
+  // Build pages carry their steps in the sidebar, under the level you're on,
+  // so the right-hand outline would just be a second copy of the same list.
+  transformPageData(pageData) {
+    if (isBuildPage(pageData.relativePath)) {
+      pageData.frontmatter.aside = false;
+    }
+  },
   head: [
     [
       "link",
@@ -18,11 +26,7 @@ export default defineConfig({
       { text: "How the Hack Works", link: "/how-it-works/" },
       {
         text: "Start Building",
-        items: [
-          { text: "🟢 Cowork — no code (WIP)", link: "/build/base-scenario-1" },
-          { text: "🟣 Code — VS Code + Copilot (WIP)", link: "/build/advanced-scenario-1" },
-          { text: "🔵 Copilot Studio (coming soon)", link: "/build/builder-scenario-1" },
-        ],
+        items: navBuildItems(),
       },
       { text: "Submit", link: "/submit/" },
       { text: "Guides", link: "/bricks/" },
@@ -38,87 +42,8 @@ export default defineConfig({
     search: {
       provider: "local",
     },
-    sidebar: {
-      "/levels/": [
-        {
-          text: "Pick Your Altitude",
-          items: [
-            { text: "Overview", link: "/levels/" },
-            { text: "🟢 Base · Copilot-Crafted", link: "/levels/base/" },
-            { text: "🔵 Builder · Agent-Orchestrated", link: "/levels/builder/" },
-            { text: "🟣 Advanced · Code-Extended", link: "/levels/advanced/" },
-          ],
-        },
-      ],
-      "/bricks/": [
-        {
-          text: "Step-by-step guides",
-          items: [{ text: "All guides", link: "/bricks/" }],
-        },
-        {
-          text: "🟢 Cowork",
-          items: [
-            { text: "Connect Cowork to a data source", link: "/bricks/cowork-connect-source" },
-            { text: "Write a reusable Cowork skill", link: "/bricks/cowork-build-skill" },
-            { text: "Produce a formatted output", link: "/bricks/cowork-formatted-output" },
-            { text: "Re-run a skill on new inputs", link: "/bricks/cowork-rerun-skill" },
-          ],
-        },
-        {
-          text: "🔵 Copilot Studio (coming soon)",
-          items: [
-            { text: "Create an agent + solution", link: "/bricks/studio-create-agent" },
-            { text: "Add a topic with a trigger", link: "/bricks/studio-topic-trigger" },
-            { text: "Ground on a knowledge source", link: "/bricks/studio-knowledge-grounding" },
-            { text: "Build two agents that hand off", link: "/bricks/studio-multi-agent" },
-            { text: "Add an agent flow", link: "/bricks/studio-agent-flow" },
-            { text: "Send an Adaptive Card to Teams", link: "/bricks/studio-adaptive-card" },
-            { text: "Publish your agent", link: "/bricks/studio-publish" },
-          ],
-        },
-        {
-          text: "🟣 Code",
-          items: [
-            { text: "Set up Scout / GitHub Copilot", link: "/bricks/advanced-setup" },
-            { text: "Build a custom connector (MCP)", link: "/bricks/advanced-mcp-connector" },
-            { text: "Ground on live data with Work IQ", link: "/bricks/advanced-work-iq" },
-            { text: "Add a guardrail / output check", link: "/bricks/advanced-guardrail" },
-          ],
-        },
-      ],
-      "/scenarios/": [
-        {
-          text: "Scenarios",
-          items: [
-            { text: "Overview", link: "/scenarios/" },
-            { text: "Scenario 1 · The Digital Twin (WIP)", link: "/scenarios/scenario-1" },
-            { text: "Scenario 2 · The Greenlight (WIP)", link: "/scenarios/scenario-2" },
-            { text: "Scenario 3 (TBD)", link: "/scenarios/scenario-3" },
-          ],
-        },
-      ],
-      "/how-it-works/": [
-        {
-          text: "How the Hack Works",
-          items: [
-            { text: "Overview", link: "/how-it-works/" },
-            { text: "Run of Show", link: "/how-it-works/run-of-show" },
-          ],
-        },
-      ],
-      "/facilitator/": [
-        {
-          text: "Facilitator Kit",
-          items: [
-            { text: "Overview", link: "/facilitator/" },
-            { text: "Role Cards", link: "/facilitator/role-cards" },
-            { text: "Interview Script", link: "/facilitator/interview-script" },
-            { text: "Coach Playbook", link: "/facilitator/coach-playbook" },
-            { text: "Run of Show", link: "/how-it-works/run-of-show" },
-          ],
-        },
-      ],
-    },
+    outline: { level: [2, 3] },
+    sidebar: sidebars(),
     socialLinks: [
       {
         icon: "github",

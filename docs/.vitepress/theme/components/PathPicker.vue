@@ -1,45 +1,15 @@
 <script setup lang="ts">
 import { ref, computed } from "vue";
 import { useRouter, withBase } from "vitepress";
+import {
+  tracks as altitudes,
+  scenarios,
+  buildLink,
+  statusFor,
+  statusLabel,
+} from "../../data/paths";
 
 const router = useRouter();
-
-type Altitude = { id: string; emoji: string; icon: string; label: string; sub: string; desc: string };
-type Scenario = { id: string; emoji: string; label: string; sub: string };
-
-const altitudes: Altitude[] = [
-  {
-    id: "base",
-    emoji: "🟢",
-    icon: "✨",
-    label: "Base",
-    sub: "Copilot-Crafted",
-    desc: "Build with Microsoft 365 Copilot and Cowork. Turn a repetitive task into a reusable skill that runs itself. No code, all impact.",
-  },
-  {
-    id: "builder",
-    emoji: "🔵",
-    icon: "🧩",
-    label: "Builder",
-    sub: "Agent-Orchestrated",
-    desc: "Build with Copilot Studio. Wire up a little team of agents that hand off to each other, ground on real files, and fire an alert to Teams.",
-  },
-  {
-    id: "advanced",
-    emoji: "🟣",
-    icon: "🛰️",
-    label: "Advanced",
-    sub: "Code-Extended",
-    desc: "Build with Scout and GitHub Copilot. Add a custom connector, ground on live data with Work IQ, and put a guardrail on the output.",
-  },
-];
-
-// Scenarios are placeholders until the LT locks them.
-const scenarios: Scenario[] = [
-  { id: "scenario-1", emoji: "🧬", label: "Scenario 1", sub: "The Digital Twin — WIP" },
-  { id: "scenario-2", emoji: "🚦", label: "Scenario 2", sub: "The Greenlight — audience council" },
-  { id: "scenario-3", emoji: "🎯", label: "Scenario 3", sub: "TBD" },
-];
 
 const altitude = ref<string | null>(null);
 const scenario = ref<string | null>(null);
@@ -53,9 +23,18 @@ const chosenScenario = computed(() =>
   scenarios.find((s) => s.id === scenario.value)
 );
 
+const chosenStatus = computed(() =>
+  ready.value ? statusLabel[statusFor(altitude.value!, scenario.value!)] : ""
+);
+
+function comboStatus(scenarioId: string) {
+  if (!altitude.value) return "";
+  return statusLabel[statusFor(altitude.value, scenarioId)];
+}
+
 function start() {
   if (!ready.value) return;
-  router.go(withBase(`/build/${altitude.value}-${scenario.value}`));
+  router.go(withBase(buildLink(altitude.value!, scenario.value!)));
 }
 
 function reset() {
@@ -107,7 +86,11 @@ function reset() {
         >
           <span class="picker-bubble-emoji">{{ s.emoji }}</span>
           <span class="picker-bubble-title">{{ s.label }}</span>
+          <span class="picker-bubble-sub">{{ s.name }}</span>
           <span class="picker-bubble-desc">{{ s.sub }}</span>
+          <span v-if="comboStatus(s.id)" class="picker-bubble-status">
+            {{ comboStatus(s.id) }}
+          </span>
         </button>
       </div>
     </div>
@@ -116,7 +99,8 @@ function reset() {
     <div class="picker-launch">
       <p v-if="ready" class="picker-summary">
         {{ chosenAltitude?.emoji }} <strong>{{ chosenAltitude?.label }}</strong>
-        · {{ chosenScenario?.label }} ({{ chosenScenario?.sub }})
+        · {{ chosenScenario?.label }} ({{ chosenScenario?.name }})
+        <span v-if="chosenStatus"> — {{ chosenStatus }}</span>
       </p>
       <div class="picker-actions">
         <button
@@ -250,6 +234,13 @@ function reset() {
 
 .picker-bubble-desc {
   font-size: 0.85rem;
+  color: var(--vp-c-text-2);
+}
+
+.picker-bubble-status {
+  margin-top: 0.35rem;
+  font-size: 0.75rem;
+  font-weight: 600;
   color: var(--vp-c-text-2);
 }
 

@@ -9,6 +9,7 @@ title: Set up Scout / GitHub Copilot
 **Tool:** VS Code + GitHub Copilot agent mode or GitHub Copilot CLI
 **Source status:** Advanced setup
 
+<!-- #region guide -->
 This block gives you a local agent workbench. You will use it to run portable Agent Skills, custom subagents, and MCP tools from the same project folder.
 
 ::: tip Portability is the point
@@ -139,3 +140,4 @@ Agent Skills are plain files. The same folder can run in Cowork, VS Code Copilot
 ## Apply it to your scenario
 
 Use this setup when your scenario needs more than one perspective. Put the shared facts in files. Put each viewpoint in `.github/agents/`. Make the orchestrator explicitly delegate, then synthesize.
+<!-- #endregion guide -->

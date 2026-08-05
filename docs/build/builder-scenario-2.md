@@ -171,3 +171,7 @@ Drop one piece into the board and let two seats disagree in real time. That is t
 ---
 
 [← Back to start](/) · [What this scenario is about](/scenarios/scenario-2)
+
+## Guides for this track {#guides}
+
+<!--@include: ../.vitepress/partials/guides-builder.md-->
