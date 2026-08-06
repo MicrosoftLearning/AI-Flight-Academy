@@ -8,6 +8,8 @@ title: Scenario 2 · The Greenlight
 This scenario is drafted and being tested. Details may change before the event.
 :::
 
+![A lone film critic sits by himself in an old-Hollywood screening room, smugly pressing a glowing green approve button; his neon nameplate reads "average," three unlit empty verdict stations sit beside him, and the rows of red cinema seats behind him are deserted. Headline reads "No such person as average."](/img/scenario-2-council-opener.png)
+
 ## The problem
 
 Copilot and other agents already write content — drafts, summaries, posts, documents. The checks we run on that content look at whether it's accurate, clear, and roughly the right level, and they pass almost everything.
@@ -25,6 +27,8 @@ In **Base**, the part you build is one file:
 - **`THE-COUNCIL.md`** — your council's audience profiles. For each one, write its **goal** and what the content must do to get them there.
 
 The provided skill reviews the content from each audience's point of view. Every judgement includes a **quote**, a **source**, and a **confidence** rating. Where audiences disagree, it shows the conflict side by side, proposes what to build instead, and helps you make it — down to the message to the person waiting on it. From there you can set the review to run on its own; **Builder** and **Advanced** teams take that further, up to a gate that blocks content until every audience is served.
+
+![A diverse council of four critics reviews the same content but splits its verdict — two green approve lights, two red reject lights — as members lean in to argue. Neon nameplates read Retail, Compliance, Clinical, and Manufacturing. Headline reads "Same content. Split verdict."](/img/scenario-2-council-split.png)
 
 With the supplied pack, the same content should get **different verdicts from different audiences**. With your own content, the council should show whether audiences agree for good reasons or need different treatment. Every verdict points to the text and the audience need behind it. A replacement is ready only when the audience it serves would accept it.
 
@@ -88,3 +92,11 @@ Pick your altitude:
 
 <!-- markdownlint-disable MD033 -->
 <BuildMatrix scenario="scenario-2" />
+
+![The diverse council of four critics at their screening-room desk all light their verdict lamps green in approval, thumbs up. Neon nameplates read Retail, Compliance, Clinical, and Manufacturing. Headline reads "Now every audience gets a vote."](/img/scenario-2-council-conclusion.png)
+
+::: details 🎬 Blooper reel
+![One council critic has fallen asleep face-down on his green approve button amid spilled popcorn while the other three react with facepalms and eye-rolls. Neon nameplates read Retail, Compliance, Clinical, and Manufacturing. Headline reads "Even the best panel nods off."](/img/scenario-2-council-blooper.png)
+
+Even the best panel nods off now and then — which is exactly why you convene more than one reviewer.
+:::
