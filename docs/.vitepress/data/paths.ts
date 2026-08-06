@@ -50,8 +50,8 @@ export const tracks: Track[] = [
     icon: "🧩",
     label: "Builder",
     sub: "Agent-Orchestrated",
-    tool: "Copilot Studio / Scout",
-    desc: "Wire up a little team of agents that hand off to each other, ground on real files, and fire an alert to Teams.",
+    tool: "Microsoft Scout",
+    desc: "Build with Microsoft Scout — an always-on personal agent that acts on your behalf, grounded in your everyday work through Work IQ.",
     guidesLink: "/bricks/#copilot-studio",
     guides: [
       { text: "Create an agent + solution", link: "/bricks/studio-create-agent" },
