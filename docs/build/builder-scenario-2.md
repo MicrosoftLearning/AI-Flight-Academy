@@ -11,6 +11,8 @@ Scenario 2 is still being built and tested. Steps, downloads, and screenshots ma
 
 You run the council, then turn it into something you can watch.
 
+![A relaxed man slides a one-page brief toward a glowing blue agent console as the booth's blue lamps wake. Headline: "Hand it to Scout."](/img/scenario-2-builder-hero.png)
+
 ## What you're solving
 
 One review is not enough when different audiences need different things from the same content. A formal explainer might help a compliance officer make a careful decision and still be unusable for a store manager who needs one practical action during a busy shift.
@@ -90,6 +92,8 @@ That split — the same document, opposite verdicts, each evidence-backed — *i
 
 **Done when:** two seats return different verdicts on P4, each with a quote behind it.
 
+![Robotic arms assemble the council booth in blue light while the man reclines with his coffee. Headline: "Scout builds the booth."](/img/scenario-2-builder-build.png)
+
 ## 4 · Build the dashboard
 
 Now make the disagreement visible. Ask Scout to build a local web dashboard for the council, using **GitHub Copilot CLI as the backend** that runs the Greenlight skill.
@@ -143,6 +147,8 @@ Once the board runs, the bonus is adding features to it. Keep each one small and
 
 ---
 
+![The man waves and strolls out as the blue council booth and its dashboard run themselves. Headline: "Always-on. Hands-off."](/img/scenario-2-builder-alwayson.png)
+
 ## Show it off
 
 60–90 seconds. Show:
@@ -167,6 +173,12 @@ Drop one piece into the board and let two seats disagree in real time. That is t
 | The dashboard won't start | Check that GitHub Copilot CLI is signed in and Node is available; meanwhile, convene in the Scout conversation. |
 | The board shows nothing back | Confirm the skill is imported and the CLI can run it on its own first. |
 | The council can't see the article | Give Scout the content pack, and point the board at the same files. |
+
+::: details 🎬 Nobody nails it first try
+![He returns to find dozens of identical blue booths receding into the distance with printouts everywhere. Headline: "Maybe too hands-off."](/img/scenario-2-builder-blooper.png)
+
+Let Scout off the leash and it might build you forty booths. When it overshoots, rein it in and re-run — steering the agent *is* the build.
+:::
 
 ---
 

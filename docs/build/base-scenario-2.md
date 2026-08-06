@@ -9,6 +9,8 @@ Scenario 2 is still being built and tested. Steps, downloads, and screenshots ma
 :::
 **You'll build this in Cowork. No code, and no experience needed.**
 
+![In a dim screening room, a woman in a mustard cardigan sits alone beside four empty, unlit critic stations. Headline: "Start with a conversation."](/img/scenario-2-base-hero.png)
+
 ## What you're solving
 
 Copilot can write clear, accurate content. What it cannot know by itself is whether that content works for the people who need to use it.
@@ -89,6 +91,8 @@ Ask Greenlight to show you the **solo critic's** review of the five articles. Th
 Look at P4. It is a careful, formal summary. The solo critic sees solid writing and says it needs a few changes. Your council will show why it can work for one audience and fail another.
 
 > **Do not edit the solo critic.** It is the “before” you compare your council against.
+
+![The same woman gestures as four critics take their seats and their green verdict lamps light up. Headline: "Seat the council by talking."](/img/scenario-2-base-seating.png)
 
 ## 4 · Add two audiences
 
@@ -174,6 +178,8 @@ Now a draft that lands in your inbox gets reviewed for every audience before you
 
 ---
 
+![The full council delivers green verdicts with no computer in sight as the woman looks on, satisfied. Headline: "No code. A real council."](/img/scenario-2-base-council.png)
+
 ## Show it off
 
 60–90 seconds. Show:
@@ -199,6 +205,12 @@ Show the moment the council changed your understanding of the content. That is m
 | Cowork cannot see the articles | Attach the content-pack files to the session. |
 | Both audiences give the same answer | Make their needs more specific, then review again. |
 | A result has no evidence | Ask for the exact quote, source, and confidence. |
+
+::: details 🎬 Nobody nails it first try
+![Her too-vague description filled the four critic seats with generic robots while she facepalms. Headline: "Careful what you ask for."](/img/scenario-2-base-blooper.png)
+
+Feed the council a vague description and you get a row of generic bots instead of real audiences — that's not failure, it's feedback. Tell it what makes each audience different and run it again.
+:::
 
 ---
 
