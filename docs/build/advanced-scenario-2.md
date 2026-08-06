@@ -9,6 +9,8 @@ Scenario 2 is still being built and tested. Steps, downloads, and screenshots ma
 :::
 **You'll build this in code — VS Code, GitHub Copilot, and the Copilot CLI.**
 
+![An engineer at a modular patch bay behind glass runs purple cables to four empty critic seats below. Headline: "Get behind the board."](/img/scenario-2-advanced-hero.png)
+
 You start from a working council dashboard. You make it yours, prove the code catches what the model can't, then pick a path to take it further.
 
 ![Screenshot of the starter project - The Greenlight Dashboard.](./media/the-greenlight-dashboard.png)
@@ -129,6 +131,8 @@ You don't have to write this by hand. Open **Copilot**, **Cowork**, or **Scout**
 Place the new audience file in the `/council` folder. Pick any name that isn't already in `council/` so you add a seat instead of overwriting one, then hit **Reload council** on the board.
 
 **Done when:** your seat returns a different verdict than another seat on the same piece.
+
+![The engineer patches purple cables into channels labelled Retail, Compliance, Clinical and Manufacturing beside a guardrail switch. Headline: "Code the council."](/img/scenario-2-advanced-wiring.png)
 
 ### 4 · Wire the deterministic checks
 
@@ -278,6 +282,8 @@ The board is one surface. An **MCP server** exposes the council as tools so your
 - **Implement `convene(content_path)`** (score every seat) and **`greenlight(review)`** (plan, then re-score) — the tips point to the same Copilot-CLI pattern the board uses in `dashboard/server.js`.
 - **Wire it into Cowork or Scout** and convene your council from *another* agent.
 
+![The engineer leans back in command as the purple council runs and a green-pass, red-block guardrail gate works. Headline: "Seat to verdict — yours."](/img/scenario-2-advanced-running.png)
+
 ## Show it off
 
 60–90 seconds. Show:
@@ -302,6 +308,12 @@ Lead with the moment one piece of content looks right for one audience and wrong
 | Every audience gets the same result | Make the audience criteria more specific to their outcomes. |
 | Seats show “code checks · not wired” | Expected until you implement `check_content.py` — that wires the deterministic checks onto each verdict. |
 | Copilot asks too many approvals | Use `--allow-all-tools` only in your own exercise repo. |
+
+::: details 🎬 Nobody nails it first try
+![Sparks fly, screens flash red errors, a seat glitches, and she winces holding a sparking cable. Headline: "It compiles. Mostly."](/img/scenario-2-advanced-blooper.png)
+
+First wiring rarely compiles. Errors aren't the end — read the trace, fix a seat, run it again. Shipping is just the last retry that worked.
+:::
 
 ---
 
