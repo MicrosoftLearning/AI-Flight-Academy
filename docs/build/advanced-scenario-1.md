@@ -37,6 +37,14 @@ One system, not five. Everyone shares a single spec, and each person owns one ag
 
 The same spec folder runs in Cowork and the CLI unmodified.
 
+The council takes three kinds of situation. Same agents, same spec — only the input changes:
+
+| Input | What the council returns |
+| --- | --- |
+| **What landed** — an email, a request, a message | A position, a draft, and the dissent it overruled |
+| **What's ahead** — the next week of calendar | What to protect, what to cut, what to move |
+| **Who I'm facing** — a person or an upcoming meeting | How this person is handled, and what's off-limits in writing |
+
 ## Before you start
 
 <div class="lab-grid lab-grid-2">
@@ -268,8 +276,11 @@ check_boundary(action, recipient)   soul_gap()
 
 ```text
 twin_decide(situation)   twin_draft(recipient, intent)
+twin_plan(window)        twin_prep(person_or_meeting)
 propose_soul_patch(what_it_said, what_they_would_do)
 ```
+
+`twin_plan` and `twin_prep` are the same council over a different question — no new agents, no new files.
 
 The split matters: Cowork connectors need answers in **under 30 seconds**, which the thin tools clear easily and `twin_decide` never will.
 
@@ -415,6 +426,7 @@ Fix one and re-run it if you have time. That's the whole loop in miniature.
 - [ ] The council: who owns what, and the short return shape
 - [ ] The twist, run live
 - [ ] Arbiter output — **especially the dissent**
+- [ ] One of the other two modes — the week plan, or the person prep
 - [ ] The guardrail returning `NEVER` on something
 - [ ] One critic patch, +2 lines or fewer
 - [ ] The same spec folder running somewhere else — CLI, VS Code, or Cowork
@@ -435,7 +447,7 @@ Show what the twin decided against and why. That is the part a single prompt can
 | Long prompts fail on Windows | Command line caps at 8191 chars — pass via a file. `twinlib.py` does this |
 | Custom agents aren't picked up | They must be in `.github/agents/` with the right frontmatter |
 | Every drive agrees with every other | They're too balanced. Make each one biased |
-| mcp_smoke.py fails to connect | Run it from the repo root, not from inside 	est/ |
+| mcp_smoke.py fails to connect | Run it from the repo root, not from inside test/ |
 
 ---
 

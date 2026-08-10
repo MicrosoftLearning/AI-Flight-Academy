@@ -28,8 +28,16 @@ So here you write that down, and put it somewhere it can do work: **a first line
 | --- | --- |
 | **Your spec** | How you decide, how you write, and what your calendar says you actually do |
 | **A council** | Three drives that argue a call — and one that decides and says what it overruled |
-| **A live console** | Feed it something that landed, watch the room argue, get a draft and a boundary check |
+| **A live console** | Three inputs, one council: what landed, what's ahead, who you're facing |
 | **A one-step run** | A command or a schedule, so it's there without you setting it up again |
+
+The console runs the same council over three kinds of input:
+
+| Input | What comes back |
+| --- | --- |
+| **What landed** — paste an email or a request | A position, a draft, and what got overruled |
+| **What's ahead** — your next week | What you protect, what you cut, what you move |
+| **Who I'm facing** — a name or a meeting | How you handle them, and what you'd never put in writing |
 
 The generic assistant stays available — that's the "before" you compare against.
 
@@ -143,6 +151,11 @@ Describe what you want:
 - **what it overruled** — visible, not buried
 - a boundary check that shows when the twin refuses to act without you
 
+Get that working on one input first. Then add the other two modes — they run the same council, only the question changes:
+
+- **What's ahead** — paste next week's calendar, get what to protect, cut, and move
+- **Who I'm facing** — name a person or meeting, get how you handle them and what you'd never put in writing
+
 ::: details Stuck on the prompt? Start with this
 Paste this into Scout, then adjust:
 
@@ -216,6 +229,7 @@ Once it runs, keep each addition small and let Scout build it:
 - [ ] The three drives disagreeing, each with its own position
 - [ ] The arbiter's call, **and what it overruled**
 - [ ] A draft in your voice you'd actually send
+- [ ] One of the other two modes — the week plan, or the person prep
 - [ ] The console refusing something, citing your rule
 - [ ] Started in one step — a command or a schedule
 

@@ -10,28 +10,29 @@ This scenario is drafted and being tested. Details may change before the event.
 
 ## The problem
 
-Copilot personalizes already. It has memory, and Work IQ reads mail, calendar, and files. That gets a draft most of the way.
+Copilot personalizes already — memory, plus Work IQ across mail, calendar, and files. That gets a draft most of the way.
 
-What it does not have is what a person has explicitly decided: how they rank priorities that conflict, which commitments they protect, what they never send without checking, when they cut scope instead of moving a date. Those get inferred from past activity. You cannot inspect the inference, you cannot correct it directly, and it does not follow you from one tool to the next.
+What it doesn't have is what you've explicitly decided: how you rank priorities that conflict, which commitments you protect, what you never send without checking. All of that is inferred from past activity. You can't inspect the inference, correct it, or carry it to another tool.
 
-The result is a rewrite on most drafts, and the same context re-supplied in every session.
+The result is a rewrite on most drafts, and the same context re-supplied every session.
 
 ## What 'done' looks like
 
-You build a portable digital twin spec and an agent that runs on it.
+A twin is a `SKILL.md` plus a `references/` folder — the **Agent Skills open standard**, so the same files run in Cowork, VS Code Copilot, and the GitHub Copilot CLI unmodified.
 
-Your twin is three files:
+Inside `references/`:
 
-- **`soul.md`** — how you decide: identity, priority stack, decision rules, stakeholder table, boundaries, capacity, and blind spots.
-- **`voice.md`** — how you write: 5–10 real sent-email samples, plus the style rules those samples imply.
-- **`revealed.md`** — what your calendar shows about how you actually spend time.
+- **`soul.md`** — decision rules, boundaries, capacity, blind spots.
+- **`voice.md`** — real sent-email samples and the style rules they imply.
 
-These files use the **Agent Skills open standard**: `SKILL.md` plus a `references/` folder. The same files run in Cowork, VS Code Copilot, and the GitHub Copilot CLI without rewriting them.
+Twin Forge writes those two, then hands off. **The rest of the hack is yours:** in a new Cowork task, you add the files it doesn't have — the people you deal with, what you refuse, what you're actually working on — and wire each one in. That's most of Base.
 
-Done means the twin drafts or advises in a way you would recognise as yours, and you can point to the specific rule, sample, or calendar pattern that produced it.
+Advanced adds **`revealed.md`** — what your calendar shows about how you spend time — and a council of agents that argue before deciding.
 
-::: tip The reveal is not a score
-At the start, you answer a few forced-choice work dilemmas and seal them. At the end, your twin answers the same dilemmas cold. Compare the two to see what it understood, what it missed, and what needs correcting.
+Done means the twin drafts in a way you'd recognise as yours, and you can point to the rule that produced it.
+
+::: tip The proof is a real thread
+Name something unresolved from your own inbox. The twin retrieves it and answers. If the answer isn't yours, you've found the missing rule.
 :::
 
 ## The data
@@ -40,21 +41,19 @@ Choose one path.
 
 ### Path A — Build your own twin
 
-Use your own Microsoft 365 data: sent mail, calendar patterns, and your own recollection of recent decisions.
+Use your own Microsoft 365 data: sent mail, calendar patterns, and recent decisions you remember making.
 
-This produces the most accurate twin, because the evidence is real. Keep it private. Work in your own tenant, use only your own screen, and do not paste personal data into shared spaces.
+The most accurate twin, because the evidence is real. Keep it private — your own tenant, your own screen, nothing personal pasted into shared spaces.
 
-Use:
-
-- 5–10 real sent emails for `voice.md`
-- recent calendar patterns for `revealed.md`
-- recent tradeoffs and decisions for `soul.md`
+- 5–10 real sent emails → `voice.md`
+- a short yes/no interview about situations you've handled → `soul.md`
+- recent calendar patterns → `revealed.md` (Advanced)
 
 ### Path B — Build Avery Washington's twin
 
 Use the **Avery Washington persona pack**: a synthetic marketing manager with a fake inbox, calendar, and goals doc.
 
-Pick this path if you cannot or do not want to use your own data. It exercises the same skills without personal data. See the Base build page for details: [/build/base-scenario-1](/build/base-scenario-1).
+Same exercise, no personal data. Details on the [Base build page](/build/base-scenario-1).
 
 ## Build paths
 
@@ -80,7 +79,7 @@ Use the building blocks for your altitude.
   4. [Add a guardrail](/bricks/advanced-guardrail)
 
 ::: info Team model
-In Base, everyone builds their own twin, but the team converges on the shared schema. Compare fields. Steal good tiebreakers. Improve the spec together.
+In Base, everyone builds their own twin and the table converges on shape — compare rules, steal good tiebreakers.
 
-In Advanced, the team builds one integrated system. Each person owns one council agent — Ambition, Obligation, Capacity, Arbiter, or Critic — and all agents share one `soul.md`.
+In Advanced, the team builds one system. Each person owns one council agent — Ambition, Obligation, Capacity, Arbiter, or Critic — sharing one `soul.md`.
 :::

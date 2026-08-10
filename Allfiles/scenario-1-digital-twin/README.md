@@ -8,10 +8,9 @@ Still being built and tested. Contents may change before the event.
 
 | Folder | What it is | Who uses it |
 | --- | --- | --- |
-| `twin-forge/` | A Cowork skill that interviews you and drafts a first twin. Ships as a single `SKILL.md` — Cowork's skill upload rejects `.zip`. | 🟢 Cowork |
+| `twin-forge/` | A Cowork skill that interviews you, reads your sent mail, and installs your twin. Ships as a single `SKILL.md` — Cowork's skill upload rejects `.zip`. | 🟢 Cowork |
 | `digital-twin-starter/` | Schema, MCP server skeleton, council runner, and test harness. The contract, not the solution. | 🟣 Code |
-| `persona-pack/` | Avery Washington — synthetic marketing manager with a fake inbox, calendar, and goals doc. The Path B data. | Both |
-| `twin-test/` | Printable fifteen-dilemma sheet for sealing answers before the build. | 🟢 Cowork |
+| `persona-pack/` | Avery Washington — synthetic marketing manager with a fake inbox, calendar, and goals doc. For anyone not using their own data. | Both |
 
 ## How these reach participants
 

@@ -13,7 +13,7 @@ import {
   getScenario,
   CHOOSER,
 } from "./paths";
-import { pageHeadings } from "./headings";
+import { pageHeadings, type Heading } from "./headings";
 
 function suffix(trackId: string, scenarioId: string): string {
   const label = statusLabel[statusFor(trackId, scenarioId)];
@@ -22,6 +22,28 @@ function suffix(trackId: string, scenarioId: string): string {
 
 export function isBuildPage(relativePath: string): boolean {
   return /^build\/(base|builder|advanced)-scenario-\d+\.md$/.test(relativePath);
+}
+
+/**
+ * Nest h3 subsections under the h2 step they belong to, so a step with parts
+ * reads as one entry you can expand — not as several siblings competing with
+ * the numbered steps. An h3 appearing before any h2 stays top level.
+ */
+function nestSteps(steps: Heading[], link: string) {
+  const toItem = (h: Heading) => ({ text: h.text, link: `${link}#${h.anchor}` });
+  const out: any[] = [];
+
+  for (const h of steps) {
+    if (h.level === 3 && out.length) {
+      const parent = out[out.length - 1];
+      (parent.items ??= []).push(toItem(h));
+      parent.collapsed = true;
+      continue;
+    }
+    out.push(toItem(h));
+  }
+
+  return out;
 }
 
 /** "Start Building" nav dropdown: one group per scenario, one item per track. */
@@ -63,10 +85,7 @@ export function globalSidebar(
       if (opts.steps && track && t.id === track.id) {
         const steps = pageHeadings(`build/${buildId(t.id, scenarioId)}.md`);
         if (steps.length) {
-          item.items = steps.map((h) => ({
-            text: h.text,
-            link: `${link}#${h.anchor}`,
-          }));
+          item.items = nestSteps(steps, link);
           item.collapsed = false;
         }
       }

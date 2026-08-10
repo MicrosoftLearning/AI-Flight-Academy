@@ -9,98 +9,103 @@ title: The Digital Twin — Cowork
 ::: warning 🚧 Work in progress
 Scenario 1 is still being built and tested. Steps, downloads, and screenshots may change before the event.
 :::
+
 **You'll build this in Cowork. No code, and no experience needed.**
 
 ## What you're solving
 
-Copilot already personalizes. It has memory, and Work IQ reads your mail, calendar, and files. That covers a lot.
+Copilot infers how you work from what you've already done. You can't see that inference, correct it, or take it with you to another tool.
 
-What it doesn't have is anything you've explicitly **decided**. How you rank priorities when two of them collide. Which promises you protect. What you'd never send without checking first. That gets inferred from what you've already done — you can't inspect it, you can't correct it, and it doesn't move with you when you switch tools.
+So you re-explain yourself every session, and rewrite the output when you don't.
 
-So you re-supply the same context every session, and rewrite the output when you don't.
-
-Today you write it down once, in a file you control — and put it somewhere it does work: **a first line of defense** that reads what came in and gives you an opening position before you've touched it.
+Today you write those rules down and hand them to an agent.
 
 ## What you'll walk out with
 
-A one-page spec of how you work, in plain text, that any AI tool can read.
+An agent that answers as you.
 
-| File | What it holds |
-| --- | --- |
-| **soul** | How you decide. Your priorities, and what you do when two of them collide. |
-| **voice** | How you write. Real emails of yours, and the patterns inside them. |
-| **revealed** | What your calendar shows about how you actually spend time. |
+Name a thread — *"what do I do about the budget review?"* — and it finds it in your mail, Teams, or calendar, then answers the way you would.
 
-It's yours, you can edit it, and it works in Cowork, VS Code, and 30+ other AI tools without changing anything.
+| Step | What happens | Time |
+| --- | --- | --- |
+| 1–3 | You answer questions. A skill called Twin Forge turns your answers into two documents: **soul** (how you decide) and **voice** (how you write) | ~45 min |
+| 4 | You try it on something real and find out what it's missing | ~10 min |
+| 5 | **You build.** Add what it doesn't know — your people, your commitments, what you refuse | ~40 min |
+
+Step 5 is most of the hack. The steps before it get you there with something worth improving.
+
+::: tip Nothing here is coding
+You answer yes/no questions, and everything else is a sentence typed into a chat box. Cowork writes and saves all the files for you — you never open one.
+:::
 
 ## Before you start
 
-Grab these now — you'll need the first one in about two minutes.
+**Check you have this:** Microsoft 365 Copilot with a **Cowork** tab. Open [m365.cloud.microsoft](https://m365.cloud.microsoft) and look at the top of the left-hand menu — you should see **Chat** and **Cowork** side by side. No Cowork tab, tell your facilitator now.
 
-<div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/twin-forge-SKILL.md" download="SKILL.md">
-    <span class="lab-card-emoji">⚡</span>
-    <span class="lab-card-title">Twin Forge</span>
-    <span class="lab-card-desc">A skill that interviews you and drafts your first twin. Downloads as SKILL.md — upload that file straight into Cowork.</span>
-    <span class="lab-card-cta">Download SKILL.md →</span>
-  </a>
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/avery-persona-pack.zip" download>
-    <span class="lab-card-emoji">🗂️</span>
-    <span class="lab-card-title">Avery Washington</span>
-    <span class="lab-card-desc">Optional. A made-up marketing manager with a fake inbox and calendar — use them instead of your own data.</span>
-    <span class="lab-card-cta">Download .zip →</span>
-  </a>
-</div>
+**Download this:**
 
-::: tip Want every step spelled out?
-This page gets you through the build, with the essentials expandable in place. There are also **[full step-by-step guides](/bricks/)** covering every click and setting — open one in a new tab and keep it beside this page.
+<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/twin-forge-SKILL.md" download="SKILL.md" style="max-width:30rem">
+  <span class="lab-card-emoji">⚡</span>
+  <span class="lab-card-title">Twin Forge</span>
+  <span class="lab-card-desc">The skill that interviews you and builds your twin. Saves as SKILL.md — leave it in your Downloads folder.</span>
+  <span class="lab-card-cta">Download SKILL.md →</span>
+</a>
+
+**Think of this now:** one unresolved thing at work — an email you haven't replied to, or a decision someone's waiting on. You'll use it in step 4, and it's easier to pick now than under time pressure.
+
+**Choose your data.** Twin Forge asks you this in step 1:
+
+| Option | What happens | Pick this if |
+| --- | --- | --- |
+| **Your own** | It reads your sent mail and calendar. It only ever sees what you can already see, and nothing is shared | You want a twin that's actually you — this makes a sharper one |
+| **Avery Washington** | You use a made-up marketing manager's fake inbox and calendar instead | Your mail is sensitive, or you'd rather not |
+
+Taking Avery? Download **[the persona pack](/Team-Week-Imagineer-Hack/downloads/avery-persona-pack.zip)** now, right-click the `.zip` → **Extract All**. In step 1, answer **no** when asked about your own mail, then attach the extracted documents with the **paperclip** button. Attach the documents, not the zip.
+
+::: details Building one twin as a table
+Some tables prefer to build a single twin together: pick a volunteer, use their data, and argue about the rules out loud. It surfaces disagreements about what a rule should say.
+
+The trade-off is that only the volunteer leaves with a twin. **If your table does this, build one shared set of documents in step 5 rather than one each.**
 :::
 
 ---
 
-## 1 · Seal your answers
+## 1 · Install Twin Forge
 
-**Do this before you build anything.** Four minutes, and you can't do it later.
+**~10 minutes.**
 
-<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/twin-test.md" download style="max-width:28rem">
-  <span class="lab-card-emoji">📝</span>
-  <span class="lab-card-title">The Twin Test</span>
-  <span class="lab-card-desc">Fifteen forced-choice work situations. Answer them, then set it aside.</span>
-  <span class="lab-card-cta">Download →</span>
-</a>
+Twin Forge is a skill — a set of instructions Cowork loads when you ask for it. You install it once.
 
-Answer each one with what you **actually did last time** — not what you'd like to have done. Fast, under 30 seconds each. If you're deliberating, you're constructing an answer instead of recalling one.
-
-Then put it away. At the end of the session your twin answers the same fifteen cold and you compare.
-
-**Done when:** fifteen answers written down and set aside.
-
-::: tip This is not a score
-There's no percentage and no leaderboard. The mismatches are the useful part — each one is a rule you wrote down that doesn't match how you actually work.
-:::
-
-## 2 · Install Twin Forge
-
-1. Open Microsoft 365 Copilot and click the **Cowork** tab.
-2. In the left menu, click **Customize**.
-3. Click the **Skills** tab.
-4. Click the arrow next to **Add**, then **Upload skill**.
-5. Choose the `SKILL.md` file you downloaded.
-
-You'll see **"Skill uploaded — twin-forge."**
+1. Open [m365.cloud.microsoft](https://m365.cloud.microsoft) and select the **Cowork** tab.
+2. In the left menu, select **Customize**.
+3. Open the **Skills** tab.
+4. Select the arrow next to **Add**, then **Upload skill**.
+5. Choose the `SKILL.md` file from your Downloads folder.
 
 ![Twin Forge showing under Your skills on the Cowork Customize page](/img/twin-forge-uploaded.png)
 
-**Done when:** you see *Skill uploaded — twin-forge* and a new session picks it up.
+Now go back to Cowork and **start a new task** — a task is one conversation, like a new chat. Type:
+
+```text
+Start Twin Forge and build my digital twin.
+```
+
+It replies by asking whether to use your own mail and calendar, or Avery. Answer, and it starts asking questions.
+
+**Done when:** Twin Forge is asking you yes/no questions.
 
 ::: warning Two things that will trip you up
-**Upload the file on its own.** Don't zip it. Zipped uploads fail silently — nothing appears and you get no error.
+**Upload the `.md` file on its own.** Don't zip it. Zipped uploads fail silently — nothing appears and you get no error.
 
-**Start a new Cowork session afterwards.** Cowork only looks for new skills when a session begins, so an already-open one won't see it.
+**You must start a new task after uploading.** Cowork looks for new skills only when a task begins, so a task you already have open won't find Twin Forge.
+
+Then **stay in that same task through step 4.** Everything Twin Forge does happens in one conversation.
 :::
 
 ::: details How skills work, if you're curious
-A Cowork skill is one markdown file: a bit of YAML at the top telling Cowork *when* to load it, then plain instructions.
+A skill is a plain text document with instructions in it. Cowork reads it and follows it. That's the whole idea.
+
+The top few lines tell Cowork *when* to use the skill. Everything below is what to do:
 
 ```md
 ---
@@ -118,212 +123,309 @@ When this skill runs, you MUST:
 Never invent missing context. If evidence is thin, say what's missing.
 ```
 
-Cowork decides which skill to load by reading the **description** — so put the phrases you'd actually type in there.
+Cowork chooses which skill to use by reading the **description**, so it holds the phrases you'd actually type.
 
-Skills live in OneDrive at `/Documents/Cowork/skills/{name}/`. A skill can carry a `references/` folder (loaded into context when needed) and a `scripts/` folder (executed, not read).
+Skills are saved in your OneDrive under `Documents/Cowork/skills/`. A skill can come with extra documents in a `references/` folder — background it reads when it needs to. That's exactly what your twin will be.
 
-**The reason this matters:** it's the [Agent Skills open standard](https://github.com/MicrosoftLearning/Team-Week-Imagineer-Hack/blob/main/Allfiles/scenario-1-digital-twin/twin-forge/SKILL.md). The same file is read by VS Code Copilot, Claude Code, Gemini CLI, Cursor and 30+ other tools. You're not writing something trapped in one product.
-
-**Want to make your own later?** Cowork → Customize → Skills → **Add ▾** → **Create new** walks you through it. Or just say *"build me a skill that…"* in chat and it'll draft one with you.
+Skills use an open standard, so the same document also works in VS Code Copilot without changing anything.
 
 <a href="/Team-Week-Imagineer-Hack/bricks/cowork-build-skill" target="_blank" rel="noreferrer">📖 Write a reusable Cowork skill — full guide (opens in a new tab) ↗</a>
 
 :::
 
-## 3 · Pick your data
+## 2 · Answer the questions
 
-Start a **new** Cowork session and say:
+**~20 minutes.** This builds **soul** — how you decide.
 
-```text
-Start Twin Forge and help me build a v0.1 digital twin.
-```
+Twin Forge asks eight yes/no questions. They're situations, not opinions:
 
-It'll ask which you want:
+> *If you're going to miss a date, do you say so as soon as you know?*
 
-**Your own data** — Twin Forge reads your sent mail and calendar. Nothing is set up, nothing is shared, and it only sees what you can already see. This makes the better twin, because it's really you.
+Answer fast, with what you actually do — not what you'd like to do. "Depends" is a fine answer.
 
-**Avery Washington** — the made-up marketing manager. Pick this if you'd rather not use your own work data. Download their pack and **attach the files** when Twin Forge asks; it can't see them otherwise.
+Then it writes your soul document and shows you the **decision rules** it wrote. Read them. This is the part that decides whether your twin is any good:
 
-## 4 · Get your first draft
-
-Twin Forge takes it from here, about 12 minutes:
-
-- reads your last ~10 sent emails and ~30 days of calendar
-- asks you around 8 quick questions, one at a time
-- shows you where what you *said* and what your calendar *shows* disagree
-- writes your three files
-
-::: tip Answer honestly, not aspirationally
-Every question is *"what did you actually do last time?"* — not *"what do you value?"* If you describe your best self, you'll get a twin of someone else.
-:::
-
-**Done when:** three files exist, and the one about how you decide is roughly a page.
-
-**You now have a v0.1 twin. Everything from here is you making it good — and that's the actual hack.**
-
----
-
-## 5 · Make it shorter
-
-Your first draft is too long. Cut it to about one page.
-
-Cutting is the highest-value thing you'll do here. Longer is not better. Anthropic [found while building Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback) that broad principles worked better than long, specific ones — the longer versions actually reduced effectiveness. And ["Lost in the Middle"](https://arxiv.org/abs/2307.03172) (peer-reviewed, *Transactions of the ACL*) showed models pay least attention to whatever sits in the middle of a long prompt.
-
-**Cut anything that isn't a rule you'd actually apply.**
-
-**Done when:** it fits on one screen without scrolling.
-
-## 6 · Give it your voice
-
-Open your voice file. If it *describes* your writing — "professional but friendly" — replace that with **actual emails you sent.** Five to ten, pasted exactly as you wrote them.
-
-Do not tidy them up. The dropped apostrophes, the dash habits, the signoff — those are the specifics a description would lose.
-
-Most people cannot accurately describe their own writing. The openers, the sentence length, the punctuation habits — you use them without deciding to, so you cannot list them from memory. Your sent folder already contains them.
-
-::: details Getting good samples out of Cowork
-There's nothing to connect and no auth to set up — Cowork already reaches your mail, calendar, Teams, files and org chart through Work IQ. It only ever sees what you can see.
-
-The trick is asking for a shape you can reuse, not a summary:
-
-```text
-Find my last 10 sent emails. Return one row per email with: date, recipient,
-subject, the exact greeting, the exact signoff, and three verbatim phrases
-that sound like me. Do not summarize before returning the table.
-```
-
-Then for the behavioral half:
-
-```text
-Summarize my calendar for the last 30 days. Group time by category, and give me
-the percentage I marked tentative, the percentage I organized myself, and my
-typical response time by sender.
-```
-
-**Two rules:** ask for *one* source at a time, and tell it not to summarize before returning. Summaries lose exactly the detail you need.
-
-Keep the prompts that work — you'll want to run them again.
-
-<a href="/Team-Week-Imagineer-Hack/bricks/cowork-connect-source" target="_blank" rel="noreferrer">📖 Connect Cowork to a data source — full guide (opens in a new tab) ↗</a>
-
-:::
-
-
-## 7 · Give it judgment
-
-Your twin needs to know what you do when two good things collide. Most first drafts have values where rules should be.
-
-| ❌ This is a value | ✅ This is a rule |
+| ❌ Useless | ✅ Useful |
 | --- | --- |
 | I value accuracy. | When an unverified claim threatens a committed date, cut scope and hold the date. |
-| I'm responsive to leadership. | When an exec ask conflicts with a peer promise, reply to the exec within the hour, protect the peer's deadline, offer a smaller same-day version. |
-| I collaborate well. | When two people both say theirs is top priority, I decide and tell them. I don't escalate it. |
+| I'm responsive to leadership. | When a senior stakeholder's ask collides with a peer promise, reply within the hour, protect the peer's date, offer a smaller version today. |
+| I collaborate well. | When two people both say theirs is top priority, I decide and tell them. I don't escalate. |
 
-A value cannot be applied. A rule can.
+An agent can't act on a value. It can act on a rule.
 
-**Done when:** every line in your rules section says what to *do*, not what you care about.
-
-## 8 · Compare with your team
-
-Ten minutes, together. Everyone built their own twin — now build a better *shape* for all of them.
-
-Each person shows **one rule that worked** and **one that's still vague.** Copy what works. Agree on what belongs in a soul file. Keep your own answers; share the structure.
-
-## 9 · ⚡ The twist
-
-Your facilitator will hand this out partway through. Give it to your twin:
+If any line reads like the left column, type this in the chat:
 
 ```text
-A senior executive wants a new customer narrative by 3 PM today.
-You already promised a peer their launch review notes by 4 PM.
-Use my twin: what do I do, what do I say to each of them, and what gets cut?
+"I value accuracy" isn't something you can act on. Rewrite it as a rule —
+when X conflicts with Y, do Z. Ask me if you don't know my answer.
 ```
 
-You are checking one thing: does it make **your** tradeoff, and can it state what it gave up?
+The document also has short **Boundaries**, **Capacity**, and **Blind spots** sections. Skim them — Boundaries is what lets your twin refuse things later, and you'll use that in step 5.
 
-If it can't, you've found your next missing rule. Add it and run it again.
+**Done when:** every decision rule names a situation and a specific action.
 
-## 10 · Make it run without you
-
-Pick one and set it up:
-
-**On a schedule** — *"Every weekday at 9 AM, compare my calendar to my capacity rules and draft a focus plan."*
-
-**On a trigger** — fires when an email arrives or someone @mentions you in Teams.
-
-::: warning Nothing sends on its own
-Cowork drafts and waits for your approval. Keep it that way today.
+::: tip Keep it to one page
+Short instructions beat long ones — models pay least attention to the middle of a long prompt. If your soul document runs past a page, ask Twin Forge to cut it.
 :::
 
-## 11 · The reveal
+## 3 · Let it read your writing
 
-Pull out the Twin Test you sealed at the start. Ask your twin to answer the same fifteen, cold:
+**~15 minutes.** This builds **voice** — how you write.
 
-```text
-Using my twin, answer these fifteen dilemmas as I would actually answer them —
-not as I'd like to, and not as a well-adjusted professional would.
-Reply with just the numbers and letters.
-```
+Twin Forge reads about ten of your recent sent emails and pulls out the patterns: your signoff, how you open to a peer versus your manager, your punctuation habits, your usual length. It quotes the emails exactly, typos and all.
 
-Fill in the bottom two rows of the table and compare.
+It reads instead of asking because nobody can list their own writing habits from memory.
 
-For every mismatch, look at the field named under that dilemma — that's the part of your soul file that's wrong. **The interesting misses are where the twin picked the sensible answer and you wouldn't have.**
-
-Fix one and ask it again if you have time.
-
-::: details Setting up a schedule or a trigger
-**Schedule** — just describe it in chat:
+Review the patterns it found and correct anything wrong. Then it saves your twin:
 
 ```text
-Send me a focus plan every weekday at 9 AM.
+Documents/Cowork/skills/my-twin/
+  SKILL.md          ← this is what makes your twin load in every new task
+  references/
+    soul.md         ← how you decide
+    voice.md        ← how you write
 ```
 
-Manage them at **Cowork → Scheduled**, which has a **Runs** tab and a **Manage schedules** tab. You get up to five.
+You don't need to open any of these. It's worth seeing the shape, because in step 5 you'll add more documents to that `references/` folder.
 
-**Trigger** — describe the event instead:
+Twin Forge finishes by naming **one place your answers didn't match your actual mail or calendar.** Note it — that's a good thing to fix in step 5.
+
+**Done when:** Twin Forge says your twin is installed.
+
+## 4 · Try it on something real
+
+**~10 minutes.** The point of this step is to find out what your twin doesn't know.
+
+Use the unresolved thing you picked earlier. Ask for it by name, in the same task:
 
 ```text
-When my manager emails me about the launch, draft a reply in my voice.
+Using my twin: what do I do about the vendor renewal?
 ```
 
-Cowork proposes a **"Set up trigger?"** card showing *When*, *Run in*, *What it does*, and the permissions it needs. Review it, then arm it.
+Replace *the vendor renewal* with whatever yours is actually called — the project name, the subject line, or the person waiting on you. **Don't paste the email in.** Your twin searches your mail first, then Teams, then your calendar, and your files if it needs a document, stopping as soon as it finds a clear match. It only sees what you can already see.
 
-Triggers fire on incoming email or a Teams message/@mention, and the default is **draft-and-approve** — it prepares the action and asks first. Leave that on.
+**Say "my twin" every time.** Your twin only runs when you ask for it by name. Leave that out and you'll get an ordinary Copilot answer.
 
-**Before you arm anything:** run the skill manually on new input once and check the output still holds up. Automating something unreliable just makes it unreliable on a schedule.
+When it finds your thread and has something to write, the reply comes back in five parts:
+
+```text
+Found: 3 messages on the vendor renewal, most recent from your manager
+Thursday, unanswered.
+
+Decision: Confirm the renewal date today and flag the pricing question
+separately, rather than holding the whole thread for one open item.
+
+Draft: [a reply, written in your voice]
+
+Cost: The pricing answer goes out a day later than if you'd waited and
+sent one complete response.
+
+Rule: "When part of an answer is blocked, send the part that isn't and
+name the gap." — soul.md, Decision rules
+```
+
+Shorter replies are normal in other situations — if it can't find the thread, or one of your rules stops it, it says so instead.
+
+Check four things:
+
+- **Found** — did it pick the right thread?
+- **Decision** — is it a position, not a list of considerations?
+- **Draft** — read it out loud. Does it sound like you?
+- **Cost** — real decisions give something up. Did it name one?
+
+**Rule** tells you which line of your soul document produced the answer. When something's wrong, that's what to fix.
+
+::: warning Save this answer
+Copy the whole reply into a scratch document, or leave this task open in a browser tab. **In step 5 you'll run the same request again and compare** — and without the original you can't tell whether anything improved.
+:::
+
+**Done when:** you've run it once, saved the answer, and written down one thing it missed.
+
+::: tip Write down what it missed
+It will miss things — the wrong tone for that person, no idea what else you've committed to, no sense of what you'd refuse.
+
+**That list is your step 5 plan.** Don't try to fix anything yet.
+:::
+
+::: details It grabbed the wrong thread
+Give it the sender or a phrase from the subject line: *"Using my twin — I meant the thread from Dana about renewal pricing."*
+
+If several threads matched, it should have listed them and asked you which. Pasting the message in still works for anything it genuinely can't find.
+:::
+
+## 5 · Make it yours
+
+**~40 minutes. This is the build.**
+
+Your twin works, but it's thin: it knows how you decide and how you write, and nothing else about your job.
+
+**Start a new task.** Twin Forge is finished — it built your twin and handed it over. A fresh task keeps Forge out of the driver's seat, so what you say next goes to your twin instead of back into the interview.
+
+::: warning Two different things you can say
+This is the one thing to get right in step 5.
+
+| You want to | Start your message with |
+| --- | --- |
+| **Ask your twin something** | *"Using my twin: …"* |
+| **Change your twin** | *"Edit my twin skill: …"* |
+
+Same twin, two different jobs — asking it a question, or changing how it works.
+:::
+
+### What to build
+
+Pick real gaps — ideally from the list you wrote in step 4. These work well:
+
+| Document | What it holds | So your twin can |
+| --- | --- | --- |
+| `stakeholders` | Each person you deal with, what they need, how you talk to them | Change tone by recipient instead of writing everyone the same |
+| `projects` | What you're working on and the dates you've committed to | Know what a new request collides with |
+| `escalation` | What has to be true before you pull someone else in | Tell you when to stop absorbing something |
+| `meetings` | How you run the ones you own | Draft an agenda that looks like yours |
+| `bad-week` | What you cut first when everything slips | Give you a triage order instead of sympathy |
+
+Something specific to your own job beats anything on this list.
+
+### The rounds
+
+Do this once per document you add. Expect three or four documents in the time you have.
+
+**a. Ask for the document:**
+
+```text
+Edit my twin skill: add a reference document that lists the people I work
+with — each person, what they need from me, and how I talk to them. Ask me
+questions to fill it in, then add it to the skill's reading list.
+```
+
+**b. Answer its questions.** Short answers, what you actually do.
+
+**c. Confirm it's being read:**
+
+```text
+Edit my twin skill: check my new document is on the reading list, and add it
+if it isn't.
+```
+
+**d. Test it.** Run the *same request you saved in step 4*, word for word:
+
+```text
+Using my twin: what do I do about the vendor renewal?
+```
+
+**e. Compare the two answers.** Something should be visibly different — the tone, the length, what it prioritised. If nothing changed, go back to **c**, then make the document's lines more specific.
+
+**f. Correct it in chat.** *"Too long for my manager — she skims. Shorter, and lead with the date."* Then run the same request again.
+
+### Getting the refusal
+
+A twin that refuses something, and quotes your own rule for it, is the strongest thing you can show. Put the rule in your **soul** document, where boundaries live:
+
+```text
+Edit my twin skill: add this to the Boundaries section of my soul document —
+never tell anyone why I'm out, only when I'm back.
+```
+
+Then ask your twin to break it:
+
+```text
+Using my twin: tell the partner team why I'm out next week.
+```
+
+A correct refusal stops instead of drafting, names the rule, and says what it would need to go ahead:
+
+```text
+I can't draft that. Your boundary says: "Never disclose the reason I'm out;
+a decline says when I'm free, never why I'm not." — soul.md, Boundaries
+
+I'd need your say-so to share the reason. I can send your availability
+instead — want that?
+```
+
+If it drafts the message anyway, your boundary is too soft. Make it a flat "never", and try again.
+
+### Requirements
+
+Hit all four:
+
+- [ ] **Two or more new documents**, on top of soul and voice, each half a page or less
+- [ ] **Each one read automatically** — your twin uses it without you mentioning it
+- [ ] **Behaviour visibly changed** — your step 4 request answers differently now
+- [ ] **One refusal** — your twin declines something and quotes the rule that stopped it
+
+The third is the real bar: a document that never changes an answer isn't doing anything.
+
+### Working as a table
+
+Everyone builds their own, but don't build in silence.
+
+| When | What |
+| --- | --- |
+| First 2 minutes | Each person says what they're adding and why. Ideas spread fast here |
+| ~20 minutes in | Whoever has the best-working document reads it out. Copy the structure, not the content |
+| Last 5 minutes | One person demos a refusal, one demos a before/after |
+
+Most tables land on the same two or three documents independently.
+
+**Done when:** two new documents in, your step 4 request answers differently, and your twin has refused something.
+
+::: warning Keep each document short
+Half a page. Long documents get ignored in the middle — same reason soul stays at one page. Two sharp documents beat one long one.
+:::
+
+::: details Nothing changed after you added a document
+Work through these in order, in the same task:
+
+1. **Confirm it's on the list.** *"Edit my twin skill: check my new document is on the reading list, and add it if it isn't."*
+2. **Make it more specific.** Descriptions change nothing; instructions change behaviour. Try: *"Edit my twin skill: rewrite my stakeholders document so every line says what to do. For example: 'With my manager, lead with the date and keep it under five lines.'"*
+3. **Check your test needs it.** A document about people won't change an answer that doesn't involve one. Test with a request that clearly should use it.
+:::
+
+::: warning If Cowork offers to widen the trigger
+It may suggest making your twin respond to general phrases like *"what should I do"*. Say no — your twin would then take over ordinary requests and you'd lose normal Copilot.
+:::
+
+## Go further
+
+- **Schedule it** — *"Every weekday at 9 AM, compare my calendar to my capacity rules and draft a focus plan."* Manage these at **Cowork → Scheduled**.
+- **Trigger it** — on incoming mail or a Teams @mention. Cowork shows a **"Set up trigger?"** card to review before you arm it.
+- **Take it with you** — the same folder runs unchanged in VS Code Copilot.
+- **Trade with your table** — borrow someone's stakeholders structure and fill it with your own people.
+
+::: warning Nothing sends on its own
+Cowork drafts and waits for your approval. Keep it that way, and point at it in your demo.
+:::
 
 <a href="/Team-Week-Imagineer-Hack/bricks/cowork-rerun-skill" target="_blank" rel="noreferrer">📖 Re-run a skill on new inputs — full guide (opens in a new tab) ↗</a>
 
-:::
-
 ---
 
-<a href="/Team-Week-Imagineer-Hack/bricks/cowork-formatted-output" target="_blank" rel="noreferrer">📖 Produce a formatted output — full guide (opens in a new tab) ↗</a>
 ## Show it off
 
-60–90 seconds. Hit these:
+60–90 seconds. Lead with the before/after — it needs no explanation.
 
-- [ ] Whose twin — yours or Avery's
-- [ ] Your soul file, about a page
-- [ ] Your voice file, with real samples in it
-- [ ] **One thing your calendar revealed that surprised you**
-- [ ] The exec-vs-peer conflict, and what your twin decided
-- [ ] Your scheduled prompt or trigger`r`n- [ ] **One dilemma your twin got wrong**, and the rule you'd add because of it
-
-::: tip What to aim for in the demo
-Someone who knows you reads a draft your twin wrote and recognises it. That lands harder than showing more features.
-:::
+- [ ] Your step 4 request, answered before and after one of your documents
+- [ ] Your twin refusing something, quoting your own rule
+- [ ] **One decision rule** specific enough to be slightly embarrassing
+- [ ] Which documents you added, and what made you pick them
 
 ## Stuck?
 
 | What you're seeing | What to do |
 | --- | --- |
-| Cowork ignores Twin Forge | Start a **new** session — skills only load at the start |
+| Cowork ignores Twin Forge | Start a **new task** — skills load only when a task begins |
 | Upload seemed to do nothing | Upload the `.md` file, not a zip |
-| "I can't find the reference files" | You've got an old copy — re-download it |
-| Avery's data can't be found | Attach the pack files to the session |
-| Twin sounds like a stranger | Your voice file is descriptions, not real emails. Go back to step 7 |
-| Twin gives wishy-washy answers | Your soul file has values, not rules. Go back to step 7 |
+| Avery's data can't be found | Extract the zip first, then attach the documents inside it — not the zip |
+| Twin Forge is still asking questions | Expected through step 3. It's finished once it says your twin is installed |
+| A new task doesn't know your twin | The `my-twin` folder isn't under `Documents/Cowork/skills/`. Move it, then start another task |
+| Your twin doesn't answer as you | Say "Using my twin" — it only runs when you name it |
+| It answered instead of editing your twin | Say "Edit my twin skill" to change it, "Using my twin" to ask it something |
+| It can't find the thread | Give it the sender or a phrase from the subject line |
+| It answered about the wrong thread | Say which you meant, and that it should ask when several match |
+| Drafts sound like a stranger | Your voice document has no real samples. Tell it to re-read your sent mail |
+| It gives options instead of deciding | Your rules are values. Say what it should have decided; it rewrites the rule |
+| It won't refuse anything | Your boundary is too soft. Make it a flat "never" in your soul document's Boundaries |
+| A document you added changed nothing | See the troubleshooting box at the end of step 5 |
 
 ---
 

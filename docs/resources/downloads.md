@@ -12,17 +12,13 @@ Everything for the Imagineer Hack scenarios. Files download straight from this s
 
 ## Scenario 1 · The Digital Twin
 
-::: tip Do this first, whichever track you pick
-<a href="/Team-Week-Imagineer-Hack/downloads/twin-test.md" download>📝 <strong>The Twin Test</strong></a> — fifteen forced-choice work situations. Answer them before you build, compare at the end. Four minutes.
-:::
-
 ### 🟢 Cowork
 
 <div class="lab-grid lab-grid-2">
   <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/twin-forge-SKILL.md" download="SKILL.md">
     <span class="lab-card-emoji">⚡</span>
     <span class="lab-card-title">Twin Forge</span>
-    <span class="lab-card-desc">Interviews you and drafts your first twin. Upload this file straight into Cowork.</span>
+    <span class="lab-card-desc">Interviews you, reads your sent mail, and installs your twin. Upload this file straight into Cowork.</span>
     <span class="lab-card-cta">Download SKILL.md →</span>
   </a>
   <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/avery-persona-pack.zip" download>
