@@ -10,7 +10,7 @@ differ in the tools you use, not in how much you accomplish.
 | | You'll build with | You'll spend the time |
 | --- | --- | --- |
 | 🟢 **Base** · Copilot-Crafted | Microsoft 365 Copilot + Cowork | Writing instructions, not code. Guided end to end. |
-| 🔵 **Builder** · Agent-Orchestrated | Copilot Studio or Scout | Wiring agents together in a low-code maker studio. |
+| 🔵 **Builder** · Agent-Orchestrated | Microsoft Scout | Wiring agents together in a low-code maker studio. |
 | 🟣 **Advanced** · Code-Extended | VS Code + GitHub Copilot | Writing real code. You get a contract, not a solution. |
 
 ## Not sure?

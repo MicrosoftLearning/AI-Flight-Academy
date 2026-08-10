@@ -28,5 +28,11 @@ Your [build page](/#start-here) gets you through the hack top to bottom, with th
 | [Ground on live data with Work IQ](/bricks/advanced-work-iq) | Turning real calendar and mail behavior into evidence |
 | [Add a guardrail / output check](/bricks/advanced-guardrail) | Stopping an agent doing something it shouldn't |
 
-## 🔵 Copilot Studio {#copilot-studio}
-Coming soon.
+## 🔵 Scout {#scout}
+
+| Guide | Use it when |
+| --- | --- |
+| [Set up Microsoft Scout](/bricks/scout-setup) | Getting Scout ready and confirming it can reach your work |
+| [Ground Scout in your work](/bricks/scout-work-iq) | Pulling real evidence out of mail and calendar |
+| [Have Scout build you an app](/bricks/scout-build-app) | Getting Scout to scaffold and run something local |
+| [Make it run without you](/bricks/scout-autonomy) | Schedules, triggers, and keeping approval on anything outbound |

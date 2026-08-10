@@ -19,6 +19,8 @@ Copilot already personalizes. It has memory, and Work IQ reads your mail, calend
 
 What it doesn't have is anything you've explicitly decided — how you rank competing priorities, which promises you protect, what you'd refuse outright. That gets inferred, you can't inspect or correct it, and it doesn't travel between tools.
 
+Written down, it becomes a **first line of defense**: something that reads what arrived and gives you an opening position before you've touched it.
+
 There's a second problem this track solves: **a decision under conflict isn't one voice.** When an exec ask lands on top of a peer promise, you're weighing ambition against obligation against capacity. A single prompt can role-play one of those at a time. It can't run the argument and tell you what it overruled.
 
 ## What your team will have built
@@ -34,6 +36,14 @@ One system, not five. Everyone shares a single spec, and each person owns one ag
 | **The guardrail** | Refuses actions outside the spec's boundaries — enforced at the tool, not suggested in a prompt |
 
 The same spec folder runs in Cowork and the CLI unmodified.
+
+The council takes three kinds of situation. Same agents, same spec — only the input changes:
+
+| Input | What the council returns |
+| --- | --- |
+| **What landed** — an email, a request, a message | A position, a draft, and the dissent it overruled |
+| **What's ahead** — the next week of calendar | What to protect, what to cut, what to move |
+| **Who I'm facing** — a person or an upcoming meeting | How this person is handled, and what's off-limits in writing |
 
 ## Before you start
 
@@ -98,6 +108,8 @@ The script flags any answer that took more than 25 seconds. A considered answer 
 
 At the end of the session your twin answers the same fifteen cold, and you diff them. That's not a score — it's the fastest way to find which rules you got wrong.
 
+**Done when:** `test/sealed-answers.md` exists and you haven't looked at it since.
+
 ## 2 · Split the work
 
 Five people, five agents, one shared spec. Decide this in the first two minutes.
@@ -111,6 +123,8 @@ Five people, five agents, one shared spec. Decide this in the first two minutes.
 | 5 | **Critic** | Nothing — it diagnoses misses and patches the spec | root cause · diff · net lines |
 
 **Fewer than five?** Fold the Critic into the Arbiter. **More?** Add someone on tests and someone on the demo.
+
+**Done when:** every person knows which file they own.
 
 ::: tip The drives should be biased
 Ambition shouldn't be balanced. Neither should Obligation or Capacity. Each one argues its corner as hard as it can — the Arbiter is where nuance happens. Balanced sub-agents produce mush.
@@ -128,6 +142,8 @@ Three files, shared by everyone. Get a rough version fast, then improve it all s
 | I care about quality. | When a claim can't be verified before the deadline, cut that section and hold the date. |
 
 A value tells an agent nothing. A tiebreaker tells it what to do.
+
+**Done when:** the spec is about a page and every rule resolves a conflict.
 
 **voice** — 5–10 real sent emails, verbatim, plus the rules those samples imply. Do not clean them up; the punctuation and signoff habits are the part a description would lose.
 
@@ -157,6 +173,8 @@ Either way, extract these four:
 - **response latency by sender** — the honest stakeholder ranking, whatever the org chart says
 - accept / decline / tentative ratio
 - self-organized vs. invited
+
+**Done when:** `revealed.md` cites at least one number that contradicts the spec.
 
 ::: danger Don't build a Graph integration
 Azure AD app registration plus MSAL will take 30–60 minutes and eat your session. Roughly a third of teams that try it never get past it. Let Cowork retrieve, or use the persona pack. Your working style is slow-moving data — a monthly snapshot is plenty.
@@ -231,9 +249,21 @@ On Windows the command line caps at 8191 characters, so long prompts have to go 
 
 :::
 
-## 6 · Expose it as a server
+## 6 · Make it answerable to other agents
 
-Build the MCP server so anything can call your twin — Cowork, VS Code, Claude, an agent nobody's written yet.
+Here's the honest question about this step: **if it's your twin and only you call it, why does it need to be a server?**
+
+It doesn't. Reading three files works fine. The server earns its place the moment something that *isn't you* needs to ask:
+
+| Who's asking | What they need |
+| --- | --- |
+| A teammate's agent, before drafting something for you | *"Would they sign off on this, or should I ask first?"* |
+| A triage agent watching your inbox | Your boundaries, before it replies to anything |
+| An agent in a product you don't control | A twin it can call, not a file it can't see |
+
+And the part that only works as a server: **your boundaries hold.** If your twin is a file, a calling agent can read your rules and ignore them. If it's a tool that returns `NEVER`, it can't. That's the difference between a preference and a policy.
+
+So: the file is your twin. **The server is what makes it a service.**
 
 **Thin tools first.** These just read files, so they're instant and free:
 
@@ -246,10 +276,27 @@ check_boundary(action, recipient)   soul_gap()
 
 ```text
 twin_decide(situation)   twin_draft(recipient, intent)
+twin_plan(window)        twin_prep(person_or_meeting)
 propose_soul_patch(what_it_said, what_they_would_do)
 ```
 
+`twin_plan` and `twin_prep` are the same council over a different question — no new agents, no new files.
+
 The split matters: Cowork connectors need answers in **under 30 seconds**, which the thin tools clear easily and `twin_decide` never will.
+
+::: tip Prove it in your demo
+Don't just show the tool list — that proves nothing. Wire a *second* agent to your server and have it ask before acting. One agent checking with another person's twin is the whole point, and it takes about two minutes to show.
+:::
+
+Check it works before you build anything on top:
+
+```powershell
+python test/mcp_smoke.py
+```
+
+That connects the same way VS Code will, lists your tools, and runs your guardrail against four sample actions. If it returns `NEVER` / `ASK_FIRST` / `ALLOW`, another agent can call your twin and your boundaries will hold.
+
+**Done when:** the smoke test returns real verdicts instead of "not implemented".
 
 ::: details Building the server
 ```python
@@ -379,6 +426,7 @@ Fix one and re-run it if you have time. That's the whole loop in miniature.
 - [ ] The council: who owns what, and the short return shape
 - [ ] The twist, run live
 - [ ] Arbiter output — **especially the dissent**
+- [ ] One of the other two modes — the week plan, or the person prep
 - [ ] The guardrail returning `NEVER` on something
 - [ ] One critic patch, +2 lines or fewer
 - [ ] The same spec folder running somewhere else — CLI, VS Code, or Cowork
@@ -399,6 +447,7 @@ Show what the twin decided against and why. That is the part a single prompt can
 | Long prompts fail on Windows | Command line caps at 8191 chars — pass via a file. `twinlib.py` does this |
 | Custom agents aren't picked up | They must be in `.github/agents/` with the right frontmatter |
 | Every drive agrees with every other | They're too balanced. Make each one biased |
+| mcp_smoke.py fails to connect | Run it from the repo root, not from inside test/ |
 
 ---
 

@@ -69,7 +69,7 @@ Start a **new** Cowork session after the upload. Cowork only looks for new skill
 **Keep the content pack nearby.** You will attach its files to the Cowork session in the next step; Cowork cannot see them until you do.
 :::
 
-### Step 2 — Choose the content to review
+## 2 · Choose the content to review
 📘 [Connect Cowork to a data source](/bricks/cowork-connect-source)
 
 Use the provided content pack unless your team has a suitable piece of real content and an audience profile in mind.

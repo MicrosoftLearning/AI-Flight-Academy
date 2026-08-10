@@ -43,6 +43,16 @@ pwsh ./run.ps1 -Dilemma 1
 python test/compare.py
 ```
 
+## Check your MCP server
+
+Once you implement `check_boundary`, verify another agent could actually call your twin:
+
+```powershell
+python test/mcp_smoke.py
+```
+
+It connects over stdio the same way VS Code does, lists your tools, and runs your guardrail. Verified timing: a full council run is roughly 70 seconds and 4 premium requests.
+
 ## What you build
 
 - `digital-twin/references/soul.md` — how you decide.
