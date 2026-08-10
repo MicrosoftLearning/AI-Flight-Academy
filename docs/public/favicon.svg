@@ -1,0 +1,19 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Flight Academy">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e3a8a"/>
+      <stop offset="1" stop-color="#0f1e4d"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="64" height="64" rx="14" fill="url(#sky)"/>
+
+  <!-- roundel -->
+  <circle cx="32" cy="32" r="20" fill="none" stroke="#f97316" stroke-width="3"/>
+
+  <!-- aircraft, climbing -->
+  <g transform="rotate(-38 32 32)">
+    <path d="M32 16.5 c2.6 0 4 3.4 4.2 8.2 l10.6 6.6 v4.2 l-10.6 -3.1 v7.2 l3.8 3.1 v3.1 l-8 -2.2 l-8 2.2 v-3.1 l3.8 -3.1 v-7.2 l-10.6 3.1 v-4.2 l10.6 -6.6 c0.2 -4.8 1.6 -8.2 4.2 -8.2 z"
+          fill="#ffffff"/>
+  </g>
+</svg>

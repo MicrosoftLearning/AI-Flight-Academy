@@ -44,13 +44,13 @@ The generic assistant stays available — that's the "before" you compare agains
 ## Before you start
 
 <div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/twin-forge-SKILL.md" download="SKILL.md">
+  <a class="lab-card" href="/AI-Flight-Academy/downloads/twin-forge-SKILL.md" download="SKILL.md">
     <span class="lab-card-emoji">⚡</span>
     <span class="lab-card-title">Twin Forge</span>
     <span class="lab-card-desc">Interviews you and drafts your first spec. One file — import the folder it's in.</span>
     <span class="lab-card-cta">Download SKILL.md →</span>
   </a>
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/avery-persona-pack.zip" download>
+  <a class="lab-card" href="/AI-Flight-Academy/downloads/avery-persona-pack.zip" download>
     <span class="lab-card-emoji">🗂️</span>
     <span class="lab-card-title">Avery Washington</span>
     <span class="lab-card-desc">A made-up marketing manager with a fake inbox and calendar. Use them instead of your own data.</span>

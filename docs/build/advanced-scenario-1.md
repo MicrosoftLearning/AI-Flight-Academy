@@ -48,13 +48,13 @@ The council takes three kinds of situation. Same agents, same spec — only the 
 ## Before you start
 
 <div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/digital-twin-starter.zip" download>
+  <a class="lab-card" href="/AI-Flight-Academy/downloads/digital-twin-starter.zip" download>
     <span class="lab-card-emoji">📦</span>
     <span class="lab-card-title">Starter repo</span>
     <span class="lab-card-desc">Schema, MCP skeleton, council runner, test harness. The contract — not the solution.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/avery-persona-pack.zip" download>
+  <a class="lab-card" href="/AI-Flight-Academy/downloads/avery-persona-pack.zip" download>
     <span class="lab-card-emoji">🗂️</span>
     <span class="lab-card-title">Avery Washington</span>
     <span class="lab-card-desc">Optional. A made-up marketing manager with a fake inbox and calendar — use them instead of your own data.</span>
@@ -68,7 +68,7 @@ Unzip it wherever you keep projects, then open the folder in VS Code. **No cloni
 **PowerShell** — downloads, unzips, and opens it in VS Code:
 
 ```powershell
-$u='https://microsoftlearning.github.io/Team-Week-Imagineer-Hack/downloads/digital-twin-starter.zip'
+$u='https://microsoftlearning.github.io/AI-Flight-Academy/downloads/digital-twin-starter.zip'
 $z="$env:TEMP\dts.zip"; iwr $u -OutFile $z
 Expand-Archive $z -DestinationPath "$HOME\digital-twin" -Force
 code "$HOME\digital-twin\digital-twin-starter"
@@ -77,7 +77,7 @@ code "$HOME\digital-twin\digital-twin-starter"
 **macOS / Linux:**
 
 ```bash
-curl -L -o /tmp/dts.zip https://microsoftlearning.github.io/Team-Week-Imagineer-Hack/downloads/digital-twin-starter.zip
+curl -L -o /tmp/dts.zip https://microsoftlearning.github.io/AI-Flight-Academy/downloads/digital-twin-starter.zip
 unzip -q /tmp/dts.zip -d ~/digital-twin && code ~/digital-twin/digital-twin-starter
 ```
 
@@ -179,7 +179,7 @@ Either way, extract these four:
 ::: danger Don't build a Graph integration
 Azure AD app registration plus MSAL will take 30–60 minutes and eat your session. Roughly a third of teams that try it never get past it. Let Cowork retrieve, or use the persona pack. Your working style is slow-moving data — a monthly snapshot is plenty.
 
-<a href="/Team-Week-Imagineer-Hack/bricks/advanced-work-iq" target="_blank" rel="noreferrer">📖 Ground on live data with Work IQ — full guide (opens in a new tab) ↗</a>
+<a href="/AI-Flight-Academy/bricks/advanced-work-iq" target="_blank" rel="noreferrer">📖 Ground on live data with Work IQ — full guide (opens in a new tab) ↗</a>
 :::
 
 ## 5 · Write the agents
@@ -245,7 +245,7 @@ copilot -p "Run the council on this dilemma: <text>" --allow-all-tools
 
 On Windows the command line caps at 8191 characters, so long prompts have to go through a file — `twinlib.py` in the starter repo handles that for you.
 
-<a href="/Team-Week-Imagineer-Hack/bricks/advanced-setup" target="_blank" rel="noreferrer">📖 Set up Scout / GitHub Copilot — full guide (opens in a new tab) ↗</a>
+<a href="/AI-Flight-Academy/bricks/advanced-setup" target="_blank" rel="noreferrer">📖 Set up Scout / GitHub Copilot — full guide (opens in a new tab) ↗</a>
 
 :::
 
@@ -327,7 +327,7 @@ Then `Ctrl+Shift+P` → **MCP: List Servers** → start it. Switch Copilot Chat 
 
 **Two transports, two audiences.** `stdio` for local editors. `streamable-http` is the shape a Cowork connector needs — JSON-RPC 2.0 over HTTPS. Production would also need TLS and OAuth; local is fine today.
 
-<a href="/Team-Week-Imagineer-Hack/bricks/advanced-mcp-connector" target="_blank" rel="noreferrer">📖 Build a custom connector (MCP) — full guide (opens in a new tab) ↗</a>
+<a href="/AI-Flight-Academy/bricks/advanced-mcp-connector" target="_blank" rel="noreferrer">📖 Build a custom connector (MCP) — full guide (opens in a new tab) ↗</a>
 
 :::
 
@@ -368,7 +368,7 @@ Note it returns **the rule and where it came from**, not just a verdict — so a
 
 **Try this in your demo:** have another agent ask your twin to explain why the person is out next week. Watching it return `NEVER` — with a citation — is the moment the room understands the difference between a boundary and a polite request.
 
-<a href="/Team-Week-Imagineer-Hack/bricks/advanced-guardrail" target="_blank" rel="noreferrer">📖 Add a guardrail / output check — full guide (opens in a new tab) ↗</a>
+<a href="/AI-Flight-Academy/bricks/advanced-guardrail" target="_blank" rel="noreferrer">📖 Add a guardrail / output check — full guide (opens in a new tab) ↗</a>
 
 :::
 

@@ -35,19 +35,19 @@ This track solves a second problem too: a model is good at contextual judgement,
 Download all three and unzip them into one folder. Keep `the-greenlight-starter`, `the-greenlight`, and `data-pack` **side by side**.
 
 <div class="lab-grid lab-grid-3">
-	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/the-greenlight-starter.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-greenlight-starter.zip" download>
 		<span class="lab-card-emoji">📦</span>
 		<span class="lab-card-title">Starter repo</span>
 		<span class="lab-card-desc">The dashboard, a seated council, the checks, and the MCP server — with the build paths left as TODOs.</span>
 		<span class="lab-card-cta">Download .zip →</span>
 	</a>
-	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/the-greenlight.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-greenlight.zip" download>
 		<span class="lab-card-emoji">🟢</span>
 		<span class="lab-card-title">Greenlight skill</span>
 		<span class="lab-card-desc">The audience-review method and the unchanged solo-critic baseline.</span>
 		<span class="lab-card-cta">Download .zip →</span>
 	</a>
-	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/greenlight-data-pack.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy/downloads/greenlight-data-pack.zip" download>
 		<span class="lab-card-emoji">🗂️</span>
 		<span class="lab-card-title">Content pack</span>
 		<span class="lab-card-desc">Five articles, four audience profiles, and a style guide. Use it instead of real work data.</span>

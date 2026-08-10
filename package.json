@@ -1,8 +1,8 @@
 {
-  "name": "team-week-imagineer-hack",
+  "name": "ai-flight-academy",
   "version": "1.0.0",
   "private": true,
-  "description": "The Imagineer Hack — a 2-hour hands-on agent-building hack for Global Skilling Team Week.",
+  "description": "AI Flight Academy — a 2-hour hands-on agent-building hack for Global Skilling Team Week.",
   "devDependencies": {
     "markdownlint-cli2": "^0.22.0",
     "vitepress": "^2.0.0-alpha.12"

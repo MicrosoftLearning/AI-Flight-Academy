@@ -2,12 +2,12 @@
 layout: home
 
 hero:
-  name: The Imagineer Hack
-  text: From everyday task to working agent.
+  name: AI Flight Academy
+  text: Train. Build. Take off.
   tagline: Two hours, your tools, and a real problem to crack. Pick how you want to build, and walk out with an agent that's yours.
   image:
     src: /hero.svg
-    alt: The Imagineer Hack
+    alt: AI Flight Academy
   actions:
     - theme: brand
       text: Start building
@@ -39,25 +39,25 @@ hero:
 
 <!-- markdownlint-disable MD033 -->
 <div class="lab-grid">
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/scenarios/">
+  <a class="lab-card" href="/AI-Flight-Academy/scenarios/">
     <span class="lab-card-emoji">🎯</span>
     <span class="lab-card-title">1 · Pick a scenario</span>
     <span class="lab-card-desc">🚧 Scenario 1 is The Digital Twin, Scenario 2 is The Greenlight. Both still in progress.</span>
     <span class="lab-card-cta">See scenarios →</span>
   </a>
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/levels/">
+  <a class="lab-card" href="/AI-Flight-Academy/levels/">
     <span class="lab-card-emoji">🎚️</span>
     <span class="lab-card-title">2 · Pick how to build</span>
     <span class="lab-card-desc">Cowork with no code, or real code in VS Code. Same result, different route.</span>
     <span class="lab-card-cta">Compare →</span>
   </a>
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/#start-here">
+  <a class="lab-card" href="/AI-Flight-Academy/#start-here">
     <span class="lab-card-emoji">🧱</span>
     <span class="lab-card-title">3 · Follow your build page</span>
     <span class="lab-card-desc">Everything you need is on one page, start to finish. No hunting around.</span>
     <span class="lab-card-cta">Start building →</span>
   </a>
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/submit/">
+  <a class="lab-card" href="/AI-Flight-Academy/submit/">
     <span class="lab-card-emoji">🚀</span>
     <span class="lab-card-title">4 · Build your demo & submit</span>
     <span class="lab-card-desc">Put together a short demo of what you built, then submit your project.</span>
@@ -84,13 +84,13 @@ hero:
 <p class="home-section-intro is-wide">Built something? Package a short demo and submit your project. Then explore the resources to keep going after the hack.</p>
 
 <div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/submit/">
+  <a class="lab-card" href="/AI-Flight-Academy/submit/">
     <span class="lab-card-emoji">🚀</span>
     <span class="lab-card-title">Submit your project</span>
     <span class="lab-card-desc">Built an agent or a demo? Package it up and submit it here — this is how your work gets seen.</span>
     <span class="lab-card-cta">Submit a project →</span>
   </a>
-  <a class="lab-card" href="/Team-Week-Imagineer-Hack/resources/">
+  <a class="lab-card" href="/AI-Flight-Academy/resources/">
     <span class="lab-card-emoji">📚</span>
     <span class="lab-card-title">Resources</span>
     <span class="lab-card-desc">Docs, guides, and links to go deeper — before, during, and after the hack.</span>

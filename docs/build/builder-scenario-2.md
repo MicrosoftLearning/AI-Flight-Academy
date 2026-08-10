@@ -35,13 +35,13 @@ The solo critic stays unchanged — the one-verdict "before" you compare against
 Download both and keep them side by side.
 
 <div class="lab-grid lab-grid-2">
-	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/the-greenlight.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-greenlight.zip" download>
 		<span class="lab-card-emoji">🔵</span>
 		<span class="lab-card-title">Greenlight skill</span>
 		<span class="lab-card-desc">The council method and the unchanged solo-critic baseline.</span>
 		<span class="lab-card-cta">Download .zip →</span>
 	</a>
-	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/greenlight-data-pack.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy/downloads/greenlight-data-pack.zip" download>
 		<span class="lab-card-emoji">🗂️</span>
 		<span class="lab-card-title">Content pack</span>
 		<span class="lab-card-desc">Five articles, four audience profiles, and a style guide. Use it instead of real work data.</span>

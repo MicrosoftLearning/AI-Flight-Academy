@@ -8,9 +8,9 @@
 
 ## 0. TL;DR
 
-- **What this is:** an *alternate* take on the Imagineer Hack **Scenario 2 (Content Health / slide 9 "persona-lization")**. It sits alongside the original, which was renamed from **The Screening Room → The Critic**.
+- **What this is:** an *alternate* take on AI Flight Academy **Scenario 2 (Content Health / slide 9 "persona-lization")**. It sits alongside the original, which was renamed from **The Screening Room → The Critic**.
 - **The idea:** instead of teaching *one* reviewer to know *one* audience (that's The Critic), you seat a **council of audience personas** who each **nominate rubric criteria tied to their own outcome**, back every score with **evidence + source + confidence**, **debate** the conflicts, and produce a **transformation plan** — which is then **re-scored by the same council** to "greenlight" it.
-- **Where it lives:** fork `dahans-msft2/Team-Week-Imagineer-Hack`, branch **`scenario-2-greenlight`**, everything pushed. `upstream` (MicrosoftLearning) never touched.
+- **Where it lives:** fork `dahans-msft2/AI-Flight-Academy`, branch **`scenario-2-greenlight`**, everything pushed. `upstream` (MicrosoftLearning) never touched.
 - **State:** kit + facilitator materials + docs (scenario page + 3 build pages) all complete, committed, pushed. No dead links. JSON validates.
 
 ---
@@ -21,7 +21,7 @@
 
 ### Two framing changes
 - **The Greenlight is now the SOLE Scenario 2.** The Critic / Screening Room take is **not shipping**. All "alternate take / pick one" framing has been removed from the site. Treat the "two takes" table in §1 as history only.
-- **The repo now lives OFF OneDrive** at **`C:\repos\Team-Week-Imagineer-Hack`** (fresh clone). OneDrive caused constant file-lock failures and a corrupted `node_modules`. The old OneDrive copy under `...\Imagineer-Hack\work` is stale — delete it.
+- **The repo now lives OFF OneDrive** at **`C:\repos\AI-Flight-Academy`** (fresh clone). OneDrive caused constant file-lock failures and a corrupted `node_modules`. The old OneDrive copy under `...\Imagineer-Hack\work` is stale — delete it.
 
 ### What shipped this session (branch `scenario-2-greenlight`, all pushed)
 1. **Rebased `scenario-2-greenlight` onto `origin/main`.** Main had independently reorganized `Allfiles/` into per-scenario folders; resolved by taking **main's newer scenario-1 content** and preserving this branch's whole `Allfiles/scenario-2-greenlight/` tree as clean renames. The pre-rebase SHAs listed in §6 are obsolete.
@@ -45,7 +45,7 @@
 
 ### Quick-start for the next session
 ```powershell
-cd C:\repos\Team-Week-Imagineer-Hack
+cd C:\repos\AI-Flight-Academy
 git switch scenario-2-greenlight
 npm install          # fresh, off OneDrive
 npm run docs:dev     # preview the site
@@ -55,7 +55,7 @@ npm run docs:dev     # preview the site
 
 ## 1. Project genesis & where this fits
 
-### The Imagineer Hack
+### AI Flight Academy
 - Microsoft **Team Week, October 2026**. ~500–600 participants, mixed-skill teams, most seeing the tools for the first time, **2-hour** build window.
 - Three **paths / altitudes**, same rungs, different tool + finish line:
   - 🟢 **Base** = Cowork
@@ -207,8 +207,8 @@ The solo critic's pre-scored verdicts (the "number to beat") are baked into `the
 
 ## 6. Exact git / repo state
 
-- **Remotes:** `origin` = `https://github.com/dahans-msft2/Team-Week-Imagineer-Hack.git` (Darrin's **fork** — the only push target). `upstream` = `MicrosoftLearning/Team-Week-Imagineer-Hack.git` (**never pushed to**).
-- **Working repo path (Windows):** `C:\repos\Team-Week-Imagineer-Hack` (moved off OneDrive — see the SESSION UPDATE block). The old `...\OneDrive - Microsoft\...\Imagineer-Hack\work` copy is stale.
+- **Remotes:** `origin` = `https://github.com/dahans-msft2/AI-Flight-Academy.git` (Darrin's **fork** — the only push target). `upstream` = `MicrosoftLearning/AI-Flight-Academy.git` (**never pushed to**).
+- **Working repo path (Windows):** `C:\repos\AI-Flight-Academy` (moved off OneDrive — see the SESSION UPDATE block). The old `...\OneDrive - Microsoft\...\Imagineer-Hack\work` copy is stale.
 - **Commit identity used** (matches Darrin's existing commits; required because GitHub blocks the private `@microsoft.com` email): `dahans-msft2 <49003767+dahans-msft2@users.noreply.github.com>`.
 - **Branches** (all on the fork):
   - `main` — upstream baseline; Scenario 1 (Digital Twin) locked. **Neither the data-pack nor any Scenario 2 kit exists on `main`.**
@@ -267,7 +267,7 @@ From the BRIEF's open-items list plus session notes:
 ## 9. Quick-start for the next session
 
 ```powershell
-cd C:\repos\Team-Week-Imagineer-Hack
+cd C:\repos\AI-Flight-Academy
 git fetch origin
 git switch scenario-2-greenlight
 git config user.email "49003767+dahans-msft2@users.noreply.github.com"   # if not already set

@@ -140,7 +140,7 @@ export function globalSidebar(
 
   return [
     {
-      text: "The Imagineer Hack",
+      text: "AI Flight Academy",
       items: [
         { text: "Home", link: "/" },
         { text: "How the hack works", link: "/how-it-works/" },

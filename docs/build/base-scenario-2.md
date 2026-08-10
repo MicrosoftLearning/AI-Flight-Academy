@@ -34,13 +34,13 @@ The council lives in `THE-COUNCIL.md`. You can edit it, reuse it on new content,
 Grab these now — you'll need them in the first few minutes.
 
 <div class="lab-grid lab-grid-2">
-	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/the-greenlight.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-greenlight.zip" download>
 		<span class="lab-card-emoji">🟢</span>
 		<span class="lab-card-title">Greenlight</span>
 		<span class="lab-card-desc">The Cowork skill that guides the review and creates the council file.</span>
 		<span class="lab-card-cta">Download .zip →</span>
 	</a>
-	<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/greenlight-data-pack.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy/downloads/greenlight-data-pack.zip" download>
 		<span class="lab-card-emoji">🗂️</span>
 		<span class="lab-card-title">Content pack</span>
 		<span class="lab-card-desc">Five articles, four audience profiles, and a style guide. Use it instead of real work data.</span>

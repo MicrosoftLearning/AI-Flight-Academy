@@ -1,72 +1,44 @@
-<svg width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The Imagineer Hack">
+<svg width="360" height="360" viewBox="0 0 360 360" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Flight Academy">
   <defs>
-    <linearGradient id="bot" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#a78bfa"/>
-      <stop offset="1" stop-color="#6366f1"/>
+    <linearGradient id="sky" x1="0" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#2563eb"/>
+      <stop offset="0.55" stop-color="#1e3a8a"/>
+      <stop offset="1" stop-color="#0f1e4d"/>
     </linearGradient>
-    <linearGradient id="spire" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#818cf8"/>
-      <stop offset="1" stop-color="#6366f1"/>
+    <linearGradient id="trail" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#f97316" stop-opacity="0"/>
+      <stop offset="1" stop-color="#f97316"/>
     </linearGradient>
-    <linearGradient id="cyan" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#22d3ee"/>
-      <stop offset="1" stop-color="#818cf8"/>
+    <linearGradient id="wing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#dbeafe"/>
     </linearGradient>
   </defs>
 
-  <!-- soft backing glow -->
-  <circle cx="180" cy="176" r="150" fill="url(#bot)" opacity="0.10"/>
+  <circle cx="180" cy="180" r="168" fill="url(#sky)"/>
 
-  <!-- whimsical fantasy spires (generic, no IP) in the background -->
-  <g opacity="0.5">
-    <!-- left spire -->
-    <rect x="60" y="150" width="26" height="110" rx="6" fill="url(#spire)"/>
-    <path d="M60 150 L73 120 L86 150 Z" fill="url(#spire)"/>
-    <path d="M73 112 L73 122" stroke="#22d3ee" stroke-width="3" stroke-linecap="round"/>
-    <path d="M75 113 L90 118 L75 123 Z" fill="#22d3ee"/>
-    <!-- right spire -->
-    <rect x="278" y="140" width="30" height="120" rx="6" fill="url(#spire)"/>
-    <path d="M278 140 L293 106 L308 140 Z" fill="url(#spire)"/>
-    <path d="M293 98 L293 108" stroke="#22d3ee" stroke-width="3" stroke-linecap="round"/>
-    <path d="M295 99 L312 105 L295 111 Z" fill="#22d3ee"/>
+  <!-- horizon glow -->
+  <path d="M12 236 a168 168 0 0 0 336 0 z" fill="#1d4ed8" opacity="0.45"/>
+  <ellipse cx="180" cy="238" rx="132" ry="20" fill="#f97316" opacity="0.28"/>
+
+  <!-- climb trail -->
+  <path d="M52 300 C118 292 176 250 224 176" stroke="url(#trail)" stroke-width="9"
+        stroke-linecap="round" stroke-dasharray="2 26" fill="none"/>
+
+  <!-- roundel -->
+  <circle cx="180" cy="168" r="104" fill="none" stroke="#ffffff" stroke-width="4" opacity="0.28"/>
+  <circle cx="180" cy="168" r="84" fill="none" stroke="#f97316" stroke-width="7"/>
+
+  <!-- aircraft, climbing out -->
+  <g transform="rotate(-38 180 168)">
+    <path d="M180 92 c10 0 15.5 13.5 16.5 33 l41 25.5 v16.5 l-41 -12 v28 l14.5 12 v12 l-31 -8.5 l-31 8.5 v-12 l14.5 -12 v-28 l-41 12 v-16.5 l41 -25.5 c1 -19.5 6.5 -33 16.5 -33 z"
+          fill="url(#wing)"/>
   </g>
 
-  <!-- agent bot -->
-  <g>
-    <!-- antenna -->
-    <line x1="180" y1="86" x2="180" y2="108" stroke="url(#bot)" stroke-width="6" stroke-linecap="round"/>
-    <circle cx="180" cy="80" r="9" fill="url(#cyan)"/>
-
-    <!-- head -->
-    <rect x="120" y="108" width="120" height="98" rx="26" fill="url(#bot)"/>
-    <!-- face screen -->
-    <rect x="136" y="126" width="88" height="62" rx="16" fill="#0f1020" opacity="0.92"/>
-    <!-- eyes -->
-    <circle cx="164" cy="156" r="9" fill="#22d3ee"/>
-    <circle cx="196" cy="156" r="9" fill="#22d3ee"/>
-    <!-- smile -->
-    <path d="M160 172 Q180 186 200 172" stroke="#a78bfa" stroke-width="5" stroke-linecap="round" fill="none"/>
-
-    <!-- body -->
-    <rect x="132" y="214" width="96" height="70" rx="20" fill="url(#spire)"/>
-    <!-- chest node -->
-    <circle cx="180" cy="249" r="13" fill="#0f1020" opacity="0.85"/>
-    <circle cx="180" cy="249" r="6" fill="#22d3ee"/>
-    <!-- arms -->
-    <rect x="108" y="222" width="20" height="46" rx="10" fill="url(#bot)"/>
-    <rect x="232" y="222" width="20" height="46" rx="10" fill="url(#bot)"/>
+  <!-- speed marks -->
+  <g stroke="#f97316" stroke-width="8" stroke-linecap="round" opacity="0.9">
+    <path d="M243 260 h54"/>
+    <path d="M228 282 h40"/>
+    <path d="M213 304 h26"/>
   </g>
-
-  <!-- magic sparkles -->
-  <g fill="#facc15">
-    <path d="M286 150 l4 12 l12 4 l-12 4 l-4 12 l-4 -12 l-12 -4 l12 -4 Z"/>
-  </g>
-  <g fill="#22d3ee">
-    <path d="M92 116 l3 9 l9 3 l-9 3 l-3 9 l-3 -9 l-9 -3 l9 -3 Z"/>
-  </g>
-  <g fill="#a78bfa">
-    <path d="M250 96 l2.5 7 l7 2.5 l-7 2.5 l-2.5 7 l-2.5 -7 l-7 -2.5 l7 -2.5 Z"/>
-  </g>
-  <circle cx="104" cy="270" r="5" fill="#facc15"/>
-  <circle cx="270" cy="272" r="4" fill="#22d3ee"/>
 </svg>

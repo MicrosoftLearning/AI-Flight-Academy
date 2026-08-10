@@ -44,7 +44,7 @@ You answer yes/no questions, and everything else is a sentence typed into a chat
 
 **Download this:**
 
-<a class="lab-card" href="/Team-Week-Imagineer-Hack/downloads/twin-forge-SKILL.md" download="SKILL.md" style="max-width:30rem">
+<a class="lab-card" href="/AI-Flight-Academy/downloads/twin-forge-SKILL.md" download="SKILL.md" style="max-width:30rem">
   <span class="lab-card-emoji">⚡</span>
   <span class="lab-card-title">Twin Forge</span>
   <span class="lab-card-desc">The skill that interviews you and builds your twin. Saves as SKILL.md — leave it in your Downloads folder.</span>
@@ -60,7 +60,7 @@ You answer yes/no questions, and everything else is a sentence typed into a chat
 | **Your own** | It reads your sent mail and calendar. It only ever sees what you can already see, and nothing is shared | You want a twin that's actually you — this makes a sharper one |
 | **Avery Washington** | You use a made-up marketing manager's fake inbox and calendar instead | Your mail is sensitive, or you'd rather not |
 
-Taking Avery? Download **[the persona pack](/Team-Week-Imagineer-Hack/downloads/avery-persona-pack.zip)** now, right-click the `.zip` → **Extract All**. In step 1, answer **no** when asked about your own mail, then attach the extracted documents with the **paperclip** button. Attach the documents, not the zip.
+Taking Avery? Download **[the persona pack](/AI-Flight-Academy/downloads/avery-persona-pack.zip)** now, right-click the `.zip` → **Extract All**. In step 1, answer **no** when asked about your own mail, then attach the extracted documents with the **paperclip** button. Attach the documents, not the zip.
 
 ::: details Building one twin as a table
 Some tables prefer to build a single twin together: pick a volunteer, use their data, and argue about the rules out loud. It surfaces disagreements about what a rule should say.
@@ -129,7 +129,7 @@ Skills are saved in your OneDrive under `Documents/Cowork/skills/`. A skill can 
 
 Skills use an open standard, so the same document also works in VS Code Copilot without changing anything.
 
-<a href="/Team-Week-Imagineer-Hack/bricks/cowork-build-skill" target="_blank" rel="noreferrer">📖 Write a reusable Cowork skill — full guide (opens in a new tab) ↗</a>
+<a href="/AI-Flight-Academy/bricks/cowork-build-skill" target="_blank" rel="noreferrer">📖 Write a reusable Cowork skill — full guide (opens in a new tab) ↗</a>
 
 :::
 
@@ -396,7 +396,7 @@ It may suggest making your twin respond to general phrases like *"what should I 
 Cowork drafts and waits for your approval. Keep it that way, and point at it in your demo.
 :::
 
-<a href="/Team-Week-Imagineer-Hack/bricks/cowork-rerun-skill" target="_blank" rel="noreferrer">📖 Re-run a skill on new inputs — full guide (opens in a new tab) ↗</a>
+<a href="/AI-Flight-Academy/bricks/cowork-rerun-skill" target="_blank" rel="noreferrer">📖 Re-run a skill on new inputs — full guide (opens in a new tab) ↗</a>
 
 ---
 
