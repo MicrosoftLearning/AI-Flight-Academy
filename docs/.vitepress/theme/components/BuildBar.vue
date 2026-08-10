@@ -5,7 +5,7 @@ import { getTrack, getScenario, statusFor, statusLabel, CHOOSER } from "../../da
 
 const route = useRoute();
 
-// Route looks like /AI-Flight-Academy/build/base-scenario-2
+// Route looks like /AI-Flight-Academy/build/cowork-scenario-2
 const parsed = computed(() => {
   const m = route.path.match(/\/build\/([a-z]+)-(scenario-\d+)/);
   if (!m) return null;

@@ -22,11 +22,11 @@ Here's what that misses. Take a long, formal write-up that a compliance team wou
 
 You build a **council of audience personas** and use it to review content for the specific people it's meant to reach.
 
-In **Base**, the part you build is one file:
+In **Cowork**, the part you build is one file:
 
 - **`THE-COUNCIL.md`** — your council's audience profiles. For each one, write its **goal** and what the content must do to get them there.
 
-The provided skill reviews the content from each audience's point of view. Every judgement includes a **quote**, a **source**, and a **confidence** rating. Where audiences disagree, it shows the conflict side by side, proposes what to build instead, and helps you make it — down to the message to the person waiting on it. From there you can set the review to run on its own; **Builder** and **Advanced** teams take that further, up to a gate that blocks content until every audience is served.
+The provided skill reviews the content from each audience's point of view. Every judgement includes a **quote**, a **source**, and a **confidence** rating. Where audiences disagree, it shows the conflict side by side, proposes what to build instead, and helps you make it — down to the message to the person waiting on it. From there you can set the review to run on its own; **Scout** and **Code** teams take that further, up to a gate that blocks content until every audience is served.
 
 ![A diverse council of four critics reviews the same content but splits its verdict — two green approve lights, two red reject lights — as members lean in to argue. Neon nameplates read Retail, Compliance, Clinical, and Manufacturing. Headline reads "Same content. Split verdict."](/img/scenario-2-council-split.png)
 
@@ -56,34 +56,34 @@ Use:
 
 Use a real piece your team actually publishes — a help article, a launch post, a policy doc — and review it for audiences you actually serve.
 
-Pick this if you'd rather work with something real. Work IQ can draft an audience profile from the work signals you have access to; correct it with people who know that audience. It is available in Cowork on Base and Scout on Builder. Keep data in your own tenant and out of shared spaces.
+Pick this if you'd rather work with something real. Work IQ can draft an audience profile from the work signals you have access to; correct it with people who know that audience. It is available in Cowork on the Cowork track and Scout on the Scout track. Keep data in your own tenant and out of shared spaces.
 
 ## Assembly maps
 
 Use the building blocks for your altitude.
 
-- **🟢 Base:**
-  1. [Connect Cowork to a data source](/bricks/cowork-connect-source)
+- **🟢 Cowork:**
+  .. [Connect Cowork to a data source](/bricks/cowork-connect-source)
   2. [Write a reusable Cowork skill](/bricks/cowork-build-skill)
   3. [Produce a formatted output](/bricks/cowork-formatted-output)
   4. [Re-run a skill on new inputs](/bricks/cowork-rerun-skill)
 
-- **🔵 Builder (Microsoft Scout):**
-  1. Import the Greenlight skill and seat your audiences
+- **🔵 Scout (Microsoft Scout):**
+  .. Import the Greenlight skill and seat your audiences
   2. Convene the council on a piece and watch the verdicts split
   3. Have Scout build a live dashboard, run by GitHub Copilot CLI
   4. Make it a one-command app or a scheduled task
 
-- **🟣 Advanced:**
-  1. [Advanced setup](/bricks/advanced-setup)
+- **🟣 Code:**
+  .. [Advanced setup](/bricks/advanced-setup)
   2. [Use Work IQ](/bricks/advanced-work-iq)
   3. [Add a guardrail](/bricks/advanced-guardrail)
   4. [Build an MCP connector](/bricks/advanced-mcp-connector)
 
 ::: info Team model
-In Base and Builder, each person adds a different audience, then the team combines them into one council and compares the results.
+In Cowork and Scout, each person adds a different audience, then the team combines them into one council and compares the results.
 
-In Advanced, the team builds one system. Each person owns an audience reviewer, the comparison step, or the final sign-off.
+In Code, the team builds one system. Each person owns an audience reviewer, the comparison step, or the final sign-off.
 :::
 
 ## Start building

@@ -1,15 +1,15 @@
 ---
-title: 🟣 Advanced · Code-Extended — Scenario 3
+title: 🟢 Cowork · Copilot-Crafted — Scenario 3
 ---
 
-# 🟣 Advanced · Code-Extended
+# 🟢 Cowork · Copilot-Crafted
 ## Scenario 3 — TBD
 
 ::: warning Assembly map — pending scenario lock
 This is your build landing page for the altitude + scenario you picked. The scenario specifics are still being finalized with leadership; the structure below is ready to fill.
 :::
 
-**Building with:** Scout + GitHub Copilot
+**Building with:** Microsoft 365 Copilot + Cowork
 
 ## 1 · Your mission
 
@@ -39,4 +39,4 @@ See the required functions for this altitude on the [track comparison](/levels/)
 
 ## Guides for this track {#guides}
 
-<!--@include: ../.vitepress/partials/guides-advanced.md-->
+<!--@include: ../.vitepress/partials/guides-cowork.md-->

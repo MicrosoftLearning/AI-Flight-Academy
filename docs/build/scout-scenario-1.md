@@ -255,4 +255,4 @@ Someone who knows you reads a draft your twin wrote and recognises it. That land
 
 ## Guides for this track {#guides}
 
-<!--@include: ../.vitepress/partials/guides-builder.md-->
+<!--@include: ../.vitepress/partials/guides-scout.md-->

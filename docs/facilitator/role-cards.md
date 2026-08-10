@@ -6,9 +6,9 @@ title: Role Cards
 
 Print these or copy them into team channels.
 
-## Base teams
+## Cowork teams
 
-In Base, everyone builds their own twin. These roles rotate inside the working session. When the team is improving one person's twin, use the cards below. Then switch.
+In Cowork, everyone builds their own twin. These roles rotate inside the working session. When the team is improving one person's twin, use the cards below. Then switch.
 
 ---
 
@@ -105,9 +105,9 @@ The twin gets more specific without getting longer, softer, or more fragile.
 
 ---
 
-## Advanced teams: council owners
+## Code teams: council owners
 
-Advanced teams build one integrated system. Each person owns one council agent. All agents share one `soul.md` and must integrate.
+Code teams build one integrated system. Each person owns one council agent. All agents share one `soul.md` and must integrate.
 
 ---
 

@@ -196,9 +196,9 @@ The solo critic's pre-scored verdicts (the "number to beat") are baked into `the
 | File | Purpose |
 |---|---|
 | `scenarios/scenario-2-greenlight.md` | The scenario brief page (villain complaint, done-looks-like, two-pass mechanic, the two rules, two shared beats, path links) |
-| `build/base-scenario-2.md` | 🟢 build page — seat→convene→greenlight→automate; finish v4 |
-| `build/builder-scenario-2.md` | 🔵 build page — seat-agents + synthesizer + responder + publish/swap; finish v5 |
-| `build/advanced-scenario-2.md` | 🟣 build page — parallel scorecards + judge + deterministic checks + coverage matrix + PR gate; finish v7 |
+| `build/cowork-scenario-2.md` | 🟢 build page — seat→convene→greenlight→automate; finish v4 |
+| `build/scout-scenario-2.md` | 🔵 build page — seat-agents + synthesizer + responder + publish/swap; finish v5 |
+| `build/code-scenario-2.md` | 🟣 build page — parallel scorecards + judge + deterministic checks + coverage matrix + PR gate; finish v7 |
 
 ### This file
 - `Allfiles/scenario-2-greenlight/HANDOFF.md` (you're reading it).

@@ -6,7 +6,7 @@ title: Resources
 
 ## Get the files
 
-**[⬇ Downloads](/resources/downloads)** — Twin Forge, the Avery Washington persona pack, and the Advanced starter repo.
+**[⬇ Downloads](/resources/downloads)** — Twin Forge, the Avery Washington persona pack, and the Code track starter repo.
 
 ## Reference hacks
 

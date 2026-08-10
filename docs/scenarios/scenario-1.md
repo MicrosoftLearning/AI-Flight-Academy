@@ -25,9 +25,9 @@ Inside `references/`:
 - **`soul.md`** — decision rules, boundaries, capacity, blind spots.
 - **`voice.md`** — real sent-email samples and the style rules they imply.
 
-Twin Forge writes those two, then hands off. **The rest of the hack is yours:** in a new Cowork task, you add the files it doesn't have — the people you deal with, what you refuse, what you're actually working on — and wire each one in. That's most of Base.
+Twin Forge writes those two, then hands off. **The rest of the hack is yours:** in a new Cowork task, you add the files it doesn't have — the people you deal with, what you refuse, what you're actually working on — and wire each one in. That's most of Cowork.
 
-Advanced adds **`revealed.md`** — what your calendar shows about how you spend time — and a council of agents that argue before deciding.
+The Code track adds **`revealed.md`** — what your calendar shows about how you spend time — and a council of agents that argue before deciding.
 
 Done means the twin drafts in a way you'd recognise as yours, and you can point to the rule that produced it.
 
@@ -47,13 +47,13 @@ The most accurate twin, because the evidence is real. Keep it private — your o
 
 - 5–10 real sent emails → `voice.md`
 - a short yes/no interview about situations you've handled → `soul.md`
-- recent calendar patterns → `revealed.md` (Advanced)
+- recent calendar patterns → `revealed.md` (Code track)
 
 ### Path B — Build Avery Washington's twin
 
 Use the **Avery Washington persona pack**: a synthetic marketing manager with a fake inbox, calendar, and goals doc.
 
-Same exercise, no personal data. Details on the [Base build page](/build/base-scenario-1).
+Same exercise, no personal data. Details on the [Cowork build page](/build/cowork-scenario-1).
 
 ## Build paths
 
@@ -64,22 +64,22 @@ Same exercise, no personal data. Details on the [Base build page](/build/base-sc
 
 Use the building blocks for your altitude.
 
-- **🟢 Base:**
+- **🟢 Cowork:**
   1. [Connect Cowork to a data source](/bricks/cowork-connect-source)
   2. [Write a reusable Cowork skill](/bricks/cowork-build-skill)
   3. [Produce a formatted output](/bricks/cowork-formatted-output)
   4. [Re-run a skill on new inputs](/bricks/cowork-rerun-skill)
 
-- **🔵 Builder:** Coming soon
+- **🔵 Scout:** Coming soon
 
-- **🟣 Advanced:**
-  1. [Advanced setup](/bricks/advanced-setup)
+- **🟣 Code:**
+  1. [Set up Scout / GitHub Copilot](/bricks/advanced-setup)
   2. [Build an MCP connector](/bricks/advanced-mcp-connector)
   3. [Use Work IQ](/bricks/advanced-work-iq)
   4. [Add a guardrail](/bricks/advanced-guardrail)
 
 ::: info Team model
-In Base, everyone builds their own twin and the table converges on shape — compare rules, steal good tiebreakers.
+In Cowork, everyone builds their own twin and the table converges on shape — compare rules, steal good tiebreakers.
 
-In Advanced, the team builds one system. Each person owns one council agent — Ambition, Obligation, Capacity, Arbiter, or Critic — sharing one `soul.md`.
+In Code, the team builds one system. Each person owns one council agent — Ambition, Obligation, Capacity, Arbiter, or Critic — sharing one `soul.md`.
 :::

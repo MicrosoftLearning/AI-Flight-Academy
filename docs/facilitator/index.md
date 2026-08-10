@@ -6,8 +6,8 @@ title: Facilitator Guide
 
 Use these pages to run Scenario 1 in the room.
 
-- [Role cards](/facilitator/role-cards) — printable roles for Base teams and Advanced council teams.
-- [Interview script](/facilitator/interview-script) — behavioral questions, and the dilemma set used by the Advanced track's scripted test.
+- [Role cards](/facilitator/role-cards) — printable roles for Cowork teams and Code council teams.
+- [Interview script](/facilitator/interview-script) — behavioral questions, and the dilemma set used by the Code track's scripted test.
 - [Coach playbook](/facilitator/coach-playbook) — common failure modes and how to unstick teams.
 
 ## What to prep

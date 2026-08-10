@@ -7,7 +7,7 @@ title: Ground on live data with Work IQ
 # Ground on live data with Work IQ
 
 **Tool:** Cowork Work IQ + exported markdown
-**Source status:** Advanced grounding
+**Source status:** Code track grounding
 
 <!-- #region guide -->
 Live work data is powerful. It is also the easiest place to lose the whole session. The goal is not to build a full Microsoft Graph integration. The goal is to ground your spec in evidence.

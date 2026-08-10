@@ -186,4 +186,4 @@ Let Scout off the leash and it might build you forty booths. When it overshoots,
 
 ## Guides for this track {#guides}
 
-<!--@include: ../.vitepress/partials/guides-builder.md-->
+<!--@include: ../.vitepress/partials/guides-scout.md-->

@@ -16,7 +16,7 @@ Facilitator-facing agenda for the two-hour hack.
 | 1:00–1:40 | **Build — the main event** | New task per person. They add reference documents to their twin: stakeholders, projects, boundaries, whatever their run exposed. Bar is two new documents on the reading list, with visible before/after and one refusal. Two prefixes do the work: **"Using my twin:"** to ask it something, **"Edit my twin skill:"** to change it. |
 | ~1:05 | Table round-robin | Two minutes: each person says what they're adding. Ideas spread fast here — don't skip it. |
 | ~1:20 | Halfway share | Whoever has the best-working file reads it aloud. Others copy the structure. |
-| 1:40–1:50 | Port or extend | Same folder in VS Code Copilot or the CLI, or add a schedule/trigger. Advanced teams integrate council agents against one shared `soul.md`. |
+| 1:40–1:50 | Port or extend | Same folder in VS Code Copilot or the CLI, or add a schedule/trigger. Code teams integrate council agents against one shared `soul.md`. |
 | 1:50–2:00 | Demos + close | Before/after on one prompt, a refusal citing their own rule, and which files they chose. |
 
 ::: warning Timing rails

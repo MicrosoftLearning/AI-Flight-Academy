@@ -433,4 +433,4 @@ Cowork drafts and waits for your approval. Keep it that way, and point at it in 
 
 ## Guides for this track {#guides}
 
-<!--@include: ../.vitepress/partials/guides-base.md-->
+<!--@include: ../.vitepress/partials/guides-cowork.md-->

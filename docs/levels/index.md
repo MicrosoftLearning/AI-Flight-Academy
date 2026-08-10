@@ -9,15 +9,15 @@ differ in the tools you use, not in how much you accomplish.
 
 | | You'll build with | You'll spend the time |
 | --- | --- | --- |
-| 🟢 **Base** · Copilot-Crafted | Microsoft 365 Copilot + Cowork | Writing instructions, not code. Guided end to end. |
-| 🔵 **Builder** · Agent-Orchestrated | Microsoft Scout | Wiring agents together in a low-code maker studio. |
-| 🟣 **Advanced** · Code-Extended | VS Code + GitHub Copilot | Writing real code. You get a contract, not a solution. |
+| 🟢 **Cowork** · Copilot-Crafted | Microsoft 365 Copilot + Cowork | Writing instructions, not code. Guided end to end. |
+| 🔵 **Scout** · Agent-Orchestrated | Microsoft Scout | Wiring agents together in a low-code maker studio. |
+| 🟣 **Code** · Code-Extended | VS Code + GitHub Copilot | Writing real code. You get a contract, not a solution. |
 
 ## Not sure?
 
-- **Never built an agent before?** 🟢 **Base**. It's guided end to end and needs no setup.
-- **Want to see agents hand off to each other?** 🔵 **Builder**.
-- **You live in a terminal or VS Code?** 🟣 **Advanced**.
+- **Never built an agent before?** 🟢 **Cowork**. It's guided end to end and needs no setup.
+- **Want to see agents hand off to each other?** 🔵 **Scout**.
+- **You live in a terminal or VS Code?** 🟣 **Code**.
 
 ::: tip All three produce the same artifact
 The portable spec is identical. The tracks differ in what you build around it.

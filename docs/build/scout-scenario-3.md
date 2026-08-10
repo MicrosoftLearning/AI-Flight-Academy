@@ -1,8 +1,8 @@
 ---
-title: 🔵 Builder · Agent-Orchestrated — Scenario 3
+title: 🔵 Scout · Agent-Orchestrated — Scenario 3
 ---
 
-# 🔵 Builder · Agent-Orchestrated
+# 🔵 Scout · Agent-Orchestrated
 ## Scenario 3 — TBD
 
 ::: warning Assembly map — pending scenario lock
@@ -39,4 +39,4 @@ See the required functions for this altitude on the [track comparison](/levels/)
 
 ## Guides for this track {#guides}
 
-<!--@include: ../.vitepress/partials/guides-builder.md-->
+<!--@include: ../.vitepress/partials/guides-scout.md-->

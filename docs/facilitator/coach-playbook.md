@@ -70,7 +70,7 @@ The team is debugging setup at 0:45 and has no working twin.
 
 Shrink the tool surface. Use Cowork and the Twin Forge skill. If needed, switch to the Avery Washington pack. The learning target is the portable spec, not a perfect integration.
 
-## Failure mode: Advanced teams do not integrate
+## Failure mode: Code teams do not integrate
 
 **What it looks like**
 
@@ -94,7 +94,7 @@ Force one shared `soul.md`. The Arbiter owns tiebreakers. The Critic checks whet
 
 ## Tooling traps (verified on a live tenant)
 
-These are real, we hit them in testing. Call them out at the start of the Base track and you'll save the room twenty minutes.
+These are real, we hit them in testing. Call them out at the start of the Cowork track and you'll save the room twenty minutes.
 
 | Symptom | Cause | Fix |
 | --- | --- | --- |

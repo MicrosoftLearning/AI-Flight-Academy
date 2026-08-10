@@ -21,7 +21,7 @@ function suffix(trackId: string, scenarioId: string): string {
 }
 
 export function isBuildPage(relativePath: string): boolean {
-  return /^build\/(base|builder|advanced)-scenario-\d+\.md$/.test(relativePath);
+  return /^build\/(cowork|scout|code)-scenario-\d+\.md$/.test(relativePath);
 }
 
 /**

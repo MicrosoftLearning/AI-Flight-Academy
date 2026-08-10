@@ -29,10 +29,10 @@ export interface Scenario {
 
 export const tracks: Track[] = [
   {
-    id: "base",
+    id: "cowork",
     emoji: "🟢",
     icon: "✨",
-    label: "Base",
+    label: "Cowork",
     sub: "Copilot-Crafted",
     tool: "Microsoft 365 Copilot + Cowork",
     desc: "Build with Microsoft 365 Copilot and Cowork. Turn a repetitive task into a reusable skill that runs itself. No code, all impact.",
@@ -45,10 +45,10 @@ export const tracks: Track[] = [
     ],
   },
   {
-    id: "builder",
+    id: "scout",
     emoji: "🔵",
     icon: "🧩",
-    label: "Builder",
+    label: "Scout",
     sub: "Agent-Orchestrated",
     tool: "Microsoft Scout",
     desc: "Build with Microsoft Scout — an always-on personal agent that acts on your behalf, grounded in your everyday work through Work IQ.",
@@ -64,10 +64,10 @@ export const tracks: Track[] = [
     ],
   },
   {
-    id: "advanced",
+    id: "code",
     emoji: "🟣",
     icon: "🛰️",
-    label: "Advanced",
+    label: "Code",
     sub: "Code-Extended",
     tool: "VS Code + GitHub Copilot",
     desc: "Build with Scout and GitHub Copilot. Add a custom connector, ground on live data with Work IQ, and put a guardrail on the output.",
@@ -110,15 +110,15 @@ export const scenarios: Scenario[] = [
 
 // Status of each track x scenario build page. Anything not listed is "soon".
 export const buildStatus: Record<string, Status> = {
-  "base-scenario-1": "wip",
-  "builder-scenario-1": "soon",
-  "advanced-scenario-1": "wip",
-  "base-scenario-2": "wip",
-  "builder-scenario-2": "wip",
-  "advanced-scenario-2": "wip",
-  "base-scenario-3": "soon",
-  "builder-scenario-3": "soon",
-  "advanced-scenario-3": "soon",
+  "cowork-scenario-1": "wip",
+  "scout-scenario-1": "soon",
+  "code-scenario-1": "wip",
+  "cowork-scenario-2": "wip",
+  "scout-scenario-2": "wip",
+  "code-scenario-2": "wip",
+  "cowork-scenario-3": "soon",
+  "scout-scenario-3": "soon",
+  "code-scenario-3": "soon",
 };
 
 export const statusLabel: Record<Status, string> = {

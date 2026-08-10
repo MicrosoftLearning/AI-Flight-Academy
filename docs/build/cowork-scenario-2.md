@@ -218,4 +218,4 @@ Feed the council a vague description and you get a row of generic bots instead o
 
 ## Guides for this track {#guides}
 
-<!--@include: ../.vitepress/partials/guides-base.md-->
+<!--@include: ../.vitepress/partials/guides-cowork.md-->

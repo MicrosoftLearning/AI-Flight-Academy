@@ -24,6 +24,6 @@ This scenario is not yet locked. Placeholder structure below.
 
 > **TODO** — for each altitude, list which [building blocks](/bricks/) to use and in what order.
 
-- **🟢 Base:** TODO
-- **🔵 Builder:** TODO
-- **🟣 Advanced:** TODO
+- **🟢 Cowork:** TODO
+- **🔵 Scout:** TODO
+- **🟣 Code:** TODO

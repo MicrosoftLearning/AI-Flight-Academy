@@ -321,4 +321,4 @@ First wiring rarely compiles. Errors aren't the end — read the trace, fix a se
 
 ## Guides for this track {#guides}
 
-<!--@include: ../.vitepress/partials/guides-advanced.md-->
+<!--@include: ../.vitepress/partials/guides-code.md-->
