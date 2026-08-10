@@ -19,4 +19,4 @@ title: Resources
 
 ## Tools
 
-> **TODO** — links for Microsoft 365 Copilot, Cowork, Copilot Studio, Scout, GitHub Copilot.
+- [Microsoft 365 Copilot](https://m365.cloud.microsoft) · [Microsoft Scout](https://learn.microsoft.com/microsoft-scout/overview) · [GitHub Copilot CLI](https://docs.github.com/copilot/github-copilot-in-the-cli)

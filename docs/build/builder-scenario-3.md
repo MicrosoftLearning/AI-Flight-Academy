@@ -9,7 +9,7 @@ title: 🔵 Builder · Agent-Orchestrated — Scenario 3
 This is your build landing page for the altitude + scenario you picked. The scenario specifics are still being finalized with leadership; the structure below is ready to fill.
 :::
 
-**Building with:** Copilot Studio
+**Building with:** Microsoft Scout
 
 ## 1 · Your mission
 

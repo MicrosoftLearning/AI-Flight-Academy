@@ -2,45 +2,26 @@
 
 The full guides for your track, in place. Open one, follow it, keep building — you never leave this page.
 
-### 📘 Create an agent + solution {#g-studio-create-agent}
+### 📘 Set up Microsoft Scout {#g-scout-setup}
 
 ::: details Show the full guide
-<!--@include: ../../bricks/studio-create-agent.md#guide-->
+<!--@include: ../../bricks/scout-setup.md#guide-->
 :::
 
-### 📘 Add a topic with a trigger {#g-studio-topic-trigger}
+### 📘 Ground Scout in your work {#g-scout-work-iq}
 
 ::: details Show the full guide
-<!--@include: ../../bricks/studio-topic-trigger.md#guide-->
+<!--@include: ../../bricks/scout-work-iq.md#guide-->
 :::
 
-### 📘 Ground on a knowledge source {#g-studio-knowledge-grounding}
+### 📘 Have Scout build you an app {#g-scout-build-app}
 
 ::: details Show the full guide
-<!--@include: ../../bricks/studio-knowledge-grounding.md#guide-->
+<!--@include: ../../bricks/scout-build-app.md#guide-->
 :::
 
-### 📘 Two agents that hand off {#g-studio-multi-agent}
+### 📘 Make it run without you {#g-scout-autonomy}
 
 ::: details Show the full guide
-<!--@include: ../../bricks/studio-multi-agent.md#guide-->
+<!--@include: ../../bricks/scout-autonomy.md#guide-->
 :::
-
-### 📘 Add an agent flow {#g-studio-agent-flow}
-
-::: details Show the full guide
-<!--@include: ../../bricks/studio-agent-flow.md#guide-->
-:::
-
-### 📘 Adaptive Card to Teams {#g-studio-adaptive-card}
-
-::: details Show the full guide
-<!--@include: ../../bricks/studio-adaptive-card.md#guide-->
-:::
-
-### 📘 Publish your agent {#g-studio-publish}
-
-::: details Show the full guide
-<!--@include: ../../bricks/studio-publish.md#guide-->
-:::
-

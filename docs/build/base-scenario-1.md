@@ -19,7 +19,7 @@ What it doesn't have is anything you've explicitly **decided**. How you rank pri
 
 So you re-supply the same context every session, and rewrite the output when you don't.
 
-Today you write it down once, in a file you control.
+Today you write it down once, in a file you control — and put it somewhere it does work: **a first line of defense** that reads what came in and gives you an opening position before you've touched it.
 
 ## What you'll walk out with
 
@@ -73,6 +73,8 @@ Answer each one with what you **actually did last time** — not what you'd like
 
 Then put it away. At the end of the session your twin answers the same fifteen cold and you compare.
 
+**Done when:** fifteen answers written down and set aside.
+
 ::: tip This is not a score
 There's no percentage and no leaderboard. The mismatches are the useful part — each one is a rule you wrote down that doesn't match how you actually work.
 :::
@@ -88,6 +90,8 @@ There's no percentage and no leaderboard. The mismatches are the useful part —
 You'll see **"Skill uploaded — twin-forge."**
 
 ![Twin Forge showing under Your skills on the Cowork Customize page](/img/twin-forge-uploaded.png)
+
+**Done when:** you see *Skill uploaded — twin-forge* and a new session picks it up.
 
 ::: warning Two things that will trip you up
 **Upload the file on its own.** Don't zip it. Zipped uploads fail silently — nothing appears and you get no error.
@@ -153,6 +157,8 @@ Twin Forge takes it from here, about 12 minutes:
 Every question is *"what did you actually do last time?"* — not *"what do you value?"* If you describe your best self, you'll get a twin of someone else.
 :::
 
+**Done when:** three files exist, and the one about how you decide is roughly a page.
+
 **You now have a v0.1 twin. Everything from here is you making it good — and that's the actual hack.**
 
 ---
@@ -164,6 +170,8 @@ Your first draft is too long. Cut it to about one page.
 Cutting is the highest-value thing you'll do here. Longer is not better. Anthropic [found while building Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback) that broad principles worked better than long, specific ones — the longer versions actually reduced effectiveness. And ["Lost in the Middle"](https://arxiv.org/abs/2307.03172) (peer-reviewed, *Transactions of the ACL*) showed models pay least attention to whatever sits in the middle of a long prompt.
 
 **Cut anything that isn't a rule you'd actually apply.**
+
+**Done when:** it fits on one screen without scrolling.
 
 ## 6 · Give it your voice
 
@@ -212,6 +220,8 @@ Your twin needs to know what you do when two good things collide. Most first dra
 | I collaborate well. | When two people both say theirs is top priority, I decide and tell them. I don't escalate it. |
 
 A value cannot be applied. A rule can.
+
+**Done when:** every line in your rules section says what to *do*, not what you care about.
 
 ## 8 · Compare with your team
 
