@@ -12,7 +12,6 @@ Still being built and tested. Contents may change before the event.
 | `data-pack/` | Five content pieces (`P1`–`P5`), four audience cards (the council seats), and a style guide. The synthetic data for the no-personal-data path. | Both |
 | `the-greenlight-starter/` | Council-runner skeleton and deterministic checks for the code path. The contract, not the solution. | 🟣 Code |
 
-Facilitator materials (brief, judging rubric, path chooser) live in `the-greenlight/facilitator/` – they're for coaches, not a participant download.
 
 ## How these reach participants
 

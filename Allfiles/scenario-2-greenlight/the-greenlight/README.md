@@ -35,7 +35,7 @@ Every audience judges the same content for a different result. That's why the ro
 
 | | |
 |:---:|---|
-| **1** | **Pick your track** → [`facilitator/PICK-YOUR-PATH.md`](facilitator/PICK-YOUR-PATH.md) – 🟢 Cowork · 🔵 Microsoft Scout · 🟣 VS Code |
+| **1** | **Pick your altitude** – 🟢 Cowork · 🔵 Microsoft Scout · 🟣 VS Code |
 | **2** | **Install the skill** → add the [`the-greenlight/`](.) folder to your tool |
 | **3** | **Say** *"seat the council"* – or ask *"what do I do next?"* to be walked through it |
 

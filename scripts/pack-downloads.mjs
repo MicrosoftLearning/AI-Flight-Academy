@@ -83,11 +83,8 @@ const jobs = [
     ],
   },
   {
-    // Ships the skill without facilitator/ - that folder holds the grading
-    // rubric and design brief, which participants must not see.
     src: join(root, "Allfiles", "scenario-2-greenlight", "the-greenlight"),
     zip: "the-greenlight.zip",
-    exclude: ["facilitator"],
   },
   {
     src: join(root, "Allfiles", "scenario-2-greenlight", "data-pack"),
