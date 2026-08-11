@@ -41,6 +41,14 @@ function reset() {
   track.value = null;
   scenario.value = null;
 }
+
+/**
+ * Render `**bold**` in card copy. The source is a build-time constant in
+ * paths.ts and never user input, so this is safe to pass to v-html.
+ */
+function bold(s: string) {
+  return s.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+}
 </script>
 
 <template>
@@ -63,7 +71,9 @@ function reset() {
           <span class="picker-bubble-emoji">{{ a.icon }}</span>
           <span class="picker-bubble-title">{{ a.emoji }} {{ a.label }}</span>
           <span class="picker-bubble-sub">{{ a.sub }}</span>
-          <span class="picker-bubble-desc">{{ a.desc }}</span>
+          <span class="picker-bubble-builds">{{ a.buildsVerb }}</span>
+          <!-- eslint-disable-next-line vue/no-v-html -- build-time constant -->
+          <span class="picker-bubble-desc" v-html="bold(a.desc)"></span>
         </button>
       </div>
     </div>
@@ -235,6 +245,21 @@ function reset() {
 .picker-bubble-desc {
   font-size: 0.85rem;
   color: var(--vp-c-text-2);
+}
+
+/* "Builds with" / "Builds in" — the kicker above the tool line. */
+.picker-bubble-builds {
+  margin-top: 0.6rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-3);
+}
+
+.picker-bubble-desc :deep(strong) {
+  color: var(--vp-c-text-1);
+  font-weight: 600;
 }
 
 .picker-bubble-status {

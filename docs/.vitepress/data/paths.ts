@@ -11,6 +11,9 @@ export interface Track {
   label: string;
   sub: string;
   tool: string;
+  /** Preposition that fits the tool: you build *with* Cowork, *in* VS Code. */
+  buildsVerb: string;
+  /** Card copy. `**bold**` is rendered by PathPicker - keep it to tool names. */
   desc: string;
   /** Section of /bricks/ holding the step-by-step guides for this track. */
   guidesLink: string;
@@ -35,7 +38,8 @@ export const tracks: Track[] = [
     label: "Cowork",
     sub: "Copilot-Crafted",
     tool: "Microsoft 365 Copilot + Cowork",
-    desc: "Build in Microsoft 365 Copilot with Cowork. Shape a reusable skill by talking to it – it already reads your mail, calendar, and files through Work IQ.",
+    buildsVerb: "Builds with",
+    desc: "**Microsoft 365 Copilot Cowork** – just describe what you need. **Work IQ** pulls in your work context automatically.",
     guidesLink: "/bricks/#cowork",
     guides: [
       { text: "Connect to a data source", link: "/bricks/cowork-connect-source" },
@@ -51,7 +55,8 @@ export const tracks: Track[] = [
     label: "Scout",
     sub: "Agent-Orchestrated",
     tool: "Microsoft Scout",
-    desc: "Build with Microsoft Scout. Describe what you want and Scout builds it, grounded in your work through Work IQ and running against GitHub Copilot CLI.",
+    buildsVerb: "Builds with",
+    desc: "**Microsoft Scout** – describe what you want and Scout builds it, grounded in your work through **Work IQ** and running against **GitHub Copilot CLI**.",
     guidesLink: "/bricks/#copilot-studio",
     guides: [
       { text: "Create an agent + solution", link: "/bricks/studio-create-agent" },
@@ -70,7 +75,8 @@ export const tracks: Track[] = [
     label: "Code",
     sub: "Code-Extended",
     tool: "VS Code + GitHub Copilot",
-    desc: "Build in VS Code with GitHub Copilot and the Copilot CLI. Write the agents yourself, and enforce guardrails in the tool rather than the prompt.",
+    buildsVerb: "Builds in",
+    desc: "**VS Code with GitHub Copilot and the Copilot CLI**. Write the agents yourself and enforce guardrails in the tool rather than the prompt.",
     guidesLink: "/bricks/#code",
     guides: [
       { text: "Set up Scout / GitHub Copilot", link: "/bricks/advanced-setup" },
