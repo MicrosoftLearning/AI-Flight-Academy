@@ -2,7 +2,7 @@
 import { ref, computed } from "vue";
 import { useRouter, withBase } from "vitepress";
 import {
-  tracks as altitudes,
+  tracks,
   scenarios,
   buildLink,
   statusFor,
@@ -11,54 +11,54 @@ import {
 
 const router = useRouter();
 
-const altitude = ref<string | null>(null);
+const track = ref<string | null>(null);
 const scenario = ref<string | null>(null);
 
-const ready = computed(() => altitude.value !== null && scenario.value !== null);
+const ready = computed(() => track.value !== null && scenario.value !== null);
 
-const chosenAltitude = computed(() =>
-  altitudes.find((a) => a.id === altitude.value)
+const chosenTrack = computed(() =>
+  tracks.find((t) => t.id === track.value)
 );
 const chosenScenario = computed(() =>
   scenarios.find((s) => s.id === scenario.value)
 );
 
 const chosenStatus = computed(() =>
-  ready.value ? statusLabel[statusFor(altitude.value!, scenario.value!)] : ""
+  ready.value ? statusLabel[statusFor(track.value!, scenario.value!)] : ""
 );
 
 function comboStatus(scenarioId: string) {
-  if (!altitude.value) return "";
-  return statusLabel[statusFor(altitude.value, scenarioId)];
+  if (!track.value) return "";
+  return statusLabel[statusFor(track.value, scenarioId)];
 }
 
 function start() {
   if (!ready.value) return;
-  router.go(withBase(buildLink(altitude.value!, scenario.value!)));
+  router.go(withBase(buildLink(track.value!, scenario.value!)));
 }
 
 function reset() {
-  altitude.value = null;
+  track.value = null;
   scenario.value = null;
 }
 </script>
 
 <template>
   <div class="path-picker">
-    <!-- Step 1: Altitude -->
+    <!-- Step 1: Track -->
     <div class="picker-step">
       <div class="picker-step-head">
-        <span class="picker-step-num" :class="{ done: altitude }">1</span>
-        <span class="picker-step-label">Pick your altitude</span>
+        <span class="picker-step-num" :class="{ done: track }">1</span>
+        <span class="picker-step-label">Pick how you want to build</span>
       </div>
       <div class="picker-options">
         <button
-          v-for="a in altitudes"
+          v-for="a in tracks"
           :key="a.id"
           type="button"
           class="picker-bubble"
-          :class="{ selected: altitude === a.id }"
-          @click="altitude = a.id"
+          :class="{ selected: track === a.id }"
+          @click="track = a.id"
         >
           <span class="picker-bubble-emoji">{{ a.icon }}</span>
           <span class="picker-bubble-title">{{ a.emoji }} {{ a.label }}</span>
@@ -69,7 +69,7 @@ function reset() {
     </div>
 
     <!-- Step 2: Scenario -->
-    <div class="picker-step" :class="{ dimmed: !altitude }">
+    <div class="picker-step" :class="{ dimmed: !track }">
       <div class="picker-step-head">
         <span class="picker-step-num" :class="{ done: scenario }">2</span>
         <span class="picker-step-label">Pick your scenario</span>
@@ -81,7 +81,7 @@ function reset() {
           type="button"
           class="picker-bubble"
           :class="{ selected: scenario === s.id }"
-          :disabled="!altitude"
+          :disabled="!track"
           @click="scenario = s.id"
         >
           <span class="picker-bubble-emoji">{{ s.emoji }}</span>
@@ -98,7 +98,7 @@ function reset() {
     <!-- Step 3: Launch -->
     <div class="picker-launch">
       <p v-if="ready" class="picker-summary">
-        {{ chosenAltitude?.emoji }} <strong>{{ chosenAltitude?.label }}</strong>
+        {{ chosenTrack?.emoji }} <strong>{{ chosenTrack?.label }}</strong>
         · {{ chosenScenario?.label }} ({{ chosenScenario?.name }})
         <span v-if="chosenStatus"> — {{ chosenStatus }}</span>
       </p>
@@ -112,7 +112,7 @@ function reset() {
           Start building →
         </button>
         <button
-          v-if="altitude || scenario"
+          v-if="track || scenario"
           type="button"
           class="picker-reset"
           @click="reset"

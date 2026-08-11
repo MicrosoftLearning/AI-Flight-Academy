@@ -27,7 +27,7 @@ hero:
 <div class="callout-bubble">
 <span class="callout-bubble-icon">🎢</span>
 
-**New to agents?** That's the point. There's a comfortable on-ramp at every altitude, and a coach is never far away. You'll stretch — just a little — no matter where you start.
+**New to agents?** That's the point. There's a comfortable on-ramp on every track, and a coach is never far away. You'll stretch — just a little — no matter where you start.
 
 </div>
 

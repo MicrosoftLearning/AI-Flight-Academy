@@ -4,7 +4,7 @@ title: Scenarios
 
 # Scenarios
 
-Each scenario is a **real, relatable Microsoft work problem** on safe, sanitized data. You'll pick one, then build a solution at your chosen [altitude](/levels/).
+Each scenario is a **real, relatable Microsoft work problem** on safe, sanitized data. You'll pick one, then build a solution on your chosen [track](/levels/).
 
 ::: warning Still being finalized
 Scenario 3 is still being finalized with the leadership team and business managers. Scenarios 1 and 2 are drafted and in active refinement.

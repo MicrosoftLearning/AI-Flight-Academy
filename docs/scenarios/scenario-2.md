@@ -60,7 +60,7 @@ Pick this if you'd rather work with something real. Work IQ can draft an audienc
 
 ## Assembly maps
 
-Use the building blocks for your altitude.
+Use the building blocks for your track.
 
 - **🟢 Cowork:**
   .. [Connect Cowork to a data source](/bricks/cowork-connect-source)
@@ -88,7 +88,7 @@ In Code, the team builds one system. Each person owns an audience reviewer, the 
 
 ## Start building
 
-Pick your altitude:
+Pick your track:
 
 <!-- markdownlint-disable MD033 -->
 <BuildMatrix scenario="scenario-2" />

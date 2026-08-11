@@ -62,7 +62,7 @@ Same exercise, no personal data. Details on the [Cowork build page](/build/cowor
 
 ## Assembly maps
 
-Use the building blocks for your altitude.
+Use the building blocks for your track.
 
 - **🟢 Cowork:**
   1. [Connect Cowork to a data source](/bricks/cowork-connect-source)

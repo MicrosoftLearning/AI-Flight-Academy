@@ -1,4 +1,4 @@
-// Single source of truth for the hack's build matrix: tracks (altitudes) x scenarios.
+// Single source of truth for the hack's build matrix: tracks x scenarios.
 // Imported by .vitepress/config.mts (nav + sidebar) and by the Vue components
 // (PathPicker, BuildMatrix) so every entry point stays in sync automatically.
 
@@ -35,7 +35,7 @@ export const tracks: Track[] = [
     label: "Cowork",
     sub: "Copilot-Crafted",
     tool: "Microsoft 365 Copilot + Cowork",
-    desc: "Build with Microsoft 365 Copilot and Cowork. Turn a repetitive task into a reusable skill that runs itself. No code, all impact.",
+    desc: "Build in Microsoft 365 Copilot with Cowork. Shape a reusable skill by talking to it, grounded in your real work through Work IQ.",
     guidesLink: "/bricks/#cowork",
     guides: [
       { text: "Connect to a data source", link: "/bricks/cowork-connect-source" },
@@ -51,7 +51,7 @@ export const tracks: Track[] = [
     label: "Scout",
     sub: "Agent-Orchestrated",
     tool: "Microsoft Scout",
-    desc: "Build with Microsoft Scout — an always-on personal agent that acts on your behalf, grounded in your everyday work through Work IQ.",
+    desc: "Build with Microsoft Scout. Describe what you want and Scout writes it, running on GitHub Copilot CLI — you end up with a working board, not a hand-written app.",
     guidesLink: "/bricks/#copilot-studio",
     guides: [
       { text: "Create an agent + solution", link: "/bricks/studio-create-agent" },
@@ -70,7 +70,7 @@ export const tracks: Track[] = [
     label: "Code",
     sub: "Code-Extended",
     tool: "VS Code + GitHub Copilot",
-    desc: "Build with Scout and GitHub Copilot. Add a custom connector, ground on live data with Work IQ, and put a guardrail on the output.",
+    desc: "Build in VS Code with GitHub Copilot and the Copilot CLI. Write the agents yourself, and enforce guardrails in the tool rather than the prompt.",
     guidesLink: "/bricks/#code",
     guides: [
       { text: "Set up Scout / GitHub Copilot", link: "/bricks/advanced-setup" },
