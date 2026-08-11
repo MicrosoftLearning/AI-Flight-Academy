@@ -42,7 +42,7 @@ hero:
   <a class="lab-card" href="/AI-Flight-Academy/levels/">
     <span class="lab-card-emoji">🎚️</span>
     <span class="lab-card-title">1 · Pick your altitude</span>
-    <span class="lab-card-desc">Cowork with no code, or real code in VS Code. Same result, different route.</span>
+    <span class="lab-card-desc">Cowork with no code, Scout in between, or real code in VS Code. Pick your tools.</span>
     <span class="lab-card-cta">Compare →</span>
   </a>
   <a class="lab-card" href="/AI-Flight-Academy/scenarios/">
@@ -71,7 +71,7 @@ hero:
 
 ## Start here – pick your altitude {#start-here}
 
-<p class="home-section-intro is-wide">Two clicks and you're building. All three routes solve the same problem – pick whichever fits how you like to work.</p>
+<p class="home-section-intro is-wide">Two clicks and you're building. Every scenario runs at every altitude – pick the tools you want open for two hours.</p>
 
 <PathPicker />
 
