@@ -114,12 +114,12 @@ Do not write "please be careful" in a prompt and call it a guardrail. Put the ch
 
 7. Cite the idea honestly if you explain it in your demo.
 
-   Prior art worth reading — all **preprints**, not peer reviewed. Ideas, not findings:
+   Prior art worth reading – all **preprints**, not peer reviewed. Ideas, not findings:
 
-   - [Reflexion](https://arxiv.org/abs/2303.11366) — an agent writes a plain-language post-mortem of its failure and reads it back next attempt.
-   - [Self-Refine](https://arxiv.org/abs/2303.17651) — generate, critique, revise.
-   - [MemGPT / Letta](https://arxiv.org/abs/2310.08560) — an agent that manages its own memory as external state.
-   - [Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback) (Anthropic, published by the lab) — behavior shaped by a short set of explicit principles.
+   - [Reflexion](https://arxiv.org/abs/2303.11366) – an agent writes a plain-language post-mortem of its failure and reads it back next attempt.
+   - [Self-Refine](https://arxiv.org/abs/2303.17651) – generate, critique, revise.
+   - [MemGPT / Letta](https://arxiv.org/abs/2310.08560) – an agent that manages its own memory as external state.
+   - [Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback) (Anthropic, published by the lab) – behavior shaped by a short set of explicit principles.
 
    ::: warning Honest limit
    The file gets better. The model does not learn. Every future run must reload the improved file.

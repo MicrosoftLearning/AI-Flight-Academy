@@ -1,4 +1,4 @@
-# soul.md — decision spec
+# soul.md – decision spec
 
 <!-- Copy this file to soul.md, then fill it in. Keep it short enough that an agent can actually use it. -->
 

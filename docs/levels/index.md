@@ -4,7 +4,7 @@ title: Which track is right for me?
 
 # Which track is right for me?
 
-Same scenario, three ways in. No track is a lesser version of another — they
+Same scenario, three ways in. No track is a lesser version of another – they
 differ in the tools you use, not in how much you accomplish.
 
 | | You'll build with | You'll spend the time |

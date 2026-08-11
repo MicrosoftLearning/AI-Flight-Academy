@@ -22,7 +22,7 @@ At least one piece describes a **product capability that does not exist.** Do no
 Microsoft 365 Copilot and Microsoft Teams are real products. Claims made about them in this pack are:
 
 - written at behaviour level, without version numbers, licence names, or interface paths
-- **not authoritative** — consult official documentation for real guidance
+- **not authoritative** – consult official documentation for real guidance
 - in some cases **deliberately false**
 
 ## Licence

@@ -41,7 +41,7 @@ function href(trackId: string, scenarioId: string) {
       <ul class="build-matrix-list">
         <li v-for="t in shownTracks" :key="t.id">
           <a :href="href(t.id, s.id)">
-            {{ t.emoji }} <strong>{{ t.label }}</strong> — {{ t.tool }}
+            {{ t.emoji }} <strong>{{ t.label }}</strong> – {{ t.tool }}
           </a>
           <span
             v-if="statusLabel[statusFor(t.id, s.id)]"

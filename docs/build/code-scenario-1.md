@@ -1,5 +1,5 @@
 ---
-title: The Digital Twin — Code
+title: The Digital Twin – Code
 ---
 
 <!-- markdownlint-disable MD013 MD025 MD033 -->
@@ -9,7 +9,7 @@ title: The Digital Twin — Code
 ::: warning 🚧 Work in progress
 Scenario 1 is still being built and tested. Steps, downloads, and screenshots may change before the event.
 :::
-**You'll build this in code — VS Code, GitHub Copilot, and the Copilot CLI.**
+**You'll build this in code – VS Code, GitHub Copilot, and the Copilot CLI.**
 
 You get the contract and the plumbing. You write the agents.
 
@@ -17,7 +17,7 @@ You get the contract and the plumbing. You write the agents.
 
 Copilot already personalizes. It has memory, and Work IQ reads your mail, calendar, and files.
 
-What it doesn't have is anything you've explicitly decided — how you rank competing priorities, which promises you protect, what you'd refuse outright. That gets inferred, you can't inspect or correct it, and it doesn't travel between tools.
+What it doesn't have is anything you've explicitly decided – how you rank competing priorities, which promises you protect, what you'd refuse outright. That gets inferred, you can't inspect or correct it, and it doesn't travel between tools.
 
 Written down, it becomes a **first line of defense**: something that reads what arrived and gives you an opening position before you've touched it.
 
@@ -33,17 +33,17 @@ One system, not five. Everyone shares a single spec, and each person owns one ag
 | **The council** | Three agents that argue, one that decides and **publishes what it overruled** |
 | **The critic** | Watches a miss, works out which line of the spec caused it, proposes a patch |
 | **The server** | Exposes the whole thing as MCP tools, so any agent can call it |
-| **The guardrail** | Refuses actions outside the spec's boundaries — enforced at the tool, not suggested in a prompt |
+| **The guardrail** | Refuses actions outside the spec's boundaries – enforced at the tool, not suggested in a prompt |
 
 The same spec folder runs in Cowork and the CLI unmodified.
 
-The council takes three kinds of situation. Same agents, same spec — only the input changes:
+The council takes three kinds of situation. Same agents, same spec – only the input changes:
 
 | Input | What the council returns |
 | --- | --- |
-| **What landed** — an email, a request, a message | A position, a draft, and the dissent it overruled |
-| **What's ahead** — the next week of calendar | What to protect, what to cut, what to move |
-| **Who I'm facing** — a person or an upcoming meeting | How this person is handled, and what's off-limits in writing |
+| **What landed** – an email, a request, a message | A position, a draft, and the dissent it overruled |
+| **What's ahead** – the next week of calendar | What to protect, what to cut, what to move |
+| **Who I'm facing** – a person or an upcoming meeting | How this person is handled, and what's off-limits in writing |
 
 ## Before you start
 
@@ -51,13 +51,13 @@ The council takes three kinds of situation. Same agents, same spec — only the 
   <a class="lab-card" href="/AI-Flight-Academy/downloads/digital-twin-starter.zip" download>
     <span class="lab-card-emoji">📦</span>
     <span class="lab-card-title">Starter repo</span>
-    <span class="lab-card-desc">Schema, MCP skeleton, council runner, test harness. The contract — not the solution.</span>
+    <span class="lab-card-desc">Schema, MCP skeleton, council runner, test harness. The contract – not the solution.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
   <a class="lab-card" href="/AI-Flight-Academy/downloads/avery-persona-pack.zip" download>
     <span class="lab-card-emoji">🗂️</span>
     <span class="lab-card-title">Avery Washington</span>
-    <span class="lab-card-desc">Optional. A made-up marketing manager with a fake inbox and calendar — use them instead of your own data.</span>
+    <span class="lab-card-desc">Optional. A made-up marketing manager with a fake inbox and calendar – use them instead of your own data.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
 </div>
@@ -65,7 +65,7 @@ The council takes three kinds of situation. Same agents, same spec — only the 
 Unzip it wherever you keep projects, then open the folder in VS Code. **No cloning, no repo to fork.**
 
 ::: details Prefer one line in a terminal?
-**PowerShell** — downloads, unzips, and opens it in VS Code:
+**PowerShell** – downloads, unzips, and opens it in VS Code:
 
 ```powershell
 $u='https://microsoftlearning.github.io/AI-Flight-Academy/downloads/digital-twin-starter.zip'
@@ -84,10 +84,10 @@ unzip -q /tmp/dts.zip -d ~/digital-twin && code ~/digital-twin/digital-twin-star
 Add the persona pack the same way, swapping in `avery-persona-pack.zip`.
 :::
 
-**Check this first, before anything else:** open Copilot Chat in VS Code and confirm you can switch to **Agent** mode. It's an org-managed setting and it may be off. If it is, use the Copilot CLI instead — everything here works either way.
+**Check this first, before anything else:** open Copilot Chat in VS Code and confirm you can switch to **Agent** mode. It's an org-managed setting and it may be off. If it is, use the Copilot CLI instead – everything here works either way.
 
-::: tip Want every step spelled out?
-This page gets you through the build. There are also **[full step-by-step guides](/bricks/)** for each part — open one in a new tab and keep it beside this page.
+::: tip Want a step spelled out?
+The **[Guides](/bricks/)** in the top nav cover the general skills used here – setting up, connecting to your work, and running things on a schedule. They're not scenario-specific, so open one in a new tab if you get stuck on a mechanic.
 :::
 
 ---
@@ -100,13 +100,13 @@ This page gets you through the build. There are also **[full step-by-step guides
 python test/take_test.py
 ```
 
-Fifteen forced-choice work dilemmas. Answer fast and honestly — what you *actually* did last time, not what you'd like to have done. It writes `test/sealed-answers.md` and you don't look at it again until the end.
+Fifteen forced-choice work dilemmas. Answer fast and honestly – what you *actually* did last time, not what you'd like to have done. It writes `test/sealed-answers.md` and you don't look at it again until the end.
 
 ::: warning Don't deliberate
 The script flags any answer that took more than 25 seconds. A considered answer is an aspirational one, and aspirational answers make the comparison worthless.
 :::
 
-At the end of the session your twin answers the same fifteen cold, and you diff them. That's not a score — it's the fastest way to find which rules you got wrong.
+At the end of the session your twin answers the same fifteen cold, and you diff them. That's not a score – it's the fastest way to find which rules you got wrong.
 
 **Done when:** `test/sealed-answers.md` exists and you haven't looked at it since.
 
@@ -119,22 +119,22 @@ Five people, five agents, one shared spec. Decide this in the first two minutes.
 | 1 | **Ambition** | The visible, strategic, reusable work | position · because · cost if ignored |
 | 2 | **Obligation** | Promises already made, people waiting | position · because · cost if ignored |
 | 3 | **Capacity** | What the calendar says you can actually absorb | position · because · cost if ignored |
-| 4 | **Arbiter** | Nothing — it decides, in voice, and publishes the dissent | decision · draft · dissent · confidence · gap |
-| 5 | **Critic** | Nothing — it diagnoses misses and patches the spec | root cause · diff · net lines |
+| 4 | **Arbiter** | Nothing – it decides, in voice, and publishes the dissent | decision · draft · dissent · confidence · gap |
+| 5 | **Critic** | Nothing – it diagnoses misses and patches the spec | root cause · diff · net lines |
 
 **Fewer than five?** Fold the Critic into the Arbiter. **More?** Add someone on tests and someone on the demo.
 
 **Done when:** every person knows which file they own.
 
 ::: tip The drives should be biased
-Ambition shouldn't be balanced. Neither should Obligation or Capacity. Each one argues its corner as hard as it can — the Arbiter is where nuance happens. Balanced sub-agents produce mush.
+Ambition shouldn't be balanced. Neither should Obligation or Capacity. Each one argues its corner as hard as it can – the Arbiter is where nuance happens. Balanced sub-agents produce mush.
 :::
 
 ## 3 · Write the spec
 
 Three files, shared by everyone. Get a rough version fast, then improve it all session.
 
-**soul** — how the person decides. Aim for about a page. The critical part is **tiebreakers, not values**:
+**soul** – how the person decides. Aim for about a page. The critical part is **tiebreakers, not values**:
 
 | ❌ Value | ✅ Tiebreaker |
 | --- | --- |
@@ -145,9 +145,9 @@ A value tells an agent nothing. A tiebreaker tells it what to do.
 
 **Done when:** the spec is about a page and every rule resolves a conflict.
 
-**voice** — 5–10 real sent emails, verbatim, plus the rules those samples imply. Do not clean them up; the punctuation and signoff habits are the part a description would lose.
+**voice** – 5–10 real sent emails, verbatim, plus the rules those samples imply. Do not clean them up; the punctuation and signoff habits are the part a description would lose.
 
-**revealed** — what the calendar actually shows.
+**revealed** – what the calendar actually shows.
 
 ::: tip Shorter really is better
 Resist adding one more clause. Anthropic [found while building Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback) that broad principles beat long specific ones. ["Lost in the Middle"](https://arxiv.org/abs/2307.03172) (peer-reviewed, *Transactions of the ACL*) showed models pay least attention to whatever's in the middle of a long prompt. Your spec is a prompt.
@@ -157,7 +157,7 @@ Resist adding one more clause. Anthropic [found while building Constitutional AI
 
 This is the half a person can't self-report. Pull it from evidence.
 
-**Your own data** — let Cowork's Work IQ do the retrieval and export the summary. Ask for percentages, not raw entries:
+**Your own data** – let Cowork's Work IQ do the retrieval and export the summary. Ask for percentages, not raw entries:
 
 ```text
 Summarize my last 30 days of calendar: time by category, accept/decline/tentative
@@ -165,26 +165,24 @@ ratio, self-organized vs invited ratio, recurring load. Use percentages.
 Leave out private meeting titles.
 ```
 
-**Avery Washington** — the persona pack has a 30-day calendar with everything already in it.
+**Avery Washington** – the persona pack has a 30-day calendar with everything already in it.
 
 Either way, extract these four:
 
 - time by category
-- **response latency by sender** — the honest stakeholder ranking, whatever the org chart says
+- **response latency by sender** – the honest stakeholder ranking, whatever the org chart says
 - accept / decline / tentative ratio
 - self-organized vs. invited
 
 **Done when:** `revealed.md` cites at least one number that contradicts the spec.
 
 ::: danger Don't build a Graph integration
-Azure AD app registration plus MSAL will take 30–60 minutes and eat your session. Roughly a third of teams that try it never get past it. Let Cowork retrieve, or use the persona pack. Your working style is slow-moving data — a monthly snapshot is plenty.
-
-<a href="/AI-Flight-Academy/bricks/advanced-work-iq" target="_blank" rel="noreferrer">📖 Ground on live data with Work IQ — full guide (opens in a new tab) ↗</a>
+Azure AD app registration plus MSAL will take 30–60 minutes and eat your session. Roughly a third of teams that try it never get past it. Let Cowork retrieve, or use the persona pack. Your working style is slow-moving data – a monthly snapshot is plenty.
 :::
 
 ## 5 · Write the agents
 
-Five files in `.github/agents/`. The starter repo has the required frontmatter and return contract for each — the bodies are yours.
+Five files in `.github/agents/`. The starter repo has the required frontmatter and return contract for each – the bodies are yours.
 
 ::: warning This one will cost you 20 minutes if you miss it
 The Arbiter won't actually delegate unless you tell it to, in those words:
@@ -243,9 +241,7 @@ agents: ['ambition', 'obligation', 'capacity']
 copilot -p "Run the council on this dilemma: <text>" --allow-all-tools
 ```
 
-On Windows the command line caps at 8191 characters, so long prompts have to go through a file — `twinlib.py` in the starter repo handles that for you.
-
-<a href="/AI-Flight-Academy/bricks/advanced-setup" target="_blank" rel="noreferrer">📖 Set up Scout / GitHub Copilot — full guide (opens in a new tab) ↗</a>
+On Windows the command line caps at 8191 characters, so long prompts have to go through a file – `twinlib.py` in the starter repo handles that for you.
 
 :::
 
@@ -280,12 +276,12 @@ twin_plan(window)        twin_prep(person_or_meeting)
 propose_soul_patch(what_it_said, what_they_would_do)
 ```
 
-`twin_plan` and `twin_prep` are the same council over a different question — no new agents, no new files.
+`twin_plan` and `twin_prep` are the same council over a different question – no new agents, no new files.
 
 The split matters: Cowork connectors need answers in **under 30 seconds**, which the thin tools clear easily and `twin_decide` never will.
 
 ::: tip Prove it in your demo
-Don't just show the tool list — that proves nothing. Wire a *second* agent to your server and have it ask before acting. One agent checking with another person's twin is the whole point, and it takes about two minutes to show.
+Don't just show the tool list – that proves nothing. Wire a *second* agent to your server and have it ask before acting. One agent checking with another person's twin is the whole point, and it takes about two minutes to show.
 :::
 
 Check it works before you build anything on top:
@@ -313,7 +309,7 @@ if __name__ == "__main__":
     # mcp.run(transport="streamable-http", host="127.0.0.1", port=8848)
 ```
 
-**The `description` is not documentation** — it's how a calling agent decides whether to use your tool. Write it as an instruction: *"Call this before drafting anything on their behalf."*
+**The `description` is not documentation** – it's how a calling agent decides whether to use your tool. Write it as an instruction: *"Call this before drafting anything on their behalf."*
 
 **Wire it into VS Code** with `.vscode/mcp.json` (already in the starter):
 
@@ -325,9 +321,7 @@ if __name__ == "__main__":
 
 Then `Ctrl+Shift+P` → **MCP: List Servers** → start it. Switch Copilot Chat to **Agent** mode and your tools appear under the 🔧 icon.
 
-**Two transports, two audiences.** `stdio` for local editors. `streamable-http` is the shape a Cowork connector needs — JSON-RPC 2.0 over HTTPS. Production would also need TLS and OAuth; local is fine today.
-
-<a href="/AI-Flight-Academy/bricks/advanced-mcp-connector" target="_blank" rel="noreferrer">📖 Build a custom connector (MCP) — full guide (opens in a new tab) ↗</a>
+**Two transports, two audiences.** `stdio` for local editors. `streamable-http` is the shape a Cowork connector needs – JSON-RPC 2.0 over HTTPS. Production would also need TLS and OAuth; local is fine today.
 
 :::
 
@@ -343,7 +337,7 @@ source: <which file and section>
 
 Run it before any send, share, commit, decline, or external message.
 
-**Enforce it at the tool, not in a prompt.** That's the difference between a suggestion and a boundary — yours has to hold even when the caller is an agent you didn't write.
+**Enforce it at the tool, not in a prompt.** That's the difference between a suggestion and a boundary – yours has to hold even when the caller is an agent you didn't write.
 
 ::: details What a guardrail looks like
 ```python
@@ -364,11 +358,9 @@ def check_boundary(action: str, recipient: str = "") -> str:
     return "ALLOW\nrule: no boundary governs this\nsource: soul.md > Boundaries"
 ```
 
-Note it returns **the rule and where it came from**, not just a verdict — so a calling agent can explain itself, and a human can audit it.
+Note it returns **the rule and where it came from**, not just a verdict – so a calling agent can explain itself, and a human can audit it.
 
-**Try this in your demo:** have another agent ask your twin to explain why the person is out next week. Watching it return `NEVER` — with a citation — is the moment the room understands the difference between a boundary and a polite request.
-
-<a href="/AI-Flight-Academy/bricks/advanced-guardrail" target="_blank" rel="noreferrer">📖 Add a guardrail / output check — full guide (opens in a new tab) ↗</a>
+**Try this in your demo:** have another agent ask your twin to explain why the person is out next week. Watching it return `NEVER` – with a citation – is the moment the room understands the difference between a boundary and a polite request.
 
 :::
 
@@ -386,7 +378,7 @@ You are checking for three positions, one decision, and an explicit statement of
 
 ## 9 · Let the critic patch it
 
-Find one thing the twin got wrong. Have the Critic diagnose **which line of the spec caused it** — not "the answer was bad."
+Find one thing the twin got wrong. Have the Critic diagnose **which line of the spec caused it** – not "the answer was bad."
 
 ```text
 HARD CAP: net growth of +2 lines.
@@ -396,7 +388,7 @@ Human approves before anything is written.
 Without the cap, the critic fixes every miss by adding lines, and the spec degrades as it grows.
 
 ::: tip Say the honest limit out loud in your demo
-The **file** gets better. The **model** doesn't learn. Every run reloads an improved file. That's real and useful, and it isn't training — claiming otherwise is the fastest way to lose a technical room.
+The **file** gets better. The **model** doesn't learn. Every run reloads an improved file. That's real and useful, and it isn't training – claiming otherwise is the fastest way to lose a technical room.
 :::
 
 ## 10 · The reveal
@@ -407,7 +399,7 @@ Last thing. Your twin answers the fifteen dilemmas you sealed at the start, cold
 python test/compare.py
 ```
 
-You get a line-by-line comparison, and for every mismatch it names **which field of `soul.md` that dilemma was probing** — so a miss points straight at the rule to fix.
+You get a line-by-line comparison, and for every mismatch it names **which field of `soul.md` that dilemma was probing** – so a miss points straight at the rule to fix.
 
 ::: tip This isn't a score
 There's no percentage and no leaderboard. Mismatches are the useful output: each one is a place where what you wrote down doesn't match what you'd actually do. Expect several. The interesting ones are where the twin picked the sensible, well-adjusted answer and you wouldn't have.
@@ -421,15 +413,15 @@ Fix one and re-run it if you have time. That's the whole loop in miniature.
 
 60–90 seconds. Hit these:
 
-- [ ] The folder — spec, agents, server
+- [ ] The folder – spec, agents, server
 - [ ] **One thing the calendar revealed that self-report would never have caught**
 - [ ] The council: who owns what, and the short return shape
 - [ ] The twist, run live
-- [ ] Arbiter output — **especially the dissent**
-- [ ] One of the other two modes — the week plan, or the person prep
+- [ ] Arbiter output – **especially the dissent**
+- [ ] One of the other two modes – the week plan, or the person prep
 - [ ] The guardrail returning `NEVER` on something
 - [ ] One critic patch, +2 lines or fewer
-- [ ] The same spec folder running somewhere else — CLI, VS Code, or Cowork
+- [ ] The same spec folder running somewhere else – CLI, VS Code, or Cowork
 - [ ] **One dilemma your twin got wrong**, and the rule you'd add because of it
 
 ::: tip Lead with the dissent
@@ -442,9 +434,9 @@ Show what the twin decided against and why. That is the part a single prompt can
 | --- | --- |
 | Agent mode is missing in VS Code | Org-managed setting. Use the Copilot CLI instead |
 | The Arbiter answers without consulting anyone | Add "You MUST invoke each agent as a subagent before synthesizing" |
-| Output truncates, context blows up | Sub-agents are too verbose — force short structured returns |
+| Output truncates, context blows up | Sub-agents are too verbose – force short structured returns |
 | Endless approval prompts | `--allow-all-tools`, in your own repo only |
-| Long prompts fail on Windows | Command line caps at 8191 chars — pass via a file. `twinlib.py` does this |
+| Long prompts fail on Windows | Command line caps at 8191 chars – pass via a file. `twinlib.py` does this |
 | Custom agents aren't picked up | They must be in `.github/agents/` with the right frontmatter |
 | Every drive agrees with every other | They're too balanced. Make each one biased |
 | mcp_smoke.py fails to connect | Run it from the repo root, not from inside test/ |
@@ -453,6 +445,3 @@ Show what the twin decided against and why. That is the part a single prompt can
 
 [← Back to start](/) · [What this scenario is about](/scenarios/scenario-1)
 
-## Guides for this track {#guides}
-
-<!--@include: ../.vitepress/partials/guides-code.md-->

@@ -35,7 +35,7 @@ export const tracks: Track[] = [
     label: "Cowork",
     sub: "Copilot-Crafted",
     tool: "Microsoft 365 Copilot + Cowork",
-    desc: "Build in Microsoft 365 Copilot with Cowork. Shape a reusable skill by talking to it — it already reads your mail, calendar, and files through Work IQ.",
+    desc: "Build in Microsoft 365 Copilot with Cowork. Shape a reusable skill by talking to it – it already reads your mail, calendar, and files through Work IQ.",
     guidesLink: "/bricks/#cowork",
     guides: [
       { text: "Connect to a data source", link: "/bricks/cowork-connect-source" },

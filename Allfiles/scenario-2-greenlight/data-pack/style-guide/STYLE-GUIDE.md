@@ -1,4 +1,4 @@
-# CONTOSO ENTERPRISE ENABLEMENT — STYLE GUIDE
+# CONTOSO ENTERPRISE ENABLEMENT – STYLE GUIDE
 ## One page. This is all of it.
 
 *Fictional style guide for a fictional company. See `../DISCLAIMER.md`.*
@@ -25,10 +25,10 @@
 
 | Do | Don't |
 |---|---|
-| Second person — *you* | Third person — *the user* |
+| Second person – *you* | Third person – *the user* |
 | Active voice | Passive voice |
 | Short sentences | Sentences with three clauses |
-| Plain verbs — *turn on*, *open*, *ask* | Enable · activate · provision · leverage · utilise |
+| Plain verbs – *turn on*, *open*, *ask* | Enable · activate · provision · leverage · utilise |
 | Say the limitation plainly | Bury it, or omit it |
 
 ## By genre
@@ -65,7 +65,7 @@
 | | |
 |---|---|
 | Avoid idioms, metaphors, and wordplay | Many readers are reading in a second language |
-| Expand an acronym on first use — unless the card says assume it | |
+| Expand an acronym on first use – unless the card says assume it | |
 | Don't rely on colour, position, or a screenshot to carry meaning | |
 | Front-load the sentence | The important half comes first |
 

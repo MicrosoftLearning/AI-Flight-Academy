@@ -18,43 +18,43 @@ Pass 2 → voice.md  how they write    (you read their sent mail)
 
 ## Rules you always follow
 
-**Every question you ask is yes or no.** No lettered menus, no ranking, no "describe your approach". If you need something more detailed, ask a yes/no question and infer the rule from the answer. "Other", "depends", and "not sure" are valid — treat any of them as a no and move on.
+**Every question you ask is yes or no.** No lettered menus, no ranking, no "describe your approach". If you need something more detailed, ask a yes/no question and infer the rule from the answer. "Other", "depends", and "not sure" are valid – treat any of them as a no and move on.
 
 **One question at a time.** Wait for the answer. Never batch.
 
 **Ask about what happened, not what they believe.** "Have you ever…" and "Did you…", never "Do you value…".
 
-**Role labels only** — peer, manager, senior stakeholder, customer, direct report. Never personal names. Never the word "exec".
+**Role labels only** – peer, manager, senior stakeholder, customer, direct report. Never personal names. Never the word "exec".
 
 **The user never opens or edits a file.** When something needs changing, they say so in chat and you make the change. Never tell them to open a file, edit markdown, or save anything.
 
-**Stay in one session.** Never tell them to start a new task mid-build. The only new task is the very first one after they upload you — and the one they start after you hand off.
+**Stay in one session.** Never tell them to start a new task mid-build. The only new task is the very first one after they upload you – and the one they start after you hand off.
 
-**Short files win.** `soul.md` is about one page. Longer specs measurably perform worse — short visible rules beat long instructions buried in context. Never pad a file to look thorough.
+**Short files win.** `soul.md` is about one page. Longer specs measurably perform worse – short visible rules beat long instructions buried in context. Never pad a file to look thorough.
 
 **This skill is self-contained.** Everything you need is below. Do not go looking for reference files.
 
 ---
 
-## Pass 0 — Pick the data
+## Pass 0 – Pick the data
 
 One question:
 
 > Do you want me to use your own mail and calendar? (yes/no)
 
-**Yes** — you'll read their sent mail and calendar through Work IQ. Tell them you only ever see what they can already see, and nothing is shared.
+**Yes** – you'll read their sent mail and calendar through Work IQ. Tell them you only ever see what they can already see, and nothing is shared.
 
-**No** — offer the Avery Washington persona pack and ask them to attach the files. It isn't in their workspace by default. If they can't attach it, go back to their own data.
+**No** – offer the Avery Washington persona pack and ask them to attach the files. It isn't in their workspace by default. If they can't attach it, go back to their own data.
 
-Then start Pass 1. Don't explain the whole process first — they'll see it as it happens.
+Then start Pass 1. Don't explain the whole process first – they'll see it as it happens.
 
 ---
 
-## Pass 1 — soul.md
+## Pass 1 – soul.md
 
 Say what you're doing in one line: *about eight yes/no questions, then I'll write your soul file and show it to you.*
 
-Ask **eight** of these, one at a time. Pick the ones that fit what you know about them; skip any that clearly don't apply. After each answer, don't comment at length — acknowledge in a few words and ask the next.
+Ask **eight** of these, one at a time. Pick the ones that fit what you know about them; skip any that clearly don't apply. After each answer, don't comment at length – acknowledge in a few words and ask the next.
 
 1. When something's due today and there isn't time for all of it, do you cut scope rather than move the date? *(→ decision rule: scope vs date)*
 2. If a senior stakeholder asks for something today and a peer is already waiting on you, does the senior stakeholder go first? *(→ decision rule: priority conflict)*
@@ -62,7 +62,7 @@ Ask **eight** of these, one at a time. Pick the ones that fit what you know abou
 4. When two people both say theirs is top priority, do you decide it yourself rather than escalate? *(→ decision rule + escalation)*
 5. Do you protect a focus block by declining things that land on it? *(→ capacity)*
 6. If you're going to miss a date, do you say so as soon as you know? *(→ voice under pressure)*
-7. Is there anything you'd never send without someone else looking at it first? *(→ boundaries — if yes, ask one follow-up: is that because it's external, or because it commits to something?)*
+7. Is there anything you'd never send without someone else looking at it first? *(→ boundaries – if yes, ask one follow-up: is that because it's external, or because it commits to something?)*
 8. When you're under pressure, do people say you get quieter? *(→ blind spots)*
 9. Do you take on unowned work that's next to your role rather than leave it? *(→ priority stack)*
 10. If your manager is wrong in a group thread, do you correct it there? *(→ boundaries + stakeholders)*
@@ -73,7 +73,7 @@ Ask **eight** of these, one at a time. Pick the ones that fit what you know abou
 When a deadline is at risk, cut scope and hold the date.
 ```
 
-Every line in `## Decision rules` MUST be shaped **"When X conflicts with Y, choose Z."** A line that says what they care about is wrong — rewrite it.
+Every line in `## Decision rules` MUST be shaped **"When X conflicts with Y, choose Z."** A line that says what they care about is wrong – rewrite it.
 
 If two answers contradict each other, say so plainly and ask one yes/no question to settle it.
 
@@ -108,15 +108,15 @@ Then **show them the decision rules** and ask one question:
 
 > Does anything in here not sound like you? (yes/no)
 
-If yes, ask which line, fix it yourself, show the fixed version. Don't turn this into a review meeting — one round, then move on.
+If yes, ask which line, fix it yourself, show the fixed version. Don't turn this into a review meeting – one round, then move on.
 
 ---
 
-## Pass 2 — voice.md
+## Pass 2 – voice.md
 
 Say you're reading their sent mail now. Don't ask permission again.
 
-Pull their last ~10 **sent** emails. Quote them **verbatim** — NEVER normalize punctuation, spelling, casing, emoji, dashes, greetings, or signoffs. The quirks are the entire signal. If you tidy anything up, you've broken it.
+Pull their last ~10 **sent** emails. Quote them **verbatim** – NEVER normalize punctuation, spelling, casing, emoji, dashes, greetings, or signoffs. The quirks are the entire signal. If you tidy anything up, you've broken it.
 
 From those samples, derive the rules: exact signoff, opener by recipient type, punctuation tells, typical length, what changes between audiences, and structural habits like "a decline always carries an alternative."
 
@@ -136,7 +136,7 @@ Vary the register: manager, peer, direct report, external.
 - **Structural habits:** ...
 ```
 
-Show them **the rules section only** — not the samples, they wrote those — and ask:
+Show them **the rules section only** – not the samples, they wrote those – and ask:
 
 > Anything in here you'd push back on? (yes/no)
 
@@ -154,7 +154,7 @@ Write the whole thing to `/Documents/Cowork/skills/my-twin/`:
     voice.md
 ```
 
-`SKILL.md` MUST follow this template. All four sections are required — a skill missing any of them fails review.
+`SKILL.md` MUST follow this template. All four sections are required – a skill missing any of them fails review.
 
 ```markdown
 ---
@@ -283,7 +283,7 @@ New reference files get added to Step 1 above, with a one-line note on when
 they matter:
 
 ```text
-4. `references/stakeholders.md` — read when the situation involves a specific
+4. `references/stakeholders.md` – read when the situation involves a specific
    person.
 ```
 
@@ -291,7 +291,7 @@ Do not remove or reword `## Procedure`, `## Output contract`, `## When you
 can't`, or `## Never` when adding files. Add to this file; don't rewrite it.
 ```
 
-**The description matters more than anything else in this file.** It must list many phrasings, but all of them variations of *asking the twin a question*. Never add generic triggers like "what should I do" or "draft a reply" — the twin would then fire on ordinary requests, which is worse than it not firing at all. The description must also exclude maintenance wording, or asking to add a reference file will run the twin instead of editing it.
+**The description matters more than anything else in this file.** It must list many phrasings, but all of them variations of *asking the twin a question*. Never add generic triggers like "what should I do" or "draft a reply" – the twin would then fire on ordinary requests, which is worse than it not firing at all. The description must also exclude maintenance wording, or asking to add a reference file will run the twin instead of editing it.
 
 If you can't write to that folder, write the files wherever you can and tell them the exact folder to copy them into.
 
@@ -302,7 +302,7 @@ enough to give the same result every run), whether it **stays in its lane**
 (doesn't take over other skills' jobs), and whether it **handles surprises
 safely** (checks before risky actions, never fabricates).
 
-The lowest-scoring one is almost always "knows what to do" — because stages get
+The lowest-scoring one is almost always "knows what to do" – because stages get
 described instead of numbered, and branches are left implicit. That's why the
 procedure above is numbered, why every branch says what to do next, and why
 each failure case has exactly one required response.
@@ -310,7 +310,7 @@ each failure case has exactly one required response.
 Fill in the name and keep the structure.
 :::
 
-Then tell them: **it's installed, and it'll load in every new task — nothing to upload again.** Ask them to name a real unresolved thread — not paste one — and run it.
+Then tell them: **it's installed, and it'll load in every new task – nothing to upload again.** Ask them to name a real unresolved thread – not paste one – and run it.
 
 That's the moment the twin becomes real. Don't skip it and don't substitute an invented scenario.
 
@@ -318,11 +318,11 @@ That's the moment the twin becomes real. Don't skip it and don't substitute an i
 
 ## Hand off
 
-You're done after the twin runs once. Do not offer to add more files — that's the participant's job, in a task of their own.
+You're done after the twin runs once. Do not offer to add more files – that's the participant's job, in a task of their own.
 
 Tell them, in this order:
 
-1. **What's in their twin** — the file list, and the folder.
+1. **What's in their twin** – the file list, and the folder.
 2. **It loads automatically** in every new task. Nothing to upload.
-3. **What to do next:** start a **new task** and say *"Edit my twin skill: add a reference document that…"* — Cowork will write it and add it to the reading list. That's how they extend it from here.
-4. **One gap you noticed** — where what they said didn't match what their sent mail or calendar showed. One sentence, no report. Tell them it's a good candidate to fix when they add files.
+3. **What to do next:** start a **new task** and say *"Edit my twin skill: add a reference document that…"* – Cowork will write it and add it to the reading list. That's how they extend it from here.
+4. **One gap you noticed** – where what they said didn't match what their sent mail or calendar showed. One sentence, no report. Tell them it's a good candidate to fix when they add files.

@@ -26,7 +26,7 @@ export function isBuildPage(relativePath: string): boolean {
 
 /**
  * Nest h3 subsections under the h2 step they belong to, so a step with parts
- * reads as one entry you can expand — not as several siblings competing with
+ * reads as one entry you can expand – not as several siblings competing with
  * the numbered steps. An h3 appearing before any h2 stays top level.
  */
 function nestSteps(steps: Heading[], link: string) {
@@ -53,7 +53,7 @@ export function navBuildItems() {
     ...scenarios.map((s) => ({
       text: `${s.emoji} ${s.label} · ${s.name}`,
       items: tracks.map((t) => ({
-        text: `${t.emoji} ${t.label} — ${t.tool}${suffix(t.id, s.id)}`,
+        text: `${t.emoji} ${t.label} – ${t.tool}${suffix(t.id, s.id)}`,
         link: buildLink(t.id, s.id),
       })),
     })),
@@ -62,7 +62,7 @@ export function navBuildItems() {
 
 /**
  * The sidebar is scoped to the choice you've made. Once you're in a scenario
- * the other scenarios disappear entirely — you see your scenario's three paths
+ * the other scenarios disappear entirely – you see your scenario's three paths
  * and nothing else, with one link back out. Same for guides once you've picked
  * a track. Before you've chosen, everything is listed.
  *
@@ -118,16 +118,11 @@ export function globalSidebar(
 
   const guidesSection = track
     ? {
-        // On a build page the guides are inlined into the page itself, so
-        // these link to anchors rather than navigating away and back.
+        // Guides live at /bricks/ and are reached from the top nav, so these
+        // link out rather than to an on-page anchor.
         text: `Guides for ${track.emoji} ${track.label}`,
         collapsed: true,
-        items: track.guides.map((g) => ({
-          text: g.text,
-          link: opts.steps && opts.scenario
-            ? `${buildLink(track.id, opts.scenario)}#g-${g.link.split("/").pop()}`
-            : g.link,
-        })),
+        items: track.guides.map((g) => ({ text: g.text, link: g.link })),
       }
     : {
         text: "Guides",

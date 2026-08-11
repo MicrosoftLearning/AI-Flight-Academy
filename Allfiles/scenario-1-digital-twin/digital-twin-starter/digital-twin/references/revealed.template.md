@@ -1,4 +1,4 @@
-# revealed.md — behavioral evidence
+# revealed.md – behavioral evidence
 
 <!-- Copy this file to revealed.md. Fill with measured behavior from calendar, email, Teams, or self-review. Use percentages/ranges, not private details. -->
 

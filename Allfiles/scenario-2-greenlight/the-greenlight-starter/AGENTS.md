@@ -4,19 +4,19 @@ This repo is the Advanced Microsoft hackathon starter for **The Greenlight**: a 
 
 ## Concept
 
-One reviewer holds one implied reader — an average of everyone, who exists nowhere — so it can never say *"excellent, and wrong for this room."* The council fixes that by seating many audiences, each defending a **different outcome**, each with its own verdict. The disagreement is the product.
+One reviewer holds one implied reader – an average of everyone, who exists nowhere – so it can never say *"excellent, and wrong for this room."* The council fixes that by seating many audiences, each defending a **different outcome**, each with its own verdict. The disagreement is the product.
 
 Use the synthetic data in `../data-pack/` (five articles P1–P5, four audience cards AC-01–AC-04). Do not introduce real personal data.
 
 ## File layout
 
-- `council/*.json` — the seats, as data. Each seat: `seat_id`, `audience`, `card`, `outcome`, `thresholds`, and `criteria` (each with `the_bar`, `protects_outcome`, `fatal`, 0–3 `anchors`, `watch_for`, and optional wired `checks`). `retail.example.json` is illustrative — copy it to `retail.json` to seat it.
-- `dashboard/` — the live board (Node/Express). `server.js` seats the council from `council/*.json`, shells to the GitHub Copilot CLI to score each seat, and reconvenes a plan. This is the **canonical engine**.
-- `checks.py` — deterministic checks (the countable half). Two work; one is a TODO stub.
-- `check_content.py` — the bridge the board calls to run each seat's wired checks (a TODO stub).
-- `mcp_server.py` — exposes the council as MCP tools (two work; `convene`/`greenlight` are TODOs) so other agents can call it.
-- `greenlightlib.py` — loads seats, runs wired checks, validates evidence, builds the coverage matrix.
-- `../the-greenlight/reference/solo-rubric.json` — the solo critic, the **control**. Read its `output_contract`; never edit it.
+- `council/*.json` – the seats, as data. Each seat: `seat_id`, `audience`, `card`, `outcome`, `thresholds`, and `criteria` (each with `the_bar`, `protects_outcome`, `fatal`, 0–3 `anchors`, `watch_for`, and optional wired `checks`). `retail.example.json` is illustrative – copy it to `retail.json` to seat it.
+- `dashboard/` – the live board (Node/Express). `server.js` seats the council from `council/*.json`, shells to the GitHub Copilot CLI to score each seat, and reconvenes a plan. This is the **canonical engine**.
+- `checks.py` – deterministic checks (the countable half). Two work; one is a TODO stub.
+- `check_content.py` – the bridge the board calls to run each seat's wired checks (a TODO stub).
+- `mcp_server.py` – exposes the council as MCP tools (two work; `convene`/`greenlight` are TODOs) so other agents can call it.
+- `greenlightlib.py` – loads seats, runs wired checks, validates evidence, builds the coverage matrix.
+- `../the-greenlight/reference/solo-rubric.json` – the solo critic, the **control**. Read its `output_contract`; never edit it.
 
 ## The control is off-limits
 
@@ -51,7 +51,7 @@ VERDICT: <greenlit only when the seat that rejected the original now passes>
 ## House rules
 
 1. **No quote, no score.** Every score carries a direct quote, a source, and a confidence. `Low` confidence on a fatal criterion → that seat abstains and escalates to a human. It does not guess.
-2. A criterion that would score the same for **any** audience is a solo-critic criterion — it belongs to `solo-rubric.json`, not a seat.
+2. A criterion that would score the same for **any** audience is a solo-critic criterion – it belongs to `solo-rubric.json`, not a seat.
 3. A council of one is the solo critic with extra steps. Seat **at least two** audiences with different outcomes.
 4. **The thing that wrote the plan is not allowed to merge it.** The council proposes; the gate blocks; a human approves.
 5. Thresholds come from the card, not from code. A check that hardcodes "6 minutes" instead of reading it from the seat is wrong even when it passes.

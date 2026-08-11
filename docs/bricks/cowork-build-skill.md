@@ -7,7 +7,7 @@ title: Write a reusable Cowork skill
 # Write a reusable Cowork skill
 
 **Tool:** Cowork  
-**Source status:** Liftable from Agent Academy — Cowork Collective
+**Source status:** Liftable from Agent Academy – Cowork Collective
 
 <!-- #region guide -->
 A Cowork skill is a reusable instruction file. It tells Cowork when to load the skill, what role to play, what steps to follow, and what output to produce.

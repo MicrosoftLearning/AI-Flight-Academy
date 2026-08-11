@@ -8,7 +8,7 @@ title: Downloads
 These files are still being tested and may be updated before the event. Re-download on the day.
 :::
 
-Everything for AI Flight Academy scenarios. Files download straight from this site — no GitHub account, no cloning.
+Everything for AI Flight Academy scenarios. Files download straight from this site – no GitHub account, no cloning.
 
 ## Scenario 1 · The Digital Twin
 
@@ -24,12 +24,12 @@ Everything for AI Flight Academy scenarios. Files download straight from this si
   <a class="lab-card" href="/AI-Flight-Academy/downloads/avery-persona-pack.zip" download>
     <span class="lab-card-emoji">🗂️</span>
     <span class="lab-card-title">Avery Washington</span>
-    <span class="lab-card-desc">Synthetic persona — inbox, calendar, goals. Use instead of your own data.</span>
+    <span class="lab-card-desc">Synthetic persona – inbox, calendar, goals. Use instead of your own data.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
 </div>
 
-**Installing Twin Forge:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill** → pick the downloaded `SKILL.md`. Then **start a new session** — skills are only discovered at session start.
+**Installing Twin Forge:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill** → pick the downloaded `SKILL.md`. Then **start a new session** – skills are only discovered at session start.
 
 ::: warning Upload the .md, not a .zip
 Tested on a live tenant: `.zip` skill uploads fail silently. `SKILL.md` is self-contained, so there's nothing else to bundle.
@@ -52,7 +52,7 @@ Tested on a live tenant: `.zip` skill uploads fail silently. `SKILL.md` is self-
   </a>
 </div>
 
-Unzip, then open `digital-twin.code-workspace` in VS Code — it comes with agent mode and the right extension recommendations already set.
+Unzip, then open `digital-twin.code-workspace` in VS Code – it comes with agent mode and the right extension recommendations already set.
 
 ::: details One-line setup in a terminal
 **PowerShell:**
@@ -75,7 +75,7 @@ code ~/digital-twin/digital-twin-starter/digital-twin.code-workspace
 
 ## Scenario 2 · Greenlight
 
-Seat a **council of audiences** over a piece of content so the verdicts split, then have the room decide what to build. Both tracks share the same **data pack** — five articles, four example audience cards, and a style guide.
+Seat a **council of audiences** over a piece of content so the verdicts split, then have the room decide what to build. Both tracks share the same **data pack** – five articles, four example audience cards, and a style guide.
 
 ### 🟢 Cowork
 
@@ -94,7 +94,7 @@ Seat a **council of audiences** over a piece of content so the verdicts split, t
   </a>
 </div>
 
-**Installing Greenlight:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill** → pick the downloaded `SKILL.md`. Then **start a new session** — skills are only discovered at session start. Then point Cowork to the data pack and say **`seat the council and review P4.`**
+**Installing Greenlight:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill** → pick the downloaded `SKILL.md`. Then **start a new session** – skills are only discovered at session start. Then point Cowork to the data pack and say **`seat the council and review P4.`**
 
 ### 🟣 Code
 
@@ -108,7 +108,7 @@ Seat a **council of audiences** over a piece of content so the verdicts split, t
   <a class="lab-card" href="/AI-Flight-Academy/downloads/the-greenlight.zip" download>
     <span class="lab-card-emoji">🟢</span>
     <span class="lab-card-title">The Greenlight skill</span>
-    <span class="lab-card-desc">Same skill — the seat / convene / greenlight verbs and the solo-critic control.</span>
+    <span class="lab-card-desc">Same skill – the seat / convene / greenlight verbs and the solo-critic control.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
   <a class="lab-card" href="/AI-Flight-Academy/downloads/greenlight-data-pack.zip" download>
@@ -119,7 +119,7 @@ Seat a **council of audiences** over a piece of content so the verdicts split, t
   </a>
 </div>
 
-Unzip all three so `the-greenlight-starter`, `the-greenlight`, and `data-pack` sit **side by side** — the runner and `checks.py` expect the data pack as a sibling. Then open `the-greenlight.code-workspace` in VS Code.
+Unzip all three so `the-greenlight-starter`, `the-greenlight`, and `data-pack` sit **side by side** – the runner and `checks.py` expect the data pack as a sibling. Then open `the-greenlight.code-workspace` in VS Code.
 
 ::: details One-line setup in a terminal
 **PowerShell:**
@@ -149,6 +149,6 @@ code $dest/the-greenlight-starter/the-greenlight.code-workspace
 
 ## 🧑‍🏫 Facilitators
 
-- [Facilitator kit](/facilitator/) — role cards, interview script, coach playbook
+- [Facilitator kit](/facilitator/) – role cards, interview script, coach playbook
 - [Run of show](/how-it-works/run-of-show)
 - **Spoilers:** inside the persona pack, `calendar/summary-stats.md` gives away the planted contradictions. Hand it to stuck teams only.

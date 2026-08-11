@@ -1,5 +1,5 @@
 ---
-title: The Greenlight — Cowork
+title: The Greenlight – Cowork
 ---
 
 # 🟢 The Greenlight
@@ -31,7 +31,7 @@ The council lives in `THE-COUNCIL.md`. You can edit it, reuse it on new content,
 
 ## Before you start
 
-Grab these now — you'll need them in the first few minutes.
+Grab these now – you'll need them in the first few minutes.
 
 <div class="lab-grid lab-grid-2">
 	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-greenlight.zip" download>
@@ -48,8 +48,8 @@ Grab these now — you'll need them in the first few minutes.
 	</a>
 </div>
 
-::: tip Want every step spelled out?
-This page gets you through the build. There are also **[full step-by-step guides](/bricks/)** covering Cowork skills, data sources, and scheduled runs.
+::: tip Want a step spelled out?
+The **[Guides](/bricks/)** in the top nav cover the general skills used here – setting up, connecting to your work, and running things on a schedule. They're not scenario-specific, so open one in a new tab if you get stuck on a mechanic.
 :::
 
 ---
@@ -70,7 +70,6 @@ Start a **new** Cowork session after the upload. Cowork only looks for new skill
 :::
 
 ## 2 · Choose the content to review
-📘 [Connect Cowork to a data source](/bricks/cowork-connect-source)
 
 Use the provided content pack unless your team has a suitable piece of real content and an audience profile in mind.
 
@@ -116,7 +115,7 @@ Ask Greenlight to review P4 for both audiences. It should show a separate result
 | Retail | The article is too formal or too long to help someone who needs immediate steps. |
 | Compliance | The same detail may be useful because it explains the decision and its limits. |
 
-For the supplied pack, you should see a meaningful difference between the two audiences. With your own content, agreement can be valid too — as long as the council explains why.
+For the supplied pack, you should see a meaningful difference between the two audiences. With your own content, agreement can be valid too – as long as the council explains why.
 
 ::: tip Give it somethign real
 Attach a real document you're working on, point it to a Microsoft product announcement, video transcript, or training module.
@@ -149,7 +148,7 @@ Ask Greenlight: “For each audience result, show the exact quote, the audience 
 
 ## 8 · Close the loop
 
-You have a review. Now turn it into something you can use. This is a loop, not a single step — keep going until every audience is served, then put the result to work.
+You have a review. Now turn it into something you can use. This is a loop, not a single step – keep going until every audience is served, then put the result to work.
 
 The path looks like this. You don't have to follow it word for word; let Greenlight guide you:
 
@@ -157,22 +156,21 @@ The path looks like this. You don't have to follow it word for word; let Greenli
 2. **Check the plan.** Ask the council to review that plan for the same audience, before anything is written.
 3. **Make it.** Ask Cowork to draft the asset the plan describes.
 4. **Review it again.** Bring the new draft back to the council. Keep going until the audience that rejected the original would accept its replacement.
-5. **Put it to work.** Once everything is greenlit, ask Cowork to take the next real step — draft the emails to the stakeholders who need to know, or a Teams message to the one person waiting on it.
+5. **Put it to work.** Once everything is greenlit, ask Cowork to take the next real step – draft the emails to the stakeholders who need to know, or a Teams message to the one person waiting on it.
 
 That last step is the point of the whole exercise: the review does not end in a verdict, it ends in the content and the messages that move the work forward.
 
 When you want to go further, try the council on another article from the pack, or add another audience. The goal is not to make every audience disagree; it is to understand when the same content can serve several audiences and when it needs different treatment. If your two audiences always agree, return to step 6 and make their needs more specific.
 
 ## 9 · Make it run without you
-📘 [Re-run a skill on new inputs](/bricks/cowork-rerun-skill)
 
-Once you trust the council, ask Cowork to run it on a schedule so reviews happen without you. Point it at whatever your content actually arrives in — a folder of drafts, or email attachments.
+Once you trust the council, ask Cowork to run it on a schedule so reviews happen without you. Point it at whatever your content actually arrives in – a folder of drafts, or email attachments.
 
 The powerful version is a real trigger. Try something like:
 
 > "On a schedule, run the Greenlight council on any new email attachment whose subject contains **[your keyword]**, and send me the review."
 
-Now a draft that lands in your inbox gets reviewed for every audience before you have even opened it — and you decide what to do with the result.
+Now a draft that lands in your inbox gets reviewed for every audience before you have even opened it – and you decide what to do with the result.
 
 **Done when:** a new file shows up through your trigger and you get the council's review back without asking.
 
@@ -200,7 +198,7 @@ Show the moment the council changed your understanding of the content. That is m
 
 | What you're seeing | What to do |
 | --- | --- |
-| Cowork ignores Greenlight | Start a **new** Cowork session — skills load at the start. |
+| Cowork ignores Greenlight | Start a **new** Cowork session – skills load at the start. |
 | Upload seemed to do nothing | Upload the whole `the-greenlight.zip`, not just `SKILL.md`. |
 | Cowork cannot see the articles | Attach the content-pack files to the session. |
 | Both audiences give the same answer | Make their needs more specific, then review again. |
@@ -209,13 +207,10 @@ Show the moment the council changed your understanding of the content. That is m
 ::: details 🎬 Nobody nails it first try
 ![Her too-vague description filled the four critic seats with generic robots while she facepalms. Headline: "Careful what you ask for."](/img/scenario-2-base-blooper.png)
 
-Feed the council a vague description and you get a row of generic bots instead of real audiences — that's not failure, it's feedback. Tell it what makes each audience different and run it again.
+Feed the council a vague description and you get a row of generic bots instead of real audiences – that's not failure, it's feedback. Tell it what makes each audience different and run it again.
 :::
 
 ---
 
 [← Back to start](/) · [What this scenario is about](/scenarios/scenario-2)
 
-## Guides for this track {#guides}
-
-<!--@include: ../.vitepress/partials/guides-cowork.md-->

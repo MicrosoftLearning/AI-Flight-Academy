@@ -10,13 +10,13 @@ You pick a scenario, pick how you want to build, and demo what you made. Coaches
 
 ## The flow
 
-1. **Pick a scenario** — start with a real Microsoft work problem.
-2. **Pick how you want to build** — Cowork with no code, or real code in VS Code.
-3. **Choose your data path** — use your own data privately, or use the provided synthetic pack.
-4. **Build the smallest working version** — get to v0.1 fast.
-5. **Test it on a real prompt** — see where it breaks.
-6. **Patch the spec** — change the rule, sample, or boundary that caused the miss.
-7. **Demo the behavior** — show the before, the patch, and the after.
+1. **Pick a scenario** – start with a real Microsoft work problem.
+2. **Pick how you want to build** – Cowork with no code, or real code in VS Code.
+3. **Choose your data path** – use your own data privately, or use the provided synthetic pack.
+4. **Build the smallest working version** – get to v0.1 fast.
+5. **Test it on a real prompt** – see where it breaks.
+6. **Patch the spec** – change the rule, sample, or boundary that caused the miss.
+7. **Demo the behavior** – show the before, the patch, and the after.
 
 ## Ground rules
 
@@ -30,7 +30,7 @@ You pick a scenario, pick how you want to build, and demo what you made. Coaches
 
 Done means you can run your agent on a fresh prompt and get useful output that reflects the scenario.
 
-For Scenario 1, that means a portable twin spec — `soul.md`, `voice.md`, and `revealed.md` — plus an agent that uses it to draft, decide, or critique in a way that is specific to the person it represents.
+For Scenario 1, that means a portable twin spec – `soul.md`, `voice.md`, and `revealed.md` – plus an agent that uses it to draft, decide, or critique in a way that is specific to the person it represents.
 
 ## What you'll walk out with
 

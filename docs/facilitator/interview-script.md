@@ -8,7 +8,7 @@ Use this to extract decision rules for `soul.md`.
 
 ## Why behavioral
 
-When we built one of these ourselves, the first version was worse than useless — because the author wrote down who they *wanted* to be. Their spec said they escalated priority conflicts; in reality, they just decided. It said they'd never ship unverified work; in reality, they cut scope and held the date. Rewriting those rules from what they actually did was what made the twin recognizable.
+When we built one of these ourselves, the first version was worse than useless – because the author wrote down who they *wanted* to be. Their spec said they escalated priority conflicts; in reality, they just decided. It said they'd never ship unverified work; in reality, they cut scope and held the date. Rewriting those rules from what they actually did was what made the twin recognizable.
 
 So don't ask, "What do you value?" Ask, "What did you actually do last time?"
 

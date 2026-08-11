@@ -33,7 +33,7 @@ You will need the chat your team used during the shift. Any chat you are already
 
 ## What it looks like when it worked
 
-You get a short summary with a few bullet points. It should name the things your team actually talked about — a late delivery, a register that kept locking, a call-out for tomorrow.
+You get a short summary with a few bullet points. It should name the things your team actually talked about – a late delivery, a register that kept locking, a call-out for tomorrow.
 
 If the note reads like it could have been written about any store on any day, it did not work. Ask again and say what you want it to cover.
 
@@ -49,7 +49,7 @@ If none of that helps, call the Retail Ops Support line. You do not need to rais
 
 ## What to check before you send it
 
-Read it once. Copilot summarizes what was said — including things that were wrong when someone said them. If the chat contained a bad number, the summary will contain the same bad number.
+Read it once. Copilot summarizes what was said – including things that were wrong when someone said them. If the chat contained a bad number, the summary will contain the same bad number.
 
 You are still the one signing off on the handover.
 

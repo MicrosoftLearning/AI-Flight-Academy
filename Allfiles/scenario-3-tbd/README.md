@@ -1,4 +1,4 @@
-# Scenario 3 — TBD
+# Scenario 3 – TBD
 
 Placeholder. Participant downloads for Scenario 3 go here once the scenario is locked.
 
@@ -21,4 +21,4 @@ scenario-3-tbd/
 3. Link it from `docs/resources/downloads.md`.
 4. Replace this README with one describing the actual contents.
 
-Participants never browse this repo — everything reaches them as a download from the site.
+Participants never browse this repo – everything reaches them as a download from the site.

@@ -1,4 +1,4 @@
-# voice.md — writing spec
+# voice.md – writing spec
 
 <!-- Copy this file to voice.md. Quote real sent messages VERBATIM. Never normalize punctuation, casing, spacing, typos, emoji, or signoffs. -->
 

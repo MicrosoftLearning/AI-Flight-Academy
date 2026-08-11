@@ -100,7 +100,7 @@ function reset() {
       <p v-if="ready" class="picker-summary">
         {{ chosenTrack?.emoji }} <strong>{{ chosenTrack?.label }}</strong>
         · {{ chosenScenario?.label }} ({{ chosenScenario?.name }})
-        <span v-if="chosenStatus"> — {{ chosenStatus }}</span>
+        <span v-if="chosenStatus"> – {{ chosenStatus }}</span>
       </p>
       <div class="picker-actions">
         <button

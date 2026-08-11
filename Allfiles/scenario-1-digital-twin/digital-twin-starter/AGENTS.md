@@ -10,14 +10,14 @@ Use the synthetic example name **Avery Washington** in examples. Do not introduc
 
 ## File layout
 
-- `digital-twin/references/soul.template.md` — schema for decision rules and boundaries.
-- `digital-twin/references/voice.template.md` — schema for verbatim sent-message samples and inferred voice rules.
-- `digital-twin/references/revealed.template.md` — schema for calendar/response behavior.
-- `.github/agents/README.md` — assignment for the five council agents participants must write.
-- `mcp_server.py` — MCP thin tools plus TODO thick-tool stubs.
-- `twinlib.py` — Copilot CLI large-prompt helper.
-- `run.ps1` — local council runner.
-- `test/` — the sealed-answer harness. `take_test.py` records the human's gut answers to 15 dilemmas BEFORE the build; `compare.py` runs the twin over the same 15 at the end and diffs them, naming the soul.md field behind each mismatch. No score is produced, by design.
+- `digital-twin/references/soul.template.md` – schema for decision rules and boundaries.
+- `digital-twin/references/voice.template.md` – schema for verbatim sent-message samples and inferred voice rules.
+- `digital-twin/references/revealed.template.md` – schema for calendar/response behavior.
+- `.github/agents/README.md` – assignment for the five council agents participants must write.
+- `mcp_server.py` – MCP thin tools plus TODO thick-tool stubs.
+- `twinlib.py` – Copilot CLI large-prompt helper.
+- `run.ps1` – local council runner.
+- `test/` – the sealed-answer harness. `take_test.py` records the human's gut answers to 15 dilemmas BEFORE the build; `compare.py` runs the twin over the same 15 at the end and diffs them, naming the soul.md field behind each mismatch. No score is produced, by design.
 
 ## Council output contracts
 

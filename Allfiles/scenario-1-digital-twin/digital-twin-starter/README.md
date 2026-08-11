@@ -1,10 +1,10 @@
-# Digital Twin Starter — Advanced Track
+# Digital Twin Starter – Advanced Track
 
 Build a portable **digital twin**: a compact spec for how someone works, plus agents that can reason over it.
 
 This starter gives you the plumbing. You write the spec and the council agents.
 
-## The test harness — start here
+## The test harness – start here
 
 **Before you write anything**, seal your answers:
 
@@ -12,7 +12,7 @@ This starter gives you the plumbing. You write the spec and the council agents.
 python test/take_test.py
 ```
 
-Fifteen forced-choice work dilemmas. Answer fast — what you *actually* did last time, not what you'd like to have done. It flags anything that took over 25 seconds, because a deliberated answer is an aspirational one.
+Fifteen forced-choice work dilemmas. Answer fast – what you *actually* did last time, not what you'd like to have done. It flags anything that took over 25 seconds, because a deliberated answer is an aspirational one.
 
 That writes `test/sealed-answers.md`. Don't open it again until the end.
 
@@ -22,7 +22,7 @@ That writes `test/sealed-answers.md`. Don't open it again until the end.
 python test/compare.py
 ```
 
-You get a line-by-line diff, and every mismatch names the `soul.md` field that dilemma was probing — so a miss points straight at the rule to fix.
+You get a line-by-line diff, and every mismatch names the `soul.md` field that dilemma was probing – so a miss points straight at the rule to fix.
 
 There is deliberately **no score and no leaderboard**. Mismatches are the output. The useful ones are where the twin picked the sensible, well-adjusted answer and you wouldn't have.
 
@@ -55,10 +55,10 @@ It connects over stdio the same way VS Code does, lists your tools, and runs you
 
 ## What you build
 
-- `digital-twin/references/soul.md` — how you decide.
-- `digital-twin/references/voice.md` — how you write, grounded in 5–10 verbatim sent messages.
-- `digital-twin/references/revealed.md` — what your calendar/response behavior says versus what you say.
-- `.github/agents/*.agent.md` — a five-agent council that shares one `soul.md`.
+- `digital-twin/references/soul.md` – how you decide.
+- `digital-twin/references/voice.md` – how you write, grounded in 5–10 verbatim sent messages.
+- `digital-twin/references/revealed.md` – what your calendar/response behavior says versus what you say.
+- `.github/agents/*.agent.md` – a five-agent council that shares one `soul.md`.
 
 ## Council model
 
