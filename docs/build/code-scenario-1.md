@@ -21,7 +21,7 @@ What it doesn't have is anything you've explicitly decided – how you rank comp
 
 Written down, it becomes a **first line of defense**: something that reads what arrived and gives you an opening position before you've touched it.
 
-There's a second problem this track solves: **a decision under conflict isn't one voice.** When an exec ask lands on top of a peer promise, you're weighing ambition against obligation against capacity. A single prompt can role-play one of those at a time. It can't run the argument and tell you what it overruled.
+There's a second problem this altitude solves: **a decision under conflict isn't one voice.** When an exec ask lands on top of a peer promise, you're weighing ambition against obligation against capacity. A single prompt can role-play one of those at a time. It can't run the argument and tell you what it overruled.
 
 ## What your team will have built
 

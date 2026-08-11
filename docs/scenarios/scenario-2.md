@@ -56,11 +56,11 @@ Use:
 
 Use a real piece your team actually publishes – a help article, a launch post, a policy doc – and review it for audiences you actually serve.
 
-Pick this if you'd rather work with something real. Work IQ can draft an audience profile from the work signals you have access to; correct it with people who know that audience. It is available in Cowork on the Cowork track and Scout on the Scout track. Keep data in your own tenant and out of shared spaces.
+Pick this if you'd rather work with something real. Work IQ can draft an audience profile from the work signals you have access to; correct it with people who know that audience. It is available in both Cowork and Scout. Keep data in your own tenant and out of shared spaces.
 
 ## Assembly maps
 
-Use the building blocks for your track.
+Use the building blocks for your altitude.
 
 - **🟢 Cowork:**
   .. [Connect Cowork to a data source](/bricks/cowork-connect-source)
@@ -88,7 +88,7 @@ In Code, the team builds one system. Each person owns an audience reviewer, the 
 
 ## Start building
 
-Pick your track:
+Pick your altitude:
 
 <!-- markdownlint-disable MD033 -->
 <BuildMatrix scenario="scenario-2" />

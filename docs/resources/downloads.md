@@ -75,7 +75,7 @@ code ~/digital-twin/digital-twin-starter/digital-twin.code-workspace
 
 ## Scenario 2 · Greenlight
 
-Seat a **council of audiences** over a piece of content so the verdicts split, then have the room decide what to build. Both tracks share the same **data pack** – five articles, four example audience cards, and a style guide.
+Seat a **council of audiences** over a piece of content so the verdicts split, then have the room decide what to build. All three altitudes share the same **data pack** – five articles, four example audience cards, and a style guide.
 
 ### 🟢 Cowork
 

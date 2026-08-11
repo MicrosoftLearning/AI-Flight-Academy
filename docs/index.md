@@ -27,7 +27,7 @@ hero:
 <div class="callout-bubble">
 <span class="callout-bubble-icon">🎢</span>
 
-**New to agents?** That's the point. There's a comfortable on-ramp on every track, and a coach is never far away. You'll stretch – just a little – no matter where you start.
+**New to agents?** That's the point. There's a comfortable on-ramp at every altitude, and a coach is never far away. You'll stretch – just a little – no matter where you start.
 
 </div>
 
@@ -41,7 +41,7 @@ hero:
 <div class="lab-grid">
   <a class="lab-card" href="/AI-Flight-Academy/levels/">
     <span class="lab-card-emoji">🎚️</span>
-    <span class="lab-card-title">1 · Pick how to build</span>
+    <span class="lab-card-title">1 · Pick your altitude</span>
     <span class="lab-card-desc">Cowork with no code, or real code in VS Code. Same result, different route.</span>
     <span class="lab-card-cta">Compare →</span>
   </a>
@@ -69,7 +69,7 @@ hero:
 
 <div class="home-section">
 
-## Start here – build your path {#start-here}
+## Start here – pick your altitude {#start-here}
 
 <p class="home-section-intro is-wide">Two clicks and you're building. All three routes solve the same problem – pick whichever fits how you like to work.</p>
 

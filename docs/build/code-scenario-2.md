@@ -19,7 +19,7 @@ You start from a working council dashboard. You make it yours, prove the code ca
 
 A single review from a single perspective is not enough when different audiences need so many different things from the same content. A formal explainer might help a compliance officer make a careful decision and still be unusable for a store manager who needs one practical action during a busy shift.
 
-This track solves a second problem too: a model is good at contextual judgement, but it can also make things up. Your council pairs both – the model explains whether content works for an audience, and code checks what is countable, so a hallucinated verdict gets caught.
+This altitude solves a second problem too: a model is good at contextual judgement, but it can also make things up. Your council pairs both – the model explains whether content works for an audience, and code checks what is countable, so a hallucinated verdict gets caught.
 
 ## What your team will have built
 

@@ -1,26 +1,29 @@
 ---
-title: Which track is right for me?
+title: Which altitude is right for me?
 ---
 
-# Which track is right for me?
+# Which altitude is right for me?
 
-Same scenario, three ways in. No track is a lesser version of another – they
-differ in the tools you use, not in how much you accomplish.
+::: tip Altitude is your toolset, not your skill level
+All three build the same thing and finish in the same two hours. They differ in
+what you have open on screen – nothing else. Pick the one that matches how you
+like to work, not how experienced you think you are.
+:::
 
 | | You'll build with | You'll spend the time |
 | --- | --- | --- |
 | 🟢 **Cowork** · Copilot-Crafted | Microsoft 365 Copilot + Cowork | Writing instructions, not code. Guided end to end. |
-| 🔵 **Scout** · Agent-Orchestrated | Microsoft Scout | Wiring agents together in a low-code maker studio. |
+| 🔵 **Scout** · Agent-Orchestrated | Microsoft Scout | Describing what you want and letting Scout build it. |
 | 🟣 **Code** · Code-Extended | VS Code + GitHub Copilot | Writing real code. You get a contract, not a solution. |
 
 ## Not sure?
 
 - **Never built an agent before?** 🟢 **Cowork**. It's guided end to end and needs no setup.
-- **Want to see agents hand off to each other?** 🔵 **Scout**.
+- **Want something running you can point at?** 🔵 **Scout**.
 - **You live in a terminal or VS Code?** 🟣 **Code**.
 
-::: tip All three produce the same artifact
-The portable spec is identical. The tracks differ in what you build around it.
+::: info All three produce the same artifact
+The portable spec is identical. The altitudes differ in what you build around it.
 :::
 
-Ready? [**Pick your track and scenario →**](/#start-here)
+Ready? [**Pick your altitude and scenario →**](/#start-here)

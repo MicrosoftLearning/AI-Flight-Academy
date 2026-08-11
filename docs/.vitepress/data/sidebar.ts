@@ -140,7 +140,7 @@ export function globalSidebar(
         { text: "Home", link: "/" },
         { text: "How the hack works", link: "/how-it-works/" },
         { text: "Run of show", link: "/how-it-works/run-of-show" },
-        { text: "Which path is right for me?", link: "/levels/" },
+        { text: "Which altitude is right for me?", link: "/levels/" },
       ],
     },
     scenarioSection,

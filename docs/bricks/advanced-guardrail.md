@@ -7,7 +7,7 @@ title: Add a guardrail / output check
 # Add a guardrail / output check
 
 **Tool:** Python + MCP + GitHub Copilot
-**Source status:** Code track guardrail
+**Source status:** Code altitude guardrail
 
 <!-- #region guide -->
 A guardrail is a tool call that runs before anything leaves the system. It returns `ALLOW`, `ASK_FIRST`, or `NEVER`, plus the rule that governed the decision.

@@ -27,7 +27,7 @@ Inside `references/`:
 
 Twin Forge writes those two, then hands off. **The rest of the hack is yours:** in a new Cowork task, you add the files it doesn't have – the people you deal with, what you refuse, what you're actually working on – and wire each one in. That's most of Cowork.
 
-The Code track adds **`revealed.md`** – what your calendar shows about how you spend time – and a council of agents that argue before deciding.
+The Code altitude adds **`revealed.md`** – what your calendar shows about how you spend time – and a council of agents that argue before deciding.
 
 Done means the twin drafts in a way you'd recognise as yours, and you can point to the rule that produced it.
 
@@ -47,7 +47,7 @@ The most accurate twin, because the evidence is real. Keep it private – your o
 
 - 5–10 real sent emails → `voice.md`
 - a short yes/no interview about situations you've handled → `soul.md`
-- recent calendar patterns → `revealed.md` (Code track)
+- recent calendar patterns → `revealed.md` (Code)
 
 ### Path B – Build Avery Washington's twin
 
@@ -62,7 +62,7 @@ Same exercise, no personal data. Details on the [Cowork build page](/build/cowor
 
 ## Assembly maps
 
-Use the building blocks for your track.
+Use the building blocks for your altitude.
 
 - **🟢 Cowork:**
   1. [Connect Cowork to a data source](/bricks/cowork-connect-source)

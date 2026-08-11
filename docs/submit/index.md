@@ -13,7 +13,7 @@ Project submission isn't open yet. Check back here on hack day – this page wil
 > **TODO** – finalize the submission format. Likely fields (adapted from the Agents League model):
 
 - Team name + members
-- Your scenario + track
+- Your scenario + altitude
 - A short description of what you built
 - A demo video or screenshots
 - A link to your agent / repo / export

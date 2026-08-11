@@ -53,11 +53,11 @@ function bold(s: string) {
 
 <template>
   <div class="path-picker">
-    <!-- Step 1: Track -->
+    <!-- Step 1: Altitude -->
     <div class="picker-step">
       <div class="picker-step-head">
         <span class="picker-step-num" :class="{ done: track }">1</span>
-        <span class="picker-step-label">Pick how you want to build</span>
+        <span class="picker-step-label">Pick your altitude</span>
       </div>
       <div class="picker-options">
         <button

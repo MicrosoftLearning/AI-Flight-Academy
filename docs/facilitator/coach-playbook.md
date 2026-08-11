@@ -94,7 +94,7 @@ Force one shared `soul.md`. The Arbiter owns tiebreakers. The Critic checks whet
 
 ## Tooling traps (verified on a live tenant)
 
-These are real, we hit them in testing. Call them out at the start of the Cowork track and you'll save the room twenty minutes.
+These are real, we hit them in testing. Call them out at the start of the Cowork altitude and you'll save the room twenty minutes.
 
 | Symptom | Cause | Fix |
 | --- | --- | --- |
