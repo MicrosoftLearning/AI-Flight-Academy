@@ -146,9 +146,3 @@ done
 code $dest/the-greenlight-starter/the-greenlight.code-workspace
 ```
 :::
-
-## 🧑‍🏫 Facilitators
-
-- [Facilitator kit](/facilitator/) – role cards, interview script, coach playbook
-- [Run of show](/how-it-works/run-of-show)
-- **Spoilers:** inside the persona pack, `calendar/summary-stats.md` gives away the planted contradictions. Hand it to stuck teams only.

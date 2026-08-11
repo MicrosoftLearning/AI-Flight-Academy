@@ -139,7 +139,6 @@ export function globalSidebar(
       items: [
         { text: "Home", link: "/" },
         { text: "How the hack works", link: "/how-it-works/" },
-        { text: "Run of show", link: "/how-it-works/run-of-show" },
         { text: "Which altitude is right for me?", link: "/levels/" },
       ],
     },
@@ -150,7 +149,6 @@ export function globalSidebar(
       items: [
         { text: "Downloads", link: "/resources/downloads" },
         { text: "Submit your project", link: "/submit/" },
-        { text: "For facilitators", link: "/facilitator/" },
       ],
     },
   ];

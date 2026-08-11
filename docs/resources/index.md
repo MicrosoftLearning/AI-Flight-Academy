@@ -13,9 +13,6 @@ title: Resources
 - [Agent Academy](https://github.com/microsoft/agent-academy) – self-paced guided missions (Copilot Studio)
 - [Agents League](https://github.com/microsoft/agentsleague) – competitive hackathon format
 
-## For facilitators
-
-- [Facilitator kit](/facilitator/) – role cards, interview script, coach playbook, run of show
 
 ## Tools
 

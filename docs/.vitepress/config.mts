@@ -34,7 +34,6 @@ export default defineConfig({
         text: "Resources",
         items: [
           { text: "Downloads", link: "/resources/downloads" },
-          { text: "For facilitators", link: "/facilitator/" },
           { text: "More", link: "/resources/" },
         ],
       },

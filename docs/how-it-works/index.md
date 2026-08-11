@@ -39,4 +39,3 @@ You leave with two things:
 - **A working artifact** you can keep improving after the hack.
 - **A transferable skill**: how to compress messy work behavior into a small, testable agent spec.
 
-See also: [Run of Show](/how-it-works/run-of-show) · [Facilitator guide](/facilitator/)
