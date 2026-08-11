@@ -4,10 +4,10 @@ title: Which altitude is right for me?
 
 # Which altitude is right for me?
 
-::: tip Altitude is about tools, not seniority
-Pick based on what you want to have open on screen for two hours. A principal PM who's never opened VS Code belongs in Cowork; someone two months in who lives in a terminal belongs in Code. Nothing here maps to your title.
+::: tip Fly at the altitude that suits you
+The altitudes ask different things of you. Cowork is the place to start if you'd rather not touch a terminal. Scout goes further – you describe what you want and it builds it for you, grounded in your work. Code goes furthest and assumes you're at home writing agents yourself.
 
-The altitudes do build different things – Code goes further than Cowork does, and takes more setup to get there. Pick the one you'll enjoy, not the one that sounds impressive.
+Pick where you'll actually get something done.
 :::
 
 | | You'll build with | You'll spend the time | You'll walk out with |

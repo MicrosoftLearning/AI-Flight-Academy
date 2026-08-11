@@ -59,6 +59,11 @@ function bold(s: string) {
         <span class="picker-step-num" :class="{ done: track }">1</span>
         <span class="picker-step-label">Pick your altitude</span>
       </div>
+      <p class="picker-step-note">
+        What the team builds with. Fly at the altitude that suits you – pick
+        where you'll actually get something done.
+        <a :href="withBase('/levels/')">Compare them →</a>
+      </p>
       <div class="picker-options">
         <button
           v-for="a in tracks"
@@ -224,6 +229,19 @@ function bold(s: string) {
   background: var(--vp-c-brand-soft);
 }
 
+.picker-step-note {
+  margin: -0.35rem 0 0.9rem;
+  padding-left: 2.1rem;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--vp-c-text-2);
+}
+
+.picker-step-note a {
+  white-space: nowrap;
+  font-weight: 600;
+}
+
 .picker-bubble-emoji {
   font-size: 1.6rem;
 }
@@ -247,7 +265,7 @@ function bold(s: string) {
   color: var(--vp-c-text-2);
 }
 
-/* "Builds with" / "Builds in" — the kicker above the tool line. */
+/* "Builds with" / "Builds in" – the kicker above the tool line. */
 .picker-bubble-builds {
   margin-top: 0.6rem;
   font-size: 0.7rem;
