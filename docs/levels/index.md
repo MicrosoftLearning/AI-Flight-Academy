@@ -23,4 +23,4 @@ differ in the tools you use, not in how much you accomplish.
 The portable spec is identical. The tracks differ in what you build around it.
 :::
 
-Ready? [**Pick your scenario and track →**](/#start-here)
+Ready? [**Pick your track and scenario →**](/#start-here)

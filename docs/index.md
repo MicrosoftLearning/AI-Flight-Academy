@@ -39,17 +39,17 @@ hero:
 
 <!-- markdownlint-disable MD033 -->
 <div class="lab-grid">
-  <a class="lab-card" href="/AI-Flight-Academy/scenarios/">
-    <span class="lab-card-emoji">🎯</span>
-    <span class="lab-card-title">1 · Pick a scenario</span>
-    <span class="lab-card-desc">🚧 Scenario 1 is The Digital Twin, Scenario 2 is The Greenlight. Both still in progress.</span>
-    <span class="lab-card-cta">See scenarios →</span>
-  </a>
   <a class="lab-card" href="/AI-Flight-Academy/levels/">
     <span class="lab-card-emoji">🎚️</span>
-    <span class="lab-card-title">2 · Pick how to build</span>
+    <span class="lab-card-title">1 · Pick how to build</span>
     <span class="lab-card-desc">Cowork with no code, or real code in VS Code. Same result, different route.</span>
     <span class="lab-card-cta">Compare →</span>
+  </a>
+  <a class="lab-card" href="/AI-Flight-Academy/scenarios/">
+    <span class="lab-card-emoji">🎯</span>
+    <span class="lab-card-title">2 · Pick a scenario</span>
+    <span class="lab-card-desc">🚧 Scenario 1 is The Digital Twin, Scenario 2 is The Greenlight. Both still in progress.</span>
+    <span class="lab-card-cta">See scenarios →</span>
   </a>
   <a class="lab-card" href="/AI-Flight-Academy/#start-here">
     <span class="lab-card-emoji">🧱</span>

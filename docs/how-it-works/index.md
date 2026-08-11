@@ -6,12 +6,12 @@ title: How the Hack Works
 
 You have two hours to turn a real work problem into a working agent.
 
-You pick a scenario, pick how you want to build, and demo what you made. Coaches are in the room throughout. Aim for something that works and that you understand well enough to keep using, not something polished.
+You pick how you want to build, pick a scenario, and demo what you made. Coaches are in the room throughout. Aim for something that works and that you understand well enough to keep using, not something polished.
 
 ## The flow
 
-1. **Pick a scenario** – start with a real Microsoft work problem.
-2. **Pick how you want to build** – Cowork with no code, or real code in VS Code.
+1. **Pick how you want to build** – Cowork with no code, or real code in VS Code.
+2. **Pick a scenario** – a real Microsoft work problem to point it at.
 3. **Choose your data path** – use your own data privately, or use the provided synthetic pack.
 4. **Build the smallest working version** – get to v0.1 fast.
 5. **Test it on a real prompt** – see where it breaks.
