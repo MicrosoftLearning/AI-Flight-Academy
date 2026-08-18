@@ -14,23 +14,25 @@ Scenario 1 is still being built and tested. Steps, downloads, and screenshots ma
 
 ## What you're solving
 
-Copilot infers how you work from what you've already done. You can't see that inference, correct it, or take it with you to another tool.
+Copilot guesses how you work from what you've already done. That guess is invisible – you can't read it, fix it, or move it to another tool.
 
-So you re-explain yourself every session, and rewrite the output when you don't.
+So every session starts the same way: you re-explain yourself, or you skip it and rewrite the output by hand.
 
-Today you write those rules down and hand them to an agent.
+Today you write it down once – how you decide, how you write – and save it into Cowork.
 
 ## What you'll walk out with
 
-An agent that answers as you.
+An agent that works the way you do.
 
-Name a thread – *"what do I do about the budget review?"* – and it finds it in your mail, Teams, or calendar, then answers the way you would.
+Hand it anything from your job and it finds its own context – your mail, Teams, calendar, files – then takes a position and drafts in your voice. It stops short of anything that isn't its call. It's available in every Cowork task from then on, including ones that run on a schedule.
+
+Here's how you'll get there:
 
 | Step | What happens | Time |
 | --- | --- | --- |
 | 1–3 | You answer questions. A skill called Twin Forge turns your answers into two documents: **soul** (how you decide) and **voice** (how you write) | ~45 min |
 | 4 | You try it on something real and find out what it's missing | ~10 min |
-| 5 | **You build.** Add what it doesn't know – your people, your commitments, what you refuse | ~40 min |
+| 5 | **Build as a group.** Add what it doesn't know – your people, your commitments, where it has to stop and check with you | ~40 min |
 
 Step 5 is most of the hack. The steps before it get you there with something worth improving.
 
@@ -38,8 +40,16 @@ Step 5 is most of the hack. The steps before it get you there with something wor
 You answer yes/no questions, and everything else is a sentence typed into a chat box. Cowork writes and saves all the files for you – you never open one.
 :::
 
-::: tip Want a step spelled out?
-The **[Guides](/bricks/)** in the top nav cover the general skills used here – setting up, connecting to your work, and running things on a schedule. They're not scenario-specific, so open one in a new tab if you get stuck on a mechanic.
+::: tip When you get stuck, ask Cowork
+Nobody expects you to already know how to do this. Cowork is the thing you're building with **and** the thing that helps you build it – use it both ways all day.
+
+Any time you're unsure what to type, or something doesn't behave, say so in the chat.
+
+There are coaches moving around the room and an SME at every table. Wave one over rather than losing ten minutes to something they'll fix in one.
+:::
+
+::: tip Stuck on a mechanic?
+The **[Guides](/bricks/)** in the top nav are short how-tos for the Cowork basics this scenario leans on – getting set up, connecting to your work, running something on a schedule. They're written for any scenario, not this one, so they won't repeat these steps. Open one in a new tab if a mechanic trips you up.
 :::
 
 ## Before you start
@@ -66,10 +76,10 @@ The **[Guides](/bricks/)** in the top nav cover the general skills used here –
 
 Taking Avery? Download **[the persona pack](/AI-Flight-Academy/downloads/avery-persona-pack.zip)** now, right-click the `.zip` → **Extract All**. In step 1, answer **no** when asked about your own mail, then attach the extracted documents with the **paperclip** button. Attach the documents, not the zip.
 
-::: details Building one twin as a table
-Some tables prefer to build a single twin together: pick a volunteer, use their data, and argue about the rules out loud. It surfaces disagreements about what a rule should say.
+::: tip How your table works
+**Steps 1–4 you do on your own.** Everyone builds their own twin, on their own laptop, with their own data – or Avery's. Nobody waits for anybody.
 
-The trade-off is that only the volunteer leaves with a twin. **If your table does this, build one shared set of documents in step 5 rather than one each.**
+**Step 5 you do as a group.** The table agrees on two or three add-on documents, then you each build those same documents filled with your own answers. That's where most of the hack is.
 :::
 
 ---
@@ -97,6 +107,8 @@ Start Twin Forge and build my digital twin.
 It replies by asking whether to use your own mail and calendar, or Avery. Answer, and it starts asking questions.
 
 **Done when:** Twin Forge is asking you yes/no questions.
+
+**Nothing happened?** Start another new task and ask again – that clears it most of the time. If a second task does nothing either, grab a coach or your table's SME instead of retrying a third time.
 
 ::: warning Two things that will trip you up
 **Upload the `.md` file on its own.** Don't zip it. Zipped uploads fail silently – nothing appears and you get no error.
@@ -162,7 +174,7 @@ If any line reads like the left column, type this in the chat:
 when X conflicts with Y, do Z. Ask me if you don't know my answer.
 ```
 
-The document also has short **Boundaries**, **Capacity**, and **Blind spots** sections. Skim them – Boundaries is what lets your twin refuse things later, and you'll use that in step 5.
+The document also has short **Boundaries**, **Capacity**, and **Blind spots** sections. Skim them – Boundaries is what makes your twin stop and hand something back to you instead of drafting it, and you'll use that in step 5.
 
 **Done when:** every decision rule names a situation and a specific action.
 
@@ -244,9 +256,9 @@ Copy the whole reply into a scratch document, or leave this task open in a brows
 **Done when:** you've run it once, saved the answer, and written down one thing it missed.
 
 ::: tip Write down what it missed
-It will miss things – the wrong tone for that person, no idea what else you've committed to, no sense of what you'd refuse.
+It will miss things – the wrong tone for that person, no idea what else you've committed to, no sense of what it shouldn't be deciding on its own.
 
-**That list is your step 5 plan.** Don't try to fix anything yet.
+**That's what you bring to your table at the start of step 5.** Don't try to fix anything yet.
 :::
 
 ::: details It grabbed the wrong thread
@@ -257,11 +269,15 @@ If several threads matched, it should have listed them and asked you which. Past
 
 ## 5 · Make it yours
 
-**~40 minutes. This is the build.**
+**~40 minutes. This is the build, and this is the part you do as a group.**
 
 Your twin works, but it's thin: it knows how you decide and how you write, and nothing else about your job.
 
-**Start a new task.** Twin Forge is finished – it built your twin and handed it over. A fresh task keeps Forge out of the driver's seat, so what you say next goes to your twin instead of back into the interview.
+**As a table, first – take five minutes.** Everyone reads out the one thing their twin missed in step 4. Then agree on **two or three documents you'll all build.** Same documents for everyone; each person fills theirs with their own people, their own commitments.
+
+Agreeing up front is what makes the remaining time fast – you're all solving the same problem at once, so whatever one person works out, the whole table gets.
+
+**Then, on your own: start a new task.** Twin Forge is finished – it built your twin and handed it over. A fresh task keeps Forge out of the driver's seat, so what you say next goes to your twin instead of back into the interview.
 
 ::: warning Two different things you can say
 This is the one thing to get right in step 5.
@@ -276,7 +292,7 @@ Same twin, two different jobs – asking it a question, or changing how it works
 
 ### What to build
 
-Pick real gaps – ideally from the list you wrote in step 4. These work well:
+Pick these as a table, from what people said their twins missed in step 4. These work well:
 
 | Document | What it holds | So your twin can |
 | --- | --- | --- |
@@ -286,7 +302,7 @@ Pick real gaps – ideally from the list you wrote in step 4. These work well:
 | `meetings` | How you run the ones you own | Draft an agenda that looks like yours |
 | `bad-week` | What you cut first when everything slips | Give you a triage order instead of sympathy |
 
-Something specific to your own job beats anything on this list.
+Something specific to the work your table actually does beats anything on this list.
 
 ### The rounds
 
@@ -319,9 +335,9 @@ Using my twin: what do I do about the vendor renewal?
 
 **f. Correct it in chat.** *"Too long for my manager – she skims. Shorter, and lead with the date."* Then run the same request again.
 
-### Getting the refusal
+### Getting the handback
 
-A twin that refuses something, and quotes your own rule for it, is the strongest thing you can show. Put the rule in your **soul** document, where boundaries live:
+A twin that stops, hands a call back to you, and quotes your own rule for doing it is the strongest thing you can show. Put the rule in your **soul** document, where boundaries live:
 
 ```text
 Edit my twin skill: add this to the Boundaries section of my soul document —
@@ -334,11 +350,11 @@ Then ask your twin to break it:
 Using my twin: tell the partner team why I'm out next week.
 ```
 
-A correct refusal stops instead of drafting, names the rule, and says what it would need to go ahead:
+A correct handback stops instead of drafting, names the rule, and says what it would need to go ahead:
 
 ```text
-I can't draft that. Your boundary says: "Never disclose the reason I'm out;
-a decline says when I'm free, never why I'm not." — soul.md, Boundaries
+That one's yours to call. Your boundary says: "Never disclose the reason I'm
+out; a decline says when I'm free, never why I'm not." — soul.md, Boundaries
 
 I'd need your say-so to share the reason. I can send your availability
 instead — want that?
@@ -348,28 +364,28 @@ If it drafts the message anyway, your boundary is too soft. Make it a flat "neve
 
 ### Requirements
 
-Hit all four:
+Hit both:
 
-- [ ] **Two or more new documents**, on top of soul and voice, each half a page or less
-- [ ] **Each one read automatically** – your twin uses it without you mentioning it
-- [ ] **Behaviour visibly changed** – your step 4 request answers differently now
-- [ ] **One refusal** – your twin declines something and quotes the rule that stopped it
+- [ ] **One new document that changes an answer** – half a page or less, read automatically, and your step 4 request now answers differently
+- [ ] **One handback** – your twin stops instead of drafting and quotes the rule that stopped it
 
-The third is the real bar: a document that never changes an answer isn't doing anything.
+The first is the real bar: a document that never changes an answer isn't doing anything.
+
+**Got both with time left?** Add a second document.
 
 ### Working as a table
 
-Everyone builds their own, but don't build in silence.
+You each build your own copies, but you build them at the same time – so don't build in silence.
 
 | When | What |
 | --- | --- |
-| First 2 minutes | Each person says what they're adding and why. Ideas spread fast here |
-| ~20 minutes in | Whoever has the best-working document reads it out. Copy the structure, not the content |
-| Last 5 minutes | One person demos a refusal, one demos a before/after |
+| First 5 minutes | Agree the two or three documents everyone will build |
+| ~20 minutes in | Whoever's document is working best reads theirs out. Copy the structure, not the content |
+| Last 5 minutes | One person demos a handback, one demos a before/after |
 
-Most tables land on the same two or three documents independently.
+When someone's document changes nothing, say so out loud – somebody at the table has usually just hit and fixed the same thing.
 
-**Done when:** two new documents in, your step 4 request answers differently, and your twin has refused something.
+**Done when:** two new documents in, your step 4 request answers differently, and your twin has handed something back to you.
 
 ::: warning Keep each document short
 Half a page. Long documents get ignored in the middle – same reason soul stays at one page. Two sharp documents beat one long one.
@@ -405,7 +421,7 @@ Cowork drafts and waits for your approval. Keep it that way, and point at it in 
 60–90 seconds. Lead with the before/after – it needs no explanation.
 
 - [ ] Your step 4 request, answered before and after one of your documents
-- [ ] Your twin refusing something, quoting your own rule
+- [ ] Your twin handing a call back to you, quoting your own rule
 - [ ] **One decision rule** specific enough to be slightly embarrassing
 - [ ] Which documents you added, and what made you pick them
 
@@ -413,7 +429,8 @@ Cowork drafts and waits for your approval. Keep it that way, and point at it in 
 
 | What you're seeing | What to do |
 | --- | --- |
-| Cowork ignores Twin Forge | Start a **new task** – skills load only when a task begins |
+| Cowork ignores Twin Forge | Start a **new task** – skills load only when a task begins. Still nothing on the second try? Grab a coach |
+| You don't know how to do something | Ask Cowork in the chat, in plain words. Then ask a coach or your table's SME |
 | Upload seemed to do nothing | Upload the `.md` file, not a zip |
 | Avery's data can't be found | Extract the zip first, then attach the documents inside it – not the zip |
 | Twin Forge is still asking questions | Expected through step 3. It's finished once it says your twin is installed |
@@ -424,7 +441,7 @@ Cowork drafts and waits for your approval. Keep it that way, and point at it in 
 | It answered about the wrong thread | Say which you meant, and that it should ask when several match |
 | Drafts sound like a stranger | Your voice document has no real samples. Tell it to re-read your sent mail |
 | It gives options instead of deciding | Your rules are values. Say what it should have decided; it rewrites the rule |
-| It won't refuse anything | Your boundary is too soft. Make it a flat "never" in your soul document's Boundaries |
+| It won't hand anything back | Your boundary is too soft. Make it a flat "never" in your soul document's Boundaries |
 | A document you added changed nothing | See the troubleshooting box at the end of step 5 |
 
 ---
