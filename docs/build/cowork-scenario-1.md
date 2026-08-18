@@ -275,7 +275,7 @@ If several threads matched, it should have listed them and asked you which. Past
 
 ## 5 · Make it yours
 
-**~40 minutes. This is the build, and this is the part you do as a group.**
+**~50 minutes. This is the build, and this is the part you do as a group.**
 
 Your twin works, but it's thin: it knows how you work and how you write, and not much else about your job.
 
