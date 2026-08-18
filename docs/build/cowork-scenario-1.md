@@ -30,9 +30,9 @@ Here's how you'll get there:
 
 | Step | What happens | Time |
 | --- | --- | --- |
-| 1–3 | You answer questions. A skill called Twin Forge turns your answers into two references: **soul** (how you decide) and **voice** (how you write) | ~45 min |
+| 1–3 | You answer questions. A skill called Twin Forge reads your sent mail, then turns your answers into two references: **soul** (how you work) and **voice** (how you write) | ~35 min |
 | 4 | You try it on something real and find out what it's missing | ~10 min |
-| 5 | **Build as a group.** Add what it doesn't know – your people, your commitments, where it has to stop and check with you | ~40 min |
+| 5 | **Build as a group.** Add what it doesn't know – your people, your commitments, where it has to stop and check with you | ~50 min |
 
 Step 5 is most of the hack. The steps before it get you there with something worth improving.
 
@@ -149,15 +149,17 @@ Skills use an open standard, so the same files also work in VS Code Copilot with
 
 ## 2 · Answer the questions
 
-**~20 minutes.** This builds **soul** – how you decide.
+**~20 minutes.** This builds **soul** – how you work.
 
-Twin Forge asks eight yes/no questions. They're situations, not opinions:
+Twin Forge reads your recent sent mail first, then asks eight yes/no questions. Most of them quote something back at you:
 
-> *If you're going to miss a date, do you say so as soon as you know?*
+> *On Aug 13 you declined a meeting and offered Monday instead. Do you always name an alternative when you move something?*
 
 Answer fast, with what you actually do – not what you'd like to do. "Depends" is a fine answer.
 
-Then it writes your soul reference and shows you the **decision rules** it wrote. Read them. This is the part that decides whether your twin is any good:
+The eight cover different ground on purpose: what you send back, what you argue for, how you start a piece of work, what specific people need from you, what experience taught you, what's on your plate, what you refuse, and what gives when the week is full.
+
+Then it writes your soul reference and shows you the whole thing. Read it. This is where a twin is good or useless:
 
 | ❌ Useless | ✅ Useful |
 | --- | --- |
@@ -167,16 +169,16 @@ Then it writes your soul reference and shows you the **decision rules** it wrote
 
 An agent can't act on a value. It can act on a rule.
 
-If any line reads like the left column, type this in the chat:
+There's a second test worth applying: **could this line have been written about anyone?** If it could, it's not yours yet. Say so and Twin Forge will put something specific in it.
 
 ```text
-"I value accuracy" isn't something you can act on. Rewrite it as a rule —
-when X conflicts with Y, do Z. Ask me if you don't know my answer.
+That rule could describe anyone who answered the same way. Rewrite it using
+something you actually found in my mail.
 ```
 
-The reference also has short **Boundaries**, **Capacity**, and **Blind spots** sections. Skim them – Boundaries is what makes your twin stop and hand something back to you instead of drafting it, and you'll use that in step 5.
+The reference also has a short **Boundaries** section. Skim it – that's what makes your twin stop and hand something back to you instead of drafting it, and you'll use it in step 5.
 
-**Done when:** every decision rule names a situation and a specific action.
+**Done when:** every line names a situation and a specific action, and at least a few could only be about you.
 
 ::: tip Keep it to one page
 Short instructions beat long ones – models pay least attention to the middle of a long prompt. If your soul reference runs past a page, ask Twin Forge to cut it.
@@ -184,9 +186,9 @@ Short instructions beat long ones – models pay least attention to the middle o
 
 ## 3 · Let it read your writing
 
-**~15 minutes.** This builds **voice** – how you write.
+**~5 minutes.** This builds **voice** – how you write.
 
-Twin Forge reads about ten of your recent sent emails and pulls out the patterns: your signoff, how you open to a peer versus your manager, your punctuation habits, your usual length. It quotes the emails exactly, typos and all.
+This step mostly runs itself. Twin Forge already read your mail in step 2 — it now pulls out the writing patterns: your signoff, how you open to a peer versus your manager, your punctuation habits, your usual length. It quotes the emails exactly, typos and all.
 
 It reads instead of asking because nobody can list their own writing habits from memory.
 
@@ -196,7 +198,7 @@ Review the patterns it found and correct anything wrong. Then it saves your twin
 Documents/Cowork/skills/my-twin/
   SKILL.md          ← this is what makes your twin load in every new task
   references/
-    soul.md         ← how you decide
+    soul.md         ← how you work
     voice.md        ← how you write
 ```
 
@@ -204,7 +206,9 @@ You don't need to open any of these. It's worth seeing the shape, because step 5
 
 **A skill plus references – that's all a twin is.** `SKILL.md` holds the instructions. Everything in `references/` is background your twin reads before it answers anything. Soul and voice are the first two. Anything you add later gets read the same way.
 
-Twin Forge finishes by naming **one place your answers didn't match your actual mail or calendar.** Note it – that's a good thing to fix in step 5.
+Twin Forge finishes by showing you both files in full and naming **one place your answers didn't match your actual mail or calendar.** Read them — it's the only time you'll see them before the twin starts answering as you. Note the gap; it's a good first thing to fix in step 5.
+
+Then it hands you the choice: keep going in this task, or start a fresh one. Either works.
 
 **Done when:** Twin Forge says your twin is installed.
 
@@ -273,7 +277,7 @@ If several threads matched, it should have listed them and asked you which. Past
 
 **~40 minutes. This is the build, and this is the part you do as a group.**
 
-Your twin works, but it's thin: it knows how you decide and how you write, and nothing else about your job.
+Your twin works, but it's thin: it knows how you work and how you write, and not much else about your job.
 
 **As a table, first – take five minutes.** Everyone reads out the one thing their twin missed in step 4. Then agree on **two or three references you'll all build.** Same references for everyone; each person fills theirs with their own people, their own commitments.
 
