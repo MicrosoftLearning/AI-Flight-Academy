@@ -108,6 +108,10 @@ const singles = [
     src: join(root, "Allfiles", "scenario-1-digital-twin", "twin-forge", "SKILL.md"),
     name: "twin-forge-SKILL.md",
   },
+  {
+    src: join(root, "Allfiles", "scenario-1-digital-twin", "my-twin", "SKILL.md"),
+    name: "my-twin-SKILL.md",
+  },
 ];
 
 for (const s of singles) {
