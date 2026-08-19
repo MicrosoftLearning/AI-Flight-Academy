@@ -69,6 +69,13 @@ const jobs = [
     zip: "avery-persona-pack.zip",
   },
   {
+    src: join(root, "Allfiles", "scenario-1-digital-twin", "scout", "my-twin"),
+    zip: "my-twin-scout.zip",
+    // Both are produced by a run and are personal to whoever ran it. The zip
+    // ships the questions, never anyone's answers.
+    exclude: ["command-center.html", "data"],
+  },
+  {
     src: join(root, "Allfiles", "scenario-2-greenlight", "the-greenlight-starter"),
     zip: "the-greenlight-starter.zip",
     // The dashboard's deps and runtime output are regenerated (npm install /
@@ -102,12 +109,8 @@ for (const j of jobs) {
   console.log(`  ${j.zip.padEnd(28)} ${(statSync(dest).size / 1024).toFixed(1)} KB`);
 }
 
-// Twin Forge ships as a single .md - Cowork's skill upload rejects .zip.
+// The Cowork twin ships as a single .md - Cowork's skill upload rejects .zip.
 const singles = [
-  {
-    src: join(root, "Allfiles", "scenario-1-digital-twin", "twin-forge", "SKILL.md"),
-    name: "twin-forge-SKILL.md",
-  },
   {
     src: join(root, "Allfiles", "scenario-1-digital-twin", "my-twin", "SKILL.md"),
     name: "my-twin-SKILL.md",

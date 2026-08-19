@@ -117,7 +117,7 @@ export const scenarios: Scenario[] = [
 // Status of each track x scenario build page. Anything not listed is "soon".
 export const buildStatus: Record<string, Status> = {
   "cowork-scenario-1": "wip",
-  "scout-scenario-1": "soon",
+  "scout-scenario-1": "wip",
   "code-scenario-1": "wip",
   "cowork-scenario-2": "wip",
   "scout-scenario-2": "wip",
