@@ -22,10 +22,10 @@ A twin is a `SKILL.md` plus a `references/` folder – the **Agent Skills open s
 
 Inside `references/`:
 
-- **`soul.md`** – decision rules, boundaries, capacity, blind spots.
+- **`persona.md`** – who you are and how you decide. Rules, boundaries, what's live, what gives in a bad week. Called `soul.md` on the Scout and Code altitudes.
 - **`voice.md`** – real sent-email samples and the style rules they imply.
 
-Twin Forge writes those two, then hands off. **The rest of the hack is yours:** in a new Cowork task, you add the files it doesn't have – the people you deal with, what you refuse, what you're actually working on – and wire each one in. That's most of Cowork.
+**The twin writes those two itself**, from what Work IQ can see in your mail, Teams and calendar. **The rest of the hack is yours:** you correct what it got wrong, then add the files it has no way to know – the people you deal with, what you've already committed to, what's already been decided.
 
 The Code altitude adds **`revealed.md`** – what your calendar shows about how you spend time – and a council of agents that argue before deciding.
 
@@ -45,15 +45,11 @@ Use your own Microsoft 365 data: sent mail, calendar patterns, and recent decisi
 
 The most accurate twin, because the evidence is real. Keep it private – your own tenant, your own screen, nothing personal pasted into shared spaces.
 
-- 5–10 real sent emails → `voice.md`
-- a short yes/no interview about situations you've handled → `soul.md`
-- recent calendar patterns → `revealed.md` (Code)
-
 ### Path B – Build Avery Washington's twin
 
 Use the **Avery Washington persona pack**: a synthetic marketing manager with a fake inbox, calendar, and goals doc.
 
-Same exercise, no personal data. Details on the [Cowork build page](/build/cowork-scenario-1).
+Same exercise, no personal data. Available on the **Scout** and **Code** altitudes – the Cowork twin reads your own work directly.
 
 ## Build paths
 

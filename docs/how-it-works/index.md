@@ -30,7 +30,7 @@ You pick your altitude, pick a scenario, and demo what you made. Coaches are in 
 
 Done means you can run your agent on a fresh prompt and get useful output that reflects the scenario.
 
-For Scenario 1, that means a portable twin spec – `soul.md`, `voice.md`, and `revealed.md` – plus an agent that uses it to draft, decide, or critique in a way that is specific to the person it represents.
+For Scenario 1, that means a portable twin spec – how you decide, how you write, and what your calendar reveals – plus an agent that uses it to draft, decide, or critique in a way that is specific to the person it represents.
 
 ## What you'll walk out with
 

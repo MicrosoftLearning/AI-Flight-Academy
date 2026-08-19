@@ -15,21 +15,15 @@ Everything for AI Flight Academy scenarios. Files download straight from this si
 ### 🟢 Cowork
 
 <div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/twin-forge-SKILL.md" download="SKILL.md">
-    <span class="lab-card-emoji">⚡</span>
-    <span class="lab-card-title">Twin Forge</span>
-    <span class="lab-card-desc">Interviews you, reads your sent mail, and installs your twin. Upload this file straight into Cowork.</span>
+  <a class="lab-card" href="/AI-Flight-Academy/downloads/my-twin-SKILL.md" download="SKILL.md">
+    <span class="lab-card-emoji">🧬</span>
+    <span class="lab-card-title">Your twin</span>
+    <span class="lab-card-desc">Reads your mail, Teams and calendar through Work IQ, then writes and installs itself. Upload this file straight into Cowork.</span>
     <span class="lab-card-cta">Download SKILL.md →</span>
-  </a>
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/avery-persona-pack.zip" download>
-    <span class="lab-card-emoji">🗂️</span>
-    <span class="lab-card-title">Avery Washington</span>
-    <span class="lab-card-desc">Synthetic persona – inbox, calendar, goals. Use instead of your own data.</span>
-    <span class="lab-card-cta">Download .zip →</span>
   </a>
 </div>
 
-**Installing Twin Forge:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill** → pick the downloaded `SKILL.md`. Then **start a new session** – skills are only discovered at session start.
+**Installing it:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill** → pick the downloaded `SKILL.md`. Then **start a new task** – skills are only discovered when a task begins.
 
 ::: warning Upload the .md, not a .zip
 Tested on a live tenant: `.zip` skill uploads fail silently. `SKILL.md` is self-contained, so there's nothing else to bundle.
