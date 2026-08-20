@@ -236,15 +236,6 @@ Whatever you build, keep it drafting and waiting.
   </div>
 </div>
 
-## 4 · Show it off
-
-Sixty to ninety seconds. Show:
-
-- [ ] **What you built**, running – not a description of it
-- [ ] **One thing it got right about you** that a generic assistant wouldn't have
-- [ ] **The rule behind it** – which line in your files made that happen
-- [ ] **What you'd build next** if you had another hour
-
 ## Push it further
 
 1. **Give it a memory** – something it writes to as well as reads, tracking what it told you last time.
@@ -253,23 +244,6 @@ Sixty to ninety seconds. Show:
 4. **Give it to someone else** – have a teammate ask your twin something and see if the answer sounds like you.
 5. **Two twins** – yours and a teammate's, arguing the same decision.
 6. **Take it with you** – it's a folder of text files. The same twin runs in Cowork and VS Code Copilot.
-
-## Stuck?
-
-| What you're seeing | What to do |
-| --- | --- |
-| Scout ignores the skill | Start a new session – skills load at the start |
-| Import didn't take | Drag the **folder**, not `SKILL.md` alone |
-| You get an ordinary Scout answer | Name the twin – *"using my twin"* |
-| Setup is still reading after 10 minutes | Let it finish the pass, then skip deep correction and move on |
-| It answers in general terms | Your rules aren't specific enough – go back to step 2 |
-| It stopped loading after you renamed it | The folder name, `name:`, and the trigger phrases in `description:` all have to match. Ask Scout to check them |
-| Drafts sound like a stranger | Your voice file is descriptions, not real samples. Get actual sent mail in it |
-| Triage found almost nothing | Widen the window, and check it read Teams as well as mail |
-| Your build is slow | It's reading too much per run. Bound the window and cap how many items it pulls |
-| A scheduled run does nothing | Get it working manually first, then schedule that exact thing |
-| You can't decide what to build | Take the dashboard. There's a working example, so you'll be editing rather than starting |
-| It's 20 minutes in and nothing runs | Cut the scope in half. Get one thing working, then add back |
 
 ---
 
