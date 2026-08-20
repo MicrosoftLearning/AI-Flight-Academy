@@ -101,7 +101,7 @@ export const scenarios: Scenario[] = [
     emoji: "🚦",
     label: "Scenario 2",
     name: "The Greenlight",
-    sub: "An audience council that reviews content",
+    sub: "An audience council that reviews any work asset",
     status: "wip",
   },
   {

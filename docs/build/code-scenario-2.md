@@ -17,18 +17,32 @@ You start from a working council dashboard. You make it yours, prove the code ca
 
 ## What you're solving
 
-A single review from a single perspective is not enough when different audiences need so many different things from the same content. A formal explainer might help a compliance officer make a careful decision and still be unusable for a store manager who needs one practical action during a busy shift.
+A single review from a single perspective is not enough when different audiences need so many different things from the same **asset** – a doc, a deck, an email, a policy, a post, a plan. A formal explainer might help a compliance officer make a careful decision and still be unusable for a store manager who needs one practical action during a busy shift.
 
-This altitude solves a second problem too: a model is good at contextual judgement, but it can also make things up. Your council pairs both – the model explains whether content works for an audience, and code checks what is countable, so a hallucinated verdict gets caught.
+This altitude solves a second problem too: a model is good at contextual judgement, but it can also make things up. Your council pairs both – the model explains whether an asset works for an audience, and code checks what is countable, so a hallucinated verdict gets caught.
 
 ## What your team will have built
 
 | Piece | What it does |
 | --- | --- |
-| **The board** (provided) | A live dashboard: drop content, every seated audience reviews it, and a plan reconvenes until every audience is served. |
-| **Your council** | Your real audiences as `council/*.json` – the room reviewing your content. |
+| **The board** (provided) | A live dashboard: drop an asset, every seated audience reviews it, and a plan reconvenes until every audience is served. |
+| **Your council** | Your real audiences as `council/*.json` – the room reviewing your asset. |
 | **The checks** | Deterministic checks (`checks.py`) shown next to each verdict – code catching what the model might wave through. |
 | **Your path** | Either a **live seat editor** on the board, or a **PR submission** that ships the greenlit plan for approval. |
+
+## How this runs
+
+You start from a working board and make it yours. This is the contract, not a click-path – the board marks every build path, and Copilot Chat builds each one with you.
+
+| | Step | You're done when |
+| --- | --- | --- |
+| **1** | **Start the board** | `http://localhost:4173` is up and the Copilot CLI is signed in. |
+| **2** | **Convene & watch it split** | The same asset draws opposite, quote-backed verdicts – no code yet. |
+| **3** | **Seat an audience that bites** | Your own seat returns a different verdict than another on the same asset. |
+| **4** | **Wire a deterministic check** | A code-caught FAIL sits next to a model verdict. |
+| **5** | **Pick a path** | You ship it further – a live seat editor (A) or a governed PR (B). |
+
+The **MCP bonus** is there for teams who want the council callable from other agents.
 
 ## Before you start
 
@@ -90,123 +104,59 @@ npm start
 
 Open `http://localhost:4173`. The startup line confirms your Copilot CLI is found and signed in. If it isn't, install it and sign in, then restart.
 
+**Done when:** the board is up and the startup line confirms the Copilot CLI is signed in.
+
 ### 2 · Convene the council
 
 Drop the executive summary (`data-pack/content/P4-exec-summary.md`) onto the board. A single general-purpose reviewer – the **solo critic**, whose scores ship recorded in the pack – could only call this one flat *REVISE*. Your council splits it instead: Retail rejects it outright as an unusable wall of prose, while Compliance ships it – that same control detail is exactly the audit rigor they need. Each verdict comes with a quote and a confidence. Iterate on a remediation plan until the whole council greenlights it, then copy your plan to work on later.
 
 No code yet – one flat verdict becomes a room that disagrees.
 
+**Done when:** the same asset draws opposite verdicts from two seats, each with a quote.
+
 ### 3 · Seat an audience that bites
 
-A **seat** is one audience, written as a small JSON file in `council/`. It names who they are, what they need from the content (`outcome`), and the specific bars the content has to clear for *them* (`criteria`).
+A **seat** is one audience. It says who they are, what they need out of the asset, and the specific bars it has to clear *for them*. Each seat is a small file in the `council/` folder, and four samples already ship.
 
-Four sample seats ship. Add one for an audience *you* write for. The trick is the criteria: write bars that are true for **your** audience but not for everyone – that's what makes your seat *disagree* with another on the same piece. (A bar any audience would score the same is just "good writing," and that belongs to the solo critic, not a seat.)
+Add one for an audience *you* write for. The whole trick is the bars: write ones that matter to **your** audience but not to everyone – that's what makes your seat *disagree* with another on the same asset. (A bar any reader would pass is just "good writing," and the solo critic already covers that.)
 
-A seat looks like this – trimmed here; `council/retail.example.json` is the full shape:
+You don't have to hand-write the file. Open something that knows you – **Copilot**, **Cowork**, or **Scout** – point it at the sample `council/retail.example.json`, and ask:
 
-```json
-{
-  "seat_id": "execs",
-  "audience": "📊 Leadership reader",
-  "outcome": "Can skim it in two minutes and know what decision it's asking for.",
-  "criteria": [
-    {
-      "id": "decision_up_front",
-      "the_bar": "The ask is in the first two sentences, not buried on page two.",
-      "fatal": true,
-      "anchors": { "0": "No clear ask anywhere", "3": "Opens with the decision and why now" }
-    }
-  ]
-}
-```
+> Create `my-audience.json` for _[your audience]_, in the same shape as `retail.example.json`: an outcome and two bars, with one marked as a dealbreaker.
 
-- **`outcome`** – what this reader needs the content to *do* for them.
-- **`criteria`** – the bars that protect that outcome. `fatal: true` means a score of 0 on it forces a Reject, whatever the average.
-- **`anchors`** – what a 0 versus a 3 looks like, so anyone would score it the same way.
+When you read what it makes, three things matter:
 
-You don't have to write this by hand. Open **Copilot**, **Cowork**, or **Scout** – something that knows *you* – and give it `retail.example.json` so it can match the shape – and ask it:
+- The **outcome** is what this reader needs the asset to *do* for them.
+- The **bars** protect that outcome. Mark one as a **dealbreaker** – flunk it and the asset is a Reject, however it scores elsewhere.
+- Each bar spells out what a failing example versus a great one looks like, so anyone would score it the same way.
 
-> Create `my-audience.json` for _[your audience]_, in the same shape as `retail.example.json` – an `outcome` and two `criteria` with anchors, one marked `fatal`.
+Save it in `council/` under a new name (reusing an existing name overwrites that seat), then hit **Reload council** on the board.
 
-Place the new audience file in the `/council` folder. Pick any name that isn't already in `council/` so you add a seat instead of overwriting one, then hit **Reload council** on the board.
-
-**Done when:** your seat returns a different verdict than another seat on the same piece.
+**Done when:** your seat lands a different verdict than another seat on the same asset.
 
 ![The engineer patches purple cables into channels labelled Retail, Compliance, Clinical and Manufacturing beside a guardrail switch. Headline: "Code the council."](/img/scenario-2-advanced-wiring.png)
 
 ### 4 · Wire the deterministic checks
 
-The model judges context, **but** it can also make things up. Deterministic checks are the countable half – reading time, blocked steps, table width – things that *code* can prove. This step lights up a **check result on each seat, right next to the model's verdict**. Two parts: connect the checks to the board, then add one of your own.
+Your council's verdicts come from the model – sharp on judgement, but it can also make things up. **Deterministic checks are the countable half**: reading time, blocked steps, table width – things *code* can measure exactly. Turning them on puts a plain pass/fail on each seat, right beside the model's verdict, so a confident-but-wrong "looks fine" gets caught.
 
-**a) Connect the checks – `check_content.py`**
+Two small jobs – and you **don't write either from scratch**. The starter leaves both half-built with notes right in the files, and GitHub Copilot Chat can see all of them. Your job is to decide *what each check should measure*; let Copilot write the code with you.
 
-The board runs this file and reads the JSON it prints. It's a stub right now. It has to load the seats, run each seat's wired checks against the dropped content, and print this shape:
+1. **Turn the checks on.** One starter file (`check_content.py`) connects the checks to the board, and it's left unfinished – which is why the board says "not wired." Open it: the note at the top of the file explains, in plain English, exactly what it needs to hand back. Point Copilot Chat at that file and have it finish the connection.
 
-```json
-{
-  "seats": [
-    {
-      "seat_id": "retail",
-      "audience": "🛒 Retail Store Operations Lead",
-      "checks": [
-        { "criterion": "actionable_standing_up", "check": "check_reading_time",
-          "passed": false, "detail": "1240 words is about 6.2 min (budget 6 min)" }
-      ]
-    }
-  ]
-}
-```
+1. **Add a check of your own.** A check is just a small rule – for example, *"fail if the asset takes longer to read than the audience's budget."* There's a finished one to copy and a half-finished one to complete (both live in `checks.py`): finish `check_table_width` so it fails any table wider than the limit set on the audience's card. Then switch it on for an audience by adding one line to that audience's file in `council/`:
 
-`greenlightlib` already loads the seats and runs the checks – you're mostly reshaping its output:
+    ```json
+    "checks": [ { "fn": "check_table_width", "args": { "max_cols": 4 } } ]
+    ```
 
-```python
-import greenlightlib as g
-from pathlib import Path
+Reload the board and your check shows up next to that seat's verdict.
 
-def check_file(content_path):
-    text = Path(content_path).read_text(encoding="utf-8")
-    seats = []
-    for seat in g.load_seats():                       # reads council/*.json
-        results = g.run_checks_for_seat(seat, text)   # runs the wired checks
-        seats.append({
-            "seat_id":  seat["seat_id"],
-            "audience": seat["audience"],
-            "checks": [
-                {"criterion": r["criterion"], "check": r["check"],
-                 "passed": r["passed"], "detail": r["detail"]}
-                for r in results
-            ],
-        })
-    return {"seats": seats}
-```
+::: tip What's actually expected of you
+You do **not** need to be a Python developer. The starter and Copilot Chat write the code – you decide *what* each check should measure and confirm it fires. You're done when the checks column stops saying "not wired" and at least one check is your own.
+:::
 
-The stub's docstring has the exact contract and the `print(...)` wrapper that hands this to the board.
-
-**b) Add a check of your own – `checks.py`**
-
-A check is just a function: it takes the content and a threshold **from the seat's card**, and returns `passed` plus a one-line `detail`. `check_reading_time` is the pattern to copy:
-
-```python
-def check_reading_time(text, minutes_budget, wpm=200):
-    words = _word_count(text)
-    minutes = round(words / wpm, 1)
-    return {
-        "passed": minutes <= minutes_budget,
-        "detail": f"{words} words is about {minutes} min (budget {minutes_budget} min)",
-    }
-```
-
-Finish the `check_table_width` TODO the same way – count each markdown table's columns and fail any wider than `max_cols` (which comes from the card, never hardcoded). Then wire it onto an audience by adding it to a criterion's `checks` in that seat's `council/*.json`:
-
-```json
-"checks": [ { "fn": "check_table_width", "args": { "max_cols": 4 } } ]
-```
-
-Reload the board and the new check shows up next to that seat's verdict.
-
-Stuck on either half? **Open GitHub Copilot Chat in VS Code** and build it together – it can see `greenlightlib.py`, `checks.py`, and `check_content.py`, so point it at the stub's docstring or the `check_table_width` TODO and let it draft the code with you.
-
-**Done when:** you drop a piece and a code-caught FAIL shows next to a model verdict.
+**Done when:** you drop an asset and a code-caught **FAIL** shows next to a model verdict.
 
 ---
 
@@ -283,20 +233,6 @@ The board is one surface. An **MCP server** exposes the council as tools so your
 - **Wire it into Cowork or Scout** and convene your council from *another* agent.
 
 ![The engineer leans back in command as the purple council runs and a green-pass, red-block guardrail gate works. Headline: "Seat to verdict – yours."](/img/scenario-2-advanced-running.png)
-
-## Show it off
-
-60–90 seconds. Show:
-
-- [ ] Your own audiences seated on the board, with distinct goals
-- [ ] The same piece: the solo critic's one flat verdict, then your council splitting it – each seat with a quote
-- [ ] A code-caught check FAIL sitting next to a model verdict
-- [ ] Your path: adding a seat live from the board (A), or a green plan opening a PR (B)
-- [ ] Bonus: another agent convening your council through MCP
-
-::: tip What to aim for in the demo
-Lead with the moment one piece of content looks right for one audience and wrong for another – then show the code catching what the model missed.
-:::
 
 ## Stuck?
 

@@ -22,7 +22,7 @@ council/*.json  ──read at every request──▶  dashboard cards (one per s
                                         confidence + fix, per criterion
 ```
 
-This dashboard ships inside `the-greenlight-starter/`. It's the Advanced
+This dashboard ships inside `the-greenlight-starter/`. It's the Code
 track's starting point – you wire it to **your** Copilot CLI, add your own
 audiences, and take it further.
 
@@ -38,7 +38,7 @@ Then open **http://localhost:4173**.
 
 Requires the **GitHub Copilot CLI** (`copilot`) installed and signed in – the
 dashboard calls it non-interactively with `--allow-all-tools` so it can read
-the council, the reference files, and the dropped content without a prompt.
+the council, the reference files, and the dropped asset without a prompt.
 
 By default it reads the council from `../council` (the starter's seated
 `council/*.json`) and the review-process references from `../the-greenlight`.
@@ -72,7 +72,7 @@ runs the skill's "plan" step over the Copilot CLI:
 1. Seats that shipped are marked **Keep as-is**.
 2. For seats that didn't, it writes an honest build order (why it failed, the
    format call, what to make, what to include/leave out) **and drafts the actual
-   replacement content**.
+   replacement asset**.
 3. **🔄 Reconvene on the plan** re-scores each drafted replacement against the
    one audience it was built for, on the same criteria. Cards flip to **PASS** /
    **FAIL**.
@@ -106,6 +106,6 @@ JSON from the dashboard.
   `uploads/` so the CLI subprocess can read them – nothing is sent anywhere
   external. Keep this in your own exercise repo, since `--allow-all-tools` lets
   the CLI act.
-- The `../data-pack` content pieces (P1–P5) make good first test drops – **P4**
+- The `../data-pack` sample assets (P1–P5) make good first test drops – **P4**
   is the sharpest split (Compliance ships it, the operational audiences reject
   it).

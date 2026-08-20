@@ -69,7 +69,7 @@ code ~/digital-twin/digital-twin-starter/digital-twin.code-workspace
 
 ## Scenario 2 · Greenlight
 
-Seat a **council of audiences** over a piece of content so the verdicts split, then have the room decide what to build. All three altitudes share the same **data pack** – five articles, four example audience cards, and a style guide.
+Seat a **council of audiences** over an **asset** so the verdicts split, then have the room decide what to build. All three altitudes share the same **data pack** – five sample assets, four example audience cards, and a style guide.
 
 ### 🟢 Cowork
 
@@ -77,13 +77,13 @@ Seat a **council of audiences** over a piece of content so the verdicts split, t
   <a class="lab-card" href="/AI-Flight-Academy/downloads/the-greenlight.zip" download>
     <span class="lab-card-emoji">🟢</span>
     <span class="lab-card-title">Greenlight</span>
-    <span class="lab-card-desc">The Greenlight skill with a council that seats new audiences, convenes for reviews, and greenlights content.</span>
+    <span class="lab-card-desc">The Greenlight skill with a council that seats new audiences, convenes for reviews, and greenlights assets.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
   <a class="lab-card" href="/AI-Flight-Academy/downloads/greenlight-data-pack.zip" download>
     <span class="lab-card-emoji">🗂️</span>
     <span class="lab-card-title">Data pack</span>
-    <span class="lab-card-desc">Five types of content, four audience cards, and a style guide. The content the council scores.</span>
+    <span class="lab-card-desc">Five sample assets, four audience cards, and a style guide. The assets the council scores.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
 </div>
@@ -108,7 +108,7 @@ Seat a **council of audiences** over a piece of content so the verdicts split, t
   <a class="lab-card" href="/AI-Flight-Academy/downloads/greenlight-data-pack.zip" download>
     <span class="lab-card-emoji">🗂️</span>
     <span class="lab-card-title">Data pack</span>
-    <span class="lab-card-desc">The content the council scores.</span>
+    <span class="lab-card-desc">The assets the council scores.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
 </div>

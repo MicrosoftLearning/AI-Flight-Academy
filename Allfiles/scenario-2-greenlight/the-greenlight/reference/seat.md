@@ -2,7 +2,7 @@
 
 ## Add an audience and what it cares about
 
-You're helping the participant add one audience to `THE-COUNCIL.md`: a name, its goal, and the one to three things it needs from the content. Do this one audience at a time, and gently push each need until it's specific to *this* audience.
+You're helping the participant add one audience to `THE-COUNCIL.md`: a name, its goal, and the one to three things it needs from the asset. Do this one audience at a time, and gently push each need until it's specific to *this* audience.
 
 Think of it as an interview – but you're not building one point of view, you're filling a room, and the room only works if the audiences want different things.
 
@@ -20,7 +20,7 @@ Think of it as an interview – but you're not building one point of view, you'r
 
 Before anything else, get the audience's goal:
 
-> "For this audience, what does a win actually look like? Not 'they liked it' – what did the content help them *do* or *decide*?"
+> "For this audience, what does a win actually look like? Not 'they liked it' – what did the asset help them *do* or *decide*?"
 
 Write it as one sentence. Everything this audience needs has to support that sentence. Skip it and you'll get generic needs, and the room won't disagree.
 
@@ -37,9 +37,9 @@ A few examples:
 
 ## Then list what they need
 
-Ask for the two or three things that would sink the goal if the content got them wrong. For each, capture:
+Ask for the two or three things that would sink the goal if the asset got them wrong. For each, capture:
 
-- **What good looks like** – what the content has to do, in a way someone could check.
+- **What good looks like** – what the asset has to do, in a way someone could check.
 - **Why it matters to them** – what happens to their goal if it's wrong. (This is the part people skip. Don't let them.)
 - **A simple score guide** – 0 = doesn't do it, 3 = nails it.
 - **Deal-breaker?** – does getting this wrong sink the piece for them on its own?

@@ -1,4 +1,4 @@
-# The Greenlight Starter – Advanced Track
+# The Greenlight Starter – Code Track
 
 Build a **council** you can run: many audience seats scoring one subject at once on a live board, deterministic checks catching what the model can't, then a path that takes it further – a reusable MCP server or a greenlit pull request.
 
@@ -17,7 +17,7 @@ python checks.py --piece P4-exec-summary
 
 `checks.py` ships two working checks – reading time and forbidden-prerequisite – and one `TODO` stub. Every check pulls its threshold **from a seat's card, not a hardcoded value**: Retail's card says *"5–10 minutes, standing,"* so its reading budget is `6`, supplied by `council/retail.example.json`, not baked into the function.
 
-A language model catches what's contextual. Code catches what's countable. These are the countable part – test them against content you know should fail.
+A language model catches what's contextual. Code catches what's countable. These are the countable part – test them against an asset you know should fail.
 
 ## Start the board
 
@@ -43,7 +43,7 @@ The board needs the sibling `../data-pack/` (articles + cards) and `../../the-gr
 | Piece | Kind | Job |
 |---|---|---|
 | `council/*.json` | data | One audience seat – outcome + anchored criteria (checks may be wired in) |
-| `dashboard/` | app | The live board – drop content, every seat scores it, a plan reconvenes until every audience is served |
+| `dashboard/` | app | The live board – drop an asset, every seat scores it, a plan reconvenes until every audience is served |
 | `checks.py` / `check_content.py` | code | The countable half – thresholds drawn from the card, shown next to each verdict |
 | `mcp_server.py` | server | Exposes the council as MCP tools so other agents can convene it |
 

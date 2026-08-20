@@ -1,11 +1,11 @@
 ---
 name: "the-greenlight"
-description: "Reviews content from several audiences at once instead of one generic reviewer. Seats a small council of audience personas, has each one judge the same piece for its own goal, backs every opinion with a quote and a reason, and turns the gaps into a practical plan for what to make for each audience – then checks that plan. Use when the user says the greenlight, greenlight council, seat the council, review this for different audiences, score content from multiple points of view, wants a plan for what to build for each audience, or asks what to do next in the Greenlight hack."
+description: "Reviews an asset from several audiences at once instead of one generic reviewer. Seats a small council of audience personas, has each one judge the same piece for its own goal, backs every opinion with a quote and a reason, and turns the gaps into a practical plan for what to make for each audience – then checks that plan. Use when the user says the greenlight, greenlight council, seat the council, review this for different audiences, score an asset from multiple points of view, review content for multiple audiences, wants a plan for what to build for each audience, or asks what to do next in the Greenlight hack."
 ---
 
 # The Greenlight
 
-A normal review has one reviewer with one reader in mind. This skill seats a small **council of audiences**, and each one judges the same content for *its own goal*. That lets the room say something a single reviewer can't: "this is great for one audience and doesn't work for another."
+A normal review has one reviewer with one reader in mind. This skill seats a small **council of audiences**, and each one judges the same asset for *its own goal*. That lets the room say something a single reviewer can't: "this is great for one audience and doesn't work for another."
 
 Your job is to guide the participant through building that council, running it, and turning the results into a plan.
 
@@ -45,7 +45,7 @@ When the participant wants to add or sharpen an audience, that always means edit
 
 When the council reviews a piece, each point an audience makes carries three things:
 
-- **A quote** from the content – the exact words that prompted it.
+- **A quote** from the asset – the exact words that prompted it.
 - **A reason** – a line from the audience's profile, a style-guide rule, or a link. If there isn't one, say so plainly.
 - **A confidence** – high, medium, or low. If an audience is unsure about something important, it says so and asks a person rather than guessing.
 
@@ -81,9 +81,9 @@ Steps 1–3 are the core, the same for everyone:
 
 After that, each track climbs its own way:
 
-- **Base (Cowork):** make the review run on its own on new content.
-- **Builder (Scout):** put the council on a live dashboard, make it easy to run, then add features.
-- **Advanced (VS Code):** run it unattended, show coverage across every piece and audience, and gate publishing until every audience is served.
+- **Cowork:** make the review run on its own on a new asset.
+- **Scout:** put the council on a live dashboard, make it easy to run, then add features.
+- **Code (VS Code):** run it unattended, show coverage across every piece and audience, and gate publishing until every audience is served.
 
 `reference/next.md` has the detail and where each track finishes.
 
