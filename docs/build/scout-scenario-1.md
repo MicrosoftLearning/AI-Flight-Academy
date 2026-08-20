@@ -179,18 +179,18 @@ Six starting points. Take one, combine two, or build something completely custom
 
 | | What it is | Start with |
 | --- | --- | --- |
+| 📬 **A morning brief** · easiest | Runs before you're awake and leaves what needs you waiting. One scheduled command | *"Every weekday at 7am, triage what landed overnight and leave it somewhere I can read it."* |
+| 🏖️ **An out-of-office catch-up** | While you're away it sorts what arrives by what'll actually need you, so coming back is a list instead of 400 unread | *"Build me something that watches what arrives while I'm out and ranks it by what needs me first, so I have a catch-up list when I'm back."* |
+| 💭 **A sounding board** | Talk an idea through with something that argues from your own rules and pushes where you'd push | *"Build me something I can think out loud at – it should ask what I'd ask, and use my persona to challenge the idea rather than agree with it."* |
 | 📊 **A dashboard** | A page you open in the morning: what's waiting, what's slipping, what you owe. One ships as an example | *"Show me the command center example, then build me one with panels for [what you care about]."* |
-| ⌨️ **A command** | `twin triage`, `twin draft` – your twin in the terminal, no chat window | *"Build me a CLI that runs my twin's triage and prints it in the terminal."* |
-| 📬 **A morning briefing** | Runs before you're awake, leaves what needs you waiting | *"Every weekday at 7am, triage what landed overnight and leave it somewhere I can read it."* |
-| 🤝 **Meeting prep** | Name a meeting, get who's in it, what you owe them, what got decided last time | *"Build me something that preps me for a meeting – who's attending, what I owe each of them, what we agreed last time."* |
-| 🔌 **An MCP server** · ambitious | Your twin as a tool other agents can call. Take this if someone at your table writes code | *"Build the smallest MCP server that exposes one twin question as a tool."* |
+| 🔌 **An MCP server** | Your twin as a tool VS Code Copilot can call. It runs locally over stdio – nothing hosted, no URLs | *"Build the smallest MCP server that exposes one twin question as a tool, and give me the mcp.json to point VS Code at it."* |
 | 🎯 **Yours** | Whatever your job actually runs on: approvals, escalations, renewals, handoffs | *"I want my twin to [what]. Work out what that needs and build the smallest version first."* |
 
 **Pick by pain, not novelty** – something you forgot, chased, or redid by hand last week.
 
 ### Split it across the table
 
-Pick one direction, then **each person owns a slice that works on its own** – one panel, one briefing section, one command, one meeting-prep question. Everyone builds theirs against their own mail and you assemble at the end.
+Pick one direction, then **each person owns a slice that works on its own** – one panel, one section of the brief, one kind of thing to rank, one question the sounding board asks. Everyone builds theirs against their own mail and you assemble at the end.
 
 Split by question, not by layer: *"what's owed to me"*, *"what did I promise"*, *"what's gone quiet"*, *"what's on next week"* are four independent builds of the same thing.
 
@@ -215,11 +215,11 @@ Get something running first, then add one thing at a time:
 
 | | You've got it when |
 | --- | --- |
+| **Morning brief** | It ran without you and something useful was waiting |
+| **OOO catch-up** | You point it at a few days you were away and the top of the list is the thing you'd have opened first |
+| **Sounding board** | It pushes back on an idea the way you would, not the way a chatbot would |
 | **Dashboard** | You open the file and there's something on it you'd act on |
-| **Command** | You run one word in a terminal and get useful output |
-| **Briefing** | It ran without you and something was waiting |
-| **Meeting prep** | You name a real meeting and recognise what comes back |
-| **MCP server** | Another agent calls it and gets an answer from your twin |
+| **MCP server** | VS Code Copilot calls it and gets an answer from your twin |
 | **Yours** | You'd use it again tomorrow without being told to |
 
 :::
