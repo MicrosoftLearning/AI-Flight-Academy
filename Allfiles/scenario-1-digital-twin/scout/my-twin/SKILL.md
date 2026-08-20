@@ -66,6 +66,7 @@ making them repeat themselves.
 | "set up my twin", "build my twin" | **Setup**, or resume it from the recorded phase. If phase is `complete`, say so and offer to extend it or start over |
 | "start my twin over", "rebuild my twin" | Confirm once, then reset `setup.md` to `not-started` and run **Setup** from the beginning |
 | "refresh my command center", "open my command center" | **Run every panel, then render.** See **Running the Command Center** |
+| "where's my command center?", "what's the path again?" | Print the page path on its own labelled line. Do not re-run the panels |
 | "run the \<name\> panel" | Run that one panel, write its data, re-render |
 | "add a panel", "build a panel for…" | **Write a panel.** Read `panels/PANEL-CONTRACT.md` first |
 | "triage what landed", "what needs me" | Sort what has arrived. See **Triage** |
@@ -300,19 +301,23 @@ off, so do not describe it – do it, and put the page in front of them.
 1. Read `panels/PANEL-CONTRACT.md`, then each file in `panels/`.
 2. Run each panel as written and save its result to `data/<id>.json` in the shape the contract sets.
 3. Run the renderer from the skill folder: `node tools/build.mjs`
-4. It writes `command-center.html` next to the skill. **Give them the path** – see below – and say
-   that opening it is the only file they ever touch.
+4. **Give them the page.** See below.
 
-### Always give the page path with forward slashes
+### Always hand over the page prominently
 
-A path with backslashes is not clickable. Write it with `/` instead:
+**The renderer prints the path.** Its last line is `PAGE: <path>`, already resolved and already
+written with forward slashes. **Use that line. Never assemble the path yourself** – the skill folder
+moves with the Scout install and wherever the user chose to keep their files, so an assumed path
+will be wrong for somebody.
 
-```text
-C:/Users/<user>/.scout/m-skills/my-twin/command-center.html
-```
+Give it its own line, labelled, so it cannot be missed in a wall of setup output:
 
-Do this **every time you mention the page** – after setup, after a refresh, and after adding a
-panel.
+> **Your Command Center →** `C:/…/my-twin/command-center.html`
+>
+> That's the page. It's the only file you ever open, and only to look at it.
+
+Do this **every time the page changes** – after setup, after a refresh, and after adding a panel.
+Never bury it mid-paragraph or mention it only in passing.
 
 If `node` is not available, say so plainly, leave the JSON in place, and show the panel results in
 the chat instead. The panels still work; only the page is missing.
@@ -358,9 +363,9 @@ When asked to refresh or open it:
    retrieval – if a search returns nothing, record an empty result and move on.
 3. Write each result to `data/<id>.json`. Overwrite the previous file.
 4. Run `node tools/build.mjs`.
-5. Report **one line per panel**: the panel name and how many items it found. Then give the path to
-   the page, with forward slashes. Do not restate the page contents in the chat – the page is the
-   output.
+5. Report **one line per panel**: the panel name and how many items it found. Then hand over the
+   page on its own labelled line, using the renderer's `PAGE:` output. Do not restate the page
+   contents in the chat – the page is the output.
 
 **A panel that errors does not stop the run.** Record `"error"` in its JSON with a one-line reason,
 carry on with the rest, and say which one failed.
@@ -489,5 +494,5 @@ user that it is ready.
 - **Panel files carry no personal data.** They are meant to be shared; references and data are not.
 - Match their voice, not their typos or rushed phrasing.
 - Never tell them to open, edit or save a file, other than opening `command-center.html` to look.
-  Always give that path with forward slashes.
+  Hand that one over on its own labelled line, using the path the renderer prints.
 - Keep `setup.md` accurate. A wrong phase is worse than no phase.

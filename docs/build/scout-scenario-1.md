@@ -44,7 +44,7 @@ You're building a local page, opened from a file. **Nothing is hosted and nothin
 | | Step | You're done when | Time |
 | --- | --- | --- | --- |
 | **1** | **Land it** | A page is open on your screen with two panels on it | 15 min |
-| **2** | **Argue with it** | The lines it guessed at say what you'd actually say | 20 min |
+| **2** | **Argue with it** | The `[inferred]` and `[needs you]` lines say what you'd actually say | 20 min |
 | **3** | **Build the deck** | Your table's panels are all running on *your* work | 40 min |
 | **4** | **Make it fly itself** | It refreshes without you, and nothing sends | 15 min |
 
@@ -122,9 +122,13 @@ my-twin/
   command-center.html
 ```
 
-Then it runs both panels and builds the page. **It'll give you a file path – open it.**
+Then it runs both panels and builds the page. **It'll hand you a link to `command-center.html` – open it.** That's your Command Center, and it's the only file you ever open.
 
 That's the deliverable, fifteen minutes in. Everything after this makes it better.
+
+::: tip Where the page lives
+Wherever Scout keeps your skills, which depends on your install – so don't go hunting for it. The twin gives you the path every time it rebuilds the page. Bookmark it once and you won't need it again.
+:::
 
 ::: warning It tags how well it knows each line
 Every line says where it came from. `[observed]` was found in your work. `[inferred]` is a reasonable read it can't point at directly. `[needs you]` means your work didn't cover it, so it wrote something to get you started.
@@ -146,7 +150,7 @@ If `node` isn't there or the render fails, the panels still ran – ask for the 
 
 ## 2 · Argue with it
 
-**Done when:** the lines it guessed at say what you'd actually say, and a request you'd already run comes back different.
+**Done when:** the `[inferred]` and `[needs you]` lines say what you'd actually say, and a request you'd already run comes back different.
 
 Ask to see what it built:
 
@@ -321,6 +325,7 @@ Pick the next thing you want to prove.
 | Scout ignores the skill | Start a new session – skills load at the start |
 | Import didn't take | Drag the **folder**, not `SKILL.md` alone – the panels and renderer live beside it |
 | The page won't build | Check `node --version`. Meanwhile ask for panel results in the chat |
+| Can't find the page | Ask *"where's my command center?"* – it'll give you the path again |
 | A panel is always empty | The `Pull` window is too short, or the `Decide` is too strict. Widen, then loosen |
 | A panel finds everything | The opposite problem. Add exclusions to `Decide`, not filters to the page |
 | Someone else's panel breaks on your work | It's got something specific baked in. Find the assumption and take it out |

@@ -198,3 +198,6 @@ for (const p of panels) {
   const n = p.data?.error ? "error" : p.data ? `${p.data.items?.length ?? 0} items` : "never run";
   console.log(`  ${p.id.padEnd(20)} ${n}`);
 }
+// Printed with forward slashes so it can be handed straight to the user and
+// opened. The skill folder moves with the Scout install, so never assume it.
+console.log(`\nPAGE: ${outFile.replace(/\\/g, "/")}`);
