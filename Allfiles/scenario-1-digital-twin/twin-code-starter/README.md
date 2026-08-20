@@ -69,7 +69,7 @@ useless to a parser. `ask_json` exists for this.
 
 ```bash
 python examples/review_diff.py --staged      # review staged changes
-git diff main... | python examples/review_diff.py -
+git diff main... | python examples/review_diff.py --stdin
 ```
 
 Reviews a diff against your `persona.md`, prints the notes, and **exits 1 if your twin
@@ -93,3 +93,4 @@ python mcp_server.py
 Three tools: `persona()` and `voice()` read the local files instantly, `decide(situation)`
 runs a full turn. `.vscode/mcp.json` points VS Code at it, so Copilot there can call your
 twin directly.
+

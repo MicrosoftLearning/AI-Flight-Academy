@@ -6,9 +6,9 @@ directly instead of you relaying them. `.vscode/mcp.json` points VS Code at it.
     python mcp_server.py              # stdio, for VS Code and other local clients
     python mcp_server.py --http       # streamable HTTP on 127.0.0.1:8848
 
-Two tools ship here. `persona` and `voice` are instant - they read local files. `decide`
-runs a full agent turn through the Copilot CLI and takes about a minute, which is worth
-knowing before you wire it into anything impatient.
+Two tools are instant: `persona` and `voice` read local files. `decide` runs a full agent
+turn through the Copilot CLI and takes about a minute, which is worth knowing before you
+wire it into anything impatient.
 """
 
 from __future__ import annotations

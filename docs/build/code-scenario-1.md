@@ -22,7 +22,7 @@ Written down, that becomes something a program can call. And once a program can 
 
 ## What makes this the Code altitude
 
-**Whatever you build has to run without a chat window.** A git hook, a scheduled job, an MCP server, a daemon, something another program shells out to. That one constraint is the whole difference: it rules out prompting nicely and forces you to design something.
+**Whatever you build has to run without a chat window.** Your output is a command, a hook, a server, a scheduled job, or a local process.
 
 ## How this runs
 
@@ -43,7 +43,7 @@ copilot --version
 
 Missing? `npm install -g @github/copilot`, then run `copilot` once to sign in.
 
-**Python 3.10+** for the starter. Only `mcp_server.py` needs a dependency.
+**Python 3.10+** for the starter. For the MCP server only, you'll also need `pip install -r requirements.txt`.
 
 <div class="lab-grid lab-grid-2">
   <a class="lab-card" href="/AI-Flight-Academy/downloads/twin-code-starter.zip" download>
@@ -96,23 +96,25 @@ Ask it something:
 python twin.py "Using my twin: a teammate is blocked on my review but I'm mid-migration. What do I do?"
 ```
 
+You'll get an answer, and a line telling you it isn't yours yet.
+
 ### Make it yours
 
-`persona.md` and `voice.md` ship describing a **fictional engineer**, so the starter answers before you've written anything. Until you swap them, every answer is that person's – the twin says so in its own output.
+This is the step that matters. `persona.md` and `voice.md` ship describing a **fictional engineer**, so the starter answers out of the box – but everything you build on top inherits whoever is in those files.
 
 Fastest first:
 
-1. **Bring them.** Built a twin in Cowork or Scout this morning? Copy your `persona.md` and `voice.md` into `references/`. Same format, no changes needed.
+1. **Bring them.** Built a twin in Cowork or Scout this morning? Copy your `persona.md` and `voice.md` into `references/`. Same format, nothing to change.
 2. **Use the persona pack.** Write from Avery's synthetic inbox and calendar, with no personal data involved.
-3. **Write them.** Sections 4, 5 and 14 do most of the work – what you refuse, what wins when priorities collide, and how you handle the people you deal with most. The rest can stay rough.
+3. **Write them.** Don't fill in all fifteen sections. Section 4 (what you refuse), section 5 (what wins when two priorities collide) and section 12 (your bar) do almost all the work – the rest can stay rough all session.
 
-Re-run the same question afterwards. If the answer moved, the file is doing its job.
+**Re-run the same question.** If the answer moved, and the "example content" line is gone, you're ready to build.
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>
   <div class="table-check-body">
     <span class="table-check-label">Table check</span>
-    <p>Everyone's twin answering from a terminal before anyone starts building. Whoever's is still the fictional engineer, say so now.</p>
+    <p>Round the table, one line each: read out the rule your twin cited. If yours is still the fictional engineer's, say so and fix it now – everything you build for the next hour runs on that file.</p>
   </div>
 </div>
 
@@ -122,19 +124,25 @@ Re-run the same question afterwards. If the answer moved, the file is doing its 
 
 ### Pick a direction
 
-Six starting points. Take one, combine two, or build something specific to how you work.
+Six starting points, plus your own. Take one, combine two, or build something specific to how you work.
 
-| | What it is | Where to start |
+| | What it is | Your first ten minutes |
 | --- | --- | --- |
-| 🔍 **A reviewer that reviews like you** | Your standards, your recurring nit, the thing you'd block on – running on a diff | `examples/review_diff.py` already does this. Read it, then make it yours |
-| ⏮️ **A time machine** | Replay a decision you made months ago, giving the twin only what you knew then. Compare its call to what you actually did | Write the situation as a fixture, feed it in, diff the two |
-| 🥊 **Twin vs twin** | Two specs argue the same call and have to converge. Yours and a teammate's | Two `references/` folders, two calls, one referee prompt |
-| 🔌 **An MCP server** | Your twin as a tool any agent can reach – VS Code Copilot, another twin | `mcp_server.py` runs already. Add tools worth calling |
-| 👻 **A daemon** | Watches a folder, a repo or a queue and acts unattended | A loop, a bound, and somewhere local to write what it found |
-| 😈 **A devil's advocate** | Steel-mans the opposite of whatever you just decided, using your own rules | One call, inverted prompt, your persona as the source of the counter-argument |
-| 🎯 **Yours** | Anything that needs code and runs without a chat window | – |
+| 🔍 **A reviewer that reviews like you** | Your standards, your recurring nit, the thing you'd block on – running on a diff | `examples/review_diff.py` already does this. Run it on a real diff, then change one rule in `persona.md` and watch the verdict move |
+| 😈 **A devil's advocate** | Steel-mans the opposite of whatever you just decided, using your own rules | One script, one argument: `python advocate.py "I'm going to ship it Friday"`. Ask for JSON with `strongest_objection` and `rule` |
+| ⏮️ **A time machine** | Replay a decision you made months ago, giving the twin only what you knew then | Write `decisions/one.json` with `known_then`, `what_i_did`. One call, then print the twin's call next to yours |
+| 🔌 **An MCP server** | Your twin as a tool any agent can reach – VS Code Copilot, another twin | `pip install -r requirements.txt`, run `mcp_server.py`, confirm VS Code sees it. Then add one tool worth calling |
+| 👻 **A daemon** | Watches a folder, a repo or a queue and flags what it finds, without being asked | One dry pass over one folder, five files maximum, findings written to a local file. Add the loop only once that works |
+| 🥊 **Twin vs twin** | Two specs argue the same call and have to converge | Two `references/` folders, both synthetic. Each returns JSON with `position` and `rule`; a third call returns `agree` or `next_question` |
+| 🎯 **Yours** | Anything that needs code and runs without a chat window | Write the command you wish existed, hard-code one input, and make that single case work end to end |
 
 **Pick by pain, not novelty** – something you forgot, chased, or redid by hand last week.
+
+::: warning Three of these can eat your session
+**Twin vs twin** needs three agent turns per round, so a single iteration costs a few minutes. **The time machine** is only interesting if you already have a decision in mind and know how it turned out. **A daemon** that loops before it works once will burn the clock quietly.
+
+All three are good builds. Just get one pass working before you add the second call, the second twin, or the loop.
+:::
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>
@@ -150,18 +158,20 @@ Pick one direction, then **take one piece each that runs on its own**. The natur
 
 | Piece | Owns |
 | --- | --- |
-| **The trigger** | What starts it – the hook, the timer, the request. Runs before anything else works |
+| **The trigger** | What starts it – the hook, the timer, the request |
 | **The input** | What gets gathered and how much. Bounds, filters, what's noise |
-| **The call** | The prompt and the shape that comes back. Where the twin's rules get applied |
+| **The call** | The prompt and the shape that comes back. Where your rules get applied |
 | **The output** | Where it lands – exit code, comment, file, notification |
 
-Each of those is testable against a stub, so nobody waits on anyone else to start.
+**Stub the seams first** – fake input, a fake twin response, fake output – so the whole thing runs end to end in five minutes. Then each person replaces one fake with the real thing.
+
+If your direction doesn't split cleanly that way, split by **case** instead: one person per test case, fixture or question, each independently runnable. Merge the best ones at the end.
 
 Share the **prompt that worked** and the **shape you settled on**. Never share output – that's your mailbox.
 
 ### Two things that will shape the design
 
-**A call takes 20 to 60 seconds.** It's a full agent turn, not a completion. Anything that loops needs a bound – review one diff, not forty files. Get the bound in early, because it changes the architecture rather than the tuning.
+**A call takes 20 to 60 seconds.** It's a full agent turn, not a completion. Put the bound in the first version rather than the fifth – one diff, one fixture, one folder, one question. Anything that calls the twin per-file or in a poll loop will be slower than anyone will wait for.
 
 **Ask for JSON when a program reads the answer.** `ask_json()` appends the instruction, strips a code fence if the model adds one, and gives you a parsed object:
 
@@ -195,7 +205,7 @@ The more specific your prompt, the less you'll undo afterwards:
 
 ```bash
 python examples/review_diff.py --staged
-git diff main... | python examples/review_diff.py -
+git diff main... | python examples/review_diff.py --stdin
 ```
 
 ```sh
@@ -231,3 +241,4 @@ Your twin drafts, blocks, flags and reports. Sending, committing and posting sta
 ---
 
 [← Back to start](/) · [What this scenario is about](/scenarios/scenario-1)
+
