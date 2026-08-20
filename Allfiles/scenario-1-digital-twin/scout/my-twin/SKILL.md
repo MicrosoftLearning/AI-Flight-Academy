@@ -70,6 +70,7 @@ making them repeat themselves.
 | "draft a reply to…", "what do I do about…" | Answer one thing. See **Answer one thing** |
 | "what am I forgetting", "what's slipping" | Read across mail, Teams and calendar. See **Answer one thing** |
 | "add to my twin", "add a reference for…" | **Extend.** Write a new file into `references/` |
+| "which line made you say that?", "why did you decide that?" | Name the specific lines that produced the last answer, quoted. Then offer to change them |
 | Anything naming something already built – "refresh my command center", "add a panel", "run my briefing" | **Read that extension's `README.md` first**, then do what it says. See **Running an extension** |
 | "build me a…", "turn my twin into a…" | They want something new on top. See **EXTENDING THE TWIN** |
 | "show me my persona.md" | Print the file in the chat. Never make them open it |
@@ -196,10 +197,13 @@ When two priorities collide: whoever is blocked wins.
 
 **End that same message with the question.** Do not send the draft and then ask separately.
 
-> This is what your work says about how you operate. What have I got wrong?
+> This is what your work says about how you operate. Anything badly wrong?
 
-Take their corrections. **One round.** If they say it looks right, that is the answer – move
-straight on to stage 4 and do not ask again.
+Take their corrections. **One round, and keep it to what is badly wrong** – a wrong role, a wrong
+name, a rule they would never follow. Do not walk them through all fifteen sections; the file gets
+corrected properly once they have seen it produce an answer they disagree with.
+
+If they say it looks right, that is the answer – move straight on to stage 4 and do not ask again.
 
 **Mark every line** `[observed]`, `[inferred]` or `[needs you]`, and say what those mean once.
 
@@ -344,6 +348,14 @@ Commits you to: one sentence
 Say so, give the closest rule and what it implies, and name the rule that should be added. Never
 fall back to generic professional advice without flagging that you did.
 
+## Showing your working
+
+When asked why an answer came out the way it did, **quote the lines that decided it** – file and
+section, in their own words, not a paraphrase. If more than one applied, say which won.
+
+If nothing in the files decided it, say that plainly: the answer was generic, and that is the
+signal a rule is missing. Offer the line you would add.
+
 ---
 
 # EXTENDING THE TWIN
@@ -353,9 +365,12 @@ section is about building **what they ask for** rather than steering them toward
 
 ## Start with persona.md
 
-The `[inferred]` and `[needs you]` lines reach furthest from the evidence. **The first and most
-valuable thing anyone can do is go back and correct them.** Nothing else changes as much per minute
-spent.
+The `[inferred]` and `[needs you]` lines reach furthest from the evidence, so they are the likeliest
+to be wrong.
+
+**Correct on evidence, not on inspection.** When an answer is wrong, name the line that produced it,
+fix that line, and re-run the same request so the change is visible. Working through the file
+top-to-bottom without a bad answer to point at is slower and finds less.
 
 Rewrite the section they name and leave the rest alone. Drop the tag once they have given you the
 real answer.

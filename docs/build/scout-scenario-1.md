@@ -88,7 +88,9 @@ Set up my twin.
 
 It tells you what it's about to read and waits for a yes. Then it reads your sent mail, your Teams messages and about a month of calendar, and comes back with a draft of two files – **with the evidence under each line.**
 
-**It doesn't interview you.** It reads first and shows you a draft. Correct what's wrong, once, and it writes:
+**It doesn't interview you.** It reads first and shows you a draft with the evidence under each line.
+
+**Skim it – don't polish it.** Fix anything badly wrong (wrong role, wrong manager, a rule you'd never follow) and let it write. You'll fix the rest in step 2, when you've seen which lines actually change an answer.
 
 ```text
 my-twin/
@@ -103,11 +105,11 @@ Then it runs a **live triage over what actually landed** – so you finish this 
 ::: warning It tags how well it knows each line
 Every line is tagged with how directly it knows. `[observed]` was found in your work. `[inferred]` is a reasonable read it can't point at directly. `[needs you]` means your work didn't cover it, so it wrote something to get you started.
 
-Step 2 is going through those tags.
+Don't go through the tags now – step 2 does that with a reason.
 :::
 
 ::: tip Running long?
-If setup passes 20 minutes, stop refining. Correct one high-value line, check the triage runs, and move on – you can keep fixing `persona.md` while you build.
+If you're past 20 minutes, let the draft stand as-is and move on. Nothing here is permanent, and step 2 is where the corrections that matter happen.
 :::
 
 <div class="table-check">
@@ -120,9 +122,9 @@ If setup passes 20 minutes, stop refining. Correct one high-value line, check th
 
 ## 2 · Push on it
 
-**Done when:** you've asked it three things, and corrected at least one line that made an answer wrong.
+**Done when:** you've asked it three things, and fixed the line behind an answer you didn't like.
 
-Ten minutes. You're finding out what you're building on.
+Ten minutes. **This is where you correct it** – now that you can see which lines are doing the work.
 
 ### Ask it things
 
@@ -143,7 +145,17 @@ You'll get a position and a draft, not a list of options. Then try the rest of w
 Use a twin trigger phrase – *"using my twin"*, *"ask my twin"*, *"triage what landed"*, or *"what am I forgetting"*. If Scout answers generically, name the twin explicitly.
 :::
 
-### Fix what made it wrong
+### Fix the line behind it
+
+**Take an answer you didn't like** and find what caused it:
+
+```text
+Which line in my persona made you say that?
+```
+
+Then fix that line, in the chat, and **re-run the same question word for word.** If the answer moved, you've found a rule that does work.
+
+Once you've done one, go looking:
 
 ```text
 Show me my persona.md.
@@ -157,7 +169,7 @@ Fifteen sections from your real work, each tagged:
 | `[inferred]` | A reasonable read, but you never said it outright |
 | `[needs you]` | Your work didn't cover this, so it wrote a starting point |
 
-**Start with `[inferred]` and `[needs you]`** – they reach furthest from the evidence. Correct them in the chat, then **re-run the question that was wrong.** If the answer moved, the rule is doing work.
+**`[inferred]` and `[needs you]` reach furthest from the evidence**, so they're the likeliest to be wrong. You don't have to work through all fifteen – fix what's actually costing you an answer and leave the rest.
 
 ::: tip What's worth adding
 Anything that changes what it does – a name, a date, a threshold, something you'd never agree to without checking. *"I value collaboration"* gives it nothing to do differently.
