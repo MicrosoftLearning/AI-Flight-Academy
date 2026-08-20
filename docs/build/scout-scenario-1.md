@@ -127,6 +127,8 @@ You'll get a position and a draft, not a list of options. Then try the rest of w
 
 ::: tip Say the skill's name
 Use a twin trigger phrase – *"using my twin"*, *"ask my twin"*, *"triage what landed"*, or *"what am I forgetting"*. If Scout answers generically, name the twin explicitly.
+
+**Don't like "my twin"?** Rename it – *"rename my twin to Ada"* – and call it that from then on. Start a new session afterwards so Scout picks up the new name.
 :::
 
 ### Fix the line behind it
@@ -268,6 +270,7 @@ Sixty to ninety seconds. Show:
 | You get an ordinary Scout answer | Name the twin – *"using my twin"* |
 | Setup is still reading after 10 minutes | Let it finish the pass, then skip deep correction and move on |
 | It answers in general terms | Your rules aren't specific enough – go back to step 2 |
+| It stopped loading after you renamed it | The folder name, `name:`, and the trigger phrases in `description:` all have to match. Ask Scout to check them |
 | Drafts sound like a stranger | Your voice file is descriptions, not real samples. Get actual sent mail in it |
 | Triage found almost nothing | Widen the window, and check it read Teams as well as mail |
 | Your build is slow | It's reading too much per run. Bound the window and cap how many items it pulls |

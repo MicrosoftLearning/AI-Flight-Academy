@@ -1,7 +1,7 @@
 ---
 name: my-twin
 description: |
-  The user's digital twin. Sets itself up by reading their mail, Teams and calendar, writes what it learns to plain files, then triages what has landed, drafts replies in their voice, and decides using their own written rules. Use when the user says "set up my twin", "build my twin", "using my twin", "ask my twin", "triage what landed", "what needs me", "what am I forgetting", or asks for a draft that sounds like them. Also handles "add to my twin", "show me my persona.md", anything naming something built on the twin such as "open my command center", "refresh my command center" or "add a panel", building something new on top of it, and resuming an interrupted setup. Do NOT use for generic writing that does not need their voice, for sending or posting anything, or for creating unrelated skills.
+  The user's digital twin. Sets itself up by reading their mail, Teams and calendar, writes what it learns to plain files, then triages what has landed, drafts replies in their voice, and decides using their own written rules. Use when the user says "set up my twin", "build my twin", "using my twin", "ask my twin", "triage what landed", "what needs me", "what am I forgetting", or asks for a draft that sounds like them. Also handles "add to my twin", "show me my persona.md", "rename my twin", anything naming something built on the twin such as "open my command center", "refresh my command center" or "add a panel", building something new on top of it, and resuming an interrupted setup. The user may have renamed this skill, in which case they will call it by that name instead of "my twin". Do NOT use for generic writing that does not need their voice, for sending or posting anything, or for creating unrelated skills.
 ---
 
 # My Twin
@@ -65,6 +65,7 @@ the files are the truth.
 | "draft a reply to…", "what do I do about…" | Answer one thing. See **Answer one thing** |
 | "what am I forgetting", "what's slipping" | Read across mail, Teams and calendar. See **Answer one thing** |
 | "add to my twin", "add a reference for…" | **Extend.** Write a new file into `references/` |
+| "rename my twin to…", "call it …" | **Rename.** See **Renaming the twin** |
 | "which line made you say that?", "why did you decide that?" | Name the specific lines that produced the last answer, quoted. Then offer to change them |
 | Anything naming something already built – "refresh my command center", "add a panel", "run my briefing" | **Read that extension's `README.md` first**, then do what it says. See **Running an extension** |
 | "build me a…", "turn my twin into a…" | They want something new on top. See **EXTENDING THE TWIN** |
@@ -374,8 +375,25 @@ real answer.
 **Push for specifics.** A line earns its place when it would change an answer: a name, a date, a
 threshold, a thing they refuse, who has to sign off.
 
-## Teaching it new facts
+## Renaming the twin
 
+They can call it whatever they like – a name, an initial, something daft. Four things change, and
+**all four have to change together** or it stops loading:
+
+1. The **folder name** – `my-twin/` becomes `<new-name>/`, kebab-case.
+2. **`name:`** in the frontmatter, matching the folder exactly.
+3. The trigger phrases in **`description:`** – swap "my twin" for what they picked, and keep the
+   rest. This is what Scout matches on, so a name that never appears here will not load.
+4. The **`# My Twin`** heading and any place these instructions call it "the twin" in something the
+   user reads.
+
+Nothing in `references/`, `templates/` or `extensions/` needs touching – those are referenced by
+path, not by name.
+
+**Say the new phrase back to them** – *"say 'ask Ada' from now on"* – and tell them to start a new
+session, because Scout picks up the change when a session begins.
+
+## Teaching it new facts
 | It is | Put it in | Because |
 | --- | --- | --- |
 | A rule that decides something | `references/persona.md` | Read first, wins over everything |

@@ -46,6 +46,7 @@ there's a worked reference, not because a page is the goal.
 | `draft a reply to…` | Follows `voice.md`, including the parts that aren't tidy |
 | `what am I forgetting` | Reads across mail, Teams and calendar together |
 | `show me my persona.md` | Prints it in the chat — they never open a file |
+| `rename my twin to…` | Renames the skill, folder and trigger phrases together |
 
 ## Facilitator notes
 
