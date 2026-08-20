@@ -39,9 +39,9 @@ messages, drafts `persona.md` and `voice.md` with every line tagged `[observed]`
 roughly fifteen minutes in. Everything after that is improvement, not construction.
 
 **A panel is the unit of collaboration.** One file, one standing question, and *no personal data at
-all*. That is enforced by `PANEL-CONTRACT.md` and it is the whole trick: six people can each build
-one panel against their own private inbox, swap the plain-text files, and everyone ends up with a
-full deck running on their own work. Nobody sees anybody's mail.
+all*, enforced by `PANEL-CONTRACT.md`. Each person builds one panel against their own private
+inbox, swaps the plain-text files, and everyone ends up with a full deck running on their own work.
+Nobody sees anybody's mail.
 
 ```text
 panels/<id>.md  ->  run it  ->  data/<id>.json  ->  build.mjs  ->  command-center.html
@@ -65,7 +65,7 @@ No dependencies – plain Node, no install step.
 
 ## Facilitator notes
 
-- **A panel that only works for its author is a note, not a panel.** The last checkbox in the
+- **Watch for panels that only run on their author's work.** The last checkbox in the
   contract – someone else ran the same file and got sensible items back – is the one worth
   enforcing at a table check.
 - **Empty panels are usually a narrow `Pull`, not an empty inbox.** First thing to check when

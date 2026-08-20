@@ -18,7 +18,7 @@ A twin that reads your work, and a page that tells you what's waiting on you.
 
 Copilot already personalizes. It has memory, and **Work IQ** reads your mail, Teams and calendar. So it knows a surprising amount about how you work – you just can't see any of it, correct it, or point it at a standing question.
 
-And the standing questions are the ones that never get asked. What did I ask for that never came back. What did I promise that I haven't done. Nobody opens a chat window to ask those, so they rot.
+And the standing questions are the ones that never get asked. What did I ask for that never came back. What did I promise that I haven't done. There's nowhere those get answered, so they don't.
 
 Today you write the twin down as files, then give it a page that answers those questions before you've opened anything.
 
@@ -36,7 +36,7 @@ Today you write the twin down as files, then give it a page that answers those q
 Work IQ writes the first two from your own mail, Teams and calendar. **The twin renders a working page about fifteen minutes in** – the rest of the session is spent making it accurate and building panels with your table.
 
 ::: warning It stays on your machine
-You're building a local page, opened from a file. **Nothing is hosted and nothing is published**, and that's deliberate – we're not shipping a product this afternoon, we're building the muscle. Hosting it is a thing you can do next week, on your own time, once you know it's worth hosting.
+You're building a local page, opened from a file. **Nothing is hosted and nothing is published.** Today is about getting it working; hosting it is a separate exercise you can pick up afterwards.
 :::
 
 ## How this runs
@@ -51,9 +51,9 @@ You're building a local page, opened from a file. **Nothing is hosted and nothin
 **Steps 1 and 2 you do alone.** **Step 3 is the table**, and it's where the rest of the time goes.
 
 ::: tip How the table works without sharing anything
-You each run this against your own mail, so there's nothing to pool – and that's fine, because **you're not sharing data, you're sharing instruments.**
+You each run this against your own mail, so there's nothing to pool. **You share the panels, not what they find.**
 
-A panel is a plain text file holding a question and how to answer it, with no names, dates or quotes in it. You build one against your own inbox, paste the file into the table chat, and everyone runs it against theirs. Six panels get built in the time it takes one person to build one.
+A panel is a plain text file holding a question and how to answer it, with no names, dates or quotes in it. You build one against your own inbox, paste the file into the table chat, and everyone runs it against theirs.
 :::
 
 ::: tip When you get stuck, ask Scout
@@ -107,7 +107,7 @@ Set up my twin.
 
 It tells you what it's about to read and waits for a yes. Then it reads your sent mail, your Teams messages and about a month of calendar, drafts two files, and **shows them to you with the evidence under each line.**
 
-**It doesn't interview you.** It reads first and hands you a draft to correct, because people can't reliably describe how they work but can fix a wrong sentence in seconds. Correct what's wrong, once, and it writes:
+**It doesn't interview you.** It reads first and shows you a draft. Correct what's wrong, once, and it writes:
 
 ```text
 my-twin/
@@ -129,7 +129,7 @@ That's the deliverable, fifteen minutes in. Everything after this makes it bette
 ::: warning It tags how well it knows each line
 Every line says where it came from. `[observed]` was found in your work. `[inferred]` is a reasonable read it can't point at directly. `[needs you]` means your work didn't cover it, so it wrote something to get you started.
 
-The tags are the point. Step 2 is going through them.
+Step 2 is going through the tags.
 :::
 
 ::: details No page? Keep going
@@ -140,7 +140,7 @@ If `node` isn't there or the render fails, the panels still ran – ask for the 
   <div class="table-check-icon">👥</div>
   <div class="table-check-body">
     <span class="table-check-label">Table check</span>
-    <p>How many items did each panel find? A wildly different count from the person next to you is interesting – it usually means one of you writes commitments down and the other doesn't.</p>
+    <p>How many items did each panel find? Compare counts with the person next to you – a big difference is worth talking about.</p>
   </div>
 </div>
 
@@ -162,21 +162,21 @@ Fifteen sections, all filled from your real work, each tagged:
 | `[inferred]` | A reasonable read of what it found, but you never said it outright |
 | `[needs you]` | Your work didn't cover this, so it wrote a starting point for you to react to |
 
-**Start with `[inferred]` and `[needs you]`.** Those reach furthest from the evidence. Some will land; a few won't – it can watch a month of your work and still not know what you'd refuse outright, or what actually drains you.
+**Start with `[inferred]` and `[needs you]`.** Those reach furthest from the evidence, so they're the most likely to need changing.
 
-**Then thicken the `[observed]` ones.** They're accurate but thin: *"align with collaborators"* is true and doesn't know who, or when it matters. Leave the line and add underneath it:
+**Then thicken the `[observed]` ones.** They're accurate but thin: *"align with collaborators"* doesn't say who, or when it matters. Leave the line and add underneath it:
 
 > add: *"Check with Alex before I move anything he owns the concept for."*
 
 **Save a request and its answer first**, so you've got something to compare against. Then correct the file in the chat, and run the same request again word for word.
 
 ::: tip What's worth adding
-Anything that changes what it does – a name, a date, a threshold, something you'd never agree to without checking. *"I value collaboration"* doesn't: it's true, and it tells your twin nothing to do differently.
+Anything that changes what it does – a name, a date, a threshold, something you'd never agree to without checking. *"I value collaboration"* gives it nothing to do differently.
 
 **Stuck on what to say? Ask it.** *"What don't you know about how I work that would change your answers?"*
 :::
 
-Then look at the page again with fresh eyes. **The two shipped panels are a starting point, not a spec** – if `Owed to me` is full of things you don't care about, its `Decide` section is wrong for you:
+Then look at the page again. **The two shipped panels are a starting point, not a spec** – if `Owed to me` is full of things you don't care about, its `Decide` section is wrong for you:
 
 ```text
 Owed to me is picking up stuff I don't chase. Tighten it so it only counts
@@ -195,7 +195,7 @@ things where someone is actually blocked on me, then re-run it.
 
 **Done when:** your table's panels are all running against your own work, on your own page.
 
-Two panels answer two questions. A deck answers four, and you're going to get there in the time it takes to build one – by splitting the work.
+Two panels answer two questions. Split the work and your table gets to four.
 
 **Split now. One panel each, two people can double up.**
 
@@ -204,7 +204,7 @@ Two panels answer two questions. A deck answers four, and you're going to get th
 | **Going quiet** | Threads where I spoke last and nothing came back – the ones that die silently |
 | **Ahead** | What's on next week that I've already committed against, and what should give |
 | **Refused** | Things my twin declined to draft, and which of my own rules stopped it |
-| **Yours** | Whatever your table's work actually runs on. Better than anything on this list |
+| **Yours** | Whatever your table's work actually runs on |
 
 **Read the contract first.** It's in the skill, and it's what makes the swap work:
 
@@ -212,7 +212,7 @@ Two panels answer two questions. A deck answers four, and you're going to get th
 Show me the panel contract, then help me write a panel for [yours].
 ```
 
-A panel holds a **Question**, a **Pull** (what to retrieve and how far back), a **Decide** (what qualifies and what's excluded), and an **Empty** line. **It holds no names, no dates and no quotes** – that's the rule that makes it portable, and the reason you can hand yours to five people.
+A panel holds a **Question**, a **Pull** (what to retrieve and how far back), a **Decide** (what qualifies and what's excluded), and an **Empty** line. **It holds no names, no dates and no quotes** – that's what keeps it portable, so you can hand yours to the rest of the table.
 
 Build it, run it, and get it rendering on your own page. Then:
 
@@ -228,8 +228,8 @@ Four panels each, none of you having seen anyone else's inbox.
 Almost always a `Pull` that's too narrow – a 7-day window on a quiet week, or a **Decide** that only counts perfectly-phrased requests. Widen the window first, then loosen what qualifies. Ask your twin: *"why did this panel come back empty – was it the pull or the decide?"*
 :::
 
-::: warning A panel that only works for you isn't a panel
-It's a note. The test is someone else running the same file against their own work and getting sensible items back. If yours only works on your inbox, it's got something specific baked into it – find it and take it out.
+::: warning Check yours works for someone else
+The test is someone else running the same file against their own work and getting sensible items back. If yours only works on your inbox, it's got something specific baked into it – find it and take it out.
 :::
 
 ::: details What a panel looks like
@@ -272,14 +272,14 @@ Order by age, oldest first.
 Nothing has gone quiet. Every thread you spoke last on came back.
 ```
 
-No names, no projects, no dates. That's why it travels.
+No names, no projects, no dates – which is what lets it run on anyone's work.
 :::
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>
   <div class="table-check-body">
     <span class="table-check-label">Table check</span>
-    <p>Everyone's page, four panels, at the same time. Then: whose panel found something on your work that you'd genuinely forgotten about?</p>
+    <p>Everyone's page, four panels, at the same time. Then: whose panel found something on your work that you'd forgotten about?</p>
   </div>
 </div>
 
@@ -287,7 +287,7 @@ No names, no projects, no dates. That's why it travels.
 
 **Done when:** the page refreshes without you opening Scout, and nothing has sent.
 
-A page you have to ask for is a page you'll stop asking for. Have Scout schedule the refresh:
+Have Scout schedule the refresh so the page is current before you open it:
 
 ```text
 Every weekday at 7am, refresh my command center and let me know it's ready.
@@ -300,7 +300,7 @@ Show me what the scheduled run did this morning.
 ```
 
 ::: warning Nothing sends on its own
-It reads and it renders. It never replies, posts or sends – not from a scheduled run, not ever. That's the difference between something you'd leave running and something you'd switch off by Thursday.
+It reads and it renders. It never replies, posts or sends – not from a scheduled run, not at any other point.
 :::
 
 ## Push it further
@@ -311,7 +311,7 @@ Pick the next thing you want to prove.
 2. **Make it stop** – a rule where the twin hands something back to you instead of drafting, and a panel showing when it did.
 3. **Make it narrower** – swap the panels for what your job actually runs on: approvals, escalations, renewals.
 4. **Make it defend itself** – ask which file changed a panel's output, and why.
-5. **Host it** – you were told not to today. Now you know it's worth it, put it somewhere you'll see it every morning.
+5. **Host it** – today's page is local. Put it somewhere you'll see it every morning.
 6. **Take it with you** – it's a folder of text files. The same twin runs in Cowork and VS Code Copilot.
 
 ## Stuck?
@@ -325,7 +325,7 @@ Pick the next thing you want to prove.
 | A panel finds everything | The opposite problem. Add exclusions to `Decide`, not filters to the page |
 | Someone else's panel breaks on your work | It's got something specific baked in. Find the assumption and take it out |
 | Drafts sound like a stranger | Your voice file is descriptions, not real samples. Get actual sent mail in it |
-| It answers like a well-adjusted professional | That's the default. Your rules aren't specific enough – go back to step 2 |
+| It answers in general terms | Your rules aren't specific enough – go back to step 2 |
 
 ---
 

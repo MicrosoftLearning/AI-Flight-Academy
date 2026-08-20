@@ -115,11 +115,11 @@ that answers two things is one you cannot fix without breaking the other half.
 runs a week apart should be comparable, and they only are if the window is written down.
 
 **The Decide must be able to return nothing.** Write the exclusions, not just the matches. A panel
-that can never be empty is a panel that pads, and a padded panel gets ignored by Thursday.
+that can never be empty will pad its results.
 
 **Never name a person, project, date or team.** Describe the *kind* of thing – "anyone outside my
-team", "a commitment with a date attached". Named panels stop being shareable, which defeats the
-point of the contract.
+team", "a commitment with a date attached". A panel that names someone will only work for its
+author, and sharing panels is how the deck gets built.
 
 **No panel sends anything.** Panels read and report. Drafting is the twin's job, and sending is
 nobody's.
@@ -137,4 +137,5 @@ nobody's.
 - [ ] It has been run once and rendered
 - [ ] Someone else ran the same file against their own work and got sensible items back
 
-The last box is the real test. A panel that only works for its author is a note, not a panel.
+The last box is the one that matters. A panel that only runs on its author's work needs another
+pass.

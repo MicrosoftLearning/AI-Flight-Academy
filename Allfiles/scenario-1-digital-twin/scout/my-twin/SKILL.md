@@ -94,8 +94,8 @@ Runs once. Aim for **under fifteen minutes**, ending with a page on their screen
 ## The governing rule: look first, then present for review
 
 Do the work before asking. Every step is *"here's what I found – what have I got wrong?"*, never
-*"tell me about yourself."* People cannot reliably describe how they work, but they can correct a
-draft in seconds. **There is no interview.**
+*"tell me about yourself."* Present a draft to correct rather than asking someone to describe how
+they work from a blank page. **There is no interview.**
 
 **Looking first never means looking unannounced.** Say what you are about to read, then read it.
 
