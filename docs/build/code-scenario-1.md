@@ -16,11 +16,11 @@ Get a twin answering from a Python call in fifteen minutes, then build something
 
 ## What you're solving
 
-Copilot writes what you ask it for. It doesn't know what you'd refuse.
+Copilot answers well. It just answers like anyone – because it doesn't know how *you* work.
 
-Your standards live in your head – the thing you always check, the question you ask on every review, the change you'd send back without reading the rest. They only run when you're at the keyboard.
+Which trade-off you make when two things conflict, what you check before you commit, how you'd word it to a partner team versus your own. That knowledge only gets applied while you're sitting there applying it.
 
-Today you write them down as plain files, then call them from code. Once a program can put a question to your twin, it can ask at commit time, on a schedule, or from inside another agent – and get back what you would have said.
+Today you write it down as plain files, then call it from code. Once a program can put a question to your twin, it can ask at commit time, on a schedule, or from inside another agent – and get back what you would have said.
 
 ## How this runs
 
@@ -106,7 +106,7 @@ Fastest first:
 
 1. **Bring them.** Built a twin in Cowork or Scout this morning? Copy your `persona.md` and `voice.md` into `references/`. Same format, nothing to change.
 2. **Use the persona pack.** Write from Avery's synthetic inbox and calendar, with no personal data involved.
-3. **Write them.** Don't fill in all fifteen sections. Section 4 (what you refuse), section 5 (what wins when two priorities collide) and section 12 (your bar) do almost all the work – the rest can stay rough all session.
+3. **Write them.** Don't fill in all fifteen sections. Section 5 (what wins when two priorities collide), section 12 (your bar) and section 14 (how you handle the people you work with) do almost all the work – the rest can stay rough all session.
 
 **Re-run the same question.** If the answer moved, and the "example content" line is gone, you're ready to build.
 
@@ -128,7 +128,7 @@ Six starting points, plus your own. Take one, combine two, or build something sp
 
 | | What it is | Your first ten minutes |
 | --- | --- | --- |
-| 🔍 **A reviewer that reviews like you** | Your standards, your recurring nit, the thing you'd block on – running on a diff | `examples/review_diff.py` already does this. Run it on a real diff, then change one rule in `persona.md` and watch the verdict move |
+| 🔍 **A reviewer that reviews like you** | Your standards and your recurring notes, applied to a diff before anyone else sees it | `examples/review_diff.py` already does this. Run it on a real diff, then change one rule in `persona.md` and watch the verdict move |
 | 😈 **A devil's advocate** | Steel-mans the opposite of whatever you just decided, using your own rules | One script, one argument: `python advocate.py "I'm going to ship it Friday"`. Ask for JSON with `strongest_objection` and `rule` |
 | ⏮️ **A time machine** | Replay a decision you made months ago, giving the twin only what you knew then | Write `decisions/one.json` with `known_then`, `what_i_did`. One call, then print the twin's call next to yours |
 | 🔌 **An MCP server** | Your twin as a tool any agent can reach – VS Code Copilot, another twin | `pip install -r requirements.txt`, run `mcp_server.py`, confirm VS Code sees it. Then add one tool worth calling |
@@ -217,8 +217,8 @@ python examples/review_diff.py --staged || exit 1
 Read it for the pattern – gather input, bound it, ask for JSON, act on the verdict – then build something else with it.
 :::
 
-::: warning Nothing goes out without you
-Your twin drafts, blocks, flags and reports. Sending, committing and posting stay yours – whatever you build should hand the decision back.
+::: warning You approve before anything goes out
+Your twin drafts, flags and reports. Sending, committing and posting stay yours – whatever you build should hand the decision back.
 :::
 
 <div class="table-check">
