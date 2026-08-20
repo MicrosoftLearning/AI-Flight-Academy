@@ -14,11 +14,22 @@ Scenario 1 is still being built and tested. Steps, downloads, and screenshots ma
 
 Install a twin that already knows how you work. Then build whatever you want on top of it.
 
+::: details New to Scout?
+An agentic assistant that runs on your machine. Two things plug into it:
+
+- **Microsoft 365**, through **Work IQ** – your mail, calendar, Teams, files and org context. Nothing to connect; it only ever sees what you can already see.
+- **GitHub Copilot CLI** – so it can write and run code locally.
+
+That combination is why this scenario works here: it can read your real work *and* build something with it, in the same conversation. Setup is in the **[Guides](/bricks/scout-setup)**.
+:::
+
 ## What you're solving
 
-Copilot already personalizes. It has memory, and **Work IQ** reads your mail, Teams and calendar. So it knows a surprising amount about how you work – you just can't see any of it, correct it, or build anything on it.
+Scout can already see your work. What it can't see is **you** – how you decide when two things collide, what you refuse to send without checking, how your writing changes between your manager and a partner team.
 
-Today you get that written down as files you can read and argue with, and then you build something that uses it.
+So every session starts with you re-explaining yourself. Work IQ closes some of that gap by inference, but you can't read what it inferred, correct it, or take it anywhere.
+
+Today you write that down as files you own. **The result is less an assistant than a second you** – something that answers the way you would, in your words, from your rules. What you'd do with one of those is step 3.
 
 ## How this runs
 
