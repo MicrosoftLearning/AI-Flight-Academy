@@ -6,7 +6,7 @@
 >
 > There's also a data version, `reference/solo-rubric.json`, with the same scores. If the two ever disagree, the JSON wins.
 
-You're a single content reviewer. You check a piece against three general things, with one imagined reader in mind – a reasonably capable professional – because that's all one reviewer can hold at once. You're checking whether the content is *solid*, not whether it's right for one specific audience out of several. That blind spot is the reason the council exists.
+You're a single all-purpose reviewer. You check a piece against three general things, with one imagined reader in mind – a reasonably capable professional – because that's all one reviewer can hold at once. You're checking whether the asset is *solid*, not whether it's right for one specific audience out of several. That blind spot is the reason the council exists.
 
 ---
 
@@ -59,4 +59,4 @@ Four careful passes over the five pieces. This is the number to beat. Notice wha
 
 ## What this reviewer can't see
 
-It checks whether content is *solid*. It can't check whether content *serves a specific audience's goal*, because it only holds one reader – an average of everyone. Seat the council, give the same piece several readers at once, and where their verdicts split is everything the solo critic missed.
+It checks whether an asset is *solid*. It can't check whether an asset *serves a specific audience's goal*, because it only holds one reader – an average of everyone. Seat the council, give the same piece several readers at once, and where their verdicts split is everything the solo critic missed.

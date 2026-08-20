@@ -13,21 +13,39 @@ Scenario 2 is still being built and tested. Steps, downloads, and screenshots ma
 
 ## What you're solving
 
-Copilot can write clear, accurate content. What it cannot know by itself is whether that content works for the people who need to use it.
+Copilot can write a clean, accurate **asset** — a doc, a deck, an email, a policy, a post, a plan. What it cannot know by itself is whether that asset actually works for the people who have to use it.
 
-A long, formal write-up might be exactly what a compliance team needs and completely impractical for a busy store manager. One general-purpose review can miss that difference. Today you build a way to review the same content from more than one audience's point of view.
+A long, formal write-up might be exactly what a compliance team needs and completely impractical for a busy store manager. One general-purpose review misses that difference. Today you build a way to judge the same asset from more than one audience's point of view.
 
 ## What you'll walk out with
 
-A reusable council that reviews content for the audiences it is meant to serve.
+A reusable **council of audiences** that reviews any asset for the people it is meant to serve — and tells you what to fix, for whom.
 
 | What you make | What it does |
 | --- | --- |
-| **Your council** | Names at least two audiences, what each needs, and what the content must do for them. |
-| **A review** | Shows what each audience thinks, with a quote from the content and the reason behind it. |
+| **Your council** | Names at least two audiences, what each needs, and what the asset must do for them. |
+| **A review** | Shows what each audience thinks, with a quote from the asset and the reason behind it. |
 | **A plan** | Turns any gaps into practical changes or a new format. |
 
-The council lives in `THE-COUNCIL.md`. You can edit it, reuse it on new content, and add real audiences later.
+The council lives in `THE-COUNCIL.md`. You can edit it, reuse it on new assets, and add real audiences later.
+
+## How this runs
+
+Three steps. The first is quick; the rest is the build.
+
+| | Step | You're done when |
+| --- | --- | --- |
+| **1** | **See why one review isn't enough** | Greenlight is running on your assets and you've seen the solo critic's single flat verdict — your "before." |
+| **2** | **Seat a council that disagrees** | Two audiences return *different*, quote-backed verdicts on the same asset. |
+| **3** | **Close the loop** | An audience that rejected the asset would accept your rebuilt version — and you've turned the result into the next real step. |
+
+**Step 1 you do on your own. Step 2 you do as a table** — each person seats one audience, then you combine them into one council. **Step 3** is where the rest of the time goes.
+
+Every step gives you a line you can paste. **Change it — it's a starting point, not the answer.**
+
+::: tip When you're stuck, ask Cowork
+Cowork is the thing you're building with **and** the thing that helps you build it. Unsure what to type, or something misbehaves? Say so in the chat — or wave over a coach rather than stalling.
+:::
 
 ## Before you start
 
@@ -54,32 +72,22 @@ The **[Guides](/bricks/)** in the top nav cover the general skills used here –
 
 ---
 
-## 1 · Install Greenlight
+## 1 · See why one review isn't enough
 
-1. Open Microsoft 365 Copilot and select the **Cowork** tab.
-2. In the left menu, select **Customize**, then **Skills**.
-3. Select the arrow next to **Add**, then **Upload skill**.
-4. Drag in the whole `the-greenlight.zip` file you downloaded.
+**Done when:** Greenlight is running on your assets and you've seen the solo critic's single flat verdict — your "before."
 
-Start a **new** Cowork session after the upload. Cowork only looks for new skills when a session begins.
+Install the skill, load the data pack, and meet the reviewer you're about to replace.
 
-::: warning Two things that will trip you up
-**Upload the whole `the-greenlight.zip`, not just `SKILL.md`.** The zip carries the reference files and `THE-COUNCIL.md` the skill needs; a lone `SKILL.md` cannot see them.
+1. In Cowork, open **Customize** → **Skills** → the arrow next to **Add** → **Upload skill**, and drag in the whole `the-greenlight.zip`.
+2. Start a **new** Cowork session (skills only load at the start), drag in the `data-pack` zip, and say:
 
-**Keep the content pack nearby.** You will attach its files to the Cowork session in the next step; Cowork cannot see them until you do.
-:::
+```text
+Introduce yourself, then show me the solo critic's review of the data pack.
+```
 
-## 2 · Choose the content to review
+The **solo critic** is one general-purpose reviewer that judges every asset as if it has a single typical reader. It's your baseline — and it stays frozen so you can measure against it.
 
-Use the provided content pack unless your team has a suitable piece of real content and an audience profile in mind.
-
-Drag or upload the `data-pack` zip to a new Cowork session and then ask **Greenlight** to introduce itself.
-
-## 3 · See the starting point
-
-Ask Greenlight to show you the **solo critic's** review of the five articles. This is your **baseline**: one general-purpose reviewer looking at each article as if it has one typical reader.
-
-| Piece | Starting review |
+| Asset | Solo critic |
 |---|---|
 | Training unit (P1) | Ready to use |
 | How-to (P2) | Needs work |
@@ -87,112 +95,76 @@ Ask Greenlight to show you the **solo critic's** review of the five articles. Th
 | **Executive summary (P4)** | **Needs work** |
 | Quickstart (P5) | Ready to use |
 
-Look at P4. It is a careful, formal summary. The solo critic sees solid writing and says it needs a few changes. Your council will show why it can work for one audience and fail another.
+Look at **P4** — a careful, formal summary. The solo critic sees clean writing and says "needs work." It can't tell you *who* it's for. That gap is what your council fills.
 
-> **Do not edit the solo critic.** It is the “before” you compare your council against.
+::: warning Two things that trip people up
+Upload the whole `the-greenlight.zip`, not just `SKILL.md` — the zip carries the references and `THE-COUNCIL.md` the skill needs. And **don't edit the solo critic**; it's the fixed "before" you measure against.
+:::
 
 ![The same woman gestures as four critics take their seats and their green verdict lamps light up. Headline: "Seat the council by talking."](/img/scenario-2-base-seating.png)
 
-## 4 · Add two audiences
+## 2 · Seat a council that disagrees
 
-Ask Greenlight to help you add two audiences to `THE-COUNCIL.md`. For each one, write:
+**Done when:** two audiences return *different* verdicts on the same asset.
 
-- the result that audience needs from the content
-- one or two things the content must do to get them there
+A **seat** is one audience — who they are, the outcome they need, and the specific bars the asset has to clear *for them*. The goal isn't to list audiences; it's to seat ones that **disagree**.
 
-Start with **Retail** and **Compliance** from the content pack. Retail needs practical steps it can use during a busy day. Compliance needs enough detail to make a responsible decision. They are a useful pair because they need different things from the same content.
+As a table, each person seats one audience — start with **Retail** and **Compliance**, the sharpest pair — then combine them into one `THE-COUNCIL.md`. Ask Greenlight:
 
-::: tip Use a real audience when it helps
-Cowork can use Work IQ to help you draft a profile from the work information you already have access to.  Build a profile on yourself or an audience you serve. Treat that as a first draft and correct it with what you know about the audience. Say - "Cowork - build an audience card about me from WorkIQ."
-:::
+```text
+Seat the Retail and Compliance audiences from the pack, then convene the council on the executive summary (P4).
+```
 
-## 5 · Convene the council
+You should get a separate, evidence-backed verdict per seat — and they should split: the detail and sources Compliance wants are exactly what buries a Retail floor lead who needs one action.
 
-Ask Greenlight to review P4 for both audiences. It should show a separate result for each one.
-
-| Audience | What a useful result might show |
-| --- | --- |
-| Retail | The article is too formal or too long to help someone who needs immediate steps. |
-| Compliance | The same detail may be useful because it explains the decision and its limits. |
-
-For the supplied pack, you should see a meaningful difference between the two audiences. With your own content, agreement can be valid too – as long as the council explains why.
-
-::: tip Give it somethign real
-Attach a real document you're working on, point it to a Microsoft product announcement, video transcript, or training module.
-:::
-
-## 6 · Make the audiences specific
-
-Read the items in `THE-COUNCIL.md`. Each one should protect a real audience need, not general writing quality.
+**Make each seat bite.** A criterion any reader would score the same is just "good writing" — the solo critic already covers that. Drop it or sharpen it:
 
 | Too general | Specific to an audience |
 | --- | --- |
 | Is it clear? | Can a floor associate find the first action in two lines? |
-| Is it accurate? | Does each important claim include the source a compliance reviewer needs? |
+| Is it accurate? | Does each claim carry the source a compliance reviewer needs? |
 
-Ask yourself: **would this give the same result for every audience?** If so, remove it or make it more specific.
+Every verdict needs a **quote**, a **source**, and a **confidence**. If a seat isn't sure, it says so instead of guessing.
 
-## 7 · Check the evidence
-
-Every result needs three things:
-
-- a **quote** from the content
-- a **source** for the audience need, such as its profile or the style guide
-- a **confidence** rating
-
-If the information is missing, say so. Do not make the council guess.
-
-::: tip A useful prompt
-Ask Greenlight: “For each audience result, show the exact quote, the audience need behind it, and how confident you are.”
+::: tip Seat a real audience with Work IQ
+Ask Cowork to draft an audience card from your own work — *"build an audience card about me from Work IQ"* — then correct it. Treat it as a first draft, not the answer.
 :::
 
-## 8 · Close the loop
+<div class="table-check">
+  <div class="table-check-icon">👥</div>
+  <div class="table-check-body">
+    <span class="table-check-label">Table check</span>
+    <p>Bring proof, not contents: one asset, two audiences, opposite verdicts — and the quote behind each call.</p>
+  </div>
+</div>
 
-You have a review. Now turn it into something you can use. This is a loop, not a single step – keep going until every audience is served, then put the result to work.
+## 3 · Close the loop
 
-The path looks like this. You don't have to follow it word for word; let Greenlight guide you:
+**Done when:** an audience that rejected the asset would accept your rebuilt version — and you've turned the result into the next real step.
 
-1. **Plan.** For an audience the content does not serve, ask Greenlight what to make instead. The answer might be a shorter guide, a checklist, a video, or a different format altogether.
-2. **Check the plan.** Ask the council to review that plan for the same audience, before anything is written.
-3. **Make it.** Ask Cowork to draft the asset the plan describes.
-4. **Review it again.** Bring the new draft back to the council. Keep going until the audience that rejected the original would accept its replacement.
-5. **Put it to work.** Once everything is greenlit, ask Cowork to take the next real step – draft the emails to the stakeholders who need to know, or a Teams message to the one person waiting on it.
+A verdict isn't the finish line. For an audience the asset fails, work the loop until it passes — then put it to work. You don't have to follow this word for word; let Greenlight guide you:
 
-That last step is the point of the whole exercise: the review does not end in a verdict, it ends in the content and the messages that move the work forward.
+1. **Plan** — ask Greenlight what to make instead (a shorter guide, a checklist, a different format).
+2. **Check the plan** — have the council review the plan *before* anything is written.
+3. **Make it** — ask Cowork to draft it.
+4. **Review again** — bring it back until the audience that rejected the original would accept the replacement.
+5. **Put it to work** — once greenlit, have Cowork take the next real step: the email to the stakeholders who need to know, or the Teams message to the one person waiting on it.
 
-When you want to go further, try the council on another article from the pack, or add another audience. The goal is not to make every audience disagree; it is to understand when the same content can serve several audiences and when it needs different treatment. If your two audiences always agree, return to step 6 and make their needs more specific.
+That last step is the point: the review doesn't end in a verdict, it ends with an asset and a plan that moves the work forward. If your two audiences always agree, go back and make their needs more specific.
 
-## 9 · Make it run without you
+## Go further — make it run without you
 
-Once you trust the council, ask Cowork to run it on a schedule so reviews happen without you. Point it at whatever your content actually arrives in – a folder of drafts, or email attachments.
+Once you trust the council, ask Cowork to run it on a schedule so reviews happen without you. Point it at wherever your assets actually arrive — a folder of drafts, or email attachments.
 
-The powerful version is a real trigger. Try something like:
+The powerful version is a real trigger:
 
 > "On a schedule, run the Greenlight council on any new email attachment whose subject contains **[your keyword]**, and send me the review."
 
-Now a draft that lands in your inbox gets reviewed for every audience before you have even opened it – and you decide what to do with the result.
-
-**Done when:** a new file shows up through your trigger and you get the council's review back without asking.
+Now an asset that lands in your inbox gets reviewed for every audience before you have even opened it — and you decide what to do with the result.
 
 ---
 
 ![The full council delivers green verdicts with no computer in sight as the woman looks on, satisfied. Headline: "No code. A real council."](/img/scenario-2-base-council.png)
-
-## Show it off
-
-60–90 seconds. Show:
-
-- [ ] The two audiences you added and what each needs
-- [ ] One audience requirement you made more specific
-- [ ] P4 reviewed from both points of view, with a quote for each
-- [ ] One place the audiences agreed or disagreed, and why
-- [ ] An asset you rebuilt for an audience and got greenlit
-- [ ] The email or Teams message you turned the result into
-- [ ] Your scheduled review, if you set one up
-
-::: tip What to aim for in the demo
-Show the moment the council changed your understanding of the content. That is more convincing than showing every feature.
-:::
 
 ## Stuck?
 
@@ -200,7 +172,7 @@ Show the moment the council changed your understanding of the content. That is m
 | --- | --- |
 | Cowork ignores Greenlight | Start a **new** Cowork session – skills load at the start. |
 | Upload seemed to do nothing | Upload the whole `the-greenlight.zip`, not just `SKILL.md`. |
-| Cowork cannot see the articles | Attach the content-pack files to the session. |
+| Cowork cannot see the assets | Attach the data-pack files to the session. |
 | Both audiences give the same answer | Make their needs more specific, then review again. |
 | A result has no evidence | Ask for the exact quote, source, and confidence. |
 

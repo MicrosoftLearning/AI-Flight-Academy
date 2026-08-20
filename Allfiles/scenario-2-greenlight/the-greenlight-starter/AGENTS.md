@@ -1,6 +1,6 @@
 # Instructions for GitHub Copilot
 
-This repo is the Advanced Microsoft hackathon starter for **The Greenlight**: a council of audience seats that score one subject in parallel, a judge that diffs them, and a greenlight loop that re-scores the fix.
+This repo is the Code-track Microsoft hackathon starter for **The Greenlight**: a council of audience seats that score one subject in parallel, a judge that diffs them, and a greenlight loop that re-scores the fix.
 
 ## Concept
 

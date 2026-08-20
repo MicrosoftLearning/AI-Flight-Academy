@@ -8,7 +8,7 @@ This is the file you edit. Every audience you add and everything they care about
 
 ## How this file works
 
-Each **seat** is one audience. Under each seat you list what that audience needs from the content. When you run a review, every audience judges the same piece by its own needs, and you get to see where they agree and where they don't.
+Each **seat** is one audience. Under each seat you list what that audience needs from the asset. When you run a review, every audience judges the same piece by its own needs, and you get to see where they agree and where they don't.
 
 Copy the block below for each audience. Fill it in yourself, or ask the skill to help.
 
@@ -20,13 +20,13 @@ Copy the block below for each audience. Fill it in yourself, or ask the skill to
 ### Seat: [audience name]
 
 Their goal: [One sentence — what does a win look like for this audience? Not "they liked it."
-             What did the content help them do or decide?]
+             What did the asset help them do or decide?]
 
-What they need from the content (one to three things):
+What they need from the asset (one to three things):
 
 1. [short name for it]
-   - What good looks like: [what the content has to do, in a way someone could actually check]
-   - Why it matters to them: [what happens to their goal if the content gets this wrong]
+   - What good looks like: [what the asset has to do, in a way someone could actually check]
+   - Why it matters to them: [what happens to their goal if the asset gets this wrong]
    - How to score it: 0 = doesn't do it · 1 = barely · 2 = good enough · 3 = nails it
    - Deal-breaker? [yes / no — if yes, getting this wrong sinks the piece for this
                     audience no matter what else is good]
@@ -45,7 +45,7 @@ What they need from the content (one to three things):
 
 Their goal: Someone on the floor can act on this in one short, standing read and pass it on to a teammate – so it gets used without a training session that's never going to happen.
 
-What they need from the content:
+What they need from the asset:
 
 1. Usable on the floor
    - What good looks like: the first useful action shows up in the first couple of lines, and the whole thing takes only a few minutes to read standing up.

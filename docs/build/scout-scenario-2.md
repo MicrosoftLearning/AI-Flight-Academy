@@ -15,9 +15,9 @@ You run the council, then turn it into something you can watch.
 
 ## What you're solving
 
-One review is not enough when different audiences need different things from the same content. A formal explainer might help a compliance officer make a careful decision and still be unusable for a store manager who needs one practical action during a busy shift.
+One review is not enough when different audiences need different things from the same **asset** – a doc, a deck, an email, a policy, a post, a plan. A formal explainer might help a compliance officer make a careful decision and still be unusable for a store manager who needs one practical action during a busy shift.
 
-A single reviewer pictures one average reader and misses that gap. Here you seat a council of audiences, review the same content from each point of view, and put the whole room on a live board so the disagreement is something you can see.
+A single reviewer pictures one average reader and misses that gap. Here you seat a council of audiences, review the same asset from each point of view, and put the whole room on a live board so the disagreement is something you can see.
 
 ## What you'll walk out with
 
@@ -25,10 +25,25 @@ A single reviewer pictures one average reader and misses that gap. Here you seat
 | --- | --- |
 | **Your council** | Two or more audiences and what each one needs, in `THE-COUNCIL.md`. |
 | **A review** | Shows what each audience thinks, with a quote, a source, and a confidence. |
-| **A live dashboard** | Each seat lights up with its verdict as you feed the board content. |
+| **A live dashboard** | Each seat lights up with its verdict as you feed the board an asset. |
 | **A one-step run** | A simple way to start the board – a command or a scheduled task. |
 
 The solo critic stays unchanged – the one-verdict "before" you compare against.
+
+## How this runs
+
+Four steps. The first two are quick; the board is the build.
+
+| | Step | You're done when |
+| --- | --- | --- |
+| **1** | **Import & load** | Scout has the Greenlight skill and the data pack loaded. |
+| **2** | **Seat a council that disagrees** | Two seats return *different*, quote-backed verdicts on the same asset – proven in conversation, nothing built yet. |
+| **3** | **Put the room on a board** | You drop an asset on a live dashboard and the seats light up with their verdicts. |
+| **4** | **Make it one-step to run** | You can start the board with one command or a schedule. |
+
+**Step 2 you do as a table** – each person seats one audience, then you combine them into one council. Steps 3–4 are the build.
+
+Every step gives you a line you can paste. **Change it – it's a starting point, not the answer.**
 
 ## Before you start
 
@@ -53,48 +68,40 @@ Open Microsoft Scout and add the Greenlight skill. The dashboard step later also
 
 ---
 
-## 1 · Import the skill and load the content
+## 1 · Import & load
 
-1. Extract `the-greenlight.zip` skill to a folder.
-1. Add `the-greenlight` skill to Scout by going to **Extensions** and select **Import**
-1. Drag the extracted skill **folder** into Scout:
+**Done when:** Scout has the Greenlight skill and the data pack loaded.
+
+1. Extract `the-greenlight.zip` and, in Scout, go to **Extensions → Import** and drag the extracted skill **folder** in.
+
    ![Screenshot of the Import Skill dialog window in Microsoft Scout.](./media/scout-import-skill-folder.png)
 1. Start a new chat in Scout and upload **data-pack.zip**.
-   <!-- ![alt text](./media/scout-upload-file.png) -->
 
-## 2 · Seat the council
+## 2 · Seat a council that disagrees
 
-A **seat** is one audience – who they are, the outcome they need from the content, and the specific bars it has to clear for *them*. Seating a council means putting two or more of these in `THE-COUNCIL.md` so the same piece gets judged from each point of view at once.
+**Done when:** two seats return *different*, quote-backed verdicts on the same asset – proven in conversation, with nothing built yet.
 
-The goal isn't to *list* audiences – it's to seat ones that **disagree**. Give each a different outcome and needs that are true for them but not for everyone (a bar any reader would score the same is just "good writing," and the solo critic already covers that). That difference is what makes the room split on a piece instead of nodding along.
+A **seat** is one audience – who they are, the outcome they need from the asset, and the specific bars it has to clear for *them*. The goal isn't to *list* audiences – it's to seat ones that **disagree**: a bar any reader would score the same is just "good writing," and the solo critic already covers that.
 
-Start with the provided profiles – **Retail** and **Compliance** are the sharpest pair – or add custom audiences you actually write for. Ask Scout to do the seating:
+As a table, each person seats one audience – start with **Retail** and **Compliance**, the sharpest pair – then combine them into one `THE-COUNCIL.md`. Ask Scout to seat them, then convene on the **executive summary (P4)**, the piece chosen to prove the point:
 
-> *"Use Greenlight to seat the Retail and Compliance audiences from the data pack onto the council."*
+> *"Use Greenlight to seat the Retail and Compliance audiences from the data pack, then convene the council on the executive summary (P4)."*
 
-**Done when:** `THE-COUNCIL.md` holds two or more audiences with clearly different goals.
-
-::: tip Seat a real audience with Work IQ
-Scout is grounded in your Microsoft 365 work through **Work IQ** – nothing to connect and no sign-in to set up, and it only ever sees what you already can (your mail, sent mail, calendar, Teams, files, and org chart). Ask it to draft an audience profile from those real signals – *"Scout, build an audience card for [a role you write for] from Work IQ that mimics the audiences in THE-COUNCIL.md"* – then treat it as a first draft and correct it with people who know that audience. Keep the data in your own tenant, out of shared spaces.
-:::
-
-## 3 · Convene the council
-
-**Convening** is the heart of the exercise: hand the seated council a piece of content and have every audience judge it against *its own* criteria at the same time. Each seat returns a verdict – Ship, Revise, or Reject – and has to back it with a **quote** from the piece, a **source** (a line from its profile or the style guide), and a **confidence**. A seat that isn't sure says so instead of guessing.
-
-Ask Scout to convene on the **executive summary (P4)** – the piece chosen to prove the point. It's a polished governance write-up: exactly what a Compliance reader wants, and unusable for a Retail floor lead who needs one action in a short standing read. A single reviewer can only average that into a mushy "needs work." A council says both things at once, with receipts:
+**Convening** is the heart of it: every seat judges the same asset against *its own* criteria at once and returns a verdict – Ship, Revise, or Reject – backed by a **quote**, a **source**, and a **confidence**. A seat that isn't sure says so. P4 is exactly what a Compliance reader wants and unusable for a Retail floor lead who needs one action – so the room splits where a single reviewer could only average it into a mushy "needs work":
 
 | Piece | Solo critic | Council |
 |---|---|---|
 | **Executive summary (P4)** | Needs work (one verdict) | **Reject for Retail · Ship for Compliance** |
 
-That split – the same document, opposite verdicts, each evidence-backed – *is* the result of this step. The thinking is done here, with nothing installed; everything after is about making it visible and repeatable. (The solo critic's scores ship recorded – they're the fixed "before," so leave them as-is.)
+That split – the same document, opposite verdicts, each evidence-backed – *is* the result of this step. The thinking is done here, with nothing installed; everything after just makes it visible and repeatable.
 
-**Done when:** two seats return different verdicts on P4, each with a quote behind it.
+::: tip Seat a real audience with Work IQ
+Scout is grounded in your Microsoft 365 work through **Work IQ** – it only ever sees what you already can. Ask it to draft an audience card from those real signals – *"Scout, build an audience card for [a role you write for] from Work IQ that mimics the audiences in THE-COUNCIL.md"* – then correct it with people who know that audience. Treat it as a first draft, not the answer.
+:::
 
 ![Robotic arms assemble the council booth in blue light while the man reclines with his coffee. Headline: "Scout builds the booth."](/img/scenario-2-builder-build.png)
 
-## 4 · Build the dashboard
+## 3 · Put the room on a board
 
 Now make the disagreement visible. Ask Scout to build a local web dashboard for the council, using **GitHub Copilot CLI as the backend** that runs the Greenlight skill.
 
@@ -122,7 +129,7 @@ Setups vary – Node versions, dependencies, CLI sign-in. If the dashboard won't
 
 **Done when:** you feed the dashboard a piece and watch the seats light up with their verdicts.
 
-## 5 · Make it easy to run
+## 4 · Make it one-step to run
 
 Turn the dashboard into something you start in one step, so a teammate can open the board without wiring it up again. Ask Scout for either:
 
@@ -133,14 +140,14 @@ Turn the dashboard into something you start in one step, so a teammate can open 
 Ask Scout what the right option is for your situation. One solution doesn't fit everyone's needs, much like the different audiences in this exercise. Ironic, don't you think?
 :::
 
-**Done when:** you (or a teammate) can start the board in one step and drop in new content.
+**Done when:** you (or a teammate) can start the board in one step and drop in a new asset.
 
 ## Go further – the bonus
 
 Once the board runs, the bonus is adding features to it. Keep each one small and let Scout build it:
 
 - drag a document or paste a link straight onto the board to convene without the conversation
-- a coverage view – every article by every audience, at a glance
+- a coverage view – every asset by every audience, at a glance
 - a history, so you can watch a piece improve after a rebuild
 - a button that sends the greenlit plan to a person
 - animations for when the council is deliberating or different verdicts
@@ -148,21 +155,6 @@ Once the board runs, the bonus is adding features to it. Keep each one small and
 ---
 
 ![The man waves and strolls out as the blue council booth and its dashboard run themselves. Headline: "Always-on. Hands-off."](/img/scenario-2-builder-alwayson.png)
-
-## Show it off
-
-60–90 seconds. Show:
-
-- [ ] The two audiences you seated and the goal each one defends
-- [ ] The solo critic's one verdict on P4, then your council splitting it – each seat with a quote
-- [ ] The dashboard lighting up each seat's verdict on a piece you feed it
-- [ ] One conflict and the coverage, visible at a glance
-- [ ] The board started in one step – a command or a schedule
-- [ ] Any feature you added to the board in the bonus round
-
-::: tip What to aim for in the demo
-Drop one piece into the board and let two seats disagree in real time. That is the thing a single generic review can never show.
-:::
 
 ## Stuck?
 
@@ -172,7 +164,7 @@ Drop one piece into the board and let two seats disagree in real time. That is t
 | Both seats give the same verdict | Give them different goals and make their needs specific. |
 | The dashboard won't start | Check that GitHub Copilot CLI is signed in and Node is available; meanwhile, convene in the Scout conversation. |
 | The board shows nothing back | Confirm the skill is imported and the CLI can run it on its own first. |
-| The council can't see the article | Give Scout the content pack, and point the board at the same files. |
+| The council can't see the asset | Give Scout the content pack, and point the board at the same files. |
 
 ::: details 🎬 Nobody nails it first try
 ![He returns to find dozens of identical blue booths receding into the distance with printouts everywhere. Headline: "Maybe too hands-off."](/img/scenario-2-builder-blooper.png)
