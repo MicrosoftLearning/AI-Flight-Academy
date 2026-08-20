@@ -10,246 +10,246 @@ title: The Digital Twin – Scout
 Scenario 1 is still being built and tested. Steps, downloads, and screenshots may change before the event.
 :::
 
-**You'll build this in Microsoft Scout. Scout does the building – you won't hand-write the app.**
+**You'll build this in Microsoft Scout. You describe what you want; Scout writes it.**
 
-You write down how you work, then turn it into a console that reads what's landed and tells you what you'd do about it.
+Install a twin that reads how you work, correct what it got wrong, then build something on top of it.
+
+::: details New to Scout?
+An agentic assistant that runs on your machine. Two things plug into it:
+
+- **Microsoft 365**, through **Work IQ** – your mail, calendar, Teams, files and org context. Nothing to connect, and it only sees what you can already see.
+- **GitHub Copilot CLI** – so it can write and run code locally.
+
+That pairing is why this scenario works here: Scout can read your real work *and* build against it in the same conversation. Setup is in the **[Guides](/bricks/scout-setup)**.
+:::
 
 ## What you're solving
 
-Things arrive all day – a request from your manager, a peer asking for something by Friday, a customer question you can't quite answer yet. Every one of them starts cold. You read it, work out what you think, and only then start writing.
+Scout can already do your work – on your machine, across your repos, into your mail and calendar. Files, code, git, whatever the job needs. What it can't do is any of it **as you**: decide which of two priorities wins, hold back the thing you'd check first, shift its writing between your manager and a partner team.
 
-Copilot personalizes already. It has memory, and Work IQ reads your mail and calendar. What it doesn't have is anything you've explicitly **decided**: how you rank priorities that conflict, which commitments you protect, what you'd never send without checking.
+So every session starts with you re-explaining yourself. Work IQ closes some of that by inference, but you can't read what it inferred, correct it, or take it anywhere.
 
-So here you write that down, and put it somewhere it can do work: **a first line of defense** that reads what came in and gives you the opening position before you've touched it.
+Today you write it down as files you own, and get **an agent that works the way you do**.
 
-## What you'll walk out with
+## How this runs
 
-| What you make | What it does |
-| --- | --- |
-| **Your spec** | How you decide, how you write, and what your calendar says you actually do |
-| **A council** | Three drives that argue a call – and one that decides and says what it overruled |
-| **A live console** | Three inputs, one council: what landed, what's ahead, who you're facing |
-| **A one-step run** | A command or a schedule, so it's there without you setting it up again |
+| | Step | Time |
+| --- | --- | --- |
+| **1** | **Install your twin** – it reads how you work and writes itself | 20 min |
+| **2** | **Push on it** – ask it real questions, fix what's wrong | 15 min |
+| **3** | **Build on it** – pick a direction, split the work across your table | 60 min |
 
-The console runs the same council over three kinds of input:
-
-| Input | What comes back |
-| --- | --- |
-| **What landed** – paste an email or a request | A position, a draft, and what got overruled |
-| **What's ahead** – your next week | What you protect, what you cut, what you move |
-| **Who I'm facing** – a name or a meeting | How you handle them, and what you'd never put in writing |
-
-The generic assistant stays available – that's the "before" you compare against.
+You'll do steps 1 and 2 on your own. Step 3 is where the table works together, and it's most of the session.
 
 ## Before you start
 
-<div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/twin-forge-SKILL.md" download="SKILL.md">
-    <span class="lab-card-emoji">⚡</span>
-    <span class="lab-card-title">Twin Forge</span>
-    <span class="lab-card-desc">Interviews you and drafts your first spec. One file – import the folder it's in.</span>
-    <span class="lab-card-cta">Download SKILL.md →</span>
-  </a>
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/avery-persona-pack.zip" download>
-    <span class="lab-card-emoji">🗂️</span>
-    <span class="lab-card-title">Avery Washington</span>
-    <span class="lab-card-desc">A made-up marketing manager with a fake inbox and calendar. Use them instead of your own data.</span>
-    <span class="lab-card-cta">Download .zip →</span>
-  </a>
+**Check Scout is signed in and Work IQ is live.** Ask *"what's on my calendar tomorrow?"* – if you get a real answer back, you're ready to go.
+
+**Your data stays yours.** Your twin only sees what you can already see, its files stay on your machine, and nothing goes out without your approval.
+
+<a class="lab-card" href="/AI-Flight-Academy/downloads/my-twin-scout.zip" download style="max-width:30rem">
+  <span class="lab-card-emoji">🧬</span>
+  <span class="lab-card-title">Your twin</span>
+  <span class="lab-card-desc">The skill, plus one worked example built on it. Unzip and import the folder.</span>
+  <span class="lab-card-cta">Download .zip →</span>
+</a>
+
+::: tip Two places to get unstuck
+Ask Scout – it's building with you, so describe what's wrong and let it fix it. For mechanics like scheduling or connecting to Microsoft 365, the **[Guides](/bricks/)** are short how-tos. Coaches are in the room and every table has an SME.
+:::
+
+---
+
+## 1 · Install your twin
+
+**Done when:** your twin has written two files you've corrected and triaged what actually landed in your mail and Teams.
+
+1. Unzip the download. You'll get a folder called `my-twin`.
+2. In Scout, open **Extensions** → **Import** and drag in the **folder**.
+3. Start a **new session** – skills load when a session begins.
+
+::: warning Import the folder, not the file
+`SKILL.md` isn't the whole skill. Templates and a worked example sit beside it, and dragging the file alone leaves them behind.
+:::
+
+Then start it off:
+
+```text
+Set up my twin.
+```
+
+Your twin tells you what it's about to read and waits for a yes. It reads your sent mail, your Teams messages and about a month of calendar, then drafts two files – **with the evidence under each line**, tagged by how directly it knows.
+
+**Skim, don't polish.** Fix what's plainly wrong – wrong role, wrong manager, a rule you'd never follow – and let your twin write the files:
+
+```text
+my-twin/
+  references/
+    persona.md      ← who you are and how you work
+    voice.md        ← how you write
+    setup.md        ← how far setup got
+```
+
+You'll fix the rest in step 2, once you've seen which lines actually change an answer. If you're still going at 25 minutes, let the draft stand and move on.
+
+Your twin finishes by **triaging what actually landed** in your mail and Teams, so you leave this step having watched it work rather than having read about it.
+
+<div class="table-check">
+  <div class="table-check-icon">👥</div>
+  <div class="table-check-body">
+    <span class="table-check-label">Table check</span>
+    <p>What did your twin get right that you didn't expect? And what did it get wrong?</p>
+  </div>
 </div>
 
-Open Microsoft Scout. The console step later also uses **GitHub Copilot CLI** and **Node** – Scout installs what the app needs, but the CLI has to be signed in and working. Check now: `copilot --version`.
+## 2 · Push on it
 
-::: tip Want a step spelled out?
-The **[Guides](/bricks/)** in the top nav cover the general skills used here – setting up, connecting to your work, and running things on a schedule. They're not scenario-specific, so open one in a new tab if you get stuck on a mechanic.
-:::
+**Done when:** you've asked three real questions and fixed the line behind an answer you didn't like.
 
----
-
-## 1 · See the starting point
-
-Before you build anything, get the "before" on the record. Ask Scout, with no spec and no council:
+### Ask it things
 
 ```text
-An exec wants a new customer narrative by 3pm today. I already promised a peer
-their review notes by 4pm. What should I do, and what should I say to each?
+Using my twin, what should I do about [the thing you've been putting off]?
 ```
 
-Keep the answer. It'll be reasonable, balanced, and generic – it will suggest talking to both, or negotiating, or working late. It has no idea which of those *you'd* actually do.
+You'll get a position and a draft, not a menu of options. Then try the rest of what your twin does:
 
-**Done when:** you have a saved generic answer to compare against later.
-
-## 2 · Install Twin Forge and draft your spec
-
-1. Download `SKILL.md` above and put it in a folder called `twin-forge`.
-2. In Scout, go to **Extensions** → **Import** and drag in the **folder**.
-3. Start a **new session** – skills load when a session begins.
-4. Say: `Start Twin Forge and help me build a v0.1 digital twin.`
-5. Choose your path when asked:
-   - **Your own data** – Scout reads your sent mail and calendar. Nothing is shared, and it only sees what you already can.
-   - **Avery Washington** – the synthetic persona. Attach the pack files when asked.
-
-Twin Forge interviews you for about eight questions and writes three files: how you decide, how you write, and what your calendar shows.
-
-::: tip Answer honestly, not aspirationally
-Every question is *"what did you actually do last time?"* – not *"what do you value?"* Describe your best self and you'll get a twin of someone else.
-:::
-
-**Done when:** you have three files, and the one about how you decide is roughly a page.
-
-## 3 · Seat the council
-
-One spec, three drives that want different things. This is the step that makes it more than a prompt.
-
-| Drive | Argues for |
+| Ask | You get |
 | --- | --- |
-| **Ambition** | The visible, strategic, reusable work |
-| **Obligation** | Promises already made and people waiting |
-| **Capacity** | What your calendar says you can actually absorb |
+| *"Triage what landed today."* | Mail and Teams sorted into needs-me, blocked, handled and noise, with drafts |
+| *"Draft a reply to [a real thread]."* | Something you could send, in your voice |
+| *"What am I forgetting this week?"* | Your calendar and your commitments read together |
+| *"What don't you know about how I work?"* | Its own gaps, named – it's read a month of your work |
 
-Plus an **Arbiter** that decides using your rules – and has to publish what it overruled.
+::: tip Name the twin, or you'll get plain Scout
+Trigger it with *"using my twin"*, *"ask my twin"*, *"triage what landed"* or *"what am I forgetting"*. If an answer comes back generic, that's usually why.
 
-Ask Scout to set them up:
-
-> *"Using my spec, set up three drives – ambition, obligation and capacity – that each argue their own corner, and an arbiter that decides using my decision rules and states which drive it overruled and why."*
-
-::: warning Biased on purpose
-If all three agree, you've built one voice with three names. Ambition shouldn't be balanced. Neither should the other two. The Arbiter is where the nuance goes – the drives are meant to pull hard in different directions.
+Prefer a different name? Say *"rename my twin to Ada"*, then start a new session so Scout picks it up.
 :::
 
-**Done when:** the same situation produces three genuinely different positions.
+### Fix the line behind the answer
 
-## 4 · Run the conflict
-
-Give the council the same dilemma from step 1:
+Take an answer you didn't like and trace where it came from:
 
 ```text
-An exec wants a new customer narrative by 3pm today. I already promised a peer
-their review notes by 4pm. Run the council and give me the call, the draft,
-and what got overruled.
+Which line made you say that?
 ```
 
-Now compare:
+Fix that line in the chat – wherever it turns out to live – then **re-run the same question, word for word**. If the answer moves, you've found a rule that does real work.
 
-| | Generic assistant | Your council |
-|---|---|---|
-| **Exec vs. peer conflict** | One balanced suggestion | **A call in your voice, plus the argument it beat** |
-
-That contrast is the point of the whole exercise. Everything after this is making it visible and repeatable.
-
-**Done when:** the council's answer is one you'd actually act on, and the dissent names something real it gave up.
-
-## 5 · Build the console
-
-Now make it something you'd use on a Monday. Ask Scout to build a local web console, with **GitHub Copilot CLI as the backend** running your spec.
-
-Describe what you want:
-
-- a place to drop in something that landed – an email, a message, a request
-- a card for each drive, showing its position and how strongly it argues it
-- the arbiter's call, in your voice, with a draft you could send
-- **what it overruled** – visible, not buried
-- a boundary check that shows when the twin refuses to act without you
-
-Get that working on one input first. Then add the other two modes – they run the same council, only the question changes:
-
-- **What's ahead** – paste next week's calendar, get what to protect, cut, and move
-- **Who I'm facing** – name a person or meeting, get how you handle them and what you'd never put in writing
-
-::: details Stuck on the prompt? Start with this
-Paste this into Scout, then adjust:
-
-> Build me a local web console for my digital twin. Use **GitHub Copilot CLI as the backend** to do the reasoning: a small **Node** web server that shells out to `copilot`, with plain HTML/CSS/JS on the front end – no build step, minimal dependencies, so it starts with one command.
->
-> There's a box where I paste something that landed – an email or a request. When I submit it, show a card for each drive (ambition, obligation, capacity) with its position, then the arbiter's decision and a draft reply in my voice, and clearly show which drive got overruled. Read my spec files for the voice and the rules.
->
-> Start simple – I'll ask for more.
-
-Then layer: get the cards appearing on one input first, then add the draft, then the dissent, then a boundary check. **One addition per prompt.**
-:::
-
-::: warning If the app won't start
-Setups vary – Node versions, dependencies, CLI sign-in. If the console won't run on your machine, keep going in the Scout conversation. The council still works there. Get the board up if you can, but don't let it block the thinking.
-:::
-
-**Done when:** you paste in something real, and watch the drives disagree before the twin gives you a draft.
-
-## 6 · Add the boundary
-
-A first line of defense has to know what it must not touch. Ask Scout to add a check that runs before anything is drafted for sending:
+Once you've done one, go looking for the others:
 
 ```text
-ALLOW      — go ahead
-ASK_FIRST  — draft it, but I approve before it goes
-NEVER      — refuse, and say which rule
+Show me my persona.md.
 ```
 
-Point it at the boundaries in your spec. Then test it with something it should refuse:
+Fifteen sections drawn from your real work, each tagged:
 
-> *"Tell the partner team why I'm out next week."*
-
-It should come back **NEVER**, and name the rule – a decline says *when* you're free, never *why* you're not.
-
-::: tip This is the moment worth demoing
-Anyone can show an agent doing something. Showing one **refusing**, and citing your own rule for it, is what makes it a first line of defense rather than a text generator.
-:::
-
-**Done when:** the console refuses something and tells you which rule stopped it.
-
-## 7 · Make it easy to run
-
-Turn it into something you start in one step, so it's there on Monday without you rebuilding it. Ask Scout for either:
-
-- a single **start command** – install once, then one command boots it and opens the browser, or
-- a **scheduled task** that reads what landed overnight and has a first pass waiting at 8am
-
-::: warning Nothing sends on its own
-It drafts. You send. Keep it that way for the whole session and be able to point at it in your demo.
-:::
-
-**Done when:** you can start it in one step, or it starts itself and something useful is waiting.
-
-## Go further – the bonus
-
-Once it runs, keep each addition small and let Scout build it:
-
-- pull from your actual inbox instead of pasting, so it triages what's really there
-- a history, so you can see how its calls change as you fix your spec
-- a "correct it" button – you tell it what you'd really have done, and it proposes the one line to change
-- let a teammate ask it something and see what your twin says back
-- a second twin, so two people's specs can be compared on the same decision
-
----
-
-## Show it off
-
-60–90 seconds. Show:
-
-- [ ] The generic answer from step 1, then your council's answer to the same thing
-- [ ] The three drives disagreeing, each with its own position
-- [ ] The arbiter's call, **and what it overruled**
-- [ ] A draft in your voice you'd actually send
-- [ ] One of the other two modes – the week plan, or the person prep
-- [ ] The console refusing something, citing your rule
-- [ ] Started in one step – a command or a schedule
-
-::: tip What to aim for in the demo
-Someone who knows you reads a draft your twin wrote and recognises it. That lands harder than any feature.
-:::
-
-## Stuck?
-
-| What you're seeing | What to do |
+| | |
 | --- | --- |
-| Scout ignores the skill | Start a new session – skills load at the start |
-| Import didn't take | Drag the **folder** containing `SKILL.md`, not the file alone |
-| All three drives agree | They're too balanced. Give each a narrower thing to defend |
-| The arbiter never mentions dissent | Tell it explicitly: it must state which drive it overruled and why |
-| The console won't start | Check `copilot --version` and Node; meanwhile keep going in the conversation |
-| Drafts sound like a stranger | Your voice file is descriptions, not real samples. Put actual sent emails in it |
-| It answers like a well-adjusted professional | That's the default. Your rules aren't specific enough – go back to step 2 |
+| `[observed]` | Found in your mail, chats or calendar, and it can quote it |
+| `[inferred]` | A reasonable read, but you never said it outright |
+| `[needs you]` | Nothing in your work reached this, so it wrote a starting point |
+
+**Start with `[inferred]` and `[needs you]`** – they reach furthest from the evidence, so they're the likeliest to be wrong. You don't need to work through all fifteen: fix whatever is costing you an answer and leave the rest for later.
+
+A line earns its place when it changes what your twin does – a name, a date, a threshold, something you'd never agree to without checking first. *"I value collaboration"* is true and changes nothing.
+
+<div class="table-check">
+  <div class="table-check-icon">👥</div>
+  <div class="table-check-body">
+    <span class="table-check-label">Table check</span>
+    <p>Name the <em>kind</em> of rule that changed an answer – a priority, a boundary, a check, a trade-off. Keep the people and dates to yourself.</p>
+  </div>
+</div>
+
+## 3 · Build on it
+
+**Done when:** something's running that uses your twin, and you'd open it again tomorrow.
+
+### Pick a direction
+
+Six starting points below. Take one as it is, combine two, or build something specific to how you work.
+
+| | What it is | Start with |
+| --- | --- | --- |
+| 📬 **A morning brief** · easiest | Runs before you're awake and leaves what needs you waiting | *"Build a morning brief I can run once now, then schedule for weekdays at 7am. Triage what landed overnight and write the result somewhere local."* |
+| 🏖️ **An out-of-office catch-up** | Ranks what arrived while you were away, so coming back is a list instead of 400 unread | *"Build an out-of-office catch-up for [dates I was away]. Read mail and Teams from that window, rank what needs me first, and write a local catch-up list."* |
+| 💭 **A sounding board** | Think an idea through against your own rules, with something that pushes where you'd push | *"Build me something I can think out loud at – it should ask what I'd ask, and use my persona to challenge the idea rather than agree with it."* |
+| 📊 **A dashboard** | A page you open in the morning: what's waiting, what's slipping, what you owe. One ships as an example | *"Show me the command center example, then build me one with panels for [what you care about]."* |
+| 🔌 **An MCP server** · hardest | Your twin as a tool VS Code Copilot can call. Runs locally over stdio – nothing hosted, no URLs | *"Build the smallest MCP server that exposes one twin question as a tool, and give me the mcp.json to point VS Code at it."* |
+| 🎯 **Yours** | Whatever your job runs on: approvals, escalations, renewals, handoffs | *"I want my twin to [what]. Work out what that needs and build the smallest version first."* |
+
+**Pick by pain, not novelty** – something you forgot, chased, or redid by hand last week.
+
+<div class="table-check">
+  <div class="table-check-icon">👥</div>
+  <div class="table-check-body">
+    <span class="table-check-label">Table check</span>
+    <p>Two minutes round the table: what are you building, and what pain does it fix? Out loud, before anyone opens Scout.</p>
+  </div>
+</div>
+
+### Split the work
+
+Pick one direction, then **take one standalone question each** – one panel, one section of the brief, one ranking rule, one challenge the sounding board makes. **If it can't run alone, it's too big.** Everyone builds against their own mail, and you assemble at the end.
+
+Split by question, not by layer. *"What's owed to me"*, *"what did I promise"*, *"what's gone quiet"* and *"what's on next week"* are four independent builds of one thing.
+
+Share the **prompt that worked** – that's the useful part, and it carries none of your mailbox with it. Keep the output to yourself.
+
+### Build in layers
+
+Get something running end to end before you make it good, then add one thing at a time:
+
+1. **The smallest version** – *"Build the smallest version that runs end to end. Start simple."*
+2. **Your rules** – *"Use my persona and voice files so the output takes a position and sounds like me."*
+3. **One addition** – *"That works. Now add [one thing]."*
+4. **A bound** – *"Cap this at [N days] and [N items] per run."*
+5. **The runtime** – *"If this needs JavaScript, use Scout's bundled Node under `resources/node`, not a bare `node`."*
+
+The more specific your prompt, the less you'll have to undo afterwards:
+
+| Vague | Specific |
+| --- | --- |
+| *"Build me a dashboard"* | *"A page with one panel: things I asked for in the last 21 days that never got a reply, oldest first."* |
+| *"Make it check Teams"* | *"Also read my 15 most recently active chats and count them separately from mail."* |
+| *"Make it better"* | *"Show which of my rules decided each item."* |
+
+::: details What "working" looks like, per direction
+
+| | You've got it when |
+| --- | --- |
+| **Morning brief** | It ran without you and something useful was waiting |
+| **OOO catch-up** | You point it at days you were away and the top of the list is what you'd have opened first |
+| **Sounding board** | It pushes back the way you would, not the way a chatbot would |
+| **Dashboard** | You open the file and something on it is worth acting on |
+| **MCP server** | VS Code Copilot calls it and gets an answer from your twin |
+| **Yours** | You'd use it again tomorrow without being told to |
+
+:::
+
+::: warning You approve before anything goes out
+Keep the last step yours. Whatever you build should draft, show you who it's addressed to and what it says, then wait for a yes.
+:::
+
+<div class="table-check">
+  <div class="table-check-icon">👥</div>
+  <div class="table-check-body">
+    <span class="table-check-label">Table check</span>
+    <p>Halfway: is it running? If not, halve what it does and get <em>something</em> working before adding anything back.</p>
+  </div>
+</div>
+
+## Push it further
+
+1. **Give it a memory** – a file it writes to as well as reads, tracking what it told you last time.
+2. **Make it stop** – a rule that hands something back to you instead of drafting, and a way to see when it fired.
+3. **Make it defend itself** – ask which file changed an answer, and why.
+4. **Swap the question, not the answer** – hand a teammate your prompt and have them run it against their own twin.
+5. **Two prompts, one question** – compare how two people shaped the same ask, with neither mailbox leaving its machine.
+6. **Take the rules with you** – `persona.md` and `voice.md` are plain text, so they move to another altitude unchanged.
 
 ---
 
 [← Back to start](/) · [What this scenario is about](/scenarios/scenario-1)
-

@@ -22,12 +22,12 @@ A twin is a `SKILL.md` plus a `references/` folder – the **Agent Skills open s
 
 Inside `references/`:
 
-- **`persona.md`** – who you are and how you decide. Rules, boundaries, what's live, what gives in a bad week. Called `soul.md` on the Scout and Code altitudes.
+- **`persona.md`** – who you are and how you decide. Rules, boundaries, what's live, what gives in a bad week. Called `soul.md` on the Code altitude.
 - **`voice.md`** – real sent-email samples and the style rules they imply.
 
 **The twin writes those two itself**, from what Work IQ can see in your mail, Teams and calendar. **The rest of the hack is yours:** you correct what it got wrong, then add the files it has no way to know – the people you deal with, what you've already committed to, what's already been decided.
 
-The Code altitude adds **`revealed.md`** – what your calendar shows about how you spend time – and a council of agents that argue before deciding.
+The Scout altitude turns the twin into whatever you want built on top of it – a dashboard, a command, a scheduled briefing, an MCP server. The Code altitude adds **`revealed.md`** – what your calendar shows about how you spend time – and a council of agents that argue before deciding.
 
 Done means the twin drafts in a way you'd recognise as yours, and you can point to the rule that produced it.
 
@@ -49,7 +49,7 @@ The most accurate twin, because the evidence is real. Keep it private – your o
 
 Use the **Avery Washington persona pack**: a synthetic marketing manager with a fake inbox, calendar, and goals doc.
 
-Same exercise, no personal data. Available on the **Scout** and **Code** altitudes – the Cowork twin reads your own work directly.
+Same exercise, no personal data. Available on the **Code** altitude – the Cowork and Scout twins read your own work directly.
 
 ## Build paths
 
@@ -66,7 +66,11 @@ Use the building blocks for your altitude.
   3. [Produce a formatted output](/bricks/cowork-formatted-output)
   4. [Re-run a skill on new inputs](/bricks/cowork-rerun-skill)
 
-- **🔵 Scout:** Coming soon
+- **🔵 Scout:**
+  1. [Set up Microsoft Scout](/bricks/scout-setup)
+  2. [Use Work IQ](/bricks/scout-work-iq)
+  3. [Build an app with Scout](/bricks/scout-build-app)
+  4. [Run it on a schedule](/bricks/scout-autonomy)
 
 - **🟣 Code:**
   1. [Set up Scout / GitHub Copilot](/bricks/advanced-setup)
@@ -76,6 +80,8 @@ Use the building blocks for your altitude.
 
 ::: info Team model
 In Cowork, everyone builds their own twin and the table converges on shape – compare rules, steal good tiebreakers.
+
+In Scout, everyone installs their own twin, then the table picks one thing to build on it and splits the work – one on the build, one on what it reads, one on the rules that shape it, one on how it's triggered. You share prompts and files, never anything from your inbox.
 
 In Code, the team builds one system. Each person owns one council agent – Ambition, Obligation, Capacity, Arbiter, or Critic – sharing one `soul.md`.
 :::
