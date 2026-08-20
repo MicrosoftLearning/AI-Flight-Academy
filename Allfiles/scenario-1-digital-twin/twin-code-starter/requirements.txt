@@ -1,0 +1,2 @@
+# Only needed for mcp_server.py. twin.py and the examples use the standard library.
+mcp>=2.0.0

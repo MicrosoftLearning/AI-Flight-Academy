@@ -1,6 +1,6 @@
 {
   "servers": {
-    "digital-twin": {
+    "my-twin": {
       "type": "stdio",
       "command": "python",
       "args": ["${workspaceFolder}/mcp_server.py"],

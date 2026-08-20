@@ -100,8 +100,12 @@ function purgeFiles(dir, patterns, rel = "") {
 
 const jobs = [
   {
-    src: join(root, "Allfiles", "scenario-1-digital-twin", "digital-twin-starter"),
-    zip: "digital-twin-starter.zip",
+    src: join(root, "Allfiles", "scenario-1-digital-twin", "twin-code-starter"),
+    zip: "twin-code-starter.zip",
+    // Python bytecode and the scratch dir twin.py uses for oversized prompts are
+    // both produced by running it locally, and neither belongs in a download.
+    exclude: ["__pycache__", ".twin-scratch"],
+    purge: ["**/*.pyc"],
   },
   {
     src: join(root, "Allfiles", "scenario-1-digital-twin", "persona-pack"),

@@ -22,12 +22,12 @@ A twin is a `SKILL.md` plus a `references/` folder – the **Agent Skills open s
 
 Inside `references/`:
 
-- **`persona.md`** – who you are and how you decide. Rules, boundaries, what's live, what gives in a bad week. Called `soul.md` on the Code altitude.
-- **`voice.md`** – real sent-email samples and the style rules they imply.
+- **`persona.md`** – who you are and how you work. Rules, boundaries, what's live, what gives in a bad week.
+- **`voice.md`** – real sent-message samples and the style rules they imply.
 
 **The twin writes those two itself**, from what Work IQ can see in your mail, Teams and calendar. **The rest of the hack is yours:** you correct what it got wrong, then add the files it has no way to know – the people you deal with, what you've already committed to, what's already been decided.
 
-The Scout altitude turns the twin into whatever you want built on top of it – a dashboard, a command, a scheduled briefing, an MCP server. The Code altitude adds **`revealed.md`** – what your calendar shows about how you spend time – and a council of agents that argue before deciding.
+The Scout altitude turns the twin into whatever you want built on top of it – a dashboard, a command, a scheduled briefing, an MCP server. The Code altitude calls it from a program instead of a chat window: a git hook, a service, a daemon, a tool other agents can reach.
 
 Done means the twin drafts in a way you'd recognise as yours, and you can point to the rule that produced it.
 
@@ -83,5 +83,5 @@ In Cowork, everyone builds their own twin and the table converges on shape – c
 
 In Scout, everyone installs their own twin, then the table picks one thing to build on it and splits the work – one on the build, one on what it reads, one on the rules that shape it, one on how it's triggered. You share prompts and files, never anything from your inbox.
 
-In Code, the team builds one system. Each person owns one council agent – Ambition, Obligation, Capacity, Arbiter, or Critic – sharing one `soul.md`.
+In Code, everyone gets their twin answering from a program, then the table picks one thing to build and splits it by the seams that already exist – the trigger, the input, the call, the output. Each piece is testable against a stub, so nobody waits to start.
 :::

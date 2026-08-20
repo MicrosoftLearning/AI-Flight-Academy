@@ -45,24 +45,24 @@ Do not write "please be careful" in a prompt and call it a guardrail. Put the ch
            return (
                "NEVER\n"
                "rule: never disclose private calendar reasons\n"
-               "source: soul.md > Boundaries"
+               "source: persona.md > Boundaries"
            )
 
        if any(k in text for k in ("external", "customer", "partner", "vendor")):
            return (
                "ASK_FIRST\n"
                "rule: external communication requires approval\n"
-               "source: soul.md > Boundaries"
+               "source: persona.md > Boundaries"
            )
 
        if any(k in text for k in ("commit", "deadline", "promise", "delivery date")):
            return (
                "ASK_FIRST\n"
                "rule: committing to a delivery date requires approval\n"
-               "source: soul.md > Boundaries"
+               "source: persona.md > Boundaries"
            )
 
-       return "ALLOW\nrule: no boundary matched\nsource: soul.md > Boundaries"
+       return "ALLOW\nrule: no boundary matched\nsource: persona.md > Boundaries"
    ```
 
 3. Call it before send, post, commit, decline, or external share.
@@ -81,7 +81,7 @@ Do not write "please be careful" in a prompt and call it a guardrail. Put the ch
    ```text
    ASK_FIRST
    rule: external communication requires approval
-   source: soul.md > Boundaries
+   source: persona.md > Boundaries
    ```
 
 5. Add a critic/self-patch pattern for misses.
@@ -93,7 +93,7 @@ Do not write "please be careful" in a prompt and call it a guardrail. Put the ch
    tools: ['read', 'edit']
    ---
 
-   Diagnose which field in soul.md caused the miss.
+   Diagnose which field in persona.md caused the miss.
    Propose a unified diff for human approval.
    HARD CAP: net growth must be +2 lines or less.
    Prefer editing an existing rule over appending a new one.
@@ -103,8 +103,8 @@ Do not write "please be careful" in a prompt and call it a guardrail. Put the ch
 6. Keep the patch small.
 
    ```diff
-   --- a/soul.md
-   +++ b/soul.md
+   --- a/persona.md
+   +++ b/persona.md
    @@
    -- Be direct with stakeholders.
    +- Be direct in private first when correcting a peer; use public threads only for shared facts.

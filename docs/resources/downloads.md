@@ -51,10 +51,10 @@ The page needs **Node 18+** – check with `node --version`. Without it the twin
 ### 🟣 Code
 
 <div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/digital-twin-starter.zip" download>
+  <a class="lab-card" href="/AI-Flight-Academy/downloads/twin-code-starter.zip" download>
     <span class="lab-card-emoji">📦</span>
-    <span class="lab-card-title">Starter repo</span>
-    <span class="lab-card-desc">Schema, MCP skeleton, council runner, test harness, and a VS Code workspace file.</span>
+    <span class="lab-card-title">Starter</span>
+    <span class="lab-card-desc">The twin, one call that reaches it from Python, a worked example, and an MCP server.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
   <a class="lab-card" href="/AI-Flight-Academy/downloads/avery-persona-pack.zip" download>
@@ -65,27 +65,26 @@ The page needs **Node 18+** – check with `node --version`. Without it the twin
   </a>
 </div>
 
-Unzip, then open `digital-twin.code-workspace` in VS Code – it comes with agent mode and the right extension recommendations already set.
+Unzip and open the folder in VS Code. The Copilot CLI finds the twin in `.github/skills/` on its own – there is nothing to register.
 
 ::: details One-line setup in a terminal
 **PowerShell:**
 
 ```powershell
-$u='https://microsoftlearning.github.io/AI-Flight-Academy/downloads/digital-twin-starter.zip'
-$z="$env:TEMP\dts.zip"; iwr $u -OutFile $z
-Expand-Archive $z -DestinationPath "$HOME\digital-twin" -Force
-code "$HOME\digital-twin\digital-twin-starter\digital-twin.code-workspace"
+$u='https://microsoftlearning.github.io/AI-Flight-Academy/downloads/twin-code-starter.zip'
+$z="$env:TEMP\tcs.zip"; iwr $u -OutFile $z
+Expand-Archive $z -DestinationPath "$HOME\twin-code" -Force
+code "$HOME\twin-code\twin-code-starter"
 ```
 
 **macOS / Linux:**
 
 ```bash
-curl -L -o /tmp/dts.zip https://microsoftlearning.github.io/AI-Flight-Academy/downloads/digital-twin-starter.zip
-unzip -q /tmp/dts.zip -d ~/digital-twin
-code ~/digital-twin/digital-twin-starter/digital-twin.code-workspace
+curl -L -o /tmp/tcs.zip https://microsoftlearning.github.io/AI-Flight-Academy/downloads/twin-code-starter.zip
+unzip -q /tmp/tcs.zip -d ~/twin-code
+code ~/twin-code/twin-code-starter
 ```
 :::
-
 ## Scenario 2 · Greenlight
 
 Seat a **council of audiences** over an **asset** so the verdicts split, then have the room decide what to build. All three altitudes share the same **data pack** – five sample assets, four example audience cards, and a style guide.

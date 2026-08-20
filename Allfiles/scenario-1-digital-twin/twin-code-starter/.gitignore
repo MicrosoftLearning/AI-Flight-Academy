@@ -1,0 +1,6 @@
+# Prompts too large for a command line are written here, then deleted.
+.twin-scratch/
+
+__pycache__/
+*.pyc
+.venv/
