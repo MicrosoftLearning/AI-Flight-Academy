@@ -9,9 +9,9 @@ Still being built and tested. Contents may change before the event.
 | Folder | What it is | Who uses it |
 | --- | --- | --- |
 | `my-twin/` | The Cowork twin. Reads your mail, Teams and calendar through Work IQ, then writes and installs itself. Ships as a single `SKILL.md` – Cowork's skill upload rejects `.zip`. | 🟢 Cowork |
-| `scout/my-twin/` | The Scout twin. Same idea, plus panels and a renderer that build a local Command Center page. Ships as a `.zip` because the folder matters. | 🔵 Scout |
+| `scout/my-twin/` | The Scout twin. Same idea, plus an `extensions/` folder with one worked example of something built on top. Ships as a `.zip` because the folder matters. | 🔵 Scout |
 | `digital-twin-starter/` | Schema, MCP server skeleton, council runner, and test harness. The contract, not the solution. | 🟣 Code |
-| `persona-pack/` | Avery Washington – synthetic marketing manager with a fake inbox, calendar, and goals doc. For anyone not using their own data. | 🔵 Scout, 🟣 Code |
+| `persona-pack/` | Avery Washington – synthetic marketing manager with a fake inbox, calendar, and goals doc. For anyone not using their own data. | 🟣 Code |
 
 ## How these reach participants
 

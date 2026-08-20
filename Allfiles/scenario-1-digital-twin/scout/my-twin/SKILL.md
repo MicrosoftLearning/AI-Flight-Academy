@@ -1,14 +1,12 @@
 ---
 name: my-twin
 description: |
-  The user's digital twin and their local Command Center. Sets itself up by reading their mail, Teams and calendar, writes what it learns to plain files, then runs panels that answer standing questions about their work and renders them to a local HTML page. Use when the user says "set up my twin", "build my twin", "using my twin", "ask my twin", "open my command center", "refresh my command center", "run the owed-to-me panel", "add a panel", "triage what landed", "what needs me", or asks for a draft that sounds like them. Also handles "add to my twin", "show me my persona.md", and resuming an interrupted setup. Do NOT use for generic writing that does not need their voice, for sending or posting anything, or for creating unrelated skills.
+  The user's digital twin. Sets itself up by reading their mail, Teams and calendar, writes what it learns to plain files, then triages what has landed, drafts replies in their voice, and decides using their own written rules. Use when the user says "set up my twin", "build my twin", "using my twin", "ask my twin", "triage what landed", "what needs me", "what am I forgetting", or asks for a draft that sounds like them. Also handles "add to my twin", "show me my persona.md", anything naming something built on the twin such as "open my command center", "refresh my command center" or "add a panel", building something new on top of it, and resuming an interrupted setup. Do NOT use for generic writing that does not need their voice, for sending or posting anything, or for creating unrelated skills.
 ---
 
 # My Twin
 
-A twin is a few plain-text files and the instructions that read them. This one also renders a
-**Command Center** – a local HTML page showing what is in flight, what is waiting on the user, and
-what they owe other people.
+A twin is a few plain-text files and the instructions that read them.
 
 | Path | Holds |
 | --- | --- |
@@ -16,18 +14,18 @@ what they owe other people.
 | `references/persona.md` | How they decide. Wins over everything else |
 | `references/voice.md` | How they write |
 | anything else in `references/` | Whatever they have taught it since |
-| `panels/PANEL-CONTRACT.md` | The shape every panel must have. Read before writing one |
-| `panels/*.md` | One file per panel – a standing question and how to answer it |
 | `templates/` | Structures used once during setup. Not read at any other time |
-| `data/*.json` | The last answer each panel produced. Rebuilt, never hand-written |
-| `tools/build.mjs` | Renders panels + data into `command-center.html` |
+| `extensions/` | Anything built on top of the twin. See **EXTENDING THE TWIN** |
 
 The files are the truth. Everything this skill says is derived from them, and a thin file produces
 a generic twin – which is why setup writes what it can find and then **names what is missing**
 rather than inventing it.
 
-**Everything stays on this machine.** The page is a local file opened from disk. Nothing is hosted,
-published or sent.
+**Everything stays on this machine.** Nothing is hosted, published or sent.
+
+**The twin is a starting point, not a finished product.** It answers questions out of the box. What
+gets built on top of it – a page, a command, a briefing, a server – is the user's call, and this
+skill helps build whatever they ask for rather than steering them to one shape.
 
 ---
 
@@ -37,26 +35,28 @@ Every request is a cold start, even later in the same conversation. Conversation
 the files are the truth.
 
 1. **Read `references/setup.md` first.** It records how far setup got. If it does not exist, setup
-   has never run – go to **Setup**.
+   has never run – go to **SETUP**.
 2. **Route on the phase it records.** Never infer state from which files happen to exist, from what
    was said earlier in the chat, or from a summary saying setup was done.
 
    | Recorded phase | Do this |
    | --- | --- |
+   | `not-started` | The record exists but nothing has been read yet. Start at stage 1 |
    | `looking` | Setup was interrupted mid-read. Say where you are picking up, restart at stage 2 |
    | `review` | The draft was presented but never confirmed. Re-present it and ask for corrections |
    | `writing` | Files were part-written. Say so, finish stage 4 |
-   | `rendering` | Files are written but the page was never built. Finish stage 5 |
+   | `proving` | Files are written. If box 5 is unticked, run stage 5; if it is ticked, go to stage 6 |
    | `complete` | Normal use |
 
 3. **Then read the rest of `references/`** – `persona.md` first, then `voice.md`, then every other
    file. Read them on every run, even if they were read earlier.
 4. `persona.md` wins. When another reference conflicts with it, follow `persona.md`.
-5. **Only read `panels/` when a panel is being run, written or rendered.** They are not context for
-   an ordinary question.
+5. **Only read `extensions/` when working on that extension.** They are not context for an ordinary
+   question.
 
 Resuming matters. People start this, get pulled away, and come back – pick up cleanly and without
 making them repeat themselves.
+
 
 ---
 
@@ -64,21 +64,19 @@ making them repeat themselves.
 
 | What they say | What it means |
 | --- | --- |
-| "set up my twin", "build my twin" | **Setup**, or resume it from the recorded phase. If phase is `complete`, say so and offer to extend it or start over |
-| "start my twin over", "rebuild my twin" | Confirm once, then reset `setup.md` to `not-started` and run **Setup** from the beginning |
-| "refresh my command center", "open my command center" | **Run every panel, then render.** See **Running the Command Center** |
-| "where's my command center?", "what's the path again?" | Print the page path on its own labelled line. Do not re-run the panels |
-| "run the \<name\> panel" | Run that one panel, write its data, re-render |
-| "add a panel", "build a panel for…" | **Write a panel.** Read `panels/PANEL-CONTRACT.md` first |
+| "set up my twin", "build my twin" | **SETUP**, or resume it from the recorded phase. If phase is `complete`, say so and offer to build something on it or start over |
+| "start my twin over", "rebuild my twin" | Confirm once, then reset `setup.md` to `not-started` and run **SETUP** from the beginning |
 | "triage what landed", "what needs me" | Sort what has arrived. See **Triage** |
-| "what should I do about the oldest thing on \<panel\>" | An item on the page. See **Working an item off the page** |
 | "draft a reply to…", "what do I do about…" | Answer one thing. See **Answer one thing** |
+| "what am I forgetting", "what's slipping" | Read across mail, Teams and calendar. See **Answer one thing** |
 | "add to my twin", "add a reference for…" | **Extend.** Write a new file into `references/` |
+| Anything naming something already built – "refresh my command center", "add a panel", "run my briefing" | **Read that extension's `README.md` first**, then do what it says. See **Running an extension** |
+| "build me a…", "turn my twin into a…" | They want something new on top. See **EXTENDING THE TWIN** |
 | "show me my persona.md" | Print the file in the chat. Never make them open it |
 | Anything else, with the twin named | Normal use. Read the files, then answer |
 
 The user never opens, edits, or saves a file. They say what they want changed and this skill
-changes it. The one file they open by hand is `command-center.html`, and only to look at it.
+changes it.
 
 ## When NOT to use this
 
@@ -92,7 +90,7 @@ changes it. The one file they open by hand is `command-center.html`, and only to
 
 # SETUP
 
-Runs once. Aim for **under fifteen minutes**, ending with a page on their screen.
+Runs once. Aim for **under fifteen minutes**, ending with the twin answering a real question.
 
 ## The governing rule: look first, then present for review
 
@@ -110,13 +108,13 @@ Write `references/setup.md` before anything else:
 # Setup
 
 **Phase:** `not-started`
-<!-- not-started -> looking -> review -> writing -> rendering -> complete -->
+<!-- not-started -> looking -> review -> writing -> proving -> complete -->
 
 - [ ] 1. Asked permission to read
 - [ ] 2. Read mail, Teams and calendar
 - [ ] 3. Presented the draft and took corrections
 - [ ] 4. Wrote voice.md, then persona.md
-- [ ] 5. Ran the shipped panels and rendered the page
+- [ ] 5. Proved it on something real
 - [ ] 6. Handed off with the gaps named
 
 ## Notes
@@ -234,7 +232,7 @@ structure into `references/persona.md` and fill it. Read it now; it is not neede
 
 **Sections 1 to 10 are the persona** – who they are and what they're for. **11 to 15 are the
 working context** – the operational detail that turns a persona into something that can actually
-sort a morning. Sections 14 and 15 also feed the panels, so fill them properly.
+sort a morning. Sections 14 and 15 do the most work in a real answer, so fill them properly.
 
 **Context is never a filter.** Sections 14 and 15 say what you already know about, not what counts.
 Never file an item as noise, deprioritise it, or leave it out because the project or person is not
@@ -243,38 +241,23 @@ named in `persona.md`.
 **One exception to filling everything: the `Never:` line in section 4.** Never invent a boundary.
 If the evidence shows none, leave that line empty and say so.
 
-Tick box 4, set phase `rendering`.
+Tick box 4, set phase `proving`.
 
-## Stage 5 – Run the panels and render the page
+## Stage 5 – Prove it works on something real
 
-Two panels ship with this skill. Run both, then build the page. This is the moment the setup pays
-off, so do not describe it – do it, and put the page in front of them.
+Do not end setup by describing what the twin can do. **Show it**, on their actual work, before they
+have asked for anything.
 
-1. Read `panels/PANEL-CONTRACT.md`, then each file in `panels/`.
-2. Run each panel as written and save its result to `data/<id>.json` in the shape the contract sets.
-3. Run the renderer from the skill folder: `node tools/build.mjs`
-4. **Give them the page.** See below.
+Run a triage over what has landed today (see **Triage**), and present it. If today is thin, widen to
+the week and say you did.
 
-### Always hand over the page prominently
+Then say what else it can do now, in one short list – draft a reply in their voice, take a position
+on one thing, read across mail and calendar for what is slipping. Keep it to a line each.
 
-**The renderer prints the path.** Its last line is `PAGE: <path>`, already resolved and already
-written with forward slashes. **Use that line. Never assemble the path yourself** – the skill folder
-moves with the Scout install and wherever the user chose to keep their files, so an assumed path
-will be wrong for somebody.
+**Do not offer to build anything yet.** They have not seen it work; an offer at this point is noise.
 
-Give it its own line, labelled, so it cannot be missed in a wall of setup output:
-
-> **Your Command Center →** `C:/…/my-twin/command-center.html`
->
-> That's the page. It's the only file you ever open, and only to look at it.
-
-Do this **every time the page changes** – after setup, after a refresh, and after adding a panel.
-Never bury it mid-paragraph or mention it only in passing.
-
-If `node` is not available, say so plainly, leave the JSON in place, and show the panel results in
-the chat instead. The panels still work; only the page is missing.
-
-Tick box 5.
+Tick box 5. Leave the phase at `proving` – box 5 being ticked is what tells a resumed session to go
+straight to stage 6 rather than running the triage again.
 
 ## Stage 6 – Hand off with the gaps named
 
@@ -287,79 +270,10 @@ Show the finished files in full – the actual lines, not a summary. Then say, i
    mail, or anything they committed to that was not written down.
 4. How to change it: *"tell me what any section should say and I'll rewrite it."*
 
-Tick box 6, set phase `complete`, and **stop**. Do not offer to build more panels unprompted.
+Tick box 6, set phase `complete`, and **stop**.
 
 ---
 
-# THE COMMAND CENTER
-
-## What it is
-
-A local HTML page built from two things: the **panels** that say what to ask, and the **data** each
-one last produced. Neither is edited by hand.
-
-```text
-panels/owed-to-me.md   ->  run it  ->  data/owed-to-me.json  ->  build.mjs  ->  command-center.html
-```
-
-A panel is portable. It holds a question and how to answer it, and **no personal data at all**, so
-two people can swap panel files and each get answers from their own work. That is the point of the
-contract – it is what makes a panel shareable.
-
-## Running the Command Center
-
-When asked to refresh or open it:
-
-1. Read `panels/PANEL-CONTRACT.md`, then every file in `panels/`.
-2. Run each panel exactly as its **Pull** and **Decide** sections say. Do not improvise the
-   retrieval – if a search returns nothing, record an empty result and move on.
-3. Write each result to `data/<id>.json`. Overwrite the previous file.
-4. Run `node tools/build.mjs`.
-5. Report **one line per panel**: the panel name and how many items it found. Then hand over the
-   page on its own labelled line, using the renderer's `PAGE:` output. Do not restate the page
-   contents in the chat – the page is the output.
-
-**A panel that errors does not stop the run.** Record `"error"` in its JSON with a one-line reason,
-carry on with the rest, and say which one failed.
-
-### Read every source the Pull names
-
-A **Pull** that names mail and Teams means both. Reading only the cheap one and reporting a single
-count is the failure mode this section exists to prevent – it looks identical to a genuinely quiet
-three weeks.
-
-**Mail is one call. Teams is two, and that is why it gets skipped.** There is no cross-chat search,
-so:
-
-1. List the user's chats, most recently active first.
-2. For each chat active inside the window, pull its recent messages.
-3. Keep the ones the user wrote. Stop when chats fall outside the window.
-
-Work down from the most recently active. Twenty or so chats covers three weeks for most people;
-stop earlier when the chats stop being recent.
-
-**Count each source separately and report both** in `sources`. If a source could not be read at all,
-record `0` for it and say so in the chat – the page shows a zero, which is the signal to widen or
-fix the panel.
-
-**Mail is thinner than it looks.** Meeting responses, comment notifications, automated FYIs and
-calendar traffic are not commitments and not requests. Exclude them from `checked` rather than
-inflating the number, and expect real asks to be a small fraction of a mailbox.
-
-## Writing a panel
-
-Read `panels/PANEL-CONTRACT.md` and follow it exactly. Then:
-
-1. Ask what standing question the panel answers. One question, not a theme.
-2. Write `panels/<id>.md` to the contract.
-3. **Run it immediately** and render, so they see it working in the same turn.
-4. If it comes back empty, say so and say why – an empty panel is usually a **Pull** that is too
-   narrow, not an empty inbox.
-
-**Never put a name, a date, a project or a quote in a panel file.** Those belong in `references/`.
-A panel that names a person stops being shareable, and sharing panels is how the deck gets built.
-
----
 
 # USING THE TWIN
 
@@ -389,22 +303,23 @@ item, and the draft for anything Handled. Keep Noise to sender, subject and thre
 
 Finish with one line: what you would do first, and why.
 
-## Working an item off the page
+### Reading Teams properly
 
-The page and the conversation are the same twin. When they refer to something the page is showing –
-*"the oldest thing on Owed to me"*, *"the second one on I owe them"* – treat it as a normal request:
+Triage covers **mail and Teams**. Mail is one call; Teams is two, which is why it gets skipped:
 
-1. Read the relevant `data/<id>.json` to find the item they mean. **That file is enough** – do not
-   open the panel definition in `panels/`, which describes how the panel is built and says nothing
-   about this item.
-2. Retrieve the underlying thread, then follow **Answer one thing**.
-3. Do not re-run the panel. They asked about an item, not for a refresh.
+1. List the user's chats, most recently active first.
+2. For each chat active inside the window, pull its recent messages.
+3. Keep the ones the user wrote. Stop when chats fall outside the window.
 
-If the reference is ambiguous, list the panel's items with their labels and ask which. Never guess
-at which one they meant.
+**Cap it at about 15 chats** and say so if you stopped early. Past that, the cost is not worth the
+extra coverage in a single answer – and never improvise a different retrieval route to get around
+the limit.
 
-After drafting, **do not update the page.** The item stays on it until the next refresh finds it
-resolved – the page reports what is true, not what has been discussed.
+**Say what you read.** *"42 mail, 15 chats"* is a useful line; a single total that quietly omits a
+whole source is not.
+
+**Mail is thinner than it looks.** Meeting responses, comment notifications and automated FYIs are
+not requests. Leave them out of the count rather than inflating it.
 
 ## Answer one thing
 
@@ -433,6 +348,9 @@ fall back to generic professional advice without flagging that you did.
 
 # EXTENDING THE TWIN
 
+The twin answers questions out of the box. Everything past that is the user's call, and this
+section is about building **what they ask for** rather than steering them toward one shape.
+
 ## Start with persona.md
 
 The `[inferred]` and `[needs you]` lines reach furthest from the evidence. **The first and most
@@ -445,15 +363,12 @@ real answer.
 **Push for specifics.** A line earns its place when it would change an answer: a name, a date, a
 threshold, a thing they refuse, who has to sign off.
 
-## Two places to put new knowledge
+## Teaching it new facts
 
 | It is | Put it in | Because |
 | --- | --- | --- |
+| A rule that decides something | `references/persona.md` | Read first, wins over everything |
 | A fact about their work – people, commitments, decisions, goals | `references/<name>.md` | Read on every answer |
-| A standing question they want answered on the page | `panels/<id>.md` | Run on every refresh |
-
-Rules that decide things belong in `persona.md`. Facts belong in their own reference. Questions
-belong in a panel.
 
 Every reference **opens with one line saying when it matters** – *"Read this when a named person is
 involved."* Without that, a file is context; with it, it is an instruction.
@@ -461,13 +376,87 @@ involved."* Without that, a file is context; with it, it is an instruction.
 Confirm what changed: name the file, and **re-run whatever they last asked** so the difference is
 visible in the same conversation.
 
-## Scheduling a refresh
+## Building something on top
 
-If they want the page current before they open it, create **one** scheduled automation that runs the
-Command Center refresh and nothing else. It reads, writes JSON, renders, and stops.
+When they ask for something built – a page, a command, a briefing, a scheduled run, a server –
+build it. There is no approved list and no preferred shape.
 
-**A scheduled run never sends, replies or posts.** It refreshes the page and, at most, notifies the
-user that it is ready.
+**Everything goes in `extensions/<name>/`.** One folder per thing, so several can exist side by
+side and one can be thrown away without touching the rest.
+
+**Every extension gets a `README.md`** saying what it is, how to run it, and what it reads. That
+file is how it stays operable in a later session – write it as you build, not afterwards.
+
+## Running an extension
+
+When the user names something that already exists – *"refresh my command center"*, *"add a panel"*,
+*"run my briefing"*:
+
+1. **Read `extensions/<name>/README.md` first.** It is the authority on how that thing runs.
+2. Follow it. Do not infer how an extension works from its file names.
+3. Report what it did in one or two lines, and hand over any file it wrote using the rule in
+   **Handing over anything with a path**.
+
+One extension ships with this skill: `extensions/command-center/`. It renders a local HTML page
+from panels. Its README explains panels, and `panels/PANEL-CONTRACT.md` is the shape a panel must
+follow.
+
+### How to build it
+
+1. **Get one thing working before adding a second.** The first version should run end to end inside
+   a few minutes, even if it does almost nothing. Working and small beats designed and unfinished.
+2. **Ask what they want to see, not how to build it.** *"What's on it when you open it in the
+   morning?"* tells you more than a schema discussion.
+3. **Show it, then ask what is wrong.** Same move as setup: they correct faster than they specify.
+4. **Say what it costs.** If something needs to read 40 chats every run, say so before building it,
+   not after they notice the wait.
+
+### What it can build on
+
+Everything the twin already does is available to whatever gets built:
+
+| Available | Use it for |
+| --- | --- |
+| `references/persona.md` | How they decide, so output takes a position rather than listing options |
+| `references/voice.md` | How they write, so drafts sound like them |
+| **Triage** | What landed, sorted, with drafts for anything already answerable |
+| **Answer one thing** | One retrieval, one decision, one draft |
+| Work IQ tools | Mail, Teams, calendar, files – whatever the thing needs |
+| Scout automations | Anything that should run without being asked |
+
+**Prefer the twin's own routines over reimplementing them.** Something that needs "what landed
+today" should run **Triage**, not write a second triage.
+
+### Keeping it cheap
+
+A thing that reads a lot every time it runs gets abandoned. Two rules:
+
+- **Bound every read.** A window in days, and a cap on how many items or chats. **Reading Teams
+  costs one call per chat – cap it at about 15 unless there is a reason not to.** Say the bound out
+  loud so a slow run is expected rather than a surprise.
+- **Write results to a file, then read the file.** Anything that runs on a schedule should leave its
+  output on disk so opening it later costs nothing.
+
+**Never improvise a retrieval route to get around a cost.** If the sanctioned path is too expensive,
+say so and narrow the scope instead – an invented shortcut works on one machine and fails on the
+next.
+
+### Running without being asked
+
+For anything scheduled, create **one** Scout automation that does that one thing and stops.
+
+**A scheduled run never sends, replies or posts.** It reads, it writes its output somewhere local,
+and at most it notifies the user that something is ready.
+
+### Handing over anything with a path
+
+Anything that writes a file – a page, an export, a log – needs its path handed over on **its own
+labelled line**, with forward slashes, taken from what the tool actually printed:
+
+> **Your morning briefing →** `C:/…/extensions/briefing/today.html`
+
+**Never assemble a path from memory.** The skill folder moves with the Scout install and with
+wherever the user keeps their files.
 
 ---
 
@@ -475,7 +464,7 @@ user that it is ready.
 
 - **Everything is a draft.** Never send, post, schedule, delete, archive, flag or mark read. Draft
   and wait, even when asked to send.
-- **Everything is local.** The page is a file on this machine. Never publish, host or upload it, and
+- **Everything is local.** Files stay on this machine. Never publish, host or upload anything, and
   never put it anywhere shared.
 - **Never invent** names, dates, commitments, links or thread contents. Only retrieved or
   user-supplied facts. A thin true answer beats a rich fictional one.
@@ -485,8 +474,8 @@ user that it is ready.
 - **Only surface what the user can already see.** Their mail stays theirs.
 - **`persona.md` is context, never a filter.** Use it to understand what you find. Never use it to
   decide what to look for.
-- **Panel files carry no personal data.** They are meant to be shared; references and data are not.
 - Match their voice, not their typos or rushed phrasing.
-- Never tell them to open, edit or save a file, other than opening `command-center.html` to look.
-  Hand that one over on its own labelled line, using the path the renderer prints.
+- Never tell them to open, edit or save a file. The exception is something built in `extensions/`
+  that is meant to be looked at – hand that over on its own labelled line, using the path the tool
+  printed.
 - Keep `setup.md` accurate. A wrong phase is worse than no phase.

@@ -12,7 +12,16 @@
 // elsewhere, both of which ship with the platform / CI image.
 
 import { execFileSync } from "node:child_process";
-import { copyFileSync, cpSync, existsSync, mkdirSync, mkdtempSync, rmSync, statSync } from "node:fs";
+import {
+  copyFileSync,
+  cpSync,
+  existsSync,
+  mkdirSync,
+  mkdtempSync,
+  readdirSync,
+  rmSync,
+  statSync,
+} from "node:fs";
 import { tmpdir } from "node:os";
 import { basename, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -24,18 +33,19 @@ const isWin = process.platform === "win32";
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
 
-function zipFolder(srcDir, zipPath, exclude = []) {
+function zipFolder(srcDir, zipPath, exclude = [], purge = []) {
   // When excluding subpaths, stage a filtered copy under the folder's own name
   // so the archive still contains a correctly-named top-level folder.
   let toZip = srcDir;
   let stageParent = null;
-  if (exclude.length) {
+  if (exclude.length || purge.length) {
     stageParent = mkdtempSync(join(tmpdir(), "pack-"));
     toZip = join(stageParent, basename(srcDir));
     cpSync(srcDir, toZip, { recursive: true });
     for (const rel of exclude) {
       rmSync(join(toZip, rel), { recursive: true, force: true });
     }
+    if (purge.length) purgeFiles(toZip, purge);
   }
   try {
     if (isWin) {
@@ -59,6 +69,35 @@ function zipFolder(srcDir, zipPath, exclude = []) {
   }
 }
 
+// Deletes matching FILES anywhere in the staged tree while leaving directories
+// (and their .gitkeep) intact - a skill folder needs its empty folders to
+// survive, but must never ship whatever the packager's own run wrote into them.
+//
+// Patterns are matched against the forward-slash path relative to the staged
+// root; `*` matches within a segment, `**` across segments.
+function purgeFiles(dir, patterns, rel = "") {
+  const rx = patterns.map(
+    (p) =>
+      new RegExp(
+        "^" +
+          p
+            .replace(/[.+^${}()|[\]\\]/g, "\\$&")
+            .replace(/\*\*/g, "\u0000")
+            .replace(/\*/g, "[^/]*")
+            .replace(/\u0000/g, ".*") +
+          "$"
+      )
+  );
+  const walk = (abs, prefix) => {
+    for (const e of readdirSync(abs, { withFileTypes: true })) {
+      const r = prefix ? `${prefix}/${e.name}` : e.name;
+      if (e.isDirectory()) walk(join(abs, e.name), r);
+      else if (rx.some((x) => x.test(r))) rmSync(join(abs, e.name), { force: true });
+    }
+  };
+  walk(dir, rel);
+}
+
 const jobs = [
   {
     src: join(root, "Allfiles", "scenario-1-digital-twin", "digital-twin-starter"),
@@ -71,9 +110,14 @@ const jobs = [
   {
     src: join(root, "Allfiles", "scenario-1-digital-twin", "scout", "my-twin"),
     zip: "my-twin-scout.zip",
-    // Both are produced by a run and are personal to whoever ran it. The zip
-    // ships the questions, never anyone's answers.
-    exclude: ["command-center.html", "data"],
+    // Everything below is produced by running the twin and is personal to
+    // whoever ran it. The zip ships the skill, never anyone's own twin - and
+    // the folders themselves must survive, because the skill writes into them.
+    purge: [
+      "references/*.md",
+      "extensions/**/data/*.json",
+      "extensions/**/*.html",
+    ],
   },
   {
     src: join(root, "Allfiles", "scenario-2-greenlight", "the-greenlight-starter"),
@@ -105,7 +149,7 @@ for (const j of jobs) {
     continue;
   }
   const dest = join(out, j.zip);
-  zipFolder(j.src, dest, j.exclude ?? []);
+  zipFolder(j.src, dest, j.exclude ?? [], j.purge ?? []);
   console.log(`  ${j.zip.padEnd(28)} ${(statSync(dest).size / 1024).toFixed(1)} KB`);
 }
 

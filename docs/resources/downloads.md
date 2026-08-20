@@ -35,7 +35,7 @@ Tested on a live tenant: `.zip` skill uploads fail silently. `SKILL.md` is self-
   <a class="lab-card" href="/AI-Flight-Academy/downloads/my-twin-scout.zip" download>
     <span class="lab-card-emoji">🧬</span>
     <span class="lab-card-title">Your twin</span>
-    <span class="lab-card-desc">The skill, two working panels, and the renderer that builds your local Command Center page.</span>
+    <span class="lab-card-desc">The skill, plus one worked example of something built on it. Unzip and import the folder.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
 </div>
@@ -43,7 +43,7 @@ Tested on a live tenant: `.zip` skill uploads fail silently. `SKILL.md` is self-
 **Installing it:** unzip it, then Scout → **Extensions** → **Import** → drag in the **`my-twin` folder**. Then **start a new session** – skills are only discovered at session start. Say **`set up my twin`**.
 
 ::: warning Import the folder, not the file
-The panels and the page renderer sit next to `SKILL.md`. Dragging in the file on its own leaves them behind, and the Command Center won't build.
+The templates and the example extension sit next to `SKILL.md`. Dragging in the file on its own leaves them behind.
 :::
 
 The page needs **Node 18+** – check with `node --version`. Without it the twin still works; you just won't get the page.

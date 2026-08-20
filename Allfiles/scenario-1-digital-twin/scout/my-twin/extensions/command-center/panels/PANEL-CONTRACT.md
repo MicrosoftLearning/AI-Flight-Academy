@@ -118,8 +118,9 @@ so the gap is visible instead of silent.
 **One question per panel.** If the **Question** section needs an "and", it is two panels. A panel
 that answers two things is one you cannot fix without breaking the other half.
 
-**The Pull must be repeatable.** "Recent mail" is not a scope. "Sent mail, last 21 days" is. Two
-runs a week apart should be comparable, and they only are if the window is written down.
+**The Pull must be repeatable and bounded.** "Recent mail" is not a scope. "Sent mail, last 21 days"
+is. Name a window in days, and **cap how much it reads** – especially for Teams, which costs one
+call per chat and has no cross-chat search. About 15 chats is a sensible ceiling.
 
 **The Decide must be able to return nothing.** Write the exclusions, not just the matches. A panel
 that can never be empty will pad its results.
@@ -138,6 +139,7 @@ nobody's.
 - [ ] Every required heading is present, in order
 - [ ] `id` matches the filename
 - [ ] The **Pull** names a window in days
+- [ ] The **Pull** caps how much it reads – items, and chats if it touches Teams
 - [ ] The **Decide** says what is excluded, not only what matches
 - [ ] The **Empty** line reads as page copy, not as an instruction
 - [ ] No name, date, project or quote appears anywhere in the file

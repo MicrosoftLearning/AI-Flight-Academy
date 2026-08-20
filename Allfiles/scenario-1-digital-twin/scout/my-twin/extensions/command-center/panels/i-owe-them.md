@@ -15,8 +15,9 @@ Two sources, both required:
 
 - **Mail** – my sent items, last 21 days. For anything that reads like a commitment, pull the rest
   of that thread and check my later sent messages for the delivery.
-- **Teams** – my recent chats, most recently active first, and the messages I wrote in any chat
-  active inside the window. **Most small promises are made here, not in mail.**
+- **Teams** – my recent chats, most recently active first, **capped at about 15 chats**, and the
+  messages I wrote in any chat active inside the window. **Most small promises are made here, not
+  in mail.**
 
 Skip meeting responses, comment notifications and automated mail – they are never commitments, so
 they do not count toward `checked`.

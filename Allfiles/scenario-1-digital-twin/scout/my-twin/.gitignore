@@ -1,2 +1,3 @@
 command-center.html
-data/*.json
+extensions/*/data/*.json
+references/*.md

@@ -1,10 +1,10 @@
-// Renders the Command Center.
+// Renders the Command Center — a worked example of an extension.
 //
 //   panels/<id>.md  ->  what to ask        (shareable, no personal data)
 //   data/<id>.json  ->  what it last found (private, never leaves this machine)
 //   command-center.html                    (a local file, opened from disk)
 //
-// No dependencies and no build step: `node tools/build.mjs` from the skill folder.
+// No dependencies and no build step: `node build.mjs` from this folder.
 //
 // Adding a panel means adding a file to panels/ - nothing here needs changing.
 
@@ -12,7 +12,7 @@ import { readFileSync, readdirSync, writeFileSync, existsSync, mkdirSync } from 
 import { join, dirname, basename } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const root = join(dirname(fileURLToPath(import.meta.url)), "..");
+const root = dirname(fileURLToPath(import.meta.url));
 const panelsDir = join(root, "panels");
 const dataDir = join(root, "data");
 const outFile = join(root, "command-center.html");
@@ -48,14 +48,16 @@ function loadPanels() {
   return readdirSync(panelsDir)
     .filter((f) => f.endsWith(".md") && f !== "PANEL-CONTRACT.md")
     .map((f) => {
-      const fm = parseFrontmatter(readFileSync(join(panelsDir, f), "utf8")) ?? {};
+      const text = readFileSync(join(panelsDir, f), "utf8");
+      const fm = parseFrontmatter(text) ?? {};
       const id = fm.id || basename(f, ".md");
-      const emptyLine = readFileSync(join(panelsDir, f), "utf8").split(/^## Empty\s*$/m)[1];
+      const emptyLine = text.split(/^## Empty\s*$/m)[1];
+      const order = Number(fm.order);
       return {
         id,
         title: fm.title || id,
         accent: ACCENTS[fm.accent] || ACCENTS.grey,
-        order: Number.isFinite(+fm.order) ? +fm.order : 50,
+        order: Number.isFinite(order) ? order : 50,
         empty: (emptyLine || "").trim().split(/\r?\n\r?\n/)[0]?.trim() || "Nothing here.",
         data: loadData(id),
       };
@@ -67,27 +69,36 @@ function loadData(id) {
   const p = join(dataDir, `${id}.json`);
   if (!existsSync(p)) return null;
   try {
-    return JSON.parse(readFileSync(p, "utf8"));
-  } catch (e) {
+    const parsed = JSON.parse(readFileSync(p, "utf8"));
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) {
+      return { error: `data/${id}.json is not a JSON object` };
+    }
+    return parsed;
+  } catch {
     return { error: `data/${id}.json is not valid JSON` };
   }
 }
 
 // A source reporting 0 is shown in warning colour: a panel that names a source
 // in its Pull and never reads it looks identical to one that read it and found
-// nothing, unless the page says so.
+// nothing, unless the page says so. Counts are coerced, so a string "0" still
+// trips the warning.
 function renderSources(sources) {
   if (!sources || typeof sources !== "object") return "";
-  const parts = Object.entries(sources).map(([k, v]) =>
-    v ? `${esc(k)} ${v}` : `<span class="zero">${esc(k)} 0</span>`
-  );
+  const parts = Object.entries(sources).map(([k, v]) => {
+    const n = Number(v);
+    return Number.isFinite(n) && n > 0
+      ? `${esc(k)} ${n}`
+      : `<span class="zero">${esc(k)} ${Number.isFinite(n) ? n : esc(v)}</span>`;
+  });
   return parts.length ? `<br>${parts.join(" · ")}` : "";
 }
 
 function renderItem(it) {
+  if (!it || typeof it !== "object") return "";
   const age =
-    typeof it.age === "number"
-      ? `<span class="age${it.age >= 7 ? " age-hot" : ""}">${it.age}d</span>`
+    Number.isFinite(Number(it.age)) && it.age !== null
+      ? `<span class="age${Number(it.age) >= 7 ? " age-hot" : ""}">${Number(it.age)}d</span>`
       : "";
   const label = it.url
     ? `<a href="${esc(it.url)}">${esc(it.label)}</a>`
@@ -101,21 +112,28 @@ function renderPanel(p) {
   let body;
   let count = "";
 
+  // A malformed data file degrades that one card - it never takes the page
+  // down, because the page is the only way the user sees any of this.
+  const items = Array.isArray(d?.items) ? d.items : null;
+
   if (!d) {
     body = `<p class="note">Never run. Say <code>refresh my command center</code>.</p>`;
   } else if (d.error) {
     body = `<p class="note err">${esc(d.error)}</p>`;
-  } else if (!d.items?.length) {
+  } else if (!items) {
+    body = `<p class="note err">data/${esc(p.id)}.json has no items array.</p>`;
+  } else if (!items.length) {
     body = `<p class="note">${esc(p.empty)}</p>`;
   } else {
-    count = `<span class="count">${d.items.length}</span>`;
-    body = `<ul>${d.items.map(renderItem).join("\n")}</ul>`;
+    const rows = items.map(renderItem).filter(Boolean);
+    count = `<span class="count">${rows.length}</span>`;
+    body = `<ul>${rows.join("\n")}</ul>`;
   }
 
   const scope =
     d && !d.error
       ? `<footer>${esc(d.window ?? "")}${
-          d.checked != null ? ` · ${d.checked} checked` : ""
+          d.checked != null ? ` · ${esc(d.checked)} checked` : ""
         }${renderSources(d.sources)}</footer>`
       : "";
 
@@ -127,9 +145,13 @@ function renderPanel(p) {
 }
 
 const panels = loadPanels();
-const stamps = panels.map((p) => p.data?.generated).filter(Boolean).sort();
-const built = stamps.length
-  ? new Date(stamps[0]).toLocaleString(undefined, {
+// Newest wins, and compare as dates - stamps can carry different UTC offsets,
+// which sort wrongly as plain strings.
+const times = panels
+  .map((p) => Date.parse(p.data?.generated ?? ""))
+  .filter((t) => !Number.isNaN(t));
+const built = times.length
+  ? new Date(Math.max(...times)).toLocaleString(undefined, {
       weekday: "short",
       hour: "numeric",
       minute: "2-digit",
@@ -207,7 +229,14 @@ if (!existsSync(dataDir)) mkdirSync(dataDir, { recursive: true });
 writeFileSync(outFile, html, "utf8");
 console.log(`command-center.html  ${panels.length} panel(s)`);
 for (const p of panels) {
-  const n = p.data?.error ? "error" : p.data ? `${p.data.items?.length ?? 0} items` : "never run";
+  const d = p.data;
+  const n = !d
+    ? "never run"
+    : d.error
+      ? "error"
+      : Array.isArray(d.items)
+        ? `${d.items.length} items`
+        : "malformed";
   console.log(`  ${p.id.padEnd(20)} ${n}`);
 }
 // Printed with forward slashes so it can be handed straight to the user and

@@ -27,7 +27,7 @@ Inside `references/`:
 
 **The twin writes those two itself**, from what Work IQ can see in your mail, Teams and calendar. **The rest of the hack is yours:** you correct what it got wrong, then add the files it has no way to know – the people you deal with, what you've already committed to, what's already been decided.
 
-The Scout altitude adds **panels** – standing questions it answers on a schedule and renders to a local page. The Code altitude adds **`revealed.md`** – what your calendar shows about how you spend time – and a council of agents that argue before deciding.
+The Scout altitude turns the twin into whatever you want built on top of it – a dashboard, a command, a scheduled briefing, an MCP server. The Code altitude adds **`revealed.md`** – what your calendar shows about how you spend time – and a council of agents that argue before deciding.
 
 Done means the twin drafts in a way you'd recognise as yours, and you can point to the rule that produced it.
 
@@ -81,7 +81,7 @@ Use the building blocks for your altitude.
 ::: info Team model
 In Cowork, everyone builds their own twin and the table converges on shape – compare rules, steal good tiebreakers.
 
-In Scout, everyone builds their own twin and the table splits the **panels**. A panel holds a question and no personal data, so you each build one against your own inbox and swap the files – four panels each, nobody seeing anyone else's mail.
+In Scout, everyone installs their own twin, then the table picks one thing to build on it and splits the work – one on the build, one on what it reads, one on the rules that shape it, one on how it's triggered. You share prompts and files, never anything from your inbox.
 
 In Code, the team builds one system. Each person owns one council agent – Ambition, Obligation, Capacity, Arbiter, or Critic – sharing one `soul.md`.
 :::
