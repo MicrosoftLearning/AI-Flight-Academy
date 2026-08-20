@@ -27,7 +27,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from twin import TwinError, ask_json, example_warning  # noqa: E402
+from twin import TwinError, ask_json  # noqa: E402
 
 # A large diff costs time and adds little - the twin only needs enough to judge the
 # change, and a review that takes four minutes will not survive contact with a hook.
@@ -131,10 +131,6 @@ def main() -> int:
 
     verdict = str(review.get("verdict", "")).lower()
     marks = {"block": "BLOCK", "comment": "COMMENT", "ok": "OK"}
-
-    notice = example_warning()
-    if notice:
-        print(notice, file=sys.stderr)
 
     print(f"{marks.get(verdict, verdict.upper() or '?')}  {review.get('summary', '')}")
     for note in review.get("notes") or []:

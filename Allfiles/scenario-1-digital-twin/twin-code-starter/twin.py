@@ -32,42 +32,15 @@ import tempfile
 from pathlib import Path
 
 ROOT = Path(__file__).parent
-REFERENCES = ROOT / ".github" / "skills" / "my-twin" / "references"
 
 # Long prompts can exceed the OS command-line limit (~8 KB on Windows), so anything
 # large is written to a file and the CLI is pointed at it instead.
 _ARG_LIMIT = 4000
 _SCRATCH = ROOT / ".twin-scratch"
 
-_EXAMPLE_MARKER = "This is example content"
-
 
 class TwinError(RuntimeError):
     """The CLI is missing, failed, timed out, or returned nothing usable."""
-
-
-def is_example_twin() -> bool:
-    """True while persona.md or voice.md is still the fictional starter content.
-
-    Checked here rather than asked of the twin: an instruction to disclose this in
-    every answer fights any request for structured output, and the model would rather
-    warn you than return clean JSON.
-    """
-    for name in ("persona.md", "voice.md"):
-        path = REFERENCES / f"{name}"
-        if path.exists() and _EXAMPLE_MARKER in path.read_text(encoding="utf-8"):
-            return True
-    return False
-
-
-def example_warning() -> str:
-    """A one-line notice, or an empty string once the twin is the user's own."""
-    if not is_example_twin():
-        return ""
-    return (
-        "note: this is the example twin - replace "
-        ".github/skills/my-twin/references/persona.md and voice.md with your own."
-    )
 
 
 def _final_message(stdout: str) -> tuple[str, int | None]:
@@ -216,12 +189,7 @@ if __name__ == "__main__":
         print(__doc__)
         raise SystemExit(2)
     try:
-        answer = ask(question)
+        print(ask(question))
     except TwinError as exc:
         print(f"error: {exc}", file=sys.stderr)
         raise SystemExit(1) from exc
-
-    notice = example_warning()
-    if notice:
-        print(notice, file=sys.stderr)
-    print(answer)

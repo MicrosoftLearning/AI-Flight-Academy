@@ -28,8 +28,8 @@ Today you write it down as plain files and call it from code. Once an agent can 
 
 | | Step | Time |
 | --- | --- | --- |
-| **1** | **Get your twin answering from code** | 15 min |
-| **2** | **Build something that runs headless** – pick a direction, split it across your table | 85 min |
+| **1** | **Get your twin answering from code** | 10 min |
+| **2** | **Build something that runs headless** – pick a direction, split it across your table | 90 min |
 
 You'll do step 1 on your own. Step 2 is where the table works together, and it's most of the session.
 
@@ -43,22 +43,14 @@ copilot --version
 
 Missing? `npm install -g @github/copilot`, then run `copilot` once to sign in.
 
-**Python 3.10+** for the starter. For the MCP server only, you'll also need `pip install -r requirements.txt`.
+**Python 3.10+** for the starter. Nothing to install unless you build the MCP server.
 
-<div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/twin-code-starter.zip" download>
-    <span class="lab-card-emoji">📦</span>
-    <span class="lab-card-title">Starter</span>
-    <span class="lab-card-desc">The twin, one call that reaches it from Python, a worked example, and an MCP server. Small on purpose.</span>
-    <span class="lab-card-cta">Download .zip →</span>
-  </a>
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/avery-persona-pack.zip" download>
-    <span class="lab-card-emoji">🗂️</span>
-    <span class="lab-card-title">Avery Washington</span>
-    <span class="lab-card-desc">Optional. A made-up marketing manager with a fake inbox and calendar – use instead of your own data.</span>
-    <span class="lab-card-cta">Download .zip →</span>
-  </a>
-</div>
+<a class="lab-card" href="/AI-Flight-Academy/downloads/twin-code-starter.zip" download style="max-width:30rem">
+  <span class="lab-card-emoji">📦</span>
+  <span class="lab-card-title">Starter</span>
+  <span class="lab-card-desc">A fictional twin, ready to answer. One call that reaches it from Python, a worked example, and an MCP server.</span>
+  <span class="lab-card-cta">Download .zip →</span>
+</a>
 
 ::: tip Two places to get unstuck
 Ask Copilot – it's building with you, so paste the error and let it fix it. For mechanics like MCP or guardrails, the **[Guides](/bricks/)** are short how-tos. Coaches are in the room and every table has an SME.
@@ -68,26 +60,27 @@ Ask Copilot – it's building with you, so paste the error and let it fix it. Fo
 
 ## 1 · Get your twin answering from code
 
-**Done when:** `python twin.py "..."` comes back with something you'd recognise as yours.
+**Done when:** `python twin.py "..."` comes back with a position and the rule behind it.
 
-Unzip the starter and open the folder in VS Code. Then confirm the CLI can see the twin:
+Unzip the starter and open the folder in VS Code. **Every command on this page runs from inside `twin-code-starter/`**, so open a terminal there:
 
 ```bash
+cd twin-code-starter
 copilot skill list
 ```
 
-`my-twin` should appear under **Project skills**. The CLI discovers skills from `.github/skills/` automatically – there's nothing to register.
+`my-twin` should appear under **Project skills** – that's the CLI finding `.github/skills/` in the current folder, so it only shows up when your terminal is in the starter. There's nothing to register.
 
 ```text
 twin-code-starter/
   .github/skills/my-twin/     the twin. Found here automatically
     SKILL.md                  how it answers
     references/
-      persona.md              how you decide      ← replace with yours
-      voice.md                how you write       ← replace with yours
-  twin.py                     ask your twin, from Python
+      persona.md              how Jordan decides
+      voice.md                how Jordan writes
+  twin.py                     ask the twin, from Python
   examples/review_diff.py     a worked example that runs headless
-  mcp_server.py               your twin as MCP tools
+  mcp_server.py               the twin as MCP tools
 ```
 
 Ask it something:
@@ -96,25 +89,21 @@ Ask it something:
 python twin.py "Using my twin: a teammate is blocked on my review but I'm mid-migration. What do I do?"
 ```
 
-You'll get an answer, and a line telling you it isn't yours yet.
+You'll get a position and the rule from `persona.md` that produced it. That's the whole loop – everything in step 2 is a different way to ask.
 
-### Make it yours
+::: tip The twin is fictional, and that's the point
+**Jordan Reyes** is a made-up engineer at Contoso, and the twin ships filled in – so you spend the session building instead of writing a persona, and nothing of yours goes into a shared exercise.
 
-This is the step that matters. `persona.md` and `voice.md` ship describing a **fictional engineer**, so the starter answers out of the box – but everything you build on top inherits whoever is in those files.
+Afterwards, `persona.md` and `voice.md` are plain markdown. Point a Copilot surface that can see your mail and calendar at them, let it draft both, and correct what it got wrong. `DISCLAIMER.md` in the starter has the detail.
+:::
 
-Fastest first:
-
-1. **Bring them.** Built a twin in Cowork or Scout this morning? Copy your `persona.md` and `voice.md` into `references/`. Same format, nothing to change.
-2. **Use the persona pack.** Write from Avery's synthetic inbox and calendar, with no personal data involved.
-3. **Write them.** Don't fill in all fifteen sections. Section 5 (what wins when two priorities collide), section 12 (your bar) and section 14 (how you handle the people you work with) do almost all the work – the rest can stay rough all session.
-
-**Re-run the same question.** If the answer moved, and the "example content" line is gone, you're ready to build.
+Try changing a rule to see it land. Open `references/persona.md`, edit section 12 (Jordan's bar), and re-run the same question – the answer moves with the file.
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>
   <div class="table-check-body">
     <span class="table-check-label">Table check</span>
-    <p>Round the table, one line each: read out the rule your twin cited. If yours is still the fictional engineer's, say so and fix it now – everything you build for the next hour runs on that file.</p>
+    <p>One line each: what rule did your twin cite, and did the answer change when you edited it? Then decide what you're building before anyone writes code.</p>
   </div>
 </div>
 
@@ -131,7 +120,7 @@ Six starting points, plus your own. Take one, combine two, or build something sp
 | 🔍 **A reviewer that reviews like you** | Your standards and your recurring notes, applied to a diff before anyone else sees it | `examples/review_diff.py` already does this. Run it on a real diff, then change one rule in `persona.md` and watch the verdict move |
 | 😈 **A devil's advocate** | Steel-mans the opposite of whatever you just decided, using your own rules | One script, one argument: `python advocate.py "I'm going to ship it Friday"`. Ask for JSON with `strongest_objection` and `rule` |
 | ⏮️ **A time machine** | Replay a decision you made months ago, giving the twin only what you knew then | Write `decisions/one.json` with `known_then`, `what_i_did`. One call, then print the twin's call next to yours |
-| 🔌 **An MCP server** | Your twin as a tool any agent can reach – VS Code Copilot, another twin | `pip install -r requirements.txt`, run `mcp_server.py`, confirm VS Code sees it. Then add one tool worth calling |
+| 🔌 **An MCP server** | Your twin as a tool any agent can reach – VS Code Copilot, another twin | From the starter folder: `pip install -r requirements.txt`, then `python mcp_server.py`. Confirm VS Code sees it, then add one tool worth calling |
 | 👻 **A daemon** | Watches a folder, a repo or a queue and flags what it finds, without being asked | One dry pass over one folder, five files maximum, findings written to a local file. Add the loop only once that works |
 | 🥊 **Twin vs twin** | Two specs argue the same call and have to converge | Two `references/` folders, both synthetic. Each returns JSON with `position` and `rule`; a third call returns `agree` or `next_question` |
 | 🎯 **Yours** | Anything that needs code and runs without a chat window | Write the command you wish existed, hard-code one input, and make that single case work end to end |
@@ -167,7 +156,7 @@ Pick one direction, then **take one piece each that runs on its own**. The natur
 
 If your direction doesn't split cleanly that way, split by **case** instead: one person per test case, fixture or question, each independently runnable. Merge the best ones at the end.
 
-Share the **prompt that worked** and the **shape you settled on**. Never share output – that's your mailbox.
+Share the **prompt that worked** and the **shape you settled on** – you're all running against the same twin, so there's nothing to keep back.
 
 ### Two things that will shape the design
 
