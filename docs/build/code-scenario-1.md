@@ -12,7 +12,7 @@ Scenario 1 is still being built and tested. Steps, downloads, and screenshots ma
 
 **You'll build this in code – VS Code, GitHub Copilot, and the Copilot CLI.**
 
-Get a twin answering from a Python call in fifteen minutes, then build something real around it.
+Get a twin answering from a Python call in ten minutes, then build something real around it.
 
 ## What you're solving
 
@@ -34,6 +34,12 @@ Today you write it down as plain files and call it from code. Once an agent can 
 You'll do step 1 on your own. Step 2 is where the table works together, and it's most of the session.
 
 ## Before you start
+
+::: warning The twin comes pre-populated with fictional data
+You won't write a persona today. The starter ships as **Jordan Reyes**, a made-up engineer at a fictional company, so it answers on the first command and nothing of yours goes into a shared exercise. Everything you build runs against Jordan.
+
+`DISCLAIMER.md` in the starter lists what's invented, and how to point the twin at your own work after the session.
+:::
 
 **Check the Copilot CLI is installed and signed in:**
 
@@ -91,10 +97,10 @@ python twin.py "Using my twin: a teammate is blocked on my review but I'm mid-mi
 
 You'll get a position and the rule from `persona.md` that produced it. That's the whole loop – everything in step 2 is a different way to ask.
 
-::: tip The twin is fictional, and that's the point
-**Jordan Reyes** is a made-up engineer at Contoso, and the twin ships filled in – so you spend the session building instead of writing a persona, and nothing of yours goes into a shared exercise.
+::: tip Making it yours, after the hack
+`persona.md` and `voice.md` are plain markdown in an open format. Point a Copilot surface that can see your mail and calendar at them, let it draft both from how you actually write and decide, then correct what it got wrong.
 
-Afterwards, `persona.md` and `voice.md` are plain markdown. Point a Copilot surface that can see your mail and calendar at them, let it draft both, and correct what it got wrong. `DISCLAIMER.md` in the starter has the detail.
+Keep that local – nothing personal belongs in a shared repo. `DISCLAIMER.md` has the detail.
 :::
 
 Try changing a rule to see it land. Open `references/persona.md`, edit section 12 (Jordan's bar), and re-run the same question – the answer moves with the file.

@@ -12,7 +12,7 @@ You pick your altitude, pick a scenario, and demo what you made. Coaches are in 
 
 1. **Pick your altitude** – Cowork with no code, or real code in VS Code.
 2. **Pick a scenario** – a real Microsoft work problem to point it at.
-3. **Choose your data path** – use your own data privately, or use the provided synthetic pack.
+3. **Choose your data path** – Cowork and Scout read your own work privately; Code ships a fictional twin so no personal data is involved.
 4. **Build the smallest working version** – get to v0.1 fast.
 5. **Test it on a real prompt** – see where it breaks.
 6. **Patch the spec** – change the rule, sample, or boundary that caused the miss.

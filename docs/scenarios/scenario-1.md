@@ -37,19 +37,9 @@ Name something unresolved from your own inbox. The twin retrieves it and answers
 
 ## The data
 
-Choose one path.
+**Cowork and Scout** build the twin from your own Microsoft 365 data – sent mail, calendar, Teams. It only ever sees what you can already see, and the files stay in your tenant, on your screen.
 
-### Path A – Build your own twin
-
-Use your own Microsoft 365 data: sent mail, calendar patterns, and recent decisions you remember making.
-
-The most accurate twin, because the evidence is real. Keep it private – your own tenant, your own screen, nothing personal pasted into shared spaces.
-
-### Path B – Build Avery Washington's twin
-
-Use the **Avery Washington persona pack**: a synthetic marketing manager with a fake inbox, calendar, and goals doc.
-
-Same exercise, no personal data. Available on the **Code** altitude – the Cowork and Scout twins read your own work directly.
+**Code** ships a fictional twin instead. The starter arrives pre-populated with a made-up engineer at a made-up company, so the session is spent building rather than writing a persona, and nothing personal goes near a shared exercise. Making it yours is something you do afterwards, with a Copilot surface that can see your work.
 
 ## Build paths
 

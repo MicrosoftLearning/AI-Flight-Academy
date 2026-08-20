@@ -50,22 +50,16 @@ The page needs **Node 18+** – check with `node --version`. Without it the twin
 
 ### 🟣 Code
 
-<div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/twin-code-starter.zip" download>
-    <span class="lab-card-emoji">📦</span>
-    <span class="lab-card-title">Starter</span>
-    <span class="lab-card-desc">The twin, one call that reaches it from Python, a worked example, and an MCP server.</span>
-    <span class="lab-card-cta">Download .zip →</span>
-  </a>
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/avery-persona-pack.zip" download>
-    <span class="lab-card-emoji">🗂️</span>
-    <span class="lab-card-title">Avery Washington</span>
-    <span class="lab-card-desc">Synthetic persona data, same pack.</span>
-    <span class="lab-card-cta">Download .zip →</span>
-  </a>
-</div>
+<a class="lab-card" href="/AI-Flight-Academy/downloads/twin-code-starter.zip" download style="max-width:30rem">
+  <span class="lab-card-emoji">📦</span>
+  <span class="lab-card-title">Starter</span>
+  <span class="lab-card-desc">A fictional twin, ready to answer. One call that reaches it from Python, a worked example, and an MCP server.</span>
+  <span class="lab-card-cta">Download .zip →</span>
+</a>
 
 Unzip and open the folder in VS Code. The Copilot CLI finds the twin in `.github/skills/` on its own – there is nothing to register.
+
+**The twin arrives pre-populated with fictional data** – a made-up engineer at a made-up company – so it answers straight away and no personal data is involved. `DISCLAIMER.md` in the starter covers what's invented and how to point it at your own work afterwards.
 
 ::: details One-line setup in a terminal
 **PowerShell:**

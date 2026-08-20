@@ -6,7 +6,7 @@ title: Resources
 
 ## Get the files
 
-**[⬇ Downloads](/resources/downloads)** – your twin, the Avery Washington persona pack, and the Code altitude starter repo.
+**[⬇ Downloads](/resources/downloads)** – the Cowork and Scout twins, and the Code altitude starter.
 
 ## Reference hacks
 
