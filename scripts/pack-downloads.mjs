@@ -74,25 +74,34 @@ function zipFolder(srcDir, zipPath, exclude = [], purge = []) {
 // survive, but must never ship whatever the packager's own run wrote into them.
 //
 // Patterns are matched against the forward-slash path relative to the staged
-// root; `*` matches within a segment, `**` across segments.
+// root; `*` matches within a segment, `**` across segments. A pattern ending in
+// `/` removes the matching DIRECTORY and everything under it.
 function purgeFiles(dir, patterns, rel = "") {
-  const rx = patterns.map(
-    (p) =>
-      new RegExp(
-        "^" +
-          p
-            .replace(/[.+^${}()|[\]\\]/g, "\\$&")
-            .replace(/\*\*/g, "\u0000")
-            .replace(/\*/g, "[^/]*")
-            .replace(/\u0000/g, ".*") +
-          "$"
-      )
-  );
+  const toRegExp = (p) =>
+    new RegExp(
+      "^" +
+        p
+          .replace(/[.+^${}()|[\]\\]/g, "\\$&")
+          .replace(/\*\*/g, "\u0000")
+          .replace(/\*/g, "[^/]*")
+          .replace(/\u0000/g, ".*") +
+        "$"
+    );
+  const dirPatterns = patterns.filter((p) => p.endsWith("/")).map((p) => toRegExp(p.slice(0, -1)));
+  const filePatterns = patterns.filter((p) => !p.endsWith("/")).map(toRegExp);
+
   const walk = (abs, prefix) => {
     for (const e of readdirSync(abs, { withFileTypes: true })) {
       const r = prefix ? `${prefix}/${e.name}` : e.name;
-      if (e.isDirectory()) walk(join(abs, e.name), r);
-      else if (rx.some((x) => x.test(r))) rmSync(join(abs, e.name), { force: true });
+      if (e.isDirectory()) {
+        if (dirPatterns.some((x) => x.test(r))) {
+          rmSync(join(abs, e.name), { recursive: true, force: true });
+        } else {
+          walk(join(abs, e.name), r);
+        }
+      } else if (filePatterns.some((x) => x.test(r))) {
+        rmSync(join(abs, e.name), { force: true });
+      }
     }
   };
   walk(dir, rel);
@@ -100,8 +109,12 @@ function purgeFiles(dir, patterns, rel = "") {
 
 const jobs = [
   {
-    src: join(root, "Allfiles", "scenario-1-digital-twin", "digital-twin-starter"),
-    zip: "digital-twin-starter.zip",
+    src: join(root, "Allfiles", "scenario-1-digital-twin", "twin-code-starter"),
+    zip: "twin-code-starter.zip",
+    // Python bytecode and the scratch dir twin.py uses for oversized prompts are
+    // both produced by running it locally, and neither belongs in a download.
+    // Nested, so these have to match at any depth.
+    purge: ["**/__pycache__/", ".twin-scratch/"],
   },
   {
     src: join(root, "Allfiles", "scenario-1-digital-twin", "persona-pack"),

@@ -4,444 +4,235 @@ title: The Digital Twin – Code
 
 <!-- markdownlint-disable MD013 MD025 MD033 -->
 
-# 🧬 The Digital Twin
+# 🟣 The Digital Twin
 
 ::: warning 🚧 Work in progress
 Scenario 1 is still being built and tested. Steps, downloads, and screenshots may change before the event.
 :::
+
 **You'll build this in code – VS Code, GitHub Copilot, and the Copilot CLI.**
 
-You get the contract and the plumbing. You write the agents.
+Get a twin answering from a Python call in ten minutes, then build something real around it.
 
 ## What you're solving
 
-Copilot already personalizes. It has memory, and Work IQ reads your mail, calendar, and files.
+You already know how you work. Which trade-off you make when two things conflict, what you check before you commit, how the wording changes between a partner team and your own.
 
-What it doesn't have is anything you've explicitly decided – how you rank competing priorities, which promises you protect, what you'd refuse outright. That gets inferred, you can't inspect or correct it, and it doesn't travel between tools.
+None of that is written down anywhere an agent can reach. So it only gets applied while you're sitting there applying it.
 
-Written down, it becomes a **first line of defense**: something that reads what arrived and gives you an opening position before you've touched it.
+Today you write it down as plain files and call it from code. Once an agent can reach your twin, it can ask at commit time, on a schedule, or mid-task – and get back what you would have said.
 
-There's a second problem this altitude solves: **a decision under conflict isn't one voice.** When an exec ask lands on top of a peer promise, you're weighing ambition against obligation against capacity. A single prompt can role-play one of those at a time. It can't run the argument and tell you what it overruled.
+## How this runs
 
-## What your team will have built
+**Whatever you build has to run without a chat window.** Your output is a command, a hook, a server, a scheduled job, or a local process – that's the bar, and it's the only rule.
 
-One system, not five. Everyone shares a single spec, and each person owns one agent that reasons over it.
+| | Step | Time |
+| --- | --- | --- |
+| **1** | **Get your twin answering from code** | 10 min |
+| **2** | **Build something that runs headless** – pick a direction, split it across your table | 90 min |
 
-| Piece | What it does |
-| --- | --- |
-| **The spec** | Three plain-text files: how the person decides, how they write, what their calendar shows |
-| **The council** | Three agents that argue, one that decides and **publishes what it overruled** |
-| **The critic** | Watches a miss, works out which line of the spec caused it, proposes a patch |
-| **The server** | Exposes the whole thing as MCP tools, so any agent can call it |
-| **The guardrail** | Refuses actions outside the spec's boundaries – enforced at the tool, not suggested in a prompt |
-
-The same spec folder runs in Cowork and the CLI unmodified.
-
-The council takes three kinds of situation. Same agents, same spec – only the input changes:
-
-| Input | What the council returns |
-| --- | --- |
-| **What landed** – an email, a request, a message | A position, a draft, and the dissent it overruled |
-| **What's ahead** – the next week of calendar | What to protect, what to cut, what to move |
-| **Who I'm facing** – a person or an upcoming meeting | How this person is handled, and what's off-limits in writing |
+You'll do step 1 on your own. Step 2 is where the table works together, and it's most of the session.
 
 ## Before you start
 
-<div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/digital-twin-starter.zip" download>
-    <span class="lab-card-emoji">📦</span>
-    <span class="lab-card-title">Starter repo</span>
-    <span class="lab-card-desc">Schema, MCP skeleton, council runner, test harness. The contract – not the solution.</span>
-    <span class="lab-card-cta">Download .zip →</span>
-  </a>
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/avery-persona-pack.zip" download>
-    <span class="lab-card-emoji">🗂️</span>
-    <span class="lab-card-title">Avery Washington</span>
-    <span class="lab-card-desc">Optional. A made-up marketing manager with a fake inbox and calendar – use them instead of your own data.</span>
-    <span class="lab-card-cta">Download .zip →</span>
-  </a>
-</div>
+::: warning The twin comes pre-populated with fictional data
+You won't write a persona today. The starter ships as **Jordan Reyes**, a made-up engineer at a fictional company, so it answers on the first command and nothing of yours goes into a shared exercise. Everything you build runs against Jordan.
 
-Unzip it wherever you keep projects, then open the folder in VS Code. **No cloning, no repo to fork.**
+`DISCLAIMER.md` in the starter lists what's invented, and how to point the twin at your own work after the session.
+:::
 
-::: details Prefer one line in a terminal?
-**PowerShell** – downloads, unzips, and opens it in VS Code:
-
-```powershell
-$u='https://microsoftlearning.github.io/AI-Flight-Academy/downloads/digital-twin-starter.zip'
-$z="$env:TEMP\dts.zip"; iwr $u -OutFile $z
-Expand-Archive $z -DestinationPath "$HOME\digital-twin" -Force
-code "$HOME\digital-twin\digital-twin-starter"
-```
-
-**macOS / Linux:**
+**Check the Copilot CLI is installed and signed in:**
 
 ```bash
-curl -L -o /tmp/dts.zip https://microsoftlearning.github.io/AI-Flight-Academy/downloads/digital-twin-starter.zip
-unzip -q /tmp/dts.zip -d ~/digital-twin && code ~/digital-twin/digital-twin-starter
+copilot --version
 ```
 
-Add the persona pack the same way, swapping in `avery-persona-pack.zip`.
-:::
+Missing? `npm install -g @github/copilot`, then run `copilot` once to sign in.
 
-**Check this first, before anything else:** open Copilot Chat in VS Code and confirm you can switch to **Agent** mode. It's an org-managed setting and it may be off. If it is, use the Copilot CLI instead – everything here works either way.
+**Python 3.10+** for the starter. Nothing to install unless you build the MCP server.
 
-::: tip Want a step spelled out?
-The **[Guides](/bricks/)** in the top nav cover the general skills used here – setting up, connecting to your work, and running things on a schedule. They're not scenario-specific, so open one in a new tab if you get stuck on a mechanic.
+<a class="lab-card" href="/AI-Flight-Academy/downloads/twin-code-starter.zip" download style="max-width:30rem">
+  <span class="lab-card-emoji">📦</span>
+  <span class="lab-card-title">Starter</span>
+  <span class="lab-card-desc">A fictional twin, ready to answer. One call that reaches it from Python, a worked example, and an MCP server.</span>
+  <span class="lab-card-cta">Download .zip →</span>
+</a>
+
+::: tip Two places to get unstuck
+Ask Copilot – it's building with you, so paste the error and let it fix it. For mechanics like MCP or guardrails, the **[Guides](/bricks/)** are short how-tos. Coaches are in the room and every table has an SME.
 :::
 
 ---
 
-## 1 · Seal your answers
+## 1 · Get your twin answering from code
 
-**Do this before you build anything.** It takes four minutes and you can't do it later.
+**Done when:** `python twin.py "..."` comes back with a position and the rule behind it.
 
-```powershell
-python test/take_test.py
+Unzip the starter and open the folder in VS Code. **Every command on this page runs from inside `twin-code-starter/`**, so open a terminal there:
+
+```bash
+cd twin-code-starter
+copilot skill list
 ```
 
-Fifteen forced-choice work dilemmas. Answer fast and honestly – what you *actually* did last time, not what you'd like to have done. It writes `test/sealed-answers.md` and you don't look at it again until the end.
+`my-twin` should appear under **Project skills** – that's the CLI finding `.github/skills/` in the current folder, so it only shows up when your terminal is in the starter. There's nothing to register.
 
-::: warning Don't deliberate
-The script flags any answer that took more than 25 seconds. A considered answer is an aspirational one, and aspirational answers make the comparison worthless.
+```text
+twin-code-starter/
+  .github/skills/my-twin/     the twin. Found here automatically
+    SKILL.md                  how it answers
+    references/
+      persona.md              how Jordan decides
+      voice.md                how Jordan writes
+  twin.py                     ask the twin, from Python
+  examples/review_diff.py     a worked example that runs headless
+  mcp_server.py               the twin as MCP tools
+```
+
+Ask it something:
+
+```bash
+python twin.py "Using my twin: a teammate is blocked on my review but I'm mid-migration. What do I do?"
+```
+
+You'll get a position and the rule from `persona.md` that produced it. That's the whole loop – everything in step 2 is a different way to ask.
+
+::: tip Making it yours, after the hack
+`persona.md` and `voice.md` are plain markdown in an open format. Point a Copilot surface that can see your mail and calendar at them, let it draft both from how you actually write and decide, then correct what it got wrong.
+
+Keep that local – nothing personal belongs in a shared repo. `DISCLAIMER.md` has the detail.
 :::
 
-At the end of the session your twin answers the same fifteen cold, and you diff them. That's not a score – it's the fastest way to find which rules you got wrong.
+Try changing a rule to see it land. Open `references/persona.md`, edit section 12 (Jordan's bar), and re-run the same question – the answer moves with the file.
 
-**Done when:** `test/sealed-answers.md` exists and you haven't looked at it since.
+<div class="table-check">
+  <div class="table-check-icon">👥</div>
+  <div class="table-check-body">
+    <span class="table-check-label">Table check</span>
+    <p>One line each: what rule did your twin cite, and did the answer change when you edited it? Then decide what you're building before anyone writes code.</p>
+  </div>
+</div>
 
-## 2 · Split the work
+## 2 · Build something that runs headless
 
-Five people, five agents, one shared spec. Decide this in the first two minutes.
+**Done when:** something runs without you typing into a chat, and it does it the way you would.
 
-| Who | Agent | Argues for | Returns |
-| --- | --- | --- | --- |
-| 1 | **Ambition** | The visible, strategic, reusable work | position · because · cost if ignored |
-| 2 | **Obligation** | Promises already made, people waiting | position · because · cost if ignored |
-| 3 | **Capacity** | What the calendar says you can actually absorb | position · because · cost if ignored |
-| 4 | **Arbiter** | Nothing – it decides, in voice, and publishes the dissent | decision · draft · dissent · confidence · gap |
-| 5 | **Critic** | Nothing – it diagnoses misses and patches the spec | root cause · diff · net lines |
+### Pick a direction
 
-**Fewer than five?** Fold the Critic into the Arbiter. **More?** Add someone on tests and someone on the demo.
+Six starting points, plus your own. Take one, combine two, or build something specific to how you work.
 
-**Done when:** every person knows which file they own.
+| | What it is | Your first ten minutes |
+| --- | --- | --- |
+| 🔍 **A reviewer that reviews like you** | Your standards and your recurring notes, applied to a diff before anyone else sees it | `examples/review_diff.py` already does this. Run it on a real diff, then change one rule in `persona.md` and watch the verdict move |
+| 😈 **A devil's advocate** | Steel-mans the opposite of whatever you just decided, using your own rules | One script, one argument: `python advocate.py "I'm going to ship it Friday"`. Ask for JSON with `strongest_objection` and `rule` |
+| ⏮️ **A time machine** | Replay a decision you made months ago, giving the twin only what you knew then | Write `decisions/one.json` with `known_then`, `what_i_did`. One call, then print the twin's call next to yours |
+| 🔌 **An MCP server** | Your twin as a tool any agent can reach – VS Code Copilot, another twin | From the starter folder: `pip install -r requirements.txt`, then `python mcp_server.py`. Confirm VS Code sees it, then add one tool worth calling |
+| 👻 **A daemon** | Watches a folder, a repo or a queue and flags what it finds, without being asked | One dry pass over one folder, five files maximum, findings written to a local file. Add the loop only once that works |
+| 🥊 **Twin vs twin** | Two specs argue the same call and have to converge | Two `references/` folders, both synthetic. Each returns JSON with `position` and `rule`; a third call returns `agree` or `next_question` |
+| 🎯 **Yours** | Anything that needs code and runs without a chat window | Write the command you wish existed, hard-code one input, and make that single case work end to end |
 
-::: tip The drives should be biased
-Ambition shouldn't be balanced. Neither should Obligation or Capacity. Each one argues its corner as hard as it can – the Arbiter is where nuance happens. Balanced sub-agents produce mush.
+**Pick by pain, not novelty** – something you forgot, chased, or redid by hand last week.
+
+::: warning Three of these can eat your session
+**Twin vs twin** needs three agent turns per round, so a single iteration costs a few minutes. **The time machine** is only interesting if you already have a decision in mind and know how it turned out. **A daemon** that loops before it works once will burn the clock quietly.
+
+All three are good builds. Just get one pass working before you add the second call, the second twin, or the loop.
 :::
 
-## 3 · Write the spec
+<div class="table-check">
+  <div class="table-check-icon">👥</div>
+  <div class="table-check-body">
+    <span class="table-check-label">Table check</span>
+    <p>Two minutes round the table: what are you building, and what does it run on – a hook, a timer, a request? Out loud, before anyone opens an editor.</p>
+  </div>
+</div>
 
-Three files, shared by everyone. Get a rough version fast, then improve it all session.
+### Split the work
 
-**soul** – how the person decides. Aim for about a page. The critical part is **tiebreakers, not values**:
+Pick one direction, then **take one piece each that runs on its own**. The natural seams:
 
-| ❌ Value | ✅ Tiebreaker |
+| Piece | Owns |
 | --- | --- |
-| I value responsiveness. | When a same-day exec ask collides with a peer promise, cut scope before slipping the peer. |
-| I care about quality. | When a claim can't be verified before the deadline, cut that section and hold the date. |
+| **The trigger** | What starts it – the hook, the timer, the request |
+| **The input** | What gets gathered and how much. Bounds, filters, what's noise |
+| **The call** | The prompt and the shape that comes back. Where your rules get applied |
+| **The output** | Where it lands – exit code, comment, file, notification |
 
-A value tells an agent nothing. A tiebreaker tells it what to do.
+**Stub the seams first** – fake input, a fake twin response, fake output – so the whole thing runs end to end in five minutes. Then each person replaces one fake with the real thing.
 
-**Done when:** the spec is about a page and every rule resolves a conflict.
+If your direction doesn't split cleanly that way, split by **case** instead: one person per test case, fixture or question, each independently runnable. Merge the best ones at the end.
 
-**voice** – 5–10 real sent emails, verbatim, plus the rules those samples imply. Do not clean them up; the punctuation and signoff habits are the part a description would lose.
+Share the **prompt that worked** and the **shape you settled on** – you're all running against the same twin, so there's nothing to keep back.
 
-**revealed** – what the calendar actually shows.
+### Two things that will shape the design
 
-::: tip Shorter really is better
-Resist adding one more clause. Anthropic [found while building Constitutional AI](https://www.anthropic.com/research/constitutional-ai-harmlessness-from-ai-feedback) that broad principles beat long specific ones. ["Lost in the Middle"](https://arxiv.org/abs/2307.03172) (peer-reviewed, *Transactions of the ACL*) showed models pay least attention to whatever's in the middle of a long prompt. Your spec is a prompt.
-:::
+**A call takes 20 to 60 seconds.** It's a full agent turn, not a completion. Put the bound in the first version rather than the fifth – one diff, one fixture, one folder, one question. Anything that calls the twin per-file or in a poll loop will be slower than anyone will wait for.
 
-## 4 · Ground it in real behavior
+**Ask for JSON when a program reads the answer.** `ask_json()` appends the instruction, strips a code fence if the model adds one, and gives you a parsed object:
 
-This is the half a person can't self-report. Pull it from evidence.
-
-**Your own data** – let Cowork's Work IQ do the retrieval and export the summary. Ask for percentages, not raw entries:
-
-```text
-Summarize my last 30 days of calendar: time by category, accept/decline/tentative
-ratio, self-organized vs invited ratio, recurring load. Use percentages.
-Leave out private meeting titles.
-```
-
-**Avery Washington** – the persona pack has a 30-day calendar with everything already in it.
-
-Either way, extract these four:
-
-- time by category
-- **response latency by sender** – the honest stakeholder ranking, whatever the org chart says
-- accept / decline / tentative ratio
-- self-organized vs. invited
-
-**Done when:** `revealed.md` cites at least one number that contradicts the spec.
-
-::: danger Don't build a Graph integration
-Azure AD app registration plus MSAL will take 30–60 minutes and eat your session. Roughly a third of teams that try it never get past it. Let Cowork retrieve, or use the persona pack. Your working style is slow-moving data – a monthly snapshot is plenty.
-:::
-
-## 5 · Write the agents
-
-Five files in `.github/agents/`. The starter repo has the required frontmatter and return contract for each – the bodies are yours.
-
-::: warning This one will cost you 20 minutes if you miss it
-The Arbiter won't actually delegate unless you tell it to, in those words:
-
-```text
-You MUST invoke each agent as a subagent before synthesizing.
-```
-
-Without that line it'll just answer directly and you'll wonder why the council never runs.
-:::
-
-Two more that bite:
-
-- **Force short returns.** Three verbose sub-agents will blow the Arbiter's context window before it reasons.
-- **Run with `--allow-all-tools`** in your own repo, or you'll spend the session clicking approval prompts.
-
-::: details Agent file anatomy
-Each agent is a markdown file in `.github/agents/` with frontmatter declaring what it can reach:
-
-```md
----
-name: capacity
-description: Argues from measured load. Subagent — never replies to the user.
-tools: ['read']
----
-
-You are one of three competing drives. You are CAPACITY.
-
-Read `digital-twin/references/revealed.md` FIRST, then `soul.md`.
-You argue from measured reality, not stated intent.
-
-You are biased. That is your job. Do not be balanced.
-
-**You are a subagent. Do NOT reply to the user. Return your position to the arbiter.**
-
-Return exactly:
-POSITION: <one sentence>
-BECAUSE: <two sentences max, citing a measured number>
-COST IF IGNORED: <one sentence>
-```
-
-The Arbiter is the only one that talks to the user, and it declares its children:
-
-```md
----
-name: arbiter
-description: Polls the drives, decides in voice, publishes the dissent.
-tools: ['read', 'edit', 'agent']
-agents: ['ambition', 'obligation', 'capacity']
----
-```
-
-**Running it from the CLI:**
-
-```powershell
-copilot -p "Run the council on this dilemma: <text>" --allow-all-tools
-```
-
-On Windows the command line caps at 8191 characters, so long prompts have to go through a file – `twinlib.py` in the starter repo handles that for you.
-
-:::
-
-## 6 · Make it answerable to other agents
-
-Here's the honest question about this step: **if it's your twin and only you call it, why does it need to be a server?**
-
-It doesn't. Reading three files works fine. The server earns its place the moment something that *isn't you* needs to ask:
-
-| Who's asking | What they need |
-| --- | --- |
-| A teammate's agent, before drafting something for you | *"Would they sign off on this, or should I ask first?"* |
-| A triage agent watching your inbox | Your boundaries, before it replies to anything |
-| An agent in a product you don't control | A twin it can call, not a file it can't see |
-
-And the part that only works as a server: **your boundaries hold.** If your twin is a file, a calling agent can read your rules and ignore them. If it's a tool that returns `NEVER`, it can't. That's the difference between a preference and a policy.
-
-So: the file is your twin. **The server is what makes it a service.**
-
-**Thin tools first.** These just read files, so they're instant and free:
-
-```text
-soul_spec()   voice_rules()   revealed_behavior()
-check_boundary(action, recipient)   soul_gap()
-```
-
-**Thick tools if you have time.** These spend model calls:
-
-```text
-twin_decide(situation)   twin_draft(recipient, intent)
-twin_plan(window)        twin_prep(person_or_meeting)
-propose_soul_patch(what_it_said, what_they_would_do)
-```
-
-`twin_plan` and `twin_prep` are the same council over a different question – no new agents, no new files.
-
-The split matters: Cowork connectors need answers in **under 30 seconds**, which the thin tools clear easily and `twin_decide` never will.
-
-::: tip Prove it in your demo
-Don't just show the tool list – that proves nothing. Wire a *second* agent to your server and have it ask before acting. One agent checking with another person's twin is the whole point, and it takes about two minutes to show.
-:::
-
-Check it works before you build anything on top:
-
-```powershell
-python test/mcp_smoke.py
-```
-
-That connects the same way VS Code will, lists your tools, and runs your guardrail against four sample actions. If it returns `NEVER` / `ASK_FIRST` / `ALLOW`, another agent can call your twin and your boundaries will hold.
-
-**Done when:** the smoke test returns real verdicts instead of "not implemented".
-
-::: details Building the server
 ```python
-from mcp.server.mcpserver import MCPServer
+from twin import ask, ask_json
 
-mcp = MCPServer(name="digital-twin", version="1.0.0")
+ask("Using my twin: should I take this on before Friday?")
 
-@mcp.tool(description="How this person decides. Call before drafting or prioritizing anything.")
-def soul_spec() -> str:
-    return (REFS / "soul.md").read_text(encoding="utf-8")
-
-if __name__ == "__main__":
-    mcp.run(transport="stdio")            # VS Code, Claude Desktop
-    # mcp.run(transport="streamable-http", host="127.0.0.1", port=8848)
+ask_json("Using my twin: rate this change. Keys: verdict, reason.")
 ```
 
-**The `description` is not documentation** – it's how a calling agent decides whether to use your tool. Write it as an instruction: *"Call this before drafting anything on their behalf."*
+### Build in layers
 
-**Wire it into VS Code** with `.vscode/mcp.json` (already in the starter):
+1. **The skeleton** – trigger fires, calls a stub, writes something. No twin yet
+2. **One real call** – swap the stub for `ask()`, print what comes back
+3. **A shape** – move to `ask_json()` so the output is parseable
+4. **Your rules** – make sure it's citing `persona.md` and not answering generically
+5. **A bound** – cap what it reads and how often it runs
 
-```json
-{ "servers": { "digital-twin": {
-  "type": "stdio", "command": "python",
-  "args": ["${workspaceFolder}/mcp_server.py"] } } }
-```
+The more specific your prompt, the less you'll undo afterwards:
 
-Then `Ctrl+Shift+P` → **MCP: List Servers** → start it. Switch Copilot Chat to **Agent** mode and your tools appear under the 🔧 icon.
-
-**Two transports, two audiences.** `stdio` for local editors. `streamable-http` is the shape a Cowork connector needs – JSON-RPC 2.0 over HTTPS. Production would also need TLS and OAuth; local is fine today.
-
-:::
-
-## 7 · Add the guardrail
-
-One check that runs before anything leaves the system:
-
-```text
-ALLOW | ASK_FIRST | NEVER
-rule:   <the rule that governs this>
-source: <which file and section>
-```
-
-Run it before any send, share, commit, decline, or external message.
-
-**Enforce it at the tool, not in a prompt.** That's the difference between a suggestion and a boundary – yours has to hold even when the caller is an agent you didn't write.
-
-::: details What a guardrail looks like
-```python
-@mcp.tool(description="Check whether an action is allowed before taking it. "
-                      "Call before any send, commit, decline, or external message.")
-def check_boundary(action: str, recipient: str = "") -> str:
-    a = f"{action} {recipient}".lower()
-
-    if any(k in a for k in ("why", "reason", "travel", "calendar", "ooo")):
-        return ("NEVER\nrule: never disclose calendar reasons or travel. "
-                "A decline says WHEN I'm free, never WHY I'm not.\n"
-                "source: soul.md > Boundaries")
-
-    if any(k in a for k in ("external", "customer", "commit", "deadline")):
-        return ("ASK_FIRST\nrule: anything external, or any date commitment.\n"
-                "source: soul.md > Boundaries")
-
-    return "ALLOW\nrule: no boundary governs this\nsource: soul.md > Boundaries"
-```
-
-Note it returns **the rule and where it came from**, not just a verdict – so a calling agent can explain itself, and a human can audit it.
-
-**Try this in your demo:** have another agent ask your twin to explain why the person is out next week. Watching it return `NEVER` – with a citation – is the moment the room understands the difference between a boundary and a polite request.
-
-:::
-
-## 8 · ⚡ The twist
-
-Your facilitator will hand this out partway through. Run it through the full council:
-
-```text
-A senior executive wants a new customer narrative by 3 PM today.
-You already promised a peer their launch review notes by 4 PM.
-Decide what to do, what to say to each of them, and what gets cut.
-```
-
-You are checking for three positions, one decision, and an explicit statement of what got overruled and why.
-
-## 9 · Let the critic patch it
-
-Find one thing the twin got wrong. Have the Critic diagnose **which line of the spec caused it** – not "the answer was bad."
-
-```text
-HARD CAP: net growth of +2 lines.
-Human approves before anything is written.
-```
-
-Without the cap, the critic fixes every miss by adding lines, and the spec degrades as it grows.
-
-::: tip Say the honest limit out loud in your demo
-The **file** gets better. The **model** doesn't learn. Every run reloads an improved file. That's real and useful, and it isn't training – claiming otherwise is the fastest way to lose a technical room.
-:::
-
-## 10 · The reveal
-
-Last thing. Your twin answers the fifteen dilemmas you sealed at the start, cold:
-
-```powershell
-python test/compare.py
-```
-
-You get a line-by-line comparison, and for every mismatch it names **which field of `soul.md` that dilemma was probing** – so a miss points straight at the rule to fix.
-
-::: tip This isn't a score
-There's no percentage and no leaderboard. Mismatches are the useful output: each one is a place where what you wrote down doesn't match what you'd actually do. Expect several. The interesting ones are where the twin picked the sensible, well-adjusted answer and you wouldn't have.
-:::
-
-Fix one and re-run it if you have time. That's the whole loop in miniature.
-
----
-
-## Show it off
-
-60–90 seconds. Hit these:
-
-- [ ] The folder – spec, agents, server
-- [ ] **One thing the calendar revealed that self-report would never have caught**
-- [ ] The council: who owns what, and the short return shape
-- [ ] The twist, run live
-- [ ] Arbiter output – **especially the dissent**
-- [ ] One of the other two modes – the week plan, or the person prep
-- [ ] The guardrail returning `NEVER` on something
-- [ ] One critic patch, +2 lines or fewer
-- [ ] The same spec folder running somewhere else – CLI, VS Code, or Cowork
-- [ ] **One dilemma your twin got wrong**, and the rule you'd add because of it
-
-::: tip Lead with the dissent
-Show what the twin decided against and why. That is the part a single prompt cannot produce, and it is visible in one screen.
-:::
-
-## Stuck?
-
-| What you're seeing | What to do |
+| Vague | Specific |
 | --- | --- |
-| Agent mode is missing in VS Code | Org-managed setting. Use the Copilot CLI instead |
-| The Arbiter answers without consulting anyone | Add "You MUST invoke each agent as a subagent before synthesizing" |
-| Output truncates, context blows up | Sub-agents are too verbose – force short structured returns |
-| Endless approval prompts | `--allow-all-tools`, in your own repo only |
-| Long prompts fail on Windows | Command line caps at 8191 chars – pass via a file. `twinlib.py` does this |
-| Custom agents aren't picked up | They must be in `.github/agents/` with the right frontmatter |
-| Every drive agrees with every other | They're too balanced. Make each one biased |
-| mcp_smoke.py fails to connect | Run it from the repo root, not from inside test/ |
+| *"Review this code"* | *"Review this diff the way I would. Apply my bar from persona.md. If my files don't cover something, leave it alone."* |
+| *"Is this risky?"* | *"Return JSON: verdict (block/warn/ok), reason (one sentence), and the persona.md line behind it."* |
+| *"Make it better"* | *"Cite which rule decided each note, so I can tell when it's guessing."* |
+
+::: details The worked example, if you want a running start
+
+`examples/review_diff.py` reviews a diff against your `persona.md` and **exits 1 if your twin would block it**. That exit code is what makes it a hook rather than a chat:
+
+```bash
+python examples/review_diff.py --staged
+git diff main... | python examples/review_diff.py --stdin
+```
+
+```sh
+# .git/hooks/pre-commit
+#!/bin/sh
+python examples/review_diff.py --staged || exit 1
+```
+
+Read it for the pattern – gather input, bound it, ask for JSON, act on the verdict – then build something else with it.
+:::
+
+::: warning You approve before anything goes out
+Your twin drafts, flags and reports. Sending, committing and posting stay yours – whatever you build should hand the decision back.
+:::
+
+<div class="table-check">
+  <div class="table-check-icon">👥</div>
+  <div class="table-check-body">
+    <span class="table-check-label">Table check</span>
+    <p>Halfway: is it running end to end, even badly? If not, cut it down until something works before adding anything back.</p>
+  </div>
+</div>
+
+## Push it further
+
+1. **Make it disagree with you** – have it flag where your own rules contradict each other.
+2. **Give it a memory** – a file it appends to, so the next run knows what the last one found.
+3. **Make it prove itself** – fixtures with known answers, so you can tell when a spec edit breaks something that used to work.
+4. **Put it in CI** – a workflow step instead of a local hook.
+5. **Let another agent call it** – wire `mcp_server.py` into VS Code and ask Copilot to consult your twin mid-task.
+6. **Take the rules with you** – `persona.md` and `voice.md` are plain text, so they move to Cowork or Scout unchanged.
 
 ---
 
 [← Back to start](/) · [What this scenario is about](/scenarios/scenario-1)
-
