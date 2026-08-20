@@ -12,7 +12,7 @@ Scenario 1 is still being built and tested. Steps, downloads, and screenshots ma
 
 **You'll build this in Microsoft Scout. Scout does the building – you won't hand-write the app.**
 
-A twin that reads your work, and a page that tells you what's waiting on you.
+A twin that reads your work, tells you what's waiting on you, and answers when you ask it what to do about any of it.
 
 ## What you're solving
 
@@ -24,7 +24,7 @@ Today you write the twin down as files, then give it a page that answers those q
 
 ## What you'll walk out with
 
-**A Command Center** – a page on your machine showing what's waiting on you, built from your own work by a twin that knows how you decide.
+**A Command Center** – a page on your machine showing what's waiting on you, and a twin behind it you can ask what to do about any of it.
 
 | | Holds |
 | --- | --- |
@@ -35,6 +35,8 @@ Today you write the twin down as files, then give it a page that answers those q
 
 Work IQ writes the first two from your own mail, Teams and calendar. **The twin renders a working page about fifteen minutes in** – the rest of the session is spent making it accurate and building panels with your table.
 
+**It works two ways.** The page answers the standing questions on a schedule. The conversation answers the one-offs – *what do I do about this, draft that, what am I forgetting* – using the same files. Same twin, two surfaces.
+
 ::: warning It stays on your machine
 You're building a local page, opened from a file. **Nothing is hosted and nothing is published.** Today is about getting it working; hosting it is a separate exercise you can pick up afterwards.
 :::
@@ -44,7 +46,7 @@ You're building a local page, opened from a file. **Nothing is hosted and nothin
 | | Step | You're done when | Time |
 | --- | --- | --- | --- |
 | **1** | **Land it** | A page is open on your screen with two panels on it | 15 min |
-| **2** | **Argue with it** | The `[inferred]` and `[needs you]` lines say what you'd actually say | 20 min |
+| **2** | **Argue with it** | You've asked it something real and recognised the answer as yours | 20 min |
 | **3** | **Build the deck** | Your table's panels are all running on *your* work | 40 min |
 | **4** | **Make it fly itself** | It refreshes without you, and nothing sends | 15 min |
 
@@ -150,7 +152,34 @@ If `node` isn't there or the render fails, the panels still ran – ask for the 
 
 ## 2 · Argue with it
 
-**Done when:** the `[inferred]` and `[needs you]` lines say what you'd actually say, and a request you'd already run comes back different.
+**Done when:** you've asked it something real and recognised the answer as yours, and the `[inferred]` and `[needs you]` lines say what you'd actually say.
+
+### First, ask it something
+
+The page is one half of the twin. The other half is the conversation – **the page tells you what's waiting, and you ask it what to do about one.** Start there, because a wrong answer tells you which line to fix faster than reading the file does.
+
+Pick something off your own page and ask:
+
+```text
+Using my twin – what should I do about the oldest thing on Owed to me?
+```
+
+You'll get a position and a draft, not a list of options. Then try the ones that don't come from a panel at all:
+
+| Ask it | You get |
+| --- | --- |
+| *"Using my twin, triage what landed today."* | Everything sorted into what needs you, what's blocked, what's handled, what's noise |
+| *"What do I do about [a real thread]?"* | One course of action, a draft in your voice, and what it commits you to |
+| *"Draft a reply to [that request]."* | Something you could send, following your voice file |
+| *"What am I forgetting this week?"* | It reads your calendar and commitments together |
+
+::: tip Say the skill's name
+Scout only loads your twin when you name it – *"using my twin"*, *"ask my twin"*. Leave that out and you'll get an ordinary Scout answer, not your twin's.
+:::
+
+**Keep one of these answers.** It's your before-and-after for the rest of this step.
+
+### Then fix what made it wrong
 
 Ask to see what it built:
 
@@ -172,12 +201,16 @@ Fifteen sections, all filled from your real work, each tagged:
 
 > add: *"Check with Alex before I move anything he owns the concept for."*
 
-**Save a request and its answer first**, so you've got something to compare against. Then correct the file in the chat, and run the same request again word for word.
+Correct the file in the chat, then **run your saved request again, word for word.** If the answer moved, the rule is doing work.
 
 ::: tip What's worth adding
 Anything that changes what it does – a name, a date, a threshold, something you'd never agree to without checking. *"I value collaboration"* gives it nothing to do differently.
 
 **Stuck on what to say? Ask it.** *"What don't you know about how I work that would change your answers?"*
+:::
+
+::: details Nothing changed
+Two likely reasons. The line is too vague – give it a specific action, not a description. Or your request didn't need it: a rule about slipping deadlines won't move an answer that has nothing to do with dates.
 :::
 
 Then look at the page again. **The two shipped panels are a starting point, not a spec** – if `Owed to me` is full of things you don't care about, its `Decide` section is wrong for you:
@@ -303,8 +336,17 @@ It reads, re-runs every panel, rebuilds the page, and stops. Then check it actua
 Show me what the scheduled run did this morning.
 ```
 
+**Now you have the loop.** The page is waiting when you sit down, and anything on it you can hand straight back to the twin:
+
+```text
+Using my twin – work through what's on my command center this morning.
+Tell me what needs me today and draft the two that are easiest to clear.
+```
+
+That's the whole thing running: it reads overnight, tells you what's waiting, and drafts what you ask it to. You decide what goes out.
+
 ::: warning Nothing sends on its own
-It reads and it renders. It never replies, posts or sends – not from a scheduled run, not at any other point.
+It reads, renders and drafts. It never replies, posts or sends – not from a scheduled run, not at any other point.
 :::
 
 ## Push it further
@@ -331,6 +373,7 @@ Pick the next thing you want to prove.
 | Someone else's panel breaks on your work | It's got something specific baked in. Find the assumption and take it out |
 | Drafts sound like a stranger | Your voice file is descriptions, not real samples. Get actual sent mail in it |
 | It answers in general terms | Your rules aren't specific enough – go back to step 2 |
+| You get an ordinary Scout answer | Name the twin – *"using my twin"*. It only loads when you ask for it |
 
 ---
 

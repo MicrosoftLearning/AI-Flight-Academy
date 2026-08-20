@@ -70,6 +70,7 @@ making them repeat themselves.
 | "run the \<name\> panel" | Run that one panel, write its data, re-render |
 | "add a panel", "build a panel for…" | **Write a panel.** Read `panels/PANEL-CONTRACT.md` first |
 | "triage what landed", "what needs me" | Sort what has arrived. See **Triage** |
+| "what should I do about the oldest thing on \<panel\>" | An item on the page. See **Working an item off the page** |
 | "draft a reply to…", "what do I do about…" | Answer one thing. See **Answer one thing** |
 | "add to my twin", "add a reference for…" | **Extend.** Write a new file into `references/` |
 | "show me my persona.md" | Print the file in the chat. Never make them open it |
@@ -412,6 +413,21 @@ Nothing further. If the answer is not close at hand the item is **Needs me**.
 item, and the draft for anything Handled. Keep Noise to sender, subject and three words.
 
 Finish with one line: what you would do first, and why.
+
+## Working an item off the page
+
+The page and the conversation are the same twin. When they refer to something the page is showing –
+*"the oldest thing on Owed to me"*, *"the second one on I owe them"* – treat it as a normal request:
+
+1. Read the relevant `data/<id>.json` to find the item they mean.
+2. Retrieve the underlying thread, then follow **Answer one thing**.
+3. Do not re-run the panel. They asked about an item, not for a refresh.
+
+If the reference is ambiguous, list the panel's items with their labels and ask which. Never guess
+at which one they meant.
+
+After drafting, **do not update the page.** The item stays on it until the next refresh finds it
+resolved – the page reports what is true, not what has been discussed.
 
 ## Answer one thing
 
