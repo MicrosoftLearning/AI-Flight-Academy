@@ -39,11 +39,11 @@ Today you write it down as files you own, and get **an agent that works the way 
 | **2** | **Push on it** – ask it real questions, fix what's wrong | 15 min |
 | **3** | **Build on it** – pick a direction, split the work across your table | 60 min |
 
-Steps 1 and 2 alone. Step 3 as a table.
+You'll do steps 1 and 2 on your own. Step 3 is where the table works together, and it's most of the session.
 
 ## Before you start
 
-**Check Scout is signed in and Work IQ is live.** Ask *"what's on my calendar tomorrow?"* – a real answer means you're set.
+**Check Scout is signed in and Work IQ is live.** Ask *"what's on my calendar tomorrow?"* – if you get a real answer back, you're ready to go.
 
 **Your data stays yours.** Your twin only sees what you can already see, its files stay on your machine, and nothing goes out without your approval.
 
@@ -72,15 +72,15 @@ Ask Scout – it's building with you, so describe what's wrong and let it fix it
 `SKILL.md` isn't the whole skill. Templates and a worked example sit beside it, and dragging the file alone leaves them behind.
 :::
 
-Then say:
+Then start it off:
 
 ```text
 Set up my twin.
 ```
 
-Your twin says what it's about to read and waits for a yes. Then it reads your sent mail, Teams messages and about a month of calendar, and drafts two files – **with the evidence under each line**, tagged by how directly it knows.
+Your twin tells you what it's about to read and waits for a yes. It reads your sent mail, your Teams messages and about a month of calendar, then drafts two files – **with the evidence under each line**, tagged by how directly it knows.
 
-**Skim, don't polish.** Fix what's plainly wrong – wrong role, wrong manager, a rule you'd never follow – and let it write:
+**Skim, don't polish.** Fix what's plainly wrong – wrong role, wrong manager, a rule you'd never follow – and let your twin write the files:
 
 ```text
 my-twin/
@@ -90,9 +90,9 @@ my-twin/
     setup.md        ← how far setup got
 ```
 
-The rest gets fixed in step 2, once you've seen which lines change an answer. Past 25 minutes, let the draft stand and move on.
+You'll fix the rest in step 2, once you've seen which lines actually change an answer. If you're still going at 25 minutes, let the draft stand and move on.
 
-It finishes by **triaging what actually landed** – so you leave this step having watched it work.
+Your twin finishes by **triaging what actually landed** in your mail and Teams, so you leave this step having watched it work rather than having read about it.
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>
@@ -112,7 +112,7 @@ It finishes by **triaging what actually landed** – so you leave this step havi
 Using my twin, what should I do about [the thing you've been putting off]?
 ```
 
-You'll get a position and a draft, not a menu of options. Then try the rest:
+You'll get a position and a draft, not a menu of options. Then try the rest of what your twin does:
 
 | Ask | You get |
 | --- | --- |
@@ -122,22 +122,22 @@ You'll get a position and a draft, not a menu of options. Then try the rest:
 | *"What don't you know about how I work?"* | Its own gaps, named – it's read a month of your work |
 
 ::: tip Name the twin, or you'll get plain Scout
-Trigger it with *"using my twin"*, *"ask my twin"*, *"triage what landed"* or *"what am I forgetting"*.
+Trigger it with *"using my twin"*, *"ask my twin"*, *"triage what landed"* or *"what am I forgetting"*. If an answer comes back generic, that's usually why.
 
 Prefer a different name? Say *"rename my twin to Ada"*, then start a new session so Scout picks it up.
 :::
 
 ### Fix the line behind the answer
 
-Take an answer you didn't like and trace it:
+Take an answer you didn't like and trace where it came from:
 
 ```text
 Which line made you say that?
 ```
 
-Fix that line in the chat – wherever it lives – then **re-run the same question, word for word**. If the answer moves, you've found a rule that does work.
+Fix that line in the chat – wherever it turns out to live – then **re-run the same question, word for word**. If the answer moves, you've found a rule that does real work.
 
-Then go looking:
+Once you've done one, go looking for the others:
 
 ```text
 Show me my persona.md.
@@ -151,9 +151,9 @@ Fifteen sections drawn from your real work, each tagged:
 | `[inferred]` | A reasonable read, but you never said it outright |
 | `[needs you]` | Nothing in your work reached this, so it wrote a starting point |
 
-**Start with `[inferred]` and `[needs you]`** – they reach furthest from the evidence. Don't work through all fifteen. Fix what's costing you an answer and leave the rest.
+**Start with `[inferred]` and `[needs you]`** – they reach furthest from the evidence, so they're the likeliest to be wrong. You don't need to work through all fifteen: fix whatever is costing you an answer and leave the rest for later.
 
-A line earns its place when it changes what your twin does: a name, a date, a threshold, something you'd never agree to without checking. *"I value collaboration"* changes nothing.
+A line earns its place when it changes what your twin does – a name, a date, a threshold, something you'd never agree to without checking first. *"I value collaboration"* is true and changes nothing.
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>
@@ -169,7 +169,7 @@ A line earns its place when it changes what your twin does: a name, a date, a th
 
 ### Pick a direction
 
-Six starting points. Take one, combine two, or build something specific to how you work.
+Six starting points below. Take one as it is, combine two, or build something specific to how you work.
 
 | | What it is | Start with |
 | --- | --- | --- |
@@ -196,11 +196,11 @@ Pick one direction, then **take one standalone question each** – one panel, on
 
 Split by question, not by layer. *"What's owed to me"*, *"what did I promise"*, *"what's gone quiet"* and *"what's on next week"* are four independent builds of one thing.
 
-Share the **prompt that worked**. Never share output – that's your mailbox.
+Share the **prompt that worked** – that's the useful part, and it carries none of your mailbox with it. Keep the output to yourself.
 
 ### Build in layers
 
-Get something running, then add one thing at a time:
+Get something running end to end before you make it good, then add one thing at a time:
 
 1. **The smallest version** – *"Build the smallest version that runs end to end. Start simple."*
 2. **Your rules** – *"Use my persona and voice files so the output takes a position and sounds like me."*
@@ -208,7 +208,7 @@ Get something running, then add one thing at a time:
 4. **A bound** – *"Cap this at [N days] and [N items] per run."*
 5. **The runtime** – *"If this needs JavaScript, use Scout's bundled Node under `resources/node`, not a bare `node`."*
 
-Specific beats vague, every time:
+The more specific your prompt, the less you'll have to undo afterwards:
 
 | Vague | Specific |
 | --- | --- |
