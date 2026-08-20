@@ -11,8 +11,17 @@ What have I asked for that never came back?
 
 ## Pull
 
-My sent mail and my Teams messages, last 21 days. For anything that looks like a request, pull the
-rest of that thread so the replies can be checked.
+Two sources, both required:
+
+- **Mail** – my sent items, last 21 days. For anything that looks like a request, pull the rest of
+  that thread so the replies can be checked.
+- **Teams** – my recent chats, most recently active first, and the messages I wrote in any chat
+  active inside the window.
+
+Skip meeting responses, comment notifications and automated mail – they are never requests, so they
+do not count toward `checked`.
+
+Report both counts in `sources`.
 
 ## Decide
 

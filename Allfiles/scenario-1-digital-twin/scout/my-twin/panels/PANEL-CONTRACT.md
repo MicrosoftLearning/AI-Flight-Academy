@@ -80,7 +80,8 @@ on every run.
 {
   "id": "owed-to-me",
   "generated": "2026-08-19T07:00:00-04:00",
-  "checked": 42,
+  "checked": 128,
+  "sources": { "mail": 96, "teams": 32 },
   "window": "last 21 days",
   "items": [
     {
@@ -97,12 +98,18 @@ on every run.
 | --- | --- |
 | `generated` | ISO timestamp of the run |
 | `checked` | How many items were examined. **Not** how many matched |
+| `sources` | One key per source named in **Pull**, with how many items came from each. A source you could not read is `0` – never omit the key |
 | `window` | The scope in plain words, so a stale panel is obvious |
 | `items` | Array, newest problem first unless **Decide** says otherwise. `[]` is a valid answer |
 | `error` | Only if the run failed. A one-line reason. Omit it otherwise |
 
 `checked` matters. A panel showing three items after examining four hundred messages is doing
 something very different from one that examined six, and the page shows both numbers.
+
+**`sources` matters more.** A panel whose **Pull** names mail and Teams, and which only ever reads
+mail, looks identical on the page to one that read both and found nothing. Report every named
+source, including the ones that came back empty or that you could not reach – the page shows a `0`
+so the gap is visible instead of silent.
 
 ---
 

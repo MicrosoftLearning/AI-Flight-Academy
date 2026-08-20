@@ -73,6 +73,17 @@ function loadData(id) {
   }
 }
 
+// A source reporting 0 is shown in warning colour: a panel that names a source
+// in its Pull and never reads it looks identical to one that read it and found
+// nothing, unless the page says so.
+function renderSources(sources) {
+  if (!sources || typeof sources !== "object") return "";
+  const parts = Object.entries(sources).map(([k, v]) =>
+    v ? `${esc(k)} ${v}` : `<span class="zero">${esc(k)} 0</span>`
+  );
+  return parts.length ? `<br>${parts.join(" · ")}` : "";
+}
+
 function renderItem(it) {
   const age =
     typeof it.age === "number"
@@ -105,7 +116,7 @@ function renderPanel(p) {
     d && !d.error
       ? `<footer>${esc(d.window ?? "")}${
           d.checked != null ? ` · ${d.checked} checked` : ""
-        }</footer>`
+        }${renderSources(d.sources)}</footer>`
       : "";
 
   return `<section class="panel" style="--accent:${p.accent}">
@@ -169,7 +180,8 @@ const html = `<!doctype html>
   .note { color:var(--dim); margin:0; font-size:.88rem; }
   .err { color:var(--hot); }
   footer { margin-top:.9rem; padding-top:.6rem; border-top:1px solid var(--line);
-    color:var(--dim); font-size:.75rem; }
+    color:var(--dim); font-size:.75rem; line-height:1.7; }
+  .zero { color:var(--hot); }
   .foot { margin-top:2rem; color:var(--dim); font-size:.78rem; }
   .empty-deck { color:var(--dim); }
 </style>

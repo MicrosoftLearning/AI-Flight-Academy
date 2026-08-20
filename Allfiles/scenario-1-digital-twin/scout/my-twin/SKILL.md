@@ -371,6 +371,30 @@ When asked to refresh or open it:
 **A panel that errors does not stop the run.** Record `"error"` in its JSON with a one-line reason,
 carry on with the rest, and say which one failed.
 
+### Read every source the Pull names
+
+A **Pull** that names mail and Teams means both. Reading only the cheap one and reporting a single
+count is the failure mode this section exists to prevent – it looks identical to a genuinely quiet
+three weeks.
+
+**Mail is one call. Teams is two, and that is why it gets skipped.** There is no cross-chat search,
+so:
+
+1. List the user's chats, most recently active first.
+2. For each chat active inside the window, pull its recent messages.
+3. Keep the ones the user wrote. Stop when chats fall outside the window.
+
+Work down from the most recently active. Twenty or so chats covers three weeks for most people;
+stop earlier when the chats stop being recent.
+
+**Count each source separately and report both** in `sources`. If a source could not be read at all,
+record `0` for it and say so in the chat – the page shows a zero, which is the signal to widen or
+fix the panel.
+
+**Mail is thinner than it looks.** Meeting responses, comment notifications, automated FYIs and
+calendar traffic are not commitments and not requests. Exclude them from `checked` rather than
+inflating the number, and expect real asks to be a small fraction of a mailbox.
+
 ## Writing a panel
 
 Read `panels/PANEL-CONTRACT.md` and follow it exactly. Then:
