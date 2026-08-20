@@ -76,7 +76,7 @@ Set up my twin.
 
 It tells you what it's about to read and waits for a yes. Then it reads your sent mail, your Teams messages and about a month of calendar, and comes back with a draft of two files – **with the evidence under each line.**
 
-**Skim it – don't polish it.** Fix anything badly wrong (wrong role, wrong manager, a rule you'd never follow) and let it write. You'll fix the rest in step 2, once you've seen which lines change an answer.
+**Skim it – don't polish it.** Fix what's wrong (wrong role, wrong manager, a rule you'd never follow) and let it write. You'll fix the rest in step 2, once you've seen which lines change an answer.
 
 ```text
 my-twin/
@@ -102,7 +102,7 @@ Past 20 minutes, let the draft stand and move on. Step 2 is where the correction
   <div class="table-check-icon">👥</div>
   <div class="table-check-body">
     <span class="table-check-label">Table check</span>
-    <p>What did it get right that you didn't expect? And what did it get badly wrong?</p>
+    <p>What did it get right that you didn't expect? And what did it get wrong?</p>
   </div>
 </div>
 

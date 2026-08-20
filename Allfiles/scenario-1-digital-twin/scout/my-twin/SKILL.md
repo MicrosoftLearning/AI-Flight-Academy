@@ -194,9 +194,9 @@ When two priorities collide: whoever is blocked wins.
 
 **End that same message with the question.** Do not send the draft and then ask separately.
 
-> This is what your work says about how you operate. Anything badly wrong?
+> This is what your work says about how you operate. What's wrong?
 
-Take their corrections. **One round, and keep it to what is badly wrong** – a wrong role, a wrong
+Take their corrections. **One round, and keep it to what is wrong** – a wrong role, a wrong
 name, a rule they would never follow. Do not walk them through all fifteen sections; the file gets
 corrected properly once they have seen it produce an answer they disagree with.
 
