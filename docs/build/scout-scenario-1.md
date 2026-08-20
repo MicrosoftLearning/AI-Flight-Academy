@@ -24,10 +24,9 @@ Today you get that written down as files you can read and argue with, and then y
 
 | | Step | Time |
 | --- | --- | --- |
-| **1** | **Install it** – it reads your work and writes itself | 15 min |
-| **2** | **Push on it** – see what it does, fix what's wrong | 10 min |
-| **3** | **Build your thing** – pick a direction, split it across the table | 70 min |
-| **4** | **Show it off** | 15 min |
+| **1** | **Install it** – it reads your work and writes itself | 20 min |
+| **2** | **Push on it** – see what it does, fix what's wrong | 15 min |
+| **3** | **Build your thing** – pick a direction, split it across the table | 60 min |
 
 Steps 1 and 2 alone. Step 3 as a table.
 
@@ -58,7 +57,7 @@ The **[Guides](/bricks/)** in the top nav are short how-tos for the Scout basics
 
 ## 1 · Install it
 
-**Done when:** it has read your work, written two files you've corrected, and run a real triage over your inbox.
+**Done when:** it has read your work, written two files you've corrected, and run a real triage over what landed in mail and Teams.
 
 1. Unzip the download. You'll get a folder called `my-twin`.
 2. In Scout, go to **Extensions** → **Import** and drag in the **folder**.
@@ -91,11 +90,11 @@ Then it runs a **live triage over what actually landed** – so you finish this 
 ::: warning It tags how well it knows each line
 `[observed]` was found in your work. `[inferred]` is a reasonable read it can't point at directly. `[needs you]` means your work didn't cover it, so it wrote a starting point.
 
-Don't work through the tags now – step 2 does that with a reason.
+Don't work through the tags now – step 2 is where you fix the ones that change an answer.
 :::
 
 ::: tip Running long?
-Past 20 minutes, let the draft stand and move on. Step 2 is where the corrections that matter happen.
+Past 25 minutes, let the draft stand and move on. Step 2 is where the corrections that matter happen.
 :::
 
 <div class="table-check">
@@ -136,10 +135,10 @@ Use a twin trigger phrase – *"using my twin"*, *"ask my twin"*, *"triage what 
 **Take an answer you didn't like** and find what caused it:
 
 ```text
-Which line in my persona made you say that?
+Which line made you say that?
 ```
 
-Then fix that line, in the chat, and **re-run the same question word for word.** If the answer moved, you've found a rule that does work.
+Then fix that line in the chat – whether it came from `persona.md`, `voice.md` or another reference – and **re-run the same question word for word.** If the answer moved, you've found a rule that does work.
 
 Once you've done one, go looking:
 
@@ -179,18 +178,26 @@ Six starting points. Take one, combine two, or build something completely custom
 
 | | What it is | Start with |
 | --- | --- | --- |
-| 📬 **A morning brief** · easiest | Runs before you're awake and leaves what needs you waiting. One scheduled command | *"Every weekday at 7am, triage what landed overnight and leave it somewhere I can read it."* |
-| 🏖️ **An out-of-office catch-up** | While you're away it sorts what arrives by what'll actually need you, so coming back is a list instead of 400 unread | *"Build me something that watches what arrives while I'm out and ranks it by what needs me first, so I have a catch-up list when I'm back."* |
+| 📬 **A morning brief** · easiest | Runs before you're awake and leaves what needs you waiting | *"Build a morning brief I can run once now, then schedule for weekdays at 7am. Triage what landed overnight and write the result somewhere local."* |
+| 🏖️ **An out-of-office catch-up** | Sorts what arrived while you were away by what'll actually need you, so coming back is a list instead of 400 unread | *"Build an out-of-office catch-up for [dates I was away]. Read mail and Teams from that window, rank what needs me first, and write a local catch-up list."* |
 | 💭 **A sounding board** | Talk an idea through with something that argues from your own rules and pushes where you'd push | *"Build me something I can think out loud at – it should ask what I'd ask, and use my persona to challenge the idea rather than agree with it."* |
 | 📊 **A dashboard** | A page you open in the morning: what's waiting, what's slipping, what you owe. One ships as an example | *"Show me the command center example, then build me one with panels for [what you care about]."* |
-| 🔌 **An MCP server** | Your twin as a tool VS Code Copilot can call. It runs locally over stdio – nothing hosted, no URLs | *"Build the smallest MCP server that exposes one twin question as a tool, and give me the mcp.json to point VS Code at it."* |
+| 🔌 **An MCP server** · hardest | Your twin as a tool VS Code Copilot can call. It runs locally over stdio – nothing hosted, no URLs | *"Build the smallest MCP server that exposes one twin question as a tool, and give me the mcp.json to point VS Code at it."* |
 | 🎯 **Yours** | Whatever your job actually runs on: approvals, escalations, renewals, handoffs | *"I want my twin to [what]. Work out what that needs and build the smallest version first."* |
 
 **Pick by pain, not novelty** – something you forgot, chased, or redid by hand last week.
 
+<div class="table-check">
+  <div class="table-check-icon">👥</div>
+  <div class="table-check-body">
+    <span class="table-check-label">Table check</span>
+    <p>Two minutes, round the table: what are you building, and what pain is it fixing? Say it out loud before anyone opens Scout.</p>
+  </div>
+</div>
+
 ### Split it across the table
 
-Pick one direction, then **each person owns a slice that works on its own** – one panel, one section of the brief, one kind of thing to rank, one question the sounding board asks. Everyone builds theirs against their own mail and you assemble at the end.
+Pick one direction, then **each person owns one standalone question** – one panel, one section of the brief, one ranking rule, one challenge the sounding board makes. **If it can't run on its own, it's too big.** Everyone builds theirs against their own mail and you assemble at the end.
 
 Split by question, not by layer: *"what's owed to me"*, *"what did I promise"*, *"what's gone quiet"*, *"what's on next week"* are four independent builds of the same thing.
 
@@ -204,6 +211,7 @@ Get something running first, then add one thing at a time:
 2. **Your rules** – *"Use my persona and voice files so the output takes a position and sounds like me."*
 3. **One addition** – *"That works. Now add [one thing]."*
 4. **A bound** – *"Cap this at [N days] and [N items] per run."*
+5. **The runtime** – *"If this needs JavaScript, use Scout's bundled Node under `resources/node`, not a bare `node`."*
 
 | Vague | Specific |
 | --- | --- |
@@ -241,9 +249,9 @@ Whatever you build, keep it drafting and waiting.
 1. **Give it a memory** – something it writes to as well as reads, tracking what it told you last time.
 2. **Make it stop** – a rule where it hands something back to you instead of drafting, and something that shows when it did.
 3. **Make it defend itself** – ask which file changed an answer, and why.
-4. **Give it to someone else** – have a teammate ask your twin something and see if the answer sounds like you.
-5. **Two twins** – yours and a teammate's, arguing the same decision.
-6. **Take it with you** – it's a folder of text files. The same twin runs in Cowork and VS Code Copilot.
+4. **Swap the question, not the answer** – hand a teammate your prompt or panel and have them run it against their own twin.
+5. **Two prompts, one question** – compare how two people shaped the same question, without either mailbox leaving its machine.
+6. **Take the rules with you** – `persona.md` and `voice.md` are plain text, so the same rules move to another altitude.
 
 ---
 
