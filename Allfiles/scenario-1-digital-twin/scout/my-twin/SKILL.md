@@ -300,8 +300,19 @@ off, so do not describe it – do it, and put the page in front of them.
 1. Read `panels/PANEL-CONTRACT.md`, then each file in `panels/`.
 2. Run each panel as written and save its result to `data/<id>.json` in the shape the contract sets.
 3. Run the renderer from the skill folder: `node tools/build.mjs`
-4. It writes `command-center.html` next to the skill. **Tell them the full path and that opening it
-   is the only file they ever touch.**
+4. It writes `command-center.html` next to the skill. **Give them the path** – see below – and say
+   that opening it is the only file they ever touch.
+
+### Always give the page path with forward slashes
+
+A path with backslashes is not clickable. Write it with `/` instead:
+
+```text
+C:/Users/<user>/.scout/m-skills/my-twin/command-center.html
+```
+
+Do this **every time you mention the page** – after setup, after a refresh, and after adding a
+panel.
 
 If `node` is not available, say so plainly, leave the JSON in place, and show the panel results in
 the chat instead. The panels still work; only the page is missing.
@@ -348,7 +359,8 @@ When asked to refresh or open it:
 3. Write each result to `data/<id>.json`. Overwrite the previous file.
 4. Run `node tools/build.mjs`.
 5. Report **one line per panel**: the panel name and how many items it found. Then give the path to
-   the page. Do not restate the page contents in the chat – the page is the output.
+   the page, with forward slashes. Do not restate the page contents in the chat – the page is the
+   output.
 
 **A panel that errors does not stop the run.** Record `"error"` in its JSON with a one-line reason,
 carry on with the rest, and say which one failed.
@@ -477,4 +489,5 @@ user that it is ready.
 - **Panel files carry no personal data.** They are meant to be shared; references and data are not.
 - Match their voice, not their typos or rushed phrasing.
 - Never tell them to open, edit or save a file, other than opening `command-center.html` to look.
+  Always give that path with forward slashes.
 - Keep `setup.md` accurate. A wrong phase is worse than no phase.
