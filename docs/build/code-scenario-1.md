@@ -16,11 +16,11 @@ Get a twin answering from a Python call in fifteen minutes, then build something
 
 ## What you're solving
 
-Copilot answers well. It just answers like anyone – because it doesn't know how *you* work.
+You already know how you work. Which trade-off you make when two things conflict, what you check before you commit, how the wording changes between a partner team and your own.
 
-Which trade-off you make when two things conflict, what you check before you commit, how you'd word it to a partner team versus your own. That knowledge only gets applied while you're sitting there applying it.
+None of that is written down anywhere a program can reach. So it only gets applied while you're sitting there applying it.
 
-Today you write it down as plain files, then call it from code. Once a program can put a question to your twin, it can ask at commit time, on a schedule, or from inside another agent – and get back what you would have said.
+Today you write it down as plain files and call it from code. Once a program can put a question to your twin, it can ask at commit time, on a schedule, or from inside another agent – and get back what you would have said.
 
 ## How this runs
 
