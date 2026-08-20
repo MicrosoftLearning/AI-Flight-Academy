@@ -4,7 +4,8 @@
 //   data/<id>.json  ->  what it last found (private, never leaves this machine)
 //   command-center.html                    (a local file, opened from disk)
 //
-// No dependencies and no build step: `node build.mjs` from this folder.
+// No dependencies and no build step. Run with Scout's bundled Node, which lives
+// under resources/node/ in Scout's install directory rather than on PATH.
 //
 // Adding a panel means adding a file to panels/ - nothing here needs changing.
 

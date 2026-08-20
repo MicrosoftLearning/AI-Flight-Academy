@@ -57,6 +57,6 @@ there's a worked reference, not because a page is the goal.
   chats; if someone's build reads far more than that, expect slow runs and say so early.
 - **`[needs you]` on the `Never:` line is correct.** The skill refuses to invent a boundary. It's
   the highest-value line a participant can fill in.
-- **If `node` is missing**, only the Command Center example is affected. The twin itself doesn't
-  need it.
+- **Scout ships its own Node**, under `resources/node/` in its install directory – participants
+  don't need to install anything. The skill is told to resolve that rather than a bare `node`.
 - Nothing sends, at any point, including from a scheduled run.

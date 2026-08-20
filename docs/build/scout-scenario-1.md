@@ -49,8 +49,6 @@ There are coaches moving around the room and an SME at every table. Wave one ove
 
 **Check you have this:** Microsoft Scout, signed in, with Work IQ working. Ask it *"what's on my calendar tomorrow?"* – if you get an answer, you're set.
 
-**And Node**, if you end up building something that runs: `node --version`. Anything 18 or above.
-
 **It uses your own mail and calendar.** It only ever sees what you can already see, the files your twin writes stay on your machine, and nothing sends unless you send it yourself.
 
 **Download this:**
@@ -304,7 +302,6 @@ Someone who knows you sees the output and recognises you in it. That beats any f
 | It answers in general terms | Your rules aren't specific enough – go back to step 2 |
 | Drafts sound like a stranger | Your voice file is descriptions, not real samples. Get actual sent mail in it |
 | Triage found almost nothing | Widen the window, and check it read Teams as well as mail |
-| `node` isn't installed | Skip the dashboard example, or ask Scout for a version that doesn't need it |
 | Your build is slow | It's reading too much per run. Bound the window and cap how many items it pulls |
 | A scheduled run does nothing | Get it working manually first, then schedule that exact thing |
 | You can't decide what to build | Take the dashboard. There's a working example, so you'll be editing rather than starting |

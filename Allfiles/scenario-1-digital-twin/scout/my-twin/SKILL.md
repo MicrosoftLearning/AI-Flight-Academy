@@ -442,6 +442,18 @@ Everything the twin already does is available to whatever gets built:
 **Prefer the twin's own routines over reimplementing them.** Something that needs "what landed
 today" should run **Triage**, not write a second triage.
 
+### Running anything that needs Node
+
+**Scout ships its own Node.** Use it rather than a bare `node`, which may be missing or may be an
+unrelated install:
+
+1. Resolve Scout's bundled runtime, inside its installation directory under `resources/node/`. The
+   binary lives there rather than on `PATH`.
+2. Quote the full path when you run it.
+3. Fall back to a bare `node` only if that fails, and say out loud that you did.
+
+Never hard-code a path from another machine – the install location differs per person.
+
 ### Keeping it cheap
 
 A thing that reads a lot every time it runs gets abandoned. Two rules:

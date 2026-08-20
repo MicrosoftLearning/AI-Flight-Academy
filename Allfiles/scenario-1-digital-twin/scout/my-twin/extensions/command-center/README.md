@@ -27,15 +27,16 @@ answer.
 
 ## Running it
 
+Ask the twin to refresh it. If you want to run it by hand, use Scout's bundled Node – it lives in
+Scout's installation directory under `resources/node/`, not on your `PATH`:
+
 ```powershell
 cd extensions/command-center
-node build.mjs
+& "<scout install>/resources/node/node.exe" build.mjs
 ```
 
 Prints one line per panel and writes `command-center.html` beside it. Panels with no JSON render as
 "never run" rather than failing, so the page always builds. No dependencies.
-
-Normally you don't run this by hand — ask the twin to refresh it.
 
 ## What ships
 
