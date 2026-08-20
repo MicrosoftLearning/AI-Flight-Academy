@@ -60,4 +60,5 @@ there's a worked reference, not because a page is the goal.
   the highest-value line a participant can fill in.
 - **Scout ships its own Node**, under `resources/node/` in its install directory – participants
   don't need to install anything. The skill is told to resolve that rather than a bare `node`.
-- Nothing sends, at any point, including from a scheduled run.
+- Nothing goes out without an explicit approval, and a scheduled run never sends at all – there's
+  nobody there to approve it.

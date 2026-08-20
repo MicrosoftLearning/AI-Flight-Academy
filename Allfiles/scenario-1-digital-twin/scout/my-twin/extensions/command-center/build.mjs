@@ -220,7 +220,7 @@ const html = `<!doctype html>
       ? `<div class="grid">${panels.map(renderPanel).join("\n")}</div>`
       : `<p class="empty-deck">No panels yet. Add one to <code>panels/</code>.</p>`
   }
-  <p class="foot">Local file. Nothing here is published, and nothing sends.</p>
+  <p class="foot">Local file. Nothing here is published.</p>
 </div>
 </body>
 </html>

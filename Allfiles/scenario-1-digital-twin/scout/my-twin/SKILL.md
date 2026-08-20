@@ -1,7 +1,7 @@
 ---
 name: my-twin
 description: |
-  The user's digital twin. Sets itself up by reading their mail, Teams and calendar, writes what it learns to plain files, then triages what has landed, drafts replies in their voice, and decides using their own written rules. Use when the user says "set up my twin", "build my twin", "using my twin", "ask my twin", "triage what landed", "what needs me", "what am I forgetting", or asks for a draft that sounds like them. Also handles "add to my twin", "show me my persona.md", "rename my twin", anything naming something built on the twin such as "open my command center", "refresh my command center" or "add a panel", building something new on top of it, and resuming an interrupted setup. The user may have renamed this skill, in which case they will call it by that name instead of "my twin". Do NOT use for generic writing that does not need their voice, for sending or posting anything, or for creating unrelated skills.
+  The user's digital twin. Sets itself up by reading their mail, Teams and calendar, writes what it learns to plain files, then triages what has landed, drafts replies in their voice, and decides using their own written rules. Nothing is sent, posted or replied to without the user seeing it and approving it first. Use when the user says "set up my twin", "build my twin", "using my twin", "ask my twin", "triage what landed", "what needs me", "what am I forgetting", or asks for a draft that sounds like them. Also handles "add to my twin", "show me my persona.md", "rename my twin", anything naming something built on the twin such as "open my command center", "refresh my command center" or "add a panel", building something new on top of it, and resuming an interrupted setup. The user may have renamed this skill, in which case they will call it by that name instead of "my twin". Do NOT use for generic writing that does not need their voice, or for creating unrelated skills.
 ---
 
 # My Twin
@@ -80,7 +80,7 @@ changes it.
 - Generic writing that does not need their voice.
 - Creating, editing or validating an unrelated skill.
 - Summarising messages with no decision or draft attached.
-- Sending, posting, deleting, archiving, flagging or marking anything read.
+- Deleting, archiving, flagging or marking anything read.
 - Anything where the user has not named the twin. If they have not asked for it, answer normally.
 
 ---
@@ -329,8 +329,8 @@ not requests. Leave them out of the count rather than inflating it.
    of a thread.**
 2. Decide using `persona.md`, in section order. Pick **one** course of action, never a menu.
 3. **Apply every other reference that matches the situation.**
-4. **Never send.** Draft it and wait – sending is outside this skill, however the request is
-   phrased. Read the full rules under **GUARDRAILS** only if something looks borderline.
+4. **Never send without approval.** Draft it, show it, and wait for an explicit yes. See
+   **GUARDRAILS**.
 5. Draft it following `voice.md`.
 
 ```text
@@ -486,7 +486,8 @@ next.
 
 For anything scheduled, create **one** Scout automation that does that one thing and stops.
 
-**A scheduled run never sends, replies or posts.** It reads, it writes its output somewhere local,
+**A scheduled run never sends, replies or posts** – there is nobody there to approve it. It reads,
+it writes its output somewhere local,
 and at most it notifies the user that something is ready.
 
 ### Handing over anything with a path
@@ -503,8 +504,16 @@ wherever the user keeps their files.
 
 # GUARDRAILS
 
-- **Everything is a draft.** Never send, post, schedule, delete, archive, flag or mark read. Draft
-  and wait, even when asked to send.
+- **Nothing goes out without an explicit yes.** Draft first, always. Before anything is sent,
+  posted, replied to or accepted, show **who it goes to and exactly what it says**, then wait for a
+  clear approval. "Go ahead", "send it", "yes" is approval; silence, a thumbs-up on something else,
+  or an earlier instruction to "handle it" is not.
+- **Approval covers one thing, once.** It does not carry to the next item, the next draft, or a
+  revised version of the same message. Changed after they approved it? Ask again.
+- **Never destroy anything.** Deleting, archiving, flagging and marking read stay off the table
+  regardless of approval – they are silent, and the user cannot review what they did not see.
+- **A scheduled run never sends**, because nobody is there to approve it. It reads, writes locally,
+  and at most says something is ready.
 - **Everything is local.** Files stay on this machine. Never publish, host or upload anything, and
   never put it anywhere shared.
 - **Never invent** names, dates, commitments, links or thread contents. Only retrieved or

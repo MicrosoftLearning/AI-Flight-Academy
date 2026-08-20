@@ -49,7 +49,7 @@ It's the thing you're building with and the thing that helps you build it. Coach
 
 **Check you have this:** Microsoft Scout, signed in, with Work IQ working. Ask it *"what's on my calendar tomorrow?"* – if you get an answer, you're set.
 
-**It uses your own mail and calendar.** It only ever sees what you can already see, the files your twin writes stay on your machine, and nothing sends unless you send it yourself.
+**It uses your own mail and calendar.** It only ever sees what you can already see, the files your twin writes stay on your machine, and nothing goes out without you approving it first.
 
 **Download this:**
 
@@ -243,8 +243,8 @@ Get something running first, then add one thing at a time:
 
 :::
 
-::: warning Nothing sends
-Whatever you build, keep it drafting and waiting.
+::: warning You approve before anything goes out
+Whatever you build, keep the last step yours – it drafts, shows you who it's going to and what it says, and waits for a yes.
 :::
 
 <div class="table-check">
