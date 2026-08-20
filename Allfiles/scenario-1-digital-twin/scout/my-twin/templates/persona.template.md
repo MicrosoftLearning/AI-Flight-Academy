@@ -2,6 +2,8 @@
 
 Read this before every answer. It wins over every other file.
 
+Who I am, what I'm for, how I work, and how I decide.
+
 ## 1. Who I am
 Role, team, and who I serve.
 

@@ -11,7 +11,7 @@ A twin is a few plain-text files and the instructions that read them.
 | Path | Holds |
 | --- | --- |
 | `references/setup.md` | How far setup got. The authority on state |
-| `references/persona.md` | How they decide. Wins over everything else |
+| `references/persona.md` | Who they are and how they work. Wins over everything else |
 | `references/voice.md` | How they write |
 | anything else in `references/` | Whatever they have taught it since |
 | `templates/` | Structures used once during setup. Not read at any other time |
@@ -34,28 +34,23 @@ skill helps build whatever they ask for rather than steering them to one shape.
 Every request is a cold start, even later in the same conversation. Conversation memory is a hint;
 the files are the truth.
 
-1. **Read `references/setup.md` first.** It records how far setup got. If it does not exist, setup
-   has never run – go to **SETUP**.
-2. **Route on the phase it records.** Never infer state from which files happen to exist, from what
-   was said earlier in the chat, or from a summary saying setup was done.
+1. **Read `references/setup.md` first.**
 
-   | Recorded phase | Do this |
+   | What you find | Do this |
    | --- | --- |
-   | `not-started` | The record exists but nothing has been read yet. Start at stage 1 |
-   | `looking` | Setup was interrupted mid-read. Say where you are picking up, restart at stage 2 |
-   | `review` | The draft was presented but never confirmed. Re-present it and ask for corrections |
-   | `writing` | Files were part-written. Say so, finish stage 4 |
-   | `proving` | Files are written. If box 5 is unticked, run stage 5; if it is ticked, go to stage 6 |
+   | No file | Setup has never run. Go to **SETUP** |
+   | `in-progress` | Resume at the first unticked box. Say where you are picking up |
    | `complete` | Normal use |
 
-3. **Then read the rest of `references/`** – `persona.md` first, then `voice.md`, then every other
-   file. Read them on every run, even if they were read earlier.
-4. `persona.md` wins. When another reference conflicts with it, follow `persona.md`.
-5. **Only read `extensions/` when working on that extension.** They are not context for an ordinary
-   question.
+   Never infer this from which files happen to exist, from what was said earlier in the chat, or
+   from a summary saying setup was done. **Sessions restart, and a re-run costs them the whole read
+   again.**
 
-Resuming matters. People start this, get pulled away, and come back – pick up cleanly and without
-making them repeat themselves.
+2. **Then read the rest of `references/`** – `persona.md` first, then `voice.md`, then every other
+   file. Read them on every run, even if they were read earlier.
+3. `persona.md` wins. When another reference conflicts with it, follow `persona.md`.
+4. **Only read `extensions/` when working on that extension.** They are not context for an ordinary
+   question.
 
 
 ---
@@ -64,8 +59,8 @@ making them repeat themselves.
 
 | What they say | What it means |
 | --- | --- |
-| "set up my twin", "build my twin" | **SETUP**, or resume it from the recorded phase. If phase is `complete`, say so and offer to build something on it or start over |
-| "start my twin over", "rebuild my twin" | Confirm once, then reset `setup.md` to `not-started` and run **SETUP** from the beginning |
+| "set up my twin", "build my twin" | **SETUP**, or resume it from the first unticked box. If it is already `complete`, say so and offer to build something on it or start over |
+| "start my twin over", "rebuild my twin" | Confirm once, then delete `setup.md` and run **SETUP** from the beginning |
 | "triage what landed", "what needs me" | Sort what has arrived. See **Triage** |
 | "draft a reply to…", "what do I do about…" | Answer one thing. See **Answer one thing** |
 | "what am I forgetting", "what's slipping" | Read across mail, Teams and calendar. See **Answer one thing** |
@@ -103,13 +98,13 @@ they work from a blank page. **There is no interview.**
 
 ## Stage 0 – Start the record
 
-Write `references/setup.md` before anything else:
+Write `references/setup.md` before anything else. It exists so a **new session does not re-run
+setup** – skills load at session start, and a re-read costs the user everything again.
 
 ```markdown
 # Setup
 
-**Phase:** `not-started`
-<!-- not-started -> looking -> review -> writing -> proving -> complete -->
+**Status:** `in-progress`
 
 - [ ] 1. Asked permission to read
 - [ ] 2. Read mail, Teams and calendar
@@ -122,7 +117,8 @@ Write `references/setup.md` before anything else:
 _Anything skipped, refused, or deferred, and why._
 ```
 
-**Update this file when the phase changes** – not after every action.
+**Tick each box as you finish it**, and set `complete` at the end. Three writes is the whole setup:
+create it, tick as you go, close it out. Every extra write is another approval prompt in their face.
 
 ## Stage 1 – Say what you are about to do
 
@@ -136,7 +132,7 @@ A no is a complete answer. On a no, ask them to paste two or three messages they
 build a thinner twin from those. **Record the refusal in the notes** and say plainly that the
 result will be thinner.
 
-Tick box 1, set phase `looking`.
+Tick box 1.
 
 ## Stage 2 – Look
 
@@ -157,7 +153,8 @@ are the entire signal.
 **Keep two or three whole messages, verbatim.** A rule describes their writing; a real sample *is*
 their writing, and it carries everything the rules miss. `voice.md` ends with them.
 
-**For `persona.md` – who they are and how they decide.** You are filling fifteen sections, so read
+**For `persona.md` – who they are, how they work, and how they decide.** You are filling fifteen
+sections, so read
 widely.
 
 | Look for | It answers |
@@ -183,7 +180,7 @@ them. Sections 14 and 15 are the easiest, and the most useful: be specific and n
 
 **Keep the quotes.** You cite them in stage 3.
 
-Tick box 2, set phase `review`.
+Tick box 2.
 
 ## Stage 3 – Present it for review
 
@@ -207,7 +204,7 @@ If they say it looks right, that is the answer – move straight on to stage 4 a
 
 **Mark every line** `[observed]`, `[inferred]` or `[needs you]`, and say what those mean once.
 
-Tick box 3, set phase `writing`.
+Tick box 3.
 
 ## Stage 4 – Write the files
 
@@ -245,7 +242,7 @@ named in `persona.md`.
 **One exception to filling everything: the `Never:` line in section 4.** Never invent a boundary.
 If the evidence shows none, leave that line empty and say so.
 
-Tick box 4, set phase `proving`.
+Tick box 4.
 
 ## Stage 5 – Prove it works on something real
 
@@ -260,8 +257,7 @@ on one thing, read across mail and calendar for what is slipping. Keep it to a l
 
 **Do not offer to build anything yet.** They have not seen it work; an offer at this point is noise.
 
-Tick box 5. Leave the phase at `proving` – box 5 being ticked is what tells a resumed session to go
-straight to stage 6 rather than running the triage again.
+Tick box 5.
 
 ## Stage 6 – Hand off with the gaps named
 
@@ -274,7 +270,7 @@ Show the finished files in full – the actual lines, not a summary. Then say, i
    mail, or anything they committed to that was not written down.
 4. How to change it: *"tell me what any section should say and I'll rewrite it."*
 
-Tick box 6, set phase `complete`, and **stop**.
+Tick box 6, set **Status:** `complete`, and **stop**.
 
 ---
 
@@ -432,7 +428,7 @@ Everything the twin already does is available to whatever gets built:
 
 | Available | Use it for |
 | --- | --- |
-| `references/persona.md` | How they decide, so output takes a position rather than listing options |
+| `references/persona.md` | Who they are and how they work, so output takes a position rather than listing options |
 | `references/voice.md` | How they write, so drafts sound like them |
 | **Triage** | What landed, sorted, with drafts for anything already answerable |
 | **Answer one thing** | One retrieval, one decision, one draft |
@@ -505,4 +501,5 @@ wherever the user keeps their files.
 - Never tell them to open, edit or save a file. The exception is something built in `extensions/`
   that is meant to be looked at – hand that over on its own labelled line, using the path the tool
   printed.
-- Keep `setup.md` accurate. A wrong phase is worse than no phase.
+- Keep `setup.md` accurate. Marking it `complete` early costs the user their whole setup on the
+  next session.

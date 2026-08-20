@@ -22,8 +22,6 @@ Today you get that written down as files you can read and argue with, and then y
 
 ## How this runs
 
-**The twin is the starting line, not the finish.** You spend 25 minutes getting something accurate, then an hour building whatever you want with it.
-
 | | Step | Time |
 | --- | --- | --- |
 | **1** | **Install it** – it reads your work and writes itself | 15 min |
@@ -31,18 +29,10 @@ Today you get that written down as files you can read and argue with, and then y
 | **3** | **Build your thing** – pick a direction, split it across the table | 70 min |
 | **4** | **Show it off** | 15 min |
 
-**Steps 1 and 2 you do alone.** **Step 3 is the table**, and it's most of the session.
+Steps 1 and 2 alone. Step 3 as a table.
 
-::: tip There's no right answer to step 3
-This isn't a lab with a known ending. You get a working twin and a menu of directions, and what you build is your call – the menu is there to give you fast starting points.
-
-The only thing that makes a build good: **you'd actually open it on Monday.**
-:::
-
-::: tip When you get stuck, ask Scout
-Scout is the thing you're building with **and** the thing that helps you build it. Any time you're unsure what to type, or something doesn't behave, say so in the chat.
-
-There are coaches moving around the room and an SME at every table. Wave one over rather than stalling.
+::: tip Ask Scout when you're stuck
+It's the thing you're building with and the thing that helps you build it. Coaches are in the room and there's an SME at every table.
 :::
 
 ## Before you start
@@ -86,28 +76,26 @@ Set up my twin.
 
 It tells you what it's about to read and waits for a yes. Then it reads your sent mail, your Teams messages and about a month of calendar, and comes back with a draft of two files – **with the evidence under each line.**
 
-**It doesn't interview you.** It reads first and shows you a draft with the evidence under each line.
-
-**Skim it – don't polish it.** Fix anything badly wrong (wrong role, wrong manager, a rule you'd never follow) and let it write. You'll fix the rest in step 2, when you've seen which lines actually change an answer.
+**Skim it – don't polish it.** Fix anything badly wrong (wrong role, wrong manager, a rule you'd never follow) and let it write. You'll fix the rest in step 2, once you've seen which lines change an answer.
 
 ```text
 my-twin/
   references/
-    persona.md      ← how you decide
+    persona.md      ← who you are and how you work
     voice.md        ← how you write
-    setup.md        ← how far it got, so it can pick up if you get pulled away
+    setup.md        ← what it's done so far
 ```
 
-Then it runs a **live triage over what actually landed** – so you finish this step having watched it work, not having read about it.
+Then it runs a **live triage over what actually landed** – so you finish this step having watched it work.
 
 ::: warning It tags how well it knows each line
-Every line is tagged with how directly it knows. `[observed]` was found in your work. `[inferred]` is a reasonable read it can't point at directly. `[needs you]` means your work didn't cover it, so it wrote something to get you started.
+`[observed]` was found in your work. `[inferred]` is a reasonable read it can't point at directly. `[needs you]` means your work didn't cover it, so it wrote a starting point.
 
-Don't go through the tags now – step 2 does that with a reason.
+Don't work through the tags now – step 2 does that with a reason.
 :::
 
 ::: tip Running long?
-If you're past 20 minutes, let the draft stand as-is and move on. Nothing here is permanent, and step 2 is where the corrections that matter happen.
+Past 20 minutes, let the draft stand and move on. Step 2 is where the corrections that matter happen.
 :::
 
 <div class="table-check">
@@ -121,8 +109,6 @@ If you're past 20 minutes, let the draft stand as-is and move on. Nothing here i
 ## 2 · Push on it
 
 **Done when:** you've asked it three things, and fixed the line behind an answer you didn't like.
-
-Ten minutes. **This is where you correct it** – now that you can see which lines are doing the work.
 
 ### Ask it things
 
@@ -185,47 +171,33 @@ Anything that changes what it does – a name, a date, a threshold, something yo
 
 **Done when:** you've got something running that uses your twin, and you'd open it again tomorrow.
 
-Seventy minutes. **You have a twin that knows how you work and a tool that writes code from prompts** – so the question isn't what you're allowed to build, it's what's worth building.
-
 ### Pick a direction
 
 Six starting points. Take one, combine two, or ignore all of them.
 
 | | What it is | Start with |
 | --- | --- | --- |
-| 📊 **A dashboard** | A page you open in the morning: what's waiting, what's slipping, what you owe. One ships as an example – open it, then make it yours | *"Show me the command center example, then build me one with panels for [what you care about]."* |
+| 📊 **A dashboard** | A page you open in the morning: what's waiting, what's slipping, what you owe. One ships as an example | *"Show me the command center example, then build me one with panels for [what you care about]."* |
 | ⌨️ **A command** | `twin triage`, `twin draft` – your twin in the terminal, no chat window | *"Build me a CLI that runs my twin's triage and prints it in the terminal."* |
 | 📬 **A morning briefing** | Runs before you're awake, leaves what needs you waiting | *"Every weekday at 7am, triage what landed overnight and leave it somewhere I can read it."* |
 | 🤝 **Meeting prep** | Name a meeting, get who's in it, what you owe them, what got decided last time | *"Build me something that preps me for a meeting – who's attending, what I owe each of them, what we agreed last time."* |
-| 🔌 **An MCP server** · ambitious | Your twin as a tool other agents can call. Pick this if someone at your table writes code – and build the smallest possible version | *"Build the smallest MCP server that exposes one twin question as a tool."* |
+| 🔌 **An MCP server** · ambitious | Your twin as a tool other agents can call. Take this if someone at your table writes code | *"Build the smallest MCP server that exposes one twin question as a tool."* |
 | 🎯 **Yours** | Whatever your job actually runs on: approvals, escalations, renewals, handoffs | *"I want my twin to [what]. Work out what that needs and build the smallest version first."* |
 
-::: tip How to pick in under two minutes
-**Pick by pain, not novelty.** Something you forgot, chased, redid, or checked by hand last week. If two ideas tie, take the one you could demo in an hour.
-
-If nothing comes to mind, take the dashboard – there's a working example to start from, so you'll be editing rather than deciding.
-:::
+**Pick by pain, not novelty** – something you forgot, chased, or redid by hand last week. Stuck between two, take the one you could demo in an hour. Stuck entirely, take the dashboard: there's a working example to edit.
 
 ### Split it across the table
 
-You're each running against your own mail, so there's nothing to pool. **Split the build, not the data.**
+Pick one direction, then **each person owns a slice that works on its own** – one panel, one briefing section, one command, one meeting-prep question. Everyone builds theirs against their own mail and you assemble at the end.
 
-Pick one direction as a table. Then **each person owns a whole slice that works on its own** – one panel, one briefing section, one command, one meeting-prep question, one trigger. Everyone builds theirs against their own inbox, and you assemble at the end.
+Split by question, not by layer: *"what's owed to me"*, *"what did I promise"*, *"what's gone quiet"*, *"what's on next week"* are four independent builds of the same thing.
 
-That way nobody is waiting on anyone else's code to start, and four slices exist by the time you demo.
-
-Share the **prompt that worked**, the **file shape**, and **how you fixed it when it broke**. Never share the output – that's your mailbox.
-
-::: tip If your table has one build and four people
-Split by question, not by layer. *"What's owed to me"*, *"what did I promise"*, *"what's gone quiet"*, *"what's on next week"* are four independent pieces of the same thing, and each is buildable alone in an hour.
-:::
+Share the **prompt that worked** and **how you fixed it when it broke**. Never share output – that's your mailbox.
 
 ### Work in small pieces
 
 ::: warning Get something running in the first fifteen minutes
-Whatever you're building, make the first version do almost nothing – then add one thing at a time. **One addition per prompt.**
-
-A build that does one thing well beats a design that's still unfinished at the demo.
+Make the first version do almost nothing, then add **one thing per prompt.**
 :::
 
 Three things worth saying to Scout as you go:
@@ -242,7 +214,7 @@ That works. Now add [one thing].
 How much is this reading every time it runs? Keep it under [a window] and cap it.
 ```
 
-That last one matters more than it looks. **Anything that reads too much on every run will be slow and brittle** – bound what it reads and it stays fast enough to keep using.
+That last one matters – anything reading too much per run gets slow and brittle.
 
 ::: details What "working" looks like, per direction
 
@@ -258,7 +230,7 @@ That last one matters more than it looks. **Anything that reads too much on ever
 :::
 
 ::: warning Nothing sends
-Whatever you build, keep it drafting and waiting. That's the difference between something you'd leave running and something you'd switch off.
+Whatever you build, keep it drafting and waiting.
 :::
 
 <div class="table-check">
@@ -277,10 +249,6 @@ Sixty to ninety seconds. Show:
 - [ ] **One thing it got right about you** that a generic assistant wouldn't have
 - [ ] **The rule behind it** – which line in your files made that happen
 - [ ] **What you'd build next** if you had another hour
-
-::: tip What lands in a demo
-Someone who knows you sees the output and recognises you in it. That beats any feature.
-:::
 
 ## Push it further
 
