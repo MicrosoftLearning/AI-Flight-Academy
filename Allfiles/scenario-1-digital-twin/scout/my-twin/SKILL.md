@@ -18,6 +18,7 @@ what they owe other people.
 | anything else in `references/` | Whatever they have taught it since |
 | `panels/PANEL-CONTRACT.md` | The shape every panel must have. Read before writing one |
 | `panels/*.md` | One file per panel – a standing question and how to answer it |
+| `templates/` | Structures used once during setup. Not read at any other time |
 | `data/*.json` | The last answer each panel produced. Rebuilt, never hand-written |
 | `tools/build.mjs` | Renders panels + data into `command-center.html` |
 
@@ -228,58 +229,8 @@ the whole reason you looked first.
 The tags are the honesty. A twin that presents an `[inferred]` line as fact is worse than one that
 says how far it reached.
 
-```markdown
-# Persona
-
-Read this before every answer. It wins over every other file.
-
-## 1. Who I am
-Role, team, and who I serve.
-
-## 2. The impact I'm trying to create
-What changes if I do this job well.
-
-## 3. What success looks like
-How I know it went well.
-
-## 4. My non-negotiables
-Values I will not trade. **Never:** the specific things I never do without checking first.
-
-## 5. When priorities conflict
-What wins, and what gets to slip. The most useful section in this file.
-
-## 6. The skill that would change my performance most
-What I'm working on getting better at.
-
-## 7. What motivates me
-Why I do this.
-
-## 8. My strengths
-What I'm relied on for.
-
-## 9. What drains me, or what I regret
-The work that costs me most, and what I wish I'd done differently.
-
-## 10. My preferred tone and workstyle
-How I want output to read, and how I like to work. Detail lives in `voice.md`.
-
----
-
-## 11. Before I commit
-What I check, and who with, before a date or a number goes out.
-
-## 12. My bar
-What I send back rather than ship.
-
-## 13. What gives in a bad week
-What gets cut first when everything slips.
-
-## 14. The people I work with most
-Each name, what they need from me, and how I talk to them.
-
-## 15. What's live right now
-Projects in flight, and the dates I've already committed to.
-```
+**Read `templates/persona.template.md`** – the fifteen sections and what each one is for. Copy its
+structure into `references/persona.md` and fill it. Read it now; it is not needed at any other time.
 
 **Sections 1 to 10 are the persona** – who they are and what they're for. **11 to 15 are the
 working context** – the operational detail that turns a persona into something that can actually
@@ -443,7 +394,9 @@ Finish with one line: what you would do first, and why.
 The page and the conversation are the same twin. When they refer to something the page is showing –
 *"the oldest thing on Owed to me"*, *"the second one on I owe them"* – treat it as a normal request:
 
-1. Read the relevant `data/<id>.json` to find the item they mean.
+1. Read the relevant `data/<id>.json` to find the item they mean. **That file is enough** – do not
+   open the panel definition in `panels/`, which describes how the panel is built and says nothing
+   about this item.
 2. Retrieve the underlying thread, then follow **Answer one thing**.
 3. Do not re-run the panel. They asked about an item, not for a refresh.
 
@@ -460,7 +413,8 @@ resolved – the page reports what is true, not what has been discussed.
    of a thread.**
 2. Decide using `persona.md`, in section order. Pick **one** course of action, never a menu.
 3. **Apply every other reference that matches the situation.**
-4. Check **Guardrails** before writing anything that would be sent.
+4. **Never send.** Draft it and wait – sending is outside this skill, however the request is
+   phrased. Read the full rules under **GUARDRAILS** only if something looks borderline.
 5. Draft it following `voice.md`.
 
 ```text
