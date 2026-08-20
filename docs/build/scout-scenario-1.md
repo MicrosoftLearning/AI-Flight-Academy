@@ -25,11 +25,11 @@ That combination is why this scenario works here: it can read your real work *an
 
 ## What you're solving
 
-Scout can already see your work. What it can't see is **you** – how you decide when two things collide, what you refuse to send without checking, how your writing changes between your manager and a partner team.
+Scout can already do your work – on your machine, across your repos, into your real mail and calendar. Files, code, git, whatever the job needs. What it can't do is any of it **as you**: decide which of two priorities wins, refuse to send the thing you'd check first, shift its writing from your manager to a partner team.
 
 So every session starts with you re-explaining yourself. Work IQ closes some of that gap by inference, but you can't read what it inferred, correct it, or take it anywhere.
 
-Today you write that down as files you own. **The result is less an assistant than a second you** – something that answers the way you would, in your words, from your rules. What you'd do with one of those is step 3.
+Today you write that down as files you own. **Less an assistant than a second you** – an agent that works the way you do: decides which of two priorities wins, writes in your voice, and checks what you'd check before anything goes out.
 
 ## How this runs
 
