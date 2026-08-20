@@ -186,7 +186,7 @@ Six starting points. Take one, combine two, or build something completely custom
 | 🔌 **An MCP server** · ambitious | Your twin as a tool other agents can call. Take this if someone at your table writes code | *"Build the smallest MCP server that exposes one twin question as a tool."* |
 | 🎯 **Yours** | Whatever your job actually runs on: approvals, escalations, renewals, handoffs | *"I want my twin to [what]. Work out what that needs and build the smallest version first."* |
 
-**Pick by pain, not novelty** – something you forgot, chased, or redid by hand last week. Stuck between two, take the one you could demo in an hour. Stuck entirely, take the dashboard: there's a working example to edit.
+**Pick by pain, not novelty** – something you forgot, chased, or redid by hand last week.
 
 ### Split it across the table
 
@@ -194,29 +194,22 @@ Pick one direction, then **each person owns a slice that works on its own** – 
 
 Split by question, not by layer: *"what's owed to me"*, *"what did I promise"*, *"what's gone quiet"*, *"what's on next week"* are four independent builds of the same thing.
 
-Share the **prompt that worked** and **how you fixed it when it broke**. Never share output – that's your mailbox.
+Share the **prompt that worked**. Never share output – that's your mailbox.
 
-### Work in small pieces
+### Build it in layers
 
-::: warning Get something running in the first fifteen minutes
-Make the first version do almost nothing, then add **one thing per prompt.**
-:::
+Get something running first, then add one thing at a time:
 
-Three things worth saying to Scout as you go:
+1. **The smallest version** – *"Build the smallest version that runs end to end. Start simple."*
+2. **Your rules** – *"Use my persona and voice files so the output takes a position and sounds like me."*
+3. **One addition** – *"That works. Now add [one thing]."*
+4. **A bound** – *"Cap this at [N days] and [N items] per run."*
 
-```text
-Start simple – I'll ask for more.
-```
-
-```text
-That works. Now add [one thing].
-```
-
-```text
-How much is this reading every time it runs? Keep it under [a window] and cap it.
-```
-
-That last one matters – anything reading too much per run gets slow and brittle.
+| Vague | Specific |
+| --- | --- |
+| *"Build me a dashboard"* | *"A page with one panel: things I asked for in the last 21 days that never got a reply, oldest first."* |
+| *"Make it check Teams"* | *"Also read my 15 most recently active chats and count them separately from mail."* |
+| *"Make it better"* | *"Show which of my rules decided each item."* |
 
 ::: details What "working" looks like, per direction
 
