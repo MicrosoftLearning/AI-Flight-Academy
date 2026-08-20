@@ -175,7 +175,7 @@ Anything that changes what it does – a name, a date, a threshold, something yo
 
 ### Pick a direction
 
-Six starting points. Take one, combine two, or ignore all of them.
+Six starting points. Take one, combine two, or build something completely custom to how you work.
 
 | | What it is | Start with |
 | --- | --- | --- |
