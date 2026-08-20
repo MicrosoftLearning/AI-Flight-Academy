@@ -16,15 +16,15 @@ Get a twin answering from a Python call in fifteen minutes, then build something
 
 ## What you're solving
 
-Copilot can already do your work – across your repos, your files, your terminal. What it can't do is any of it **as you**: block the change you'd block, ask the question you always ask, write the message the way you'd write it.
+Copilot writes what you ask it for. It doesn't know what you'd refuse.
 
-Written down, that becomes something a program can call. And once a program can call it, your twin stops being a chat window and starts being a component – a hook, a service, a tool other agents can reach.
+Your standards live in your head – the thing you always check, the question you ask on every review, the change you'd send back without reading the rest. They only run when you're at the keyboard.
 
-## What makes this the Code altitude
-
-**Whatever you build has to run without a chat window.** Your output is a command, a hook, a server, a scheduled job, or a local process.
+Today you write them down as plain files, then call them from code. Once a program can put a question to your twin, it can ask at commit time, on a schedule, or from inside another agent – and get back what you would have said.
 
 ## How this runs
+
+**Whatever you build has to run without a chat window.** Your output is a command, a hook, a server, a scheduled job, or a local process – that's the bar, and it's the only rule.
 
 | | Step | Time |
 | --- | --- | --- |
