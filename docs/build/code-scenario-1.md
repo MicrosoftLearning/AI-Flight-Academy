@@ -241,4 +241,3 @@ Your twin drafts, blocks, flags and reports. Sending, committing and posting sta
 ---
 
 [← Back to start](/) · [What this scenario is about](/scenarios/scenario-1)
-
