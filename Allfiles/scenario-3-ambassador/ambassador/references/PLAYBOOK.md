@@ -2,8 +2,13 @@
 
 *This is the program, written down. It is fictional - see `program-data/DISCLAIMER.md`.*
 
-The Ambassador program recognizes people who **make other people better at their jobs**. It is not
-an output leaderboard and it is not a popularity contest.
+Contoso's AI Skilling Ambassadors are volunteers across nine regions who help colleagues use the
+company's AI tools: office hours, community answers, mentoring, peer coaching, and the reusable
+guides and localization aids other people build on.
+
+The program recognizes people who **make other people better at their jobs**. It is not an output
+leaderboard and it is not a popularity contest. Recognition is the only currency the program has, so
+a recommendation has to be defensible.
 
 Anyone reading this should be able to work out why a given person got the recommendation they did.
 

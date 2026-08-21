@@ -14,9 +14,10 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 <div class="brief">
   <span class="brief-badge">The handoff</span>
-  <p class="brief-lead">You've inherited someone's half-finished ambassador program.</p>
-  <p>It runs, and it sounds completely sure of itself: all 72 candidates ranked, each one handed a rung and a next action. It's scoring them on delivery - business impact, execution reliability, leadership signals.</p>
-  <p>But the program exists to find the people who make everyone around them better - whose work gets reused, who unblocked somebody, whose name comes up when a peer explains how they got there. That evidence all shipped with it. None of it gets read.</p>
+  <p class="brief-lead">Contoso's AI Skilling Ambassador program has to pick its next cycle, and the person who ran it left halfway through.</p>
+  <p>It's volunteer work. 72 people across nine regions run office hours, answer questions in the community, mentor one-on-one, and write the quickstart guides everyone else leans on. Recognition is the only thing the program has to give back, so who gets named matters.</p>
+  <p>What they left behind runs, and it's confident: all 72 ranked, each one handed a rung and a next action. It scores on business impact, execution reliability and leadership signals, the three numbers already sitting on the spreadsheet.</p>
+  <p>The evidence for what an ambassador actually does - whose guide got reused, who unblocked somebody, whose name a peer brings up - shipped in eight files it never opens.</p>
   <p class="brief-ask">Make it find the right people, and be able to show why. How you do that is yours.</p>
   <ul class="brief-stats">
     <li><strong>9</strong> data files, <strong>1</strong> read</li>
@@ -27,13 +28,13 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 ## What you'll walk out with
 
-A skill that reads more than it was given, and something built on top of it that a community manager would actually open.
+A skill that reads the evidence files it currently skips, plus one output a community manager could act on Monday morning.
 
 | What you make | What it does |
 | --- | --- |
 | **A program that reads evidence** | Recommends people the original ranking couldn't see, and names the evidence behind each one |
 | **A playbook you extended** | `PLAYBOOK.md` is the program written down - your rules go in it, and they travel |
-| **Something built on it** | A shortlist, a brief, a watch list, an audit - whatever your table decides is worth having |
+| **An output with names in it** | A shortlist, a manager brief, a watch list or a fairness audit, each line carrying its evidence |
 
 ## How this runs
 
@@ -41,9 +42,9 @@ A skill that reads more than it was given, and something built on top of it that
 | --- | --- | --- |
 | **1** | **Run it and catch it being wrong** - find who it ranked too high | 15 min |
 | **2** | **Teach it to read** - add evidence, watch who moves | 20 min |
-| **3** | **Build something on it** - pick a direction, split the work | 60 min |
+| **3** | **Build one output** - pick a direction, split it across the table | 60 min |
 
-Steps 1 and 2 are quick and you do them on your own. **Step 3 is the session** - that's where the table splits up and builds.
+Do steps 1 and 2 on your own. In step 3 the table picks one output and each person takes a piece of it.
 
 ::: tip When you're stuck, ask Cowork
 Cowork is the thing you're building with **and** the thing that helps you build it. Unsure what to type, or something misbehaves? Say so in the chat - or wave over a coach rather than stalling.
@@ -158,15 +159,15 @@ The **Playbook** in `references/PLAYBOOK.md` is the program: the ladder, the rul
   </div>
 </div>
 
-## 3 · Build something on it
+## 3 · Build one output
 
-**Done when:** there's an output your table would use, not just a better list.
+**Done when:** you have a shortlist, brief, watch list or audit with names in it, and each name carries the evidence behind it.
 
-A better ranking is a better ranking. It isn't yet a thing anybody opens on a Monday.
+A ranking tells you the order. It doesn't tell a community manager who to invite this week, who to check on, or who to justify to their manager.
 
 ### Pick a direction
 
-Seven starting points. Take one, combine two, or build something the list obviously needs and nobody thought of.
+Seven starting points. Take one, combine two, or name something the program is missing and build that instead.
 
 | | What it is | Start with |
 | --- | --- | --- |
@@ -178,7 +179,7 @@ Seven starting points. Take one, combine two, or build something the list obviou
 | 🎖️ **Their own view** | What a candidate would see about themselves - which is a hard test of whether the reasoning holds up | *"Write what one candidate would see about their own standing: where they are, why, and what would move them up."* |
 | 🎯 **Yours** | Whatever your table thinks this program is missing | *"The program needs [what]. Work out what that takes and build the smallest version first."* |
 
-**Pick by what would actually get opened**, not by what's most impressive to describe.
+**Pick the one your table would still use next cycle**, not the one that sounds most impressive.
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>
@@ -196,7 +197,7 @@ Split by question, not by layer. *"Who's rising"*, *"who's gone quiet"*, *"who's
 
 ### Build in layers
 
-Get something running before you make it good:
+Get one real name on screen before you add anything:
 
 1. **The smallest version** - *"Build the smallest version that produces real output. Start simple."*
 2. **The evidence** - *"Now make every line carry the evidence behind it and name what you didn't read."*

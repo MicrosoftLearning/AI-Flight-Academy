@@ -10,17 +10,19 @@ This scenario is drafted and being tested. Details may change before the event.
 
 ## The problem
 
-One person runs a community program with more people in it than they can hold in their head. The job is to work out who's earned recognition, who should be invited in, who's ready for something bigger, and who's gone quiet - then do something about each one.
+Contoso runs an **AI Skilling Ambassador program**. Volunteers across nine regions help their colleagues actually use the AI tools the company rolled out: they run office hours, answer questions in the community, mentor one-on-one, coach peers through a first agent build, and write the quickstart guides and localization aids everyone else leans on.
 
-That work happens in a spreadsheet today. So it happens on whoever's numbers are already being collected: delivery, reliability, visible leadership. Those numbers reward the people producing the most output.
+None of it is anyone's day job. Recognition is the only thing the program has to give back, and it decides who gets a facilitation slot, who gets nominated, and who quietly stops showing up.
 
-The program isn't looking for the most output. It's looking for the people who **make other people better** - whose sessions get repeated, whose templates get reused, whose name comes up when someone explains how they got unstuck. That signal exists in the data. It's just not in the column anybody's ranking on.
+Picking the next cycle happens in a spreadsheet. So it happens on whichever numbers are already collected: delivery, reliability, visible leadership. Those reward the people producing the most output.
+
+The program isn't looking for the most output. It's looking for the people who **make other people better** - whose sessions get repeated, whose templates get reused, whose name comes up when someone explains how they got unstuck. That signal is in the data. It just isn't in the column anybody's ranking on.
 
 Both groups produce impressive numbers. Only one produces ambassadors.
 
 ## What you start with
 
-**A half-built program.** Somebody wired up the scoring and stopped. It runs, and it's confidently wrong:
+**A half-built program**, left behind by whoever ran the last cycle. It runs, and it's confidently wrong:
 
 - It scores on three columns (business impact, execution reliability, leadership signals) and ignores four more sitting in the same rows: peer support, knowledge sharing, community contribution, multiplier behavior.
 - Nine data files ship with it. It reads one.
@@ -28,15 +30,13 @@ Both groups produce impressive numbers. Only one produces ambassadors.
 
 Run it and someone with excellent delivery numbers and thin community evidence lands near the top - their own watchout line says *"limited evidence of peer enablement or community lift."* The top rung ends up holding 16 of 72 people.
 
-Everything you need to fix it is already in the folder. Nothing tells you how.
+The eight ignored files and the playbook rules are enough to fix it. Which evidence counts, and how much, is your call.
 
 ## What 'done' looks like
 
-Two things, and the second is the session.
-
 **Make it find the right people.** Teach it to read the evidence it's been ignoring, and show your work - a change counts when you can name who moved because of it.
 
-**Then build something worth opening.** A better ranking is still just a ranking. A shortlist someone acts on, a brief per manager, a watch list of who's gone quiet, an audit of whether the outcomes are defensible, a page you check on a Monday - that's the output.
+**Then build the thing that runs it.** A shortlist someone acts on, a brief per manager, a watch list of who's gone quiet, an audit of whether the outcomes are defensible, a page you check on a Monday. Names in it, evidence behind each one.
 
 There's no single right answer here, and tables that build the same thing have probably missed the point. You're given the recognition ladder (Explorer, Connector, Multiplier, **Flight Lead**, Review Hold) and the eight rules. What counts as evidence, and what you build on top, is yours.
 

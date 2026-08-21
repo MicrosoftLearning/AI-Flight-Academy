@@ -9,7 +9,7 @@ cowork:
 
 # Ambassador
 
-The Ambassador program, as far as it has been built.
+Contoso's AI Skilling Ambassador program, as far as it has been built.
 
 **Read `references/PLAYBOOK.md` before answering anything.** It holds the ladder, the rules, and
 what a recommendation has to contain. It is the authority - this file only says how to run.

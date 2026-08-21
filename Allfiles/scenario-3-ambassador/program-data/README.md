@@ -1,6 +1,8 @@
 # Program data
 
-Everything the Ambassador program has on its candidates. Nine files, ~2,000 rows, 72 people.
+Everything Contoso's AI Skilling Ambassador program has on its candidates: 72 volunteers across nine
+regions who run office hours, answer community questions, mentor, coach, and write the guides other
+people reuse. Nine files, ~2,000 rows.
 
 | File | Rows | What it holds |
 | --- | --- | --- |

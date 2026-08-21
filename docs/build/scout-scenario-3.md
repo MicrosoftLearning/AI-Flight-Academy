@@ -14,10 +14,11 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 <div class="brief">
   <span class="brief-badge">The handoff</span>
-  <p class="brief-lead">You've inherited someone's half-finished ambassador program.</p>
-  <p>It runs, and it sounds completely sure of itself: all 72 candidates ranked, each one handed a rung and a next action. It's scoring them on delivery - business impact, execution reliability, leadership signals.</p>
-  <p>But the program exists to find the people who make everyone around them better - whose work gets reused, who unblocked somebody, whose name comes up when a peer explains how they got there. That evidence all shipped with it. None of it gets read.</p>
-  <p class="brief-ask">Make it find the right people, then give it somewhere to live. A chat answer disappears when you close the window; Scout can build the thing that doesn't.</p>
+  <p class="brief-lead">Contoso's AI Skilling Ambassador program has to pick its next cycle, and the person who ran it left halfway through.</p>
+  <p>It's volunteer work. 72 people across nine regions run office hours, answer questions in the community, mentor one-on-one, and write the quickstart guides everyone else leans on. Recognition is the only thing the program has to give back, so who gets named matters.</p>
+  <p>What they left behind runs, and it's confident: all 72 ranked, each one handed a rung and a next action. It scores on business impact, execution reliability and leadership signals, the three numbers already sitting on the spreadsheet.</p>
+  <p>The evidence for what an ambassador actually does - whose guide got reused, who unblocked somebody, whose name a peer brings up - shipped in eight files it never opens.</p>
+  <p class="brief-ask">Make it find the right people, then build the thing that runs it: a board, a weekly scan, a brief per manager.</p>
   <ul class="brief-stats">
     <li><strong>9</strong> data files, <strong>1</strong> read</li>
     <li><strong>4</strong> scored columns ignored</li>
@@ -36,15 +37,15 @@ For this scenario the second one matters most: Scout can read the program data *
 
 ## What you'll walk out with
 
-A program that reads evidence, and a surface that runs it - locally, on your machine.
+A program that reads evidence, and something that runs it on your machine without you retyping the question.
 
 | What you make | What it does |
 | --- | --- |
 | **A program that reads evidence** | Recommends people the original ranking couldn't see, and names the evidence behind each one |
 | **A playbook you extended** | `PLAYBOOK.md` is the program written down - your rules go in it, and they travel |
-| **Something that runs** | A board you open, a scan that runs on a schedule, a brief that lands - built against the data |
+| **A board, a scan or a brief** | Opens in a browser, runs on a schedule, or writes one page per manager, straight from the data |
 
-**Everything stays local.** You're building muscle here, not shipping a product - nothing is hosted and nothing leaves your machine.
+**Everything stays local.** Nothing is hosted, nothing leaves your machine, and nothing is sent to anyone in the data.
 
 ## How this runs
 
@@ -52,9 +53,9 @@ A program that reads evidence, and a surface that runs it - locally, on your mac
 | --- | --- | --- |
 | **1** | **Run it and catch it being wrong** - find who it ranked too high | 15 min |
 | **2** | **Teach it to read** - add evidence, watch who moves | 20 min |
-| **3** | **Give it somewhere to live** - pick a direction, split the work | 60 min |
+| **3** | **Build the thing that runs it** - pick a direction, split it across the table | 60 min |
 
-Steps 1 and 2 are on your own. Step 3 is where the table works together, and it's most of the session.
+Do steps 1 and 2 on your own. In step 3 the table picks one output and each person takes a piece of it.
 
 ## Before you start
 
@@ -167,15 +168,15 @@ Two rules in the playbook aren't implemented at all - **R-004** (prior recogniti
   </div>
 </div>
 
-## 3 · Give it somewhere to live
+## 3 · Build the thing that runs it
 
-**Done when:** something's running that you'd open again tomorrow.
+**Done when:** you can rerun it from the same data without retyping the question, and it comes back with names and evidence.
 
-This is what Scout adds. A better ranking in a chat window is gone when you close it - Scout can write the thing that keeps producing it.
+Ask Scout in a chat and the answer dies with the window. Have Scout write the page, the script or the scheduled job instead, and next cycle starts with a command.
 
 ### Pick a direction
 
-Seven starting points. Take one, combine two, or build something the program obviously needs.
+Seven starting points. Take one, combine two, or name something the program is missing and build that instead.
 
 | | What it is | Start with |
 | --- | --- | --- |
@@ -187,7 +188,7 @@ Seven starting points. Take one, combine two, or build something the program obv
 | 🎖️ **Their own view** | What a candidate would see about themselves - a hard test of whether the reasoning holds | *"Generate what one candidate would see about their own standing: where they are, why, and what would move them up."* |
 | 🎯 **Yours** | Whatever your table thinks this program is missing | *"The program needs [what]. Work out what that takes and build the smallest version first."* |
 
-**Pick by what would actually get opened**, not by what's most impressive to describe.
+**Pick the one your table would still use next cycle**, not the one that sounds most impressive.
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>
@@ -203,11 +204,11 @@ Pick one direction, then **take one standalone piece each** - one panel, one sec
 
 Split by question, not by layer. *"Who's ready"*, *"who's gone quiet"*, *"who's been recognized and stalled"* and *"who applied but isn't ready"* are four independent builds of one board.
 
-Share the **prompt that worked** - that's the useful part.
+Share the **prompt that worked** so the next person doesn't rediscover it.
 
 ### Build in layers
 
-Get something running end to end before you make it good, then add one thing at a time:
+Get one real name on screen end to end before you add anything, then add one thing at a time:
 
 1. **The smallest version** - *"Build the smallest version that runs end to end. Start simple."*
 2. **The evidence** - *"Now make every line carry the evidence behind it and name what wasn't read."*

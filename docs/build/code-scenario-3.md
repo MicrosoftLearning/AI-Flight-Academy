@@ -14,10 +14,11 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 <div class="brief">
   <span class="brief-badge">The handoff</span>
-  <p class="brief-lead">You've inherited someone's half-finished ambassador program.</p>
-  <p>The plumbing is done: <code>data.py</code> loads all nine data files and attaches every activity, comment and contribution to the right candidate. The judgment isn't. <code>evaluate.py</code> scores people on three delivery columns, ignores the rest, and ranks with total confidence.</p>
-  <p>But the program exists to find the people who make everyone around them better - whose work gets reused, who unblocked somebody, whose name comes up when a peer explains how they got there. That evidence is loaded and sitting right there, unscored.</p>
-  <p class="brief-ask">Replace the judgment, then build something that runs without you.</p>
+  <p class="brief-lead">Contoso's AI Skilling Ambassador program has to pick its next cycle, and the person who ran it left halfway through.</p>
+  <p>It's volunteer work. 72 people across nine regions run office hours, answer questions in the community, mentor one-on-one, and write the quickstart guides everyone else leans on. Recognition is the only thing the program has to give back, so who gets named matters.</p>
+  <p>The plumbing they left is fine: <code>data.py</code> loads all nine data files and attaches every activity, comment and contribution to the right candidate. <code>evaluate.py</code> is the problem. It scores three delivery columns, ignores the rest, and ranks with total confidence.</p>
+  <p>The evidence for what an ambassador actually does - whose guide got reused, who unblocked somebody, whose name a peer brings up - is loaded and sitting right there, unscored.</p>
+  <p class="brief-ask">Replace <code>evaluate.py</code>, then build a command, a scheduled job or a generated report that runs the result without a chat window.</p>
   <ul class="brief-stats">
     <li><strong>9</strong> data files loaded, <strong>1</strong> scored</li>
     <li><strong>4</strong> scored columns ignored</li>
@@ -28,14 +29,14 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 ## How this runs
 
-**Whatever you build has to run without a chat window.** A command, a scheduled job, a report generator, a local service - that's the bar, and it's the only rule.
+**Build a command, a scheduled job, a report generator or a local service.** Anything that runs without a chat window counts, and that's the only rule.
 
 | | Step | Time |
 | --- | --- | --- |
 | **1** | **Run it and see the hole** | 15 min |
 | **2** | **Build something headless** - pick a direction, split it across your table | 85 min |
 
-Step 1 is on your own. Step 2 is where the table works together, and it's most of the session.
+Do step 1 on your own. In step 2 the table picks one output and splits it across scoring, evidence readers, and the output itself.
 
 ## Before you start
 
@@ -109,7 +110,7 @@ Open `program/evaluate.py`. The top of the file is the entire problem:
 - Eight of the nine files are loaded by `data.py` and never touched here.
 - **R-004** (prior recognition isn't a reason to recognize again) and **R-006** (repeated activity with weak quality doesn't outrank quieter high-multiplier work) are in `PLAYBOOK.md` and not in the code.
 
-`PLAYBOOK.md` is what the program is supposed to do. `evaluate.py` is what it does. The gap between them is the work.
+`PLAYBOOK.md` says what the program is supposed to do. `evaluate.py` does something narrower. Closing that distance is step 2.
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>
@@ -121,7 +122,7 @@ Open `program/evaluate.py`. The top of the file is the entire problem:
 
 ## 2 · Build something headless
 
-**Done when:** something runs from a command, produces output you'd act on, and nobody had to type into a chat window.
+**Done when:** one command reads the data and writes a shortlist, brief, audit or diff, with names and evidence in it.
 
 Fixing the weights takes five minutes and is not the exercise. **Replacing `evaluate.py` is the floor, not the goal** - the goal is what you build once the recommendations are worth trusting.
 
@@ -129,7 +130,7 @@ One constraint to keep you past a refactor: **whatever you build has to answer a
 
 ### Pick a direction
 
-Seven starting points. Take one, combine two, or build what the program obviously needs.
+Seven starting points. Take one, combine two, or name something the program is missing and build that instead.
 
 | | What it is | Where to start |
 | --- | --- | --- |
