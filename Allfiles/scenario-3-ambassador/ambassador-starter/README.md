@@ -26,7 +26,7 @@ No dependencies. Standard library only.
 ## What it does
 
 Reads `CandidateProfiles.csv`, scores on three columns, assigns a rung from the ladder,
-proposes a next action. Everything it prints is a proposal — nothing is sent and no
+proposes a next action. Everything it prints is a proposal - nothing is sent and no
 decision is recorded.
 
 ## What it does not do
@@ -37,7 +37,7 @@ ignored for that person.
 
 Specifically:
 
-- Four columns in `CandidateProfiles.csv` are never read — `PeerSupport`,
+- Four columns in `CandidateProfiles.csv` are never read - `PeerSupport`,
   `KnowledgeSharing`, `CommunityContribution`, `MultiplierBehavior`
 - 866 activity records, 283 peer comments, 390 contributions, 275 credentials, 128
   recognition events and 41 applications are all loaded and unused

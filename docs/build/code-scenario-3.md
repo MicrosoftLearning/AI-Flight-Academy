@@ -1,5 +1,5 @@
 ---
-title: The Ambassador – Code
+title: The Ambassador - Code
 ---
 
 <!-- markdownlint-disable MD013 MD025 MD033 -->
@@ -10,13 +10,13 @@ title: The Ambassador – Code
 Scenario 3 is still being built and tested. Steps, downloads, and screenshots may change before the event.
 :::
 
-**You'll build this in code – VS Code, GitHub Copilot, and Python.**
+**You'll build this in code - VS Code, GitHub Copilot, and Python.**
 
 <div class="brief">
   <span class="brief-badge">The handoff</span>
   <p class="brief-lead">You've inherited someone's half-finished ambassador program.</p>
   <p>The plumbing is done: <code>data.py</code> loads all nine data files and attaches every activity, comment and contribution to the right candidate. The judgment isn't. <code>evaluate.py</code> scores people on three delivery columns, ignores the rest, and ranks with total confidence.</p>
-  <p>But the program exists to find the people who make everyone around them better — whose work gets reused, who unblocked somebody, whose name comes up when a peer explains how they got there. That evidence is loaded and sitting right there, unscored.</p>
+  <p>But the program exists to find the people who make everyone around them better - whose work gets reused, who unblocked somebody, whose name comes up when a peer explains how they got there. That evidence is loaded and sitting right there, unscored.</p>
   <p class="brief-ask">Replace the judgment, then build something that runs without you.</p>
   <ul class="brief-stats">
     <li><strong>9</strong> data files loaded, <strong>1</strong> scored</li>
@@ -28,22 +28,22 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 ## How this runs
 
-**Whatever you build has to run without a chat window.** A command, a scheduled job, a report generator, a local service – that's the bar, and it's the only rule.
+**Whatever you build has to run without a chat window.** A command, a scheduled job, a report generator, a local service - that's the bar, and it's the only rule.
 
 | | Step | Time |
 | --- | --- | --- |
 | **1** | **Run it and see the hole** | 15 min |
-| **2** | **Build something headless** – pick a direction, split it across your table | 85 min |
+| **2** | **Build something headless** - pick a direction, split it across your table | 85 min |
 
 Step 1 is on your own. Step 2 is where the table works together, and it's most of the session.
 
 ## Before you start
 
 ::: warning The data is fictional
-Invented people, invented scores, invented feedback. Nothing here describes a real person and no real program is being modeled — which is what makes it safe to argue about in a room. `program-data/DISCLAIMER.md` has the details.
+Invented people, invented scores, invented feedback. Nothing here describes a real person and no real program is being modeled - which is what makes it safe to argue about in a room. `program-data/DISCLAIMER.md` has the details.
 :::
 
-**Python 3.10+.** The starter has no dependencies — standard library only.
+**Python 3.10+.** The starter has no dependencies - standard library only.
 
 <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-starter.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">📦</span>
@@ -53,7 +53,7 @@ Invented people, invented scores, invented feedback. Nothing here describes a re
 </a>
 
 ::: tip Two places to get unstuck
-Ask Copilot – it's building with you, so paste the error and let it fix it. For general mechanics the **[Guides](/bricks/)** are short how-tos. Coaches are in the room and every table has an SME.
+Ask Copilot - it's building with you, so paste the error and let it fix it. For general mechanics the **[Guides](/bricks/)** are short how-tos. Coaches are in the room and every table has an SME.
 :::
 
 ---
@@ -92,7 +92,7 @@ Look one person up in full:
 python run.py --who "Alex Kim"
 ```
 
-You get their score, their evidence, and a `NOT READ:` line listing what was loaded and skipped for that person — unused score columns, activities, peer feedback, contributions, credentials, recognition history, applications. Then read their `Watchouts` field in `CandidateProfiles.csv`.
+You get their score, their evidence, and a `NOT READ:` line listing what was loaded and skipped for that person - unused score columns, activities, peer feedback, contributions, credentials, recognition history, applications. Then read their `Watchouts` field in `CandidateProfiles.csv`.
 
 The rest of the CLI:
 
@@ -123,7 +123,7 @@ Open `program/evaluate.py`. The top of the file is the entire problem:
 
 **Done when:** something runs from a command, produces output you'd act on, and nobody had to type into a chat window.
 
-Fixing the weights takes five minutes and is not the exercise. **Replacing `evaluate.py` is the floor, not the goal** — the goal is what you build once the recommendations are worth trusting.
+Fixing the weights takes five minutes and is not the exercise. **Replacing `evaluate.py` is the floor, not the goal** - the goal is what you build once the recommendations are worth trusting.
 
 One constraint to keep you past a refactor: **whatever you build has to answer a question `run.py` can't answer today.**
 
@@ -135,10 +135,10 @@ Seven starting points. Take one, combine two, or build what the program obviousl
 | --- | --- | --- |
 | 🖥️ **A board** · easiest | Generate a local HTML page: who's ready, who needs a decision, what changed since last run | Write alongside `run.py`, output a single self-contained file you open in a browser |
 | 🔍 **Recruitment** | Find the emerging people the ranking buries, and draft an invitation for each | Rank on peer and community evidence, filter to low overall rank, template the output |
-| ⏰ **A scheduled scan** | Runs on a timer and reports the *diff* — who moved rung, who's newly ready | Persist each run, compare against the last one. This needs somewhere to write state |
+| ⏰ **A scheduled scan** | Runs on a timer and reports the *diff* - who moved rung, who's newly ready | Persist each run, compare against the last one. This needs somewhere to write state |
 | 🧭 **Manager's view** | One file per manager: their people, each rung, one next action each | Group by the org field, generate per group |
-| ⚖️ **Fairness audit** | Whether outcomes skew by region, org, level or tenure — and which rungs can't be explained | A second pass over the results, not a change to scoring |
-| 🎖️ **Their own view** | What a candidate would see about themselves, generated per person | Hardest test of your reasoning — if it can't be shown to them, it isn't defensible |
+| ⚖️ **Fairness audit** | Whether outcomes skew by region, org, level or tenure - and which rungs can't be explained | A second pass over the results, not a change to scoring |
+| 🎖️ **Their own view** | What a candidate would see about themselves, generated per person | Hardest test of your reasoning - if it can't be shown to them, it isn't defensible |
 | 🎯 **Yours** | Whatever your table thinks this program is missing | Smallest version that runs first |
 
 **Pick by what would actually get run**, not by what's most impressive to describe.
@@ -158,9 +158,9 @@ Seven starting points. Take one, combine two, or build what the program obviousl
 | | Owns |
 | --- | --- |
 | **The scoring** | One person replaces `evaluate.py` and nobody else touches it |
-| **A reader** | One person per evidence file — turn raw records into a signal the scorer can use |
-| **The output** | The board, the brief, the export — builds against whatever the scorer returns |
-| **The check** | The fairness audit or the diff — runs *on* the results, so it can be built in parallel |
+| **A reader** | One person per evidence file - turn raw records into a signal the scorer can use |
+| **The output** | The board, the brief, the export - builds against whatever the scorer returns |
+| **The check** | The fairness audit or the diff - runs *on* the results, so it can be built in parallel |
 
 The reader-per-file split is the one that scales: `PeerFeedback.csv`, `ProgramContributions.csv`, `CommunityActivities.csv` and `RecognitionHistory.csv` are four independent builds, and each one changes who's on the list.
 
@@ -168,17 +168,17 @@ Agree the shape of what the scorer returns early, then work against it. That's t
 
 ### Build in layers
 
-1. **The smallest version** — get one new signal into the ranking and see who moves.
-2. **Names, not adjectives** — print who moved after every change. *"More balanced"* isn't checkable; *"Drew Foster entered the top ten"* is.
-3. **One addition** — one file, one rule, one panel at a time.
-4. **Make it explain itself** — every recommendation should carry the evidence and the rule that decided it. That's **R-005**.
+1. **The smallest version** - get one new signal into the ranking and see who moves.
+2. **Names, not adjectives** - print who moved after every change. *"More balanced"* isn't checkable; *"Drew Foster entered the top ten"* is.
+3. **One addition** - one file, one rule, one panel at a time.
+4. **Make it explain itself** - every recommendation should carry the evidence and the rule that decided it. That's **R-005**.
 
 ::: tip Let Copilot do the plumbing
-`data.py` already hands you every evidence record attached to its candidate, so most of what's left is judgment rather than parsing. Paste `PLAYBOOK.md` into Copilot and ask it to implement **R-006** against the data you've got — then check whether the result actually moved the right people.
+`data.py` already hands you every evidence record attached to its candidate, so most of what's left is judgment rather than parsing. Paste `PLAYBOOK.md` into Copilot and ask it to implement **R-006** against the data you've got - then check whether the result actually moved the right people.
 :::
 
 ::: warning Nothing gets sent
-Invitations, nominations and recognition are drafted and held for a person to read. That's **R-005**, and it's in the playbook — the program proposes, a human decides. Keep that in whatever you build.
+Invitations, nominations and recognition are drafted and held for a person to read. That's **R-005**, and it's in the playbook - the program proposes, a human decides. Keep that in whatever you build.
 :::
 
 <div class="table-check">
@@ -191,12 +191,12 @@ Invitations, nominations and recognition are drafted and held for a person to re
 
 ## Push it further
 
-1. **Make it defend a call** — a command that takes a name and explains why they didn't make the list. R-008 applies.
-2. **Break it on purpose** — write a candidate who should obviously be recognized, add them to the data, and see whether your version finds them.
-3. **Test the rules** — a test per playbook rule, so a scoring change that breaks R-002 fails loudly.
-4. **Give it a memory** — persist each run so the program can report change rather than state.
-5. **Take the playbook with you** — `PLAYBOOK.md` is plain text and moves to another altitude unchanged.
-6. **Swap tables** — hand another table your scorer and have them run it against the same data. Different rules, different ambassadors.
+1. **Make it defend a call** - a command that takes a name and explains why they didn't make the list. R-008 applies.
+2. **Break it on purpose** - write a candidate who should obviously be recognized, add them to the data, and see whether your version finds them.
+3. **Test the rules** - a test per playbook rule, so a scoring change that breaks R-002 fails loudly.
+4. **Give it a memory** - persist each run so the program can report change rather than state.
+5. **Take the playbook with you** - `PLAYBOOK.md` is plain text and moves to another altitude unchanged.
+6. **Swap tables** - hand another table your scorer and have them run it against the same data. Different rules, different ambassadors.
 
 ---
 

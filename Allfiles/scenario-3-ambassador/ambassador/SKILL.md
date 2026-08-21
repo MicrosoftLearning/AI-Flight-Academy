@@ -12,7 +12,7 @@ cowork:
 The Ambassador program, as far as it has been built.
 
 **Read `references/PLAYBOOK.md` before answering anything.** It holds the ladder, the rules, and
-what a recommendation has to contain. It is the authority — this file only says how to run.
+what a recommendation has to contain. It is the authority - this file only says how to run.
 
 ## What this currently does
 
@@ -49,7 +49,7 @@ else  -> Review Hold
 Those were the three numbers already being reported, so those are the three it uses.
 
 **Say the weights out loud when you present results**, so whoever is reading can see what drove
-them — including which columns did not count.
+them - including which columns did not count.
 
 ## Known gaps
 
@@ -58,14 +58,14 @@ not pretend to evidence you have not read.
 
 - **Only `CandidateProfiles.csv` is read.** Activities, peer feedback, contributions, credentials,
   recognition history and applications are all sitting there unused.
-- **Four columns in that file are never scored** — `PeerSupport`, `KnowledgeSharing`,
+- **Four columns in that file are never scored** - `PeerSupport`, `KnowledgeSharing`,
   `CommunityContribution` and `MultiplierBehavior`. They are right there in the same rows.
 - **The summary scores are somebody's earlier read**, not measurements. Nothing here checks them
   against what people actually did.
 - **The weighting is asserted, not justified.** `BusinessImpact` carries three times the weight of
   community contribution, and nothing in the playbook supports that.
-- **R-004 is not implemented** — prior recognition is not checked at all.
-- **R-006 is not implemented** — activity volume and activity quality are indistinguishable here.
+- **R-004 is not implemented** - prior recognition is not checked at all.
+- **R-006 is not implemented** - activity volume and activity quality are indistinguishable here.
 - **Nobody outside `CandidateProfiles.csv` can be found.** Anyone whose strength lives in the
   evidence files is invisible to this.
 
@@ -74,7 +74,7 @@ not pretend to evidence you have not read.
 The user will ask for more. When they do:
 
 - **A new rule or definition** goes in `references/PLAYBOOK.md`. The playbook is the program.
-- **A new capability** — reading another data file, a new kind of check, a new output — goes in its
+- **A new capability** - reading another data file, a new kind of check, a new output - goes in its
   own `references/*.md`, opening with one line saying when it applies.
 - After any change, **re-run and say who moved**, by name. A change that surfaces someone new is the
   point; a change that only reorders the same names probably did not do much.

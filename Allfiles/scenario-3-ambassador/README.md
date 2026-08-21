@@ -1,4 +1,4 @@
-# Scenario 3 – The Ambassador
+# Scenario 3 - The Ambassador
 
 Everything participants download for Scenario 3.
 
@@ -18,6 +18,6 @@ That copy is made at pack time, so there is only one copy in the repo.
 
 ## The data
 
-Synthetic, and built with deliberate traps — see `program-data/DISCLAIMER.md`. The one that
+Synthetic, and built with deliberate traps - see `program-data/DISCLAIMER.md`. The one that
 matters: **Alex Kim** has near-top output numbers and the thinnest community evidence behind them.
 Any naive scoring puts Alex near the top, and the data contains four independent ways to notice.

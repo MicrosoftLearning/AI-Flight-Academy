@@ -1,6 +1,6 @@
 # Ambassador program playbook
 
-*This is the program, written down. It is fictional — see `program-data/DISCLAIMER.md`.*
+*This is the program, written down. It is fictional - see `program-data/DISCLAIMER.md`.*
 
 The Ambassador program recognizes people who **make other people better at their jobs**. It is not
 an output leaderboard and it is not a popularity contest.
@@ -47,15 +47,15 @@ Both produce impressive-looking numbers. Only one produces ambassadors.
 
 Per **R-005**, and this is the whole output of the program:
 
-1. **What they have earned** — a rung, with the evidence behind it
-2. **What happens next** — the action from that rung, made specific to them
-3. **Who needs to know** — the community manager, the program owner, whoever acts on it
+1. **What they have earned** - a rung, with the evidence behind it
+2. **What happens next** - the action from that rung, made specific to them
+3. **Who needs to know** - the community manager, the program owner, whoever acts on it
 
 ## Where a human decides
 
 The program proposes. A person disposes.
 
-Anything going **to** a candidate — an invitation, a nomination, a recognition — is drafted and held
+Anything going **to** a candidate - an invitation, a nomination, a recognition - is drafted and held
 for approval. Nothing is sent automatically, and nothing about a person is published without someone
 having read it.
 

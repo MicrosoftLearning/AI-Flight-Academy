@@ -22,7 +22,7 @@ as a template for real recognition decisions.
 
 ## If you point this at real data later
 
-The program you build here reads files. Pointing it at real people means real consequences —
+The program you build here reads files. Pointing it at real people means real consequences - 
 fairness, transparency, consent, and a human making the final call all stop being design
 considerations and start being obligations.
 

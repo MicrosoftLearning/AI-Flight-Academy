@@ -1,5 +1,5 @@
 ---
-title: The Ambassador – Scout
+title: The Ambassador - Scout
 ---
 
 <!-- markdownlint-disable MD013 MD025 MD033 -->
@@ -15,8 +15,8 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 <div class="brief">
   <span class="brief-badge">The handoff</span>
   <p class="brief-lead">You've inherited someone's half-finished ambassador program.</p>
-  <p>It runs, ranks all 72 candidates, and sounds completely sure of itself — every one of them handed a rung and a next action. It's scoring them on delivery: business impact, execution reliability, leadership signals.</p>
-  <p>But the program exists to find the people who make everyone around them better — whose work gets reused, who unblocked somebody, whose name comes up when a peer explains how they got there. That evidence all shipped with it. None of it gets read.</p>
+  <p>It runs, and it sounds completely sure of itself: all 72 candidates ranked, each one handed a rung and a next action. It's scoring them on delivery - business impact, execution reliability, leadership signals.</p>
+  <p>But the program exists to find the people who make everyone around them better - whose work gets reused, who unblocked somebody, whose name comes up when a peer explains how they got there. That evidence all shipped with it. None of it gets read.</p>
   <p class="brief-ask">Make it find the right people, then give it somewhere to live. A chat answer disappears when you close the window; Scout can build the thing that doesn't.</p>
   <ul class="brief-stats">
     <li><strong>9</strong> data files, <strong>1</strong> read</li>
@@ -28,31 +28,31 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 ::: details New to Scout?
 An agentic assistant that runs on your machine. Two things plug into it:
 
-- **Microsoft 365**, through **Work IQ** – your mail, calendar, Teams, files and org context. Nothing to connect, and it only sees what you can already see.
-- **GitHub Copilot CLI** – so it can write and run code locally.
+- **Microsoft 365**, through **Work IQ** - your mail, calendar, Teams, files and org context. Nothing to connect, and it only sees what you can already see.
+- **GitHub Copilot CLI** - so it can write and run code locally.
 
 For this scenario the second one matters most: Scout can read the program data *and* build something that runs against it, in the same conversation. Setup is in the **[Guides](/bricks/scout-setup)**.
 :::
 
 ## What you'll walk out with
 
-A program that reads evidence, and a surface that runs it — locally, on your machine.
+A program that reads evidence, and a surface that runs it - locally, on your machine.
 
 | What you make | What it does |
 | --- | --- |
 | **A program that reads evidence** | Recommends people the original ranking couldn't see, and names the evidence behind each one |
-| **A playbook you extended** | `PLAYBOOK.md` is the program written down — your rules go in it, and they travel |
-| **Something that runs** | A board you open, a scan that runs on a schedule, a brief that lands — built against the data |
+| **A playbook you extended** | `PLAYBOOK.md` is the program written down - your rules go in it, and they travel |
+| **Something that runs** | A board you open, a scan that runs on a schedule, a brief that lands - built against the data |
 
-**Everything stays local.** You're building muscle here, not shipping a product — nothing is hosted and nothing leaves your machine.
+**Everything stays local.** You're building muscle here, not shipping a product - nothing is hosted and nothing leaves your machine.
 
 ## How this runs
 
 | | Step | Time |
 | --- | --- | --- |
-| **1** | **Run it and catch it being wrong** – find who it ranked too high | 15 min |
-| **2** | **Teach it to read** – add evidence, watch who moves | 20 min |
-| **3** | **Give it somewhere to live** – pick a direction, split the work | 60 min |
+| **1** | **Run it and catch it being wrong** - find who it ranked too high | 15 min |
+| **2** | **Teach it to read** - add evidence, watch who moves | 20 min |
+| **3** | **Give it somewhere to live** - pick a direction, split the work | 60 min |
 
 Steps 1 and 2 are on your own. Step 3 is where the table works together, and it's most of the session.
 
@@ -75,10 +75,10 @@ Steps 1 and 2 are on your own. Step 3 is where the table works together, and it'
   </a>
 </div>
 
-**The data is fictional.** Invented people, invented scores, invented feedback. Nothing here describes a real person, and no real program is being modeled — which is what makes it safe to argue about in a room.
+**The data is fictional.** Invented people, invented scores, invented feedback. Nothing here describes a real person, and no real program is being modeled - which is what makes it safe to argue about in a room.
 
 ::: tip Two places to get unstuck
-Ask Scout – it's building with you, so describe what's wrong and let it fix it. For mechanics like scheduling or running things locally, the **[Guides](/bricks/)** are short how-tos. Coaches are in the room and every table has an SME.
+Ask Scout - it's building with you, so describe what's wrong and let it fix it. For mechanics like scheduling or running things locally, the **[Guides](/bricks/)** are short how-tos. Coaches are in the room and every table has an SME.
 :::
 
 ---
@@ -89,7 +89,7 @@ Ask Scout – it's building with you, so describe what's wrong and let it fix it
 
 1. Unzip both downloads. Put the `program-data` folder somewhere you can point Scout at.
 2. In Scout, open **Extensions** → **Import** and drag in the **`ambassador` folder**.
-3. Start a **new session** – skills load when a session begins.
+3. Start a **new session** - skills load when a session begins.
 
 Then:
 
@@ -97,14 +97,14 @@ Then:
 Run the ambassador program against the candidates in [path to program-data]. Show me the top ten, and tell me what you didn't read.
 ```
 
-You get a ranked list, a rung for each person, and a next action. It'll also tell you what it skipped — that's built in, because the skill knows it's incomplete.
+You get a ranked list, a rung for each person, and a next action. It'll also tell you what it skipped - that's built in, because the skill knows it's incomplete.
 
 **Now check it.** Two things in that output don't survive contact:
 
 | Look at | What you'll find |
 | --- | --- |
 | **Who's near the top** | At least one person with excellent delivery numbers and thin community evidence. Their own watchout line says so |
-| **How many are on the top rung** | Far more than a top rung should hold — the scoring pushes a crowd into it |
+| **How many are on the top rung** | Far more than a top rung should hold - the scoring pushes a crowd into it |
 
 Pick the highest-ranked person you're suspicious of and ask:
 
@@ -112,10 +112,10 @@ Pick the highest-ranked person you're suspicious of and ask:
 What does this person's watchout say, and what evidence did you use? What would change your mind?
 ```
 
-**It may well flag some of this itself** — the skill is told to state its gaps rather than hide them. That's honesty, not a fix: the ranking it just produced is still the naive one, and nothing has changed yet.
+**It may well flag some of this itself** - the skill is told to state its gaps rather than hide them. That's honesty, not a fix: the ranking it just produced is still the naive one, and nothing has changed yet.
 
 ::: warning Import the folder, not the file
-`SKILL.md` isn't the whole skill — `references/PLAYBOOK.md` sits beside it and holds the ladder and the rules. Dragging the file alone leaves it behind.
+`SKILL.md` isn't the whole skill - `references/PLAYBOOK.md` sits beside it and holds the ladder and the rules. Dragging the file alone leaves it behind.
 :::
 
 <div class="table-check">
@@ -138,12 +138,12 @@ The skill reads one file. There are eight more, and each answers a different que
 | `ProgramContributions.csv` | Whether what they made got reused, and by how many teams |
 | `CommunityActivities.csv` | What they ran, for whom, and at what quality |
 | `LearningCredentials.csv` | Whether they completed, facilitated, or coached |
-| `RecognitionHistory.csv` | Who's already been recognized — see **R-004** |
+| `RecognitionHistory.csv` | Who's already been recognized - see **R-004** |
 | `AmbassadorApplications.csv` | Who put their hand up, which is not the same as who's ready |
 | `PolicyRules.csv` | R-001 to R-008, the rules the program is supposed to follow |
 | `RewardTiers.csv` | The ladder: Explorer, Connector, Multiplier, Flight Lead, Review Hold |
 
-**Add one at a time**, and re-run after each. Adding all eight at once means you can't tell which one did anything — and one file is enough for this step. Go back for more only if you're ahead.
+**Add one at a time**, and re-run after each. Adding all eight at once means you can't tell which one did anything - and one file is enough for this step. Go back for more only if you're ahead.
 
 Start with the one most likely to break the current ranking:
 
@@ -153,17 +153,17 @@ Read PeerFeedback.csv too. Add a rule to the playbook: peer evidence counts, and
 
 **Names are the check.** *"The scoring is more balanced now"* means nothing. *"Alex Kim dropped out of the top ten and Drew Foster came in"* is a result.
 
-Two rules in the playbook aren't implemented at all — **R-004** (prior recognition isn't a reason to recognize again) and **R-006** (repeated activity with weak quality doesn't outrank quieter high-multiplier work). Implementing either one changes the list.
+Two rules in the playbook aren't implemented at all - **R-004** (prior recognition isn't a reason to recognize again) and **R-006** (repeated activity with weak quality doesn't outrank quieter high-multiplier work). Implementing either one changes the list.
 
 ::: tip Rules in the playbook, capabilities in their own file
-`references/PLAYBOOK.md` is the program — the ladder, the rules, what a recommendation must contain. A new rule goes there. A new *capability* gets its own `references/*.md`. The skill's instructions point Scout toward that structure.
+`references/PLAYBOOK.md` is the program - the ladder, the rules, what a recommendation must contain. A new rule goes there. A new *capability* gets its own `references/*.md`. The skill's instructions point Scout toward that structure.
 :::
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>
   <div class="table-check-body">
     <span class="table-check-label">Table check</span>
-    <p>Whose name appeared in your top ten that wasn't there before? Compare lists — if two tables surfaced different people, that's the interesting part.</p>
+    <p>Whose name appeared in your top ten that wasn't there before? Compare lists - if two tables surfaced different people, that's the interesting part.</p>
   </div>
 </div>
 
@@ -171,7 +171,7 @@ Two rules in the playbook aren't implemented at all — **R-004** (prior recogni
 
 **Done when:** something's running that you'd open again tomorrow.
 
-This is what Scout adds. A better ranking in a chat window is gone when you close it — Scout can write the thing that keeps producing it.
+This is what Scout adds. A better ranking in a chat window is gone when you close it - Scout can write the thing that keeps producing it.
 
 ### Pick a direction
 
@@ -180,11 +180,11 @@ Seven starting points. Take one, combine two, or build something the program obv
 | | What it is | Start with |
 | --- | --- | --- |
 | 🖥️ **A board** · easiest | A local page you open: who's up for recognition, who needs a decision, what changed since last time | *"Build me a local page with panels for who's ready, who needs evidence, and who moved. Write it somewhere I can open in a browser."* |
-| 🔍 **Recruitment** | Who should be invited who isn't in the running — the emerging people the ranking buries | *"Find people with strong peer and community evidence who rank low overall. Draft an invitation for each, held for approval."* |
-| ⏰ **A scheduled scan** | Runs without you and leaves what changed waiting | *"Build a scan I can run once now, then schedule weekly. Report who moved rung and who's newly ready — not the whole list."* |
+| 🔍 **Recruitment** | Who should be invited who isn't in the running - the emerging people the ranking buries | *"Find people with strong peer and community evidence who rank low overall. Draft an invitation for each, held for approval."* |
+| ⏰ **A scheduled scan** | Runs without you and leaves what changed waiting | *"Build a scan I can run once now, then schedule weekly. Report who moved rung and who's newly ready - not the whole list."* |
 | 🧭 **Manager's view** | One manager, their people, one action each | *"Build a one-page brief per manager: their candidates, each one's rung, and the single next action for each."* |
-| ⚖️ **Fairness audit** | Whether outcomes skew by region, org, level or tenure — and whether each rung can be explained | *"Audit the recommendations for skew by region, org, level and tenure. Flag any rung you can't explain from evidence."* |
-| 🎖️ **Their own view** | What a candidate would see about themselves — a hard test of whether the reasoning holds | *"Generate what one candidate would see about their own standing: where they are, why, and what would move them up."* |
+| ⚖️ **Fairness audit** | Whether outcomes skew by region, org, level or tenure - and whether each rung can be explained | *"Audit the recommendations for skew by region, org, level and tenure. Flag any rung you can't explain from evidence."* |
+| 🎖️ **Their own view** | What a candidate would see about themselves - a hard test of whether the reasoning holds | *"Generate what one candidate would see about their own standing: where they are, why, and what would move them up."* |
 | 🎯 **Yours** | Whatever your table thinks this program is missing | *"The program needs [what]. Work out what that takes and build the smallest version first."* |
 
 **Pick by what would actually get opened**, not by what's most impressive to describe.
@@ -199,21 +199,21 @@ Seven starting points. Take one, combine two, or build something the program obv
 
 ### Split the work
 
-Pick one direction, then **take one standalone piece each** — one panel, one section of the brief, one rule, one check in the audit. **If it can't run alone, it's too big.**
+Pick one direction, then **take one standalone piece each** - one panel, one section of the brief, one rule, one check in the audit. **If it can't run alone, it's too big.**
 
 Split by question, not by layer. *"Who's ready"*, *"who's gone quiet"*, *"who's been recognized and stalled"* and *"who applied but isn't ready"* are four independent builds of one board.
 
-Share the **prompt that worked** — that's the useful part.
+Share the **prompt that worked** - that's the useful part.
 
 ### Build in layers
 
 Get something running end to end before you make it good, then add one thing at a time:
 
-1. **The smallest version** — *"Build the smallest version that runs end to end. Start simple."*
-2. **The evidence** — *"Now make every line carry the evidence behind it and name what wasn't read."*
-3. **One addition** — *"That works. Now add [one thing]."*
-4. **A bound** — *"Cap this at [N] people per run and say what was left out."*
-5. **The runtime** — *"If this needs JavaScript, use Scout's bundled Node under `resources/node`, not a bare `node`."*
+1. **The smallest version** - *"Build the smallest version that runs end to end. Start simple."*
+2. **The evidence** - *"Now make every line carry the evidence behind it and name what wasn't read."*
+3. **One addition** - *"That works. Now add [one thing]."*
+4. **A bound** - *"Cap this at [N] people per run and say what was left out."*
+5. **The runtime** - *"If this needs JavaScript, use Scout's bundled Node under `resources/node`, not a bare `node`."*
 
 The more specific your prompt, the less you'll undo:
 
@@ -238,7 +238,7 @@ The more specific your prompt, the less you'll undo:
 :::
 
 ::: warning Nothing goes out
-Invitations, nominations and recognition are drafted and held for a person to read. That's **R-005**, and it's in the playbook — the program proposes, a human decides. Keep that in whatever you build.
+Invitations, nominations and recognition are drafted and held for a person to read. That's **R-005**, and it's in the playbook - the program proposes, a human decides. Keep that in whatever you build.
 :::
 
 <div class="table-check">
@@ -251,12 +251,12 @@ Invitations, nominations and recognition are drafted and held for a person to re
 
 ## Push it further
 
-1. **Give it a memory** — a file it writes as well as reads, so it can tell you what changed since last run.
-2. **Make it stop** — a rule that routes a call to a human instead of deciding, and a way to see when it fired.
-3. **Defend a call** — pick someone who didn't make the list and have it explain the decision to them. R-008 applies.
-4. **Break it on purpose** — invent a candidate who should obviously be recognized and see whether your version finds them.
-5. **Take the playbook with you** — `PLAYBOOK.md` is plain text and moves to another altitude unchanged.
-6. **Swap tables** — hand another table your playbook and have them run it against the same data. Different rules, different ambassadors.
+1. **Give it a memory** - a file it writes as well as reads, so it can tell you what changed since last run.
+2. **Make it stop** - a rule that routes a call to a human instead of deciding, and a way to see when it fired.
+3. **Defend a call** - pick someone who didn't make the list and have it explain the decision to them. R-008 applies.
+4. **Break it on purpose** - invent a candidate who should obviously be recognized and see whether your version finds them.
+5. **Take the playbook with you** - `PLAYBOOK.md` is plain text and moves to another altitude unchanged.
+6. **Swap tables** - hand another table your playbook and have them run it against the same data. Different rules, different ambassadors.
 
 ---
 
