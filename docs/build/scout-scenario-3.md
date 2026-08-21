@@ -76,47 +76,48 @@ Do steps 1 and 2 on your own. In step 3 the table picks one output and each pers
   </a>
 </div>
 
-**The data is fictional.** Invented people, invented scores, invented feedback. Nothing here describes a real person, and no real program is being modeled - which is what makes it safe to argue about in a room.
+**The data is fictional.** Invented people, invented scores, invented feedback. Nothing here describes a real person and no real program is being modeled.
 
 ::: tip Two places to get unstuck
-Ask Scout - it's building with you, so describe what's wrong and let it fix it. For mechanics like scheduling or running things locally, the **[Guides](/bricks/)** are short how-tos. Coaches are in the room and every table has an SME.
+Ask Scout: it's building with you, so paste the error or describe what came back wrong. For mechanics like scheduling or running things locally, the **[Guides](/bricks/)** are short how-tos. Coaches are in the room and every table has an SME.
 :::
 
 ---
 
 ## 1 · Run it and catch it being wrong
 
-**Done when:** you can name someone it ranked too high, and point at the evidence it never read.
+**Done when:** you can name the person the skill ranked too high, and the column that gives it away.
 
 1. Unzip both downloads. Put the `program-data` folder somewhere you can point Scout at.
-2. In Scout, open **Extensions** → **Import** and drag in the **`ambassador` folder**.
-3. Start a **new session** - skills load when a session begins.
+2. In Scout, open **Extensions** → **Import** and drag in the **`ambassador` folder**. Import the folder, not `SKILL.md` - `references/PLAYBOOK.md` sits beside it and holds the tiers and the rules.
+3. Start a **new session**. Skills load when a session begins.
 
-Then:
-
-```text
-Run the ambassador program against the candidates in [path to program-data]. Show me the top ten, and tell me what you didn't read.
-```
-
-You get a ranked list, a tier for each person, and a next action. It'll also tell you what it skipped - that's built in, because the skill knows it's incomplete.
-
-**Now check it.** Two things in that output don't survive contact:
-
-| Look at | What you'll find |
-| --- | --- |
-| **Who's near the top** | At least one person with excellent delivery numbers and thin evidence of enabling anyone else. Their own watchout line says so |
-| **How many are on the top tier** | Far more than a top tier should hold - the scoring pushes a crowd into it |
-
-Pick the highest-ranked person you're suspicious of and ask:
+Then ask it the question the program exists to answer:
 
 ```text
-What does this person's watchout say, and what evidence did you use? What would change your mind?
+Who should we recognize this round? The data is in [path to program-data].
 ```
 
-**It may well flag some of this itself** - the skill is told to state its gaps rather than hide them. That's honesty, not a fix: the ranking it just produced is still the naive one, and nothing has changed yet.
+You get all 72 people ranked, a tier for each, and a next step. Now run two checks on that answer.
 
-::: warning Import the folder, not the file
-`SKILL.md` isn't the whole skill - `references/PLAYBOOK.md` sits beside it and holds the ladder and the rules. Dragging the file alone leaves it behind.
+**Check the size of the top tier:**
+
+```text
+How many people did you put in Flight Lead?
+```
+
+Sixteen, out of 72. Flight Lead is meant for sustained impact across a region, and nearly a quarter of the program does not clear that bar.
+
+**Check the people at the top:**
+
+```text
+Show me the Watchouts column for your top five.
+```
+
+The second-ranked person's watchout reads *"limited evidence of peer enablement or community lift."* The skill put them there anyway, because `Watchouts` is not one of the three columns it scores.
+
+::: warning It may tell you it only read one file
+The skill is written to admit what it skipped, so it often volunteers this. It still ranked all 72 people on that one file.
 :::
 
 <div class="table-check">
@@ -129,9 +130,9 @@ What does this person's watchout say, and what evidence did you use? What would 
 
 ## 2 · Teach it to read
 
-**Done when:** a change you made moved someone by name, and you can say why.
+**Done when:** you added one evidence file, re-ran, and someone new is in the top ten.
 
-The skill reads one file. There are eight more, and each answers a different question:
+The skill reads `CandidateProfiles.csv`. Eight more files shipped with it:
 
 | File | What it can tell you |
 | --- | --- |
@@ -142,35 +143,35 @@ The skill reads one file. There are eight more, and each answers a different que
 | `RecognitionHistory.csv` | Who's already been recognized - see **R-004** |
 | `AmbassadorApplications.csv` | Who put their hand up, which is not the same as who's ready |
 | `PolicyRules.csv` | R-001 to R-008, the rules the program is supposed to follow |
-| `RewardTiers.csv` | The ladder: Explorer, Connector, Multiplier, Flight Lead, Review Hold |
+| `RewardTiers.csv` | The five tiers: Explorer, Connector, Multiplier, Flight Lead, Review Hold |
 
-**Add one at a time**, and re-run after each. Adding all eight at once means you can't tell which one did anything - and one file is enough for this step. Go back for more only if you're ahead.
-
-Start with the one most likely to break the current ranking:
+Start with peer feedback:
 
 ```text
-Read PeerFeedback.csv too. Add a rule to the playbook: peer evidence counts, and someone whose peers don't name them shouldn't outrank someone whose peers do. Then re-run and tell me who moved.
+Read PeerFeedback.csv too. Add a rule to the playbook: someone whose peers don't name them shouldn't outrank someone whose peers do. Then re-run and tell me which names changed.
 ```
 
-**Names are the check.** *"The scoring is more balanced now"* means nothing. *"Alex Kim dropped out of the top ten and Drew Foster came in"* is a result.
+Compare the new top ten against the old one. If the same people are in it, the rule you wrote isn't doing anything yet - say so and ask it to weigh peer evidence harder.
+
+**Add one file at a time.** Read all eight at once and you won't know which one moved anybody. One file is enough for this step; go back for more if you're ahead.
 
 Two rules in the playbook aren't implemented at all - **R-004** (prior recognition isn't a reason to recognize again) and **R-006** (repeated activity with weak quality doesn't outrank quieter high-multiplier work). Implementing either one changes the list.
 
 ::: tip Rules in the playbook, capabilities in their own file
-`references/PLAYBOOK.md` is the program - the ladder, the rules, what a recommendation must contain. A new rule goes there. A new *capability* gets its own `references/*.md`. The skill's instructions point Scout toward that structure.
+`references/PLAYBOOK.md` holds the tiers, the rules, and what a recommendation must contain, so a new rule goes there. A new capability gets its own `references/*.md`. The skill's instructions point Scout toward that structure.
 :::
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>
   <div class="table-check-body">
     <span class="table-check-label">Table check</span>
-    <p>Whose name appeared in your top ten that wasn't there before? Compare lists - if two tables surfaced different people, that's the interesting part.</p>
+    <p>Read out the names that entered your top ten. Compare with the next table - did the same people surface?</p>
   </div>
 </div>
 
 ## 3 · Build the thing that runs it
 
-**Done when:** you can rerun it from the same data without retyping the question, and it comes back with names and evidence.
+**Done when:** one command or one click reruns it against the same data and returns names with evidence.
 
 Ask Scout in a chat and the answer dies with the window. Have Scout write the page, the script or the scheduled job instead, and the next round starts with a command.
 
@@ -181,11 +182,11 @@ Seven starting points. Take one, combine two, or name something the program is m
 | | What it is | Start with |
 | --- | --- | --- |
 | 🖥️ **A board** · easiest | A local page you open: who's up for recognition, who needs a decision, what changed since last time | *"Build me a local page with panels for who's ready, who needs evidence, and who moved. Write it somewhere I can open in a browser."* |
-| 🔍 **Recruitment** | Who should be invited who isn't in the running - the emerging people the ranking buries | *"Find people with strong peer and enablement evidence who rank low overall. Draft an invitation for each, held for approval."* |
-| ⏰ **A scheduled scan** | Runs without you and leaves what changed waiting | *"Build a scan I can run once now, then schedule weekly. Report who moved tier and who's newly ready - not the whole list."* |
-| 🧭 **Manager's view** | One manager, their people, one action each | *"Build a one-page brief per manager: their candidates, each one's tier, and the single next action for each."* |
-| ⚖️ **Fairness audit** | Whether outcomes skew by region, org, level or tenure - and whether each tier can be explained | *"Audit the recommendations for skew by region, org, level and tenure. Flag any tier you can't explain from evidence."* |
-| 🎖️ **Their own view** | What a candidate would see about themselves - a hard test of whether the reasoning holds | *"Generate what one candidate would see about their own standing: where they are, why, and what would move them up."* |
+| 🔍 **Recruitment** | The people the ranking buries: strong peer evidence, low overall score | *"Find people with strong peer and enablement evidence who rank low overall. Draft an invitation for each, held for approval."* |
+| ⏰ **A scheduled scan** | Runs on a timer and reports only what changed | *"Build a scan I can run once now, then schedule weekly. Report who moved tier and who's newly ready - not the whole list."* |
+| 🧭 **Manager's view** | One manager, their people, one next action each | *"Build a one-page brief per manager: their candidates, each one's tier, and the single next action for each."* |
+| ⚖️ **Fairness audit** | Whether the tiers skew by region, org, level or tenure, and whether each one can be explained from evidence | *"Audit the recommendations for skew by region, org, level and tenure. Flag any tier you can't explain from evidence."* |
+| 🎖️ **Their own view** | What one candidate would read about their own standing | *"Generate what one candidate would see about their own standing: where they are, why, and what would move them up."* |
 | 🎯 **Yours** | Whatever your table thinks this program is missing | *"The program needs [what]. Work out what that takes and build the smallest version first."* |
 
 **Pick the one your table would still use next time round**, not the one that sounds most impressive.
@@ -194,24 +195,24 @@ Seven starting points. Take one, combine two, or name something the program is m
   <div class="table-check-icon">👥</div>
   <div class="table-check-body">
     <span class="table-check-label">Table check</span>
-    <p>Two minutes round the table: what are you building, and who would open it? Out loud, before anyone opens Scout. If another table could demo the same thing with different labels, narrow it.</p>
+    <p>Two minutes round the table: what are you building, and who reads it? Out loud, before anyone opens Scout. If another table could demo the same thing with different labels, narrow it.</p>
   </div>
 </div>
 
 ### Split the work
 
-Pick one direction, then **take one standalone piece each** - one panel, one section of the brief, one rule, one check in the audit. **If it can't run alone, it's too big.**
+Pick one direction, then **take one standalone piece each**: one panel, one section of the brief, one rule, one check in the audit. **If it can't run alone, it's too big.**
 
-Split by question, not by layer. *"Who's ready"*, *"who's gone quiet"*, *"who's been recognized and stalled"* and *"who applied but isn't ready"* are four independent builds of one board.
+Split by question, not by layer. *"Who's ready"*, *"who's stopped showing up"*, *"who's been recognized and stalled"* and *"who applied but isn't ready"* are four independent builds of one board.
 
 Share the **prompt that worked** so the next person doesn't rediscover it.
 
 ### Build in layers
 
-Get one real name on screen end to end before you add anything, then add one thing at a time:
+Get one real name on screen end to end before you add anything:
 
 1. **The smallest version** - *"Build the smallest version that runs end to end. Start simple."*
-2. **The evidence** - *"Now make every line carry the evidence behind it and name what wasn't read."*
+2. **The evidence** - *"Now make every line carry the evidence behind it, and say which files you read."*
 3. **One addition** - *"That works. Now add [one thing]."*
 4. **A bound** - *"Cap this at [N] people per run and say what was left out."*
 5. **The runtime** - *"If this needs JavaScript, use Scout's bundled Node under `resources/node`, not a bare `node`."*
@@ -228,25 +229,25 @@ The more specific your prompt, the less you'll undo:
 
 | | You've got it when |
 | --- | --- |
-| **A board** | You open the file and something on it is worth acting on |
-| **Recruitment** | It surfaces someone the original ranking buried, with the evidence |
-| **Scheduled scan** | It ran without you and what was waiting was the *change*, not the whole list |
+| **A board** | You open the file and it names someone you'd act on today |
+| **Recruitment** | A name comes up that wasn't in the original top twenty, with the evidence that put it there |
+| **Scheduled scan** | It ran on its own and reported what changed, not the whole list |
 | **Manager's view** | A manager could act on it without asking a follow-up question |
-| **Fairness audit** | It found a skew you'd have to explain, or proved there isn't one |
+| **Fairness audit** | It names a skew you'd have to explain, or shows there isn't one |
 | **Their own view** | You'd be comfortable showing it to the person it's about |
-| **Yours** | You'd open it again tomorrow without being told to |
+| **Yours** | Someone at the table would run it again next week |
 
 :::
 
 ::: warning Nothing goes out
-Invitations, nominations and recognition are drafted and held for a person to read. That's **R-005**, and it's in the playbook - the program proposes, a human decides. Keep that in whatever you build.
+Invitations, nominations and recognition are drafted and held for a person to read. That's **R-005**, and it's in the playbook. Keep it that way in whatever you build.
 :::
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>
   <div class="table-check-body">
     <span class="table-check-label">Table check</span>
-    <p>Halfway: is it running? If not, halve what it does and get <em>something</em> working before adding anything back.</p>
+    <p>Halfway: does it run? If not, cut what it does in half and get one real name on screen before adding anything back.</p>
   </div>
 </div>
 
@@ -256,7 +257,7 @@ Invitations, nominations and recognition are drafted and held for a person to re
 2. **Make it stop** - a rule that routes a call to a human instead of deciding, and a way to see when it fired.
 3. **Defend a call** - pick someone who didn't make the list and have it explain the decision to them. R-008 applies.
 4. **Break it on purpose** - invent a candidate who should obviously be recognized and see whether your version finds them.
-5. **Take the playbook with you** - `PLAYBOOK.md` is plain text and moves to another altitude unchanged.
+5. **Take the playbook with you** - `PLAYBOOK.md` is plain text, so it runs at the Cowork or Code altitude unchanged.
 6. **Swap tables** - hand another table your playbook and have them run it against the same data. Different rules, different ambassadors.
 
 ---

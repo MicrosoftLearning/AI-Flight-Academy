@@ -41,7 +41,7 @@ Do step 1 on your own. In step 2 the table picks one output and splits it across
 ## Before you start
 
 ::: warning The data is fictional
-Invented people, invented scores, invented feedback. Nothing here describes a real person and no real program is being modeled - which is what makes it safe to argue about in a room. `program-data/DISCLAIMER.md` has the details.
+Invented people, invented scores, invented feedback. Nothing here describes a real person and no real program is being modeled. `program-data/DISCLAIMER.md` has the details.
 :::
 
 **Python 3.10+.** The starter has no dependencies - standard library only.
@@ -61,7 +61,7 @@ Ask Copilot - it's building with you, so paste the error and let it fix it. For 
 
 ## 1 · Run it and see the hole
 
-**Done when:** you can point at the line that put the wrong person second.
+**Done when:** you can point at the lines in `evaluate.py` that put the wrong person second.
 
 Unzip the starter and open the folder in VS Code. **Every command runs from inside `ambassador-starter/`:**
 
@@ -77,23 +77,21 @@ ambassador-starter/
     data.py               loads every CSV, attaches evidence to candidates
     evaluate.py           decides the tier. This is the half that was built
   program-data/           72 candidates, ~2,000 evidence records
-  PLAYBOOK.md             the program's rules and ladder
+  PLAYBOOK.md             the program's rules and tiers
 ```
 
-You get a shortlist, and a note at the bottom telling you what the run ignored. Two things in that output are wrong on their face:
+You get a shortlist and a note at the bottom listing what the run ignored. Two things in it are wrong on their face:
 
-| Look at | What you'll find |
-| --- | --- |
-| **Who's second** | Someone whose delivery numbers are excellent and whose evidence of enabling anyone else is thin. `--who` shows both |
-| **The top tier** | 16 of 72 people on it. A top tier holding 22% of the field isn't a top tier |
+- **Alex Kim ranks second.** Their `Watchouts` field in `CandidateProfiles.csv` reads *"limited evidence of peer enablement or community lift."*
+- **16 of 72 people are Flight Lead.** That tier is meant for sustained impact across a region.
 
-Look one person up in full:
+Look Alex Kim up in full:
 
 ```bash
 python run.py --who "Alex Kim"
 ```
 
-You get their score, their evidence, and a `NOT READ:` line listing what was loaded and skipped for that person - unused score columns, activities, peer feedback, contributions, credentials, recognition history, applications. Then read their `Watchouts` field in `CandidateProfiles.csv`.
+The `NOT READ:` line lists what `data.py` loaded for that person and `evaluate.py` skipped: four score columns, 13 activities, 4 peer comments, 2 contributions, 5 credentials, 1 recognition record, 1 application.
 
 The rest of the CLI:
 
@@ -106,8 +104,8 @@ python run.py --export register.csv # the whole thing as CSV
 
 Open `program/evaluate.py`. The top of the file is the entire problem:
 
-- `WEIGHTS` names three fields. `PeerSupport`, `KnowledgeSharing`, `CommunityContribution` and `MultiplierBehavior` are in the same rows and never scored.
-- Eight of the nine files are loaded by `data.py` and never touched here.
+- `WEIGHTS` names three fields. `PeerSupport`, `KnowledgeSharing`, `CommunityContribution` and `MultiplierBehavior` sit in the same rows and are never scored.
+- `data.py` loads nine files. This one reads a single file's columns.
 - **R-004** (prior recognition isn't a reason to recognize again) and **R-006** (repeated activity with weak quality doesn't outrank quieter high-multiplier work) are in `PLAYBOOK.md` and not in the code.
 
 `PLAYBOOK.md` says what the program is supposed to do. `evaluate.py` does something narrower. Closing that distance is step 2.
@@ -139,16 +137,16 @@ Seven starting points. Take one, combine two, or name something the program is m
 | ⏰ **A scheduled scan** | Runs on a timer and reports the *diff* - who moved tier, who's newly ready | Persist each run, compare against the last one. This needs somewhere to write state |
 | 🧭 **Manager's view** | One file per manager: their people, each tier, one next action each | Group by the org field, generate per group |
 | ⚖️ **Fairness audit** | Whether outcomes skew by region, org, level or tenure - and which tiers can't be explained | A second pass over the results, not a change to scoring |
-| 🎖️ **Their own view** | What a candidate would see about themselves, generated per person | Hardest test of your reasoning - if it can't be shown to them, it isn't defensible |
+| 🎖️ **Their own view** | What one candidate would read about their own standing, generated per person | Hardest test of your scoring: if you can't show it to them, it isn't defensible |
 | 🎯 **Yours** | Whatever your table thinks this program is missing | Smallest version that runs first |
 
-**Pick by what would actually get run**, not by what's most impressive to describe.
+**Pick the one your table would still run next time round**, not the one that sounds most impressive.
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>
   <div class="table-check-body">
     <span class="table-check-label">Table check</span>
-    <p>Two minutes round the table: what are you building, and who would run it? Out loud, before anyone opens the editor. If another table could demo the same thing with different labels, narrow it.</p>
+    <p>Two minutes round the table: what are you building, and who runs it? Out loud, before anyone opens the editor. If another table could demo the same thing with different labels, narrow it.</p>
   </div>
 </div>
 
@@ -159,9 +157,9 @@ Seven starting points. Take one, combine two, or name something the program is m
 | | Owns |
 | --- | --- |
 | **The scoring** | One person replaces `evaluate.py` and nobody else touches it |
-| **A reader** | One person per evidence file - turn raw records into a signal the scorer can use |
-| **The output** | The board, the brief, the export - builds against whatever the scorer returns |
-| **The check** | The fairness audit or the diff - runs *on* the results, so it can be built in parallel |
+| **A reader** | One person per evidence file: turn raw records into a signal the scorer can use |
+| **The output** | The board, the brief, the export. Builds against whatever the scorer returns |
+| **The check** | The fairness audit or the diff. Runs on the results, so it can be built in parallel |
 
 The reader-per-file split is the one that scales: `PeerFeedback.csv`, `ProgramContributions.csv`, `CommunityActivities.csv` and `RecognitionHistory.csv` are four independent builds, and each one changes who's on the list.
 
@@ -172,21 +170,21 @@ Agree the shape of what the scorer returns early, then work against it. That's t
 1. **The smallest version** - get one new signal into the ranking and see who moves.
 2. **Names, not adjectives** - print who moved after every change. *"More balanced"* isn't checkable; *"Drew Foster entered the top ten"* is.
 3. **One addition** - one file, one rule, one panel at a time.
-4. **Make it explain itself** - every recommendation should carry the evidence and the rule that decided it. That's **R-005**.
+4. **Make it explain itself** - every recommendation carries the evidence and the rule that decided it. That's **R-005**.
 
 ::: tip Let Copilot do the plumbing
-`data.py` already hands you every evidence record attached to its candidate, so most of what's left is judgment rather than parsing. Paste `PLAYBOOK.md` into Copilot and ask it to implement **R-006** against the data you've got - then check whether the result actually moved the right people.
+`data.py` already hands you every evidence record attached to its candidate, so most of what's left is scoring rather than parsing. Paste `PLAYBOOK.md` into Copilot and ask it to implement **R-006** against the data you've got, then check which names moved.
 :::
 
 ::: warning Nothing gets sent
-Invitations, nominations and recognition are drafted and held for a person to read. That's **R-005**, and it's in the playbook - the program proposes, a human decides. Keep that in whatever you build.
+Invitations, nominations and recognition are drafted and held for a person to read. That's **R-005**, and it's in the playbook. Keep it that way in whatever you build.
 :::
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>
   <div class="table-check-body">
     <span class="table-check-label">Table check</span>
-    <p>Halfway: does it run? If not, halve what it does and get <em>something</em> working before adding anything back.</p>
+    <p>Halfway: does it run? If not, cut what it does in half and get one real name on screen before adding anything back.</p>
   </div>
 </div>
 
@@ -195,8 +193,8 @@ Invitations, nominations and recognition are drafted and held for a person to re
 1. **Make it defend a call** - a command that takes a name and explains why they didn't make the list. R-008 applies.
 2. **Break it on purpose** - write a candidate who should obviously be recognized, add them to the data, and see whether your version finds them.
 3. **Test the rules** - a test per playbook rule, so a scoring change that breaks R-002 fails loudly.
-4. **Give it a memory** - persist each run so the program can report change rather than state.
-5. **Take the playbook with you** - `PLAYBOOK.md` is plain text and moves to another altitude unchanged.
+4. **Give it a memory** - persist each run so the program can report what changed instead of restating the list.
+5. **Take the playbook with you** - `PLAYBOOK.md` is plain text, so it runs at the Cowork or Scout altitude unchanged.
 6. **Swap tables** - hand another table your scorer and have them run it against the same data. Different rules, different ambassadors.
 
 ---

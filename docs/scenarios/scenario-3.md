@@ -46,7 +46,7 @@ Nothing here is hosted and nothing is sent. Invitations, nominations and recogni
 
 ## The data
 
-**72 candidates and roughly 2,000 evidence records across nine files.** It's all fictional - invented people, invented scores, invented feedback. No real person is described and no real program is modeled, which is what makes it safe to argue about in a room.
+**72 candidates and roughly 2,000 evidence records across nine files.** It's all fictional: invented people, invented scores, invented feedback. No real person is described and no real program is modeled.
 
 The point of shipping it is speed: you skip building a pipeline and spend the session on the judgment instead.
 
