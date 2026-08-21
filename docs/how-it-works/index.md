@@ -10,7 +10,7 @@ You pick your altitude, pick a scenario, and demo what you made. Coaches are in 
 
 ## The flow
 
-1. **Pick your altitude** – Cowork with no code, or real code in VS Code.
+1. **Pick your altitude** – Cowork with no code, Scout in between, or real code in VS Code.
 2. **Pick a scenario** – a real Microsoft work problem to point it at.
 3. **Choose your data path** – Cowork and Scout read your own work privately; Code ships a fictional twin so no personal data is involved.
 4. **Build the smallest working version** – get to v0.1 fast.
@@ -30,7 +30,7 @@ You pick your altitude, pick a scenario, and demo what you made. Coaches are in 
 
 Done means you can run your agent on a fresh prompt and get useful output that reflects the scenario.
 
-For Scenario 1, that means a portable twin spec – how you decide, how you write, and what your calendar reveals – plus an agent that uses it to draft, decide, or critique in a way that is specific to the person it represents.
+What the artifact *is* depends on where you landed – a portable persona spec, a review council that greenlights work, an app grounded in real data. The shape differs; the bar is the same: it runs, it's specific, and you can point to the rule behind its behavior.
 
 ## What you'll walk out with
 
@@ -38,4 +38,8 @@ You leave with two things:
 
 - **A working artifact** you can keep improving after the hack.
 - **A transferable skill**: how to compress messy work behavior into a small, testable agent spec.
+
+## How you're judged
+
+It's not a competition with points – the aim is a working agent you understand. [See how you're judged →](/how-it-works/scoring)
 
