@@ -12,13 +12,13 @@ This scenario is drafted and being tested. Details may change before the event.
 
 The **AI Skilling Ambassador program** is how a company gets its people actually using the AI tools it rolled out. Ambassadors across nine regions do it on top of their real jobs: they run office hours, answer questions, mentor one-on-one, coach peers through a first agent build, and write the quickstart guides and localization aids everyone else leans on.
 
-Recognition is the only thing the program has to give back, and it decides who gets a facilitation slot, who gets nominated, and who quietly stops showing up.
+Nobody is paid for it, so the program runs on what it can offer back: an invitation in, a facilitation slot, a nomination, a sponsor conversation. Keeping the program staffed means getting those calls right. Last round five people withdrew and seven were passed over.
 
 Those decisions get made in a spreadsheet, on whichever numbers are already collected: delivery, reliability, visible leadership. Those reward the people producing the most output.
 
-The program isn't looking for the most output. It's looking for the people who **make other people better** - whose sessions get repeated, whose templates get reused, whose name comes up when someone explains how they got unstuck. That signal is in the data. It just isn't in the column anybody's ranking on.
+An ambassador program doesn't run on the most output. It runs on the people who **make other people better**: whose sessions get repeated, whose templates get reused, whose name comes up when someone explains how they got unstuck. That signal is in the data. It just isn't in the column anybody's ranking on.
 
-Both groups produce impressive numbers. Only one produces ambassadors.
+Both groups produce impressive numbers. Only one keeps a community going.
 
 ## What you start with
 
@@ -28,20 +28,20 @@ Both groups produce impressive numbers. Only one produces ambassadors.
 - Nine data files ship with it. It reads one.
 - Its own playbook has eight rules. Two of them aren't implemented at all.
 
-Run it and someone with excellent delivery numbers and thin community evidence lands near the top - their own watchout line says *"limited evidence of peer enablement or community lift."* The top tier ends up holding 16 of 72 people.
+Run it and someone with excellent delivery numbers and thin evidence of enabling anyone else lands near the top. Their own watchout line reads *"limited evidence of peer enablement or community lift."* The top tier ends up holding 16 of 72 people.
 
 The eight ignored files and the playbook rules are enough to fix it. Which evidence counts, and how much, is your call.
 
 ## What 'done' looks like
 
-**Make it find the right people.** Teach it to read the evidence it's been ignoring, and show your work - a change counts when you can name who moved because of it.
+**Make it find the right people.** Teach it to read the evidence it's been ignoring, and show your work. A change counts when you can name who moved because of it.
 
-**Then build the thing that runs it.** A shortlist someone acts on, a brief per manager, a watch list of who's gone quiet, an audit of whether the outcomes are defensible, a page you check on a Monday. Names in it, evidence behind each one.
+**Then build the thing that runs it.** An invite list, a brief per manager, a watch list of who's dropped off, an audit of whether the calls can be defended to the people who didn't make the cut. Names in it, evidence behind each one.
 
-There's no single right answer here, and tables that build the same thing have probably missed the point. You're given the recognition ladder (Explorer, Connector, Multiplier, **Flight Lead**, Review Hold) and the eight rules. What counts as evidence, and what you build on top, is yours.
+There's no single right answer here, and tables that build the same thing have probably missed the point. You're given the five tiers (Explorer, Connector, Multiplier, **Flight Lead**, Review Hold) and the eight rules. What counts as evidence, and what you build on top, is yours.
 
 ::: tip Everything stays local
-Nothing here is hosted and nothing is sent. Invitations, nominations and recognition are drafted and held for a person to approve - that's **R-005**, and it's in the playbook. The program proposes; a human decides.
+Nothing here is hosted and nothing is sent. Invitations, nominations and recognition are drafted and held for a person to approve. That's **R-005**, and it's in the playbook.
 :::
 
 ## The data
@@ -60,7 +60,7 @@ The point of shipping it is speed: you skip building a pipeline and spend the se
 | `RecognitionHistory.csv` | 128 | Who's been recognized before - deliberately not a shortcut |
 | `AmbassadorApplications.csv` | 41 | Who put their hand up, which isn't the same as who's ready |
 | `PolicyRules.csv` | 8 | R-001 to R-008 |
-| `RewardTiers.csv` | 5 | The ladder and the action at each tier |
+| `RewardTiers.csv` | 5 | The five tiers and the action at each one |
 
 Two of the eight rules are the ones to look at first - **R-004** (prior recognition isn't a reason to recognize again) and **R-006** (repeated activity with weak quality doesn't outrank quieter high-multiplier work). Neither is implemented. Either one changes the list.
 

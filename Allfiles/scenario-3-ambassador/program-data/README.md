@@ -14,7 +14,7 @@ Nine files, ~2,000 rows.
 | `RecognitionHistory.csv` | 128 | Who has been recognized before. **Not a shortcut** - see the playbook |
 | `AmbassadorApplications.csv` | 41 | Who put themselves forward. Some strong candidates never did |
 | `PolicyRules.csv` | 8 | The rules the program is meant to follow |
-| `RewardTiers.csv` | 5 | The ladder, and the action that goes with each tier |
+| `RewardTiers.csv` | 5 | The five tiers, and the action that goes with each one |
 
 ## The shape of it
 

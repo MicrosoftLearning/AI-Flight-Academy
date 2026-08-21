@@ -1,6 +1,6 @@
 # Ambassador starter
 
-Half an ambassador program. It runs, it produces recommendations, and it is wrong in
+Half an AI Skilling Ambassador program. It runs, it produces recommendations, and it is wrong in
 ways you can see.
 
 ```text
@@ -9,7 +9,7 @@ program/
   data.py               loads every CSV, attaches evidence to candidates
   evaluate.py           decides the tier. This is the half that was built
 program-data/           72 candidates, ~2,000 evidence records
-PLAYBOOK.md             the program's rules and ladder
+PLAYBOOK.md             the program's rules and tiers
 ```
 
 ## Run it
@@ -25,7 +25,7 @@ No dependencies. Standard library only.
 
 ## What it does
 
-Reads `CandidateProfiles.csv`, scores on three columns, assigns a tier from the ladder,
+Reads `CandidateProfiles.csv`, scores on three columns, assigns a tier,
 proposes a next action. Everything it prints is a proposal - nothing is sent and no
 decision is recorded.
 

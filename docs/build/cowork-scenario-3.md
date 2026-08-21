@@ -14,9 +14,9 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 <div class="brief">
   <span class="brief-badge">The handoff</span>
-  <p class="brief-lead">The AI Skilling Ambassador program has to decide who gets recognized, who gets invited in, and who's ready for more. The person who ran it left halfway through.</p>
-  <p>72 people across nine regions do it on top of their real jobs: office hours, answering questions, mentoring one-on-one, and writing the quickstart guides everyone else leans on. Recognition is the only thing the program has to give back, so who gets named matters.</p>
-  <p>The <strong>Ambassador skill</strong> they left behind still runs. Ask it who deserves recognition and it ranks all 72 people, sorts them into five tiers from Explorer up to Flight Lead, and recommends a next step for each one. It scores on business impact, execution reliability and leadership signals, the three numbers already sitting on the spreadsheet.</p>
+  <p class="brief-lead">The AI Skilling Ambassador program runs on people who volunteer for it, and it has to keep them. The person who ran it left halfway through.</p>
+  <p>72 ambassadors across nine regions do it on top of their real jobs: office hours, answering questions, mentoring one-on-one, and writing the quickstart guides everyone else leans on. Nobody is paid for it, so the program runs on what it can offer back: an invitation in, a facilitation slot, a nomination, a sponsor conversation. Last round five people withdrew and seven were passed over.</p>
+  <p>The <strong>Ambassador skill</strong> they left behind still runs. Ask it who should move up and it ranks all 72 people, sorts them into five tiers from Explorer up to Flight Lead, and names the next step for each one: invite, offer a slot, nominate, sponsor. It scores on business impact, execution reliability and leadership signals, the three numbers already sitting on the spreadsheet.</p>
   <p>Nine data files shipped with the program. The Ambassador skill opens one. The other eight hold what an ambassador actually does: whose guide got reused, who unblocked somebody, whose name a peer brings up.</p>
   <p class="brief-ask">Make it find the right people, and be able to show why. How you do that is yours.</p>
   <ul class="brief-stats">
@@ -34,7 +34,7 @@ A skill that reads the evidence files it currently skips, and one output the pro
 | --- | --- |
 | **A program that reads evidence** | Recommends people the original ranking couldn't see, and names the evidence behind each one |
 | **A playbook you extended** | `PLAYBOOK.md` is the program written down - your rules go in it, and they travel |
-| **An output with names in it** | A shortlist, a manager brief, a watch list or a fairness audit, each line carrying its evidence |
+| **An output with names in it** | An invite list, a manager brief, a watch list of who's dropped off, or a fairness audit, each line carrying its evidence |
 
 ## How this runs
 

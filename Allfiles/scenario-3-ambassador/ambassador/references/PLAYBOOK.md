@@ -6,13 +6,17 @@ Ambassadors across nine regions help colleagues use the company's AI tools on to
 jobs: office hours, answering questions, mentoring, peer coaching, and the reusable guides and
 localization aids other people build on.
 
-The program recognizes people who **make other people better at their jobs**. It is not an output
-leaderboard and it is not a popularity contest. Recognition is the only currency the program has, so
-a recommendation has to be defensible.
+Nobody is paid for it. The program runs on what it can offer back, so every recommendation here is a
+next step rather than a reward: an invitation in, a facilitation slot, a nomination, a sponsor
+conversation. Getting those calls right is how the program keeps its people.
 
-Anyone reading this should be able to work out why a given person got the recommendation they did.
+It recognizes people who **make other people better at their jobs**. It is not an output leaderboard
+and it is not a popularity contest.
 
-## The ladder
+Anyone reading this should be able to work out why a given person got the recommendation they did,
+including the people who did not get one.
+
+## The tiers
 
 Everyone gets a tier and an action. Nobody is left with nothing.
 

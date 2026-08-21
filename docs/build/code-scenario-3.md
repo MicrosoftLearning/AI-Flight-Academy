@@ -14,9 +14,9 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 <div class="brief">
   <span class="brief-badge">The handoff</span>
-  <p class="brief-lead">The AI Skilling Ambassador program has to decide who gets recognized, who gets invited in, and who's ready for more. The person who ran it left halfway through.</p>
-  <p>72 people across nine regions do it on top of their real jobs: office hours, answering questions, mentoring one-on-one, and writing the quickstart guides everyone else leans on. Recognition is the only thing the program has to give back, so who gets named matters.</p>
-  <p>The plumbing they left is fine: <code>data.py</code> loads all nine data files and attaches every activity, comment and contribution to the right candidate. <code>evaluate.py</code> is the problem. It scores three delivery columns, ignores the rest, then sorts all 72 people into five tiers from Explorer up to Flight Lead.</p>
+  <p class="brief-lead">The AI Skilling Ambassador program runs on people who volunteer for it, and it has to keep them. The person who ran it left halfway through.</p>
+  <p>72 ambassadors across nine regions do it on top of their real jobs: office hours, answering questions, mentoring one-on-one, and writing the quickstart guides everyone else leans on. Nobody is paid for it, so the program runs on what it can offer back: an invitation in, a facilitation slot, a nomination, a sponsor conversation. Last round five people withdrew and seven were passed over.</p>
+  <p>The plumbing they left is fine: <code>data.py</code> loads all nine data files and attaches every activity, comment and contribution to the right candidate. <code>evaluate.py</code> is the problem. It scores three delivery columns, ignores the rest, then sorts all 72 people into five tiers and names each one's next step: invite, offer a slot, nominate, sponsor.</p>
   <p><code>evaluate.py</code> reads one of those nine files. The other eight hold what an ambassador actually does: whose guide got reused, who unblocked somebody, whose name a peer brings up. <code>data.py</code> already loaded every one of them.</p>
   <p class="brief-ask">Replace <code>evaluate.py</code>, then build a command, a scheduled job or a generated report that runs the result without a chat window.</p>
   <ul class="brief-stats">
