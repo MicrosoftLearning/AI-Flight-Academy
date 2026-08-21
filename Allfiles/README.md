@@ -6,7 +6,7 @@ Participant assets, one folder per scenario.
 | --- | --- | --- |
 | `scenario-1-digital-twin/` | The Digital Twin | 🚧 Work in progress |
 | `scenario-2-greenlight/` | The Greenlight | 🚧 Work in progress |
-| `scenario-3-tbd/` | TBD | Placeholder |
+| `scenario-3-ambassador/` | The Ambassador | 🚧 Work in progress |
 
 ## How participants get these
 

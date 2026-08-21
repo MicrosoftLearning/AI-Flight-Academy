@@ -19,8 +19,10 @@ import {
   mkdirSync,
   mkdtempSync,
   readdirSync,
+  readFileSync,
   rmSync,
   statSync,
+  writeFileSync,
 } from "node:fs";
 import { tmpdir } from "node:os";
 import { basename, join } from "node:path";
@@ -33,17 +35,22 @@ const isWin = process.platform === "win32";
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
 
-function zipFolder(srcDir, zipPath, exclude = [], purge = []) {
+function zipFolder(srcDir, zipPath, exclude = [], purge = [], copyInto = []) {
   // When excluding subpaths, stage a filtered copy under the folder's own name
   // so the archive still contains a correctly-named top-level folder.
   let toZip = srcDir;
   let stageParent = null;
-  if (exclude.length || purge.length) {
+  if (exclude.length || purge.length || copyInto.length) {
     stageParent = mkdtempSync(join(tmpdir(), "pack-"));
     toZip = join(stageParent, basename(srcDir));
     cpSync(srcDir, toZip, { recursive: true });
     for (const rel of exclude) {
       rmSync(join(toZip, rel), { recursive: true, force: true });
+    }
+    // Pull in shared assets that live outside the folder, so a starter can ship
+    // self-contained without the repo carrying a second copy.
+    for (const { from, to } of copyInto) {
+      cpSync(from, join(toZip, to), { recursive: true });
     }
     if (purge.length) purgeFiles(toZip, purge);
   }
@@ -154,6 +161,31 @@ const jobs = [
     src: join(root, "Allfiles", "scenario-2-greenlight", "data-pack"),
     zip: "greenlight-data-pack.zip",
   },
+  {
+    src: join(root, "Allfiles", "scenario-3-ambassador", "ambassador"),
+    zip: "ambassador-skill.zip",
+  },
+  {
+    src: join(root, "Allfiles", "scenario-3-ambassador", "program-data"),
+    zip: "ambassador-program-data.zip",
+  },
+  {
+    src: join(root, "Allfiles", "scenario-3-ambassador", "ambassador-starter"),
+    zip: "ambassador-starter.zip",
+    // The starter ships self-contained: the data and the playbook are copied in
+    // at pack time so the repo keeps one copy of each.
+    copyInto: [
+      {
+        from: join(root, "Allfiles", "scenario-3-ambassador", "program-data"),
+        to: "program-data",
+      },
+      {
+        from: join(root, "Allfiles", "scenario-3-ambassador", "ambassador", "references", "PLAYBOOK.md"),
+        to: "PLAYBOOK.md",
+      },
+    ],
+    purge: ["**/__pycache__/"],
+  },
 ];
 
 for (const j of jobs) {
@@ -162,15 +194,31 @@ for (const j of jobs) {
     continue;
   }
   const dest = join(out, j.zip);
-  zipFolder(j.src, dest, j.exclude ?? [], j.purge ?? []);
+  zipFolder(j.src, dest, j.exclude ?? [], j.purge ?? [], j.copyInto ?? []);
   console.log(`  ${j.zip.padEnd(28)} ${(statSync(dest).size / 1024).toFixed(1)} KB`);
 }
 
-// The Cowork twin ships as a single .md - Cowork's skill upload rejects .zip.
+// The Cowork skills ship as a single .md - Cowork's skill upload rejects .zip.
+// `inline` folds reference files into that one file, so the repo keeps a single
+// source of truth and Cowork still gets everything the skill needs.
 const singles = [
   {
     src: join(root, "Allfiles", "scenario-1-digital-twin", "my-twin", "SKILL.md"),
     name: "my-twin-SKILL.md",
+  },
+  {
+    src: join(root, "Allfiles", "scenario-3-ambassador", "ambassador", "SKILL.md"),
+    name: "ambassador-SKILL.md",
+    inline: [
+      {
+        path: join(root, "Allfiles", "scenario-3-ambassador", "ambassador", "references", "PLAYBOOK.md"),
+        // What the skill body tells the model to go and read.
+        replaces: "references/PLAYBOOK.md",
+        // Other folder-shaped paths that make no sense in a single-file upload.
+        alsoRewrite: [{ from: "`references/*.md`", to: "its own section" }],
+        heading: "Playbook",
+      },
+    ],
   },
 ];
 
@@ -180,7 +228,32 @@ for (const s of singles) {
     continue;
   }
   const dest = join(out, s.name);
-  copyFileSync(s.src, dest);
+  if (s.inline?.length) {
+    let body = readFileSync(s.src, "utf8");
+    for (const ref of s.inline) {
+      if (!existsSync(ref.path)) {
+        throw new Error(`inline source missing: ${ref.path}`);
+      }
+      if (!body.includes(ref.replaces)) {
+        throw new Error(`${s.name}: nothing references ${ref.replaces}`);
+      }
+      // Point the model at the inlined section instead of a file that won't exist.
+      const pointer = `the "${ref.heading}" section below`;
+      body = body.replaceAll(`\`${ref.replaces}\``, pointer);
+      body = body.replaceAll(ref.replaces, pointer);
+      for (const { from, to } of ref.alsoRewrite ?? []) {
+        if (!body.includes(from)) {
+          throw new Error(`${s.name}: nothing to rewrite for ${from}`);
+        }
+        body = body.replaceAll(from, to);
+      }
+      const text = readFileSync(ref.path, "utf8").replace(/^#\s+.*\r?\n/, "");
+      body += `\n\n---\n\n# ${ref.heading}\n\n${text.trim()}\n`;
+    }
+    writeFileSync(dest, body);
+  } else {
+    copyFileSync(s.src, dest);
+  }
   console.log(`  ${s.name.padEnd(28)} ${(statSync(dest).size / 1024).toFixed(1)} KB`);
 }
 

@@ -1,0 +1,867 @@
+ActivityId,CandidateId,CandidateName,ActivityDate,ActivityType,Audience,QualitySignal,ImpactSummary,ImpactScope,EvidenceSource
+ACT-0001,CAND-001,Avery Chen,2026-07-23,reusable guide,regional community,4.2,unblocked peers,high,meeting recap
+ACT-0002,CAND-001,Avery Chen,2026-02-08,office hours support,global community,4.7,unblocked peers,moderate,Teams thread
+ACT-0003,CAND-001,Avery Chen,2026-04-07,event facilitation,regional community,5,connected isolated workstreams,low,meeting recap
+ACT-0004,CAND-001,Avery Chen,2026-03-14,peer coaching,1:1,5,scaled a repeatable pattern,strategic,community post
+ACT-0005,CAND-001,Avery Chen,2026-07-24,cross-team intro,regional community,5,improved learner readiness,low,community post
+ACT-0006,CAND-001,Avery Chen,2026-05-14,event facilitation,global community,4.9,resolved ambiguity,high,community post
+ACT-0007,CAND-001,Avery Chen,2026-06-19,peer coaching,1:1,4.6,built community momentum,strategic,community post
+ACT-0008,CAND-001,Avery Chen,2026-06-30,community answer,1:1,3.2,scaled a repeatable pattern,high,program tracker
+ACT-0009,CAND-001,Avery Chen,2026-02-12,community answer,small group,4.8,created team confidence,high,community post
+ACT-0010,CAND-001,Avery Chen,2026-06-07,office hours support,cross-team,4.5,scaled a repeatable pattern,low,peer note
+ACT-0011,CAND-001,Avery Chen,2026-06-21,office hours support,global community,5,reduced repeated questions,strategic,community post
+ACT-0012,CAND-001,Avery Chen,2026-03-05,program coordination,cross-team,4.9,scaled a repeatable pattern,high,community post
+ACT-0013,CAND-001,Avery Chen,2026-03-27,recognition nomination,team,5,connected isolated workstreams,moderate,peer note
+ACT-0014,CAND-001,Avery Chen,2026-05-07,community answer,cross-team,4.9,scaled a repeatable pattern,high,meeting recap
+ACT-0015,CAND-001,Avery Chen,2026-05-28,peer coaching,regional community,4.9,resolved ambiguity,high,peer note
+ACT-0016,CAND-001,Avery Chen,2026-02-06,program coordination,cross-team,4.7,unblocked peers,high,program tracker
+ACT-0017,CAND-001,Avery Chen,2026-03-26,cross-team intro,1:1,5,improved learner readiness,moderate,meeting recap
+ACT-0018,CAND-001,Avery Chen,2026-06-23,content improvement,regional community,4.8,connected isolated workstreams,low,SharePoint artifact
+ACT-0019,CAND-001,Avery Chen,2026-06-01,event facilitation,cross-team,5,resolved ambiguity,low,program tracker
+ACT-0020,CAND-001,Avery Chen,2026-06-23,feedback synthesis,global community,4.7,created team confidence,high,SharePoint artifact
+ACT-0021,CAND-001,Avery Chen,2026-01-07,reusable guide,small group,5,improved learner readiness,strategic,Teams thread
+ACT-0022,CAND-001,Avery Chen,2026-02-11,feedback synthesis,global community,4.6,resolved ambiguity,moderate,community post
+ACT-0023,CAND-001,Avery Chen,2026-04-23,content improvement,team,4.6,improved handoff clarity,high,SharePoint artifact
+ACT-0024,CAND-001,Avery Chen,2026-07-09,cross-team intro,1:1,4.9,unblocked peers,moderate,meeting recap
+ACT-0025,CAND-001,Avery Chen,2026-07-18,delegated workstream,1:1,4.4,scaled a repeatable pattern,high,community post
+ACT-0026,CAND-002,Riley Singh,2026-04-29,program coordination,team,4.5,reduced repeated questions,low,SharePoint artifact
+ACT-0027,CAND-002,Riley Singh,2026-04-26,community answer,cross-team,4.6,resolved ambiguity,high,Teams thread
+ACT-0028,CAND-002,Riley Singh,2026-03-03,program coordination,regional community,5,unblocked peers,low,meeting recap
+ACT-0029,CAND-002,Riley Singh,2026-03-24,event facilitation,team,4.9,connected isolated workstreams,low,Teams thread
+ACT-0030,CAND-002,Riley Singh,2026-05-13,feedback synthesis,cross-team,3.6,improved handoff clarity,moderate,community post
+ACT-0031,CAND-002,Riley Singh,2026-05-22,feedback synthesis,global community,4.9,connected isolated workstreams,low,community post
+ACT-0032,CAND-002,Riley Singh,2026-07-14,peer coaching,cross-team,5,unblocked peers,strategic,Teams thread
+ACT-0033,CAND-002,Riley Singh,2026-03-27,delegated workstream,global community,4.6,helped a peer present work,high,Teams thread
+ACT-0034,CAND-002,Riley Singh,2026-04-19,peer coaching,team,5,improved handoff clarity,strategic,peer note
+ACT-0035,CAND-002,Riley Singh,2026-04-08,community answer,cross-team,4.5,improved learner readiness,strategic,program tracker
+ACT-0036,CAND-002,Riley Singh,2026-01-26,program coordination,team,5,connected isolated workstreams,moderate,SharePoint artifact
+ACT-0037,CAND-002,Riley Singh,2026-07-24,reusable guide,regional community,5,resolved ambiguity,moderate,SharePoint artifact
+ACT-0038,CAND-002,Riley Singh,2026-04-05,feedback synthesis,global community,5,improved handoff clarity,moderate,Teams thread
+ACT-0039,CAND-002,Riley Singh,2026-02-12,mentoring session,global community,5,scaled a repeatable pattern,moderate,peer note
+ACT-0040,CAND-002,Riley Singh,2026-05-12,content improvement,regional community,5,improved learner readiness,strategic,peer note
+ACT-0041,CAND-002,Riley Singh,2026-05-30,recognition nomination,global community,4.2,connected isolated workstreams,moderate,community post
+ACT-0042,CAND-002,Riley Singh,2026-01-23,content improvement,cross-team,4.1,created team confidence,high,program tracker
+ACT-0043,CAND-002,Riley Singh,2026-01-20,cross-team intro,cross-team,4.2,unblocked peers,low,SharePoint artifact
+ACT-0044,CAND-002,Riley Singh,2026-08-06,mentoring session,1:1,4.8,scaled a repeatable pattern,strategic,community post
+ACT-0045,CAND-002,Riley Singh,2026-06-03,office hours support,1:1,5,built community momentum,moderate,SharePoint artifact
+ACT-0046,CAND-002,Riley Singh,2026-06-09,content improvement,regional community,4.5,improved handoff clarity,low,community post
+ACT-0047,CAND-003,Drew Foster,2026-04-03,feedback synthesis,1:1,5,resolved ambiguity,moderate,Teams thread
+ACT-0048,CAND-003,Drew Foster,2026-03-10,feedback synthesis,regional community,4.1,improved learner readiness,moderate,SharePoint artifact
+ACT-0049,CAND-003,Drew Foster,2026-04-11,mentoring session,cross-team,5,helped a peer present work,high,peer note
+ACT-0050,CAND-003,Drew Foster,2026-06-08,peer coaching,1:1,5,connected isolated workstreams,low,program tracker
+ACT-0051,CAND-003,Drew Foster,2026-06-28,program coordination,team,4.4,created team confidence,moderate,SharePoint artifact
+ACT-0052,CAND-003,Drew Foster,2026-01-26,delegated workstream,team,4.6,helped a peer present work,moderate,program tracker
+ACT-0053,CAND-003,Drew Foster,2026-07-06,community answer,team,3.4,resolved ambiguity,strategic,peer note
+ACT-0054,CAND-003,Drew Foster,2026-07-27,cross-team intro,global community,5,resolved ambiguity,low,peer note
+ACT-0055,CAND-003,Drew Foster,2026-06-26,program coordination,regional community,4.4,connected isolated workstreams,low,SharePoint artifact
+ACT-0056,CAND-003,Drew Foster,2026-03-26,reusable guide,cross-team,5,reduced repeated questions,moderate,meeting recap
+ACT-0057,CAND-003,Drew Foster,2026-02-14,community answer,team,4.6,scaled a repeatable pattern,low,peer note
+ACT-0058,CAND-003,Drew Foster,2026-04-02,delegated workstream,small group,5,improved handoff clarity,moderate,peer note
+ACT-0059,CAND-003,Drew Foster,2026-04-28,peer coaching,cross-team,5,connected isolated workstreams,moderate,community post
+ACT-0060,CAND-003,Drew Foster,2026-06-11,mentoring session,small group,4.8,resolved ambiguity,moderate,SharePoint artifact
+ACT-0061,CAND-003,Drew Foster,2026-08-01,content improvement,small group,3.6,connected isolated workstreams,strategic,community post
+ACT-0062,CAND-003,Drew Foster,2026-07-21,mentoring session,cross-team,4.9,improved handoff clarity,moderate,program tracker
+ACT-0063,CAND-003,Drew Foster,2026-02-10,mentoring session,1:1,4,built community momentum,high,program tracker
+ACT-0064,CAND-003,Drew Foster,2026-02-01,feedback synthesis,team,5,scaled a repeatable pattern,moderate,SharePoint artifact
+ACT-0065,CAND-003,Drew Foster,2026-05-01,office hours support,small group,3.7,helped a peer present work,low,meeting recap
+ACT-0066,CAND-003,Drew Foster,2026-08-03,content improvement,cross-team,5,unblocked peers,strategic,program tracker
+ACT-0067,CAND-003,Drew Foster,2026-04-11,event facilitation,cross-team,3.7,scaled a repeatable pattern,high,meeting recap
+ACT-0068,CAND-003,Drew Foster,2026-01-13,cross-team intro,global community,5,connected isolated workstreams,moderate,meeting recap
+ACT-0069,CAND-003,Drew Foster,2026-01-15,mentoring session,cross-team,4.2,improved handoff clarity,strategic,community post
+ACT-0070,CAND-003,Drew Foster,2026-06-12,peer coaching,small group,4.9,improved handoff clarity,strategic,Teams thread
+ACT-0071,CAND-003,Drew Foster,2026-07-23,mentoring session,small group,4.7,created team confidence,low,Teams thread
+ACT-0072,CAND-003,Drew Foster,2026-03-08,program coordination,1:1,4.8,scaled a repeatable pattern,strategic,program tracker
+ACT-0073,CAND-003,Drew Foster,2026-05-23,peer coaching,global community,4,resolved ambiguity,moderate,peer note
+ACT-0074,CAND-003,Drew Foster,2026-02-11,mentoring session,small group,3.9,improved learner readiness,strategic,meeting recap
+ACT-0075,CAND-003,Drew Foster,2026-06-25,recognition nomination,1:1,5,resolved ambiguity,high,Teams thread
+ACT-0076,CAND-003,Drew Foster,2026-05-20,office hours support,regional community,2.7,unblocked peers,strategic,community post
+ACT-0077,CAND-004,Parker White,2026-01-17,recognition nomination,global community,4.1,unblocked peers,high,Teams thread
+ACT-0078,CAND-004,Parker White,2026-04-04,event facilitation,global community,5,scaled a repeatable pattern,high,meeting recap
+ACT-0079,CAND-004,Parker White,2026-01-17,cross-team intro,small group,3.4,built community momentum,strategic,peer note
+ACT-0080,CAND-004,Parker White,2026-02-21,reusable guide,1:1,4.3,built community momentum,low,SharePoint artifact
+ACT-0081,CAND-004,Parker White,2026-02-26,peer coaching,team,5,created team confidence,strategic,program tracker
+ACT-0082,CAND-004,Parker White,2026-05-07,mentoring session,1:1,3.2,reduced repeated questions,high,SharePoint artifact
+ACT-0083,CAND-004,Parker White,2026-07-24,peer coaching,1:1,5,connected isolated workstreams,strategic,community post
+ACT-0084,CAND-004,Parker White,2026-07-15,content improvement,cross-team,4.2,connected isolated workstreams,moderate,community post
+ACT-0085,CAND-004,Parker White,2026-07-02,content improvement,team,3.8,scaled a repeatable pattern,strategic,Teams thread
+ACT-0086,CAND-004,Parker White,2026-04-26,delegated workstream,small group,5,resolved ambiguity,high,SharePoint artifact
+ACT-0087,CAND-004,Parker White,2026-02-01,community answer,cross-team,4.4,improved learner readiness,strategic,meeting recap
+ACT-0088,CAND-004,Parker White,2026-07-01,content improvement,team,5,built community momentum,low,peer note
+ACT-0089,CAND-004,Parker White,2026-04-06,delegated workstream,1:1,5,scaled a repeatable pattern,strategic,SharePoint artifact
+ACT-0090,CAND-004,Parker White,2026-05-17,feedback synthesis,global community,4.6,improved handoff clarity,low,meeting recap
+ACT-0091,CAND-004,Parker White,2026-08-11,delegated workstream,small group,4.8,scaled a repeatable pattern,moderate,peer note
+ACT-0092,CAND-004,Parker White,2026-04-09,cross-team intro,cross-team,4,improved learner readiness,low,program tracker
+ACT-0093,CAND-004,Parker White,2026-02-14,recognition nomination,cross-team,4,scaled a repeatable pattern,moderate,program tracker
+ACT-0094,CAND-004,Parker White,2026-04-09,program coordination,team,5,created team confidence,moderate,Teams thread
+ACT-0095,CAND-004,Parker White,2026-01-12,feedback synthesis,regional community,5,scaled a repeatable pattern,high,SharePoint artifact
+ACT-0096,CAND-004,Parker White,2026-07-05,content improvement,small group,5,improved learner readiness,high,peer note
+ACT-0097,CAND-004,Parker White,2026-05-11,event facilitation,cross-team,5,improved handoff clarity,strategic,Teams thread
+ACT-0098,CAND-004,Parker White,2026-08-01,recognition nomination,team,5,connected isolated workstreams,low,program tracker
+ACT-0099,CAND-004,Parker White,2026-05-24,mentoring session,global community,5,improved handoff clarity,high,program tracker
+ACT-0100,CAND-005,Cameron Scott,2026-03-04,community answer,small group,5,built community momentum,low,SharePoint artifact
+ACT-0101,CAND-005,Cameron Scott,2026-05-27,delegated workstream,team,5,built community momentum,moderate,program tracker
+ACT-0102,CAND-005,Cameron Scott,2026-01-28,community answer,global community,3.3,built community momentum,strategic,community post
+ACT-0103,CAND-005,Cameron Scott,2026-08-04,delegated workstream,1:1,5,improved handoff clarity,high,peer note
+ACT-0104,CAND-006,Alex Kim,2026-05-18,cross-team intro,small group,3.4,resolved ambiguity,moderate,meeting recap
+ACT-0105,CAND-006,Alex Kim,2026-04-26,office hours support,1:1,3.2,resolved ambiguity,moderate,SharePoint artifact
+ACT-0106,CAND-006,Alex Kim,2026-02-17,reusable guide,team,2.9,reduced repeated questions,high,program tracker
+ACT-0107,CAND-006,Alex Kim,2026-03-19,community answer,regional community,3,created team confidence,moderate,peer note
+ACT-0108,CAND-006,Alex Kim,2026-03-24,delegated workstream,regional community,4.4,scaled a repeatable pattern,moderate,program tracker
+ACT-0109,CAND-006,Alex Kim,2026-06-03,reusable guide,regional community,3.5,connected isolated workstreams,low,Teams thread
+ACT-0110,CAND-006,Alex Kim,2026-01-26,peer coaching,global community,3.9,improved learner readiness,high,peer note
+ACT-0111,CAND-006,Alex Kim,2026-02-28,delegated workstream,cross-team,2.6,resolved ambiguity,high,peer note
+ACT-0112,CAND-006,Alex Kim,2026-03-24,content improvement,small group,3.5,helped a peer present work,high,community post
+ACT-0113,CAND-006,Alex Kim,2026-01-24,feedback synthesis,cross-team,3.7,built community momentum,moderate,SharePoint artifact
+ACT-0114,CAND-006,Alex Kim,2026-06-10,reusable guide,team,3.3,connected isolated workstreams,high,community post
+ACT-0115,CAND-006,Alex Kim,2026-02-08,cross-team intro,small group,2.7,built community momentum,low,SharePoint artifact
+ACT-0116,CAND-006,Alex Kim,2026-05-01,event facilitation,small group,3,scaled a repeatable pattern,low,SharePoint artifact
+ACT-0117,CAND-007,Morgan Lee,2026-04-23,event facilitation,small group,3.9,connected isolated workstreams,high,meeting recap
+ACT-0118,CAND-007,Morgan Lee,2026-07-20,reusable guide,cross-team,3.5,created team confidence,strategic,Teams thread
+ACT-0119,CAND-007,Morgan Lee,2026-01-29,program coordination,regional community,4.3,built community momentum,moderate,meeting recap
+ACT-0120,CAND-007,Morgan Lee,2026-06-04,cross-team intro,regional community,4.9,built community momentum,high,program tracker
+ACT-0121,CAND-007,Morgan Lee,2026-01-08,community answer,cross-team,4.6,improved handoff clarity,high,peer note
+ACT-0122,CAND-007,Morgan Lee,2026-04-09,program coordination,regional community,3.8,resolved ambiguity,moderate,SharePoint artifact
+ACT-0123,CAND-007,Morgan Lee,2026-05-27,mentoring session,1:1,4.9,helped a peer present work,strategic,program tracker
+ACT-0124,CAND-007,Morgan Lee,2026-03-18,delegated workstream,1:1,4.1,helped a peer present work,high,SharePoint artifact
+ACT-0125,CAND-007,Morgan Lee,2026-05-28,cross-team intro,small group,4.1,reduced repeated questions,strategic,program tracker
+ACT-0126,CAND-007,Morgan Lee,2026-01-16,peer coaching,cross-team,5,resolved ambiguity,strategic,meeting recap
+ACT-0127,CAND-007,Morgan Lee,2026-06-10,office hours support,small group,4.7,connected isolated workstreams,high,meeting recap
+ACT-0128,CAND-007,Morgan Lee,2026-04-16,delegated workstream,team,4.2,resolved ambiguity,strategic,peer note
+ACT-0129,CAND-007,Morgan Lee,2026-05-30,mentoring session,cross-team,3.8,unblocked peers,high,SharePoint artifact
+ACT-0130,CAND-007,Morgan Lee,2026-06-27,community answer,global community,5,unblocked peers,strategic,SharePoint artifact
+ACT-0131,CAND-007,Morgan Lee,2026-06-22,delegated workstream,regional community,4.2,reduced repeated questions,low,program tracker
+ACT-0132,CAND-007,Morgan Lee,2026-05-08,reusable guide,cross-team,3.3,improved handoff clarity,moderate,Teams thread
+ACT-0133,CAND-007,Morgan Lee,2026-06-01,feedback synthesis,1:1,4.2,reduced repeated questions,low,community post
+ACT-0134,CAND-007,Morgan Lee,2026-03-27,program coordination,cross-team,4.9,resolved ambiguity,strategic,peer note
+ACT-0135,CAND-008,Taylor Brooks,2026-07-11,peer coaching,regional community,3.7,connected isolated workstreams,strategic,program tracker
+ACT-0136,CAND-008,Taylor Brooks,2026-04-12,cross-team intro,small group,3.1,built community momentum,high,program tracker
+ACT-0137,CAND-008,Taylor Brooks,2026-04-06,recognition nomination,global community,4.1,created team confidence,strategic,meeting recap
+ACT-0138,CAND-008,Taylor Brooks,2026-03-10,mentoring session,regional community,2.8,created team confidence,moderate,SharePoint artifact
+ACT-0139,CAND-008,Taylor Brooks,2026-07-22,mentoring session,cross-team,3.7,connected isolated workstreams,strategic,SharePoint artifact
+ACT-0140,CAND-008,Taylor Brooks,2026-05-29,feedback synthesis,team,2.9,created team confidence,low,program tracker
+ACT-0141,CAND-008,Taylor Brooks,2026-06-28,office hours support,team,2.5,improved handoff clarity,high,Teams thread
+ACT-0142,CAND-008,Taylor Brooks,2026-03-20,feedback synthesis,1:1,5,connected isolated workstreams,strategic,peer note
+ACT-0143,CAND-008,Taylor Brooks,2026-03-12,feedback synthesis,regional community,3.5,created team confidence,high,meeting recap
+ACT-0144,CAND-008,Taylor Brooks,2026-02-02,delegated workstream,global community,4.8,improved learner readiness,moderate,meeting recap
+ACT-0145,CAND-008,Taylor Brooks,2026-01-18,recognition nomination,small group,4.4,unblocked peers,low,community post
+ACT-0146,CAND-009,Jordan Patel,2026-03-31,feedback synthesis,small group,3.6,unblocked peers,moderate,community post
+ACT-0147,CAND-009,Jordan Patel,2026-06-22,content improvement,cross-team,4.8,reduced repeated questions,high,SharePoint artifact
+ACT-0148,CAND-009,Jordan Patel,2026-03-20,recognition nomination,global community,5,improved learner readiness,moderate,program tracker
+ACT-0149,CAND-009,Jordan Patel,2026-07-14,feedback synthesis,1:1,5,improved handoff clarity,strategic,meeting recap
+ACT-0150,CAND-009,Jordan Patel,2026-01-15,program coordination,global community,4.9,created team confidence,low,Teams thread
+ACT-0151,CAND-009,Jordan Patel,2026-03-23,delegated workstream,regional community,4.3,scaled a repeatable pattern,high,SharePoint artifact
+ACT-0152,CAND-009,Jordan Patel,2026-05-02,recognition nomination,small group,3.9,resolved ambiguity,strategic,SharePoint artifact
+ACT-0153,CAND-009,Jordan Patel,2026-02-24,community answer,team,4.4,improved handoff clarity,strategic,peer note
+ACT-0154,CAND-009,Jordan Patel,2026-03-12,feedback synthesis,team,5,improved learner readiness,moderate,meeting recap
+ACT-0155,CAND-009,Jordan Patel,2026-06-11,recognition nomination,cross-team,5,helped a peer present work,high,Teams thread
+ACT-0156,CAND-009,Jordan Patel,2026-04-18,recognition nomination,cross-team,5,connected isolated workstreams,moderate,Teams thread
+ACT-0157,CAND-009,Jordan Patel,2026-03-13,program coordination,small group,5,built community momentum,high,SharePoint artifact
+ACT-0158,CAND-009,Jordan Patel,2026-03-24,delegated workstream,global community,4.7,connected isolated workstreams,moderate,Teams thread
+ACT-0159,CAND-009,Jordan Patel,2026-06-25,community answer,cross-team,4.6,created team confidence,moderate,community post
+ACT-0160,CAND-010,Sam Rivera,2026-07-05,mentoring session,global community,3,scaled a repeatable pattern,high,SharePoint artifact
+ACT-0161,CAND-010,Sam Rivera,2026-06-12,event facilitation,small group,4.5,built community momentum,high,community post
+ACT-0162,CAND-010,Sam Rivera,2026-07-04,office hours support,cross-team,4.8,resolved ambiguity,moderate,meeting recap
+ACT-0163,CAND-010,Sam Rivera,2026-06-29,delegated workstream,cross-team,5,resolved ambiguity,high,Teams thread
+ACT-0164,CAND-010,Sam Rivera,2026-05-30,community answer,1:1,4.3,resolved ambiguity,moderate,program tracker
+ACT-0165,CAND-010,Sam Rivera,2026-05-23,reusable guide,cross-team,5,scaled a repeatable pattern,moderate,peer note
+ACT-0166,CAND-010,Sam Rivera,2026-06-04,content improvement,1:1,5,resolved ambiguity,strategic,Teams thread
+ACT-0167,CAND-010,Sam Rivera,2026-05-02,reusable guide,1:1,3.7,resolved ambiguity,strategic,peer note
+ACT-0168,CAND-010,Sam Rivera,2026-07-31,mentoring session,global community,4.4,unblocked peers,strategic,SharePoint artifact
+ACT-0169,CAND-010,Sam Rivera,2026-08-03,peer coaching,1:1,4.4,helped a peer present work,high,peer note
+ACT-0170,CAND-010,Sam Rivera,2026-01-22,office hours support,1:1,3.5,scaled a repeatable pattern,strategic,Teams thread
+ACT-0171,CAND-010,Sam Rivera,2026-03-20,program coordination,global community,5,helped a peer present work,high,community post
+ACT-0172,CAND-010,Sam Rivera,2026-04-30,program coordination,cross-team,5,scaled a repeatable pattern,moderate,peer note
+ACT-0173,CAND-010,Sam Rivera,2026-04-05,community answer,regional community,4.8,improved handoff clarity,moderate,Teams thread
+ACT-0174,CAND-011,Jamie Santos,2026-07-18,peer coaching,global community,4,resolved ambiguity,strategic,program tracker
+ACT-0175,CAND-011,Jamie Santos,2026-04-13,event facilitation,small group,3.1,built community momentum,high,meeting recap
+ACT-0176,CAND-011,Jamie Santos,2026-03-17,event facilitation,1:1,4.2,unblocked peers,strategic,program tracker
+ACT-0177,CAND-011,Jamie Santos,2026-07-21,peer coaching,small group,2.8,reduced repeated questions,low,Teams thread
+ACT-0178,CAND-011,Jamie Santos,2026-06-07,peer coaching,1:1,2.2,reduced repeated questions,low,community post
+ACT-0179,CAND-011,Jamie Santos,2026-04-28,event facilitation,regional community,3.5,reduced repeated questions,low,meeting recap
+ACT-0180,CAND-011,Jamie Santos,2026-05-14,mentoring session,regional community,3.4,connected isolated workstreams,high,meeting recap
+ACT-0181,CAND-011,Jamie Santos,2026-03-24,reusable guide,global community,4.8,resolved ambiguity,moderate,community post
+ACT-0182,CAND-011,Jamie Santos,2026-03-23,mentoring session,global community,4.8,improved handoff clarity,strategic,program tracker
+ACT-0183,CAND-011,Jamie Santos,2026-05-12,peer coaching,team,3.8,helped a peer present work,high,peer note
+ACT-0184,CAND-011,Jamie Santos,2026-04-22,program coordination,regional community,3.6,built community momentum,moderate,meeting recap
+ACT-0185,CAND-011,Jamie Santos,2026-03-23,feedback synthesis,small group,3.7,built community momentum,low,program tracker
+ACT-0186,CAND-012,Cameron Patel,2026-05-21,reusable guide,cross-team,3.9,reduced repeated questions,high,meeting recap
+ACT-0187,CAND-012,Cameron Patel,2026-03-31,recognition nomination,team,4.2,scaled a repeatable pattern,moderate,Teams thread
+ACT-0188,CAND-012,Cameron Patel,2026-03-15,program coordination,global community,3.3,improved learner readiness,low,Teams thread
+ACT-0189,CAND-012,Cameron Patel,2026-02-23,delegated workstream,cross-team,2.8,reduced repeated questions,high,SharePoint artifact
+ACT-0190,CAND-013,Reese Foster,2026-01-09,event facilitation,1:1,5,built community momentum,moderate,peer note
+ACT-0191,CAND-013,Reese Foster,2026-06-09,feedback synthesis,small group,3.5,helped a peer present work,moderate,program tracker
+ACT-0192,CAND-013,Reese Foster,2026-03-29,mentoring session,team,3.6,created team confidence,high,SharePoint artifact
+ACT-0193,CAND-013,Reese Foster,2026-05-17,content improvement,cross-team,4.8,scaled a repeatable pattern,strategic,SharePoint artifact
+ACT-0194,CAND-013,Reese Foster,2026-02-27,cross-team intro,small group,4.2,improved handoff clarity,low,SharePoint artifact
+ACT-0195,CAND-014,Skyler Okafor,2026-05-27,delegated workstream,small group,3.9,reduced repeated questions,high,meeting recap
+ACT-0196,CAND-014,Skyler Okafor,2026-04-13,delegated workstream,small group,4.2,built community momentum,high,SharePoint artifact
+ACT-0197,CAND-014,Skyler Okafor,2026-07-20,content improvement,cross-team,5,built community momentum,moderate,peer note
+ACT-0198,CAND-014,Skyler Okafor,2026-07-28,cross-team intro,small group,4.2,improved handoff clarity,strategic,meeting recap
+ACT-0199,CAND-014,Skyler Okafor,2026-05-24,recognition nomination,1:1,5,unblocked peers,low,community post
+ACT-0200,CAND-014,Skyler Okafor,2026-02-10,recognition nomination,small group,4.2,scaled a repeatable pattern,moderate,Teams thread
+ACT-0201,CAND-014,Skyler Okafor,2026-03-02,office hours support,global community,4.2,improved learner readiness,strategic,peer note
+ACT-0202,CAND-014,Skyler Okafor,2026-05-10,peer coaching,1:1,4.5,resolved ambiguity,strategic,Teams thread
+ACT-0203,CAND-014,Skyler Okafor,2026-01-10,office hours support,team,4.3,unblocked peers,strategic,meeting recap
+ACT-0204,CAND-014,Skyler Okafor,2026-02-02,community answer,regional community,3.6,improved handoff clarity,moderate,meeting recap
+ACT-0205,CAND-014,Skyler Okafor,2026-06-13,office hours support,cross-team,4.4,scaled a repeatable pattern,high,community post
+ACT-0206,CAND-014,Skyler Okafor,2026-05-03,delegated workstream,small group,5,reduced repeated questions,high,peer note
+ACT-0207,CAND-015,Emery Silva,2026-06-21,peer coaching,1:1,4,helped a peer present work,strategic,community post
+ACT-0208,CAND-015,Emery Silva,2026-05-27,content improvement,small group,4.4,scaled a repeatable pattern,strategic,community post
+ACT-0209,CAND-015,Emery Silva,2026-06-20,cross-team intro,regional community,4.3,scaled a repeatable pattern,low,meeting recap
+ACT-0210,CAND-015,Emery Silva,2026-03-01,feedback synthesis,1:1,4.9,scaled a repeatable pattern,high,program tracker
+ACT-0211,CAND-015,Emery Silva,2026-05-30,recognition nomination,1:1,3.8,improved handoff clarity,high,Teams thread
+ACT-0212,CAND-015,Emery Silva,2026-02-28,delegated workstream,cross-team,5,scaled a repeatable pattern,high,meeting recap
+ACT-0213,CAND-015,Emery Silva,2026-05-30,event facilitation,regional community,5,helped a peer present work,high,community post
+ACT-0214,CAND-015,Emery Silva,2026-07-18,feedback synthesis,global community,5,scaled a repeatable pattern,high,Teams thread
+ACT-0215,CAND-015,Emery Silva,2026-01-31,program coordination,small group,5,scaled a repeatable pattern,high,program tracker
+ACT-0216,CAND-015,Emery Silva,2026-07-21,delegated workstream,team,5,unblocked peers,high,community post
+ACT-0217,CAND-015,Emery Silva,2026-05-11,event facilitation,team,4.1,resolved ambiguity,strategic,community post
+ACT-0218,CAND-015,Emery Silva,2026-02-22,recognition nomination,regional community,3.7,created team confidence,moderate,peer note
+ACT-0219,CAND-015,Emery Silva,2026-01-24,community answer,team,3.9,improved handoff clarity,strategic,peer note
+ACT-0220,CAND-016,Harper Olsen,2026-04-15,cross-team intro,team,3.1,scaled a repeatable pattern,low,Teams thread
+ACT-0221,CAND-016,Harper Olsen,2026-03-25,content improvement,small group,3.2,scaled a repeatable pattern,moderate,community post
+ACT-0222,CAND-016,Harper Olsen,2026-04-30,office hours support,regional community,4,resolved ambiguity,strategic,Teams thread
+ACT-0223,CAND-016,Harper Olsen,2026-01-12,community answer,regional community,3.3,connected isolated workstreams,strategic,Teams thread
+ACT-0224,CAND-016,Harper Olsen,2026-03-21,program coordination,cross-team,3,scaled a repeatable pattern,moderate,program tracker
+ACT-0225,CAND-016,Harper Olsen,2026-05-19,reusable guide,team,3.4,created team confidence,high,community post
+ACT-0226,CAND-016,Harper Olsen,2026-02-12,community answer,small group,3.1,helped a peer present work,high,community post
+ACT-0227,CAND-017,Finley Yamada,2026-04-08,mentoring session,small group,5,built community momentum,moderate,community post
+ACT-0228,CAND-017,Finley Yamada,2026-02-02,reusable guide,team,3.9,improved learner readiness,strategic,SharePoint artifact
+ACT-0229,CAND-017,Finley Yamada,2026-04-28,cross-team intro,cross-team,5,improved learner readiness,moderate,SharePoint artifact
+ACT-0230,CAND-017,Finley Yamada,2026-03-29,delegated workstream,team,5,improved handoff clarity,strategic,SharePoint artifact
+ACT-0231,CAND-017,Finley Yamada,2026-03-21,feedback synthesis,global community,4.3,built community momentum,moderate,SharePoint artifact
+ACT-0232,CAND-017,Finley Yamada,2026-04-12,mentoring session,1:1,4.7,improved learner readiness,moderate,program tracker
+ACT-0233,CAND-017,Finley Yamada,2026-05-25,reusable guide,global community,3.8,resolved ambiguity,low,peer note
+ACT-0234,CAND-017,Finley Yamada,2026-05-04,feedback synthesis,global community,4.7,scaled a repeatable pattern,strategic,peer note
+ACT-0235,CAND-017,Finley Yamada,2026-05-13,reusable guide,global community,5,created team confidence,moderate,SharePoint artifact
+ACT-0236,CAND-017,Finley Yamada,2026-06-23,reusable guide,1:1,4.2,built community momentum,strategic,program tracker
+ACT-0237,CAND-017,Finley Yamada,2026-04-18,office hours support,regional community,3.2,helped a peer present work,low,SharePoint artifact
+ACT-0238,CAND-017,Finley Yamada,2026-07-04,office hours support,1:1,3.1,reduced repeated questions,high,meeting recap
+ACT-0239,CAND-017,Finley Yamada,2026-06-20,delegated workstream,1:1,4.6,improved learner readiness,strategic,SharePoint artifact
+ACT-0240,CAND-017,Finley Yamada,2026-07-28,program coordination,small group,5,resolved ambiguity,moderate,community post
+ACT-0241,CAND-017,Finley Yamada,2026-04-11,program coordination,cross-team,5,improved learner readiness,moderate,SharePoint artifact
+ACT-0242,CAND-018,Devon Singh,2026-03-22,program coordination,1:1,3.6,scaled a repeatable pattern,moderate,SharePoint artifact
+ACT-0243,CAND-018,Devon Singh,2026-03-26,cross-team intro,cross-team,3.4,connected isolated workstreams,strategic,Teams thread
+ACT-0244,CAND-018,Devon Singh,2026-04-28,feedback synthesis,global community,4,built community momentum,high,Teams thread
+ACT-0245,CAND-018,Devon Singh,2026-03-23,peer coaching,team,4,scaled a repeatable pattern,moderate,peer note
+ACT-0246,CAND-018,Devon Singh,2026-03-09,office hours support,small group,3.6,resolved ambiguity,moderate,SharePoint artifact
+ACT-0247,CAND-018,Devon Singh,2026-05-29,program coordination,cross-team,4.1,improved handoff clarity,moderate,peer note
+ACT-0248,CAND-018,Devon Singh,2026-06-23,program coordination,cross-team,3.5,unblocked peers,moderate,community post
+ACT-0249,CAND-018,Devon Singh,2026-06-06,program coordination,small group,2.7,created team confidence,low,program tracker
+ACT-0250,CAND-018,Devon Singh,2026-02-01,office hours support,small group,4.6,connected isolated workstreams,high,meeting recap
+ACT-0251,CAND-018,Devon Singh,2026-05-03,community answer,regional community,3.8,connected isolated workstreams,strategic,program tracker
+ACT-0252,CAND-018,Devon Singh,2026-04-16,delegated workstream,1:1,4.7,connected isolated workstreams,high,community post
+ACT-0253,CAND-018,Devon Singh,2026-06-13,reusable guide,team,4.3,improved learner readiness,low,peer note
+ACT-0254,CAND-018,Devon Singh,2026-02-09,cross-team intro,1:1,2.9,reduced repeated questions,high,Teams thread
+ACT-0255,CAND-018,Devon Singh,2026-02-21,cross-team intro,cross-team,3.6,improved learner readiness,moderate,program tracker
+ACT-0256,CAND-018,Devon Singh,2026-04-14,program coordination,small group,2.8,built community momentum,moderate,program tracker
+ACT-0257,CAND-018,Devon Singh,2026-02-17,content improvement,cross-team,3.8,improved learner readiness,low,SharePoint artifact
+ACT-0258,CAND-018,Devon Singh,2026-01-08,content improvement,small group,4.3,reduced repeated questions,strategic,program tracker
+ACT-0259,CAND-018,Devon Singh,2026-05-15,recognition nomination,cross-team,2.8,built community momentum,strategic,meeting recap
+ACT-0260,CAND-019,Sage Adams,2026-01-27,delegated workstream,team,5,unblocked peers,high,meeting recap
+ACT-0261,CAND-019,Sage Adams,2026-05-23,mentoring session,small group,4.8,built community momentum,strategic,program tracker
+ACT-0262,CAND-019,Sage Adams,2026-05-16,community answer,regional community,4,connected isolated workstreams,low,peer note
+ACT-0263,CAND-019,Sage Adams,2026-04-28,office hours support,small group,4.3,helped a peer present work,low,peer note
+ACT-0264,CAND-019,Sage Adams,2026-08-06,recognition nomination,1:1,4.5,built community momentum,high,SharePoint artifact
+ACT-0265,CAND-019,Sage Adams,2026-08-03,community answer,cross-team,3.9,scaled a repeatable pattern,moderate,meeting recap
+ACT-0266,CAND-019,Sage Adams,2026-08-01,feedback synthesis,global community,4,improved learner readiness,strategic,meeting recap
+ACT-0267,CAND-019,Sage Adams,2026-06-12,reusable guide,small group,4.2,reduced repeated questions,low,program tracker
+ACT-0268,CAND-019,Sage Adams,2026-04-05,office hours support,team,4.4,created team confidence,high,program tracker
+ACT-0269,CAND-019,Sage Adams,2026-03-15,office hours support,global community,5,scaled a repeatable pattern,moderate,community post
+ACT-0270,CAND-019,Sage Adams,2026-01-21,mentoring session,small group,4.8,reduced repeated questions,moderate,peer note
+ACT-0271,CAND-019,Sage Adams,2026-03-29,event facilitation,global community,4.3,helped a peer present work,strategic,meeting recap
+ACT-0272,CAND-019,Sage Adams,2026-06-02,recognition nomination,cross-team,4.4,scaled a repeatable pattern,low,community post
+ACT-0273,CAND-019,Sage Adams,2026-05-17,feedback synthesis,team,5,connected isolated workstreams,strategic,community post
+ACT-0274,CAND-019,Sage Adams,2026-03-30,delegated workstream,global community,5,scaled a repeatable pattern,strategic,peer note
+ACT-0275,CAND-019,Sage Adams,2026-06-25,feedback synthesis,team,4.6,scaled a repeatable pattern,strategic,meeting recap
+ACT-0276,CAND-020,Alex Nakamura,2026-05-12,mentoring session,team,3.3,created team confidence,high,program tracker
+ACT-0277,CAND-020,Alex Nakamura,2026-06-02,reusable guide,team,2.8,unblocked peers,low,Teams thread
+ACT-0278,CAND-020,Alex Nakamura,2026-06-15,content improvement,1:1,3.2,scaled a repeatable pattern,moderate,community post
+ACT-0279,CAND-020,Alex Nakamura,2026-05-02,peer coaching,global community,4.3,improved handoff clarity,high,meeting recap
+ACT-0280,CAND-020,Alex Nakamura,2026-03-17,community answer,global community,3.5,connected isolated workstreams,high,Teams thread
+ACT-0281,CAND-020,Alex Nakamura,2026-04-11,recognition nomination,cross-team,3.9,created team confidence,moderate,community post
+ACT-0282,CAND-020,Alex Nakamura,2026-06-22,community answer,global community,3.3,scaled a repeatable pattern,low,meeting recap
+ACT-0283,CAND-020,Alex Nakamura,2026-05-08,community answer,global community,3.9,built community momentum,low,Teams thread
+ACT-0284,CAND-020,Alex Nakamura,2026-07-03,cross-team intro,1:1,3.9,helped a peer present work,moderate,community post
+ACT-0285,CAND-020,Alex Nakamura,2026-01-24,event facilitation,1:1,2.7,scaled a repeatable pattern,high,SharePoint artifact
+ACT-0286,CAND-020,Alex Nakamura,2026-03-23,reusable guide,cross-team,4.3,improved handoff clarity,moderate,Teams thread
+ACT-0287,CAND-020,Alex Nakamura,2026-05-21,delegated workstream,cross-team,3.9,connected isolated workstreams,moderate,peer note
+ACT-0288,CAND-020,Alex Nakamura,2026-07-16,reusable guide,cross-team,3.6,improved learner readiness,strategic,meeting recap
+ACT-0289,CAND-020,Alex Nakamura,2026-01-28,community answer,global community,3.7,helped a peer present work,high,community post
+ACT-0290,CAND-021,Kendall Ibrahim,2026-03-27,reusable guide,small group,3.1,resolved ambiguity,high,peer note
+ACT-0291,CAND-021,Kendall Ibrahim,2026-01-12,recognition nomination,team,4.1,reduced repeated questions,moderate,peer note
+ACT-0292,CAND-021,Kendall Ibrahim,2026-04-16,mentoring session,small group,2.3,built community momentum,strategic,Teams thread
+ACT-0293,CAND-021,Kendall Ibrahim,2026-03-08,content improvement,global community,2.1,improved learner readiness,low,program tracker
+ACT-0294,CAND-021,Kendall Ibrahim,2026-01-09,cross-team intro,regional community,3.4,helped a peer present work,high,program tracker
+ACT-0295,CAND-021,Kendall Ibrahim,2026-06-29,reusable guide,cross-team,2.9,scaled a repeatable pattern,low,program tracker
+ACT-0296,CAND-021,Kendall Ibrahim,2026-01-23,peer coaching,1:1,3.1,helped a peer present work,high,peer note
+ACT-0297,CAND-021,Kendall Ibrahim,2026-07-07,office hours support,cross-team,3.3,helped a peer present work,strategic,Teams thread
+ACT-0298,CAND-021,Kendall Ibrahim,2026-06-18,office hours support,1:1,2.7,created team confidence,low,program tracker
+ACT-0299,CAND-022,Remy Thompson,2026-02-27,reusable guide,global community,4,scaled a repeatable pattern,high,peer note
+ACT-0300,CAND-022,Remy Thompson,2026-04-27,feedback synthesis,small group,4.5,unblocked peers,moderate,Teams thread
+ACT-0301,CAND-022,Remy Thompson,2026-04-27,community answer,team,3.8,improved handoff clarity,low,Teams thread
+ACT-0302,CAND-022,Remy Thompson,2026-07-06,reusable guide,global community,5,unblocked peers,moderate,community post
+ACT-0303,CAND-022,Remy Thompson,2026-04-04,office hours support,team,3.4,improved handoff clarity,high,meeting recap
+ACT-0304,CAND-022,Remy Thompson,2026-07-16,mentoring session,global community,4.5,scaled a repeatable pattern,low,SharePoint artifact
+ACT-0305,CAND-022,Remy Thompson,2026-07-31,program coordination,global community,5,improved learner readiness,low,community post
+ACT-0306,CAND-022,Remy Thompson,2026-05-02,office hours support,team,4.9,unblocked peers,strategic,program tracker
+ACT-0307,CAND-022,Remy Thompson,2026-02-17,cross-team intro,regional community,5,scaled a repeatable pattern,moderate,peer note
+ACT-0308,CAND-022,Remy Thompson,2026-05-16,peer coaching,1:1,5,unblocked peers,moderate,Teams thread
+ACT-0309,CAND-022,Remy Thompson,2026-05-06,cross-team intro,1:1,4.4,resolved ambiguity,strategic,meeting recap
+ACT-0310,CAND-022,Remy Thompson,2026-03-29,event facilitation,cross-team,5,connected isolated workstreams,high,Teams thread
+ACT-0311,CAND-022,Remy Thompson,2026-06-01,cross-team intro,1:1,5,improved handoff clarity,moderate,program tracker
+ACT-0312,CAND-022,Remy Thompson,2026-01-17,program coordination,1:1,5,built community momentum,high,SharePoint artifact
+ACT-0313,CAND-022,Remy Thompson,2026-03-30,community answer,small group,4.6,created team confidence,high,peer note
+ACT-0314,CAND-022,Remy Thompson,2026-06-14,event facilitation,cross-team,4.7,connected isolated workstreams,strategic,meeting recap
+ACT-0315,CAND-022,Remy Thompson,2026-07-12,office hours support,1:1,4.7,helped a peer present work,low,meeting recap
+ACT-0316,CAND-023,Blair Rivera,2026-05-24,cross-team intro,1:1,3,connected isolated workstreams,low,peer note
+ACT-0317,CAND-023,Blair Rivera,2026-04-12,feedback synthesis,global community,2.9,created team confidence,low,meeting recap
+ACT-0318,CAND-023,Blair Rivera,2026-05-21,event facilitation,small group,2.1,created team confidence,low,Teams thread
+ACT-0319,CAND-023,Blair Rivera,2026-03-06,office hours support,cross-team,4.6,connected isolated workstreams,strategic,peer note
+ACT-0320,CAND-023,Blair Rivera,2026-01-27,delegated workstream,cross-team,4.1,scaled a repeatable pattern,low,community post
+ACT-0321,CAND-023,Blair Rivera,2026-06-24,reusable guide,small group,3.9,created team confidence,high,SharePoint artifact
+ACT-0322,CAND-024,Elliot Kim,2026-08-06,feedback synthesis,team,4.6,connected isolated workstreams,strategic,SharePoint artifact
+ACT-0323,CAND-024,Elliot Kim,2026-03-06,community answer,regional community,5,scaled a repeatable pattern,moderate,Teams thread
+ACT-0324,CAND-024,Elliot Kim,2026-02-17,content improvement,cross-team,4.8,connected isolated workstreams,strategic,Teams thread
+ACT-0325,CAND-024,Elliot Kim,2026-05-23,cross-team intro,team,5,built community momentum,high,Teams thread
+ACT-0326,CAND-024,Elliot Kim,2026-01-29,reusable guide,global community,4.8,created team confidence,low,meeting recap
+ACT-0327,CAND-024,Elliot Kim,2026-08-07,cross-team intro,team,5,helped a peer present work,low,peer note
+ACT-0328,CAND-024,Elliot Kim,2026-03-23,mentoring session,small group,5,unblocked peers,strategic,community post
+ACT-0329,CAND-024,Elliot Kim,2026-05-28,feedback synthesis,1:1,4.6,improved handoff clarity,low,Teams thread
+ACT-0330,CAND-024,Elliot Kim,2026-01-21,event facilitation,small group,4.8,reduced repeated questions,strategic,SharePoint artifact
+ACT-0331,CAND-024,Elliot Kim,2026-06-30,recognition nomination,regional community,5,created team confidence,low,Teams thread
+ACT-0332,CAND-024,Elliot Kim,2026-01-22,event facilitation,global community,4.8,built community momentum,moderate,Teams thread
+ACT-0333,CAND-024,Elliot Kim,2026-08-10,cross-team intro,1:1,5,improved handoff clarity,strategic,peer note
+ACT-0334,CAND-024,Elliot Kim,2026-04-17,content improvement,1:1,5,helped a peer present work,strategic,meeting recap
+ACT-0335,CAND-024,Elliot Kim,2026-04-06,event facilitation,cross-team,5,improved handoff clarity,low,program tracker
+ACT-0336,CAND-024,Elliot Kim,2026-06-13,delegated workstream,small group,4.7,created team confidence,strategic,community post
+ACT-0337,CAND-024,Elliot Kim,2026-05-26,content improvement,small group,5,helped a peer present work,moderate,peer note
+ACT-0338,CAND-024,Elliot Kim,2026-07-29,office hours support,small group,5,resolved ambiguity,low,community post
+ACT-0339,CAND-024,Elliot Kim,2026-07-25,feedback synthesis,cross-team,4.3,connected isolated workstreams,high,community post
+ACT-0340,CAND-025,Hayden Garcia,2026-03-16,reusable guide,1:1,4.9,created team confidence,low,community post
+ACT-0341,CAND-025,Hayden Garcia,2026-05-21,cross-team intro,regional community,4.1,reduced repeated questions,moderate,Teams thread
+ACT-0342,CAND-025,Hayden Garcia,2026-03-10,recognition nomination,global community,4,unblocked peers,moderate,program tracker
+ACT-0343,CAND-025,Hayden Garcia,2026-08-10,program coordination,team,4.9,improved handoff clarity,moderate,meeting recap
+ACT-0344,CAND-025,Hayden Garcia,2026-06-06,cross-team intro,regional community,4.3,unblocked peers,high,program tracker
+ACT-0345,CAND-025,Hayden Garcia,2026-05-30,reusable guide,regional community,3,reduced repeated questions,strategic,program tracker
+ACT-0346,CAND-025,Hayden Garcia,2026-03-26,reusable guide,small group,3.7,improved learner readiness,moderate,Teams thread
+ACT-0347,CAND-025,Hayden Garcia,2026-05-20,content improvement,1:1,4,connected isolated workstreams,moderate,meeting recap
+ACT-0348,CAND-025,Hayden Garcia,2026-04-03,feedback synthesis,team,4.5,unblocked peers,low,meeting recap
+ACT-0349,CAND-025,Hayden Garcia,2026-06-05,feedback synthesis,small group,5,scaled a repeatable pattern,high,Teams thread
+ACT-0350,CAND-025,Hayden Garcia,2026-04-11,feedback synthesis,1:1,4.6,connected isolated workstreams,high,SharePoint artifact
+ACT-0351,CAND-025,Hayden Garcia,2026-02-09,reusable guide,global community,3.7,helped a peer present work,strategic,peer note
+ACT-0352,CAND-026,Jules Bennett,2026-05-29,feedback synthesis,regional community,4.8,connected isolated workstreams,moderate,peer note
+ACT-0353,CAND-026,Jules Bennett,2026-06-05,reusable guide,team,3,improved handoff clarity,moderate,peer note
+ACT-0354,CAND-026,Jules Bennett,2026-01-06,feedback synthesis,regional community,4.6,helped a peer present work,low,meeting recap
+ACT-0355,CAND-026,Jules Bennett,2026-06-09,cross-team intro,small group,5,improved learner readiness,low,community post
+ACT-0356,CAND-026,Jules Bennett,2026-02-11,cross-team intro,global community,3,scaled a repeatable pattern,moderate,SharePoint artifact
+ACT-0357,CAND-026,Jules Bennett,2026-03-28,reusable guide,global community,2.7,connected isolated workstreams,strategic,Teams thread
+ACT-0358,CAND-026,Jules Bennett,2026-03-14,event facilitation,small group,2.5,scaled a repeatable pattern,high,SharePoint artifact
+ACT-0359,CAND-026,Jules Bennett,2026-07-26,community answer,cross-team,3.8,helped a peer present work,moderate,community post
+ACT-0360,CAND-026,Jules Bennett,2026-05-12,program coordination,team,3.7,resolved ambiguity,strategic,Teams thread
+ACT-0361,CAND-026,Jules Bennett,2026-08-06,content improvement,global community,4.1,reduced repeated questions,moderate,community post
+ACT-0362,CAND-026,Jules Bennett,2026-01-24,peer coaching,team,2.9,unblocked peers,high,SharePoint artifact
+ACT-0363,CAND-027,Kiran Park,2026-02-18,program coordination,small group,3.9,scaled a repeatable pattern,low,SharePoint artifact
+ACT-0364,CAND-027,Kiran Park,2026-06-07,delegated workstream,cross-team,4.8,improved handoff clarity,strategic,meeting recap
+ACT-0365,CAND-027,Kiran Park,2026-01-19,community answer,team,2.8,reduced repeated questions,moderate,community post
+ACT-0366,CAND-027,Kiran Park,2026-07-03,office hours support,team,3.3,created team confidence,high,meeting recap
+ACT-0367,CAND-027,Kiran Park,2026-01-30,peer coaching,cross-team,2.4,improved learner readiness,strategic,meeting recap
+ACT-0368,CAND-027,Kiran Park,2026-01-19,cross-team intro,global community,3.8,improved learner readiness,strategic,meeting recap
+ACT-0369,CAND-027,Kiran Park,2026-01-30,peer coaching,small group,3.5,improved handoff clarity,high,Teams thread
+ACT-0370,CAND-027,Kiran Park,2026-05-07,community answer,cross-team,3.2,created team confidence,low,peer note
+ACT-0371,CAND-027,Kiran Park,2026-05-25,program coordination,small group,4.6,connected isolated workstreams,strategic,SharePoint artifact
+ACT-0372,CAND-027,Kiran Park,2026-02-22,content improvement,team,4.2,reduced repeated questions,high,program tracker
+ACT-0373,CAND-028,Lane Zhang,2026-01-21,reusable guide,1:1,3.5,connected isolated workstreams,strategic,program tracker
+ACT-0374,CAND-028,Lane Zhang,2026-03-05,office hours support,1:1,2.4,helped a peer present work,strategic,program tracker
+ACT-0375,CAND-028,Lane Zhang,2026-06-30,content improvement,team,3,scaled a repeatable pattern,strategic,peer note
+ACT-0376,CAND-028,Lane Zhang,2026-01-14,office hours support,regional community,3.3,resolved ambiguity,moderate,Teams thread
+ACT-0377,CAND-028,Lane Zhang,2026-07-18,content improvement,small group,4.4,reduced repeated questions,moderate,Teams thread
+ACT-0378,CAND-028,Lane Zhang,2026-04-24,community answer,global community,5,helped a peer present work,moderate,peer note
+ACT-0379,CAND-028,Lane Zhang,2026-02-12,delegated workstream,1:1,2.7,scaled a repeatable pattern,strategic,program tracker
+ACT-0380,CAND-028,Lane Zhang,2026-04-17,office hours support,team,5,created team confidence,strategic,Teams thread
+ACT-0381,CAND-029,Marley Nguyen,2026-05-19,program coordination,1:1,2.8,helped a peer present work,moderate,meeting recap
+ACT-0382,CAND-029,Marley Nguyen,2026-05-31,delegated workstream,1:1,2.2,scaled a repeatable pattern,low,SharePoint artifact
+ACT-0383,CAND-029,Marley Nguyen,2026-05-23,cross-team intro,cross-team,2.5,created team confidence,strategic,peer note
+ACT-0384,CAND-029,Marley Nguyen,2026-05-10,delegated workstream,team,3.6,helped a peer present work,moderate,program tracker
+ACT-0385,CAND-029,Marley Nguyen,2026-06-10,recognition nomination,global community,3.3,helped a peer present work,low,community post
+ACT-0386,CAND-029,Marley Nguyen,2026-03-31,feedback synthesis,team,3.5,connected isolated workstreams,low,SharePoint artifact
+ACT-0387,CAND-029,Marley Nguyen,2026-08-03,mentoring session,team,4.6,created team confidence,strategic,peer note
+ACT-0388,CAND-029,Marley Nguyen,2026-06-30,community answer,team,3.9,built community momentum,high,SharePoint artifact
+ACT-0389,CAND-029,Marley Nguyen,2026-07-11,program coordination,regional community,3.6,scaled a repeatable pattern,moderate,community post
+ACT-0390,CAND-030,Noel Scott,2026-07-14,content improvement,regional community,5,connected isolated workstreams,low,program tracker
+ACT-0391,CAND-030,Noel Scott,2026-07-27,reusable guide,cross-team,4.8,improved handoff clarity,low,meeting recap
+ACT-0392,CAND-030,Noel Scott,2026-02-24,event facilitation,1:1,4.3,reduced repeated questions,low,community post
+ACT-0393,CAND-030,Noel Scott,2026-01-18,cross-team intro,cross-team,3.7,resolved ambiguity,strategic,peer note
+ACT-0394,CAND-030,Noel Scott,2026-02-06,recognition nomination,1:1,3.3,reduced repeated questions,high,community post
+ACT-0395,CAND-030,Noel Scott,2026-06-07,content improvement,regional community,4.5,resolved ambiguity,high,SharePoint artifact
+ACT-0396,CAND-030,Noel Scott,2026-02-16,mentoring session,global community,5,scaled a repeatable pattern,high,Teams thread
+ACT-0397,CAND-030,Noel Scott,2026-04-14,peer coaching,small group,4.3,reduced repeated questions,moderate,peer note
+ACT-0398,CAND-030,Noel Scott,2026-02-27,mentoring session,global community,4.6,helped a peer present work,low,peer note
+ACT-0399,CAND-030,Noel Scott,2026-01-08,content improvement,regional community,4.7,unblocked peers,moderate,SharePoint artifact
+ACT-0400,CAND-030,Noel Scott,2026-06-10,mentoring session,global community,3.3,created team confidence,strategic,community post
+ACT-0401,CAND-030,Noel Scott,2026-08-12,cross-team intro,team,3.4,resolved ambiguity,strategic,program tracker
+ACT-0402,CAND-030,Noel Scott,2026-02-01,peer coaching,regional community,4,connected isolated workstreams,high,SharePoint artifact
+ACT-0403,CAND-030,Noel Scott,2026-06-30,community answer,team,3.2,connected isolated workstreams,high,SharePoint artifact
+ACT-0404,CAND-030,Noel Scott,2026-06-22,feedback synthesis,global community,3.9,created team confidence,moderate,meeting recap
+ACT-0405,CAND-031,Oakley Ali,2026-01-20,delegated workstream,cross-team,3.8,connected isolated workstreams,moderate,peer note
+ACT-0406,CAND-031,Oakley Ali,2026-01-12,recognition nomination,cross-team,3.6,helped a peer present work,strategic,peer note
+ACT-0407,CAND-031,Oakley Ali,2026-01-15,delegated workstream,global community,3.9,improved learner readiness,moderate,SharePoint artifact
+ACT-0408,CAND-031,Oakley Ali,2026-07-10,feedback synthesis,cross-team,4.3,connected isolated workstreams,high,meeting recap
+ACT-0409,CAND-031,Oakley Ali,2026-08-09,recognition nomination,regional community,5,improved handoff clarity,high,Teams thread
+ACT-0410,CAND-031,Oakley Ali,2026-05-06,reusable guide,regional community,4.1,improved handoff clarity,high,peer note
+ACT-0411,CAND-031,Oakley Ali,2026-01-28,event facilitation,team,3,reduced repeated questions,high,community post
+ACT-0412,CAND-031,Oakley Ali,2026-07-26,cross-team intro,cross-team,3.5,scaled a repeatable pattern,strategic,Teams thread
+ACT-0413,CAND-031,Oakley Ali,2026-06-17,delegated workstream,regional community,4.5,improved learner readiness,low,community post
+ACT-0414,CAND-031,Oakley Ali,2026-02-24,office hours support,regional community,4.9,created team confidence,strategic,Teams thread
+ACT-0415,CAND-031,Oakley Ali,2026-08-12,reusable guide,small group,4.9,reduced repeated questions,high,community post
+ACT-0416,CAND-031,Oakley Ali,2026-05-31,content improvement,small group,5,scaled a repeatable pattern,strategic,SharePoint artifact
+ACT-0417,CAND-032,Peyton Kowalski,2026-06-16,reusable guide,cross-team,4.3,created team confidence,moderate,meeting recap
+ACT-0418,CAND-032,Peyton Kowalski,2026-06-02,reusable guide,cross-team,4.7,scaled a repeatable pattern,moderate,program tracker
+ACT-0419,CAND-032,Peyton Kowalski,2026-04-27,recognition nomination,cross-team,3.8,helped a peer present work,low,Teams thread
+ACT-0420,CAND-032,Peyton Kowalski,2026-05-22,event facilitation,global community,4.8,connected isolated workstreams,low,SharePoint artifact
+ACT-0421,CAND-032,Peyton Kowalski,2026-07-18,office hours support,global community,4.8,reduced repeated questions,moderate,peer note
+ACT-0422,CAND-032,Peyton Kowalski,2026-04-04,mentoring session,small group,5,scaled a repeatable pattern,strategic,program tracker
+ACT-0423,CAND-032,Peyton Kowalski,2026-06-05,mentoring session,team,5,created team confidence,strategic,peer note
+ACT-0424,CAND-032,Peyton Kowalski,2026-05-19,delegated workstream,regional community,5,connected isolated workstreams,strategic,peer note
+ACT-0425,CAND-032,Peyton Kowalski,2026-02-09,cross-team intro,small group,5,improved handoff clarity,strategic,Teams thread
+ACT-0426,CAND-032,Peyton Kowalski,2026-03-05,event facilitation,global community,4.4,improved handoff clarity,moderate,peer note
+ACT-0427,CAND-032,Peyton Kowalski,2026-01-11,delegated workstream,global community,4.1,unblocked peers,strategic,peer note
+ACT-0428,CAND-032,Peyton Kowalski,2026-03-12,office hours support,regional community,4.4,unblocked peers,low,peer note
+ACT-0429,CAND-032,Peyton Kowalski,2026-02-02,recognition nomination,1:1,4.5,helped a peer present work,strategic,community post
+ACT-0430,CAND-032,Peyton Kowalski,2026-02-06,office hours support,team,4.2,built community momentum,moderate,meeting recap
+ACT-0431,CAND-032,Peyton Kowalski,2026-07-02,recognition nomination,global community,4,scaled a repeatable pattern,high,program tracker
+ACT-0432,CAND-032,Peyton Kowalski,2026-06-10,feedback synthesis,small group,4,helped a peer present work,low,program tracker
+ACT-0433,CAND-032,Peyton Kowalski,2026-07-09,delegated workstream,1:1,4.7,built community momentum,moderate,program tracker
+ACT-0434,CAND-032,Peyton Kowalski,2026-02-26,mentoring session,regional community,4.7,reduced repeated questions,high,peer note
+ACT-0435,CAND-032,Peyton Kowalski,2026-04-20,mentoring session,small group,4.9,built community momentum,high,meeting recap
+ACT-0436,CAND-033,Robin Varga,2026-01-06,peer coaching,regional community,2.8,built community momentum,moderate,Teams thread
+ACT-0437,CAND-033,Robin Varga,2026-07-24,office hours support,1:1,2.1,scaled a repeatable pattern,high,peer note
+ACT-0438,CAND-033,Robin Varga,2026-03-06,content improvement,cross-team,4.1,unblocked peers,low,meeting recap
+ACT-0439,CAND-033,Robin Varga,2026-01-16,mentoring session,team,3.4,connected isolated workstreams,strategic,peer note
+ACT-0440,CAND-033,Robin Varga,2026-02-04,community answer,1:1,4.4,improved handoff clarity,moderate,SharePoint artifact
+ACT-0441,CAND-033,Robin Varga,2026-04-07,content improvement,regional community,2.3,created team confidence,low,SharePoint artifact
+ACT-0442,CAND-033,Robin Varga,2026-08-02,cross-team intro,cross-team,3.8,created team confidence,strategic,peer note
+ACT-0443,CAND-033,Robin Varga,2026-08-11,content improvement,cross-team,4.1,improved handoff clarity,low,meeting recap
+ACT-0444,CAND-033,Robin Varga,2026-07-03,feedback synthesis,small group,5,scaled a repeatable pattern,strategic,program tracker
+ACT-0445,CAND-033,Robin Varga,2026-05-09,delegated workstream,global community,4,built community momentum,moderate,program tracker
+ACT-0446,CAND-033,Robin Varga,2026-04-13,cross-team intro,global community,2.4,improved handoff clarity,strategic,community post
+ACT-0447,CAND-034,Shiloh Brooks,2026-02-03,program coordination,global community,3,connected isolated workstreams,low,peer note
+ACT-0448,CAND-034,Shiloh Brooks,2026-06-28,office hours support,global community,3.1,improved learner readiness,moderate,peer note
+ACT-0449,CAND-034,Shiloh Brooks,2026-04-02,office hours support,1:1,2,helped a peer present work,moderate,community post
+ACT-0450,CAND-034,Shiloh Brooks,2026-04-04,recognition nomination,global community,2.9,helped a peer present work,moderate,program tracker
+ACT-0451,CAND-035,Tatum White,2026-01-08,recognition nomination,small group,3.9,resolved ambiguity,strategic,community post
+ACT-0452,CAND-035,Tatum White,2026-02-17,community answer,team,4.5,created team confidence,low,program tracker
+ACT-0453,CAND-035,Tatum White,2026-03-04,office hours support,global community,3.9,helped a peer present work,strategic,meeting recap
+ACT-0454,CAND-035,Tatum White,2026-01-26,content improvement,1:1,3.7,built community momentum,strategic,SharePoint artifact
+ACT-0455,CAND-035,Tatum White,2026-02-05,content improvement,global community,4.8,unblocked peers,low,community post
+ACT-0456,CAND-035,Tatum White,2026-04-21,peer coaching,1:1,4.5,improved learner readiness,high,program tracker
+ACT-0457,CAND-035,Tatum White,2026-05-29,event facilitation,global community,4.5,built community momentum,high,SharePoint artifact
+ACT-0458,CAND-035,Tatum White,2026-08-05,peer coaching,team,5,resolved ambiguity,strategic,peer note
+ACT-0459,CAND-035,Tatum White,2026-06-23,cross-team intro,global community,3.3,built community momentum,low,Teams thread
+ACT-0460,CAND-035,Tatum White,2026-07-19,recognition nomination,global community,4.6,created team confidence,high,peer note
+ACT-0461,CAND-035,Tatum White,2026-02-02,peer coaching,small group,5,built community momentum,moderate,peer note
+ACT-0462,CAND-035,Tatum White,2026-07-15,feedback synthesis,small group,4.1,reduced repeated questions,low,community post
+ACT-0463,CAND-035,Tatum White,2026-03-02,content improvement,small group,4.8,connected isolated workstreams,low,community post
+ACT-0464,CAND-035,Tatum White,2026-01-17,recognition nomination,cross-team,5,built community momentum,moderate,community post
+ACT-0465,CAND-035,Tatum White,2026-01-07,office hours support,global community,3.7,unblocked peers,strategic,program tracker
+ACT-0466,CAND-035,Tatum White,2026-05-09,office hours support,global community,4.8,improved learner readiness,moderate,peer note
+ACT-0467,CAND-035,Tatum White,2026-08-02,reusable guide,1:1,3,helped a peer present work,high,program tracker
+ACT-0468,CAND-036,Winter Khan,2026-06-10,feedback synthesis,small group,3.5,created team confidence,strategic,SharePoint artifact
+ACT-0469,CAND-036,Winter Khan,2026-03-22,content improvement,regional community,4.2,resolved ambiguity,high,peer note
+ACT-0470,CAND-036,Winter Khan,2026-05-26,cross-team intro,global community,3.7,resolved ambiguity,moderate,meeting recap
+ACT-0471,CAND-036,Winter Khan,2026-02-28,delegated workstream,global community,3.3,improved handoff clarity,moderate,program tracker
+ACT-0472,CAND-036,Winter Khan,2026-05-24,feedback synthesis,global community,3,connected isolated workstreams,low,SharePoint artifact
+ACT-0473,CAND-036,Winter Khan,2026-05-29,content improvement,global community,2.6,helped a peer present work,high,community post
+ACT-0474,CAND-036,Winter Khan,2026-07-31,peer coaching,regional community,3.2,scaled a repeatable pattern,low,community post
+ACT-0475,CAND-036,Winter Khan,2026-02-12,peer coaching,small group,3.8,created team confidence,high,meeting recap
+ACT-0476,CAND-036,Winter Khan,2026-08-08,peer coaching,global community,3.6,created team confidence,moderate,program tracker
+ACT-0477,CAND-036,Winter Khan,2026-01-14,cross-team intro,global community,4.2,resolved ambiguity,moderate,peer note
+ACT-0478,CAND-036,Winter Khan,2026-06-20,office hours support,cross-team,3.7,reduced repeated questions,high,peer note
+ACT-0479,CAND-036,Winter Khan,2026-06-25,peer coaching,global community,4.7,connected isolated workstreams,low,Teams thread
+ACT-0480,CAND-036,Winter Khan,2026-07-15,mentoring session,small group,3.7,improved learner readiness,strategic,meeting recap
+ACT-0481,CAND-036,Winter Khan,2026-06-17,feedback synthesis,regional community,3.9,resolved ambiguity,moderate,peer note
+ACT-0482,CAND-036,Winter Khan,2026-02-24,mentoring session,cross-team,3.4,improved handoff clarity,low,meeting recap
+ACT-0483,CAND-036,Winter Khan,2026-02-19,feedback synthesis,cross-team,3.4,created team confidence,high,meeting recap
+ACT-0484,CAND-036,Winter Khan,2026-02-16,delegated workstream,team,3.5,unblocked peers,high,community post
+ACT-0485,CAND-037,Nico Cruz,2026-02-14,cross-team intro,regional community,4.2,unblocked peers,high,community post
+ACT-0486,CAND-037,Nico Cruz,2026-07-27,delegated workstream,global community,4.6,connected isolated workstreams,moderate,meeting recap
+ACT-0487,CAND-037,Nico Cruz,2026-05-19,community answer,regional community,4.5,improved handoff clarity,strategic,program tracker
+ACT-0488,CAND-037,Nico Cruz,2026-05-23,program coordination,small group,5,connected isolated workstreams,high,SharePoint artifact
+ACT-0489,CAND-037,Nico Cruz,2026-03-22,event facilitation,regional community,4.9,resolved ambiguity,strategic,program tracker
+ACT-0490,CAND-037,Nico Cruz,2026-08-04,recognition nomination,cross-team,5,reduced repeated questions,moderate,Teams thread
+ACT-0491,CAND-037,Nico Cruz,2026-06-29,cross-team intro,cross-team,4.7,scaled a repeatable pattern,strategic,SharePoint artifact
+ACT-0492,CAND-037,Nico Cruz,2026-05-24,feedback synthesis,team,4.3,resolved ambiguity,strategic,community post
+ACT-0493,CAND-037,Nico Cruz,2026-01-17,mentoring session,global community,5,reduced repeated questions,high,program tracker
+ACT-0494,CAND-037,Nico Cruz,2026-01-27,community answer,regional community,5,resolved ambiguity,low,peer note
+ACT-0495,CAND-037,Nico Cruz,2026-01-22,event facilitation,global community,5,reduced repeated questions,strategic,Teams thread
+ACT-0496,CAND-037,Nico Cruz,2026-02-27,office hours support,global community,5,helped a peer present work,low,peer note
+ACT-0497,CAND-038,Adrian Rahman,2026-06-30,reusable guide,1:1,4,scaled a repeatable pattern,low,Teams thread
+ACT-0498,CAND-038,Adrian Rahman,2026-02-20,mentoring session,regional community,3.1,scaled a repeatable pattern,moderate,SharePoint artifact
+ACT-0499,CAND-038,Adrian Rahman,2026-04-20,program coordination,team,1.8,unblocked peers,strategic,peer note
+ACT-0500,CAND-038,Adrian Rahman,2026-02-05,office hours support,1:1,3.1,improved learner readiness,low,peer note
+ACT-0501,CAND-039,Milan Chen,2026-01-24,cross-team intro,regional community,3.4,scaled a repeatable pattern,high,peer note
+ACT-0502,CAND-039,Milan Chen,2026-03-24,delegated workstream,cross-team,5,helped a peer present work,strategic,peer note
+ACT-0503,CAND-039,Milan Chen,2026-01-13,content improvement,small group,4.5,resolved ambiguity,moderate,meeting recap
+ACT-0504,CAND-039,Milan Chen,2026-07-16,program coordination,team,4.5,improved handoff clarity,high,peer note
+ACT-0505,CAND-039,Milan Chen,2026-07-28,feedback synthesis,global community,2.6,connected isolated workstreams,low,program tracker
+ACT-0506,CAND-039,Milan Chen,2026-05-28,reusable guide,regional community,4,helped a peer present work,low,SharePoint artifact
+ACT-0507,CAND-039,Milan Chen,2026-02-28,feedback synthesis,global community,4,connected isolated workstreams,moderate,community post
+ACT-0508,CAND-039,Milan Chen,2026-06-20,office hours support,regional community,4.2,created team confidence,moderate,Teams thread
+ACT-0509,CAND-040,Kai Torres,2026-02-21,recognition nomination,regional community,3.7,built community momentum,low,SharePoint artifact
+ACT-0510,CAND-040,Kai Torres,2026-06-26,community answer,team,1.9,scaled a repeatable pattern,moderate,peer note
+ACT-0511,CAND-040,Kai Torres,2026-06-03,content improvement,global community,3.9,reduced repeated questions,low,SharePoint artifact
+ACT-0512,CAND-040,Kai Torres,2026-06-13,community answer,small group,3.1,connected isolated workstreams,strategic,community post
+ACT-0513,CAND-040,Kai Torres,2026-03-31,delegated workstream,small group,3.5,improved learner readiness,high,SharePoint artifact
+ACT-0514,CAND-040,Kai Torres,2026-04-25,reusable guide,1:1,2.3,connected isolated workstreams,moderate,meeting recap
+ACT-0515,CAND-040,Kai Torres,2026-07-07,feedback synthesis,team,2.9,improved handoff clarity,high,community post
+ACT-0516,CAND-040,Kai Torres,2026-05-04,content improvement,team,2.8,created team confidence,strategic,program tracker
+ACT-0517,CAND-040,Kai Torres,2026-02-02,reusable guide,team,3.1,improved handoff clarity,moderate,SharePoint artifact
+ACT-0518,CAND-041,Misha Morgan,2026-07-12,recognition nomination,1:1,4.8,resolved ambiguity,low,program tracker
+ACT-0519,CAND-041,Misha Morgan,2026-06-03,program coordination,regional community,5,reduced repeated questions,low,program tracker
+ACT-0520,CAND-041,Misha Morgan,2026-03-13,office hours support,global community,5,improved handoff clarity,high,community post
+ACT-0521,CAND-041,Misha Morgan,2026-03-04,delegated workstream,global community,4.8,created team confidence,moderate,community post
+ACT-0522,CAND-041,Misha Morgan,2026-05-14,office hours support,1:1,5,reduced repeated questions,moderate,program tracker
+ACT-0523,CAND-041,Misha Morgan,2026-02-10,content improvement,small group,4.9,improved handoff clarity,moderate,peer note
+ACT-0524,CAND-041,Misha Morgan,2026-07-12,content improvement,cross-team,4.7,reduced repeated questions,low,SharePoint artifact
+ACT-0525,CAND-041,Misha Morgan,2026-04-10,event facilitation,1:1,4.4,reduced repeated questions,high,community post
+ACT-0526,CAND-041,Misha Morgan,2026-05-06,content improvement,global community,4.7,connected isolated workstreams,low,peer note
+ACT-0527,CAND-041,Misha Morgan,2026-05-19,recognition nomination,team,4.4,created team confidence,moderate,community post
+ACT-0528,CAND-041,Misha Morgan,2026-06-22,program coordination,1:1,4.6,resolved ambiguity,high,community post
+ACT-0529,CAND-041,Misha Morgan,2026-03-04,office hours support,cross-team,5,connected isolated workstreams,high,community post
+ACT-0530,CAND-041,Misha Morgan,2026-07-27,content improvement,small group,4.6,built community momentum,moderate,meeting recap
+ACT-0531,CAND-042,Arden Brown,2026-01-25,office hours support,small group,3.2,improved handoff clarity,high,program tracker
+ACT-0532,CAND-042,Arden Brown,2026-07-08,community answer,global community,3.1,reduced repeated questions,strategic,SharePoint artifact
+ACT-0533,CAND-042,Arden Brown,2026-07-09,community answer,small group,2.7,improved learner readiness,moderate,peer note
+ACT-0534,CAND-042,Arden Brown,2026-08-07,program coordination,1:1,3.2,reduced repeated questions,low,meeting recap
+ACT-0535,CAND-042,Arden Brown,2026-06-01,delegated workstream,1:1,3.6,improved learner readiness,moderate,Teams thread
+ACT-0536,CAND-042,Arden Brown,2026-02-17,mentoring session,small group,4.3,resolved ambiguity,strategic,program tracker
+ACT-0537,CAND-043,Lior Martinez,2026-07-09,feedback synthesis,global community,4,created team confidence,low,meeting recap
+ACT-0538,CAND-043,Lior Martinez,2026-04-30,delegated workstream,small group,5,reduced repeated questions,strategic,program tracker
+ACT-0539,CAND-043,Lior Martinez,2026-02-11,delegated workstream,small group,4.3,improved learner readiness,high,meeting recap
+ACT-0540,CAND-043,Lior Martinez,2026-07-10,recognition nomination,regional community,3.8,scaled a repeatable pattern,moderate,community post
+ACT-0541,CAND-043,Lior Martinez,2026-04-14,reusable guide,1:1,4.8,unblocked peers,moderate,program tracker
+ACT-0542,CAND-043,Lior Martinez,2026-05-15,recognition nomination,1:1,3.8,improved handoff clarity,strategic,program tracker
+ACT-0543,CAND-043,Lior Martinez,2026-06-08,peer coaching,regional community,4.4,resolved ambiguity,low,Teams thread
+ACT-0544,CAND-043,Lior Martinez,2026-05-09,recognition nomination,1:1,4.8,helped a peer present work,strategic,SharePoint artifact
+ACT-0545,CAND-043,Lior Martinez,2026-01-17,feedback synthesis,regional community,4.9,helped a peer present work,moderate,community post
+ACT-0546,CAND-043,Lior Martinez,2026-07-27,program coordination,global community,3.6,improved learner readiness,low,community post
+ACT-0547,CAND-043,Lior Martinez,2026-02-09,mentoring session,cross-team,5,reduced repeated questions,low,SharePoint artifact
+ACT-0548,CAND-043,Lior Martinez,2026-06-08,office hours support,global community,3.8,unblocked peers,low,program tracker
+ACT-0549,CAND-043,Lior Martinez,2026-01-07,program coordination,global community,4.6,reduced repeated questions,high,community post
+ACT-0550,CAND-043,Lior Martinez,2026-04-08,community answer,team,4.8,created team confidence,strategic,program tracker
+ACT-0551,CAND-043,Lior Martinez,2026-04-09,delegated workstream,team,5,helped a peer present work,moderate,community post
+ACT-0552,CAND-043,Lior Martinez,2026-05-27,office hours support,regional community,3.5,built community momentum,high,SharePoint artifact
+ACT-0553,CAND-043,Lior Martinez,2026-06-02,cross-team intro,global community,4.3,helped a peer present work,moderate,peer note
+ACT-0554,CAND-043,Lior Martinez,2026-02-05,feedback synthesis,small group,4.3,scaled a repeatable pattern,moderate,program tracker
+ACT-0555,CAND-043,Lior Martinez,2026-04-18,cross-team intro,regional community,5,improved learner readiness,low,meeting recap
+ACT-0556,CAND-043,Lior Martinez,2026-04-15,recognition nomination,small group,4.5,built community momentum,strategic,Teams thread
+ACT-0557,CAND-043,Lior Martinez,2026-01-22,mentoring session,small group,4.2,connected isolated workstreams,low,program tracker
+ACT-0558,CAND-044,Sasha Wilson,2026-04-18,delegated workstream,global community,3.5,resolved ambiguity,high,peer note
+ACT-0559,CAND-044,Sasha Wilson,2026-06-07,peer coaching,global community,4.3,built community momentum,strategic,Teams thread
+ACT-0560,CAND-044,Sasha Wilson,2026-02-26,recognition nomination,regional community,2.7,created team confidence,moderate,Teams thread
+ACT-0561,CAND-044,Sasha Wilson,2026-07-25,delegated workstream,regional community,2.2,improved handoff clarity,low,SharePoint artifact
+ACT-0562,CAND-044,Sasha Wilson,2026-03-08,recognition nomination,1:1,3,improved handoff clarity,low,SharePoint artifact
+ACT-0563,CAND-044,Sasha Wilson,2026-07-24,program coordination,regional community,2.9,reduced repeated questions,low,peer note
+ACT-0564,CAND-044,Sasha Wilson,2026-07-05,community answer,1:1,3.7,resolved ambiguity,high,peer note
+ACT-0565,CAND-044,Sasha Wilson,2026-08-06,office hours support,team,3.7,reduced repeated questions,moderate,community post
+ACT-0566,CAND-044,Sasha Wilson,2026-04-19,delegated workstream,1:1,3,created team confidence,moderate,community post
+ACT-0567,CAND-044,Sasha Wilson,2026-05-15,community answer,team,2.3,scaled a repeatable pattern,high,program tracker
+ACT-0568,CAND-044,Sasha Wilson,2026-08-02,delegated workstream,team,3,built community momentum,strategic,program tracker
+ACT-0569,CAND-045,Ellis Lee,2026-04-02,content improvement,global community,4.4,built community momentum,low,community post
+ACT-0570,CAND-045,Ellis Lee,2026-02-04,mentoring session,small group,5,reduced repeated questions,high,community post
+ACT-0571,CAND-045,Ellis Lee,2026-04-06,office hours support,regional community,4.8,unblocked peers,high,meeting recap
+ACT-0572,CAND-045,Ellis Lee,2026-03-20,community answer,team,3.4,scaled a repeatable pattern,moderate,community post
+ACT-0573,CAND-045,Ellis Lee,2026-03-27,cross-team intro,small group,5,improved learner readiness,high,meeting recap
+ACT-0574,CAND-045,Ellis Lee,2026-07-16,recognition nomination,global community,4.8,reduced repeated questions,moderate,peer note
+ACT-0575,CAND-045,Ellis Lee,2026-03-08,mentoring session,small group,4.2,reduced repeated questions,moderate,meeting recap
+ACT-0576,CAND-045,Ellis Lee,2026-08-08,delegated workstream,1:1,4,scaled a repeatable pattern,strategic,program tracker
+ACT-0577,CAND-046,Indigo Diaz,2026-01-07,office hours support,team,4.6,improved learner readiness,high,community post
+ACT-0578,CAND-046,Indigo Diaz,2026-06-02,mentoring session,cross-team,3,improved handoff clarity,high,community post
+ACT-0579,CAND-046,Indigo Diaz,2026-03-03,delegated workstream,cross-team,3.3,built community momentum,low,program tracker
+ACT-0580,CAND-046,Indigo Diaz,2026-04-04,program coordination,global community,3.4,improved handoff clarity,strategic,Teams thread
+ACT-0581,CAND-046,Indigo Diaz,2026-07-03,office hours support,1:1,2.3,reduced repeated questions,strategic,program tracker
+ACT-0582,CAND-046,Indigo Diaz,2026-01-31,cross-team intro,team,3.6,improved learner readiness,high,meeting recap
+ACT-0583,CAND-046,Indigo Diaz,2026-05-26,mentoring session,regional community,3.4,connected isolated workstreams,high,meeting recap
+ACT-0584,CAND-046,Indigo Diaz,2026-05-13,program coordination,small group,3.5,helped a peer present work,high,SharePoint artifact
+ACT-0585,CAND-046,Indigo Diaz,2026-08-12,program coordination,small group,2.7,improved learner readiness,moderate,Teams thread
+ACT-0586,CAND-046,Indigo Diaz,2026-07-09,mentoring session,small group,3.8,resolved ambiguity,strategic,community post
+ACT-0587,CAND-046,Indigo Diaz,2026-02-25,reusable guide,cross-team,3.7,unblocked peers,moderate,community post
+ACT-0588,CAND-046,Indigo Diaz,2026-05-13,reusable guide,global community,2.2,resolved ambiguity,high,community post
+ACT-0589,CAND-047,Rio Miller,2026-05-31,peer coaching,cross-team,3.7,scaled a repeatable pattern,moderate,Teams thread
+ACT-0590,CAND-047,Rio Miller,2026-03-02,mentoring session,cross-team,1.9,connected isolated workstreams,high,SharePoint artifact
+ACT-0591,CAND-047,Rio Miller,2026-04-08,office hours support,regional community,3,created team confidence,high,Teams thread
+ACT-0592,CAND-047,Rio Miller,2026-04-21,community answer,regional community,2.3,reduced repeated questions,moderate,SharePoint artifact
+ACT-0593,CAND-047,Rio Miller,2026-04-06,cross-team intro,global community,3.7,resolved ambiguity,strategic,peer note
+ACT-0594,CAND-047,Rio Miller,2026-04-30,community answer,global community,2.5,improved handoff clarity,moderate,peer note
+ACT-0595,CAND-048,Lennox Hansen,2026-07-31,cross-team intro,cross-team,3.5,scaled a repeatable pattern,low,meeting recap
+ACT-0596,CAND-048,Lennox Hansen,2026-04-03,event facilitation,team,4.8,connected isolated workstreams,high,peer note
+ACT-0597,CAND-048,Lennox Hansen,2026-03-15,delegated workstream,cross-team,4.3,connected isolated workstreams,strategic,community post
+ACT-0598,CAND-048,Lennox Hansen,2026-02-17,reusable guide,1:1,3.9,improved handoff clarity,moderate,peer note
+ACT-0599,CAND-048,Lennox Hansen,2026-03-11,feedback synthesis,small group,4.3,helped a peer present work,low,Teams thread
+ACT-0600,CAND-048,Lennox Hansen,2026-01-22,content improvement,regional community,4.1,unblocked peers,low,community post
+ACT-0601,CAND-048,Lennox Hansen,2026-05-20,community answer,1:1,5,helped a peer present work,high,meeting recap
+ACT-0602,CAND-048,Lennox Hansen,2026-03-10,feedback synthesis,team,5,built community momentum,moderate,meeting recap
+ACT-0603,CAND-048,Lennox Hansen,2026-05-20,reusable guide,team,5,built community momentum,strategic,program tracker
+ACT-0604,CAND-048,Lennox Hansen,2026-03-16,office hours support,cross-team,4.6,improved handoff clarity,moderate,program tracker
+ACT-0605,CAND-048,Lennox Hansen,2026-06-07,content improvement,regional community,3.7,helped a peer present work,high,SharePoint artifact
+ACT-0606,CAND-048,Lennox Hansen,2026-05-09,office hours support,small group,3.6,scaled a repeatable pattern,strategic,SharePoint artifact
+ACT-0607,CAND-048,Lennox Hansen,2026-04-09,program coordination,1:1,4.6,resolved ambiguity,moderate,SharePoint artifact
+ACT-0608,CAND-048,Lennox Hansen,2026-03-20,content improvement,regional community,5,unblocked peers,strategic,community post
+ACT-0609,CAND-048,Lennox Hansen,2026-03-23,peer coaching,regional community,4.5,reduced repeated questions,low,program tracker
+ACT-0610,CAND-048,Lennox Hansen,2026-04-11,event facilitation,cross-team,3.1,resolved ambiguity,strategic,community post
+ACT-0611,CAND-048,Lennox Hansen,2026-03-10,reusable guide,cross-team,4.1,reduced repeated questions,high,Teams thread
+ACT-0612,CAND-048,Lennox Hansen,2026-04-24,recognition nomination,small group,3.4,resolved ambiguity,high,SharePoint artifact
+ACT-0613,CAND-049,Phoenix Santos,2026-03-15,program coordination,small group,3.6,scaled a repeatable pattern,moderate,meeting recap
+ACT-0614,CAND-049,Phoenix Santos,2026-03-21,community answer,team,3.6,improved learner readiness,strategic,meeting recap
+ACT-0615,CAND-049,Phoenix Santos,2026-03-29,peer coaching,small group,3.5,unblocked peers,low,meeting recap
+ACT-0616,CAND-049,Phoenix Santos,2026-02-01,mentoring session,global community,4.1,unblocked peers,moderate,Teams thread
+ACT-0617,CAND-049,Phoenix Santos,2026-02-13,peer coaching,cross-team,5,reduced repeated questions,high,community post
+ACT-0618,CAND-049,Phoenix Santos,2026-03-26,content improvement,1:1,5,connected isolated workstreams,low,meeting recap
+ACT-0619,CAND-049,Phoenix Santos,2026-01-20,mentoring session,cross-team,4.2,scaled a repeatable pattern,strategic,meeting recap
+ACT-0620,CAND-049,Phoenix Santos,2026-02-24,mentoring session,1:1,4.8,reduced repeated questions,strategic,community post
+ACT-0621,CAND-050,Briar Patel,2026-03-10,feedback synthesis,global community,3.8,scaled a repeatable pattern,moderate,community post
+ACT-0622,CAND-050,Briar Patel,2026-04-15,recognition nomination,team,3.4,connected isolated workstreams,moderate,peer note
+ACT-0623,CAND-050,Briar Patel,2026-07-11,peer coaching,1:1,3.4,created team confidence,strategic,peer note
+ACT-0624,CAND-050,Briar Patel,2026-03-23,event facilitation,team,2.5,unblocked peers,moderate,Teams thread
+ACT-0625,CAND-051,Marlowe Foster,2026-01-09,reusable guide,team,4.1,improved learner readiness,low,community post
+ACT-0626,CAND-051,Marlowe Foster,2026-07-27,event facilitation,global community,3.6,built community momentum,moderate,SharePoint artifact
+ACT-0627,CAND-051,Marlowe Foster,2026-07-22,community answer,small group,3.4,improved handoff clarity,strategic,Teams thread
+ACT-0628,CAND-051,Marlowe Foster,2026-06-30,delegated workstream,global community,2.1,unblocked peers,low,SharePoint artifact
+ACT-0629,CAND-051,Marlowe Foster,2026-06-20,reusable guide,global community,5,resolved ambiguity,low,meeting recap
+ACT-0630,CAND-051,Marlowe Foster,2026-05-10,event facilitation,global community,3,connected isolated workstreams,strategic,peer note
+ACT-0631,CAND-051,Marlowe Foster,2026-02-24,peer coaching,global community,4.2,helped a peer present work,high,peer note
+ACT-0632,CAND-052,Micah Okafor,2026-05-10,feedback synthesis,cross-team,5,resolved ambiguity,high,program tracker
+ACT-0633,CAND-052,Micah Okafor,2026-07-03,content improvement,team,4.6,connected isolated workstreams,strategic,SharePoint artifact
+ACT-0634,CAND-052,Micah Okafor,2026-08-06,delegated workstream,regional community,4.9,improved handoff clarity,low,program tracker
+ACT-0635,CAND-052,Micah Okafor,2026-02-14,content improvement,team,4.3,built community momentum,low,peer note
+ACT-0636,CAND-052,Micah Okafor,2026-05-15,program coordination,global community,5,improved handoff clarity,low,program tracker
+ACT-0637,CAND-052,Micah Okafor,2026-04-09,delegated workstream,global community,4.5,resolved ambiguity,strategic,meeting recap
+ACT-0638,CAND-052,Micah Okafor,2026-05-20,recognition nomination,cross-team,5,resolved ambiguity,moderate,program tracker
+ACT-0639,CAND-052,Micah Okafor,2026-03-19,cross-team intro,1:1,3.9,resolved ambiguity,low,Teams thread
+ACT-0640,CAND-052,Micah Okafor,2026-08-07,reusable guide,small group,4.8,unblocked peers,moderate,Teams thread
+ACT-0641,CAND-052,Micah Okafor,2026-05-10,event facilitation,cross-team,5,built community momentum,high,Teams thread
+ACT-0642,CAND-052,Micah Okafor,2026-04-09,event facilitation,regional community,5,scaled a repeatable pattern,low,meeting recap
+ACT-0643,CAND-052,Micah Okafor,2026-06-22,content improvement,cross-team,5,unblocked peers,high,program tracker
+ACT-0644,CAND-052,Micah Okafor,2026-07-15,program coordination,team,3.9,unblocked peers,high,program tracker
+ACT-0645,CAND-052,Micah Okafor,2026-01-16,feedback synthesis,small group,5,resolved ambiguity,low,Teams thread
+ACT-0646,CAND-052,Micah Okafor,2026-07-10,event facilitation,regional community,4.7,helped a peer present work,moderate,meeting recap
+ACT-0647,CAND-052,Micah Okafor,2026-05-20,recognition nomination,small group,4.4,resolved ambiguity,strategic,peer note
+ACT-0648,CAND-052,Micah Okafor,2026-02-02,recognition nomination,regional community,5,connected isolated workstreams,strategic,peer note
+ACT-0649,CAND-052,Micah Okafor,2026-06-25,program coordination,small group,4.7,resolved ambiguity,strategic,program tracker
+ACT-0650,CAND-052,Micah Okafor,2026-04-02,recognition nomination,small group,4.1,resolved ambiguity,strategic,SharePoint artifact
+ACT-0651,CAND-052,Micah Okafor,2026-03-27,office hours support,team,5,helped a peer present work,strategic,peer note
+ACT-0652,CAND-052,Micah Okafor,2026-03-29,delegated workstream,small group,4.4,improved learner readiness,moderate,community post
+ACT-0653,CAND-053,River Silva,2026-03-12,cross-team intro,cross-team,1.6,built community momentum,strategic,Teams thread
+ACT-0654,CAND-053,River Silva,2026-07-10,peer coaching,regional community,4.1,improved handoff clarity,high,Teams thread
+ACT-0655,CAND-053,River Silva,2026-03-23,event facilitation,small group,3,connected isolated workstreams,low,peer note
+ACT-0656,CAND-053,River Silva,2026-08-04,mentoring session,regional community,3.9,improved learner readiness,moderate,Teams thread
+ACT-0657,CAND-053,River Silva,2026-01-15,content improvement,team,2.7,improved handoff clarity,moderate,SharePoint artifact
+ACT-0658,CAND-053,River Silva,2026-04-09,delegated workstream,team,3.2,scaled a repeatable pattern,strategic,program tracker
+ACT-0659,CAND-053,River Silva,2026-03-02,feedback synthesis,1:1,3.7,connected isolated workstreams,strategic,meeting recap
+ACT-0660,CAND-053,River Silva,2026-05-10,feedback synthesis,1:1,2.8,improved learner readiness,high,Teams thread
+ACT-0661,CAND-054,Sawyer Olsen,2026-07-12,delegated workstream,team,3.6,connected isolated workstreams,strategic,community post
+ACT-0662,CAND-054,Sawyer Olsen,2026-02-05,event facilitation,global community,5,improved learner readiness,low,peer note
+ACT-0663,CAND-054,Sawyer Olsen,2026-07-24,recognition nomination,1:1,4.1,connected isolated workstreams,moderate,SharePoint artifact
+ACT-0664,CAND-054,Sawyer Olsen,2026-05-14,feedback synthesis,small group,5,improved handoff clarity,low,peer note
+ACT-0665,CAND-054,Sawyer Olsen,2026-07-12,program coordination,regional community,4.9,resolved ambiguity,low,meeting recap
+ACT-0666,CAND-055,Sterling Yamada,2026-04-26,mentoring session,team,4.4,scaled a repeatable pattern,strategic,program tracker
+ACT-0667,CAND-055,Sterling Yamada,2026-07-15,peer coaching,regional community,3.9,helped a peer present work,high,Teams thread
+ACT-0668,CAND-055,Sterling Yamada,2026-04-18,office hours support,small group,3.3,built community momentum,moderate,community post
+ACT-0669,CAND-055,Sterling Yamada,2026-04-17,recognition nomination,regional community,4.7,reduced repeated questions,moderate,meeting recap
+ACT-0670,CAND-055,Sterling Yamada,2026-01-24,mentoring session,regional community,4.4,scaled a repeatable pattern,low,peer note
+ACT-0671,CAND-055,Sterling Yamada,2026-04-21,program coordination,team,4,connected isolated workstreams,moderate,SharePoint artifact
+ACT-0672,CAND-055,Sterling Yamada,2026-04-04,delegated workstream,small group,3.9,connected isolated workstreams,strategic,program tracker
+ACT-0673,CAND-055,Sterling Yamada,2026-02-12,content improvement,1:1,3.3,reduced repeated questions,moderate,peer note
+ACT-0674,CAND-055,Sterling Yamada,2026-04-11,reusable guide,1:1,4.3,unblocked peers,moderate,program tracker
+ACT-0675,CAND-055,Sterling Yamada,2026-02-12,mentoring session,1:1,2.9,connected isolated workstreams,low,SharePoint artifact
+ACT-0676,CAND-055,Sterling Yamada,2026-05-01,content improvement,regional community,4.7,reduced repeated questions,moderate,program tracker
+ACT-0677,CAND-055,Sterling Yamada,2026-05-19,mentoring session,regional community,4.3,built community momentum,moderate,peer note
+ACT-0678,CAND-055,Sterling Yamada,2026-07-03,recognition nomination,global community,5,resolved ambiguity,low,SharePoint artifact
+ACT-0679,CAND-055,Sterling Yamada,2026-02-18,peer coaching,team,4.4,reduced repeated questions,high,Teams thread
+ACT-0680,CAND-056,Teagan Singh,2026-01-23,program coordination,global community,4,created team confidence,high,Teams thread
+ACT-0681,CAND-056,Teagan Singh,2026-01-10,mentoring session,small group,4.3,helped a peer present work,low,SharePoint artifact
+ACT-0682,CAND-056,Teagan Singh,2026-05-10,delegated workstream,regional community,2.9,scaled a repeatable pattern,moderate,meeting recap
+ACT-0683,CAND-056,Teagan Singh,2026-05-14,content improvement,1:1,2.6,reduced repeated questions,high,SharePoint artifact
+ACT-0684,CAND-057,Val Adams,2026-05-11,program coordination,global community,4.3,connected isolated workstreams,high,peer note
+ACT-0685,CAND-057,Val Adams,2026-03-24,event facilitation,regional community,4.2,created team confidence,low,peer note
+ACT-0686,CAND-057,Val Adams,2026-03-12,program coordination,1:1,5,resolved ambiguity,high,meeting recap
+ACT-0687,CAND-057,Val Adams,2026-02-13,cross-team intro,cross-team,3.5,improved handoff clarity,low,peer note
+ACT-0688,CAND-057,Val Adams,2026-04-13,office hours support,global community,5,reduced repeated questions,strategic,meeting recap
+ACT-0689,CAND-057,Val Adams,2026-06-01,reusable guide,cross-team,4.1,created team confidence,high,community post
+ACT-0690,CAND-057,Val Adams,2026-05-24,reusable guide,regional community,4.5,reduced repeated questions,moderate,SharePoint artifact
+ACT-0691,CAND-057,Val Adams,2026-07-01,feedback synthesis,regional community,4.7,improved handoff clarity,strategic,meeting recap
+ACT-0692,CAND-057,Val Adams,2026-06-22,delegated workstream,regional community,4.9,resolved ambiguity,low,meeting recap
+ACT-0693,CAND-057,Val Adams,2026-03-28,reusable guide,global community,4,unblocked peers,high,community post
+ACT-0694,CAND-058,Yael Nakamura,2026-07-15,recognition nomination,global community,3.7,created team confidence,moderate,meeting recap
+ACT-0695,CAND-058,Yael Nakamura,2026-02-02,reusable guide,regional community,4.3,improved learner readiness,high,program tracker
+ACT-0696,CAND-058,Yael Nakamura,2026-05-31,delegated workstream,small group,5,improved learner readiness,moderate,meeting recap
+ACT-0697,CAND-058,Yael Nakamura,2026-06-30,peer coaching,cross-team,3.2,improved handoff clarity,strategic,peer note
+ACT-0698,CAND-058,Yael Nakamura,2026-06-21,cross-team intro,small group,4.7,helped a peer present work,strategic,community post
+ACT-0699,CAND-058,Yael Nakamura,2026-02-10,reusable guide,1:1,3.9,created team confidence,strategic,meeting recap
+ACT-0700,CAND-058,Yael Nakamura,2026-07-15,recognition nomination,small group,4,reduced repeated questions,low,meeting recap
+ACT-0701,CAND-058,Yael Nakamura,2026-04-28,delegated workstream,cross-team,3.3,reduced repeated questions,strategic,community post
+ACT-0702,CAND-058,Yael Nakamura,2026-07-23,peer coaching,regional community,3.9,helped a peer present work,high,community post
+ACT-0703,CAND-058,Yael Nakamura,2026-06-11,feedback synthesis,global community,3.1,unblocked peers,low,community post
+ACT-0704,CAND-058,Yael Nakamura,2026-05-02,peer coaching,small group,3.5,resolved ambiguity,strategic,peer note
+ACT-0705,CAND-058,Yael Nakamura,2026-01-16,office hours support,1:1,3,reduced repeated questions,high,community post
+ACT-0706,CAND-058,Yael Nakamura,2026-04-17,mentoring session,team,4.6,built community momentum,moderate,community post
+ACT-0707,CAND-058,Yael Nakamura,2026-03-22,delegated workstream,small group,4.9,built community momentum,strategic,Teams thread
+ACT-0708,CAND-058,Yael Nakamura,2026-07-09,office hours support,1:1,3.3,improved handoff clarity,moderate,community post
+ACT-0709,CAND-058,Yael Nakamura,2026-04-21,cross-team intro,regional community,3.4,reduced repeated questions,strategic,Teams thread
+ACT-0710,CAND-058,Yael Nakamura,2026-03-11,cross-team intro,global community,4,improved handoff clarity,low,Teams thread
+ACT-0711,CAND-059,Zion Ibrahim,2026-04-08,community answer,regional community,4.1,helped a peer present work,moderate,community post
+ACT-0712,CAND-059,Zion Ibrahim,2026-05-26,program coordination,team,3.6,improved learner readiness,moderate,meeting recap
+ACT-0713,CAND-059,Zion Ibrahim,2026-02-12,reusable guide,global community,3.8,unblocked peers,strategic,SharePoint artifact
+ACT-0714,CAND-059,Zion Ibrahim,2026-03-26,feedback synthesis,global community,3.7,improved handoff clarity,low,meeting recap
+ACT-0715,CAND-059,Zion Ibrahim,2026-02-26,peer coaching,regional community,2.9,created team confidence,low,community post
+ACT-0716,CAND-059,Zion Ibrahim,2026-05-13,content improvement,cross-team,3.6,reduced repeated questions,moderate,program tracker
+ACT-0717,CAND-059,Zion Ibrahim,2026-06-23,content improvement,cross-team,3.6,helped a peer present work,strategic,Teams thread
+ACT-0718,CAND-059,Zion Ibrahim,2026-06-08,delegated workstream,team,4.6,improved learner readiness,moderate,Teams thread
+ACT-0719,CAND-059,Zion Ibrahim,2026-02-22,reusable guide,1:1,3.7,connected isolated workstreams,low,meeting recap
+ACT-0720,CAND-059,Zion Ibrahim,2026-08-12,peer coaching,team,3,connected isolated workstreams,low,Teams thread
+ACT-0721,CAND-059,Zion Ibrahim,2026-02-02,program coordination,small group,2.1,improved handoff clarity,high,program tracker
+ACT-0722,CAND-059,Zion Ibrahim,2026-06-24,feedback synthesis,regional community,3.4,improved handoff clarity,strategic,peer note
+ACT-0723,CAND-059,Zion Ibrahim,2026-06-03,cross-team intro,1:1,2.8,scaled a repeatable pattern,high,SharePoint artifact
+ACT-0724,CAND-059,Zion Ibrahim,2026-04-10,program coordination,regional community,3.7,scaled a repeatable pattern,high,community post
+ACT-0725,CAND-059,Zion Ibrahim,2026-02-09,community answer,global community,2.6,created team confidence,high,program tracker
+ACT-0726,CAND-059,Zion Ibrahim,2026-04-21,office hours support,1:1,3.8,scaled a repeatable pattern,low,community post
+ACT-0727,CAND-059,Zion Ibrahim,2026-07-10,feedback synthesis,regional community,4.1,created team confidence,strategic,program tracker
+ACT-0728,CAND-060,Ari Thompson,2026-06-02,delegated workstream,team,2.8,improved handoff clarity,strategic,program tracker
+ACT-0729,CAND-060,Ari Thompson,2026-07-11,recognition nomination,regional community,2.3,reduced repeated questions,high,meeting recap
+ACT-0730,CAND-060,Ari Thompson,2026-01-06,community answer,1:1,3.6,built community momentum,low,peer note
+ACT-0731,CAND-060,Ari Thompson,2026-08-11,event facilitation,cross-team,4.4,unblocked peers,high,SharePoint artifact
+ACT-0732,CAND-060,Ari Thompson,2026-05-29,recognition nomination,small group,1.1,unblocked peers,moderate,peer note
+ACT-0733,CAND-060,Ari Thompson,2026-03-19,mentoring session,regional community,3.8,resolved ambiguity,high,Teams thread
+ACT-0734,CAND-060,Ari Thompson,2026-02-04,recognition nomination,team,3,connected isolated workstreams,strategic,peer note
+ACT-0735,CAND-060,Ari Thompson,2026-05-31,delegated workstream,small group,4.5,connected isolated workstreams,high,peer note
+ACT-0736,CAND-061,Brook Rivera,2026-05-08,content improvement,cross-team,4.5,improved handoff clarity,strategic,program tracker
+ACT-0737,CAND-061,Brook Rivera,2026-04-01,content improvement,cross-team,3.2,unblocked peers,high,program tracker
+ACT-0738,CAND-061,Brook Rivera,2026-07-10,recognition nomination,small group,3.8,improved learner readiness,high,SharePoint artifact
+ACT-0739,CAND-061,Brook Rivera,2026-01-22,reusable guide,team,5,unblocked peers,high,community post
+ACT-0740,CAND-061,Brook Rivera,2026-06-15,office hours support,cross-team,4.7,improved handoff clarity,low,SharePoint artifact
+ACT-0741,CAND-061,Brook Rivera,2026-07-05,cross-team intro,global community,3.4,unblocked peers,high,community post
+ACT-0742,CAND-061,Brook Rivera,2026-01-28,content improvement,team,4.6,reduced repeated questions,high,meeting recap
+ACT-0743,CAND-061,Brook Rivera,2026-02-03,cross-team intro,1:1,3.7,reduced repeated questions,low,community post
+ACT-0744,CAND-061,Brook Rivera,2026-05-15,peer coaching,small group,4.6,reduced repeated questions,high,community post
+ACT-0745,CAND-062,Cedar Kim,2026-07-12,office hours support,1:1,4.4,resolved ambiguity,moderate,meeting recap
+ACT-0746,CAND-062,Cedar Kim,2026-07-10,peer coaching,cross-team,5,helped a peer present work,low,Teams thread
+ACT-0747,CAND-062,Cedar Kim,2026-03-26,peer coaching,1:1,4.3,connected isolated workstreams,strategic,Teams thread
+ACT-0748,CAND-062,Cedar Kim,2026-02-01,office hours support,global community,3.8,created team confidence,low,program tracker
+ACT-0749,CAND-062,Cedar Kim,2026-07-19,mentoring session,small group,4.4,reduced repeated questions,high,SharePoint artifact
+ACT-0750,CAND-062,Cedar Kim,2026-05-22,cross-team intro,cross-team,4.3,scaled a repeatable pattern,high,meeting recap
+ACT-0751,CAND-063,Darian Garcia,2026-06-14,office hours support,regional community,4.8,scaled a repeatable pattern,moderate,program tracker
+ACT-0752,CAND-063,Darian Garcia,2026-04-05,office hours support,global community,4.3,created team confidence,moderate,meeting recap
+ACT-0753,CAND-063,Darian Garcia,2026-01-24,mentoring session,regional community,4.8,connected isolated workstreams,strategic,Teams thread
+ACT-0754,CAND-063,Darian Garcia,2026-02-08,peer coaching,1:1,3.4,helped a peer present work,low,Teams thread
+ACT-0755,CAND-063,Darian Garcia,2026-04-25,program coordination,small group,4.5,improved learner readiness,strategic,program tracker
+ACT-0756,CAND-063,Darian Garcia,2026-04-07,mentoring session,global community,4.2,resolved ambiguity,low,community post
+ACT-0757,CAND-063,Darian Garcia,2026-05-31,reusable guide,1:1,4.9,built community momentum,low,community post
+ACT-0758,CAND-063,Darian Garcia,2026-03-26,recognition nomination,cross-team,3.7,reduced repeated questions,moderate,meeting recap
+ACT-0759,CAND-063,Darian Garcia,2026-06-12,mentoring session,team,3.5,helped a peer present work,moderate,peer note
+ACT-0760,CAND-063,Darian Garcia,2026-06-25,cross-team intro,cross-team,4.8,built community momentum,low,Teams thread
+ACT-0761,CAND-063,Darian Garcia,2026-05-07,community answer,team,3.1,built community momentum,strategic,meeting recap
+ACT-0762,CAND-063,Darian Garcia,2026-03-19,cross-team intro,1:1,4.2,helped a peer present work,low,SharePoint artifact
+ACT-0763,CAND-064,Ezra Bennett,2026-05-28,recognition nomination,cross-team,5,helped a peer present work,strategic,meeting recap
+ACT-0764,CAND-064,Ezra Bennett,2026-06-13,event facilitation,regional community,4.9,improved handoff clarity,strategic,community post
+ACT-0765,CAND-064,Ezra Bennett,2026-01-22,cross-team intro,cross-team,4.9,helped a peer present work,high,program tracker
+ACT-0766,CAND-064,Ezra Bennett,2026-07-02,event facilitation,small group,5,scaled a repeatable pattern,strategic,Teams thread
+ACT-0767,CAND-064,Ezra Bennett,2026-06-06,delegated workstream,cross-team,4.6,improved handoff clarity,high,community post
+ACT-0768,CAND-064,Ezra Bennett,2026-01-23,delegated workstream,1:1,5,improved learner readiness,strategic,SharePoint artifact
+ACT-0769,CAND-064,Ezra Bennett,2026-05-12,recognition nomination,small group,4.5,improved learner readiness,low,meeting recap
+ACT-0770,CAND-064,Ezra Bennett,2026-06-24,reusable guide,cross-team,4.4,resolved ambiguity,high,community post
+ACT-0771,CAND-064,Ezra Bennett,2026-06-12,delegated workstream,team,5,created team confidence,high,community post
+ACT-0772,CAND-064,Ezra Bennett,2026-07-08,cross-team intro,1:1,4.8,improved learner readiness,low,program tracker
+ACT-0773,CAND-064,Ezra Bennett,2026-05-16,program coordination,1:1,5,connected isolated workstreams,low,Teams thread
+ACT-0774,CAND-065,Gray Park,2026-07-05,office hours support,team,3.3,unblocked peers,moderate,community post
+ACT-0775,CAND-065,Gray Park,2026-07-04,delegated workstream,cross-team,1.9,connected isolated workstreams,strategic,community post
+ACT-0776,CAND-065,Gray Park,2026-04-13,program coordination,cross-team,1.5,improved handoff clarity,moderate,program tracker
+ACT-0777,CAND-065,Gray Park,2026-04-14,cross-team intro,cross-team,2.8,improved handoff clarity,high,peer note
+ACT-0778,CAND-066,Hollis Zhang,2026-06-20,peer coaching,small group,3.5,built community momentum,strategic,meeting recap
+ACT-0779,CAND-066,Hollis Zhang,2026-01-27,reusable guide,cross-team,3,improved learner readiness,strategic,program tracker
+ACT-0780,CAND-066,Hollis Zhang,2026-02-21,content improvement,regional community,2.9,helped a peer present work,strategic,community post
+ACT-0781,CAND-066,Hollis Zhang,2026-04-06,event facilitation,regional community,3.8,built community momentum,moderate,peer note
+ACT-0782,CAND-066,Hollis Zhang,2026-05-14,mentoring session,cross-team,4.3,resolved ambiguity,high,Teams thread
+ACT-0783,CAND-066,Hollis Zhang,2026-01-15,delegated workstream,regional community,2.2,built community momentum,low,meeting recap
+ACT-0784,CAND-066,Hollis Zhang,2026-07-11,feedback synthesis,regional community,3.5,created team confidence,strategic,program tracker
+ACT-0785,CAND-066,Hollis Zhang,2026-01-26,office hours support,cross-team,3.6,scaled a repeatable pattern,high,program tracker
+ACT-0786,CAND-067,Ira Nguyen,2026-01-19,cross-team intro,cross-team,4.1,resolved ambiguity,strategic,program tracker
+ACT-0787,CAND-067,Ira Nguyen,2026-07-12,cross-team intro,cross-team,4.2,connected isolated workstreams,high,SharePoint artifact
+ACT-0788,CAND-067,Ira Nguyen,2026-02-17,peer coaching,team,3.9,improved learner readiness,high,Teams thread
+ACT-0789,CAND-067,Ira Nguyen,2026-06-16,content improvement,regional community,3.4,improved handoff clarity,low,peer note
+ACT-0790,CAND-067,Ira Nguyen,2026-03-21,feedback synthesis,1:1,3.8,improved handoff clarity,low,SharePoint artifact
+ACT-0791,CAND-067,Ira Nguyen,2026-03-11,reusable guide,regional community,3.8,created team confidence,high,SharePoint artifact
+ACT-0792,CAND-067,Ira Nguyen,2026-01-09,feedback synthesis,regional community,4.6,improved handoff clarity,strategic,SharePoint artifact
+ACT-0793,CAND-067,Ira Nguyen,2026-07-31,reusable guide,team,4.5,reduced repeated questions,strategic,meeting recap
+ACT-0794,CAND-067,Ira Nguyen,2026-07-29,office hours support,1:1,4.7,improved handoff clarity,moderate,community post
+ACT-0795,CAND-067,Ira Nguyen,2026-07-17,program coordination,cross-team,4.2,reduced repeated questions,strategic,peer note
+ACT-0796,CAND-067,Ira Nguyen,2026-06-18,reusable guide,team,4.5,unblocked peers,high,Teams thread
+ACT-0797,CAND-067,Ira Nguyen,2026-01-19,reusable guide,cross-team,5,helped a peer present work,strategic,SharePoint artifact
+ACT-0798,CAND-067,Ira Nguyen,2026-05-07,feedback synthesis,small group,5,helped a peer present work,strategic,community post
+ACT-0799,CAND-067,Ira Nguyen,2026-03-14,reusable guide,regional community,3.7,helped a peer present work,low,SharePoint artifact
+ACT-0800,CAND-068,Juniper Scott,2026-06-28,cross-team intro,regional community,3.9,unblocked peers,low,program tracker
+ACT-0801,CAND-068,Juniper Scott,2026-06-18,cross-team intro,global community,4.9,created team confidence,high,SharePoint artifact
+ACT-0802,CAND-068,Juniper Scott,2026-03-15,community answer,team,4,improved learner readiness,strategic,community post
+ACT-0803,CAND-068,Juniper Scott,2026-07-22,recognition nomination,regional community,4.2,reduced repeated questions,high,peer note
+ACT-0804,CAND-068,Juniper Scott,2026-07-01,reusable guide,team,3.1,resolved ambiguity,low,peer note
+ACT-0805,CAND-068,Juniper Scott,2026-01-08,community answer,1:1,4.5,built community momentum,high,meeting recap
+ACT-0806,CAND-068,Juniper Scott,2026-07-10,mentoring session,team,4.3,reduced repeated questions,low,Teams thread
+ACT-0807,CAND-068,Juniper Scott,2026-06-13,community answer,small group,5,improved learner readiness,low,peer note
+ACT-0808,CAND-068,Juniper Scott,2026-02-05,community answer,regional community,4.6,improved handoff clarity,strategic,peer note
+ACT-0809,CAND-068,Juniper Scott,2026-07-20,recognition nomination,1:1,2.6,improved handoff clarity,high,SharePoint artifact
+ACT-0810,CAND-068,Juniper Scott,2026-05-05,recognition nomination,1:1,3.5,built community momentum,high,community post
+ACT-0811,CAND-068,Juniper Scott,2026-07-02,recognition nomination,small group,4.3,scaled a repeatable pattern,high,Teams thread
+ACT-0812,CAND-068,Juniper Scott,2026-04-13,program coordination,team,3.8,unblocked peers,high,SharePoint artifact
+ACT-0813,CAND-068,Juniper Scott,2026-02-20,content improvement,small group,5,improved learner readiness,strategic,meeting recap
+ACT-0814,CAND-068,Juniper Scott,2026-06-20,content improvement,1:1,5,improved handoff clarity,strategic,meeting recap
+ACT-0815,CAND-068,Juniper Scott,2026-06-12,recognition nomination,team,4.8,scaled a repeatable pattern,low,Teams thread
+ACT-0816,CAND-068,Juniper Scott,2026-01-24,delegated workstream,global community,4.9,created team confidence,strategic,Teams thread
+ACT-0817,CAND-068,Juniper Scott,2026-05-13,reusable guide,1:1,4.2,helped a peer present work,high,meeting recap
+ACT-0818,CAND-069,Kit Ali,2026-07-04,cross-team intro,regional community,5,built community momentum,strategic,community post
+ACT-0819,CAND-069,Kit Ali,2026-04-19,feedback synthesis,1:1,4.3,resolved ambiguity,moderate,Teams thread
+ACT-0820,CAND-069,Kit Ali,2026-04-14,feedback synthesis,regional community,5,resolved ambiguity,high,SharePoint artifact
+ACT-0821,CAND-069,Kit Ali,2026-06-29,mentoring session,cross-team,4.1,unblocked peers,low,SharePoint artifact
+ACT-0822,CAND-069,Kit Ali,2026-05-22,cross-team intro,team,5,reduced repeated questions,moderate,program tracker
+ACT-0823,CAND-069,Kit Ali,2026-01-16,program coordination,global community,5,reduced repeated questions,high,peer note
+ACT-0824,CAND-069,Kit Ali,2026-04-15,community answer,1:1,4.3,built community momentum,moderate,meeting recap
+ACT-0825,CAND-069,Kit Ali,2026-01-15,event facilitation,1:1,4.3,improved learner readiness,moderate,community post
+ACT-0826,CAND-069,Kit Ali,2026-04-15,community answer,cross-team,5,resolved ambiguity,strategic,Teams thread
+ACT-0827,CAND-069,Kit Ali,2026-01-15,cross-team intro,1:1,3.8,connected isolated workstreams,low,community post
+ACT-0828,CAND-069,Kit Ali,2026-02-05,event facilitation,cross-team,5,resolved ambiguity,moderate,peer note
+ACT-0829,CAND-069,Kit Ali,2026-06-03,event facilitation,1:1,3.8,unblocked peers,moderate,community post
+ACT-0830,CAND-069,Kit Ali,2026-06-22,peer coaching,1:1,3.2,reduced repeated questions,moderate,Teams thread
+ACT-0831,CAND-069,Kit Ali,2026-02-19,recognition nomination,1:1,5,created team confidence,low,community post
+ACT-0832,CAND-069,Kit Ali,2026-06-11,reusable guide,1:1,4.9,scaled a repeatable pattern,strategic,program tracker
+ACT-0833,CAND-069,Kit Ali,2026-07-29,delegated workstream,small group,5,scaled a repeatable pattern,moderate,community post
+ACT-0834,CAND-069,Kit Ali,2026-04-02,feedback synthesis,global community,4.5,improved learner readiness,moderate,SharePoint artifact
+ACT-0835,CAND-070,Lux Kowalski,2026-08-08,event facilitation,team,4.5,scaled a repeatable pattern,low,SharePoint artifact
+ACT-0836,CAND-070,Lux Kowalski,2026-02-11,program coordination,small group,3.3,connected isolated workstreams,moderate,community post
+ACT-0837,CAND-070,Lux Kowalski,2026-03-09,delegated workstream,global community,4.6,improved learner readiness,strategic,meeting recap
+ACT-0838,CAND-070,Lux Kowalski,2026-01-10,content improvement,1:1,4.4,unblocked peers,low,meeting recap
+ACT-0839,CAND-070,Lux Kowalski,2026-01-28,feedback synthesis,cross-team,3.5,built community momentum,moderate,meeting recap
+ACT-0840,CAND-070,Lux Kowalski,2026-02-11,recognition nomination,team,3.2,resolved ambiguity,strategic,community post
+ACT-0841,CAND-070,Lux Kowalski,2026-03-08,reusable guide,small group,4.2,built community momentum,low,peer note
+ACT-0842,CAND-071,Monroe Varga,2026-08-05,mentoring session,small group,3.1,reduced repeated questions,low,program tracker
+ACT-0843,CAND-071,Monroe Varga,2026-01-30,delegated workstream,team,3.3,resolved ambiguity,moderate,community post
+ACT-0844,CAND-071,Monroe Varga,2026-07-22,recognition nomination,small group,2.9,scaled a repeatable pattern,moderate,peer note
+ACT-0845,CAND-071,Monroe Varga,2026-08-10,content improvement,cross-team,2.7,improved handoff clarity,moderate,peer note
+ACT-0846,CAND-071,Monroe Varga,2026-01-17,peer coaching,cross-team,2.8,created team confidence,high,program tracker
+ACT-0847,CAND-071,Monroe Varga,2026-07-31,content improvement,1:1,2.7,scaled a repeatable pattern,low,program tracker
+ACT-0848,CAND-072,Nova Brooks,2026-05-10,office hours support,1:1,5,scaled a repeatable pattern,moderate,peer note
+ACT-0849,CAND-072,Nova Brooks,2026-04-29,delegated workstream,global community,4.2,connected isolated workstreams,moderate,Teams thread
+ACT-0850,CAND-072,Nova Brooks,2026-03-30,event facilitation,1:1,4.1,reduced repeated questions,strategic,meeting recap
+ACT-0851,CAND-072,Nova Brooks,2026-04-12,event facilitation,1:1,5,helped a peer present work,moderate,meeting recap
+ACT-0852,CAND-072,Nova Brooks,2026-06-11,content improvement,small group,4.9,helped a peer present work,high,meeting recap
+ACT-0853,CAND-072,Nova Brooks,2026-05-03,feedback synthesis,team,4.7,reduced repeated questions,high,meeting recap
+ACT-0854,CAND-072,Nova Brooks,2026-01-14,feedback synthesis,regional community,5,unblocked peers,high,meeting recap
+ACT-0855,CAND-072,Nova Brooks,2026-02-03,content improvement,team,4,reduced repeated questions,high,program tracker
+ACT-0856,CAND-072,Nova Brooks,2026-02-15,recognition nomination,regional community,4.6,improved handoff clarity,moderate,Teams thread
+ACT-0857,CAND-072,Nova Brooks,2026-04-21,office hours support,regional community,2.1,built community momentum,strategic,SharePoint artifact
+ACT-0858,CAND-072,Nova Brooks,2026-01-09,feedback synthesis,cross-team,4.6,reduced repeated questions,moderate,SharePoint artifact
+ACT-0859,CAND-072,Nova Brooks,2026-04-27,delegated workstream,small group,5,improved learner readiness,low,community post
+ACT-0860,CAND-072,Nova Brooks,2026-01-17,peer coaching,cross-team,5,resolved ambiguity,low,community post
+ACT-0861,CAND-072,Nova Brooks,2026-05-21,program coordination,1:1,3.6,built community momentum,strategic,meeting recap
+ACT-0862,CAND-072,Nova Brooks,2026-01-27,office hours support,1:1,4.6,helped a peer present work,moderate,meeting recap
+ACT-0863,CAND-072,Nova Brooks,2026-04-07,mentoring session,1:1,4.6,built community momentum,high,meeting recap
+ACT-0864,CAND-072,Nova Brooks,2026-07-05,content improvement,regional community,5,improved learner readiness,low,community post
+ACT-0865,CAND-072,Nova Brooks,2026-05-04,reusable guide,team,5,built community momentum,low,peer note
+ACT-0866,CAND-072,Nova Brooks,2026-01-24,program coordination,global community,4.3,connected isolated workstreams,low,SharePoint artifact

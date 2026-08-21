@@ -12,6 +12,6 @@
     "docs:dev": "npm run pack && vitepress dev docs",
     "docs:build": "npm run pack && vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "lint:md": "markdownlint-cli2 \"docs/**/*.md\" \"#docs/node_modules\""
+    "lint:md": "markdownlint-cli2 \"docs/**/*.md\" \"#docs/node_modules\" \"#docs/public/downloads\" \"#docs/.vitepress/dist\""
   }
 }

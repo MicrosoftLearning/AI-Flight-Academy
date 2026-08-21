@@ -106,11 +106,11 @@ export const scenarios: Scenario[] = [
   },
   {
     id: "scenario-3",
-    emoji: "🎯",
+    emoji: "🎖️",
     label: "Scenario 3",
-    name: "TBD",
-    sub: "Still being locked with the LT",
-    status: "soon",
+    name: "The Ambassador",
+    sub: "Find who multiplies others, and show why",
+    status: "wip",
   },
 ];
 
@@ -122,9 +122,9 @@ export const buildStatus: Record<string, Status> = {
   "cowork-scenario-2": "wip",
   "scout-scenario-2": "wip",
   "code-scenario-2": "wip",
-  "cowork-scenario-3": "soon",
-  "scout-scenario-3": "soon",
-  "code-scenario-3": "soon",
+  "cowork-scenario-3": "wip",
+  "scout-scenario-3": "wip",
+  "code-scenario-3": "wip",
 };
 
 export const statusLabel: Record<Status, string> = {
