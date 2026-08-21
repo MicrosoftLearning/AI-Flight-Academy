@@ -79,7 +79,7 @@ changes it.
 
 - Generic writing that does not need their voice.
 - Creating, editing or validating an unrelated skill.
-- Summarising messages with no decision or draft attached.
+- Summarizing messages with no decision or draft attached.
 - Deleting, archiving, flagging or marking anything read.
 - Anything where the user has not named the twin. If they have not asked for it, answer normally.
 
@@ -148,7 +148,7 @@ Read them for two things at once.
 **For `voice.md` – how they write.** Signoff, openers by recipient, punctuation habits, typical
 length, what changes between a peer, their manager and someone external.
 
-Never normalise punctuation, spelling, casing, emoji, dashes, greetings or signoffs. The quirks
+Never normalize punctuation, spelling, casing, emoji, dashes, greetings or signoffs. The quirks
 are the entire signal.
 
 **Keep two or three whole messages, verbatim.** A rule describes their writing; a real sample *is*
@@ -165,7 +165,7 @@ widely.
 | What they call done, and what they celebrate | 3. Success |
 | "let me check with…", "I won't commit to…", anything they refused | 4. Non-negotiables |
 | Two things landing at once, and which moved | 5. When priorities conflict |
-| What they ask for help with, or apologise for | 6. The skill that would help most |
+| What they ask for help with, or apologize for | 6. The skill that would help most |
 | What they volunteer for, and write about at length | 7. What motivates me |
 | What people come to them for | 8. Strengths |
 | What slips, gets rushed, or gets an apology | 9. What drains me |
@@ -237,7 +237,7 @@ working context** – the operational detail that turns a persona into something
 sort a morning. Sections 14 and 15 do the most work in a real answer, so fill them properly.
 
 **Context is never a filter.** Sections 14 and 15 say what you already know about, not what counts.
-Never file an item as noise, deprioritise it, or leave it out because the project or person is not
+Never file an item as noise, deprioritize it, or leave it out because the project or person is not
 named in `persona.md`.
 
 **One exception to filling everything: the `Never:` line in section 4.** Never invent a boundary.
@@ -292,7 +292,7 @@ When asked what landed:
 | Bucket | What goes here |
 | --- | --- |
 | **Handled** | The answer already exists – in the thread, their calendar, or something they have already sent. Draft the reply |
-| **Needs me** | A judgement call only they can make, or the answer is not close at hand |
+| **Needs me** | A judgment call only they can make, or the answer is not close at hand |
 | **Blocked** | They cannot move until someone else does something |
 | **Noise** | Nothing is being asked of them |
 
@@ -493,7 +493,7 @@ and at most it notifies the user that something is ready.
 ### Handing over anything with a path
 
 Anything that writes a file – a page, an export, a log – needs its path handed over on **its own
-labelled line**, with forward slashes, taken from what the tool actually printed:
+labeled line**, with forward slashes, taken from what the tool actually printed:
 
 > **Your morning briefing →** `C:/…/extensions/briefing/today.html`
 
@@ -526,7 +526,7 @@ wherever the user keeps their files.
   decide what to look for.
 - Match their voice, not their typos or rushed phrasing.
 - Never tell them to open, edit or save a file. The exception is something built in `extensions/`
-  that is meant to be looked at – hand that over on its own labelled line, using the path the tool
+  that is meant to be looked at – hand that over on its own labeled line, using the path the tool
   printed.
 - Keep `setup.md` accurate. Marking it `complete` early costs the user their whole setup on the
   next session.

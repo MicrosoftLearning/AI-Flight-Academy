@@ -19,7 +19,7 @@ You start from a working council dashboard. You make it yours, prove the code ca
 
 A single review from a single perspective is not enough when different audiences need so many different things from the same **asset** – a doc, a deck, an email, a policy, a post, a plan. A formal explainer might help a compliance officer make a careful decision and still be unusable for a store manager who needs one practical action during a busy shift.
 
-This altitude solves a second problem too: a model is good at contextual judgement, but it can also make things up. Your council pairs both – the model explains whether an asset works for an audience, and code checks what is countable, so a hallucinated verdict gets caught.
+This altitude solves a second problem too: a model is good at contextual judgment, but it can also make things up. Your council pairs both – the model explains whether an asset works for an audience, and code checks what is countable, so a hallucinated verdict gets caught.
 
 ## What your team will have built
 
@@ -134,11 +134,11 @@ Save it in `council/` under a new name (reusing an existing name overwrites that
 
 **Done when:** your seat lands a different verdict than another seat on the same asset.
 
-![The engineer patches purple cables into channels labelled Retail, Compliance, Clinical and Manufacturing beside a guardrail switch. Headline: "Code the council."](/img/scenario-2-advanced-wiring.png)
+![The engineer patches purple cables into channels labeled Retail, Compliance, Clinical and Manufacturing beside a guardrail switch. Headline: "Code the council."](/img/scenario-2-advanced-wiring.png)
 
 ### 4 · Wire the deterministic checks
 
-Your council's verdicts come from the model – sharp on judgement, but it can also make things up. **Deterministic checks are the countable half**: reading time, blocked steps, table width – things *code* can measure exactly. Turning them on puts a plain pass/fail on each seat, right beside the model's verdict, so a confident-but-wrong "looks fine" gets caught.
+Your council's verdicts come from the model – sharp on judgment, but it can also make things up. **Deterministic checks are the countable half**: reading time, blocked steps, table width – things *code* can measure exactly. Turning them on puts a plain pass/fail on each seat, right beside the model's verdict, so a confident-but-wrong "looks fine" gets caught.
 
 Two small jobs – and you **don't write either from scratch**. The starter leaves both half-built with notes right in the files, and GitHub Copilot Chat can see all of them. Your job is to decide *what each check should measure*; let Copilot write the code with you.
 

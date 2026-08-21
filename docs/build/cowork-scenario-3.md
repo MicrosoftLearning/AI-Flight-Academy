@@ -12,15 +12,17 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 **You'll build this in Cowork. No code, and no experience needed.**
 
-You've been handed a half-built skill. Somebody started an ambassador programme, wired up the scoring, and stopped. It runs, it produces a confident ranked list — and the list is wrong in ways you can see from the outside.
+Imagine you've just inherited someone else's half-finished work.
 
-Nine data files shipped with it. It reads one.
+The ambassador program runs on the first try and sounds completely sure of itself — 72 candidates ranked, each one handed a rung and a next action. Then you read the top of the list and something's off. The people it's most confident about aren't obviously the right people.
+
+Nine data files shipped with it. It opens one.
 
 ## What you're solving
 
-A thousand people are doing community work. Some of them are quietly making everyone around them better; some are just busy. The programme is supposed to find the first group.
+A thousand people are doing community work. Some of them are quietly making everyone around them better; some are just busy. The program is supposed to find the first group.
 
-The version you've inherited scores people on three numbers — business impact, execution reliability, leadership signals — and ranks on the total. Those are the numbers that were already being reported, so those are the numbers it uses. Sitting in the same rows, unread: peer support, knowledge sharing, community contribution, multiplier behaviour. Sitting in the same folder, unread: 866 activities, 283 peer comments, 390 contributions, 275 credentials, 128 recognition events, 41 applications.
+The version you've inherited scores people on three numbers — business impact, execution reliability, leadership signals — and ranks on the total. Those are the numbers that were already being reported, so those are the numbers it uses. Sitting in the same rows, unread: peer support, knowledge sharing, community contribution, multiplier behavior. Sitting in the same folder, unread: 866 activities, 283 peer comments, 390 contributions, 275 credentials, 128 recognition events, 41 applications.
 
 **The challenge is to make it find the right people, and to be able to show why.** How you do that is yours.
 
@@ -30,8 +32,8 @@ A skill that reads more than it was given, and something built on top of it that
 
 | What you make | What it does |
 | --- | --- |
-| **A programme that reads evidence** | Recommends people the original ranking couldn't see, and names the evidence behind each one |
-| **A playbook you extended** | The playbook is the programme written down — your rules go in it, and they travel |
+| **A program that reads evidence** | Recommends people the original ranking couldn't see, and names the evidence behind each one |
+| **A playbook you extended** | `PLAYBOOK.md` is the program written down — your rules go in it, and they travel |
 | **Something built on it** | A shortlist, a brief, a watch list, an audit — whatever your table decides is worth having |
 
 ## How this runs
@@ -51,21 +53,21 @@ Cowork is the thing you're building with **and** the thing that helps you build 
 ## Before you start
 
 <div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-SKILL.md" download="SKILL.md">
+  <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-skill.zip" download>
     <span class="lab-card-emoji">🎖️</span>
     <span class="lab-card-title">Ambassador</span>
-    <span class="lab-card-desc">The half-built skill, with the playbook built into it. Saves as SKILL.md — leave it in your Downloads folder.</span>
-    <span class="lab-card-cta">Download .md →</span>
+    <span class="lab-card-desc">The half-built skill, plus the playbook it runs on.</span>
+    <span class="lab-card-cta">Download .zip →</span>
   </a>
   <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-program-data.zip" download>
     <span class="lab-card-emoji">🗂️</span>
-    <span class="lab-card-title">Programme data</span>
+    <span class="lab-card-title">Program data</span>
     <span class="lab-card-desc">72 candidates and ~2,000 evidence records across nine files.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
 </div>
 
-**The data is fictional.** Invented people, invented scores, invented feedback. Nothing here describes a real person, and no real programme is being modelled — which is what makes it safe to argue about in a room.
+**The data is fictional.** Invented people, invented scores, invented feedback. Nothing here describes a real person, and no real program is being modeled — which is what makes it safe to argue about in a room.
 
 ::: tip Want a step spelled out?
 The **[Guides](/bricks/)** in the top nav cover the general mechanics — setting up, connecting to your work, running things on a schedule. Open one in a new tab if you get stuck on a mechanic rather than on the problem.
@@ -77,14 +79,14 @@ The **[Guides](/bricks/)** in the top nav cover the general mechanics — settin
 
 **Done when:** you can name someone it ranked too high, and point at the evidence it never read.
 
-1. In Cowork, open **Customize** → **Skills** → the arrow next to **Add** → **Upload skill**, and pick the downloaded `SKILL.md`.
+1. In Cowork, open **Customize** → **Skills** → the arrow next to **Add** → **Upload skill**, and drag in the whole `ambassador-skill.zip`.
 2. Start a **new** Cowork session — skills only load at the start.
-3. Unzip the programme data and drag **`CandidateProfiles.csv`** into the session.
+3. Unzip the program data and drag **`CandidateProfiles.csv`** into the session.
 
 Then:
 
 ```text
-Run the ambassador programme on the attached candidates. Show me the top ten, and tell me what you didn't read.
+Run the ambassador program on the attached candidates. Show me the top ten, and tell me what you didn't read.
 ```
 
 You get a ranked list, a rung for each person, and a next action. It'll also tell you what it skipped — that part is built in, because the skill knows it's incomplete.
@@ -104,8 +106,8 @@ What does this person's watchout say, and what evidence did you use? What would 
 
 **It may well flag some of this itself** — the skill is told to state its gaps rather than hide them. That's honesty, not a fix: the ranking it just produced is still the naive one, and nothing has changed yet.
 
-::: warning Upload the `.md`, not a `.zip`
-Tested on a live tenant: `.zip` skill uploads fail silently. This `SKILL.md` is self-contained — the playbook is a section inside it, so there's nothing else to bundle.
+::: warning Upload the whole zip
+`SKILL.md` isn't the whole skill — `references/PLAYBOOK.md` sits beside it and holds the ladder and the rules. Upload the zip, not the file inside it.
 :::
 
 <div class="table-check">
@@ -128,9 +130,9 @@ The skill reads one file. There are eight more, and each one answers a different
 | `ProgramContributions.csv` | Whether what they made got reused, and by how many teams |
 | `CommunityActivities.csv` | What they ran, for whom, and at what quality |
 | `LearningCredentials.csv` | Whether they completed, facilitated, or coached |
-| `RecognitionHistory.csv` | Who's already been recognised — see **R-004** |
+| `RecognitionHistory.csv` | Who's already been recognized — see **R-004** |
 | `AmbassadorApplications.csv` | Who put their hand up, which is not the same as who's ready |
-| `PolicyRules.csv` | R-001 to R-008, the rules the programme is supposed to follow |
+| `PolicyRules.csv` | R-001 to R-008, the rules the program is supposed to follow |
 | `RewardTiers.csv` | The ladder: Explorer, Connector, Multiplier, Flight Lead, Review Hold |
 
 **Add one at a time.** Attach a file, tell the skill what to do with it, re-run, and see who moved. Adding all eight at once means you can't tell which one did anything — and one file is enough for this step. Go back for more only if you're ahead.
@@ -143,10 +145,10 @@ Here's PeerFeedback.csv. Add a rule to the playbook: peer evidence counts, and s
 
 **Names are the check.** *"The scoring is more balanced now"* means nothing. *"Alex Kim dropped out of the top ten and Drew Foster came in"* is a result.
 
-Two rules in the playbook aren't implemented at all — **R-004** (prior recognition isn't a reason to recognise again) and **R-006** (repeated activity with weak quality doesn't outrank quieter high-multiplier work). Implementing either one changes the list.
+Two rules in the playbook aren't implemented at all — **R-004** (prior recognition isn't a reason to recognize again) and **R-006** (repeated activity with weak quality doesn't outrank quieter high-multiplier work). Implementing either one changes the list.
 
 ::: tip Rules go in the playbook, capabilities go beside it
-The **Playbook** section of the skill is the programme — the ladder, the rules, what a recommendation has to contain. A new rule belongs there. A new *capability* — reading another file, a new kind of check — belongs in its own file. The skill's instructions point Cowork toward that structure.
+The **Playbook** in `references/PLAYBOOK.md` is the program — the ladder, the rules, what a recommendation has to contain. A new rule belongs there. A new *capability* — reading another file, a new kind of check — belongs in its own `references/*.md`. The skill's instructions point Cowork toward that structure.
 :::
 
 <div class="table-check">
@@ -171,11 +173,11 @@ Seven starting points. Take one, combine two, or build something the list obviou
 | --- | --- | --- |
 | 🔍 **Recruitment** · easiest | Who should be invited who isn't in the running yet — the emerging people the ranking buries | *"Find people with strong peer and community evidence who rank low overall. Draft an invitation for each, held for approval."* |
 | 🎯 **Assignment** | The right person for one specific thing, which is a different question from who's best overall — see **R-007** | *"I need someone to run a session for a new-hire audience in EMEA. Who, and why them over the next-best option?"* |
-| 👀 **The watch** | Who's rising and who's gone quiet — momentum rather than a snapshot | *"Build me a watch list: who's climbing, who's dropped off, and who's been recognised before and stalled."* |
+| 👀 **The watch** | Who's rising and who's gone quiet — momentum rather than a snapshot | *"Build me a watch list: who's climbing, who's dropped off, and who's been recognized before and stalled."* |
 | 🧭 **Manager's view** | One manager, their people, what to do about each | *"Give me a one-page brief for a manager: their candidates, each one's rung, and the single next action for each."* |
 | ⚖️ **Fairness audit** | Whether the outcomes skew by region, org, level or tenure — and whether each rung can be explained | *"Audit the recommendations. Do outcomes skew by region, org, level or tenure? Show me any rung you can't explain from evidence."* |
 | 🎖️ **Their own view** | What a candidate would see about themselves — which is a hard test of whether the reasoning holds up | *"Write what one candidate would see about their own standing: where they are, why, and what would move them up."* |
-| 🎯 **Yours** | Whatever your table thinks this programme is missing | *"The programme needs [what]. Work out what that takes and build the smallest version first."* |
+| 🎯 **Yours** | Whatever your table thinks this program is missing | *"The program needs [what]. Work out what that takes and build the smallest version first."* |
 
 **Pick by what would actually get opened**, not by what's most impressive to describe.
 
@@ -191,7 +193,7 @@ Seven starting points. Take one, combine two, or build something the list obviou
 
 Pick one direction, then **take one standalone question each**. One rule, one section of the brief, one panel of the audit, one file's worth of evidence. **If it can't be checked on its own, it's too big.**
 
-Split by question, not by layer. *"Who's rising"*, *"who's gone quiet"*, *"who's been recognised and stalled"* and *"who applied but isn't ready"* are four independent builds of one watch list.
+Split by question, not by layer. *"Who's rising"*, *"who's gone quiet"*, *"who's been recognized and stalled"* and *"who applied but isn't ready"* are four independent builds of one watch list.
 
 ### Build in layers
 
@@ -225,7 +227,7 @@ The more specific your ask, the less you'll undo:
 :::
 
 ::: warning Nothing goes out
-Invitations, nominations and recognition are drafted and held for a person to read. That's **R-005** and it's in the playbook — the programme proposes, a human decides. Keep it that way in whatever you build.
+Invitations, nominations and recognition are drafted and held for a person to read. That's **R-005** and it's in the playbook — the program proposes, a human decides. Keep it that way in whatever you build.
 :::
 
 <div class="table-check">
@@ -239,9 +241,9 @@ Invitations, nominations and recognition are drafted and held for a person to re
 ## Push it further
 
 1. **Defend a call** — pick someone who didn't make the list and ask it to explain the decision to them. R-008 applies.
-2. **Break it on purpose** — invent a candidate who should obviously be recognised and see whether your version finds them.
-3. **Run it on a schedule** — ask Cowork to re-run the programme weekly and send you what changed, not the whole list.
-4. **Take the playbook with you** — it's plain text. Paste it into the Scout or Code altitude as `PLAYBOOK.md` and the rules carry over unchanged, which is the point of putting them there.
+2. **Break it on purpose** — invent a candidate who should obviously be recognized and see whether your version finds them.
+3. **Run it on a schedule** — ask Cowork to re-run the program weekly and send you what changed, not the whole list.
+4. **Take the playbook with you** — `PLAYBOOK.md` is plain text. It moves to another altitude unchanged, which is the point of putting the rules there.
 5. **Swap tables** — hand another table your playbook and have them run it against the same data. Different rules, different ambassadors.
 
 ---

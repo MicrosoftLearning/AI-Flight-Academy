@@ -26,7 +26,7 @@ In **Cowork**, the part you build is one file:
 
 - **`THE-COUNCIL.md`** – your council's audience profiles. For each one, write its **goal** and what the asset must do to get them there.
 
-The provided skill reviews the asset from each audience's point of view. Every judgement includes a **quote**, a **source**, and a **confidence** rating. Where audiences disagree, it shows the conflict side by side, proposes what to build instead, and helps you make it – down to the message to the person waiting on it. From there you can set the review to run on its own; **Scout** and **Code** teams take that further, up to a gate that blocks the asset until every audience is served.
+The provided skill reviews the asset from each audience's point of view. Every judgment includes a **quote**, a **source**, and a **confidence** rating. Where audiences disagree, it shows the conflict side by side, proposes what to build instead, and helps you make it – down to the message to the person waiting on it. From there you can set the review to run on its own; **Scout** and **Code** teams take that further, up to a gate that blocks the asset until every audience is served.
 
 ![A diverse council of four critics reviews the same content but splits its verdict – two green approve lights, two red reject lights – as members lean in to argue. Neon nameplates read Retail, Compliance, Clinical, and Manufacturing. Headline reads "Same content. Split verdict."](/img/scenario-2-council-split.png)
 

@@ -19,10 +19,8 @@ import {
   mkdirSync,
   mkdtempSync,
   readdirSync,
-  readFileSync,
   rmSync,
   statSync,
-  writeFileSync,
 } from "node:fs";
 import { tmpdir } from "node:os";
 import { basename, join } from "node:path";
@@ -198,27 +196,11 @@ for (const j of jobs) {
   console.log(`  ${j.zip.padEnd(28)} ${(statSync(dest).size / 1024).toFixed(1)} KB`);
 }
 
-// The Cowork skills ship as a single .md - Cowork's skill upload rejects .zip.
-// `inline` folds reference files into that one file, so the repo keeps a single
-// source of truth and Cowork still gets everything the skill needs.
+// The Cowork twin ships as a single .md - Cowork's skill upload rejects .zip.
 const singles = [
   {
     src: join(root, "Allfiles", "scenario-1-digital-twin", "my-twin", "SKILL.md"),
     name: "my-twin-SKILL.md",
-  },
-  {
-    src: join(root, "Allfiles", "scenario-3-ambassador", "ambassador", "SKILL.md"),
-    name: "ambassador-SKILL.md",
-    inline: [
-      {
-        path: join(root, "Allfiles", "scenario-3-ambassador", "ambassador", "references", "PLAYBOOK.md"),
-        // What the skill body tells the model to go and read.
-        replaces: "references/PLAYBOOK.md",
-        // Other folder-shaped paths that make no sense in a single-file upload.
-        alsoRewrite: [{ from: "`references/*.md`", to: "its own section" }],
-        heading: "Playbook",
-      },
-    ],
   },
 ];
 
@@ -228,32 +210,7 @@ for (const s of singles) {
     continue;
   }
   const dest = join(out, s.name);
-  if (s.inline?.length) {
-    let body = readFileSync(s.src, "utf8");
-    for (const ref of s.inline) {
-      if (!existsSync(ref.path)) {
-        throw new Error(`inline source missing: ${ref.path}`);
-      }
-      if (!body.includes(ref.replaces)) {
-        throw new Error(`${s.name}: nothing references ${ref.replaces}`);
-      }
-      // Point the model at the inlined section instead of a file that won't exist.
-      const pointer = `the "${ref.heading}" section below`;
-      body = body.replaceAll(`\`${ref.replaces}\``, pointer);
-      body = body.replaceAll(ref.replaces, pointer);
-      for (const { from, to } of ref.alsoRewrite ?? []) {
-        if (!body.includes(from)) {
-          throw new Error(`${s.name}: nothing to rewrite for ${from}`);
-        }
-        body = body.replaceAll(from, to);
-      }
-      const text = readFileSync(ref.path, "utf8").replace(/^#\s+.*\r?\n/, "");
-      body += `\n\n---\n\n# ${ref.heading}\n\n${text.trim()}\n`;
-    }
-    writeFileSync(dest, body);
-  } else {
-    copyFileSync(s.src, dest);
-  }
+  copyFileSync(s.src, dest);
   console.log(`  ${s.name.padEnd(28)} ${(statSync(dest).size / 1024).toFixed(1)} KB`);
 }
 

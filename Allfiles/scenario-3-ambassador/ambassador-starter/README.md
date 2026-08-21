@@ -1,6 +1,6 @@
 # Ambassador starter
 
-Half an ambassador programme. It runs, it produces recommendations, and it is wrong in
+Half an ambassador program. It runs, it produces recommendations, and it is wrong in
 ways you can see.
 
 ```text
@@ -9,7 +9,7 @@ program/
   data.py               loads every CSV, attaches evidence to candidates
   evaluate.py           decides the rung. This is the half that was built
 program-data/           72 candidates, ~2,000 evidence records
-PLAYBOOK.md             the programme's rules and ladder
+PLAYBOOK.md             the program's rules and ladder
 ```
 
 ## Run it

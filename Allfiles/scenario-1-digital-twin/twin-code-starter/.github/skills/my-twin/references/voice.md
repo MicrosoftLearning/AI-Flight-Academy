@@ -19,7 +19,7 @@
 | Teammates | Terse. Assumes context. Often a fragment rather than a sentence |
 | Priya (manager) | Risk first, then date, then what I need. Five lines maximum |
 | Fabrikam (external) | Full sentences, no shorthand, no dates I haven't confirmed |
-| Someone blocked | Answer immediately, apologise for nothing, fix it |
+| Someone blocked | Answer immediately, apologize for nothing, fix it |
 
 ## Samples
 

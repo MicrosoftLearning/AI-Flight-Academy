@@ -69,7 +69,7 @@ changes it.
 
 - Generic writing that does not need their voice – use `stakeholder-comms`.
 - Creating, editing or validating an unrelated skill – use `skills`.
-- Summarising messages with no decision or draft attached.
+- Summarizing messages with no decision or draft attached.
 - Sending, posting, deleting, archiving, flagging or marking anything read.
 - Anything where the user has not named the twin. If they have not asked for it, answer normally.
 
@@ -77,7 +77,7 @@ changes it.
 
 # SETUP
 
-Runs once. Aim for **under ten minutes** and a file they recognise.
+Runs once. Aim for **under ten minutes** and a file they recognize.
 
 ## The governing rule: look first, then present for review
 
@@ -138,7 +138,7 @@ Read them for two things at once.
 **For `voice.md` – how they write.** Signoff, openers by recipient, punctuation habits, typical
 length, what changes between a peer, their manager and someone external.
 
-Never normalise punctuation, spelling, casing, emoji, dashes, greetings or signoffs. The quirks
+Never normalize punctuation, spelling, casing, emoji, dashes, greetings or signoffs. The quirks
 are the entire signal.
 
 **Keep two or three whole messages, verbatim.** A rule describes their writing; a real sample *is*
@@ -154,7 +154,7 @@ widely. Look for evidence of:
 | What they call done, and what they celebrate | 3. Success |
 | "let me check with…", "I won't commit to…", anything they refused | 4. Non-negotiables |
 | Two things landing at once, and which moved | 5. When priorities conflict |
-| What they ask for help with, or apologise for | 6. The skill that would help most |
+| What they ask for help with, or apologize for | 6. The skill that would help most |
 | What they volunteer for, and write about at length | 7. What motivates me |
 | What people come to them for | 8. Strengths |
 | What slips, gets rushed, or gets an apology | 9. What drains me |
@@ -278,8 +278,8 @@ them properly.
 
 **Context is never a filter.** Sections 14 and 15 say what you already know about, not what counts.
 Something that is not on either list is not less important – it is more likely to be the thing they
-have not seen yet. Never file an item as noise, deprioritise it, or leave it out because the project
-or person is not named in `persona.md`. Use those sections to recognise what you see, never to
+have not seen yet. Never file an item as noise, deprioritize it, or leave it out because the project
+or person is not named in `persona.md`. Use those sections to recognize what you see, never to
 decide what to look at.
 
 **14 and 15 go stale.** Say so at handoff: people change and projects ship, and a twin working from
@@ -339,7 +339,7 @@ When asked what landed:
 | Bucket | What goes here | What it commits them to |
 | --- | --- | --- |
 | **Handled** | The answer already exists – in the thread, their calendar, or something they have already sent. Draft the reply | Whatever the draft says, the moment they send it |
-| **Needs me** | A judgement call only they can make, or the answer is not close at hand | The sender is blocked until they answer |
+| **Needs me** | A judgment call only they can make, or the answer is not close at hand | The sender is blocked until they answer |
 | **Blocked** | They cannot move until someone else does something | Nothing moves until they chase it |
 | **Noise** | Nothing is being asked of them | They have decided not to reply |
 
@@ -397,7 +397,7 @@ Commits you to: one sentence
 
 Say so, give the closest rule and what it implies, and name the rule that should be added. Never
 fall back to generic professional advice without flagging that you did. A generic answer that is
-labelled is useful; one that is not is misleading.
+labeled is useful; one that is not is misleading.
 
 ---
 

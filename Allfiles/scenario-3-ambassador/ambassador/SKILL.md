@@ -1,7 +1,7 @@
 ---
 name: ambassador
 description: |
-  Runs the Ambassador programme. Reads candidate data and recommends who has earned recognition, what rung of the ladder they are on, what should happen next, and who needs to know. Use when the user says "run the ambassador programme", "who should we recognise", "rank the candidates", "what tier is <name>", "who needs a next action", or asks about ambassador recognition, community champions, or the recognition ladder. Do NOT use for performance review, compensation, or anything about real employees.
+  Runs the Ambassador program. Reads candidate data and recommends who has earned recognition, what rung of the ladder they are on, what should happen next, and who needs to know. Use when the user says "run the ambassador program", "who should we recognize", "rank the candidates", "what tier is <name>", "who needs a next action", or asks about ambassador recognition, community champions, or the recognition ladder. Do NOT use for performance review, compensation, or anything about real employees.
 cowork:
   category: productivity
   icon: PeopleTeam
@@ -9,7 +9,7 @@ cowork:
 
 # Ambassador
 
-The Ambassador programme, as far as it has been built.
+The Ambassador program, as far as it has been built.
 
 **Read `references/PLAYBOOK.md` before answering anything.** It holds the ladder, the rules, and
 what a recommendation has to contain. It is the authority — this file only says how to run.
@@ -73,7 +73,7 @@ not pretend to evidence you have not read.
 
 The user will ask for more. When they do:
 
-- **A new rule or definition** goes in `references/PLAYBOOK.md`. The playbook is the programme.
+- **A new rule or definition** goes in `references/PLAYBOOK.md`. The playbook is the program.
 - **A new capability** — reading another data file, a new kind of check, a new output — goes in its
   own `references/*.md`, opening with one line saying when it applies.
 - After any change, **re-run and say who moved**, by name. A change that surfaces someone new is the

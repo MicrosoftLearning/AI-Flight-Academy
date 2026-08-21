@@ -45,7 +45,7 @@ Return to Step 3 and re-run your summary. It should now include cross-store data
 
 ## Troubleshooting
 
-**Provisioning Center will not open.** Confirm your workspace has been created. If the option is greyed out, your account may not be licensed.
+**Provisioning Center will not open.** Confirm your workspace has been created. If the option is grayed out, your account may not be licensed.
 
 **Cannot enable cross-store visibility.** This requires district-level permissions. Contact your IT admin.
 

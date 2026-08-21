@@ -9,7 +9,7 @@ Everything the Ambassador program has on its candidates. Nine files, ~2,000 rows
 | `PeerFeedback.csv` | 283 | What colleagues said. Sentiment, theme, and **how well evidenced** the comment is |
 | `ProgramContributions.csv` | 390 | What people left behind. Artifact type, whether it was adopted, reuse value, teams reached, and whether they created or maintained it |
 | `LearningCredentials.csv` | 275 | Completions, and whether someone went on to facilitate or coach others |
-| `RecognitionHistory.csv` | 128 | Who has been recognised before. **Not a shortcut** — see the playbook |
+| `RecognitionHistory.csv` | 128 | Who has been recognized before. **Not a shortcut** — see the playbook |
 | `AmbassadorApplications.csv` | 41 | Who put themselves forward. Some strong candidates never did |
 | `PolicyRules.csv` | 8 | The rules the program is meant to follow |
 | `RewardTiers.csv` | 5 | The ladder, and the action that goes with each rung |

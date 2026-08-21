@@ -1,7 +1,7 @@
-"""Load the programme data.
+"""Load the program data.
 
 Reads the CSVs in `program-data/` and gives you candidates with their evidence attached.
-Nothing here makes a judgement - that's `evaluate.py`.
+Nothing here makes a judgment - that's `evaluate.py`.
 
     from program.data import load
 
@@ -40,7 +40,7 @@ EVIDENCE = {
 
 @dataclass
 class Candidate:
-    """One person, with everything the programme knows about them."""
+    """One person, with everything the program knows about them."""
 
     id: str
     profile: dict
@@ -68,7 +68,7 @@ class Candidate:
 
 
 @dataclass
-class Programme:
+class Program:
     candidates: dict
     rules: list
     tiers: list
@@ -84,14 +84,14 @@ def read_csv(name: str) -> list[dict]:
     path = DATA_DIR / name
     if not path.exists():
         raise FileNotFoundError(
-            f"{path} not found. The programme data should sit in program-data/ "
+            f"{path} not found. The program data should sit in program-data/ "
             "next to this package."
         )
     with path.open(encoding="utf-8-sig", newline="") as f:
         return [row for row in csv.DictReader(f) if any(v for v in row.values())]
 
 
-def load() -> Programme:
+def load() -> Program:
     """Read every file and attach each evidence record to its candidate."""
     candidates = {
         row["CandidateId"]: Candidate(id=row["CandidateId"], profile=row)
@@ -106,7 +106,7 @@ def load() -> Programme:
             if candidate is not None:
                 getattr(candidate, attr).append(row)
 
-    return Programme(
+    return Program(
         candidates=candidates,
         rules=read_csv("PolicyRules.csv"),
         tiers=read_csv("RewardTiers.csv"),

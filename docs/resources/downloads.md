@@ -155,49 +155,28 @@ code $dest/the-greenlight-starter/the-greenlight.code-workspace
 
 ## Scenario 3 · The Ambassador
 
-A **half-built recognition programme** that runs, ships nine data files, and reads one of them. Cowork and Scout share the same skill; Code gets a starter with the data already wired in.
+A **half-built recognition program** that runs, ships nine data files, and reads one of them. Cowork and Scout share the same skill; Code gets a starter with the data already wired in.
 
-### 🟢 Cowork
-
-<div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-SKILL.md" download="SKILL.md">
-    <span class="lab-card-emoji">🎖️</span>
-    <span class="lab-card-title">Ambassador</span>
-    <span class="lab-card-desc">The half-built skill with the playbook built in — the ladder, the eight rules, and what a recommendation has to contain.</span>
-    <span class="lab-card-cta">Download .md →</span>
-  </a>
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-program-data.zip" download>
-    <span class="lab-card-emoji">🗂️</span>
-    <span class="lab-card-title">Programme data</span>
-    <span class="lab-card-desc">72 fictional candidates and ~2,000 evidence records across nine CSVs.</span>
-    <span class="lab-card-cta">Download .zip →</span>
-  </a>
-</div>
-
-**Installing it:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill** → pick the downloaded `SKILL.md`. Start a **new session**, attach `CandidateProfiles.csv`, and say **`run the ambassador programme`**.
-
-::: warning Upload the .md, not a .zip
-Tested on a live tenant: `.zip` skill uploads fail silently. This `SKILL.md` is self-contained — the playbook is inlined as a section.
-:::
-
-### 🔵 Scout
+### 🟢 Cowork · 🔵 Scout
 
 <div class="lab-grid lab-grid-2">
   <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-skill.zip" download>
     <span class="lab-card-emoji">🎖️</span>
     <span class="lab-card-title">Ambassador</span>
-    <span class="lab-card-desc">The same skill as a folder — <code>SKILL.md</code> plus <code>references/PLAYBOOK.md</code>.</span>
+    <span class="lab-card-desc">The half-built skill, plus <code>references/PLAYBOOK.md</code> — the ladder, the eight rules, and what a recommendation has to contain.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
   <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-program-data.zip" download>
     <span class="lab-card-emoji">🗂️</span>
-    <span class="lab-card-title">Programme data</span>
-    <span class="lab-card-desc">The same nine CSVs.</span>
+    <span class="lab-card-title">Program data</span>
+    <span class="lab-card-desc">72 fictional candidates and ~2,000 evidence records across nine CSVs.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
 </div>
 
-**Installing it:** unzip, then Scout → **Extensions** → **Import** → drag in the `ambassador` **folder**. Start a new session and point it at the `program-data` folder.
+**Cowork:** **Customize** → **Skills** → **Add ▾** → **Upload skill** → the whole `ambassador-skill.zip`. Start a **new session**, attach `CandidateProfiles.csv`, and say **`run the ambassador program`**.
+
+**Scout:** unzip, then **Extensions** → **Import** → drag in the `ambassador` **folder**. Start a new session and point it at the `program-data` folder.
 
 ### 🟣 Code
 

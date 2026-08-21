@@ -1,8 +1,8 @@
-# Ambassador programme playbook
+# Ambassador program playbook
 
-*This is the programme, written down. It is fictional — see `program-data/DISCLAIMER.md`.*
+*This is the program, written down. It is fictional — see `program-data/DISCLAIMER.md`.*
 
-The Ambassador programme recognises people who **make other people better at their jobs**. It is not
+The Ambassador program recognizes people who **make other people better at their jobs**. It is not
 an output leaderboard and it is not a popularity contest.
 
 Anyone reading this should be able to work out why a given person got the recommendation they did.
@@ -15,9 +15,9 @@ Everyone gets a rung and an action. Nobody is left with nothing.
 | --- | --- | --- |
 | **Explorer** | Promising signals, early or narrow | Invite to a structured community activity |
 | **Connector** | Real peer support and participation | Offer a visible facilitation opportunity |
-| **Multiplier** | Repeatedly enables others, leaves reusable value behind | Nominate for the ambassador programme |
+| **Multiplier** | Repeatedly enables others, leaves reusable value behind | Nominate for the ambassador program |
 | **Flight Lead** | Sustained lift across a region or globally, and delegates | Leadership circle or sponsor conversation |
-| **Review Hold** | Signals incomplete, inconsistent, or concentrated in one dimension | Gather evidence before recognising |
+| **Review Hold** | Signals incomplete, inconsistent, or concentrated in one dimension | Gather evidence before recognizing |
 
 ## The rules
 
@@ -26,7 +26,7 @@ Everyone gets a rung and an action. Nobody is left with nothing.
 | **R-001** | Consider evidence across collaboration, knowledge sharing, community contribution, and follow-through |
 | **R-002** | **High individual output alone is not enough.** Someone can be excellent and not be an ambassador |
 | **R-003** | Early-career or new-in-role people can be Explorers when peer-support evidence is strong but scope is still small |
-| **R-004** | Prior recognition is not a reason to recognise someone again. Look for current momentum |
+| **R-004** | Prior recognition is not a reason to recognize someone again. Look for current momentum |
 | **R-005** | Every recommendation carries its evidence and a safe next action |
 | **R-006** | Repeated activity with weak quality or poor follow-through does not outrank quieter high-multiplier work |
 | **R-007** | Someone can be right for a specific next action without being a top overall recommendation |
@@ -34,7 +34,7 @@ Everyone gets a rung and an action. Nobody is left with nothing.
 
 ## What we are trying to tell apart
 
-The hardest call in this programme, stated plainly:
+The hardest call in this program, stated plainly:
 
 | | Advocate signal | Volume signal |
 | --- | --- | --- |
@@ -45,15 +45,15 @@ Both produce impressive-looking numbers. Only one produces ambassadors.
 
 ## Every recommendation says three things
 
-Per **R-005**, and this is the whole output of the programme:
+Per **R-005**, and this is the whole output of the program:
 
 1. **What they have earned** — a rung, with the evidence behind it
 2. **What happens next** — the action from that rung, made specific to them
-3. **Who needs to know** — the community manager, the programme owner, whoever acts on it
+3. **Who needs to know** — the community manager, the program owner, whoever acts on it
 
 ## Where a human decides
 
-The programme proposes. A person disposes.
+The program proposes. A person disposes.
 
 Anything going **to** a candidate — an invitation, a nomination, a recognition — is drafted and held
 for approval. Nothing is sent automatically, and nothing about a person is published without someone

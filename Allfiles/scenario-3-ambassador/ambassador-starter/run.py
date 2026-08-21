@@ -1,4 +1,4 @@
-"""Run the programme.
+"""Run the program.
 
     python run.py                 # the shortlist
     python run.py --all           # every candidate
@@ -37,10 +37,10 @@ def main() -> int:
     parser.add_argument("--export", metavar="FILE", help="write the full register to CSV")
     args = parser.parse_args()
 
-    programme = load()
-    results = evaluate_all(programme)
+    program = load()
+    results = evaluate_all(program)
 
-    print(f"\nAmbassador programme - {len(programme)} candidates assessed")
+    print(f"\nAmbassador program - {len(program)} candidates assessed")
     print("Scored on: " + ", ".join(f"{f} x{w}" for f, w in WEIGHTS.items()))
     print()
 

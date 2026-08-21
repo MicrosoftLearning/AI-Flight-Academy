@@ -12,17 +12,19 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 **You'll build this in code – VS Code, GitHub Copilot, and Python.**
 
-You've been handed half an ambassador programme. It runs on the first command, it loads every one of nine data files — and then scores people on three columns and ignores the rest.
+Imagine you've just inherited someone else's half-finished work.
+
+The plumbing is done: `data.py` loads all nine data files and attaches every activity, comment and contribution to the right candidate. The judgment isn't. `evaluate.py` scores people on three columns, ignores the rest, and ranks with total confidence.
 
 It's about ninety lines. It's meant to be replaced.
 
 ## What you're solving
 
-A thousand people are doing community work. Some of them are quietly making everyone around them better; some are just busy. The programme is supposed to find the first group.
+A thousand people are doing community work. Some of them are quietly making everyone around them better; some are just busy. The program is supposed to find the first group.
 
-`data.py` already loads all nine files and attaches every activity, peer comment, contribution, credential and application to the right candidate. `evaluate.py` then uses one of them. The plumbing is done and the judgement isn't — which is the half worth your time.
+The version you've inherited ranks on `BusinessImpact`, `ExecutionReliability` and `LeadershipSignals`. Those are the numbers that were already being reported, so those are the numbers it uses. Sitting in the same rows, unread: peer support, knowledge sharing, community contribution, multiplier behavior. Sitting in the same folder, loaded but never scored: 866 activities, 283 peer comments, 390 contributions, 275 credentials, 128 recognition events, 41 applications.
 
-**The challenge is to replace the judgement, and to build something that runs without you.**
+**The challenge is to replace the judgment, and to build something that runs without you.**
 
 ## How this runs
 
@@ -38,7 +40,7 @@ Step 1 is on your own. Step 2 is where the table works together, and it's most o
 ## Before you start
 
 ::: warning The data is fictional
-Invented people, invented scores, invented feedback. Nothing here describes a real person and no real programme is being modelled — which is what makes it safe to argue about in a room. `program-data/DISCLAIMER.md` has the details.
+Invented people, invented scores, invented feedback. Nothing here describes a real person and no real program is being modeled — which is what makes it safe to argue about in a room. `program-data/DISCLAIMER.md` has the details.
 :::
 
 **Python 3.10+.** The starter has no dependencies — standard library only.
@@ -46,7 +48,7 @@ Invented people, invented scores, invented feedback. Nothing here describes a re
 <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-starter.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">📦</span>
   <span class="lab-card-title">Starter</span>
-  <span class="lab-card-desc">Half a programme that runs, the nine data files it half-reads, and the playbook it's supposed to follow.</span>
+  <span class="lab-card-desc">Half a program that runs, the nine data files it half-reads, and the playbook it's supposed to follow.</span>
   <span class="lab-card-cta">Download .zip →</span>
 </a>
 
@@ -74,7 +76,7 @@ ambassador-starter/
     data.py               loads every CSV, attaches evidence to candidates
     evaluate.py           decides the rung. This is the half that was built
   program-data/           72 candidates, ~2,000 evidence records
-  PLAYBOOK.md             the programme's rules and ladder
+  PLAYBOOK.md             the program's rules and ladder
 ```
 
 You get a shortlist, and a note at the bottom telling you what the run ignored. Two things in that output are wrong on their face:
@@ -105,9 +107,9 @@ Open `program/evaluate.py`. The top of the file is the entire problem:
 
 - `WEIGHTS` names three fields. `PeerSupport`, `KnowledgeSharing`, `CommunityContribution` and `MultiplierBehavior` are in the same rows and never scored.
 - Eight of the nine files are loaded by `data.py` and never touched here.
-- **R-004** (prior recognition isn't a reason to recognise again) and **R-006** (repeated activity with weak quality doesn't outrank quieter high-multiplier work) are in `PLAYBOOK.md` and not in the code.
+- **R-004** (prior recognition isn't a reason to recognize again) and **R-006** (repeated activity with weak quality doesn't outrank quieter high-multiplier work) are in `PLAYBOOK.md` and not in the code.
 
-`PLAYBOOK.md` is what the programme is supposed to do. `evaluate.py` is what it does. The gap between them is the work.
+`PLAYBOOK.md` is what the program is supposed to do. `evaluate.py` is what it does. The gap between them is the work.
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>
@@ -127,7 +129,7 @@ One constraint to keep you past a refactor: **whatever you build has to answer a
 
 ### Pick a direction
 
-Seven starting points. Take one, combine two, or build what the programme obviously needs.
+Seven starting points. Take one, combine two, or build what the program obviously needs.
 
 | | What it is | Where to start |
 | --- | --- | --- |
@@ -137,7 +139,7 @@ Seven starting points. Take one, combine two, or build what the programme obviou
 | 🧭 **Manager's view** | One file per manager: their people, each rung, one next action each | Group by the org field, generate per group |
 | ⚖️ **Fairness audit** | Whether outcomes skew by region, org, level or tenure — and which rungs can't be explained | A second pass over the results, not a change to scoring |
 | 🎖️ **Their own view** | What a candidate would see about themselves, generated per person | Hardest test of your reasoning — if it can't be shown to them, it isn't defensible |
-| 🎯 **Yours** | Whatever your table thinks this programme is missing | Smallest version that runs first |
+| 🎯 **Yours** | Whatever your table thinks this program is missing | Smallest version that runs first |
 
 **Pick by what would actually get run**, not by what's most impressive to describe.
 
@@ -172,11 +174,11 @@ Agree the shape of what the scorer returns early, then work against it. That's t
 4. **Make it explain itself** — every recommendation should carry the evidence and the rule that decided it. That's **R-005**.
 
 ::: tip Let Copilot do the plumbing
-`data.py` already hands you every evidence record attached to its candidate, so most of what's left is judgement rather than parsing. Paste `PLAYBOOK.md` into Copilot and ask it to implement **R-006** against the data you've got — then check whether the result actually moved the right people.
+`data.py` already hands you every evidence record attached to its candidate, so most of what's left is judgment rather than parsing. Paste `PLAYBOOK.md` into Copilot and ask it to implement **R-006** against the data you've got — then check whether the result actually moved the right people.
 :::
 
 ::: warning Nothing gets sent
-Invitations, nominations and recognition are drafted and held for a person to read. That's **R-005**, and it's in the playbook — the programme proposes, a human decides. Keep that in whatever you build.
+Invitations, nominations and recognition are drafted and held for a person to read. That's **R-005**, and it's in the playbook — the program proposes, a human decides. Keep that in whatever you build.
 :::
 
 <div class="table-check">
@@ -190,9 +192,9 @@ Invitations, nominations and recognition are drafted and held for a person to re
 ## Push it further
 
 1. **Make it defend a call** — a command that takes a name and explains why they didn't make the list. R-008 applies.
-2. **Break it on purpose** — write a candidate who should obviously be recognised, add them to the data, and see whether your version finds them.
+2. **Break it on purpose** — write a candidate who should obviously be recognized, add them to the data, and see whether your version finds them.
 3. **Test the rules** — a test per playbook rule, so a scoring change that breaks R-002 fails loudly.
-4. **Give it a memory** — persist each run so the programme can report change rather than state.
+4. **Give it a memory** — persist each run so the program can report change rather than state.
 5. **Take the playbook with you** — `PLAYBOOK.md` is plain text and moves to another altitude unchanged.
 6. **Swap tables** — hand another table your scorer and have them run it against the same data. Different rules, different ambassadors.
 

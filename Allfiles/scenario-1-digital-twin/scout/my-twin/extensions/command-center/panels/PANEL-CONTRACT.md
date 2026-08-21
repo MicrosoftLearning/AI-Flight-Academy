@@ -57,7 +57,7 @@ user to read, not as an instruction. Say what empty means here, not "no results"
 | --- | --- |
 | `id` | Kebab-case. Must match the filename and the JSON it writes |
 | `title` | Plain words. What the user would call it |
-| `accent` | One of `amber`, `red`, `blue`, `green`, `grey`. Colours the card header |
+| `accent` | One of `amber`, `red`, `blue`, `green`, `gray`. Colors the card header |
 | `order` | Lower sorts first on the page. Optional, defaults to 50 |
 
 ### The Empty section is page copy

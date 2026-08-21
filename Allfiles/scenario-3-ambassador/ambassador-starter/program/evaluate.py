@@ -1,6 +1,6 @@
 """Decide what each candidate has earned.
 
-This is the half of the programme that was actually built, and it only looks at the
+This is the half of the program that was actually built, and it only looks at the
 seven summary scores in CandidateProfiles.csv. Everything in `program-data/` other than
 that one file is loaded and then ignored.
 
@@ -18,7 +18,7 @@ from dataclasses import dataclass, field
 
 # What the score is built from.
 #
-# This is where the programme started: impact and reliability were the numbers
+# This is where the program started: impact and reliability were the numbers
 # already being reported, so those are the numbers it scored on. The four
 # community-shaped columns sit in the same file, unread.
 WEIGHTS = {
@@ -38,16 +38,16 @@ IGNORED_COLUMNS = [
 # Where the rungs sit. Also asserted.
 BANDS = [
     (88, "Flight Lead", "Leadership circle or sponsor conversation"),
-    (80, "Multiplier", "Nominate for the ambassador programme"),
+    (80, "Multiplier", "Nominate for the ambassador program"),
     (72, "Connector", "Offer a visible facilitation opportunity"),
     (60, "Explorer", "Invite to a structured community activity"),
-    (0, "Review Hold", "Gather more evidence before recognising"),
+    (0, "Review Hold", "Gather more evidence before recognizing"),
 ]
 
 
 @dataclass
 class Recommendation:
-    """What the programme proposes for one person. A proposal, not a decision."""
+    """What the program proposes for one person. A proposal, not a decision."""
 
     candidate_id: str
     name: str
@@ -118,7 +118,7 @@ def evaluate(candidate) -> Recommendation:
     )
 
 
-def evaluate_all(programme) -> list[Recommendation]:
-    results = [evaluate(c) for c in programme]
+def evaluate_all(program) -> list[Recommendation]:
+    results = [evaluate(c) for c in program]
     results.sort(key=lambda r: -r.score)
     return results

@@ -29,7 +29,7 @@ Inside `references/`:
 
 The Scout altitude turns the twin into whatever you want built on top of it – a dashboard, a command, a scheduled briefing, an MCP server. The Code altitude calls it from a program instead of a chat window: a git hook, a service, a daemon, a tool other agents can reach.
 
-Done means the twin drafts in a way you'd recognise as yours, and you can point to the rule that produced it.
+Done means the twin drafts in a way you'd recognize as yours, and you can point to the rule that produced it.
 
 ::: tip The proof is a real thread
 Name something unresolved from your own inbox. The twin retrieves it and answers. If the answer isn't yours, you've found the missing rule.

@@ -12,9 +12,11 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 **You'll build this in Microsoft Scout. You describe what you want; Scout writes it.**
 
-You've been handed a half-built skill. Somebody started an ambassador programme, wired up the scoring, and stopped. It runs, it produces a confident ranked list — and the list is wrong in ways you can see from the outside.
+Imagine you've just inherited someone else's half-finished work.
 
-Nine data files shipped with it. It reads one.
+The ambassador program runs on the first try and sounds completely sure of itself — 72 candidates ranked, each one handed a rung and a next action. Then you read the top of the list and something's off. The people it's most confident about aren't obviously the right people.
+
+Nine data files shipped with it. It opens one.
 
 ::: details New to Scout?
 An agentic assistant that runs on your machine. Two things plug into it:
@@ -22,25 +24,25 @@ An agentic assistant that runs on your machine. Two things plug into it:
 - **Microsoft 365**, through **Work IQ** – your mail, calendar, Teams, files and org context. Nothing to connect, and it only sees what you can already see.
 - **GitHub Copilot CLI** – so it can write and run code locally.
 
-For this scenario the second one matters most: Scout can read the programme data *and* build something that runs against it, in the same conversation. Setup is in the **[Guides](/bricks/scout-setup)**.
+For this scenario the second one matters most: Scout can read the program data *and* build something that runs against it, in the same conversation. Setup is in the **[Guides](/bricks/scout-setup)**.
 :::
 
 ## What you're solving
 
-A thousand people are doing community work. Some of them are quietly making everyone around them better; some are just busy. The programme is supposed to find the first group.
+A thousand people are doing community work. Some of them are quietly making everyone around them better; some are just busy. The program is supposed to find the first group.
 
-The version you've inherited scores people on three numbers — business impact, execution reliability, leadership signals — and ranks on the total. Those are the numbers that were already being reported, so those are the numbers it uses. Sitting in the same rows, unread: peer support, knowledge sharing, community contribution, multiplier behaviour. Sitting in the same folder, unread: 866 activities, 283 peer comments, 390 contributions, 275 credentials, 128 recognition events, 41 applications.
+The version you've inherited scores people on three numbers — business impact, execution reliability, leadership signals — and ranks on the total. Those are the numbers that were already being reported, so those are the numbers it uses. Sitting in the same rows, unread: peer support, knowledge sharing, community contribution, multiplier behavior. Sitting in the same folder, unread: 866 activities, 283 peer comments, 390 contributions, 275 credentials, 128 recognition events, 41 applications.
 
 **The challenge is to make it find the right people, and then to give it somewhere to live.** A chat answer disappears when you close the window. Scout can build the thing that doesn't.
 
 ## What you'll walk out with
 
-A programme that reads evidence, and a surface that runs it — locally, on your machine.
+A program that reads evidence, and a surface that runs it — locally, on your machine.
 
 | What you make | What it does |
 | --- | --- |
-| **A programme that reads evidence** | Recommends people the original ranking couldn't see, and names the evidence behind each one |
-| **A playbook you extended** | `PLAYBOOK.md` is the programme written down — your rules go in it, and they travel |
+| **A program that reads evidence** | Recommends people the original ranking couldn't see, and names the evidence behind each one |
+| **A playbook you extended** | `PLAYBOOK.md` is the program written down — your rules go in it, and they travel |
 | **Something that runs** | A board you open, a scan that runs on a schedule, a brief that lands — built against the data |
 
 **Everything stays local.** You're building muscle here, not shipping a product — nothing is hosted and nothing leaves your machine.
@@ -68,13 +70,13 @@ Steps 1 and 2 are on your own. Step 3 is where the table works together, and it'
   </a>
   <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-program-data.zip" download>
     <span class="lab-card-emoji">🗂️</span>
-    <span class="lab-card-title">Programme data</span>
+    <span class="lab-card-title">Program data</span>
     <span class="lab-card-desc">72 candidates and ~2,000 evidence records across nine files.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
 </div>
 
-**The data is fictional.** Invented people, invented scores, invented feedback. Nothing here describes a real person, and no real programme is being modelled — which is what makes it safe to argue about in a room.
+**The data is fictional.** Invented people, invented scores, invented feedback. Nothing here describes a real person, and no real program is being modeled — which is what makes it safe to argue about in a room.
 
 ::: tip Two places to get unstuck
 Ask Scout – it's building with you, so describe what's wrong and let it fix it. For mechanics like scheduling or running things locally, the **[Guides](/bricks/)** are short how-tos. Coaches are in the room and every table has an SME.
@@ -93,7 +95,7 @@ Ask Scout – it's building with you, so describe what's wrong and let it fix it
 Then:
 
 ```text
-Run the ambassador programme against the candidates in [path to program-data]. Show me the top ten, and tell me what you didn't read.
+Run the ambassador program against the candidates in [path to program-data]. Show me the top ten, and tell me what you didn't read.
 ```
 
 You get a ranked list, a rung for each person, and a next action. It'll also tell you what it skipped — that's built in, because the skill knows it's incomplete.
@@ -137,9 +139,9 @@ The skill reads one file. There are eight more, and each answers a different que
 | `ProgramContributions.csv` | Whether what they made got reused, and by how many teams |
 | `CommunityActivities.csv` | What they ran, for whom, and at what quality |
 | `LearningCredentials.csv` | Whether they completed, facilitated, or coached |
-| `RecognitionHistory.csv` | Who's already been recognised — see **R-004** |
+| `RecognitionHistory.csv` | Who's already been recognized — see **R-004** |
 | `AmbassadorApplications.csv` | Who put their hand up, which is not the same as who's ready |
-| `PolicyRules.csv` | R-001 to R-008, the rules the programme is supposed to follow |
+| `PolicyRules.csv` | R-001 to R-008, the rules the program is supposed to follow |
 | `RewardTiers.csv` | The ladder: Explorer, Connector, Multiplier, Flight Lead, Review Hold |
 
 **Add one at a time**, and re-run after each. Adding all eight at once means you can't tell which one did anything — and one file is enough for this step. Go back for more only if you're ahead.
@@ -152,10 +154,10 @@ Read PeerFeedback.csv too. Add a rule to the playbook: peer evidence counts, and
 
 **Names are the check.** *"The scoring is more balanced now"* means nothing. *"Alex Kim dropped out of the top ten and Drew Foster came in"* is a result.
 
-Two rules in the playbook aren't implemented at all — **R-004** (prior recognition isn't a reason to recognise again) and **R-006** (repeated activity with weak quality doesn't outrank quieter high-multiplier work). Implementing either one changes the list.
+Two rules in the playbook aren't implemented at all — **R-004** (prior recognition isn't a reason to recognize again) and **R-006** (repeated activity with weak quality doesn't outrank quieter high-multiplier work). Implementing either one changes the list.
 
 ::: tip Rules in the playbook, capabilities in their own file
-`references/PLAYBOOK.md` is the programme — the ladder, the rules, what a recommendation must contain. A new rule goes there. A new *capability* gets its own `references/*.md`. The skill's instructions point Scout toward that structure.
+`references/PLAYBOOK.md` is the program — the ladder, the rules, what a recommendation must contain. A new rule goes there. A new *capability* gets its own `references/*.md`. The skill's instructions point Scout toward that structure.
 :::
 
 <div class="table-check">
@@ -174,7 +176,7 @@ This is what Scout adds. A better ranking in a chat window is gone when you clos
 
 ### Pick a direction
 
-Seven starting points. Take one, combine two, or build something the programme obviously needs.
+Seven starting points. Take one, combine two, or build something the program obviously needs.
 
 | | What it is | Start with |
 | --- | --- | --- |
@@ -184,7 +186,7 @@ Seven starting points. Take one, combine two, or build something the programme o
 | 🧭 **Manager's view** | One manager, their people, one action each | *"Build a one-page brief per manager: their candidates, each one's rung, and the single next action for each."* |
 | ⚖️ **Fairness audit** | Whether outcomes skew by region, org, level or tenure — and whether each rung can be explained | *"Audit the recommendations for skew by region, org, level and tenure. Flag any rung you can't explain from evidence."* |
 | 🎖️ **Their own view** | What a candidate would see about themselves — a hard test of whether the reasoning holds | *"Generate what one candidate would see about their own standing: where they are, why, and what would move them up."* |
-| 🎯 **Yours** | Whatever your table thinks this programme is missing | *"The programme needs [what]. Work out what that takes and build the smallest version first."* |
+| 🎯 **Yours** | Whatever your table thinks this program is missing | *"The program needs [what]. Work out what that takes and build the smallest version first."* |
 
 **Pick by what would actually get opened**, not by what's most impressive to describe.
 
@@ -200,7 +202,7 @@ Seven starting points. Take one, combine two, or build something the programme o
 
 Pick one direction, then **take one standalone piece each** — one panel, one section of the brief, one rule, one check in the audit. **If it can't run alone, it's too big.**
 
-Split by question, not by layer. *"Who's ready"*, *"who's gone quiet"*, *"who's been recognised and stalled"* and *"who applied but isn't ready"* are four independent builds of one board.
+Split by question, not by layer. *"Who's ready"*, *"who's gone quiet"*, *"who's been recognized and stalled"* and *"who applied but isn't ready"* are four independent builds of one board.
 
 Share the **prompt that worked** — that's the useful part.
 
@@ -237,7 +239,7 @@ The more specific your prompt, the less you'll undo:
 :::
 
 ::: warning Nothing goes out
-Invitations, nominations and recognition are drafted and held for a person to read. That's **R-005**, and it's in the playbook — the programme proposes, a human decides. Keep that in whatever you build.
+Invitations, nominations and recognition are drafted and held for a person to read. That's **R-005**, and it's in the playbook — the program proposes, a human decides. Keep that in whatever you build.
 :::
 
 <div class="table-check">
@@ -253,7 +255,7 @@ Invitations, nominations and recognition are drafted and held for a person to re
 1. **Give it a memory** — a file it writes as well as reads, so it can tell you what changed since last run.
 2. **Make it stop** — a rule that routes a call to a human instead of deciding, and a way to see when it fired.
 3. **Defend a call** — pick someone who didn't make the list and have it explain the decision to them. R-008 applies.
-4. **Break it on purpose** — invent a candidate who should obviously be recognised and see whether your version finds them.
+4. **Break it on purpose** — invent a candidate who should obviously be recognized and see whether your version finds them.
 5. **Take the playbook with you** — `PLAYBOOK.md` is plain text and moves to another altitude unchanged.
 6. **Swap tables** — hand another table your playbook and have them run it against the same data. Different rules, different ambassadors.
 

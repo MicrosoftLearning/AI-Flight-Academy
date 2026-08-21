@@ -224,7 +224,7 @@ Your twin answers well now. It takes a position, it drafts in your voice, it sto
 | **`people.md`** | Who it's talking to. What each person needs, who wants the answer first, who you soften bad news for | *"Add a people reference – who I work with most, what each one needs from me, and how I talk to them. Read it whenever a named person is involved."* |
 | **`commitments.md`** | What you've already promised, so a new request lands against a real calendar rather than an empty one | *"Add a reference for what I've already committed to and when. Read it before you tell me to take anything else on."* |
 | **`decisions.md`** | What's already settled, so it stops reopening things the team closed weeks ago | *"Add a reference for decisions we've already made and why. Read it before you propose changing an approach."* |
-| **`goals.md`** | What the work is for, so it can tell you why something matters, not just what's next | *"Add a reference for what I'm actually trying to achieve this quarter. Read it when I ask what to prioritise."* |
+| **`goals.md`** | What the work is for, so it can tell you why something matters, not just what's next | *"Add a reference for what I'm actually trying to achieve this quarter. Read it when I ask what to prioritize."* |
 | **Yours** | Whatever your table's work actually runs on. Better than anything on this list | *"I want my twin to know [what]. Work out what file that needs and when you should read it."* |
 
 **Everything so far has been you correcting a file Cowork wrote.** This is the same move, pointed somewhere new: start with the line above, then argue with what comes back.
@@ -294,7 +294,7 @@ Two-line yes with a date beats a paragraph.
 ## The Northwind team – external
 Careful and brief. Never commit to a date, a number, or anything about
 roadmap without checking with Dana first. No internal context, no
-shorthand, no names they wouldn't recognise.
+shorthand, no names they wouldn't recognize.
 
 ## Anyone I'm delivering bad news to
 Say the thing in the first line. Then what I'm doing about it, then

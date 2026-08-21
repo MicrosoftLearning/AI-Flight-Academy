@@ -26,6 +26,6 @@ work can draft both from your sent mail and calendar, and you correct what it go
 
 Keep whatever you write local. Nothing personal belongs in a shared repo.
 
-## Licence
+## License
 
 MIT. Use it, fork it, break it.

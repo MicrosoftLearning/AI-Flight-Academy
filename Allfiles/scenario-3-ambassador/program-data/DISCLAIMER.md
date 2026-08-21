@@ -9,7 +9,7 @@ Every record in this folder is **fictional**, created for a training exercise.
 | **All 72 candidates** | Fictional. Names, roles, scores, and history are invented. Not based on real people |
 | **All activity, feedback, and contribution records** | Generated for this exercise |
 | **The seven summary scores** | Invented. They are deliberately incomplete and in places misleading |
-| **PolicyRules and RewardTiers** | Written for this exercise. They are a plausible programme, not Microsoft policy |
+| **PolicyRules and RewardTiers** | Written for this exercise. They are a plausible program, not Microsoft policy |
 
 ## Deliberate imperfections
 
@@ -22,10 +22,10 @@ as a template for real recognition decisions.
 
 ## If you point this at real data later
 
-The programme you build here reads files. Pointing it at real people means real consequences —
+The program you build here reads files. Pointing it at real people means real consequences —
 fairness, transparency, consent, and a human making the final call all stop being design
 considerations and start being obligations.
 
-## Licence
+## License
 
 MIT. Use it, fork it, break it.
