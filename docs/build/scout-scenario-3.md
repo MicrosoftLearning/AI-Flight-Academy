@@ -29,7 +29,7 @@ For this scenario the second one matters most: Scout can read the program data *
 
 ## What you're solving
 
-A thousand people are doing community work. Some of them are quietly making everyone around them better; some are just busy. The program is supposed to find the first group.
+This program exists to find the people who make everyone around them better — whose work gets reused, who unblocked somebody, whose name comes up when a peer explains how they got there. All three leave a trail in the data.
 
 The version you've inherited scores people on three numbers — business impact, execution reliability, leadership signals — and ranks on the total. Those are the numbers that were already being reported, so those are the numbers it uses. Sitting in the same rows, unread: peer support, knowledge sharing, community contribution, multiplier behavior. Sitting in the same folder, unread: 866 activities, 283 peer comments, 390 contributions, 275 credentials, 128 recognition events, 41 applications.
 

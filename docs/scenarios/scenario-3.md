@@ -10,7 +10,7 @@ This scenario is drafted and being tested. Details may change before the event.
 
 ## The problem
 
-A community program has a thousand people in it and one person trying to run it. The job is to work out who's earned recognition, who should be invited in, who's ready for something bigger, and who's gone quiet — then do something about each one.
+One person runs a community program with more people in it than they can hold in their head. The job is to work out who's earned recognition, who should be invited in, who's ready for something bigger, and who's gone quiet — then do something about each one.
 
 That work happens in a spreadsheet today. So it happens on whoever's numbers are already being collected: delivery, reliability, visible leadership. Those numbers reward the people producing the most output.
 
