@@ -14,10 +14,10 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 <div class="brief">
   <span class="brief-badge">The handoff</span>
-  <p class="brief-lead">Contoso's AI Skilling Ambassador program has to pick its next cycle, and the person who ran it left halfway through.</p>
-  <p>It's volunteer work. 72 people across nine regions run office hours, answer questions in the community, mentor one-on-one, and write the quickstart guides everyone else leans on. Recognition is the only thing the program has to give back, so who gets named matters.</p>
-  <p>What they left behind runs, and it's confident: all 72 ranked, each one handed a rung and a next action. It scores on business impact, execution reliability and leadership signals, the three numbers already sitting on the spreadsheet.</p>
-  <p>The evidence for what an ambassador actually does - whose guide got reused, who unblocked somebody, whose name a peer brings up - shipped in eight files it never opens.</p>
+  <p class="brief-lead">The AI Skilling Ambassador program has to decide who gets recognized, who gets invited in, and who's ready for more. The person who ran it left halfway through.</p>
+  <p>72 people across nine regions do it on top of their real jobs: office hours, answering questions, mentoring one-on-one, and writing the quickstart guides everyone else leans on. Recognition is the only thing the program has to give back, so who gets named matters.</p>
+  <p>The <strong>Ambassador skill</strong> they left behind still runs. Ask it who deserves recognition and it ranks all 72 people, sorts them into five tiers from Explorer up to Flight Lead, and recommends a next step for each one. It scores on business impact, execution reliability and leadership signals, the three numbers already sitting on the spreadsheet.</p>
+  <p>Nine data files shipped with the program. The Ambassador skill opens one. The other eight hold what an ambassador actually does: whose guide got reused, who unblocked somebody, whose name a peer brings up.</p>
   <p class="brief-ask">Make it find the right people, and be able to show why. How you do that is yours.</p>
   <ul class="brief-stats">
     <li><strong>9</strong> data files, <strong>1</strong> read</li>
@@ -28,7 +28,7 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 ## What you'll walk out with
 
-A skill that reads the evidence files it currently skips, plus one output a community manager could act on Monday morning.
+A skill that reads the evidence files it currently skips, and one output the program owner can act on.
 
 | What you make | What it does |
 | --- | --- |
@@ -89,14 +89,14 @@ Then:
 Run the ambassador program on the attached candidates. Show me the top ten, and tell me what you didn't read.
 ```
 
-You get a ranked list, a rung for each person, and a next action. It'll also tell you what it skipped - that part is built in, because the skill knows it's incomplete.
+You get a ranked list, a tier for each person, and a next action. It'll also tell you what it skipped - that part is built in, because the skill knows it's incomplete.
 
 **Now check it.** Two things in that output don't survive contact:
 
 | Look at | What you'll find |
 | --- | --- |
-| **Who's near the top** | At least one person with excellent delivery numbers and thin community evidence. Their own watchout line says so |
-| **How many are on the top rung** | Far more than a top rung should hold - the scoring pushes a crowd into it |
+| **Who's near the top** | At least one person with excellent delivery numbers and thin evidence of enabling anyone else. Their own watchout line says so |
+| **How many are on the top tier** | Far more than a top tier should hold - the scoring pushes a crowd into it |
 
 Pick the highest-ranked person you're suspicious of and ask:
 
@@ -163,7 +163,7 @@ The **Playbook** in `references/PLAYBOOK.md` is the program: the ladder, the rul
 
 **Done when:** you have a shortlist, brief, watch list or audit with names in it, and each name carries the evidence behind it.
 
-A ranking tells you the order. It doesn't tell a community manager who to invite this week, who to check on, or who to justify to their manager.
+A ranking tells you the order. It doesn't tell the program owner who to invite this week, who to check on, or who to defend to a sponsor.
 
 ### Pick a direction
 
@@ -171,15 +171,15 @@ Seven starting points. Take one, combine two, or name something the program is m
 
 | | What it is | Start with |
 | --- | --- | --- |
-| 🔍 **Recruitment** · easiest | Who should be invited who isn't in the running yet - the emerging people the ranking buries | *"Find people with strong peer and community evidence who rank low overall. Draft an invitation for each, held for approval."* |
+| 🔍 **Recruitment** · easiest | Who should be invited who isn't in the running yet - the emerging people the ranking buries | *"Find people with strong peer and enablement evidence who rank low overall. Draft an invitation for each, held for approval."* |
 | 🎯 **Assignment** | The right person for one specific thing, which is a different question from who's best overall - see **R-007** | *"I need someone to run a session for a new-hire audience in EMEA. Who, and why them over the next-best option?"* |
 | 👀 **The watch** | Who's rising and who's gone quiet - momentum rather than a snapshot | *"Build me a watch list: who's climbing, who's dropped off, and who's been recognized before and stalled."* |
-| 🧭 **Manager's view** | One manager, their people, what to do about each | *"Give me a one-page brief for a manager: their candidates, each one's rung, and the single next action for each."* |
-| ⚖️ **Fairness audit** | Whether the outcomes skew by region, org, level or tenure - and whether each rung can be explained | *"Audit the recommendations. Do outcomes skew by region, org, level or tenure? Show me any rung you can't explain from evidence."* |
+| 🧭 **Manager's view** | One manager, their people, what to do about each | *"Give me a one-page brief for a manager: their candidates, each one's tier, and the single next action for each."* |
+| ⚖️ **Fairness audit** | Whether the outcomes skew by region, org, level or tenure - and whether each tier can be explained | *"Audit the recommendations. Do outcomes skew by region, org, level or tenure? Show me any tier you can't explain from evidence."* |
 | 🎖️ **Their own view** | What a candidate would see about themselves - which is a hard test of whether the reasoning holds up | *"Write what one candidate would see about their own standing: where they are, why, and what would move them up."* |
 | 🎯 **Yours** | Whatever your table thinks this program is missing | *"The program needs [what]. Work out what that takes and build the smallest version first."* |
 
-**Pick the one your table would still use next cycle**, not the one that sounds most impressive.
+**Pick the one your table would still use next time round**, not the one that sounds most impressive.
 
 <div class="table-check">
   <div class="table-check-icon">👥</div>

@@ -4,7 +4,7 @@ Everything participants download for Scenario 3.
 
 | Folder | What it is | Who uses it |
 | --- | --- | --- |
-| `ambassador/` | The half-built skill. Reads candidate profiles, assigns a rung, proposes a next action. Ships with `PLAYBOOK.md` in its references. | 🟢 Cowork, 🔵 Scout |
+| `ambassador/` | The half-built skill. Reads candidate profiles, assigns a tier, proposes a next action. Ships with `PLAYBOOK.md` in its references. | 🟢 Cowork, 🔵 Scout |
 | `ambassador-starter/` | The half-built program as code. Loads all nine data files, evaluates using one of them. | 🟣 Code |
 | `program-data/` | 72 candidates, ~2,000 evidence records across nine CSVs. Synthetic. | All three |
 

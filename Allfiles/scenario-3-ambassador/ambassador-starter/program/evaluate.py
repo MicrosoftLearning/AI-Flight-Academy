@@ -35,7 +35,7 @@ IGNORED_COLUMNS = [
     "MultiplierBehavior",
 ]
 
-# Where the rungs sit. Also asserted.
+# Where the tiers sit. Also asserted.
 BANDS = [
     (88, "Flight Lead", "Leadership circle or sponsor conversation"),
     (80, "Multiplier", "Nominate for the ambassador program"),
@@ -51,7 +51,7 @@ class Recommendation:
 
     candidate_id: str
     name: str
-    rung: str
+    tier: str
     next_action: str
     score: float
     evidence: list = field(default_factory=list)
@@ -63,7 +63,7 @@ class Recommendation:
         return {
             "CandidateId": self.candidate_id,
             "Name": self.name,
-            "Rung": self.rung,
+            "Tier": self.tier,
             "NextAction": self.next_action,
             "Score": round(self.score, 1),
             "Evidence": " | ".join(self.evidence),
@@ -79,9 +79,9 @@ def weighted_score(candidate) -> float:
 
 
 def band_for(score: float) -> tuple[str, str]:
-    for threshold, rung, action in BANDS:
+    for threshold, tier, action in BANDS:
         if score >= threshold:
-            return rung, action
+            return tier, action
     return BANDS[-1][1], BANDS[-1][2]
 
 
@@ -103,14 +103,14 @@ def unused_for(candidate) -> list[str]:
 
 def evaluate(candidate) -> Recommendation:
     score = weighted_score(candidate)
-    rung, action = band_for(score)
+    tier, action = band_for(score)
 
     evidence = [f"{f} {candidate.score(f)}" for f in WEIGHTS]
 
     return Recommendation(
         candidate_id=candidate.id,
         name=candidate.name,
-        rung=rung,
+        tier=tier,
         next_action=action,
         score=score,
         evidence=evidence,

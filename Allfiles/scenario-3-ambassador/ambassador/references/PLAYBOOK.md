@@ -2,9 +2,9 @@
 
 *This is the program, written down. It is fictional - see `program-data/DISCLAIMER.md`.*
 
-Contoso's AI Skilling Ambassadors are volunteers across nine regions who help colleagues use the
-company's AI tools: office hours, community answers, mentoring, peer coaching, and the reusable
-guides and localization aids other people build on.
+Ambassadors across nine regions help colleagues use the company's AI tools on top of their real
+jobs: office hours, answering questions, mentoring, peer coaching, and the reusable guides and
+localization aids other people build on.
 
 The program recognizes people who **make other people better at their jobs**. It is not an output
 leaderboard and it is not a popularity contest. Recognition is the only currency the program has, so
@@ -14,9 +14,9 @@ Anyone reading this should be able to work out why a given person got the recomm
 
 ## The ladder
 
-Everyone gets a rung and an action. Nobody is left with nothing.
+Everyone gets a tier and an action. Nobody is left with nothing.
 
-| Rung | Who is here | What happens next |
+| Tier | Who is here | What happens next |
 | --- | --- | --- |
 | **Explorer** | Promising signals, early or narrow | Invite to a structured community activity |
 | **Connector** | Real peer support and participation | Offer a visible facilitation opportunity |
@@ -52,8 +52,8 @@ Both produce impressive-looking numbers. Only one produces ambassadors.
 
 Per **R-005**, and this is the whole output of the program:
 
-1. **What they have earned** - a rung, with the evidence behind it
-2. **What happens next** - the action from that rung, made specific to them
+1. **What they have earned** - a tier, with the evidence behind it
+2. **What happens next** - the action from that tier, made specific to them
 3. **Who needs to know** - the community manager, the program owner, whoever acts on it
 
 ## Where a human decides
@@ -67,7 +67,7 @@ having read it.
 Route to a human whenever:
 
 - evidence conflicts with itself
-- a rung would be assigned on thin or one-sided evidence
+- a tier would be assigned on thin or one-sided evidence
 - the recommendation depends on something the data does not actually show
 - **R-008** is in play
 
@@ -76,5 +76,5 @@ Route to a human whenever:
 Recommendations should be defensible to the person who did not get one.
 
 That means the reasoning is written down, the same rules were applied to everyone, and it is possible
-to check whether outcomes skew by region, org, level, or tenure. If a rung cannot be explained
+to check whether outcomes skew by region, org, level, or tenure. If a tier cannot be explained
 without pointing at evidence, it should not be assigned.

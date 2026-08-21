@@ -1,8 +1,8 @@
 # Program data
 
-Everything Contoso's AI Skilling Ambassador program has on its candidates: 72 volunteers across nine
-regions who run office hours, answer community questions, mentor, coach, and write the guides other
-people reuse. Nine files, ~2,000 rows.
+Everything the AI Skilling Ambassador program has on its candidates: 72 people across nine regions
+who run office hours, answer questions, mentor, coach, and write the guides other people reuse.
+Nine files, ~2,000 rows.
 
 | File | Rows | What it holds |
 | --- | --- | --- |
@@ -14,7 +14,7 @@ people reuse. Nine files, ~2,000 rows.
 | `RecognitionHistory.csv` | 128 | Who has been recognized before. **Not a shortcut** - see the playbook |
 | `AmbassadorApplications.csv` | 41 | Who put themselves forward. Some strong candidates never did |
 | `PolicyRules.csv` | 8 | The rules the program is meant to follow |
-| `RewardTiers.csv` | 5 | The ladder, and the action that goes with each rung |
+| `RewardTiers.csv` | 5 | The ladder, and the action that goes with each tier |
 
 ## The shape of it
 

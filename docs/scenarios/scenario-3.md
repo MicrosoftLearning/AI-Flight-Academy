@@ -10,11 +10,11 @@ This scenario is drafted and being tested. Details may change before the event.
 
 ## The problem
 
-Contoso runs an **AI Skilling Ambassador program**. Volunteers across nine regions help their colleagues actually use the AI tools the company rolled out: they run office hours, answer questions in the community, mentor one-on-one, coach peers through a first agent build, and write the quickstart guides and localization aids everyone else leans on.
+The **AI Skilling Ambassador program** is how a company gets its people actually using the AI tools it rolled out. Ambassadors across nine regions do it on top of their real jobs: they run office hours, answer questions, mentor one-on-one, coach peers through a first agent build, and write the quickstart guides and localization aids everyone else leans on.
 
-None of it is anyone's day job. Recognition is the only thing the program has to give back, and it decides who gets a facilitation slot, who gets nominated, and who quietly stops showing up.
+Recognition is the only thing the program has to give back, and it decides who gets a facilitation slot, who gets nominated, and who quietly stops showing up.
 
-Picking the next cycle happens in a spreadsheet. So it happens on whichever numbers are already collected: delivery, reliability, visible leadership. Those reward the people producing the most output.
+Those decisions get made in a spreadsheet, on whichever numbers are already collected: delivery, reliability, visible leadership. Those reward the people producing the most output.
 
 The program isn't looking for the most output. It's looking for the people who **make other people better** - whose sessions get repeated, whose templates get reused, whose name comes up when someone explains how they got unstuck. That signal is in the data. It just isn't in the column anybody's ranking on.
 
@@ -22,13 +22,13 @@ Both groups produce impressive numbers. Only one produces ambassadors.
 
 ## What you start with
 
-**A half-built program**, left behind by whoever ran the last cycle. It runs, and it's confidently wrong:
+**A half-built program**, left behind by whoever ran it last. It runs, and it's confidently wrong:
 
 - It scores on three columns (business impact, execution reliability, leadership signals) and ignores four more sitting in the same rows: peer support, knowledge sharing, community contribution, multiplier behavior.
 - Nine data files ship with it. It reads one.
 - Its own playbook has eight rules. Two of them aren't implemented at all.
 
-Run it and someone with excellent delivery numbers and thin community evidence lands near the top - their own watchout line says *"limited evidence of peer enablement or community lift."* The top rung ends up holding 16 of 72 people.
+Run it and someone with excellent delivery numbers and thin community evidence lands near the top - their own watchout line says *"limited evidence of peer enablement or community lift."* The top tier ends up holding 16 of 72 people.
 
 The eight ignored files and the playbook rules are enough to fix it. Which evidence counts, and how much, is your call.
 
@@ -60,7 +60,7 @@ The point of shipping it is speed: you skip building a pipeline and spend the se
 | `RecognitionHistory.csv` | 128 | Who's been recognized before - deliberately not a shortcut |
 | `AmbassadorApplications.csv` | 41 | Who put their hand up, which isn't the same as who's ready |
 | `PolicyRules.csv` | 8 | R-001 to R-008 |
-| `RewardTiers.csv` | 5 | The ladder and the action at each rung |
+| `RewardTiers.csv` | 5 | The ladder and the action at each tier |
 
 Two of the eight rules are the ones to look at first - **R-004** (prior recognition isn't a reason to recognize again) and **R-006** (repeated activity with weak quality doesn't outrank quieter high-multiplier work). Neither is implemented. Either one changes the list.
 

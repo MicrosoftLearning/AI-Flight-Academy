@@ -7,7 +7,7 @@ ways you can see.
 run.py                  the entry point
 program/
   data.py               loads every CSV, attaches evidence to candidates
-  evaluate.py           decides the rung. This is the half that was built
+  evaluate.py           decides the tier. This is the half that was built
 program-data/           72 candidates, ~2,000 evidence records
 PLAYBOOK.md             the program's rules and ladder
 ```
@@ -25,7 +25,7 @@ No dependencies. Standard library only.
 
 ## What it does
 
-Reads `CandidateProfiles.csv`, scores on three columns, assigns a rung from the ladder,
+Reads `CandidateProfiles.csv`, scores on three columns, assigns a tier from the ladder,
 proposes a next action. Everything it prints is a proposal - nothing is sent and no
 decision is recorded.
 

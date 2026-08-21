@@ -14,10 +14,10 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 <div class="brief">
   <span class="brief-badge">The handoff</span>
-  <p class="brief-lead">Contoso's AI Skilling Ambassador program has to pick its next cycle, and the person who ran it left halfway through.</p>
-  <p>It's volunteer work. 72 people across nine regions run office hours, answer questions in the community, mentor one-on-one, and write the quickstart guides everyone else leans on. Recognition is the only thing the program has to give back, so who gets named matters.</p>
-  <p>The plumbing they left is fine: <code>data.py</code> loads all nine data files and attaches every activity, comment and contribution to the right candidate. <code>evaluate.py</code> is the problem. It scores three delivery columns, ignores the rest, and ranks with total confidence.</p>
-  <p>The evidence for what an ambassador actually does - whose guide got reused, who unblocked somebody, whose name a peer brings up - is loaded and sitting right there, unscored.</p>
+  <p class="brief-lead">The AI Skilling Ambassador program has to decide who gets recognized, who gets invited in, and who's ready for more. The person who ran it left halfway through.</p>
+  <p>72 people across nine regions do it on top of their real jobs: office hours, answering questions, mentoring one-on-one, and writing the quickstart guides everyone else leans on. Recognition is the only thing the program has to give back, so who gets named matters.</p>
+  <p>The plumbing they left is fine: <code>data.py</code> loads all nine data files and attaches every activity, comment and contribution to the right candidate. <code>evaluate.py</code> is the problem. It scores three delivery columns, ignores the rest, then sorts all 72 people into five tiers from Explorer up to Flight Lead.</p>
+  <p><code>evaluate.py</code> reads one of those nine files. The other eight hold what an ambassador actually does: whose guide got reused, who unblocked somebody, whose name a peer brings up. <code>data.py</code> already loaded every one of them.</p>
   <p class="brief-ask">Replace <code>evaluate.py</code>, then build a command, a scheduled job or a generated report that runs the result without a chat window.</p>
   <ul class="brief-stats">
     <li><strong>9</strong> data files loaded, <strong>1</strong> scored</li>
@@ -75,7 +75,7 @@ ambassador-starter/
   run.py                  the entry point
   program/
     data.py               loads every CSV, attaches evidence to candidates
-    evaluate.py           decides the rung. This is the half that was built
+    evaluate.py           decides the tier. This is the half that was built
   program-data/           72 candidates, ~2,000 evidence records
   PLAYBOOK.md             the program's rules and ladder
 ```
@@ -84,8 +84,8 @@ You get a shortlist, and a note at the bottom telling you what the run ignored. 
 
 | Look at | What you'll find |
 | --- | --- |
-| **Who's second** | Someone whose delivery numbers are excellent and whose community evidence is thin. `--who` shows both |
-| **The top rung** | 16 of 72 people on it. A top rung holding 22% of the field isn't a top rung |
+| **Who's second** | Someone whose delivery numbers are excellent and whose evidence of enabling anyone else is thin. `--who` shows both |
+| **The top tier** | 16 of 72 people on it. A top tier holding 22% of the field isn't a top tier |
 
 Look one person up in full:
 
@@ -135,10 +135,10 @@ Seven starting points. Take one, combine two, or name something the program is m
 | | What it is | Where to start |
 | --- | --- | --- |
 | 🖥️ **A board** · easiest | Generate a local HTML page: who's ready, who needs a decision, what changed since last run | Write alongside `run.py`, output a single self-contained file you open in a browser |
-| 🔍 **Recruitment** | Find the emerging people the ranking buries, and draft an invitation for each | Rank on peer and community evidence, filter to low overall rank, template the output |
-| ⏰ **A scheduled scan** | Runs on a timer and reports the *diff* - who moved rung, who's newly ready | Persist each run, compare against the last one. This needs somewhere to write state |
-| 🧭 **Manager's view** | One file per manager: their people, each rung, one next action each | Group by the org field, generate per group |
-| ⚖️ **Fairness audit** | Whether outcomes skew by region, org, level or tenure - and which rungs can't be explained | A second pass over the results, not a change to scoring |
+| 🔍 **Recruitment** | Find the emerging people the ranking buries, and draft an invitation for each | Rank on peer and enablement evidence, filter to low overall rank, template the output |
+| ⏰ **A scheduled scan** | Runs on a timer and reports the *diff* - who moved tier, who's newly ready | Persist each run, compare against the last one. This needs somewhere to write state |
+| 🧭 **Manager's view** | One file per manager: their people, each tier, one next action each | Group by the org field, generate per group |
+| ⚖️ **Fairness audit** | Whether outcomes skew by region, org, level or tenure - and which tiers can't be explained | A second pass over the results, not a change to scoring |
 | 🎖️ **Their own view** | What a candidate would see about themselves, generated per person | Hardest test of your reasoning - if it can't be shown to them, it isn't defensible |
 | 🎯 **Yours** | Whatever your table thinks this program is missing | Smallest version that runs first |
 

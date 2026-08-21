@@ -22,7 +22,7 @@ from program.evaluate import WEIGHTS, evaluate_all  # noqa: E402
 
 
 def show(rec, verbose: bool = False) -> None:
-    print(f"  {rec.score:5.1f}  {rec.rung:12}  {rec.name}")
+    print(f"  {rec.score:5.1f}  {rec.tier:12}  {rec.name}")
     print(f"         -> {rec.next_action}")
     if verbose:
         print(f"         evidence: {', '.join(rec.evidence)}")

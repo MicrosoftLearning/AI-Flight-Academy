@@ -1,7 +1,7 @@
 ---
 name: ambassador
 description: |
-  Runs the Ambassador program. Reads candidate data and recommends who has earned recognition, what rung of the ladder they are on, what should happen next, and who needs to know. Use when the user says "run the ambassador program", "who should we recognize", "rank the candidates", "what tier is <name>", "who needs a next action", or asks about ambassador recognition, community champions, or the recognition ladder. Do NOT use for performance review, compensation, or anything about real employees.
+  Runs the Ambassador program. Reads candidate data and recommends who has earned recognition, what tier of the ladder they are on, what should happen next, and who needs to know. Use when the user says "run the ambassador program", "who should we recognize", "rank the candidates", "what tier is <name>", "who needs a next action", or asks about ambassador recognition, community champions, or the recognition ladder. Do NOT use for performance review, compensation, or anything about real employees.
 cowork:
   category: productivity
   icon: PeopleTeam
@@ -9,14 +9,14 @@ cowork:
 
 # Ambassador
 
-Contoso's AI Skilling Ambassador program, as far as it has been built.
+The AI Skilling Ambassador program, as far as it has been built.
 
 **Read `references/PLAYBOOK.md` before answering anything.** It holds the ladder, the rules, and
 what a recommendation has to contain. It is the authority - this file only says how to run.
 
 ## What this currently does
 
-One thing. It reads `CandidateProfiles.csv`, sorts on the summary scores, and assigns a rung.
+One thing. It reads `CandidateProfiles.csv`, sorts on the summary scores, and assigns a tier.
 
 That is the whole implementation.
 
@@ -26,8 +26,8 @@ That is the whole implementation.
 2. Read `CandidateProfiles.csv` from the data the user has attached or pointed you at. If you cannot
    find it, say so and ask for it rather than guessing.
 3. For each candidate, take the summary scores and produce:
-   - a **rung** from the ladder
-   - a **next action**, from that rung
+   - a **tier** from the ladder
+   - a **next action**, from that tier
    - the **evidence** you used
    - **who needs to know**
 4. Lead with the strongest recommendations. Say how many candidates you assessed.
