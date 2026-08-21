@@ -63,10 +63,10 @@ Use the building blocks for your altitude.
   4. [Run it on a schedule](/bricks/scout-autonomy)
 
 - **🟣 Code:**
-  1. [Set up Scout / GitHub Copilot](/bricks/advanced-setup)
-  2. [Build an MCP connector](/bricks/advanced-mcp-connector)
-  3. [Use Work IQ](/bricks/advanced-work-iq)
-  4. [Add a guardrail](/bricks/advanced-guardrail)
+  1. [Set up VS Code + GitHub Copilot](/bricks/code-setup)
+  2. [Build an MCP connector](/bricks/code-mcp-connector)
+  3. [Use Work IQ](/bricks/code-work-iq)
+  4. [Add a guardrail](/bricks/code-guardrail)
 
 ::: info Team model
 In Cowork, everyone builds their own twin and the table converges on shape – compare rules, steal good tiebreakers.

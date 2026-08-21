@@ -1,11 +1,19 @@
 ---
-title: Scoring & Judging
+title: How you're judged
 ---
 
-# Scoring & Judging
+# How you're judged 🚧
 
-::: info Not in play for this event
-There's no rubric, no points, and no leaderboard for Scenario 1.
-
-The check is simpler: a participant names a real unresolved thread, the twin retrieves it and drafts a reply, and someone who knows them reads it. If it sounds like them, the twin works. If it doesn't, the gap is a missing rule – which is the learning signal, not a score.
+::: warning Still being finalized
+How projects are judged isn't locked yet. Check back closer to the event – this page will lay out exactly what we're looking for.
 :::
+
+## What we care about
+
+This isn't about polish or points. The goal is a working agent you understand well enough to keep using. Broadly, a strong result:
+
+- **Works** – it runs on a fresh prompt and produces something useful for the scenario.
+- **You can explain it** – you know which rule, sample, or boundary drives its behavior.
+- **Shows the change** – a before, a fix, and an after.
+
+Exact criteria and any scoring will land here before hack day.

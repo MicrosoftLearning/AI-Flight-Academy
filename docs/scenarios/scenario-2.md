@@ -75,10 +75,10 @@ Use the building blocks for your altitude.
   4. Make it a one-command app or a scheduled task
 
 - **🟣 Code:**
-  1. [Advanced setup](/bricks/advanced-setup)
-  2. [Use Work IQ](/bricks/advanced-work-iq)
-  3. [Add a guardrail](/bricks/advanced-guardrail)
-  4. [Build an MCP connector](/bricks/advanced-mcp-connector)
+  1. [Set up VS Code + GitHub Copilot](/bricks/code-setup)
+  2. [Use Work IQ](/bricks/code-work-iq)
+  3. [Add a guardrail](/bricks/code-guardrail)
+  4. [Build an MCP connector](/bricks/code-mcp-connector)
 
 ::: info Team model
 In Cowork and Scout, each person adds a different audience, then the team combines them into one council and compares the results.
