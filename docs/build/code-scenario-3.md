@@ -12,19 +12,19 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 **You'll build this in code – VS Code, GitHub Copilot, and Python.**
 
-Imagine you've just inherited someone else's half-finished work.
-
-The plumbing is done: `data.py` loads all nine data files and attaches every activity, comment and contribution to the right candidate. The judgment isn't. `evaluate.py` scores people on three columns, ignores the rest, and ranks with total confidence.
-
-It's about ninety lines. It's meant to be replaced.
-
-## What you're solving
-
-This program exists to find the people who make everyone around them better — whose work gets reused, who unblocked somebody, whose name comes up when a peer explains how they got there. All three leave a trail in the data.
-
-The version you've inherited ranks on `BusinessImpact`, `ExecutionReliability` and `LeadershipSignals`. Those are the numbers that were already being reported, so those are the numbers it uses. Sitting in the same rows, unread: peer support, knowledge sharing, community contribution, multiplier behavior. Sitting in the same folder, loaded but never scored: 866 activities, 283 peer comments, 390 contributions, 275 credentials, 128 recognition events, 41 applications.
-
-**The challenge is to replace the judgment, and to build something that runs without you.**
+<div class="brief">
+  <span class="brief-badge">The handoff</span>
+  <p class="brief-lead">You've inherited someone's half-finished ambassador program.</p>
+  <p>The plumbing is done: <code>data.py</code> loads all nine data files and attaches every activity, comment and contribution to the right candidate. The judgment isn't. <code>evaluate.py</code> scores people on three delivery columns, ignores the rest, and ranks with total confidence.</p>
+  <p>But the program exists to find the people who make everyone around them better — whose work gets reused, who unblocked somebody, whose name comes up when a peer explains how they got there. That evidence is loaded and sitting right there, unscored.</p>
+  <p class="brief-ask">Replace the judgment, then build something that runs without you.</p>
+  <ul class="brief-stats">
+    <li><strong>9</strong> data files loaded, <strong>1</strong> scored</li>
+    <li><strong>4</strong> scored columns ignored</li>
+    <li><strong>2</strong> playbook rules unimplemented</li>
+    <li><code>evaluate.py</code> is <strong>~90</strong> lines</li>
+  </ul>
+</div>
 
 ## How this runs
 

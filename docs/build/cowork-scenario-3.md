@@ -12,19 +12,18 @@ Scenario 3 is still being built and tested. Steps, downloads, and screenshots ma
 
 **You'll build this in Cowork. No code, and no experience needed.**
 
-Imagine you've just inherited someone else's half-finished work.
-
-The ambassador program runs on the first try and sounds completely sure of itself — 72 candidates ranked, each one handed a rung and a next action. Then you read the top of the list and something's off. The people it's most confident about aren't obviously the right people.
-
-Nine data files shipped with it. It opens one.
-
-## What you're solving
-
-This program exists to find the people who make everyone around them better — whose work gets reused, who unblocked somebody, whose name comes up when a peer explains how they got there. All three leave a trail in the data.
-
-The version you've inherited scores people on three numbers — business impact, execution reliability, leadership signals — and ranks on the total. Those are the numbers that were already being reported, so those are the numbers it uses. Sitting in the same rows, unread: peer support, knowledge sharing, community contribution, multiplier behavior. Sitting in the same folder, unread: 866 activities, 283 peer comments, 390 contributions, 275 credentials, 128 recognition events, 41 applications.
-
-**The challenge is to make it find the right people, and to be able to show why.** How you do that is yours.
+<div class="brief">
+  <span class="brief-badge">The handoff</span>
+  <p class="brief-lead">You've inherited someone's half-finished ambassador program.</p>
+  <p>It runs, ranks all 72 candidates, and sounds completely sure of itself — every one of them handed a rung and a next action. It's scoring them on delivery: business impact, execution reliability, leadership signals.</p>
+  <p>But the program exists to find the people who make everyone around them better — whose work gets reused, who unblocked somebody, whose name comes up when a peer explains how they got there. That evidence all shipped with it. None of it gets read.</p>
+  <p class="brief-ask">Make it find the right people, and be able to show why. How you do that is yours.</p>
+  <ul class="brief-stats">
+    <li><strong>9</strong> data files, <strong>1</strong> read</li>
+    <li><strong>4</strong> scored columns ignored</li>
+    <li><strong>2</strong> playbook rules unimplemented</li>
+  </ul>
+</div>
 
 ## What you'll walk out with
 

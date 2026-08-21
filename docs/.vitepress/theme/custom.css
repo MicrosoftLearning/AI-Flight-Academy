@@ -189,6 +189,92 @@ html:not(.dark) .dark-only {
   color: var(--vp-c-text-1);
 }
 
+/* The brief – what you inherited and what you're being asked to do, in one
+   block at the top of a build page. Replaces a run of intro paragraphs. */
+.brief {
+  position: relative;
+  margin: 2rem 0 2.5rem;
+  padding: 1.9rem 2rem 1.6rem;
+  border-radius: 18px;
+  border: 1px solid var(--vp-c-brand-1);
+  background: linear-gradient(
+    135deg,
+    var(--vp-c-brand-soft),
+    var(--vp-c-bg-soft)
+  );
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+}
+
+.brief .brief-badge {
+  position: absolute;
+  top: -0.72rem;
+  left: 1.6rem;
+  padding: 0.15rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--vp-c-brand-1);
+  background: var(--vp-c-bg);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--vp-c-brand-1);
+  line-height: 1.55;
+}
+
+.brief p {
+  margin: 0 0 0.85rem;
+  line-height: 1.65;
+  color: var(--vp-c-text-1);
+}
+
+.brief .brief-lead {
+  margin-bottom: 0.9rem;
+  font-size: 1.28rem;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+.brief .brief-ask {
+  margin: 1.15rem 0 0;
+  padding-top: 1rem;
+  border-top: 1px solid var(--vp-c-divider);
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.brief .brief-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1.1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.brief .brief-stats li {
+  margin: 0;
+  padding: 0.28rem 0.7rem;
+  border-radius: 999px;
+  border: 1px solid var(--vp-c-divider);
+  background: var(--vp-c-bg);
+  font-size: 0.82rem;
+  color: var(--vp-c-text-2);
+}
+
+.brief .brief-stats strong {
+  color: var(--vp-c-brand-1);
+}
+
+@media (max-width: 640px) {
+  .brief {
+    padding: 1.7rem 1.3rem 1.4rem;
+  }
+
+  .brief .brief-lead {
+    font-size: 1.15rem;
+  }
+}
+
 /* Lab bubbles */
 .lab-grid {
   display: grid;
