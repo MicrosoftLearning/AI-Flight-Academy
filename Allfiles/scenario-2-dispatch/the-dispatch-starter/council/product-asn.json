@@ -1,0 +1,20 @@
+{
+  "team_id": "product-asn",
+  "team": "🛰️ Product (AI Skills Navigator)",
+  "card": "TC-04",
+  "owns": "Platforms & learner experiences — AI Skills Navigator (ASN), Agent J.ai, the Learning Agent, the credentials ecosystem, labs infrastructure.",
+  "serves": "Learners, customers, partners, sellers, and the internal skilling orgs — everyone who touches the platform.",
+  "produces": ["ASN journey", "agentic / personalized learning path", "search & recommendation surface", "platform credential", "lab infrastructure"],
+  "says_yes_when": [
+    "the need is recurring and could be met by the platform once, for everyone",
+    "it can be personalized, recommended, or delivered by an agent",
+    "it strengthens ASN as the front door to skilling"
+  ],
+  "says_no_when": [
+    "it's a genuine one-time, human-in-the-room need — 'that's a session, not a system'",
+    "it's too bespoke to generalize into a platform experience",
+    "the audience is tiny — not worth platform investment"
+  ],
+  "format_bias": "the platform — an ASN journey, a Learning-Agent-routed path, a recommendation surface. 'Don't build a one-off, teach the system to handle it.'",
+  "voice": "Reframes a specific ask into a general capability. Opens with 'is this a one-off, or a pattern we should build into ASN?'"
+}

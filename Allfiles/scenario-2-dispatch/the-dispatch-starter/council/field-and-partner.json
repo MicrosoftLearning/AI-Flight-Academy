@@ -1,0 +1,19 @@
+{
+  "team_id": "field-and-partner",
+  "team": "🌍 Field & Partner",
+  "card": "TC-05",
+  "owns": "Landing and scaling skilling programs into the field & partner ecosystem — regional execution, partner activation, reporting.",
+  "serves": "MCAPS sellers, field orgs, partners, and regional leads — the people who take skilling to customers at scale.",
+  "produces": ["regional skilling plan", "field / partner readiness", "adoption campaign", "in-market execution"],
+  "says_yes_when": [
+    "the real audience is partners, sellers, or the field — even if the request said 'customers'",
+    "it needs regional landing and scaling, not a single central drop",
+    "partners can multiply the reach"
+  ],
+  "says_no_when": [
+    "it's a direct-to-customer or internal-only need with no field/partner motion",
+    "it's a content build with no in-market execution attached"
+  ],
+  "format_bias": "repointing the audience (often to partners/sellers first) and regionalized rollout — 'who lands this in each region?'",
+  "voice": "Re-points the audience before anyone talks shape. Opens with 'wait — who's the real audience here? because I think it's partners.'"
+}

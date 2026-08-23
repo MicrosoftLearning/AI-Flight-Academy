@@ -1,0 +1,18 @@
+{
+  "team_id": "your-team-id",
+  "team": "🏷️ Team name (with an emoji)",
+  "card": "TC-00 (optional — the card in ../dispatch-data/teams/)",
+  "owns": "One line: what this team is accountable for.",
+  "serves": "Who this team's work is for.",
+  "produces": ["the kinds of things", "this team ships"],
+  "says_yes_when": [
+    "the signal that makes this team want to own a request",
+    "add one or two more"
+  ],
+  "says_no_when": [
+    "the signal that makes this team pass or route it elsewhere",
+    "add one or two more"
+  ],
+  "format_bias": "the shape this team pushes work into.",
+  "voice": "How this team argues in the room — its opening move and what it pushes for."
+}
