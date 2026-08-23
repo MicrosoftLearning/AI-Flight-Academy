@@ -16,4 +16,4 @@ Before the room can route a request, the request has to *say enough*. These are 
 - **All four required fields present** → the request is **routable**; the room can land a decision.
 - **Any required field missing or a placeholder** → **not routable yet**; the room's job is to *sharpen* it first. A legitimate outcome is **defer** or **decline-and-redirect** ("go back to the requester for the missing piece").
 
-> This is the honest gate: a room that confidently routes an under-specified request is guessing. Catching that is the point — the same way the Greenlight council catches a confident verdict with no evidence behind it.
+> This is the honest gate: a room that confidently routes an under-specified request is guessing. Catching that is the point: a confident route with nothing behind it is exactly the miss this gate exists to stop.

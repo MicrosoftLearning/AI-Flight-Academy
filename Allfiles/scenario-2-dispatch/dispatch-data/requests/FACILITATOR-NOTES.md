@@ -46,4 +46,4 @@
 ---
 
 ## The two ideas — expected behavior
-- **IDEA-01 / IDEA-02:** the completeness check should flag missing fields (outcome/deadline/defined topic). The room's job is to **sharpen** — pin audience and outcome — and a legitimate disposition is **defer** or **decline-and-redirect** ("go back to the requester for X"). If a room confidently "routes" a rough idea without sharpening it, that's the miss to catch — same spirit as Greenlight catching a confident opinion with nothing behind it.
+- **IDEA-01 / IDEA-02:** the completeness check should flag missing fields (outcome/deadline/defined topic). The room's job is to **sharpen** — pin audience and outcome — and a legitimate disposition is **defer** or **decline-and-redirect** ("go back to the requester for X"). If a room confidently "routes" a rough idea without sharpening it, that's the miss to catch — a confident answer with nothing behind it.

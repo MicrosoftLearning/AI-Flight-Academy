@@ -36,4 +36,4 @@ A Dispatch decision has exactly five parts. These rules keep a decision honest a
 8. **Coverage.** Every audience the decision names is served by at least one deliverable in the plan.
 9. **Reuse is explicit.** If two teams need the same thing, the plan says *build once, reused by* — never the same deliverable built twice.
 
-> These are guardrails on the *form* of a good routing decision — the deterministic backbone under the council's judgment. The room decides *what*; these rules make sure the decision is complete, owned, and honest.
+> These are guardrails on the *form* of a good routing decision — the deterministic backbone under the room's judgment. The room decides *what*; these rules make sure the decision is complete, owned, and honest.

@@ -30,7 +30,7 @@ You pick your altitude, pick a scenario, and demo what you made. Coaches are in 
 
 Done means you can run your agent on a fresh prompt and get useful output that reflects the scenario.
 
-What the artifact *is* depends on where you landed – a portable persona spec, a review council that greenlights work, an app grounded in real data. The shape differs; the bar is the same: it runs, it's specific, and you can point to the rule behind its behavior.
+What the artifact *is* depends on where you landed – a portable persona spec, a room of teams that routes a request into a plan, an app grounded in real data. The shape differs; the bar is the same: it runs, it's specific, and you can point to the rule behind its behavior.
 
 ## What you'll walk out with
 

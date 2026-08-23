@@ -21,6 +21,6 @@ Drop one of these in front of your seated room and let each team take a position
 
 ## Start here
 
-New to the room? Run **RQ-01** first — it splits the council cleanly across format, audience, and ownership. Then try a rough **IDEA-…** to see the room sharpen a request before it can route it.
+New to the room? Run **RQ-01** first — it splits the room cleanly across format, audience, and ownership. Then try a rough **IDEA-…** to see the room sharpen a request before it can route it.
 
 > Coaches: `FACILITATOR-NOTES.md` has the expected split for each request. Don't hand it to participants — the discovery *is* the exercise.

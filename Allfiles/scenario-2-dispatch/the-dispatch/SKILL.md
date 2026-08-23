@@ -1,6 +1,6 @@
 ---
 name: "the-dispatch"
-description: "Routes an incoming skilling request through a room of teams instead of one triager. Seats a small council of Global Skilling teams, has each take a position on the same request, backs every position with the team's own reasons, and turns those into one routing decision — who fields it, who it's really for, and the plan of deliverables built once and reused across teams. Use when the user says the dispatch, dispatch this, route this request, seat the room, where should this go, who should own this, route a skilling request, triage an intake, decide what to do with a request, or asks what to do next in the Dispatch hack."
+description: "Routes an incoming skilling request through a room of teams instead of one triager. Seats a small room of Global Skilling teams, has each take a position on the same request, backs every position with the team's own reasons, and turns those into one routing decision — who fields it, who it's really for, and the plan of deliverables built once and reused across teams. Use when the user says the dispatch, dispatch this, route this request, seat the room, where should this go, who should own this, route a skilling request, triage an intake, decide what to do with a request, or asks what to do next in the Dispatch hack."
 ---
 
 # The Dispatch

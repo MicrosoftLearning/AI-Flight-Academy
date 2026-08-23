@@ -48,7 +48,7 @@ hero:
   <a class="lab-card" href="/AI-Flight-Academy/scenarios/">
     <span class="lab-card-emoji">🎯</span>
     <span class="lab-card-title">2 · Pick a scenario</span>
-    <span class="lab-card-desc">🚧 Scenario 1 is The Digital Twin, Scenario 2 is The Greenlight. Both still in progress.</span>
+    <span class="lab-card-desc">🚧 Scenario 1 is The Digital Twin, Scenario 2 is Dispatch. Both still in progress.</span>
     <span class="lab-card-cta">See scenarios →</span>
   </a>
   <a class="lab-card" href="/AI-Flight-Academy/#start-here">

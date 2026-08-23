@@ -1,4 +1,4 @@
-# The council — Global Skilling teams
+# The room — Global Skilling teams
 
 One card per team. Seat **3–5** of these in your room (`THE-ROOM.md`). Start with teams that want *different* things — if they'd all route a request the same way, the room can't disagree, and the disagreement is the whole point.
 

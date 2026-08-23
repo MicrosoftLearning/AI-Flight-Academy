@@ -1,4 +1,4 @@
-// The Dispatch — live routing council dashboard
+// The Dispatch — live routing board
 //
 // Serves a browser dashboard that:
 //  - reads council/*.json at request time and shows the seated Global Skilling teams

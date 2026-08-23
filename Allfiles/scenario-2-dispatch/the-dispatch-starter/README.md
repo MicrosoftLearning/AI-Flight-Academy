@@ -1,6 +1,6 @@
 # The Dispatch Starter – Code Track
 
-Build a **routing room** you can run: a council of Global Skilling teams that takes a skilling request, each team says what it would do with it, and the room lands one decision — who fields it, who it's really for, and the plan of deliverables (built once, reused across teams). A live board, an intake gate that catches an under-specified request before the room guesses, and a path that takes it further.
+Build a **routing room** you can run: a room of Global Skilling teams that takes a skilling request, each team says what it would do with it, and the room lands one decision — who fields it, who it's really for, and the plan of deliverables (built once, reused across teams). A live board, an intake gate that catches an under-specified request before the room guesses, and a path that takes it further.
 
 This starter gives you the plumbing and a working board. You write the teams, the intake gate, and your path.
 

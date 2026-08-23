@@ -1,4 +1,4 @@
-# Dispatch — Live Routing Council Dashboard
+# Dispatch — Live Routing Board
 
 A live browser dashboard for the **Dispatch** room. It reads the seated teams from `council/*.json`, takes a dropped or pasted skilling request, runs the intake gate, and shells out to the GitHub Copilot CLI to have each team take a position — then shows the room's one routing decision.
 

@@ -2,13 +2,13 @@
 
 Everything the room needs to route a real skilling request.
 
-**Dispatch** seats a council of **real Global Skilling teams** — each with a different audience, output, and appetite — and drops an incoming **skilling request** in front of them. Each team says what it would do with the request; the room turns those positions into one **routing decision**: who fields it, who it's really for, the plan of deliverables (built once, reused across teams), and what happens next.
+**Dispatch** seats a **room of real Global Skilling teams** — each with a different audience, output, and appetite — and drops an incoming **skilling request** in front of them. Each team says what it would do with the request; the room turns those positions into one **routing decision**: who fields it, who it's really for, the plan of deliverables (built once, reused across teams), and what happens next.
 
 ## What's in here
 
 | Folder | What it is |
 |---|---|
-| `teams/` | The council — one card per Global Skilling team (needs, audience, output, appetite, and how they argue). Seat 3–5 of these. |
+| `teams/` | The room — one card per Global Skilling team (needs, audience, output, appetite, and how they argue). Seat 3–5 of these. |
 | `requests/` | Incoming skilling requests to route. Some are fully-formed briefs (`RQ-…`); two are deliberately-rough ideas (`IDEA-…`) the room has to sharpen first. |
 | `policy/` | The intake rules — the fields a request needs to be routable, and the routing rules the deterministic check enforces. |
 
