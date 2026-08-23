@@ -99,10 +99,10 @@ export const scenarios: Scenario[] = [
   },
   {
     id: "scenario-2",
-    emoji: "🚦",
+    emoji: "🎛️",
     label: "Scenario 2",
-    name: "The Greenlight",
-    sub: "An audience council that reviews any work asset",
+    name: "Dispatch",
+    sub: "A room of teams that routes a skilling request",
     status: "wip",
   },
   {

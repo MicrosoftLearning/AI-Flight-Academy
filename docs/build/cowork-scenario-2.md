@@ -1,33 +1,33 @@
 ---
-title: The Greenlight – Cowork
+title: Dispatch – Cowork
 ---
 
-# 🟢 The Greenlight
+# 🟢 Dispatch
 
 ::: warning 🚧 Work in progress
 Scenario 2 is still being built and tested. Steps, downloads, and screenshots may change before the event.
 :::
 **You'll build this in Cowork. No code, and no experience needed.**
 
-![In a dim screening room, a woman in a mustard cardigan sits alone beside four empty, unlit critic stations. Headline: "Start with a conversation."](/img/scenario-2-base-hero.png)
+![In a dim ops room, a woman in a mustard cardigan stands beside four empty, unstaffed dispatch desks. Headline: "Start with a conversation."](/img/scenario-2-dispatch-cowork-hero.png)
 
 ## What you're solving
 
-Copilot can write a clean, accurate **asset** — a doc, a deck, an email, a policy, a post, a plan. What it cannot know by itself is whether that asset actually works for the people who have to use it.
+Skilling requests come in all day — *"skill this audience on that topic by this date."* One person triaging the queue picks a team and sends it there. Clean, fast, and thin: it can't see that the **same request means different work to different teams**, or that one team's deliverable is another team's reuse.
 
-A long, formal write-up might be exactly what a compliance team needs and completely impractical for a busy store manager. One general-purpose review misses that difference. Today you build a way to judge the same asset from more than one audience's point of view.
+Today you build a way to route a request through a *room* of teams — so the answer isn't one owner, it's a plan.
 
 ## What you'll walk out with
 
-A reusable **council of audiences** that reviews any asset for the people it is meant to serve — and tells you what to fix, for whom.
+A reusable **room of teams** that routes any skilling request — and turns it into a decision you can act on.
 
 | What you make | What it does |
 | --- | --- |
-| **Your council** | Names at least two audiences, what each needs, and what the asset must do for them. |
-| **A review** | Shows what each audience thinks, with a quote from the asset and the reason behind it. |
-| **A plan** | Turns any gaps into practical changes or a new format. |
+| **Your room** | Seats three teams, what each owns, and what makes it want a request or pass. |
+| **A dispatch** | Shows each team's position on the same request, grounded in its charter. |
+| **A decision** | Owner, audience, and a plan of deliverables that builds once and reuses across teams. |
 
-The council lives in `THE-COUNCIL.md`. You can edit it, reuse it on new assets, and add real audiences later.
+The room lives in `THE-ROOM.md`. You can edit it, reuse it on new requests, and seat real teams later.
 
 ## How this runs
 
@@ -35,11 +35,11 @@ Three steps. The first is quick; the rest is the build.
 
 | | Step | You're done when |
 | --- | --- | --- |
-| **1** | **See why one review isn't enough** | Greenlight is running on your assets and you've seen the solo critic's single flat verdict — your "before." |
-| **2** | **Seat a council that disagrees** | Two audiences return *different*, quote-backed verdicts on the same asset. |
-| **3** | **Close the loop** | An audience that rejected the asset would accept your rebuilt version — and you've turned the result into the next real step. |
+| **1** | **See why one triager isn't enough** | Dispatch is running on the requests and you've seen the single triager's one-owner take — your "before." |
+| **2** | **Seat a room that splits** | Three teams return *different* positions on the same request — and split on the plan. |
+| **3** | **Land the decision** | You've turned the positions into one routing decision — owner, audience, and a build-once/reuse plan — and named the next step. |
 
-**Step 1 you do on your own. Step 2 you do as a table** — each person seats one audience, then you combine them into one council. **Step 3** is where the rest of the time goes.
+**Step 1 you do on your own. Step 2 you do as a table** — each person seats one team, then you combine them into one room. **Step 3** is where the rest of the time goes.
 
 Every step gives you a line you can paste. **Change it — it's a starting point, not the answer.**
 
@@ -52,137 +52,137 @@ Cowork is the thing you're building with **and** the thing that helps you build 
 Grab these now – you'll need them in the first few minutes.
 
 <div class="lab-grid lab-grid-2">
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-greenlight.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-dispatch.zip" download>
 		<span class="lab-card-emoji">🟢</span>
-		<span class="lab-card-title">Greenlight</span>
-		<span class="lab-card-desc">The Cowork skill that guides the review and creates the council file.</span>
+		<span class="lab-card-title">Dispatch</span>
+		<span class="lab-card-desc">The Cowork skill that runs the room and creates the room file.</span>
 		<span class="lab-card-cta">Download .zip →</span>
 	</a>
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/greenlight-data-pack.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy/downloads/dispatch-data-pack.zip" download>
 		<span class="lab-card-emoji">🗂️</span>
-		<span class="lab-card-title">Content pack</span>
-		<span class="lab-card-desc">Five articles, four audience profiles, and a style guide. Use it instead of real work data.</span>
+		<span class="lab-card-title">Data pack</span>
+		<span class="lab-card-desc">Sample requests, the Global Skilling team cards, and the routing policy. Use it instead of real work data.</span>
 		<span class="lab-card-cta">Download .zip →</span>
 	</a>
 </div>
 
 ::: tip Want a step spelled out?
-The **[Guides](/bricks/)** in the top nav cover the general skills used here – setting up, connecting to your work, and running things on a schedule. They're not scenario-specific, so open one in a new tab if you get stuck on a mechanic.
+The **[Guides](/bricks/)** in the top nav cover the general skills used here – installing a skill, grounding on your work, and running things on a schedule. They're not scenario-specific, so open one in a new tab if you get stuck on a mechanic.
 :::
 
 ---
 
-## 1 · See why one review isn't enough
+## 1 · See why one triager isn't enough
 
-**Done when:** Greenlight is running on your assets and you've seen the solo critic's single flat verdict — your "before."
+**Done when:** Dispatch is running on the requests and you've seen the single triager's one-owner take — your "before."
 
-Install the skill, load the data pack, and meet the reviewer you're about to replace.
+Install the skill, load the data pack, and meet the triager you're about to out-think.
 
-1. In Cowork, open **Customize** → **Skills** → the arrow next to **Add** → **Upload skill**, and drag in the whole `the-greenlight.zip`.
-2. Start a **new** Cowork session (skills only load at the start), drag in the `data-pack` zip, and say:
+1. In Cowork, open **Customize** → **Skills** → the arrow next to **Add** → **Upload skill**, and drag in the whole `the-dispatch.zip`.
+2. Start a **new** Cowork session (skills only load at the start), drag in the `dispatch-data` zip, and say:
 
 ```text
-Introduce yourself, then show me the solo critic's review of the data pack.
+Introduce yourself, then show me the single triager's take on the sample requests.
 ```
 
-The **solo critic** is one general-purpose reviewer that judges every asset as if it has a single typical reader. It's your baseline — and it stays frozen so you can measure against it.
+The **single triager** is one person working the queue: one owner per request, no plan. It's your baseline — and it stays frozen so you can measure against it.
 
-| Asset | Solo critic |
+| Request | Single triager sends it to |
 |---|---|
-| Training unit (P1) | Ready to use |
-| How-to (P2) | Needs work |
-| Blog post (P3) | Needs work |
-| **Executive summary (P4)** | **Needs work** |
-| Quickstart (P5) | Ready to use |
+| Governance before GA (RQ-01) | Content & Insights |
+| Partners misconfigure DLP (RQ-02) | "the training team" |
+| All employees, agentic AI (RQ-03) | Content & Insights |
+| Copilot Studio cert (RQ-05) | Credentials |
+| Field agent-deploy lab (RQ-07) | "the labs team" |
 
-Look at **P4** — a careful, formal summary. The solo critic sees clean writing and says "needs work." It can't tell you *who* it's for. That gap is what your council fills.
+Look at **RQ-01** — one owner, and it stops there. The triager can't see that the governance path should be built *once* by Content & Insights and reused live by Delivery and regionally by Field & Partner — or that partners are the real first audience. That gap is what your room fills.
 
 ::: warning Two things that trip people up
-Upload the whole `the-greenlight.zip`, not just `SKILL.md` — the zip carries the references and `THE-COUNCIL.md` the skill needs. And **don't edit the solo critic**; it's the fixed "before" you measure against.
+Upload the whole `the-dispatch.zip`, not just `SKILL.md` — the zip carries the references and `THE-ROOM.md` the skill needs. And **don't edit the single triager**; it's the fixed "before" you measure against.
 :::
 
-![The same woman gestures as four critics take their seats and their green verdict lamps light up. Headline: "Seat the council by talking."](/img/scenario-2-base-seating.png)
+![The woman gestures as team-dispatchers take their desks and light their status lamps. Headline: "Seat the room by talking."](/img/scenario-2-dispatch-cowork-seating.png)
 
-## 2 · Seat a council that disagrees
+## 2 · Seat a room that splits
 
-**Done when:** two audiences return *different* verdicts on the same asset.
+**Done when:** three teams return *different* positions on the same request — and split on the plan.
 
-A **seat** is one audience — who they are, the outcome they need, and the specific bars the asset has to clear *for them*. The goal isn't to list audiences; it's to seat ones that **disagree**.
+A **seat** is one team — what it owns, who it serves, and what makes it want a request or pass it on. The goal isn't to list teams; it's to seat ones that **disagree about the plan**.
 
-As a table, each person seats one audience — start with **Retail** and **Compliance**, the sharpest pair — then combine them into one `THE-COUNCIL.md`. Ask Greenlight:
+As a table, each person seats one team — start with **Content & Insights**, **Delivery & Program Operations**, and **Field & Partner**, the sharpest trio — then combine them into one `THE-ROOM.md`. Ask Dispatch:
 
 ```text
-Seat the Retail and Compliance audiences from the pack, then convene the council on the executive summary (P4).
+Seat Content & Insights, Delivery & Program Operations, and Field & Partner from the pack, then dispatch RQ-01 (agent governance before GA).
 ```
 
-You should get a separate, evidence-backed verdict per seat — and they should split: the detail and sources Compliance wants are exactly what buries a Retail floor lead who needs one action.
+You should get a separate, charter-backed position per team — and they should split: C&I wants to build an evergreen path once; DPO wants it live before the GA date; Field & Partner says the real audience is partners, who deploy governance in-tenant.
 
-**Make each seat bite.** A criterion any reader would score the same is just "good writing" — the solo critic already covers that. Drop it or sharpen it:
+**Make each seat distinct.** A team that would route everything the same way as another is a duplicate — the room can't disagree. Give each a different instinct:
 
-| Too general | Specific to an audience |
+| Same as everyone | A distinct instinct |
 | --- | --- |
-| Is it clear? | Can a floor associate find the first action in two lines? |
-| Is it accurate? | Does each claim carry the source a compliance reviewer needs? |
+| "We'd take this." | "Don't build a one-off — build the system." (Product) |
+| "Send it to content." | "Who's the *real* audience? I think it's partners." (Field & Partner) |
 
-Every verdict needs a **quote**, a **source**, and a **confidence**. If a seat isn't sure, it says so instead of guessing.
+Every position is grounded in the team's card — what it owns, who it serves. If a team wouldn't want a request, it says "not mine" instead of reaching for it.
 
-::: tip Seat a real audience with Work IQ
-Ask Cowork to draft an audience card from your own work — *"build an audience card about me from Work IQ"* — then correct it. Treat it as a first draft, not the answer.
+::: tip Seat a real team with Work IQ
+Ask Cowork to draft a team's charter from your own work — *"draft the Content & Insights charter from what you can see"* — then correct it. Treat it as a first draft, not the answer.
 :::
 
 <div class="table-check">
-  <div class="table-check-icon">👥</div>
+  <div class="table-check-icon">📨</div>
   <div class="table-check-body">
     <span class="table-check-label">Table check</span>
-    <p>Bring proof, not contents: one asset, two audiences, opposite verdicts — and the quote behind each call.</p>
+    <p>Bring proof, not contents: one request, three teams, three different positions — and the plan they split on.</p>
   </div>
 </div>
 
-## 3 · Close the loop
+## 3 · Land the decision
 
-**Done when:** an audience that rejected the asset would accept your rebuilt version — and you've turned the result into the next real step.
+**Done when:** you've turned the positions into one routing decision — owner, audience, and a build-once/reuse plan — and named the next step.
 
-A verdict isn't the finish line. For an audience the asset fails, work the loop until it passes — then put it to work. You don't have to follow this word for word; let Greenlight guide you:
+The positions aren't the finish line — the decision is. Who *fields* it is often quick; the work is the plan. You don't have to follow this word for word; let Dispatch guide you:
 
-1. **Plan** — ask Greenlight what to make instead (a shorter guide, a checklist, a different format).
-2. **Check the plan** — have the council review the plan *before* anything is written.
-3. **Make it** — ask Cowork to draft it.
-4. **Review again** — bring it back until the audience that rejected the original would accept the replacement.
-5. **Put it to work** — once greenlit, have Cowork take the next real step: the email to the stakeholders who need to know, or the Teams message to the one person waiting on it.
+1. **Owner** — pick the one team that fields and coordinates it (often the team most "in").
+2. **Audience** — name who it's *really* for; a team may repoint it (Field & Partner: partners first).
+3. **The plan** — the deliverables, each with a builder and who reuses it. **Build once, reuse across teams** — don't have two teams build the same thing.
+4. **Disposition & next step** — proceed, reshape, split, defer, or decline-and-redirect; then one concrete next action with a team on it.
 
-That last step is the point: the review doesn't end in a verdict, it ends with an asset and a plan that moves the work forward. If your two audiences always agree, go back and make their needs more specific.
+Then try a **rough idea** (an `IDEA-…`): it's missing its audience or outcome, so the honest move is to **sharpen it first** — not route it. That's the point: a good room refuses to guess.
+
+If your three teams always land the same plan, go back and make their charters more distinct.
 
 ## Go further — make it run without you
 
-Once you trust the council, ask Cowork to run it on a schedule so reviews happen without you. Point it at wherever your assets actually arrive — a folder of drafts, or email attachments.
+Once you trust the room, ask Cowork to run it on new requests without you. Point it at wherever requests actually arrive — a folder, or email.
 
 The powerful version is a real trigger:
 
-> "On a schedule, run the Greenlight council on any new email attachment whose subject contains **[your keyword]**, and send me the review."
+> "On a schedule, run the Dispatch room on any new email whose subject contains **[your intake keyword]**, and send me the routing decision."
 
-Now an asset that lands in your inbox gets reviewed for every audience before you have even opened it — and you decide what to do with the result.
+Now a request that lands in your inbox gets a room's plan — owner, audience, and reuse — before you've even opened it.
 
 ---
 
-![The full council delivers green verdicts with no computer in sight as the woman looks on, satisfied. Headline: "No code. A real council."](/img/scenario-2-base-council.png)
+![The full room lands a plan with no computer in sight as the woman looks on, satisfied. Headline: "No code. A real room."](/img/scenario-2-dispatch-cowork-room.png)
 
 ## Stuck?
 
 | What you're seeing | What to do |
 | --- | --- |
-| Cowork ignores Greenlight | Start a **new** Cowork session – skills load at the start. |
-| Upload seemed to do nothing | Upload the whole `the-greenlight.zip`, not just `SKILL.md`. |
-| Cowork cannot see the assets | Attach the data-pack files to the session. |
-| Both audiences give the same answer | Make their needs more specific, then review again. |
-| A result has no evidence | Ask for the exact quote, source, and confidence. |
+| Cowork ignores Dispatch | Start a **new** Cowork session – skills load at the start. |
+| Upload seemed to do nothing | Upload the whole `the-dispatch.zip`, not just `SKILL.md`. |
+| Cowork cannot see the requests | Attach the data-pack files to the session. |
+| Every team gives the same position | Make their charters more distinct, then dispatch again. |
+| It confidently routed a rough idea | Ask it to check the request is routable first — sharpen, don't guess. |
 
 ::: details 🎬 Nobody nails it first try
-![Her too-vague description filled the four critic seats with generic robots while she facepalms. Headline: "Careful what you ask for."](/img/scenario-2-base-blooper.png)
+![Her too-vague team descriptions filled the desks with identical generic clerks who all route to the same place; she facepalms. Headline: "Careful what you ask for."](/img/scenario-2-dispatch-cowork-blooper.png)
 
-Feed the council a vague description and you get a row of generic bots instead of real audiences – that's not failure, it's feedback. Tell it what makes each audience different and run it again.
+Seat a room of look-alike teams and they all route the same way — that's not failure, it's feedback. Give each team a different instinct and run it again.
 :::
 
 ---
 
 [← Back to start](/) · [What this scenario is about](/scenarios/scenario-2)
-

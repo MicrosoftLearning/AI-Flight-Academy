@@ -10,10 +10,9 @@
   /* Dispatch-specific components. The topbar, buttons, dropzone, results-panel,
      spinner and run-log come from styles.css (the themed shell); everything
      below is new and uses adaptive neutral colors so it reads on any theme. */
-  .council-row { display: flex; flex-wrap: wrap; gap: .6rem; margin: 1rem 0; }
-  .team-chip { display: flex; flex-direction: column; gap: .15rem; padding: .6rem .8rem;
-    border: 1px solid rgba(128,128,128,.28); border-radius: 12px; background: rgba(128,128,128,.06);
-    min-width: 150px; max-width: 230px; }
+  #council-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: .7rem; margin: 1rem 0; }
+  #council-row .team-chip { display: flex; flex-direction: column; gap: .15rem; padding: .6rem .8rem;
+    border: 1px solid rgba(128,128,128,.28); border-radius: 12px; background: rgba(128,128,128,.06); min-width: 0; }
   .team-emoji { font-size: 1.3rem; line-height: 1; }
   .team-name { font-weight: 600; font-size: .9rem; }
   .team-bias { font-size: .72rem; opacity: .7; line-height: 1.3; }
