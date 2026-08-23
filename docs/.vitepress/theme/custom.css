@@ -728,3 +728,57 @@ a.bonus-card:hover {
   color: var(--vp-c-text-1);
 }
 
+/* Scenario "scene" banners: an ultra-wide, headline-free image with a short
+   caption flanking it. Alternate .scene / .scene--flip down a page so the
+   caption swaps sides. */
+.scene {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+  margin: 2.5rem 0;
+}
+
+.scene--flip {
+  flex-direction: row-reverse;
+}
+
+.scene > p {
+  margin: 0;
+}
+
+.scene > p:not(.scene-cap) {
+  flex: 1 1 66%;
+  min-width: 0;
+}
+
+.scene img {
+  display: block;
+  width: 100%;
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+}
+
+.scene .scene-cap {
+  flex: 1 1 34%;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--vp-c-text-1);
+}
+
+@media (max-width: 720px) {
+  .scene,
+  .scene--flip {
+    flex-direction: column;
+    gap: 0.9rem;
+  }
+  .scene > p:not(.scene-cap),
+  .scene .scene-cap {
+    flex: 1 1 auto;
+    width: 100%;
+  }
+  .scene .scene-cap {
+    font-size: 1.15rem;
+  }
+}
+

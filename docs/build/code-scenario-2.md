@@ -9,7 +9,13 @@ Scenario 2 is still being built and tested. Steps, downloads, and screenshots ma
 :::
 **You'll build this in code – VS Code, GitHub Copilot, and the Copilot CLI.**
 
-![An engineer at a modular patch bay behind glass runs purple cables from an intake hopper to five team dispatch desks below. Headline: "Get behind the board."](/img/scenario-2-dispatch-code-hero.png)
+<div class="scene">
+
+![An operations engineer in a headset stands at a wide airport ops console of glowing monitors; purple data-lines fan out across the dusk tarmac to a row of airliners parked at their gates.](/img/scenario-2-dispatch-code-hero.png)
+
+<p class="scene-cap">Get behind the board.</p>
+
+</div>
 
 You start from a working routing dashboard. You make it yours, prove the code catches an under-specified request the model might route anyway, then pick a path to take it further.
 
@@ -134,7 +140,13 @@ Save it in `council/` under a new name (reusing an existing name overwrites that
 
 **Done when:** your team lands a different position than another team on the same request.
 
-![The engineer patches purple cables into desks labelled Content, Delivery, Product, Field and MTTs beside an intake-gate switch. Headline: "Code the room."](/img/scenario-2-dispatch-code-wiring.png)
+<div class="scene scene--flip">
+
+![The engineer patches purple cables into desks labelled Content, Delivery, Product, Field and MTTs beside an intake-gate switch.](/img/scenario-2-dispatch-code-wiring.png)
+
+<p class="scene-cap">Code the room.</p>
+
+</div>
 
 ### 4 · Wire the intake gate
 
@@ -224,7 +236,13 @@ The board is one surface. An **MCP server** exposes the room as tools so your *o
 - **Implement `dispatch(request_path)`** – each team takes a position, then the room lands one decision. The tips point to the same Copilot-CLI pattern the board uses in `dashboard/server.js`.
 - **Wire it into Cowork or Scout** and dispatch a request from *another* agent.
 
-![The engineer leans back in command as the purple room runs and a routable/sharpen intake gate works. Headline: "Intake to decision – yours."](/img/scenario-2-dispatch-code-running.png)
+<div class="scene">
+
+![The engineer leans back in command as the purple room runs and a routable / sharpen intake gate works.](/img/scenario-2-dispatch-code-running.png)
+
+<p class="scene-cap">Intake to decision — yours.</p>
+
+</div>
 
 ## Stuck?
 
@@ -238,7 +256,13 @@ The board is one surface. An **MCP server** exposes the room as tools so your *o
 | Copilot asks too many approvals | Use `--allow-all-tools` only in your own exercise repo. |
 
 ::: details 🎬 Nobody nails it first try
-![Sparks fly, screens flash red errors, a dispatch desk glitches, and she winces holding a sparking cable. Headline: "It compiles. Mostly."](/img/scenario-2-dispatch-code-blooper.png)
+<div class="scene scene--flip">
+
+![Sparks fly, screens flash red errors, a dispatch desk glitches, and she winces holding a sparking cable.](/img/scenario-2-dispatch-code-blooper.png)
+
+<p class="scene-cap">It compiles. Mostly.</p>
+
+</div>
 
 First wiring rarely compiles. Errors aren't the end – read the trace, fix a seat, run it again. Shipping is just the last retry that worked.
 :::

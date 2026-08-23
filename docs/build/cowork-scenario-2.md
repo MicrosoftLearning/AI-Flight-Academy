@@ -9,7 +9,13 @@ Scenario 2 is still being built and tested. Steps, downloads, and screenshots ma
 :::
 **You'll build this in Cowork. No code, and no experience needed.**
 
-![In a dim ops room, a woman in a mustard cardigan stands beside four empty, unstaffed dispatch desks. Headline: "Start with a conversation."](/img/scenario-2-dispatch-cowork-hero.png)
+<div class="scene">
+
+![In a dim ops room, a woman in a mustard cardigan stands beside four empty, unstaffed dispatch desks.](/img/scenario-2-dispatch-cowork-hero.png)
+
+<p class="scene-cap">Start with a conversation.</p>
+
+</div>
 
 ## What you're solving
 
@@ -101,7 +107,13 @@ Look at **RQ-01** — one owner, and it stops there. The triager can't see that 
 Upload the whole `the-dispatch.zip`, not just `SKILL.md` — the zip carries the references and `THE-ROOM.md` the skill needs. And **don't edit the single triager**; it's the fixed "before" you measure against.
 :::
 
-![The woman gestures as team-dispatchers take their desks and light their status lamps. Headline: "Seat the room by talking."](/img/scenario-2-dispatch-cowork-seating.png)
+<div class="scene scene--flip">
+
+![The woman gestures as team-dispatchers take their desks and light their status lamps.](/img/scenario-2-dispatch-cowork-seating.png)
+
+<p class="scene-cap">Seat the room by talking.</p>
+
+</div>
 
 ## 2 · Seat a room that splits
 
@@ -165,7 +177,13 @@ Now a request that lands in your inbox gets a room's plan — owner, audience, a
 
 ---
 
-![The full room lands a plan with no computer in sight as the woman looks on, satisfied. Headline: "No code. A real room."](/img/scenario-2-dispatch-cowork-room.png)
+<div class="scene">
+
+![The full room lands a plan with no computer in sight as the woman looks on, satisfied.](/img/scenario-2-dispatch-cowork-room.png)
+
+<p class="scene-cap">No code. A real room.</p>
+
+</div>
 
 ## Stuck?
 
@@ -178,7 +196,13 @@ Now a request that lands in your inbox gets a room's plan — owner, audience, a
 | It confidently routed a rough idea | Ask it to check the request is routable first — sharpen, don't guess. |
 
 ::: details 🎬 Nobody nails it first try
-![Her too-vague team descriptions filled the desks with identical generic clerks who all route to the same place; she facepalms. Headline: "Careful what you ask for."](/img/scenario-2-dispatch-cowork-blooper.png)
+<div class="scene scene--flip">
+
+![Her too-vague team descriptions filled the desks with identical generic clerks who all route to the same place; she facepalms.](/img/scenario-2-dispatch-cowork-blooper.png)
+
+<p class="scene-cap">Careful what you ask for.</p>
+
+</div>
 
 Seat a room of look-alike teams and they all route the same way — that's not failure, it's feedback. Give each team a different instinct and run it again.
 :::

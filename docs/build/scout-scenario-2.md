@@ -11,7 +11,13 @@ Scenario 2 is still being built and tested. Steps, downloads, and screenshots ma
 
 You run the room, then turn it into something you can watch.
 
-![A relaxed man slides a one-page skilling request toward a glowing blue agent console as the booth's blue lamps wake. Headline: "Hand it to Scout."](/img/scenario-2-dispatch-scout-hero.png)
+<div class="scene">
+
+![A relaxed man slides a one-page skilling request toward a glowing blue agent console as the booth's blue lamps wake.](/img/scenario-2-dispatch-scout-hero.png)
+
+<p class="scene-cap">Hand it to Scout.</p>
+
+</div>
 
 ## What you're solving
 
@@ -99,7 +105,13 @@ That split – same request, one owner but three reuses, each charter-backed –
 Scout is grounded in your Microsoft 365 work through **Work IQ** – it only ever sees what you already can. Ask it to draft a team's charter from those real signals – *"Scout, draft a team card for [a team you work with] from Work IQ that mimics the cards in THE-ROOM.md"* – then correct it with people who know that team. Treat it as a first draft, not the answer.
 :::
 
-![Robotic arms assemble the dispatch board in blue light while the man reclines with his coffee. Headline: "Scout builds the board."](/img/scenario-2-dispatch-scout-build.png)
+<div class="scene scene--flip">
+
+![Robotic arms assemble the dispatch board in blue light while the man reclines with his coffee.](/img/scenario-2-dispatch-scout-build.png)
+
+<p class="scene-cap">Scout builds the board.</p>
+
+</div>
 
 ## 3 · Put the room on a board
 
@@ -154,7 +166,13 @@ Once the board runs, the bonus is adding features to it. Keep each one small and
 
 ---
 
-![The man waves and strolls out as the blue dispatch board runs itself. Headline: "Always-on. Hands-off."](/img/scenario-2-dispatch-scout-alwayson.png)
+<div class="scene">
+
+![The man waves and strolls out as the blue dispatch board runs itself.](/img/scenario-2-dispatch-scout-alwayson.png)
+
+<p class="scene-cap">Always-on. Hands-off.</p>
+
+</div>
 
 ## Stuck?
 
@@ -167,7 +185,13 @@ Once the board runs, the bonus is adding features to it. Keep each one small and
 | The room can't see the request | Give Scout the data pack, and point the board at the same files. |
 
 ::: details 🎬 Nobody nails it first try
-![He returns to find dozens of identical blue dispatch booths receding into the distance. Headline: "Maybe too hands-off."](/img/scenario-2-dispatch-scout-blooper.png)
+<div class="scene scene--flip">
+
+![He returns to find dozens of identical blue dispatch booths receding into the distance.](/img/scenario-2-dispatch-scout-blooper.png)
+
+<p class="scene-cap">Maybe too hands-off.</p>
+
+</div>
 
 Let Scout off the leash and it might build you forty booths. When it overshoots, rein it in and re-run – steering the agent *is* the build.
 :::

@@ -8,7 +8,13 @@ title: Scenario 2 · Dispatch
 This scenario is drafted and being tested. Details may change before the event.
 :::
 
-![A lone dispatcher sits at an old switchboard in a dim ops room, smugly plugging every incoming call into the same single socket labelled "just send it somewhere"; four dark, unstaffed dispatch desks sit beside him. Headline reads "One queue. One guess."](/img/scenario-2-dispatch-opener.png)
+<div class="scene">
+
+![A lone dispatcher sits at an old switchboard in a dim ops room, smugly plugging every incoming call into the same single socket labelled "just send it somewhere"; four dark, unstaffed dispatch desks sit beside him.](/img/scenario-2-dispatch-opener.png)
+
+<p class="scene-cap">One queue. One guess.</p>
+
+</div>
 
 ## The problem
 
@@ -28,7 +34,13 @@ In **Cowork**, the part you build is one file:
 
 The provided skill has each team take a position on the same request, then lands **one routing decision**. *Who fields it* is often agreed; the debate is the **plan** — the shape, the audience, and especially the deliverables, because one team's deliverable is another team's reuse. **Scout** and **Code** teams take that further — a live board, an intake gate, up to a decision wired to a real action.
 
-![A room of five team-dispatchers at their own desks argue over the same incoming request — some plugging it into "build once," others into "reuse," one repointing the wire to a desk marked "partners." Headline reads "Same request. Different plan."](/img/scenario-2-dispatch-split.png)
+<div class="scene scene--flip">
+
+![A room of five team-dispatchers at their own desks argue over the same incoming request — some plugging it into "build once," others into "reuse," one repointing the wire to a desk marked "partners."](/img/scenario-2-dispatch-split.png)
+
+<p class="scene-cap">Same request. Different plan.</p>
+
+</div>
 
 With the supplied pack, the same request should split the room — agreement on *who owns it*, a real argument about *the plan and the reuse*. With your own request, the room shows whether the obvious owner is really the whole answer. Every position points to the team's charter behind it. And a rough idea gets **sharpened**, not routed.
 
@@ -93,10 +105,22 @@ Pick your altitude:
 <!-- markdownlint-disable MD033 -->
 <BuildMatrix scenario="scenario-2" />
 
-![The room of five team-dispatchers has settled: one central wire runs from "build once" and fans out to three desks marked "reuse," with a partners desk lit first. Everyone's nodding. Headline reads "Build once. Route it everywhere it's needed."](/img/scenario-2-dispatch-conclusion.png)
+<div class="scene">
+
+![The room of five team-dispatchers has settled: one central wire runs from "build once" and fans out to three desks marked "reuse," with a partners desk lit first. Everyone's nodding.](/img/scenario-2-dispatch-conclusion.png)
+
+<p class="scene-cap">Build once. Route it everywhere it's needed.</p>
+
+</div>
 
 ::: details 🎬 Blooper reel
-![One dispatcher has fallen asleep at the switchboard, tangled in cables, while a request rings unanswered and the others facepalm. Headline reads "Even a good room drops a call now and then."](/img/scenario-2-dispatch-blooper.png)
+<div class="scene scene--flip">
+
+![One dispatcher has fallen asleep at the switchboard, tangled in cables, while a request rings unanswered and the others facepalm.](/img/scenario-2-dispatch-blooper.png)
+
+<p class="scene-cap">Even a good room drops a call now and then.</p>
+
+</div>
 
 Even the best room drops a call now and then — which is exactly why you seat more than one team.
 :::
