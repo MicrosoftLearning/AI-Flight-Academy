@@ -31,9 +31,9 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 
 # The prompt is piped in on stdin, so there is no OS command-line limit. This
-# cap is about the agent turn: more evidence per call is slower and vaguer.
-# Trim what you send instead - see MAX_RECORDS in examples/brief.py.
-_ARG_LIMIT = 20000
+# cap is a guard against sending an entire dataset by accident; raise it if you
+# have a reason to.
+_ARG_LIMIT = 200000
 
 
 class AgentError(RuntimeError):

@@ -1,68 +1,59 @@
 # Ambassador starter
 
-Scores AI Skilling Ambassador candidates and proposes a tier and a next action
-for each one.
+Picks people for the next cohort of an AI skilling ambassador program.
 
 ```text
-run.py                  the entry point
-agent.py                ask() and ask_json() - calls the Copilot CLI
+cohort.py             the entry point
+definition.md         what the program is looking for. Replace this
+definitions/          three worked alternatives: reach, depth, rising
+agent.py              ask() and ask_json(), over the GitHub Copilot CLI
 program/
-  data.py               loads every CSV, attaches evidence to candidates
-  evaluate.py           scoring and tier assignment
-examples/
-  brief.py              code scores, the model writes the case
-program-data/           72 candidates, ~2,000 evidence records
-PLAYBOOK.md             the program's rules and tiers
+  data.py             loads the nine data files
+program-data/         72 candidates, ~2,000 evidence records
+PLAYBOOK.md           how the program describes itself
 ```
 
 ## Run it
 
 ```bash
-python run.py                      # the shortlist
-python run.py --all                # all 72, with what was ignored
-python run.py --who "Alex Kim"     # one candidate in full
-python run.py --export register.csv
-
-python examples/brief.py "Alex Kim"   # the case for and against, from evidence
+python cohort.py
+python cohort.py --who "Alex Kim"
+python cohort.py --definition definitions/depth.md
 ```
 
 Python 3.10+ and the GitHub Copilot CLI, signed in. No other dependencies.
 
-## How it scores
+## How it works
 
-`data.py` reads all nine files and attaches every activity, comment,
-contribution, credential, recognition record and application to its candidate.
+`cohort.py` reads `definition.md`, summarizes all 72 candidates, and sends both
+to the model through `agent.py`. What comes back is a shortlist with a sentence
+of reasoning and a proposed next step per person.
 
-`evaluate.py` scores on three columns from `CandidateProfiles.csv` -
-`BusinessImpact` x3, `ExecutionReliability` x2, `LeadershipSignals` x1 - and
-bands the result into a tier.
+The definition is prose, not a formula. That is deliberate: no scoring function
+evaluates "someone whose work gets reused by people they have never met."
 
-`agent.py` is the other half. `ask()` sends a prompt to the Copilot CLI and
-returns the reply; `ask_json()` does the same and parses the result. Use it
-where a judgment or a piece of writing is wanted, and keep the scoring in code.
-`examples/brief.py` shows the split: the tier is computed, the case for and
-against it is written by the model from the same evidence.
+## What it does not do
 
-Everything it prints is a proposal. Nothing is sent, and no decision is recorded.
+- **It reads `CandidateProfiles.csv` only.** `data.py` loads all nine files and
+  attaches every activity, peer comment, contribution, credential, recognition
+  record and application to its candidate. `cohort.py` sends the summary line.
+- **Claims are not checked against rows.** The model is given summary counts, so
+  it can say someone's work "gets reused across teams" without anything in
+  `ProgramContributions.csv` supporting it. Nothing catches that.
+- **A human cannot overrule it.** Run it twice and you get two lists. There is
+  nowhere to record that you disagree.
+- **Nothing is sent.** Everything printed is a proposal.
 
-## Known gaps
+## Swap the definition
 
-Carried over from the first pass. Each recommendation lists its own unused
-evidence per **R-005**, so these show up in the output as well as here.
+```bash
+python cohort.py --definition definitions/reach.md    # work that travels
+python cohort.py --definition definitions/depth.md    # helps individuals
+python cohort.py --definition definitions/rising.md   # trajectory over standing
+```
 
-- Four columns in `CandidateProfiles.csv` are loaded but not scored:
-  `PeerSupport`, `KnowledgeSharing`, `CommunityContribution`,
-  `MultiplierBehavior`
-- The evidence files are attached to each candidate but do not affect the score:
-  866 activities, 283 peer comments, 390 contributions, 275 credentials, 128
-  recognition records, 41 applications
-- The weights in `evaluate.py` predate the playbook and have not been
-  reconciled against it
-- **R-004** (prior recognition is not a reason to recognize again) and **R-006**
-  (repeated activity with weak quality should not outrank quieter
-  high-multiplier work) are not implemented
+Three definitions, same 72 people, and the shortlists barely overlap. `depth.md`
+and `rising.md` share two names out of eight, and each finds four people no
+other definition surfaces.
 
-## Where to start
-
-Run it, then look up someone near the top in the evidence files and check
-whether the recommendation holds. `evaluate.py` is about ninety lines.
+Edit `definition.md` to say what your program is looking for, then re-run.

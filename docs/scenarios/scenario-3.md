@@ -70,14 +70,14 @@ Two of the eight rules are the ones to look at first - **R-004** (prior recognit
 | --- | --- | --- |
 | **🟢 Cowork** | The half-built skill, uploaded | Teach it to read more files, then build the output your table would use |
 | **🔵 Scout** | The same skill, imported | The same, plus somewhere for it to live - a board, a scheduled scan, a brief |
-| **🟣 Code** | A starter that runs, with the data pre-wired | Replace the judgment, build something headless |
+| **🟣 Code** | A working cohort picker that can't show its work | Make it find who it misses, cite its evidence, and take an override |
 
 Same spine, harder as the tooling gets more capable. The playbook is plain text at every altitude, so the rules you write move between them unchanged.
 
 ::: info Team model
 In Cowork and Scout, each person teaches the skill to read a different evidence file, then the table combines them and compares who surfaced.
 
-In Code, the table builds one system: one person owns the scoring, others own a reader per evidence file, the output, and the fairness check.
+In Code, the table works to three conditions rather than a plan: find someone the shipped picker misses, make every claim cite a record, and let a person overrule it.
 :::
 
 ## Start building
