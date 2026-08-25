@@ -131,15 +131,14 @@ Everything is loaded and nothing is used. `data.py` attaches every record to its
 
 Starting points if you want one. Take one, combine two, or ignore all of them.
 
-| | |
-| --- | --- |
-| 🔍 **Give it the evidence** | Send peer comments or contributions instead of summary counts. Different people surface. Watch what it costs you in speed |
-| 🧾 **Make it cite** | Every claim carries a record id. Then write the check that fails when one doesn't |
-| 🥊 **A second opinion** | One agent picks, another argues against it from the evidence the first skipped. `.github/agents/*.agent.md`, and they can use different models |
-| ✋ **Let a person overrule** | Record the disagreement somewhere the next run reads. Now it has a memory |
-| 🕳️ **Find the blind spot** | Break the definition into claims and check which ones the data cannot answer. "You asked for reused by strangers; nothing records who reused it" |
-| 📨 **Draft the invitation** | In the program's voice, held for approval, never sent |
-| 🎯 **Yours** | Whatever the three conditions suggest to you |
+| | What it is | Where to start |
+| --- | --- | --- |
+| 🔍 **Recruitment** · easiest | The people one file can't see, with an invitation drafted for each | Send `PeerFeedback.csv` rows instead of profile summaries, then diff your shortlist against the shipped one |
+| 🥊 **A second opinion** | One agent picks, another argues against it from the same evidence | Two calls, opposed instructions. `.github/agents/*.agent.md`, and they can run different models. Keep the disagreement in the output instead of resolving it |
+| 🔄 **The run-to-run diff** | What changed since last time, not the whole list again | Persist each run to disk, compare by `CandidateId` |
+| ⚖️ **Fairness audit at scale** | Whether a skew is real or just one run's noise | Loop the same definition ten times, collect the shortlists, count how often each name survives |
+| 🎖️ **Their own view** | What each candidate would read about their own standing, generated per person | One call per name, from that person's records only. Hardest to get right, most useful if you do |
+| 🎯 **Yours** | Whatever your table thinks this program is missing | Smallest version that runs first |
 
 **Pick by what your table would still run next time round**, not by what sounds most impressive.
 

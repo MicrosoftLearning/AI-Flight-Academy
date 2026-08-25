@@ -157,15 +157,15 @@ Attach one and tell the skill what to do with it. Attach all six and you won't k
 
 Starting points if you want one. Take one, combine two, or ignore all of them.
 
-| | |
-| --- | --- |
-| 🔍 **Give it the evidence** | Attach peer feedback or contributions and have the skill weigh them. Different people surface |
-| 🧾 **Make it cite** | Every claim names the file and row behind it. Ask it to flag any claim it can't source |
-| ✋ **Let a person overrule** | Have Cowork keep a decisions file it reads before recommending, so your call survives the next run |
-| 🕳️ **Find the blind spot** | Break the definition into claims and ask which ones the data cannot answer |
-| 📨 **Draft the invitation** | In the program's voice, held for approval, never sent |
-| 📋 **A brief per manager** | Their people, what's proposed, and the evidence, on one page |
-| 🎯 **Yours** | Whatever the three conditions suggest to you |
+| | What it is | Start with |
+| --- | --- | --- |
+| 🔍 **Recruitment** · easiest | The people one file can't see: strong peer evidence, ordinary activity numbers | *"Find people whose peer feedback shows a repeated pattern of enabling others, not one-off praise, and tell me which of them the shipped definition missed."* |
+| 🎯 **Assignment** | Who to pick for one specific job, which is not the same as who tops the shortlist | *"I need someone to run a session for a new-hire audience in EMEA. Who, and why them over the next-best?"* |
+| 🧭 **Manager's view** | One manager, their people, one next action each | *"Give me a one-page brief for a manager: their candidates, what's proposed for each, and the single next action."* |
+| ⚖️ **Fairness audit** | Whether your shortlist skews by region, org, level, or tenure | *"Audit the eight names against region, level, and tenure. Name any skew you'd have to explain."* |
+| 🎖️ **Their own view** | What one candidate would read about their own standing | *"Write what one candidate would see: where they stand, what the records show, and what would put them in."* |
+| 📨 **The invitation** | The message that actually goes out, in the program's voice, held for approval | *"Draft the invitation for each of the eight in the program's voice. Hold them for approval, don't send."* |
+| 🎯 **Yours** | Whatever your table thinks this program is missing | *"The program needs [what]. Work out what that takes and build the smallest version first."* |
 
 **Pick by what your table would still run next time round**, not by what sounds most impressive.
 

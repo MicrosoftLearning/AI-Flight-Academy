@@ -157,15 +157,14 @@ Point Scout at one and say what to do with it. Point it at all six at once and y
 
 Starting points if you want one. Take one, combine two, or ignore all of them.
 
-| | |
-| --- | --- |
-| 🖥️ **A board** | A local page you open: who's proposed, the evidence behind each, what changed since last run |
-| 🔍 **Give it the evidence** | Read peer feedback or contributions and weigh them. Different people surface |
-| 🧾 **Make it cite** | Every claim names the file and row behind it, and flags any claim it can't source |
-| ✋ **Let a person overrule** | A decisions file the program reads before it recommends, so your call survives |
-| ⏰ **A scheduled scan** | Runs on a timer and reports who's newly matching, not the whole list again |
-| 🕳️ **Find the blind spot** | Break the definition into claims and check which ones the data cannot answer |
-| 🎯 **Yours** | Whatever the conditions suggest to you |
+| | What it is | Start with |
+| --- | --- | --- |
+| 🖥️ **A board** · easiest | A local page you open: who's proposed, the evidence behind each, what's waiting on a decision | *"Build a local HTML page showing the current eight, the records behind each, and anything waiting on a decision."* |
+| ⏰ **A scheduled scan** | Runs on a timer and reports only what changed | *"Run this on a schedule and tell me only who entered or left the shortlist since last time."* |
+| 👀 **The watch** | Who's climbing and who's stopped showing up | *"Build a watch list from activity dates: who's picking up, who's gone quiet, and who was recognized before and stalled."* |
+| 🧭 **Manager's view** | One file per manager, written to disk so it's there next time | *"Write one brief per manager into a folder: their candidates, what's proposed, one next action each."* |
+| 🔍 **Recruitment** | The people one file can't see, with the records that surfaced them | *"Read peer feedback and contributions, then tell me who that surfaces who wasn't in the shipped eight."* |
+| 🎯 **Yours** | Whatever your table thinks this program is missing | *"The program needs [what]. Build the smallest version that runs, then make it run again on its own."* |
 
 **Pick by what your table would still run next time round**, not by what sounds most impressive.
 
