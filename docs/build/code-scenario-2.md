@@ -1,34 +1,40 @@
 ---
-title: The Greenlight – Code
+title: Dispatch – Code
 ---
 
-# 🟣 The Greenlight
+# 🟣 Dispatch
 
 ::: warning 🚧 Work in progress
 Scenario 2 is still being built and tested. Steps, downloads, and screenshots may change before the event.
 :::
 **You'll build this in code – VS Code, GitHub Copilot, and the Copilot CLI.**
 
-![An engineer at a modular patch bay behind glass runs purple cables to four empty critic seats below. Headline: "Get behind the board."](/img/scenario-2-advanced-hero.png)
+<div class="scene">
 
-You start from a working council dashboard. You make it yours, prove the code catches what the model can't, then pick a path to take it further.
+![An operations engineer in a headset stands at a wide airport ops console of glowing monitors; purple data-lines fan out across the dusk tarmac to a row of airliners parked at their gates.](/img/scenario-2-dispatch-code-hero.png)
 
-![Screenshot of the starter project - The Greenlight Dashboard.](./media/the-greenlight-dashboard.png)
+<p class="scene-cap">Get behind the board.</p>
+
+</div>
+
+You start from a working routing dashboard. You make it yours, prove the code catches an under-specified request the model might route anyway, then pick a path to take it further.
+
+![Screenshot of the starter project - The Dispatch Dashboard.](./media/the-dispatch-dashboard.png)
 
 ## What you're solving
 
-A single review from a single perspective is not enough when different audiences need so many different things from the same **asset** – a doc, a deck, an email, a policy, a post, a plan. A formal explainer might help a compliance officer make a careful decision and still be unusable for a store manager who needs one practical action during a busy shift.
+One triager isn't enough when the same skilling request means different work to different teams — and one team's deliverable is another team's reuse. A governance-before-GA ask is an evergreen path, a live workshop, and a partner activation all at once; the plan is to build it once and reuse it.
 
-This altitude solves a second problem too: a model is good at contextual judgement, but it can also make things up. Your council pairs both – the model explains whether an asset works for an audience, and code checks what is countable, so a hallucinated verdict gets caught.
+This altitude solves a second problem too: a model is good at contextual judgement, but it can also route a request that isn't ready. Your room pairs both — the model reasons out each team's position, and code checks what's countable, so a rough idea gets flagged **"sharpen first"** instead of confidently routed.
 
 ## What your team will have built
 
 | Piece | What it does |
 | --- | --- |
-| **The board** (provided) | A live dashboard: drop an asset, every seated audience reviews it, and a plan reconvenes until every audience is served. |
-| **Your council** | Your real audiences as `council/*.json` – the room reviewing your asset. |
-| **The checks** | Deterministic checks (`checks.py`) shown next to each verdict – code catching what the model might wave through. |
-| **Your path** | Either a **live seat editor** on the board, or a **PR submission** that ships the greenlit plan for approval. |
+| **The board** (provided) | A live dashboard: drop a request, every seated team takes a position, and the room lands one routing decision. |
+| **Your room** | Your real teams as `council/*.json` – the room routing your request. |
+| **The intake gate** | A deterministic check (`check_content.py`) that says whether a request is routable before the room decides. |
+| **Your path** | Either a **live seat editor** on the board, or **acting on the decision** — wiring it to a real next step. |
 
 ## How this runs
 
@@ -37,34 +43,34 @@ You start from a working board and make it yours. This is the contract, not a cl
 | | Step | You're done when |
 | --- | --- | --- |
 | **1** | **Start the board** | `http://localhost:4173` is up and the Copilot CLI is signed in. |
-| **2** | **Convene & watch it split** | The same asset draws opposite, quote-backed verdicts – no code yet. |
-| **3** | **Seat an audience that bites** | Your own seat returns a different verdict than another on the same asset. |
-| **4** | **Wire a deterministic check** | A code-caught FAIL sits next to a model verdict. |
-| **5** | **Pick a path** | You ship it further – a live seat editor (A) or a governed PR (B). |
+| **2** | **Dispatch & watch it split** | The same request draws different, charter-backed positions — no code yet. |
+| **3** | **Seat a team that splits** | Your own team lands a different position than another on the same request. |
+| **4** | **Wire the intake gate** | A rough idea gets flagged "sharpen first" before the room routes it. |
+| **5** | **Pick a path** | You ship it further – a live seat editor (A) or acting on the decision (B). |
 
-The **MCP bonus** is there for teams who want the council callable from other agents.
+The **MCP bonus** is there for teams who want the room callable from other agents.
 
 ## Before you start
 
-Download all three and unzip them into one folder. Keep `the-greenlight-starter`, `the-greenlight`, and `data-pack` **side by side**.
+Download all three and unzip them into one folder. Keep `the-dispatch-starter`, `the-dispatch`, and `dispatch-data` **side by side**.
 
 <div class="lab-grid lab-grid-3">
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-greenlight-starter.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-dispatch-starter.zip" download>
 		<span class="lab-card-emoji">📦</span>
 		<span class="lab-card-title">Starter repo</span>
-		<span class="lab-card-desc">The dashboard, a seated council, the checks, and the MCP server – with the build paths left as TODOs.</span>
+		<span class="lab-card-desc">The dashboard, a seated room, the intake gate, and the MCP server – with the build paths left as TODOs.</span>
 		<span class="lab-card-cta">Download .zip →</span>
 	</a>
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-greenlight.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-dispatch.zip" download>
 		<span class="lab-card-emoji">🟢</span>
-		<span class="lab-card-title">Greenlight skill</span>
-		<span class="lab-card-desc">The audience-review method and the unchanged solo-critic baseline.</span>
+		<span class="lab-card-title">Dispatch skill</span>
+		<span class="lab-card-desc">The routing method and the unchanged single-triager baseline.</span>
 		<span class="lab-card-cta">Download .zip →</span>
 	</a>
-	<a class="lab-card" href="/AI-Flight-Academy/downloads/greenlight-data-pack.zip" download>
+	<a class="lab-card" href="/AI-Flight-Academy/downloads/dispatch-data-pack.zip" download>
 		<span class="lab-card-emoji">🗂️</span>
-		<span class="lab-card-title">Content pack</span>
-		<span class="lab-card-desc">Five articles, four audience profiles, and a style guide. Use it instead of real work data.</span>
+		<span class="lab-card-title">Data pack</span>
+		<span class="lab-card-desc">Sample requests, the Global Skilling team cards, and the routing policy. Use it instead of real work data.</span>
 		<span class="lab-card-cta">Download .zip →</span>
 	</a>
 </div>
@@ -73,14 +79,14 @@ You'll need three tools installed. On Windows the fastest way is `winget` from a
 
 ```powershell
 winget install OpenJS.NodeJS.LTS     # Node — runs the board
-winget install Python.Python.3.12    # Python 3 — runs the checks
+winget install Python.Python.3.12    # Python 3 — runs the intake gate
 # reopen your terminal so Node is on PATH, then:
 npm install -g @github/copilot       # GitHub Copilot CLI — the board calls it
 ```
 
 Prefer installers? Grab [Node.js](https://nodejs.org/), [Python 3](https://www.python.org/downloads/), and the [GitHub Copilot CLI](https://www.npmjs.com/package/@github/copilot). Then run `copilot` once and sign in.
 
-**Node** is required to start the board; **Python 3** is only needed once you wire the checks in Step 4 (until then the board runs and the checks show "not wired"). Open the **the-greenlight-starter** project in VS Code.
+**Node** is required to start the board; **Python 3** is only needed once you wire the intake gate in Step 4 (until then the board runs and the gate shows "not built"). Open the **the-dispatch-starter** project in VS Code.
 
 ---
 
@@ -89,7 +95,7 @@ Prefer installers? Grab [Node.js](https://nodejs.org/), [Python 3](https://www.p
 Now that you have the project downloaded, it's time to get started on the build.
 
 ::: tip The board points out what to build
-Anywhere the board shows an amber **“not wired”** marker – the checks column, **Submit to hack repo**, and **Manage council seats** – that's a build path. The two buttons even offer a **📋 Copy prompt for Copilot Chat** that hands you a ready-made prompt to build the feature.
+Anywhere the board shows an amber **"not wired"** marker – the intake badge and **Act on this decision** – that's a build path. The runs use a pinned, cost-predictable model (`claude-sonnet-4.6`); change it with `DISPATCH_MODEL` if you like.
 :::
 
 ### 1 · Start the board
@@ -97,7 +103,7 @@ Anywhere the board shows an amber **“not wired”** marker – the checks colu
 Open a terminal and navigate to the folder where you extracted your zip files.
 
 ```powershell
-cd the-greenlight-starter/dashboard
+cd the-dispatch-starter/dashboard
 npm install
 npm start
 ```
@@ -106,117 +112,115 @@ Open `http://localhost:4173`. The startup line confirms your Copilot CLI is foun
 
 **Done when:** the board is up and the startup line confirms the Copilot CLI is signed in.
 
-### 2 · Convene the council
+### 2 · Dispatch a request
 
-Drop the executive summary (`data-pack/content/P4-exec-summary.md`) onto the board. A single general-purpose reviewer – the **solo critic**, whose scores ship recorded in the pack – could only call this one flat *REVISE*. Your council splits it instead: Retail rejects it outright as an unusable wall of prose, while Compliance ships it – that same control detail is exactly the audit rigor they need. Each verdict comes with a quote and a confidence. Iterate on a remediation plan until the whole council greenlights it, then copy your plan to work on later.
+Drop or paste a request (`dispatch-data/requests/RQ-01-agent-governance-before-ga.md`) onto the board. A single triager — whose one-owner decisions ship recorded in the pack — could only say *"send it to Content & Insights."* Your room agrees on the owner but **splits on the plan**: C&I builds the governance path once, Delivery reuses it live, Field & Partner reuses it regionally, and the real first audience is partners. Each position is grounded in a team's charter.
 
-No code yet – one flat verdict becomes a room that disagrees.
+No code yet – one owner becomes a plan with reuse.
 
-**Done when:** the same asset draws opposite verdicts from two seats, each with a quote.
+**Done when:** the same request draws different positions from the teams, each charter-backed.
 
-### 3 · Seat an audience that bites
+### 3 · Seat a team that splits
 
-A **seat** is one audience. It says who they are, what they need out of the asset, and the specific bars it has to clear *for them*. Each seat is a small file in the `council/` folder, and four samples already ship.
+A **seat** is one team. It says what it owns, who it serves, and what makes it want a request or pass it on. Each seat is a small file in the `council/` folder, and five teams already ship.
 
-Add one for an audience *you* write for. The whole trick is the bars: write ones that matter to **your** audience but not to everyone – that's what makes your seat *disagree* with another on the same asset. (A bar any reader would pass is just "good writing," and the solo critic already covers that.)
+Add one for a team *you* work with. The whole trick is the charter: give it a different instinct than the others — a different audience, a different format bias — so it *disagrees* about the plan. (A team that would route everything the same way as another is a duplicate.)
 
-You don't have to hand-write the file. Open something that knows you – **Copilot**, **Cowork**, or **Scout** – point it at the sample `council/retail.example.json`, and ask:
+You don't have to hand-write the file. Open something that knows you – **Copilot**, **Cowork**, or **Scout** – point it at the sample `council/team.example.json`, and ask:
 
-> Create `my-audience.json` for _[your audience]_, in the same shape as `retail.example.json`: an outcome and two bars, with one marked as a dealbreaker.
+> Create `my-team.json` for _[your team]_, in the same shape as `team.example.json`: what it owns, who it serves, what makes it say yes or no, and its format bias.
 
 When you read what it makes, three things matter:
 
-- The **outcome** is what this reader needs the asset to *do* for them.
-- The **bars** protect that outcome. Mark one as a **dealbreaker** – flunk it and the asset is a Reject, however it scores elsewhere.
-- Each bar spells out what a failing example versus a great one looks like, so anyone would score it the same way.
+- **owns / serves** is what makes a request theirs.
+- **says_yes_when / says_no_when** is the instinct that makes it want a request or pass — this is what splits the room.
+- **format_bias** is the shape it pushes work into — often the deliverable it wants in the plan.
 
-Save it in `council/` under a new name (reusing an existing name overwrites that seat), then hit **Reload council** on the board.
+Save it in `council/` under a new name (reusing an existing name overwrites that seat), then hit **Reload room** on the board.
 
-**Done when:** your seat lands a different verdict than another seat on the same asset.
+**Done when:** your team lands a different position than another team on the same request.
 
-![The engineer patches purple cables into channels labelled Retail, Compliance, Clinical and Manufacturing beside a guardrail switch. Headline: "Code the council."](/img/scenario-2-advanced-wiring.png)
+<div class="scene scene--flip">
 
-### 4 · Wire the deterministic checks
+![The engineer patches purple cables into desks labelled Content, Delivery, Product, Field and MTTs beside an intake-gate switch.](/img/scenario-2-dispatch-code-wiring.png)
 
-Your council's verdicts come from the model – sharp on judgement, but it can also make things up. **Deterministic checks are the countable half**: reading time, blocked steps, table width – things *code* can measure exactly. Turning them on puts a plain pass/fail on each seat, right beside the model's verdict, so a confident-but-wrong "looks fine" gets caught.
+<p class="scene-cap">Code the room.</p>
 
-Two small jobs – and you **don't write either from scratch**. The starter leaves both half-built with notes right in the files, and GitHub Copilot Chat can see all of them. Your job is to decide *what each check should measure*; let Copilot write the code with you.
+</div>
 
-1. **Turn the checks on.** One starter file (`check_content.py`) connects the checks to the board, and it's left unfinished – which is why the board says "not wired." Open it: the note at the top of the file explains, in plain English, exactly what it needs to hand back. Point Copilot Chat at that file and have it finish the connection.
+### 4 · Wire the intake gate
 
-1. **Add a check of your own.** A check is just a small rule – for example, *"fail if the asset takes longer to read than the audience's budget."* There's a finished one to copy and a half-finished one to complete (both live in `checks.py`): finish `check_table_width` so it fails any table wider than the limit set on the audience's card. Then switch it on for an audience by adding one line to that audience's file in `council/`:
+Your room's positions come from the model – sharp on judgement, but it will happily route a request that isn't ready. **The intake gate is the countable half**: does the request even name an audience, a topic, and an outcome? A rough idea (an `IDEA-…`) shouldn't be confidently routed — it should be *sharpened*. That's a check, not a vibe.
 
-    ```json
-    "checks": [ { "fn": "check_table_width", "args": { "max_cols": 4 } } ]
-    ```
+Two small jobs – and you **don't write either from scratch**. The starter leaves the gate half-built with notes right in the file, and GitHub Copilot Chat can see all of it. Your job is to decide *what makes a request routable*; let Copilot write the code with you.
 
-Reload the board and your check shows up next to that seat's verdict.
+1. **Turn the gate on.** One starter file (`check_content.py`) is left unfinished – which is why the board says the intake gate isn't built. Open it: the note at the top explains, in plain English, exactly what it hands back — `{routable, present, missing, detail}`. `dispatchlib.parse_request` already does the parsing; you decide present vs missing against the required fields. Point Copilot Chat at that file and have it finish the gate.
+
+1. **Add a guardrail of your own.** The gate checks the *request*; a guardrail checks the *decision*. Pick one from `dispatch-data/policy/ROUTING-RULES.md` — for example, *"a credential deliverable needs stable objectives,"* or *"a partner audience must involve Field & Partner"* — and have Copilot add it.
 
 ::: tip What's actually expected of you
-You do **not** need to be a Python developer. The starter and Copilot Chat write the code – you decide *what* each check should measure and confirm it fires. You're done when the checks column stops saying "not wired" and at least one check is your own.
+You do **not** need to be a Python developer. The starter and Copilot Chat write the code – you decide *what makes a request routable* and confirm it fires. You're done when a rough `IDEA-…` gets flagged "sharpen first" and a formed `RQ-…` passes.
 :::
 
-**Done when:** you drop an asset and a code-caught **FAIL** shows next to a model verdict.
+**Done when:** you drop a rough idea and the board flags it **"sharpen first"** before the room routes it.
 
 ---
 
 ## Pick a path
 
-You've got a working, checked council seated with your own audiences. Now take it further. **Completing either path – A or B – is your finish line.**
+You've got a working room seated with your own teams and an intake gate that won't route a guess. Now take it further. **Completing either path – A or B – is your finish line.**
 
 - **Path A is front-end** (a UI in the browser – JS and a little Node).
-- **Path B is back-end** (Node, git, and the `gh` CLI). Both are scaffolded, and the board hands you a one-click Copilot prompt for each.
+- **Path B is back-end** (Node, plus the tracker or channel you route into). Both are clear build paths, and Copilot Chat builds each with you.
 
 Pick the one that matches how you like to build; the bonus is for teams who want to push further.
 
 <PathChooser
   a-emoji="🪑"
-  a-title="Path A · Edit the council from the board"
-  a-desc="Build a seat editor in the browser – add, edit, and remove audiences live, no hand-editing JSON. Front-end (JS + a little Node)."
-  b-emoji="🏁"
-  b-title="Path B · Ship it as a PR"
-  b-desc="Turn a greenlit plan into a governed pull request into the hack submission repo. The council proposes; a human approves. Back-end (Node, git, gh)."
+  a-title="Path A · Edit the room from the board"
+  a-desc="Build a seat editor in the browser – add, edit, and remove teams live, no hand-editing JSON. Front-end (JS + a little Node)."
+  b-emoji="📤"
+  b-title="Path B · Act on the decision"
+  b-desc="Wire the board's Act button to route a decision onward — open a work item, post to a channel, notify the owner. The room proposes; a human approves. Back-end (Node)."
 >
 
 <template #pathA>
 
-### Path A – edit the council from the board
+### Path A – edit the room from the board
 
-Right now, seating an audience means hand-editing `council/*.json`. This path builds a small **seat editor** into the board so anyone can add, edit, and remove audiences live.
+Right now, seating a team means hand-editing `council/*.json`. This path builds a small **seat editor** into the board so anyone can add, edit, and remove teams live.
 
-There are two pieces. The **endpoints** are the small part – sanitize the id, then write (or delete) the seat file:
+There are two pieces. The **endpoint** is the small part – sanitize the id, then write (or delete) the seat file:
 
 ```js
-// dashboard/server.js — POST /api/council/seat (stubbed)
-const id = String(req.body.seat_id).replace(/[^a-z0-9-_]/gi, "");   // stay inside the folder
+// dashboard/server.js — POST /api/council/seat (you add this)
+const id = String(req.body.team_id).replace(/[^a-z0-9-_]/gi, "");   // stay inside the folder
 fs.writeFileSync(path.join(COUNCIL_DIR, `${id}.json`), JSON.stringify(req.body, null, 2));
 ```
 
-The **editor UI** is the real work – a form for the seat shape (outcome, thresholds, a list of criteria) that POSTs to those endpoints. Don't hand-build it: click **✎ Manage council seats** on the board for a one-click Copilot prompt that scaffolds the whole dialog, then reload.
+The **editor UI** is the real work – a form for the team seat shape (owns, serves, says-yes/says-no, format bias) that POSTs to that endpoint. Point Copilot Chat at `dashboard/public/` and have it scaffold the dialog, then reload.
 
-**Done when:** you add a new audience from the browser and it reviews the next piece.
+**Done when:** you add a new team from the browser and it takes a position on the next request.
 
 </template>
 
 <template #pathB>
 
-### Path B – ship the plan as a pull request
+### Path B – act on the decision
 
-A greenlit plan should land somewhere real. This path wires the board's **🏁 Submit** button to open a pull request into the hack submission repo – the council proposes, a human approves (never auto-merge).
+A routing decision should land somewhere real. This path wires the board's **📤 Act on this decision** button (it answers `501` today) to route the decision onward — open a work item for the owner, post it to a channel, or notify the team — the room proposes, a human approves (never auto-act).
 
-A green plan already holds the drafted assets and a coverage summary; assemble them and open the PR with `gh`:
+The decision is already on the job; assemble it and route it:
 
 ```js
-// dashboard/server.js — POST /api/plan/:planId/submit (stubbed)
-const assets = plan.items.filter(i => i.status === "make_new");   // the drafted replacements
-// ...write each asset to a branch, use composePlanMarkdown(plan) as the PR body...
-spawn(GH_BIN, ["pr", "create", "--repo", SUBMISSION_REPO, "--base", SUBMISSION_BASE,
-               "--title", title, "--body-file", bodyPath]);
+// dashboard/server.js — POST /api/dispatch/:id/act (stubbed, returns 501)
+const decision = job.result.decision;   // owner, audience, plan[], disposition, next_action
+// ...open a work item for decision.owner, or post the decision to a channel...
 ```
 
-`SUBMISSION_REPO` is a placeholder – keep it safe: only push when a real repo is configured, otherwise write the ready-to-push bundle. Click **🏁 Submit** on a green plan for a one-click Copilot prompt to build it.
+`DISPATCH_ACT_TARGET` is a placeholder – keep it safe: only act when a real target is configured, otherwise write the ready-to-send payload. Click **📤 Act on this decision** for the shape to build against.
 
-**Done when:** a green plan opens a PR (or writes the bundle) into the submission repo, with the coverage summary as the description.
+**Done when:** a decision opens a work item (or writes the payload) for its owner, with the plan as the body.
 
 </template>
 
@@ -224,15 +228,21 @@ spawn(GH_BIN, ["pr", "create", "--repo", SUBMISSION_REPO, "--base", SUBMISSION_B
 
 ---
 
-## Bonus – make the council callable by other agents (MCP)
+## Bonus – make the room callable by other agents (MCP)
 
-The board is one surface. An **MCP server** exposes the council as tools so your *other* agents – Cowork, Scout, a VS Code chat agent – can convene it too. The starter ships `mcp_server.py` with the thin tools (`list_council`, `run_checks`, `solo_baseline`) already working and two left as TODOs.
+The board is one surface. An **MCP server** exposes the room as tools so your *other* agents – Cowork, Scout, a VS Code chat agent – can dispatch to it too. The starter ships `mcp_server.py` with the thin tools (`list_room`, `check_routable`, `routing_rules`) already working and `dispatch` left as a TODO.
 
-- **Run it:** `python mcp_server.py` (stdio) or `python mcp_server.py --http`, then call `list_council` / `run_checks` from an MCP client to prove the plumbing with no model needed.
-- **Implement `convene(content_path)`** (score every seat) and **`greenlight(review)`** (plan, then re-score) – the tips point to the same Copilot-CLI pattern the board uses in `dashboard/server.js`.
-- **Wire it into Cowork or Scout** and convene your council from *another* agent.
+- **Run it:** `python mcp_server.py` (stdio) or `python mcp_server.py --http`, then call `list_room` / `check_routable` from an MCP client to prove the plumbing with no model needed.
+- **Implement `dispatch(request_path)`** – each team takes a position, then the room lands one decision. The tips point to the same Copilot-CLI pattern the board uses in `dashboard/server.js`.
+- **Wire it into Cowork or Scout** and dispatch a request from *another* agent.
 
-![The engineer leans back in command as the purple council runs and a green-pass, red-block guardrail gate works. Headline: "Seat to verdict – yours."](/img/scenario-2-advanced-running.png)
+<div class="scene">
+
+![The engineer leans back in command as the purple room runs and a routable / sharpen intake gate works.](/img/scenario-2-dispatch-code-running.png)
+
+<p class="scene-cap">Intake to decision — yours.</p>
+
+</div>
 
 ## Stuck?
 
@@ -240,13 +250,19 @@ The board is one surface. An **MCP server** exposes the council as tools so your
 | --- | --- |
 | The board won't start | Check Node is installed and run `npm install` in `dashboard/` first. |
 | Startup says the CLI is missing | Install the GitHub Copilot CLI and sign in, then restart the server. |
-| The board can't find the council | Keep `the-greenlight-starter`, `the-greenlight`, and `data-pack` side by side. |
-| Every audience gets the same result | Make the audience criteria more specific to their outcomes. |
-| Seats show “code checks · not wired” | Expected until you implement `check_content.py` – that wires the deterministic checks onto each verdict. |
+| The board can't find the room | Keep `the-dispatch-starter`, `the-dispatch`, and `dispatch-data` side by side. |
+| Every team gives the same position | Make the team charters more distinct. |
+| The intake badge says "not built" | Expected until you implement `check_content.py` – that wires the routable check onto the board. |
 | Copilot asks too many approvals | Use `--allow-all-tools` only in your own exercise repo. |
 
 ::: details 🎬 Nobody nails it first try
-![Sparks fly, screens flash red errors, a seat glitches, and she winces holding a sparking cable. Headline: "It compiles. Mostly."](/img/scenario-2-advanced-blooper.png)
+<div class="scene scene--flip">
+
+![Sparks fly, screens flash red errors, a dispatch desk glitches, and she winces holding a sparking cable.](/img/scenario-2-dispatch-code-blooper.png)
+
+<p class="scene-cap">It compiles. Mostly.</p>
+
+</div>
 
 First wiring rarely compiles. Errors aren't the end – read the trace, fix a seat, run it again. Shipping is just the last retry that worked.
 :::
@@ -254,4 +270,3 @@ First wiring rarely compiles. Errors aren't the end – read the trace, fix a se
 ---
 
 [← Back to start](/) · [What this scenario is about](/scenarios/scenario-2)
-

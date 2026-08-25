@@ -4,20 +4,20 @@ title: Submit Your Project
 
 # Submit Your Project 🚧
 
-::: warning Under construction
-Project submission isn't open yet. Check back here on hack day – this page will have everything you need to submit your agent or demo.
+::: warning Submission opens on hack day
+The submission form isn't open yet. This page will have everything you need on the day – bookmark it.
 :::
 
-## What you'll submit
+## Have this ready
 
-> **TODO** – finalize the submission format. Likely fields (adapted from the Agents League model):
+You won't need much. Line these up while you build:
 
-- Team name + members
-- Your scenario + altitude
-- A short description of what you built
-- A demo video or screenshots
-- A link to your agent / repo / export
+- **Your team** – name and members
+- **Your scenario + altitude** – e.g. Scenario 2 · Scout
+- **A short description** – what you built and what it does
+- **A demo** – a short screen recording or a few screenshots
+- **A link** – your agent, repo, or exported skill
 
 ## How to submit
 
-> **TODO** – decide the mechanism (GitHub Issue form, Microsoft Form, etc.) and drop the link here.
+The exact steps land here before hack day. It'll be quick – a single form.

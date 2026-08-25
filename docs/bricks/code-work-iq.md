@@ -6,11 +6,10 @@ title: Ground on live data with Work IQ
 
 # Ground on live data with Work IQ
 
-**Tool:** Cowork Work IQ + exported markdown
-**Source status:** Code altitude grounding
+**Tool:** Work IQ + exported markdown
 
 <!-- #region guide -->
-Live work data is powerful. It is also the easiest place to lose the whole session. The goal is not to build a full Microsoft Graph integration. The goal is to ground your spec in evidence.
+Live work data is powerful. It is also the easiest place to lose the whole session. The goal is not to build a full Microsoft Graph integration. The goal is to ground your spec in evidence. New to Work IQ? See [what it can see](/bricks/work-iq) first.
 
 ::: warning Do not spend the hack on Graph auth
 A real Graph path means Azure AD app registration, permissions, admin consent questions, MSAL, token cache, and paging. Budget 30-60 minutes. That is most of the hack. Use one of the paths below instead.
@@ -24,7 +23,7 @@ A real Graph path means Azure AD app registration, permissions, admin consent qu
    | --- | --- | --- |
    | A · Cowork Work IQ | You can use your own tenant data. | Ask Cowork to retrieve and summarize, then export the result. |
    | B · Snapshot, do not stream | You need repeatability. | Generate one markdown snapshot from ~30 days of calendar. Regenerate monthly. |
-   | C · Persona pack | You need safe demo data. | Use the Avery Washington persona pack at `/Allfiles/scenario-1-digital-twin/persona-pack/`. |
+   | C · Provided data pack | You need safe demo data. | Use a scenario's data pack – e.g. the Avery Washington persona pack at `/Allfiles/scenario-1-digital-twin/persona-pack/`. |
 
 2. Pull the evidence you need, not everything you can access.
 

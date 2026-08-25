@@ -11,5 +11,5 @@ Scenario 3 is still being finalized with the leadership team and business manage
 :::
 
 - 🚧 [Scenario 1 – The Digital Twin](/scenarios/scenario-1) – **work in progress**
-- 🚧 [Scenario 2 – The Greenlight](/scenarios/scenario-2) – **work in progress**
+- 🚧 [Scenario 2 – Dispatch](/scenarios/scenario-2) – **work in progress**
 - [Scenario 3 (TBD)](/scenarios/scenario-3)
