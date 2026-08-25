@@ -90,6 +90,12 @@ Once it's linked, sign in as that personal account rather than your EMU one, go 
 Cowork runs on your Microsoft 365 account and doesn't touch GitHub. You're already set.
 :::
 
+## Copilot CLI and Copilot Chat are one product {#cli-vs-chat}
+
+One subscription and one GitHub sign-in cover both. They run the same models, and the customization files carry across unchanged: an agent skill in `.github/skills/<name>/SKILL.md`, or a custom agent in `.github/agents/`, behaves the same whether Copilot reads it from a terminal or from the VS Code chat panel. What differs is the surface. VS Code adds inline completions and awareness of the file you have open. The CLI adds everything that runs without a person at the keyboard: a prompt passed in with `-p`, piped input, scheduled runs.
+
+The CLI also sits further down the stack than its name suggests. VS Code's agent mode runs on the Copilot SDK, and that SDK talks to the CLI over JSON-RPC, so the same binary is doing the work either way. That's why the CLI is in both Scout's and Code's setup. Scout runs it behind the apps it builds, and the Code starters call it directly, because the SDK is Node only and a Python program reaches Copilot by shelling out to `copilot`.
+
 ## 🔵 Scout {#scout}
 
 **You'll build with:** Microsoft Scout
