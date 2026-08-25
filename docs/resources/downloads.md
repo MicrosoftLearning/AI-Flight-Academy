@@ -25,10 +25,6 @@ Everything for AI Flight Academy scenarios. Files download straight from this si
 
 **Installing it:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill** → pick the downloaded `SKILL.md`. Then **start a new task** - skills are only discovered when a task begins.
 
-::: warning Upload the .md, not a .zip
-Tested on a live tenant: `.zip` skill uploads fail silently. `SKILL.md` is self-contained, so there's nothing else to bundle.
-:::
-
 ### 🔵 Scout
 
 <div class="lab-grid lab-grid-2">

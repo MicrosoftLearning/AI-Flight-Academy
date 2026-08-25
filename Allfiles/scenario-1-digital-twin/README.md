@@ -8,7 +8,7 @@ Still being built and tested. Contents may change before the event.
 
 | Folder | What it is | Who uses it |
 | --- | --- | --- |
-| `my-twin/` | The Cowork twin. Reads your mail, Teams and calendar through Work IQ, then writes and installs itself. Ships as a single `SKILL.md` - Cowork's skill upload rejects `.zip`. | 🟢 Cowork |
+| `my-twin/` | The Cowork twin. Reads your mail, Teams and calendar through Work IQ, then writes and installs itself. Ships as a single `SKILL.md`, which is all it needs. | 🟢 Cowork |
 | `scout/my-twin/` | The Scout twin. Same idea, plus an `extensions/` folder with one worked example of something built on top. Ships as a `.zip` because the folder matters. | 🔵 Scout |
 | `twin-code-starter/` | The Code twin. One call that reaches it from Python, a worked example that runs headless, and an MCP server. The Copilot CLI discovers the skill from `.github/skills/`. | 🟣 Code |
 | `persona-pack/` | Avery Washington - synthetic marketing manager with a fake inbox, calendar, and goals doc. Not used by a scenario 1 altitude any more; kept as safe demo data, and referenced by the Work IQ guide. | - |

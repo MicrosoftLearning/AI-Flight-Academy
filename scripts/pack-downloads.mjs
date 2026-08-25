@@ -194,7 +194,9 @@ for (const j of jobs) {
   console.log(`  ${j.zip.padEnd(28)} ${(statSync(dest).size / 1024).toFixed(1)} KB`);
 }
 
-// The Cowork twin ships as a single .md - Cowork's skill upload rejects .zip.
+// The Cowork twin is a single self-contained SKILL.md, so it ships as-is.
+// Cowork also accepts .zip/.skill archives with SKILL.md at the root, which is
+// what the other Cowork skills use because they carry reference files.
 const singles = [
   {
     src: join(root, "Allfiles", "scenario-1-digital-twin", "my-twin", "SKILL.md"),

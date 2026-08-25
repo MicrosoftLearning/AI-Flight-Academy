@@ -8,7 +8,7 @@ Still being built and tested. Contents may change before the event.
 
 | Folder | What it is | Who uses it |
 | --- | --- | --- |
-| `the-greenlight/` | A Cowork skill that seats a council of audience personas, scores the same content once per audience, debates the conflicts, and greenlights a transformation plan. Ships as `SKILL.md` plus its reference verbs - Cowork's skill upload rejects `.zip`. | 🟢 Cowork |
+| `the-greenlight/` | A Cowork skill that seats a council of audience personas, scores the same content once per audience, debates the conflicts, and greenlights a transformation plan. Ships as `SKILL.md` plus its reference verbs. | 🟢 Cowork |
 | `data-pack/` | Five content pieces (`P1`-`P5`), four audience cards (the council seats), and a style guide. The synthetic data for the no-personal-data path. | Both |
 | `the-greenlight-starter/` | Council-runner skeleton and deterministic checks for the code path. The contract, not the solution. | 🟣 Code |
 

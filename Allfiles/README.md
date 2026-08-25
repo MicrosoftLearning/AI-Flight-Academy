@@ -31,6 +31,7 @@ That means:
 4. Link them from `docs/resources/downloads.md` and the relevant build page.
 
 ::: tip Single files vs zips
-Some assets can't be zipped. Cowork's skill upload silently rejects `.zip`, so
-`SKILL.md` files must ship on their own - that's what `singles` is for.
+Cowork accepts a `.md`, or a `.zip`/`.skill` archive with `SKILL.md` at its root
+plus companion files. Use `singles` when a skill is genuinely one self-contained
+file and a zip would add nothing; use `jobs` when it has references beside it.
 :::
