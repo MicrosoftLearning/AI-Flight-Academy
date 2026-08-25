@@ -1,5 +1,5 @@
 # AUDIENCE CARD · AC-02
-## 🏦 Compliance & Risk Lead – Contoso Financial
+## 🏦 Compliance & Risk Lead - Contoso Financial
 
 > **In one line:** Reviews what 900 advisors say to clients. Can block an entire rollout, and has. Reads everything twice.
 
@@ -9,7 +9,7 @@
 
 | | |
 |---|---|
-| **Business unit** | Contoso Financial – wealth management and retail banking, ~9,000 employees |
+| **Business unit** | Contoso Financial - wealth management and retail banking, ~9,000 employees |
 | **Their remit** | Supervisory review across 900 client-facing advisors in three regions |
 | **Measured on** | Zero regulatory findings · time-to-close on escalations · advisor attestation rates · audit readiness |
 | **Reports to** | Chief Compliance Officer → General Counsel |
@@ -27,12 +27,12 @@
 
 | | |
 |---|---|
-| ✅ **Fluent – assume it, don't explain it** | Supervisory obligations · records retention · suitability · disclosure requirements · audit trails · what "evidence" means · Excel to a genuinely high level |
+| ✅ **Fluent - assume it, don't explain it** | Supervisory obligations · records retention · suitability · disclosure requirements · audit trails · what "evidence" means · Excel to a genuinely high level |
 | 🟣 **Comfortable** | Reading a system diagram · understanding data flow at a conceptual level · asking IT the right questions |
 | 🟡 **Shaky** | Anything requiring configuration · how a model actually produces an answer |
 | ❌ **Never done** | Written code · used a terminal · touched a repo |
 
-> ⚠️ **They are not non-technical.** Content that over-simplifies reads as evasive – and evasive reads as *hiding something.* That is the fastest way to lose this audience.
+> ⚠️ **They are not non-technical.** Content that over-simplifies reads as evasive - and evasive reads as *hiding something.* That is the fastest way to lose this audience.
 
 ## Tools and access
 
@@ -67,7 +67,7 @@
 |---|---|
 | **Learns by** | Reading the document. Twice. With a highlighter. |
 | **Will actually finish** | A ten-page assessment, if it's structured and the findings are traceable |
-| **Will not finish** | A video. Not because it's long – because it can't be cited, skimmed, or filed. |
+| **Will not finish** | A video. Not because it's long - because it can't be cited, skimmed, or filed. |
 | **Time budget for learning** | 30+ minutes for the right document. Zero for the wrong one. |
 | **Passes it on by** | Circulating the document with their annotations attached |
 | ⭐ **Best format** | A written, versioned, dated artifact with an owner |
@@ -92,7 +92,7 @@
 | **Tolerance for a confident guess** | **Zero.** A plausible-sounding unsupported claim is worse than an admission of uncertainty. |
 | **Worst realistic outcome** | A regulatory finding, a consent order, advisors barred from a tool mid-quarter, their own name in a deficiency letter |
 
-> **The inversion that trips up content written for other audiences:** for this reader, *"Copilot can help you draft client communications"* is not a benefit. It is an **unsupervised-communication risk** that needs a retention and review answer in the same breath. Content that leads with the benefit and never gets to the control has failed them completely – no matter how well written it is.
+> **The inversion that trips up content written for other audiences:** for this reader, *"Copilot can help you draft client communications"* is not a benefit. It is an **unsupervised-communication risk** that needs a retention and review answer in the same breath. Content that leads with the benefit and never gets to the control has failed them completely - no matter how well written it is.
 
 ## What makes them bounce
 
@@ -100,7 +100,7 @@
 |---|---|
 | Enthusiasm where a control should be | |
 | *"Always review AI output before sending"* as the entire safeguard | Puts the control on the human and calls it done |
-| Vague ownership – *"work with your compliance team"* | **They are the compliance team** |
+| Vague ownership - *"work with your compliance team"* | **They are the compliance team** |
 | Claims about data handling with no reference to where the data goes | |
 | Being told the tool is "secure" without saying by what standard | |
 | Marketing tone | Instant credibility loss |
@@ -110,7 +110,7 @@
 | | |
 |:---:|---|
 | 1 | What data goes in, where it's stored, how long it's kept |
-| 2 | Which existing control this falls under – or that a new one is needed |
+| 2 | Which existing control this falls under - or that a new one is needed |
 | 3 | What's logged, and whether they can retrieve it in an exam |
 | 4 | What an advisor could do with this that they shouldn't |
 | 5 | Who owns the answer when something goes wrong |
@@ -124,7 +124,7 @@
 | this falls under Policy 4.2 | make sure you follow policy |
 | logged and attributable to the advisor | tracked |
 | unsupervised communication risk | potential issue |
-| **we don't yet have a control for this** | *(silence)* – say it plainly, they will respect it |
+| **we don't yet have a control for this** | *(silence)* - say it plainly, they will respect it |
 
 **Assume without gloss:** suitability · attestation · retention · supervisory review · finding · exam · disclosure · books and records
 

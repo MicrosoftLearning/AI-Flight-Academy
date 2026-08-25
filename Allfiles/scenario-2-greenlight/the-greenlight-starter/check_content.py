@@ -1,9 +1,9 @@
 """
-check_content.py — TODO  ·  Path: Deterministic checks + expansion
+check_content.py - TODO  ·  Path: Deterministic checks + expansion
 ==================================================================
 
 The dashboard shells out to this script to show the *countable* half of the
-review — checks.py — next to the model's verdicts, so a code-caught FAIL sits
+review - checks.py - next to the model's verdicts, so a code-caught FAIL sits
 right beside (or against) whatever the model says. Right now it's a stub: build
 the bridge, then expand the checks.
 
@@ -19,7 +19,7 @@ WHAT TO BUILD
        ]}
     ]}
 
-TIPS  (a starting approach for you / your Copilot session — not the only way)
+TIPS  (a starting approach for you / your Copilot session - not the only way)
   1. The heavy lifting already exists in greenlightlib:
         seats   = greenlightlib.load_seats()                  # reads council/*.json
         results = greenlightlib.run_checks_for_seat(seat, text)  # runs the wired checks
@@ -27,7 +27,7 @@ TIPS  (a starting approach for you / your Copilot session — not the only way)
      reshaping those into the JSON above (one entry per seat).
   2. Read the file at content_path (utf-8) into `text` first.
   3. A seat with no wired checks should still appear, with an empty "checks" list
-     — the dashboard shows it as "model-only".
+     - the dashboard shows it as "model-only".
   4. Keep it best-effort: on any error print {"error": "..."} and exit 1. The
      dashboard treats a failure as "no checks" and never blocks the model review.
 
@@ -45,7 +45,7 @@ from __future__ import annotations
 import json
 import sys
 
-import greenlightlib as g  # noqa: F401  — load_seats() + run_checks_for_seat() do the work
+import greenlightlib as g  # noqa: F401  - load_seats() + run_checks_for_seat() do the work
 
 
 def check_file(content_path: str) -> dict:
@@ -63,6 +63,6 @@ if __name__ == "__main__":
         sys.exit(1)
     try:
         print(json.dumps(check_file(sys.argv[1])))
-    except Exception as e:  # noqa: BLE001 — the caller only has stdout; surface the reason there
+    except Exception as e:  # noqa: BLE001 - the caller only has stdout; surface the reason there
         print(json.dumps({"error": str(e)}))
         sys.exit(1)

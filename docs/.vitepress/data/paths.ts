@@ -39,7 +39,7 @@ export const tracks: Track[] = [
     sub: "Copilot-Crafted",
     tool: "Microsoft 365 Copilot + Cowork",
     buildsVerb: "Builds with",
-    desc: "**Microsoft 365 Copilot Cowork** – just describe what you need. **Work IQ** pulls in your work context automatically.",
+    desc: "**Microsoft 365 Copilot Cowork** - just describe what you need. **Work IQ** pulls in your work context automatically.",
     guidesLink: "/bricks/#cowork",
     guides: [
       { text: "Install a provided skill", link: "/bricks/cowork-install-skill" },
@@ -58,7 +58,7 @@ export const tracks: Track[] = [
     sub: "Agent-Orchestrated",
     tool: "Microsoft Scout",
     buildsVerb: "Builds with",
-    desc: "**Microsoft Scout** – describe what you want and Scout builds it, grounded in your work through **Work IQ** and running against **GitHub Copilot CLI**.",
+    desc: "**Microsoft Scout** - describe what you want and Scout builds it, grounded in your work through **Work IQ** and running against **GitHub Copilot CLI**.",
     guidesLink: "/bricks/#scout",
     guides: [
       { text: "Set up Microsoft Scout", link: "/bricks/scout-setup" },

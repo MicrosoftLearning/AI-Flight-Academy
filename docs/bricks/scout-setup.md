@@ -14,11 +14,11 @@ Scout is an agentic assistant that can read your work through Work IQ, run multi
 ## Steps
 
 1. Open **Microsoft Scout**.
-2. Confirm you're signed in – Scout works from what your account can already see, so nothing else needs connecting.
+2. Confirm you're signed in - Scout works from what your account can already see, so nothing else needs connecting.
 3. Start a **new session**. Skills are discovered when a session begins, so anything you install mid-session won't be visible until you start a fresh one.
 4. Check the tools you'll need are working before you rely on them:
-   - **GitHub Copilot CLI** – run `copilot --version`. If it's missing: `npm install -g @github/copilot`, then sign in.
-   - **Node** – run `node --version`. Anything current is fine.
+   - **GitHub Copilot CLI** - run `copilot --version`. If it's missing: `npm install -g @github/copilot`, then sign in.
+   - **Node** - run `node --version`. Anything current is fine.
 5. Ask Scout something small that touches your real work, to confirm grounding is live:
 
    ```text
@@ -42,14 +42,14 @@ If you're working from your own mail and calendar, keep it on your own screen. D
 Skills give Scout a repeatable method. To add one:
 
 1. Go to **Extensions** and choose **Import**.
-2. Drag in the skill **folder** – the one containing `SKILL.md`, not the file on its own.
+2. Drag in the skill **folder** - the one containing `SKILL.md`, not the file on its own.
 3. Start a **new session** so Scout picks it up.
 
 **You'll know it worked when...** the skill shows up in your extensions list and Scout uses it when you name it in a request.
 
 ## Loading a data pack
 
-Some scenarios hand you a **data pack** – sample files to work from instead of (or alongside) your own. Add the pack's folder to your workspace, or upload the specific files in a new session and name them in your request.
+Some scenarios hand you a **data pack** - sample files to work from instead of (or alongside) your own. Add the pack's folder to your workspace, or upload the specific files in a new session and name them in your request.
 
 **You'll know it worked when...** Scout can quote or list the pack's contents back to you.
 

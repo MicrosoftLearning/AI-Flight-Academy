@@ -50,12 +50,12 @@ ask_json("Using my twin: rate this change. Keys: verdict, reason.")
 ```
 
 `ask_json` appends the JSON instruction, then tries progressively harder to find JSON in
-the reply — as-is, inside a code fence, then the outermost braces.
+the reply - as-is, inside a code fence, then the outermost braces.
 
 ## Two things that will shape what you build
 
 **A call takes 20 to 60 seconds.** It is a full agent turn, not a completion. Anything
-that calls the twin in a loop needs a bound on how many times it runs — review one diff,
+that calls the twin in a loop needs a bound on how many times it runs - review one diff,
 not forty files.
 
 **Ask for JSON when a program reads the answer.** Prose is fine for a terminal and
@@ -69,7 +69,7 @@ git diff main... | python examples/review_diff.py --stdin
 ```
 
 Reviews a diff against `persona.md`, prints the notes, and **exits 1 if the twin would
-block it** — which is what makes it work as a pre-commit hook or a CI step:
+block it** - which is what makes it work as a pre-commit hook or a CI step:
 
 ```sh
 # .git/hooks/pre-commit

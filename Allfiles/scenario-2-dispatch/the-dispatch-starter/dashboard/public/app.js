@@ -1,4 +1,4 @@
-// Dispatch dashboard — client logic.
+// Dispatch dashboard - client logic.
 // Talks to the lean routing API in server.js:
 //   GET  /api/council            -> the seated teams
 //   POST /api/dispatch           -> drop/paste a request, start a routing run
@@ -28,7 +28,7 @@ function renderCouncil(seats) {
       <span class="team-emoji">${s.emoji || '🏷️'}</span>
       <span class="team-name">${escapeHtml(s.name || s.label)}</span>
       <span class="team-bias">${escapeHtml(s.formatBias || '')}</span>
-    </div>`).join('') || '<em>No teams seated — add a council/*.json.</em>';
+    </div>`).join('') || '<em>No teams seated - add a council/*.json.</em>';
 }
 
 async function dispatch(formData) {
@@ -67,7 +67,7 @@ function showGate(gate) {
   el.hidden = false;
   if (!gate || gate.status === 'todo') { el.className = 'gate-badge gate-unknown'; el.textContent = 'intake gate not built'; }
   else if (gate.routable) { el.className = 'gate-badge gate-ok'; el.textContent = '✅ routable'; }
-  else { el.className = 'gate-badge gate-warn'; el.textContent = `⚠️ sharpen first — missing ${(gate.missing || []).join(', ') || 'fields'}`; }
+  else { el.className = 'gate-badge gate-warn'; el.textContent = `⚠️ sharpen first - missing ${(gate.missing || []).join(', ') || 'fields'}`; }
 }
 
 function poll(jobId) {
@@ -93,15 +93,15 @@ function renderResult(r) {
   $('decision-panel').hidden = false;
   $('decision-panel').innerHTML = `
     <div class="decision-grid">
-      <div class="decision-field"><span class="df-label">Owner — who fields it</span><span class="df-value owner">${escapeHtml(d.owner || '—')}</span></div>
-      <div class="decision-field"><span class="df-label">Audience</span><span class="df-value">${(d.audience || []).map((a) => `<span class="chip">${escapeHtml(a)}</span>`).join(' ') || '—'}</span></div>
-      <div class="decision-field"><span class="df-label">Disposition</span><span class="df-value"><span class="disp disp-${escapeAttr(d.disposition || '')}">${escapeHtml(d.disposition || '—')}</span></span></div>
+      <div class="decision-field"><span class="df-label">Owner - who fields it</span><span class="df-value owner">${escapeHtml(d.owner || '-')}</span></div>
+      <div class="decision-field"><span class="df-label">Audience</span><span class="df-value">${(d.audience || []).map((a) => `<span class="chip">${escapeHtml(a)}</span>`).join(' ') || '-'}</span></div>
+      <div class="decision-field"><span class="df-label">Disposition</span><span class="df-value"><span class="disp disp-${escapeAttr(d.disposition || '')}">${escapeHtml(d.disposition || '-')}</span></span></div>
     </div>
     <div class="plan-block">
-      <span class="df-label">The plan — build once, reuse across teams</span>
+      <span class="df-label">The plan - build once, reuse across teams</span>
       <div class="deliverables">${(d.plan || []).map(renderDeliverable).join('') || '<em>no deliverables</em>'}</div>
     </div>
-    <div class="next-action"><span class="df-label">Next</span> &nbsp;${escapeHtml(d.next_action || '—')}</div>`;
+    <div class="next-action"><span class="df-label">Next</span> &nbsp;${escapeHtml(d.next_action || '-')}</div>`;
   if (r.debate) { $('debate').hidden = false; $('debate').innerHTML = `<strong>Where the room split:</strong> ${escapeHtml(r.debate)}`; }
   $('act-row').hidden = false;
   renderPositions(r.positions || []);

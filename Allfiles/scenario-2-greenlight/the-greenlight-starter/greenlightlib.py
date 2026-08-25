@@ -1,12 +1,12 @@
 """
-greenlightlib — plumbing for the greenlight council runner.
+greenlightlib - plumbing for the greenlight council runner.
 
 Seats are DATA (council/*.json). This module loads them, runs the deterministic
 checks wired to each criterion, validates that every score carries evidence, and
 rolls per-seat scorecards into a coverage matrix.
 
 The MODEL does the scoring (the dashboard and mcp_server.py drive that). This is
-the countable half — the part a language model should not be doing.
+the countable half - the part a language model should not be doing.
 """
 
 from __future__ import annotations
@@ -29,7 +29,7 @@ DEFAULT_RUBRIC = ROOT.parent / "the-greenlight" / "reference" / "solo-rubric.jso
 
 
 def load_seats(council_dir: Path | str = ROOT / "council") -> list[dict]:
-    """Load every seated audience. `*.example.json` is illustrative and is skipped —
+    """Load every seated audience. `*.example.json` is illustrative and is skipped -
     copy it to `*.json` (drop `.example`) to seat it."""
     council_dir = Path(council_dir)
     seats = []
@@ -41,7 +41,7 @@ def load_seats(council_dir: Path | str = ROOT / "council") -> list[dict]:
 
 
 def load_output_contract(rubric_path: Path | str = DEFAULT_RUBRIC) -> dict:
-    """Read the solo critic's output_contract. The control is read-only — never edit it."""
+    """Read the solo critic's output_contract. The control is read-only - never edit it."""
     rubric = json.loads(Path(rubric_path).read_text(encoding="utf-8"))
     return rubric["output_contract"]
 
@@ -100,7 +100,7 @@ if __name__ == "__main__":
     if not seats:
         example = ROOT / "council" / "retail.example.json"
         seats = [json.loads(example.read_text(encoding="utf-8"))] if example.exists() else []
-        print("(no seated council yet — using retail.example.json for this smoke test)")
+        print("(no seated council yet - using retail.example.json for this smoke test)")
     article = ROOT.parent / "data-pack" / "content" / "P4-exec-summary.md"
     if seats and article.exists():
         text = article.read_text(encoding="utf-8")

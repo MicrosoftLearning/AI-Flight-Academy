@@ -4,7 +4,7 @@
 
 **2 hours. Any tool. Start here.**
 
-> **This is the alternate take on Scenario 2.** *The Critic* teaches one reviewer to know one audience well. *The Greenlight* seats a small room of audiences who each judge the same asset for their own goal, back it up with evidence, and decide what to build. Same idea – making an asset work for real, specific people – a different, more orchestration-heavy approach. Pick one; they're separate.
+> **This is the alternate take on Scenario 2.** *The Critic* teaches one reviewer to know one audience well. *The Greenlight* seats a small room of audiences who each judge the same asset for their own goal, back it up with evidence, and decide what to build. Same idea - making an asset work for real, specific people - a different, more orchestration-heavy approach. Pick one; they're separate.
 
 ---
 
@@ -12,22 +12,22 @@
 
 Our agents produce assets, and our checks tell us whether they're accurate, clear, and roughly the right level. They pass almost everything.
 
-That's because they review with one imagined reader – a capable generalist who doesn't really exist. So "a good asset aimed at the wrong reader" sails through. A detailed governance write-up handed to a busy store lead comes back "revise" instead of "this person will never read this."
+That's because they review with one imagined reader - a capable generalist who doesn't really exist. So "a good asset aimed at the wrong reader" sails through. A detailed governance write-up handed to a busy store lead comes back "revise" instead of "this person will never read this."
 
 ## Your job
 
 > One reviewer keeps one reader in mind. Real assets have to work for several at once.
-> Seat the room. Let every audience judge it for *their* goal – and decide together what to build.
+> Seat the room. Let every audience judge it for *their* goal - and decide together what to build.
 
-You're building a small council: two or more audiences who each say what they need, back every point with a quote and a reason, talk through where they disagree, and end with a plan – what to make, in the format each audience would actually use.
+You're building a small council: two or more audiences who each say what they need, back every point with a quote and a reason, talk through where they disagree, and end with a plan - what to make, in the format each audience would actually use.
 
 ---
 
 ## The one idea that makes it work
 
-> Each thing an audience cares about protects *that audience's goal* – not "is this good?" but "will this get *my* people where they need to go?"
+> Each thing an audience cares about protects *that audience's goal* - not "is this good?" but "will this get *my* people where they need to go?"
 
-Every audience judges the same asset for a different result. That's why the room disagrees, and the disagreement is the useful part. One reviewer has one goal in mind; a room has one per audience – same asset, several verdicts.
+Every audience judges the same asset for a different result. That's why the room disagrees, and the disagreement is the useful part. One reviewer has one goal in mind; a room has one per audience - same asset, several verdicts.
 
 ---
 
@@ -35,9 +35,9 @@ Every audience judges the same asset for a different result. That's why the room
 
 | | |
 |:---:|---|
-| **1** | **Pick your altitude** – 🟢 Cowork · 🔵 Microsoft Scout · 🟣 VS Code |
+| **1** | **Pick your altitude** - 🟢 Cowork · 🔵 Microsoft Scout · 🟣 VS Code |
 | **2** | **Install the skill** → add the [`the-greenlight/`](.) folder to your tool |
-| **3** | **Say** *"seat the council"* – or ask *"what do I do next?"* to be walked through it |
+| **3** | **Say** *"seat the council"* - or ask *"what do I do next?"* to be walked through it |
 
 ---
 
@@ -49,9 +49,9 @@ Every audience judges the same asset for a different result. That's why the room
 | **`THE-COUNCIL.md`** | **Your file to edit.** Your audiences and what each one needs live here. |
 | `reference/next.md` | What to do now, whether you're done, what to hand in |
 | `reference/seat.md` | Add an audience and what it cares about |
-| `reference/solo.md` | The solo critic – one imagined reader, already scored. Don't edit it. |
-| `reference/convene.md` | The review – every audience judges a piece, then you compare |
-| `reference/greenlight.md` | The plan – turn the gaps into what to make, then check it |
+| `reference/solo.md` | The solo critic - one imagined reader, already scored. Don't edit it. |
+| `reference/convene.md` | The review - every audience judges a piece, then you compare |
+| `reference/greenlight.md` | The plan - turn the gaps into what to make, then check it |
 | `../data-pack/` | 5 sample assets · 4 example audience profiles · style guide |
 
 ---
@@ -67,7 +67,7 @@ Every round ends with another review. You won't know if the room got sharper unt
 ## How it fits together
 
 ```
-        THE PIECE  (a blog · a doc · a video script · P1–P5)
+        THE PIECE  (a blog · a doc · a video script · P1-P5)
                           │
         ┌─────────────────┼─────────────────┐
      🛒 Retail         🏦 Compliance      🏭 Manufacturing   ← each audience judges it
@@ -87,7 +87,7 @@ Every round ends with another review. You won't know if the room got sharper unt
      🛒 Pass   🏭 Pass   →   ✅ Good to go
 ```
 
-The review scores the piece; the check scores the plan – same needs both times. The room that turns a piece down is the room that clears its replacement.
+The review scores the piece; the check scores the plan - same needs both times. The room that turns a piece down is the room that clears its replacement.
 
 ---
 
@@ -115,7 +115,7 @@ The skill will tell you where your track finishes.
 
 ## The check worth repeating
 
-> If every audience reaches the same verdict on every piece, you don't have a room – you have one reviewer wearing different hats. Either the audiences aren't judging for different goals, or their needs aren't reading the profiles.
+> If every audience reaches the same verdict on every piece, you don't have a room - you have one reviewer wearing different hats. Either the audiences aren't judging for different goals, or their needs aren't reading the profiles.
 
 ---
 

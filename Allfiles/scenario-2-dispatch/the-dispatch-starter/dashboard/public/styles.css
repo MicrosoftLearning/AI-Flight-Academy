@@ -118,7 +118,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 24px 28px 60px; }
 .seat-card.state-reject { box-shadow: 0 0 0 1px rgba(232,93,93,0.25); }
 
 /* A card whose badge/scorecard reflects the remediation plan's drafted
-   replacement rather than the original piece — kept visually distinct so it's
+   replacement rather than the original piece - kept visually distinct so it's
    never mistaken for "the original document now passes". Sits in the bottom
    corner rather than the top so it never crowds the seat's title. */
 .seat-card[data-via-plan]::after {
@@ -318,7 +318,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 24px 28px 60px; }
   margin-bottom: 24px;
 }
 /* Grid items default to min-width: auto, which lets a nowrap child's full
-   intrinsic width force the whole item (and the page) to overflow — that's
+   intrinsic width force the whole item (and the page) to overflow - that's
    what was pushing the "Verdict on <long URL>" heading past the panel edge
    instead of letting it truncate. min-width: 0 lets these panels actually
    shrink to their track size so the truncate-fade span inside can do its job. */
@@ -391,7 +391,7 @@ main { max-width: 1180px; margin: 0 auto; padding: 24px 28px 60px; }
 .heading-prefix { flex-shrink: 0; white-space: nowrap; }
 
 /* Truncates a long label on one line (never wraps, never overlaps the row
-   below it) and only applies a right-edge fade when it's actually cut off —
+   below it) and only applies a right-edge fade when it's actually cut off -
    short labels stay perfectly crisp. Full text is always on the title tooltip. */
 .truncate-fade {
   flex: 1 1 auto;

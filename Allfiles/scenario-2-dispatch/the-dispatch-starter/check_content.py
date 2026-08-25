@@ -1,11 +1,11 @@
 """
-check_content.py — TODO  ·  Path: the intake gate (deterministic check)
+check_content.py - TODO  ·  Path: the intake gate (deterministic check)
 =======================================================================
 
 Before the room routes a request, the dashboard shells out to THIS script to
 answer one countable question: **is the request even routable?** A request
 missing its audience, topic, or desired outcome (a rough IDEA-…) shouldn't be
-confidently routed — it should be sharpened first. That's a check, not a vibe,
+confidently routed - it should be sharpened first. That's a check, not a vibe,
 and it's the honest gate that keeps the room from guessing.
 
 Right now it's a stub. Build the gate, then expand it.
@@ -17,9 +17,9 @@ WHAT TO BUILD
     {"routable": false,
      "present": ["requester", "audience", "topic"],
      "missing": ["outcome"],
-     "detail": "Missing a desired outcome — sharpen it before routing."}
+     "detail": "Missing a desired outcome - sharpen it before routing."}
 
-TIPS  (one approach — not the only one)
+TIPS  (one approach - not the only one)
   1. dispatchlib does the parsing:
         import dispatchlib as d
         fields = d.parse_request(text)                 # {label -> value}
@@ -31,10 +31,10 @@ TIPS  (one approach — not the only one)
      treats a failure as "couldn't check" and never blocks the room.
 
 THEN EXPAND (the guardrail half)
-  - Add a soft check for a deadline/motion — present-but-not-required, so a
+  - Add a soft check for a deadline/motion - present-but-not-required, so a
     missing one is a warning, not a blocker.
   - Add a routing-rules guardrail from ../dispatch-data/policy/ROUTING-RULES.md
-    that runs on the room's DECISION, not just the request — e.g. "a credential
+    that runs on the room's DECISION, not just the request - e.g. "a credential
     deliverable needs stable objectives", or "a partner audience must involve
     Field & Partner". Those are the rules that keep a *decision* honest.
 
@@ -46,7 +46,7 @@ from __future__ import annotations
 import json
 import sys
 
-import dispatchlib as d  # noqa: F401 — parse_request / field_value / is_placeholder do the work
+import dispatchlib as d  # noqa: F401 - parse_request / field_value / is_placeholder do the work
 
 
 def check_request(request_path: str) -> dict:
@@ -65,6 +65,6 @@ if __name__ == "__main__":
         sys.exit(1)
     try:
         print(json.dumps(check_request(sys.argv[1])))
-    except Exception as e:  # noqa: BLE001 — the caller only has stdout; surface the reason there
+    except Exception as e:  # noqa: BLE001 - the caller only has stdout; surface the reason there
         print(json.dumps({"error": str(e)}))
         sys.exit(1)

@@ -5,7 +5,7 @@ title: Which altitude is right for me?
 # Which altitude is right for me?
 
 ::: tip Fly at the altitude that suits you
-The altitudes ask different things of you. Cowork is the place to start if you'd rather not touch a terminal. Scout goes further – you describe what you want and it builds it for you, grounded in your work. Code goes furthest and assumes you're at home writing agents yourself.
+The altitudes ask different things of you. Cowork is the place to start if you'd rather not touch a terminal. Scout goes further - you describe what you want and it builds it for you, grounded in your work. Code goes furthest and assumes you're at home writing agents yourself.
 
 Pick where you'll actually get something done.
 :::
@@ -23,7 +23,7 @@ Pick where you'll actually get something done.
 - **You live in a terminal or VS Code?** 🟣 **Code**. Expect to write code and debug your own setup.
 
 ::: info The core artifact is the same everywhere
-Every altitude produces the same portable spec – that's the part you keep and reuse. What changes is how much you build around it.
+Every altitude produces the same portable spec - that's the part you keep and reuse. What changes is how much you build around it.
 :::
 
 Ready? [**Pick your altitude and scenario →**](/#start-here)

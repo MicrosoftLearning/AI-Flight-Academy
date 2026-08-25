@@ -1,15 +1,15 @@
-# Intake fields — what a request needs to be routable
+# Intake fields - what a request needs to be routable
 
 Before the room can route a request, the request has to *say enough*. These are the fields the **intake-completeness check** looks for. A formed `RQ-…` has them all; a rough `IDEA-…` is missing several on purpose.
 
 | Field | Required? | What "present" means |
 |---|---|---|
 | **Requester** | Required | A person or team to go back to |
-| **Stated audience** | Required | Who it's for — even if the room later repoints it |
+| **Stated audience** | Required | Who it's for - even if the room later repoints it |
 | **Topic** | Required | A real subject, not a placeholder like "AI stuff" |
-| **Desired outcome** | Required | What success looks like for the audience — a capability or decision, not "a thing" |
+| **Desired outcome** | Required | What success looks like for the audience - a capability or decision, not "a thing" |
 | **Deadline / motion** | Recommended | A date or a trigger; its absence is a flag, not a blocker |
-| **Trigger** | Recommended | Why now — a launch, a pain, a push |
+| **Trigger** | Recommended | Why now - a launch, a pain, a push |
 
 ## The rule the check enforces
 

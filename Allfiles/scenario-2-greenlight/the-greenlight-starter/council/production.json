@@ -2,7 +2,7 @@
   "seat_id": "production",
   "audience": "🏭 Production Manager",
   "card": "AC-04",
-  "outcome": "Protect uptime — get shift handover and the morning-meeting summary without costing line time, in a way a night-shift supervisor can use with nobody around to ask.",
+  "outcome": "Protect uptime - get shift handover and the morning-meeting summary without costing line time, in a way a night-shift supervisor can use with nobody around to ask.",
   "thresholds": { "SHIP": 2.5, "REVISE": 1.5, "REJECT": 1.5 },
   "criteria": [
     {
@@ -16,7 +16,7 @@
         "2": "Works from the floor when the connection holds.",
         "3": "Works from the floor terminal, needs no install, and states the degraded-mode answer when the connection drops."
       },
-      "watch_for": "'Connect Copilot to your production data' — that's an OT change request they don't own, 6–8 weeks out.",
+      "watch_for": "'Connect Copilot to your production data' - that's an OT change request they don't own, 6–8 weeks out.",
       "checks": [
         { "fn": "check_requires_install", "args": {} }
       ]
@@ -32,7 +32,7 @@
         "2": "Fits the window and is followable standing.",
         "3": "A job aid that lives at the terminal, or a silent-captioned clip under two minutes."
       },
-      "watch_for": "Narration-only video — unusable with hearing protection on a loud floor.",
+      "watch_for": "Narration-only video - unusable with hearing protection on a loud floor.",
       "checks": [
         { "fn": "check_reading_time", "args": { "minutes_budget": 15 } }
       ]

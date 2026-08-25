@@ -4,12 +4,12 @@ title: What Work IQ is (and what it can see)
 
 <!-- markdownlint-disable MD013 MD025 -->
 
-# What Work IQ is – and what it can see
+# What Work IQ is - and what it can see
 
 **Applies to:** Cowork · Scout · Code
 
 <!-- #region guide -->
-**Work IQ** is the layer that grounds your agent in your real Microsoft 365 work – with nothing to connect, no auth to build, and no data leaving your tenant. Every altitude uses it; only *how* you reach it differs.
+**Work IQ** is the layer that grounds your agent in your real Microsoft 365 work - with nothing to connect, no auth to build, and no data leaving your tenant. Every altitude uses it; only *how* you reach it differs.
 
 ## What it can see
 
@@ -25,7 +25,7 @@ It never sees more than you can, and nothing is shared outward.
 
 ## Why it matters for the hack
 
-The hard part isn't connecting the data – it's already there. The hard part is asking for the **slice you need, in a shape you can reuse**, and correcting what the model infers. Work IQ shows what you *did*; it can't always tell *why*, so treat anything it drafts as a first pass.
+The hard part isn't connecting the data - it's already there. The hard part is asking for the **slice you need, in a shape you can reuse**, and correcting what the model infers. Work IQ shows what you *did*; it can't always tell *why*, so treat anything it drafts as a first pass.
 
 ## How each altitude reaches it
 

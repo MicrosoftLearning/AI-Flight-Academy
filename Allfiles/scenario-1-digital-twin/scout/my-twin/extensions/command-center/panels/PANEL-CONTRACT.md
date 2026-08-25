@@ -4,7 +4,7 @@ A panel answers **one standing question** about the user's work, and it does it 
 time it runs.
 
 Every panel is one file in `panels/`, named `<id>.md`. It holds a question and how to answer it, and
-**no personal data whatsoever** – no names, no dates, no projects, no quotes.
+**no personal data whatsoever** - no names, no dates, no projects, no quotes.
 
 That last rule is what makes a panel portable. Two people can swap panel files and each get answers
 from their own work, because the file describes a question rather than an answer. Anything specific
@@ -40,10 +40,10 @@ what the tie-breaks are.
 
 ## Item
 
-- **label** – the one line shown on the card
-- **meta** – who and when, in a few words
-- **age** – whole days since it started, or `null`
-- **url** – a link back to the source, or `null`
+- **label** - the one line shown on the card
+- **meta** - who and when, in a few words
+- **age** - whole days since it started, or `null`
+- **url** - a link back to the source, or `null`
 
 ## Empty
 
@@ -63,7 +63,7 @@ user to read, not as an instruction. Say what empty means here, not "no results"
 ### The Empty section is page copy
 
 Everything above **Empty** tells the twin what to do. **Empty is different: it is printed on the
-page word for word.** Write it as a sentence the user reads on a quiet Tuesday – not as a note to
+page word for word.** Write it as a sentence the user reads on a quiet Tuesday - not as a note to
 whoever runs the panel.
 
 > ✅ `Nothing outstanding. Every ask in the last three weeks came back.`
@@ -98,7 +98,7 @@ on every run.
 | --- | --- |
 | `generated` | ISO timestamp of the run |
 | `checked` | How many items were examined. **Not** how many matched |
-| `sources` | One key per source named in **Pull**, with how many items came from each. A source you could not read is `0` – never omit the key |
+| `sources` | One key per source named in **Pull**, with how many items came from each. A source you could not read is `0` - never omit the key |
 | `window` | The scope in plain words, so a stale panel is obvious |
 | `items` | Array, newest problem first unless **Decide** says otherwise. `[]` is a valid answer |
 | `error` | Only if the run failed. A one-line reason. Omit it otherwise |
@@ -108,7 +108,7 @@ something very different from one that examined six, and the page shows both num
 
 **`sources` matters more.** A panel whose **Pull** names mail and Teams, and which only ever reads
 mail, looks identical on the page to one that read both and found nothing. Report every named
-source, including the ones that came back empty or that you could not reach – the page shows a `0`
+source, including the ones that came back empty or that you could not reach - the page shows a `0`
 so the gap is visible instead of silent.
 
 ---
@@ -119,13 +119,13 @@ so the gap is visible instead of silent.
 that answers two things is one you cannot fix without breaking the other half.
 
 **The Pull must be repeatable and bounded.** "Recent mail" is not a scope. "Sent mail, last 21 days"
-is. Name a window in days, and **cap how much it reads** – especially for Teams, which costs one
+is. Name a window in days, and **cap how much it reads** - especially for Teams, which costs one
 call per chat and has no cross-chat search. About 15 chats is a sensible ceiling.
 
 **The Decide must be able to return nothing.** Write the exclusions, not just the matches. A panel
 that can never be empty will pad its results.
 
-**Never name a person, project, date or team.** Describe the *kind* of thing – "anyone outside my
+**Never name a person, project, date or team.** Describe the *kind* of thing - "anyone outside my
 team", "a commitment with a date attached". A panel that names someone will only work for its
 author, and sharing panels is how the deck gets built.
 
@@ -139,7 +139,7 @@ nobody's.
 - [ ] Every required heading is present, in order
 - [ ] `id` matches the filename
 - [ ] The **Pull** names a window in days
-- [ ] The **Pull** caps how much it reads – items, and chats if it touches Teams
+- [ ] The **Pull** caps how much it reads - items, and chats if it touches Teams
 - [ ] The **Decide** says what is excluded, not only what matches
 - [ ] The **Empty** line reads as page copy, not as an instruction
 - [ ] No name, date, project or quote appears anywhere in the file

@@ -35,11 +35,11 @@ A good Cowork run should produce something you can reuse: a brief, a table, a do
 
 Return exactly these sections:
 
-1. Executive summary — 3 bullets max.
-2. Evidence table — one row per source with date, source type, claim, and confidence.
-3. Recommended action — one paragraph.
-4. Risks — bullets, each with owner and mitigation.
-5. Open questions — only questions that block action.
+1. Executive summary - 3 bullets max.
+2. Evidence table - one row per source with date, source type, claim, and confidence.
+3. Recommended action - one paragraph.
+4. Risks - bullets, each with owner and mitigation.
+5. Open questions - only questions that block action.
 
 Formatting rules:
 - Use markdown headings.

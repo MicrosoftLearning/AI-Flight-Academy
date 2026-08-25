@@ -29,7 +29,7 @@ It works whether or not you were present, as long as you already had access to t
 
 **Catching up on something you missed.** Ask Copilot where a conversation landed instead of reading all of it.
 
-**Long threads.** That forty-message chat where a decision got made somewhere in the middle – ask what was decided and who owns it.
+**Long threads.** That forty-message chat where a decision got made somewhere in the middle - ask what was decided and who owns it.
 
 **Passing work on.** Ask for a summary written for the person picking it up next, and paste it where they will see it.
 

@@ -1,17 +1,17 @@
 """
-The Dispatch — MCP Server
+The Dispatch - MCP Server
 =========================
 
-Exposes the seated room so *other* agents — Cowork, Scout, a VS Code chat agent —
+Exposes the seated room so *other* agents - Cowork, Scout, a VS Code chat agent -
 can route a skilling request without going through the dashboard.
 
 Working out of the box (no model call):
-    list_room()               — the seated Global Skilling teams from council/*.json
-    check_routable(request)   — the intake gate: is the request complete enough to route?
-    routing_rules()           — the guardrails a valid routing decision must satisfy
+    list_room()               - the seated Global Skilling teams from council/*.json
+    check_routable(request)   - the intake gate: is the request complete enough to route?
+    routing_rules()           - the guardrails a valid routing decision must satisfy
 
 Starter TODO (the model-calling half):
-    dispatch(request_path)    — each team takes a position, the room lands one routing decision
+    dispatch(request_path)    - each team takes a position, the room lands one routing decision
 
 Run:
     python mcp_server.py         # stdio, for VS Code / Cowork / Scout MCP clients
@@ -86,7 +86,7 @@ def _resolve_request(request: str, request_path: str) -> str:
 def list_room() -> str:
     teams = _load_teams()
     if not teams:
-        return ("No teams seated. Add council/*.json (copy team.example.json) — at least three "
+        return ("No teams seated. Add council/*.json (copy team.example.json) - at least three "
                 "teams that want different things, or the room can't disagree.")
     lines = [f"{len(teams)} seated team(s):", ""]
     for t in teams:
@@ -113,19 +113,19 @@ def check_routable(request: str = "", request_path: str = "") -> str:
         val = d.field_value(fields, name)
         (missing if (val is None or d.is_placeholder(val)) else present).append(name)
     lines = [
-        "ROUTABLE" if not missing else "NOT routable — sharpen first",
+        "ROUTABLE" if not missing else "NOT routable - sharpen first",
         f"present: {', '.join(present) or 'none'}",
         f"missing: {', '.join(missing) or 'none'}",
     ]
     if missing:
-        lines.append("A rough idea like this should be sharpened (pin the missing fields) — "
+        lines.append("A rough idea like this should be sharpened (pin the missing fields) - "
                      "disposition defer or decline-and-redirect, never a confident route.")
     return "\n".join(lines)
 
 
 @mcp.tool(
     description=(
-        "The routing rules a valid decision must satisfy — the guardrails (one primary owner, "
+        "The routing rules a valid decision must satisfy - the guardrails (one primary owner, "
         "audience coverage, explicit build-once/reuse, certify-only-stable, a real next action). "
         "Read-only. No model call."
     )
@@ -133,7 +133,7 @@ def check_routable(request: str = "", request_path: str = "") -> str:
 def routing_rules() -> str:
     try:
         return (POLICY / "ROUTING-RULES.md").read_text(encoding="utf-8")
-    except Exception as e:  # noqa: BLE001 — surface any read problem to the caller
+    except Exception as e:  # noqa: BLE001 - surface any read problem to the caller
         return f"Could not read routing rules (expected at {POLICY / 'ROUTING-RULES.md'}): {e}"
 
 
@@ -150,7 +150,7 @@ def dispatch(request_path: str) -> str:
         "TODO (MCP path): implement dispatch(request_path).\n"
         "  Start: check_routable(request_path=...) for the gate, list_room() for the teams,\n"
         "  routing_rules() for the guardrails.\n"
-        "  The model half is yours — either shell out to the GitHub Copilot CLI (see\n"
+        "  The model half is yours - either shell out to the GitHub Copilot CLI (see\n"
         "  dashboard/server.js buildPrompt + execCopilotJson: `copilot -p <prompt>\n"
         "  --allow-all-tools` returning JSON), or compose the prompt and let the calling\n"
         "  agent reason. Have each team take a position (interest, deliverable, reuse, effort,\n"

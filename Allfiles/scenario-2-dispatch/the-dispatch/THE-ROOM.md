@@ -2,7 +2,7 @@
 
 This is the file you edit. Every team you seat and what it cares about lives here. The skill reads this file when it dispatches a request.
 
-**It starts with two teams on purpose.** Add at least one more that wants something *different* — if every team would route a request the same way, the room can't disagree, and the disagreement is the whole point. The team cards in `../dispatch-data/teams/` are ready to seat; copy the ones you want, or write your own.
+**It starts with two teams on purpose.** Add at least one more that wants something *different* - if every team would route a request the same way, the room can't disagree, and the disagreement is the whole point. The team cards in `../dispatch-data/teams/` are ready to seat; copy the ones you want, or write your own.
 
 ---
 
@@ -19,16 +19,16 @@ Copy the block below for each team. Fill it in yourself, or ask the skill to hel
 ```
 ### Team: [team name, with an emoji]
 
-What they own: [one line — what this team is accountable for]
+What they own: [one line - what this team is accountable for]
 Who they serve: [the audience this team's work is for]
-They produce: [the shapes this team makes — e.g. workshops, learning paths, credentials, labs, ASN journeys]
+They produce: [the shapes this team makes - e.g. workshops, learning paths, credentials, labs, ASN journeys]
 They say YES when: [the signals that make this team want to own a request]
 They say NO / route elsewhere when: [the signals that make it pass or repoint]
 Format bias: [the shape this team pushes work into]
-Voice: [how this team argues — its opening move]
+Voice: [how this team argues - its opening move]
 ```
 
-> **A quick test for each seat:** would this team route a request differently than another team in the room? If yes, keep it — that's where the debate lives. If every team here would land the same plan, add one that wouldn't.
+> **A quick test for each seat:** would this team route a request differently than another team in the room? If yes, keep it - that's where the debate lives. If every team here would land the same plan, add one that wouldn't.
 
 ---
 
@@ -38,8 +38,8 @@ Voice: [how this team argues — its opening move]
 
 ### Team: 📚 Content & Insights  (card TC-02)
 
-What they own: The evergreen content & credentials engine — courses, learning paths, credentials, Applied Skills, labs, analytics.
-Who they serve: Customers, partners, field, devs, IT pros, business users — anyone who learns self-serve, at scale.
+What they own: The evergreen content & credentials engine - courses, learning paths, credentials, Applied Skills, labs, analytics.
+Who they serve: Customers, partners, field, devs, IT pros, business users - anyone who learns self-serve, at scale.
 They produce: course, learning path, credential, Applied Skills, lab, analytics.
 They say YES when: the topic is durable enough to build once and maintain; it reaches a broad audience; it's certifiable.
 They say NO / route elsewhere when: it's a one-off or ephemeral; too fluid to certify; the maintenance tail outweighs the reach.
@@ -48,7 +48,7 @@ Voice: Thinks in shelf-life and reach; asks "who maintains it?"
 
 ### Team: 🎬 Delivery & Program Operations (DPO)  (card TC-01)
 
-What they own: The live delivery engine — instructor-led training, adoption programs, onboarding, scheduling.
+What they own: The live delivery engine - instructor-led training, adoption programs, onboarding, scheduling.
 Who they serve: Customers, partners, sellers, execs who need to be brought up to speed, live.
 They produce: workshop, clinic, adoption program, onboarding journey, readiness program.
 They say YES when: there's a live audience that needs enablement on a date; it's teachable now.
@@ -59,7 +59,7 @@ Voice: Talks in calendars and capacity; opens with "who's the audience, and when
 ---
 
 <!--
-Now add at least one MORE team with a DIFFERENT instinct — for example Field & Partner,
+Now add at least one MORE team with a DIFFERENT instinct - for example Field & Partner,
 whose first question is "who's the REAL audience? I think it's partners," and who'd repoint
 a request the other two took at face value. That contrast is the point. See TC-03..TC-07.
 -->
@@ -81,8 +81,8 @@ a request the other two took at face value. That contrast is the point. See TC-0
 
 | You have… | Do this |
 |---|---|
-| One or two teams | Add one more with a *different* instinct — ask to seat the room. |
+| One or two teams | Add one more with a *different* instinct - ask to seat the room. |
 | Three or more | Dispatch a request (start with RQ-01) and see where they split on the plan. |
-| A split | Land the routing decision — owner, audience, and a plan that builds once and reuses. |
+| A split | Land the routing decision - owner, audience, and a plan that builds once and reuses. |
 | A rough idea | Sharpen it first (pin the audience and outcome), then dispatch. |
 | A working room | Ask what's next for your track. |

@@ -1,4 +1,4 @@
-// Renders the Command Center — a worked example of an extension.
+// Renders the Command Center - a worked example of an extension.
 //
 //   panels/<id>.md  ->  what to ask        (shareable, no personal data)
 //   data/<id>.json  ->  what it last found (private, never leaves this machine)

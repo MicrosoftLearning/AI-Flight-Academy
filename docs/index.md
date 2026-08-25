@@ -22,12 +22,12 @@ hero:
 
 ## What to expect
 
-<p class="home-section-intro is-wide">Everyone builds. You don't need to be a developer – you just pick a problem and a way to build. Coaches roam the room, and in two hours you'll have something that actually works.</p>
+<p class="home-section-intro is-wide">Everyone builds. You don't need to be a developer - you just pick a problem and a way to build. Coaches roam the room, and in two hours you'll have something that actually works.</p>
 
 <div class="callout-bubble">
 <span class="callout-bubble-icon">🎢</span>
 
-**New to agents?** That's the point. There's a comfortable on-ramp at every altitude, and a coach is never far away. You'll stretch – just a little – no matter where you start.
+**New to agents?** That's the point. There's a comfortable on-ramp at every altitude, and a coach is never far away. You'll stretch - just a little - no matter where you start.
 
 </div>
 
@@ -69,9 +69,9 @@ hero:
 
 <div class="home-section">
 
-## Start here – pick your altitude {#start-here}
+## Start here - pick your altitude {#start-here}
 
-<p class="home-section-intro is-wide">Two clicks and you're building. Every scenario runs at every altitude – pick the tools you want open for two hours.</p>
+<p class="home-section-intro is-wide">Two clicks and you're building. Every scenario runs at every altitude - pick the tools you want open for two hours.</p>
 
 <PathPicker />
 
@@ -87,13 +87,13 @@ hero:
   <a class="lab-card" href="/AI-Flight-Academy/submit/">
     <span class="lab-card-emoji">🚀</span>
     <span class="lab-card-title">Submit your project</span>
-    <span class="lab-card-desc">Built an agent or a demo? Package it up and submit it here – this is how your work gets seen.</span>
+    <span class="lab-card-desc">Built an agent or a demo? Package it up and submit it here - this is how your work gets seen.</span>
     <span class="lab-card-cta">Submit a project →</span>
   </a>
   <a class="lab-card" href="/AI-Flight-Academy/resources/">
     <span class="lab-card-emoji">📚</span>
     <span class="lab-card-title">Resources</span>
-    <span class="lab-card-desc">Docs, guides, and links to go deeper – before, during, and after the hack.</span>
+    <span class="lab-card-desc">Docs, guides, and links to go deeper - before, during, and after the hack.</span>
     <span class="lab-card-cta">View resources →</span>
   </a>
 </div>

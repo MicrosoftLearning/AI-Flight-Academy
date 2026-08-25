@@ -7,7 +7,7 @@ title: Connect Cowork to a data source
 # Connect Cowork to a data source
 
 **Tool:** Cowork  
-**Source status:** Liftable from Agent Academy – Cowork Collective
+**Source status:** Liftable from Agent Academy - Cowork Collective
 
 <!-- #region guide -->
 Cowork is already grounded in your Microsoft 365 work through **Work IQ**. There is no connector to install and no custom auth to build. Cowork can use what the signed-in user can already access: mail, sent mail, calendar, Teams chats and channels, OneDrive and SharePoint files, and people/org chart data.

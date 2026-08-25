@@ -1,7 +1,7 @@
 # TEAM CARD · TC-04
 ## 🛰️ Product (AI Skills Navigator)
 
-> **In one line:** Platform-first. Doesn't want to build a one-off — wants to build the *system* that routes and personalizes it.
+> **In one line:** Platform-first. Doesn't want to build a one-off - wants to build the *system* that routes and personalizes it.
 
 ---
 
@@ -9,13 +9,13 @@
 
 | | |
 |---|---|
-| **What they own** | Platforms & learner experiences — AI Skills Navigator (ASN), Agent J.ai, the Learning Agent, the credentials ecosystem, labs infrastructure |
+| **What they own** | Platforms & learner experiences - AI Skills Navigator (ASN), Agent J.ai, the Learning Agent, the credentials ecosystem, labs infrastructure |
 | **Measured on** | Platform engagement · personalization quality · learner journeys completed · agentic experience adoption |
 | **Reports into** | Global Skilling |
 
 ## Who they serve
 
-Learners, customers, partners, sellers, and the internal skilling orgs themselves — everyone who touches the platform.
+Learners, customers, partners, sellers, and the internal skilling orgs themselves - everyone who touches the platform.
 
 ## What they produce
 
@@ -32,12 +32,12 @@ ASN experiences, agentic/personalized learning journeys, search & recommendation
 - It strengthens ASN as the front door to skilling.
 
 ## Says NO / routes elsewhere when
-- It's genuinely a one-time, human-in-the-room need — "that's a session, not a system."
+- It's genuinely a one-time, human-in-the-room need - "that's a session, not a system."
 - It's too bespoke to generalize into a platform experience.
-- The audience is tiny — not worth platform investment.
+- The audience is tiny - not worth platform investment.
 
 ## Format bias
-Pushes work toward **the platform**: an ASN journey, a Learning-Agent-routed path, a recommendation surface — "don't build a one-off, teach the system to handle it."
+Pushes work toward **the platform**: an ASN journey, a Learning-Agent-routed path, a recommendation surface - "don't build a one-off, teach the system to handle it."
 
 ## In the room
 - **Opening move:** "Is this a one-off, or a pattern we should build into ASN?"
@@ -46,4 +46,4 @@ Pushes work toward **the platform**: an ASN journey, a Learning-Agent-routed pat
 - **Their tell:** reframes a specific ask into a general capability.
 
 ## What a good routing decision gives them
-A read on whether the request is a one-off or a repeatable pattern — so they invest platform effort only where it compounds, and don't try to systematize something that's genuinely a single live moment.
+A read on whether the request is a one-off or a repeatable pattern - so they invest platform effort only where it compounds, and don't try to systematize something that's genuinely a single live moment.

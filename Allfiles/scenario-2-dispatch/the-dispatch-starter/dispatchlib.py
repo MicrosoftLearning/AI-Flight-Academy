@@ -1,9 +1,9 @@
 """
-dispatchlib — plumbing for the Dispatch routing runner.
+dispatchlib - plumbing for the Dispatch routing runner.
 
 Teams are DATA (council/*.json). A request is intake (../dispatch-data/requests/*.md).
 This module owns the *countable* half: whether a request is even **routable**
-(intake-complete) before the room decides where it goes — the part a language
+(intake-complete) before the room decides where it goes - the part a language
 model should not be guessing.
 
 The MODEL does the routing (the dashboard and mcp_server.py drive that). This
@@ -19,7 +19,7 @@ from pathlib import Path
 ROOT = Path(__file__).parent
 
 # The fields a request needs to be routable. Mirrors
-# ../dispatch-data/policy/INTAKE-FIELDS.md — keep the two in sync.
+# ../dispatch-data/policy/INTAKE-FIELDS.md - keep the two in sync.
 REQUIRED_FIELDS = ["requester", "audience", "topic", "outcome"]
 
 # Field name -> the labels that can introduce it in a request markdown file.
@@ -38,7 +38,7 @@ _PLACEHOLDERS = {"", "-", "\u2014", "tbd", "todo", "none", "n/a", "unclear",
 
 
 def is_placeholder(value: str | None) -> bool:
-    """True when a field value is empty or a stand-in (—, unclear, undefined, …)."""
+    """True when a field value is empty or a stand-in (-, unclear, undefined, …)."""
     if value is None:
         return True
     v = re.sub(r"[*_`]", "", value).strip().lower()

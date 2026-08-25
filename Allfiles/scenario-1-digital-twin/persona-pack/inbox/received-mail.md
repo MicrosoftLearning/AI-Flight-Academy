@@ -9,7 +9,7 @@ title: Avery Washington Received Mail
 **Date:** Wed, Jul 1, 2026 8:04 AM  
 **Subject:** Lantern launch narrative
 
-Avery – I need a real date for the Lantern narrative checkpoint, not "soon." Sales and Product are already using different words. Send me the path and the risks this morning.
+Avery - I need a real date for the Lantern narrative checkpoint, not "soon." Sales and Product are already using different words. Send me the path and the risks this morning.
 
 Victoria
 
@@ -31,7 +31,7 @@ Graham
 **Date:** Wed, Jul 1, 2026 10:25 AM  
 **Subject:** Contoso prep doc
 
-Hi Avery – I put together the prep doc for the Contoso call. I am not sure the objection section is strong enough yet. Could you look before tomorrow morning?
+Hi Avery - I put together the prep doc for the Contoso call. I am not sure the objection section is strong enough yet. Could you look before tomorrow morning?
 
 Maya
 
@@ -111,7 +111,7 @@ Victoria
 **Date:** Fri, Jul 10, 2026 4:22 PM  
 **Subject:** FAQ ownership next week
 
-Hi Avery – should I keep owning the launch FAQ next week? I think I can handle the next draft if Miguel gives me the claims grid, but I do not want to step on Caleb's deck work.
+Hi Avery - should I keep owning the launch FAQ next week? I think I can handle the next draft if Miguel gives me the claims grid, but I do not want to step on Caleb's deck work.
 
 Maya
 
@@ -122,7 +122,7 @@ Maya
 **Date:** Mon, Jul 20, 2026 8:11 AM  
 **Subject:** Jul 24 gate
 
-Avery – I want your read on the Jul 24 launch gate before ELT prep. Do not send a broad status doc. Send the three issues that could still move the date and the decision you need from me.
+Avery - I want your read on the Jul 24 launch gate before ELT prep. Do not send a broad status doc. Send the three issues that could still move the date and the decision you need from me.
 
 Victoria
 

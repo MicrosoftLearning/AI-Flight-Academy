@@ -1,7 +1,7 @@
 {
   "name": "dispatch-dashboard",
   "version": "1.0.0",
-  "description": "Live browser dashboard for THE DISPATCH skill — seats a room of Global Skilling teams, drops a skilling request on them, runs the GitHub Copilot CLI to have each team take a position, and shows the room's routing decision (owner, audience, plan of deliverables + reuse, disposition, next action).",
+  "description": "Live browser dashboard for THE DISPATCH skill - seats a room of Global Skilling teams, drops a skilling request on them, runs the GitHub Copilot CLI to have each team take a position, and shows the room's routing decision (owner, audience, plan of deliverables + reuse, disposition, next action).",
   "main": "server.js",
   "type": "commonjs",
   "scripts": {

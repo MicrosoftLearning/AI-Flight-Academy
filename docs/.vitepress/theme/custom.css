@@ -152,7 +152,7 @@ html:not(.dark) .dark-only {
   color: var(--vp-c-text-1);
 }
 
-/* Table check – the two-minute group moment in a build page */
+/* Table check - the two-minute group moment in a build page */
 .table-check {
   display: flex;
   align-items: flex-start;
@@ -189,7 +189,7 @@ html:not(.dark) .dark-only {
   color: var(--vp-c-text-1);
 }
 
-/* The brief – what you inherited and what you're being asked to do, in one
+/* The brief - what you inherited and what you're being asked to do, in one
    block at the top of a build page. Replaces a run of intro paragraphs. */
 .brief {
   position: relative;

@@ -15,7 +15,7 @@
 
 ## Who they serve
 
-Enterprise customers and partners — as **organizations**, not as individual learners.
+Enterprise customers and partners - as **organizations**, not as individual learners.
 
 ## What they produce
 
@@ -27,8 +27,8 @@ Enterprise skilling programs, structured org-wide rollouts, learner-facing skill
 - It maps to a strategic account or enterprise motion.
 
 ## Says NO / routes elsewhere when
-- It's an individual, ad-hoc, or purely internal need — "that's not an enterprise program."
-- The audience is SMB, social, or first-touch — too small or too broad for an enterprise wrap.
+- It's an individual, ad-hoc, or purely internal need - "that's not an enterprise program."
+- The audience is SMB, social, or first-touch - too small or too broad for an enterprise wrap.
 
 ## Format bias
 Pushes work toward **an enterprise program**: a structured org-wide rollout, ideally migrated into ASN so it scales across accounts.
@@ -40,4 +40,4 @@ Pushes work toward **an enterprise program**: a structured org-wide rollout, ide
 - **Their tell:** zooms out to the org level and asks about the account.
 
 ## What a good routing decision gives them
-A read on whether the unit of adoption is an organization (theirs) or an individual (not theirs) — so they take the enterprise-scale programs and pass on the ad-hoc asks.
+A read on whether the unit of adoption is an organization (theirs) or an individual (not theirs) - so they take the enterprise-scale programs and pass on the ad-hoc asks.

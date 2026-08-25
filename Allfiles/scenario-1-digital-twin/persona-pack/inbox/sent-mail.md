@@ -9,7 +9,7 @@ title: Avery Washington Sent Mail
 **Date:** Wed, Jul 1, 2026 8:12 AM  
 **Subject:** Lantern launch: Jul 10 narrative checkpoint
 
-Victoria – Jul 10 is the checkpoint I am driving toward for the Lantern launch narrative.
+Victoria - Jul 10 is the checkpoint I am driving toward for the Lantern launch narrative.
 
 Current state:
 
@@ -20,7 +20,7 @@ Current state:
 
 I will send a tighter readout after the 2 PM PMM sync. Let me know if that's a problem.
 
-– M
+- M
 
 ---
 
@@ -29,7 +29,7 @@ I will send a tighter readout after the 2 PM PMM sync. Let me know if that's a p
 **Date:** Wed, Jul 1, 2026 9:38 AM  
 **Subject:** Sales one-pager by Friday
 
-Quick one – Friday EOD is the earliest I can get you a usable Lantern one-pager.
+Quick one - Friday EOD is the earliest I can get you a usable Lantern one-pager.
 
 I know the field wants it yesterday. The blocker is not copy polish; it is the unapproved pricing claim in slide 4. If I ship that now, we create a cleanup problem for every rep using it next week.
 
@@ -41,7 +41,7 @@ Plan:
 
 Circling back once Miguel confirms. Let me know if that's a problem.
 
-– M
+- M
 
 ---
 
@@ -50,7 +50,7 @@ Circling back once Miguel confirms. Let me know if that's a problem.
 **Date:** Wed, Jul 1, 2026 6:47 PM  
 **Subject:** Re: Contoso customer call prep
 
-Quick one – please send me the Contoso prep doc before 9 tomorrow!
+Quick one - please send me the Contoso prep doc before 9 tomorrow!
 
 Three things I want you to tighten:
 
@@ -60,7 +60,7 @@ Three things I want you to tighten:
 
 You are close. I will join the call and help steer if it gets sideways. Circling back after I read the doc.
 
-– M
+- M
 
 ---
 
@@ -71,7 +71,7 @@ You are close. I will join the call and help steer if it gets sideways. Circling
 
 Hello Amara,
 
-Quick one – we need to adjust the Lantern launch campaign inputs before your team gets too far into the second creative route.
+Quick one - we need to adjust the Lantern launch campaign inputs before your team gets too far into the second creative route.
 
 The executive team has sharpened the audience definition since our kickoff. The primary buyer is now the VP of Operations at mid-market distributors, with IT as the validator rather than the hero audience. That changes the proof hierarchy for the launch page, paid social, and webinar abstract.
 
@@ -95,13 +95,13 @@ Avery
 **Date:** Thu, Jul 2, 2026 11:04 AM  
 **Subject:** Claims grid needed today
 
-Quick one – I need the Lantern claims grid today by 4 PM.
+Quick one - I need the Lantern claims grid today by 4 PM.
 
 The launch page, Graham's one-pager, and the webinar invite all depend on the same three proof points. If we keep approving them one asset at a time, we will create three versions of the truth.
 
 Can you mark each claim as approved, needs caveat, or do not use? Circling back at 3 if I have not seen it.
 
-– M
+- M
 
 ---
 
@@ -110,7 +110,7 @@ Can you mark each claim as approved, needs caveat, or do not use? Circling back 
 **Date:** Thu, Jul 2, 2026 4:51 PM  
 **Subject:** Demand-gen pilot MQL target
 
-Quick one – I am comfortable using 420 MQLs as the July pilot target.
+Quick one - I am comfortable using 420 MQLs as the July pilot target.
 
 My one concern is source mix. If paid social has to carry more than half of that number, we will overfit the launch story to cheap clicks instead of qualified ops buyers.
 
@@ -124,7 +124,7 @@ Could we set the dashboard like this?
 
 If that gives you enough room, I will mirror it in the launch brief. Circling back Monday after the funnel review.
 
-– M
+- M
 
 ---
 
@@ -133,7 +133,7 @@ If that gives you enough room, I will mirror it in the launch brief. Circling ba
 **Date:** Mon, Jul 6, 2026 8:03 AM  
 **Subject:** This week: sales deck and launch FAQ
 
-Quick one – Thursday noon is the deadline for the sales deck and Friday noon for the launch FAQ!
+Quick one - Thursday noon is the deadline for the sales deck and Friday noon for the launch FAQ!
 
 You own the deck. Maya owns the FAQ first pass. I will review both before they go to Graham.
 
@@ -145,7 +145,7 @@ Please make these calls without waiting on me:
 
 You have the right instincts here. Circling back Wednesday after the customer call.
 
-– M
+- M
 
 ---
 
@@ -154,7 +154,7 @@ You have the right instincts here. Circling back Wednesday after the customer ca
 **Date:** Mon, Jul 6, 2026 8:09 AM  
 **Subject:** Lantern Monday status
 
-Victoria – this week's critical path is claims approval, sales enablement, and agency creative lock.
+Victoria - this week's critical path is claims approval, sales enablement, and agency creative lock.
 
 Risks:
 
@@ -170,7 +170,7 @@ Mitigations:
 
 No launch date change recommended right now.
 
-– M
+- M
 
 ---
 
@@ -179,7 +179,7 @@ No launch date change recommended right now.
 **Date:** Tue, Jul 7, 2026 5:26 PM  
 **Subject:** Re: Field needs the Lantern deck
 
-Quick one – I am declining the 7 AM deck walkthrough tomorrow.
+Quick one - I am declining the 7 AM deck walkthrough tomorrow.
 
 I can get you a better outcome if Caleb and I use that hour to finish the deck instead of presenting a half-safe version to the region leads.
 
@@ -191,7 +191,7 @@ What I can commit to:
 
 I know this is frustrating. Circling back when the draft lands. Let me know if that's a problem.
 
-– M
+- M
 
 ---
 
@@ -200,7 +200,7 @@ I know this is frustrating. Circling back when the draft lands. Let me know if t
 **Date:** Wed, Jul 8, 2026 7:14 PM  
 **Subject:** FAQ first pass
 
-Quick one – nice progress on the FAQ!
+Quick one - nice progress on the FAQ!
 
 Please fix these before you send it wider:
 
@@ -211,7 +211,7 @@ Please fix these before you send it wider:
 
 You are doing the right thing by asking for feedback early. Circling back tomorrow morning.
 
-– M
+- M
 
 ---
 
@@ -222,7 +222,7 @@ You are doing the right thing by asking for feedback early. Circling back tomorr
 
 Hello Amara,
 
-Quick one – we can proceed with Route B, provided the production team makes the changes below before the July 14 stakeholder review.
+Quick one - we can proceed with Route B, provided the production team makes the changes below before the July 14 stakeholder review.
 
 The room responded well to the operational urgency in the concept, especially the dashboard visual and the "before quarter close" line. The concern was credibility. Victoria does not want a campaign that sounds larger than the first release can support, and Miguel flagged two claims that still need caveats.
 
@@ -247,7 +247,7 @@ Avery
 **Date:** Fri, Jul 10, 2026 3:06 PM  
 **Subject:** Bad news: Lantern page copy is slipping
 
-Victoria – bad news: the Lantern launch page copy will slip from today to Monday noon.
+Victoria - bad news: the Lantern launch page copy will slip from today to Monday noon.
 
 Why:
 
@@ -263,7 +263,7 @@ Impact:
 
 I own the miss. I will send the revised copy Monday by noon.
 
-– M
+- M
 
 ---
 
@@ -272,7 +272,7 @@ I own the miss. I will send the revised copy Monday by noon.
 **Date:** Mon, Jul 13, 2026 8:57 AM  
 **Subject:** Customer calls this week
 
-Quick one – I am joining all three customer calls this week!
+Quick one - I am joining all three customer calls this week!
 
 Not because I do not trust you. I want to hear the objections in real time before we lock the launch FAQ and sales talk track.
 
@@ -284,7 +284,7 @@ Please divide the follow-up this way:
 
 You both should still lead the calls. Circling back after Tailwind Traders.
 
-– M
+- M
 
 ---
 
@@ -293,7 +293,7 @@ You both should still lead the calls. Circling back after Tailwind Traders.
 **Date:** Tue, Jul 14, 2026 12:41 PM  
 **Subject:** Webinar title and MQL routing
 
-Quick one – let's use "Operational Readiness Before Quarter Close" for the webinar title.
+Quick one - let's use "Operational Readiness Before Quarter Close" for the webinar title.
 
 It is less shiny than the agency option, but it will attract the buyer we actually want. I also like your routing proposal for warm MQLs:
 
@@ -303,7 +303,7 @@ It is less shiny than the agency option, but it will attract the buyer we actual
 
 If you update the Marketo brief, I will make sure the launch page CTA matches. Circling back after the 3 PM pipeline meeting.
 
-– M
+- M
 
 ---
 
@@ -312,7 +312,7 @@ If you update the Marketo brief, I will make sure the launch page CTA matches. C
 **Date:** Wed, Jul 15, 2026 11:58 PM  
 **Subject:** deck attached - use v6 only
 
-Graham – use v6 only, not v5.
+Graham - use v6 only, not v5.
 
 I know this is late. The only material change is the implementation timing slide; Miguel made me pull the 30-day line.
 
@@ -324,7 +324,7 @@ Tell the region leads:
 
 I will clean up speaker notes in the morning. Circling back after I sleep for a few hours. Let me know if that's a problem.
 
-– M
+- M
 
 ---
 
@@ -333,7 +333,7 @@ I will clean up speaker notes in the morning. Circling back after I sleep for a 
 **Date:** Thu, Jul 16, 2026 8:44 AM  
 **Subject:** Implementation timing language
 
-Quick one – I need one sentence on implementation timing by 1 PM today.
+Quick one - I need one sentence on implementation timing by 1 PM today.
 
 Sales wants a number. I would rather give them a range we can defend than let them invent one.
 
@@ -345,7 +345,7 @@ Could you approve one of these?
 
 My vote is the third. Circling back before the Sales walkthrough.
 
-– M
+- M
 
 ---
 
@@ -354,7 +354,7 @@ My vote is the third. Circling back before the Sales walkthrough.
 **Date:** Mon, Jul 20, 2026 8:18 AM  
 **Subject:** Lantern launch readiness: Jul 24 gate
 
-Victoria – Jul 24 is the next launch gate and I am watching three issues.
+Victoria - Jul 24 is the next launch gate and I am watching three issues.
 
 - Sales enablement: deck is live, FAQ needs one final objection-handling pass.
 - Demand gen: webinar brief is approved, paid social audiences need QA.
@@ -362,7 +362,7 @@ Victoria – Jul 24 is the next launch gate and I am watching three issues.
 
 Decision needed from you by Wednesday: whether the launch keynote slide should say "platform" or "workflow layer." I recommend "platform" externally and "workflow layer" in analyst prep.
 
-– M
+- M
 
 ---
 
@@ -373,7 +373,7 @@ Decision needed from you by Wednesday: whether the launch keynote slide should s
 
 Hello Amara,
 
-Quick one – please treat Friday, July 24 at 5 PM ET as the final handoff deadline for launch-week assets.
+Quick one - please treat Friday, July 24 at 5 PM ET as the final handoff deadline for launch-week assets.
 
 The package we need from First Up Consultants is:
 
@@ -396,7 +396,7 @@ Avery
 **Date:** Mon, Jul 27, 2026 10:11 AM  
 **Subject:** Post-launch retro inputs
 
-Quick one – send me your retro notes by Wednesday noon!
+Quick one - send me your retro notes by Wednesday noon!
 
 Focus less on what went wrong and more on what surprised us:
 
@@ -407,7 +407,7 @@ Focus less on what went wrong and more on what surprised us:
 
 The deck landed because you kept it moving. Thank you. Circling back Wednesday.
 
-– M
+- M
 
 ---
 
@@ -416,7 +416,7 @@ The deck landed because you kept it moving. Thank you. Circling back Wednesday.
 **Date:** Wed, Jul 29, 2026 8:07 AM  
 **Subject:** July closeout and August focus
 
-Victoria – August focus should be conversion quality, not more launch volume.
+Victoria - August focus should be conversion quality, not more launch volume.
 
 July outcomes:
 
@@ -434,4 +434,4 @@ My recommendation:
 
 I can send the exec version by Friday noon.
 
-– M
+- M

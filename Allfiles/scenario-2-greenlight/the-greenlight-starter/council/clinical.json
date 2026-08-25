@@ -2,7 +2,7 @@
   "seat_id": "clinical",
   "audience": "🏥 Clinical Informatics Manager",
   "card": "AC-03",
-  "outcome": "Cut documentation burden with no path where PHI ends up where it shouldn't — and hand the care team something short enough they'll actually use it at the bedside.",
+  "outcome": "Cut documentation burden with no path where PHI ends up where it shouldn't - and hand the care team something short enough they'll actually use it at the bedside.",
   "thresholds": { "SHIP": 2.5, "REVISE": 1.5, "REJECT": 1.5 },
   "criteria": [
     {
@@ -16,7 +16,7 @@
         "2": "Names that identifiable patient information must not be entered.",
         "3": "Names it, states the approved data flow, and says what happens during a downtime event."
       },
-      "watch_for": "'Always verify AI output' offered as the safety control — they need to know what happens when someone doesn't.",
+      "watch_for": "'Always verify AI output' offered as the safety control - they need to know what happens when someone doesn't.",
       "checks": []
     },
     {
@@ -28,7 +28,7 @@
         "0": "A single monolithic document that serves neither the manager nor the clinician.",
         "1": "One document with a 'summary' that still needs several minutes.",
         "2": "A short front and a deep back in one artifact.",
-        "3": "Two artifacts — the deep version for the manager and a 90-second bedside version for the care team."
+        "3": "Two artifacts - the deep version for the manager and a 90-second bedside version for the care team."
       },
       "watch_for": "Twenty uninterrupted minutes assumed during a shift. It will not happen.",
       "checks": []
