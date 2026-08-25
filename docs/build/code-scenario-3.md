@@ -31,9 +31,9 @@ Three conditions. How you meet them is yours.
 
 | | Condition |
 | --- | --- |
-| **1** | It finds someone `cohort.py` misses, and you can say what made them visible |
+| **1** | It finds someone `cohort.py` misses |
 | **2** | Every claim it makes points at a record that supports it |
-| **3** | A person can disagree with it, and that disagreement survives the next run |
+| **3** | A person can overrule it, and the next run remembers |
 
 Nothing says which of those to do first, or whether you write Python, build agents in `.github/agents/`, or both. A table that ships one condition well beats a table that half-ships three.
 
@@ -80,7 +80,7 @@ Ask Copilot - it's building with you, so paste the error and let it fix it. For 
 
 ## 1 · Run it, and swap the definition
 
-**Done when:** two definitions have given you two different shortlists, and you've read the `## What it does not do` section of the README.
+**Done when:** two definitions have given you two different shortlists.
 
 ```bash
 cd ambassador-starter
@@ -110,7 +110,7 @@ Then read **What it does not do** in the README. Those are the three conditions,
 
 ## 2 · Build
 
-**Done when:** you can demo one of the three conditions working, on real output, with a name on screen.
+**Done when:** one condition is met, on real output, with a name on screen.
 
 ### Where the room is
 

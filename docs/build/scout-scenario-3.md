@@ -40,10 +40,10 @@ Three conditions, plus one that only Scout can do. How you meet them is yours.
 
 | | Condition |
 | --- | --- |
-| **1** | It finds someone the shipped skill misses, and you can say what made them visible |
+| **1** | It finds someone the shipped skill misses |
 | **2** | Every claim it makes points at a record that supports it |
-| **3** | A person can disagree with it, and that disagreement survives the next run |
-| **4** | It runs again without you retyping the question |
+| **3** | A person can overrule it, and the next run remembers |
+| **4** | It runs again without you |
 
 Nothing says which to do first. A table that ships one condition well beats a table that half-ships four.
 
@@ -136,7 +136,7 @@ Those are the conditions, and they're where the next 60 minutes go.
 
 ## 2 · Build
 
-**Done when:** you can demo one condition working, on real output, with a name on screen.
+**Done when:** one condition is met, on real output, with a name on screen.
 
 ### Where the room is
 

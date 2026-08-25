@@ -36,11 +36,11 @@ Everything needed to fix that is in the folder. What counts as evidence, and how
 
 Three conditions, and how you meet them is yours.
 
-**Find someone it misses.** The definition is prose in a file, so change what the program is looking for and different people surface. Three worked alternatives ship with it.
+**Find someone it misses.** The definition is prose in a file. Change what the program is looking for and different people surface. Three worked alternatives ship with it.
 
-**Show the evidence.** Every claim should point at a record that supports it, and say so when it can't.
+**Show the evidence.** Every claim points at a record that supports it.
 
-**Let a person overrule it.** A disagreement that survives the next run is the difference between a tool and a one-off answer.
+**Let a person overrule it.** The next run remembers the call you made.
 
 There's no single right answer here, and tables that build the same thing have probably missed the point.
 
