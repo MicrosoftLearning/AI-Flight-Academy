@@ -5,9 +5,12 @@ for each one.
 
 ```text
 run.py                  the entry point
+agent.py                ask() and ask_json() - calls the Copilot CLI
 program/
   data.py               loads every CSV, attaches evidence to candidates
   evaluate.py           scoring and tier assignment
+examples/
+  brief.py              code scores, the model writes the case
 program-data/           72 candidates, ~2,000 evidence records
 PLAYBOOK.md             the program's rules and tiers
 ```
@@ -19,9 +22,11 @@ python run.py                      # the shortlist
 python run.py --all                # all 72, with what was ignored
 python run.py --who "Alex Kim"     # one candidate in full
 python run.py --export register.csv
+
+python examples/brief.py "Alex Kim"   # the case for and against, from evidence
 ```
 
-No dependencies. Standard library only.
+Python 3.10+ and the GitHub Copilot CLI, signed in. No other dependencies.
 
 ## How it scores
 
@@ -31,6 +36,12 @@ contribution, credential, recognition record and application to its candidate.
 `evaluate.py` scores on three columns from `CandidateProfiles.csv` -
 `BusinessImpact` x3, `ExecutionReliability` x2, `LeadershipSignals` x1 - and
 bands the result into a tier.
+
+`agent.py` is the other half. `ask()` sends a prompt to the Copilot CLI and
+returns the reply; `ask_json()` does the same and parses the result. Use it
+where a judgment or a piece of writing is wanted, and keep the scoring in code.
+`examples/brief.py` shows the split: the tier is computed, the case for and
+against it is written by the model from the same evidence.
 
 Everything it prints is a proposal. Nothing is sent, and no decision is recorded.
 

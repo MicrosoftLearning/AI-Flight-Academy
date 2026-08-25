@@ -119,7 +119,7 @@ const jobs = [
     // Python bytecode and the scratch dir twin.py uses for oversized prompts are
     // both produced by running it locally, and neither belongs in a download.
     // Nested, so these have to match at any depth.
-    purge: ["**/__pycache__/", ".twin-scratch/"],
+    purge: ["__pycache__/", "**/__pycache__/", ".twin-scratch/"],
   },
   {
     src: join(root, "Allfiles", "scenario-1-digital-twin", "persona-pack"),
@@ -180,7 +180,7 @@ const jobs = [
         to: "PLAYBOOK.md",
       },
     ],
-    purge: ["**/__pycache__/"],
+    purge: ["__pycache__/", "**/__pycache__/", ".agent-scratch/"],
   },
 ];
 
