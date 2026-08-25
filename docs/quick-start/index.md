@@ -72,13 +72,29 @@ A skill you add mid-session stays invisible until you begin a fresh one. After u
 
 Scout and Code both run on GitHub Copilot, so both need Copilot access on your Microsoft **EMU** (Enterprise Managed User) account. Do this first. Without it, Scout's GitHub sign-in fails and `copilot` won't run.
 
-Confirm your access at [aka.ms/copilot/explore](https://aka.ms/copilot/explore), signing in with your Microsoft account.
+1. Go to [aka.ms/copilot/explore](https://aka.ms/copilot/explore) and select **Continue**.
 
-**You're ready when** it reads **GitHub Copilot enabled** for your Enterprise Managed User (EMU) account.
+   ![The single sign-on screen for Microsoft EMU, with a green Continue button](/img/emu-sso-continue.png)
 
-![The Copilot access page showing GitHub Copilot enabled for an Enterprise Managed User account](/img/copilot-emu-enabled.png)
+2. Sign in with your Microsoft account.
 
-To use a personal GitHub account instead, link it at [repos.opensource.microsoft.com](https://repos.opensource.microsoft.com/orgs/MicrosoftCopilot).
+3. You land on **GitHub Copilot Access**. Seeing this page means the EMU account works.
+
+   ![The GitHub Copilot Access organization page, headed Using GitHub Copilot at Microsoft](/img/emu-copilot-access-landing.png)
+
+4. Go to [aka.ms/copilot](https://aka.ms/copilot). **You're ready when** it reads **GitHub Copilot enabled** for your Enterprise Managed User (EMU) account.
+
+   ![The Copilot access page showing GitHub Copilot enabled for an Enterprise Managed User account](/img/copilot-emu-enabled.png)
+
+### Using a personal GitHub account instead
+
+Optional. On the same [aka.ms/copilot](https://aka.ms/copilot) page, select **Yes, show me how** and follow the linking steps.
+
+![The optional prompt asking whether you would also like to use GitHub Copilot with your own personal GitHub account, with a Yes, show me how button](/img/copilot-personal-account-option.png)
+
+Once it's linked, sign in as that personal account rather than your EMU one, go to [github.com/settings/copilot/features](https://github.com/settings/copilot/features), and set **Usage billed to** to **Microsoft Open Source**.
+
+![The GitHub Copilot settings page with Usage billed to set to Microsoft Open Source](/img/copilot-billing-microsoft-open-source.png)
 
 ::: tip Nothing to do here if you're on Cowork
 Cowork runs on your Microsoft 365 account and doesn't touch GitHub. You're already set.
@@ -101,13 +117,8 @@ You describe what you want and Scout builds it, grounded in your real work. It c
 
 1. Install Scout and open it.
 2. Sign in with **M365** first, then with your **EMU** GitHub account (or the personal account you linked).
-3. Start a new session and ask:
 
-```text
-Summarize what I have on this week and what looks most time-sensitive.
-```
-
-**You're ready when** Scout answers from your actual calendar and mail instead of asking you to paste something in.
+**You're ready when** both sign-ins complete and Scout opens a session.
 
 ::: tip Scout only sees what you already see
 Mail, calendar, Teams, OneDrive and SharePoint come through Work IQ with no connector to set up. Nothing is shared outward and nothing leaves your tenant.
@@ -120,6 +131,8 @@ Mail, calendar, Teams, OneDrive and SharePoint come through Work IQ with no conn
 You get a starter that runs and a contract to build against. You write the code.
 
 ### What you need
+
+The **Check with** commands run in any terminal: PowerShell, Command Prompt, Windows Terminal, or the built-in terminal in VS Code (**View → Terminal**). It makes no difference which.
 
 | | | Check with |
 | --- | --- | --- |
@@ -135,7 +148,7 @@ The starters need Python 3.10 or later and the Copilot CLI. **No other dependenc
 
 ### Check you're ready
 
-1. Run one prompt end to end:
+1. In a terminal, confirm the Copilot CLI answers:
 
    ```powershell
    copilot -p "Reply with the word ready and nothing else." --allow-all-tools
@@ -147,8 +160,8 @@ The starters need Python 3.10 or later and the Copilot CLI. **No other dependenc
 
    ![VS Code Settings filtered to chat.agent.enabled, with the Chat > Agent: Enabled checkbox ticked](/img/vscode-chat-agent-enabled.png)
 
-::: tip Pick your own model
-No scenario depends on a particular model. Use whichever one you have access to and like working with.
+::: tip Leave the model on Auto
+No scenario depends on a particular model. Auto routes each task based on what you're doing, current system health, and model performance. Switch only if you have a reason to.
 :::
 
 </div>
