@@ -114,7 +114,7 @@ Sixteen, out of 72. Flight Lead is meant for sustained impact across a region, a
 Show me the Watchouts column for your top five.
 ```
 
-The second-ranked person's watchout reads *"limited evidence of peer enablement or community lift."* The skill put them there anyway, because `Watchouts` is not one of the three columns it scores.
+Read them against the tier each person was given. `Watchouts` is not one of the three columns the skill scores, so nothing in that column reached the ranking.
 
 ::: warning It may tell you it only read one file
 The skill is written to admit what it skipped, so it often volunteers this. It still ranked all 72 people on that one file.
@@ -124,7 +124,7 @@ The skill is written to admit what it skipped, so it often volunteers this. It s
   <div class="table-check-icon">👥</div>
   <div class="table-check-body">
     <span class="table-check-label">Table check</span>
-    <p>Everyone name one person the ranking got wrong, and the reason. Did you all pick the same person?</p>
+    <p>One line each: which of the top five looked wrong to you, and what in the data made you say so? Anyone still getting a generic answer, say so now.</p>
   </div>
 </div>
 
@@ -165,7 +165,7 @@ Two rules in the playbook aren't implemented at all - **R-004** (prior recogniti
   <div class="table-check-icon">👥</div>
   <div class="table-check-body">
     <span class="table-check-label">Table check</span>
-    <p>Read out the names that entered your top ten. Compare with the next table - did the same people surface?</p>
+    <p>One line each: which file did you add, and which name moved. If nothing moved for you, say so - the rule probably needs to be sharper.</p>
   </div>
 </div>
 

@@ -68,7 +68,7 @@ Ask Copilot - it's building with you, so paste the error and let it fix it. For 
 
 ## 1 · Run it and see the hole
 
-**Done when:** you can point at the lines in `evaluate.py` that put the wrong person second.
+**Done when:** you've briefed one of the top ten and can say whether their tier holds up.
 
 Unzip the starter and open the folder in VS Code. **Every command runs from inside `ambassador-starter/`:**
 
@@ -90,25 +90,42 @@ ambassador-starter/
   PLAYBOOK.md             the program's rules and tiers
 ```
 
-You get a shortlist and a note at the bottom listing what the run ignored. Two things in it are wrong on their face:
+Two things about what comes back:
 
-- **Alex Kim ranks second.** Their `Watchouts` field in `CandidateProfiles.csv` reads *"limited evidence of peer enablement or community lift."*
-- **16 of 72 people are Flight Lead.** That tier is meant for sustained impact across a region.
+- **Ten people, all within two points, all with the same next action.** As a shortlist for who to contact first, it doesn't say anything.
+- **16 of 72 are Flight Lead.** Count them with `--all`. A top tier holding a fifth of the program isn't a top tier.
 
-Look Alex Kim up in full:
-
-```bash
-python run.py --who "Alex Kim"
-```
-
-The `NOT READ:` line lists what `data.py` loaded for that person and `evaluate.py` skipped: four score columns, 13 activities, 4 peer comments, 2 contributions, 5 credentials, 1 recognition record, 1 application.
-
-The rest of the CLI:
+Every line's `NOT READ:` says the same thing: four score columns in `CandidateProfiles.csv` were loaded and never scored, along with everything in the other eight files.
 
 ```bash
 python run.py --all                 # all 72, each with what was ignored
+python run.py --who "Alex Kim"      # one candidate in full
 python run.py --export register.csv # the whole thing as CSV
 ```
+
+### So which of those ten belong there?
+
+The score can't separate them. It gave them nearly the same number. Ask instead:
+
+```bash
+python examples/brief.py "Alex Kim"
+```
+
+`evaluate.py` computes the tier. `agent.py` sends the same evidence to the Copilot CLI and asks for the case for it, the case against, and what's thin - including the columns the score ignored.
+
+Run it on a second name from that list and compare what each one says is thin.
+
+**Code decides, the model explains.** A score is reproducible and defensible, and says nothing a program owner can act on. A model call reads 30 scattered records and writes the case, and has no business assigning a tier. Neither does the other's job.
+
+A call takes 20 to 60 seconds, so anything looping over all 72 people needs a bound.
+
+<div class="table-check">
+  <div class="table-check-icon">👥</div>
+  <div class="table-check-body">
+    <span class="table-check-label">Table check</span>
+    <p>One line each: which name did you brief, and what did it say was thin? Anyone whose CLI isn't working, say so now rather than at the end.</p>
+  </div>
+</div>
 
 ### Where the hole is
 
@@ -119,28 +136,6 @@ Open `program/evaluate.py`. The top of the file is the entire problem:
 - **R-004** (prior recognition isn't a reason to recognize again) and **R-006** (repeated activity with weak quality doesn't outrank quieter high-multiplier work) are in `PLAYBOOK.md` and not in the code.
 
 `PLAYBOOK.md` says what the program is supposed to do. `evaluate.py` does something narrower. Closing that distance is step 2.
-
-### Where the model comes in
-
-Try the worked example:
-
-```bash
-python examples/brief.py "Alex Kim"
-```
-
-`evaluate.py` scores them, and `agent.py` sends the evidence to the Copilot CLI and asks for the case for and against. It comes back arguing that the tier is inflated, citing the peer and community columns the score never touched.
-
-That split is the pattern to build on: **code decides, the model explains.** A score is reproducible and defensible but says nothing a program owner can act on. A model call reads 30 scattered records and writes the argument, but shouldn't be the thing assigning a tier.
-
-A call takes 20 to 60 seconds, so anything looping over all 72 people needs a bound.
-
-<div class="table-check">
-  <div class="table-check-icon">👥</div>
-  <div class="table-check-body">
-    <span class="table-check-label">Table check</span>
-    <p>Everyone name the person the ranking got wrong, and the column that would have caught it. Did you all pick the same one?</p>
-  </div>
-</div>
 
 ## 2 · Build the agent
 
