@@ -22,26 +22,30 @@ Both groups produce impressive numbers. Only one keeps a community going.
 
 ## What you start with
 
-**A half-built program**, left behind by whoever ran it last. It runs, and it's confidently wrong:
+**A working cohort picker**, left behind by whoever ran the program last. It runs, it is confident, and it cannot show its work:
 
-- It scores on three columns (business impact, execution reliability, leadership signals) and ignores four more sitting in the same rows: peer support, knowledge sharing, community contribution, multiplier behavior.
-- Nine data files ship with it. It reads one.
-- Its own playbook has eight rules. Two of them aren't implemented at all.
+- It reads `DEFINITION.md`, a three-line description of what the program wants, and applies it to the candidates.
+- Nine data files ship with it. It opens one.
+- Nothing it says is checked against a record.
 
-Run it and someone with excellent delivery numbers and thin evidence of enabling anyone else lands near the top. Their own watchout line reads *"limited evidence of peer enablement or community lift."* The top tier ends up holding 16 of 72 people.
+Run it and it returns eight names, a reason for each, and what to offer them. Some of those reasons rest on a summary score rather than anything anyone did.
 
-The eight ignored files and the playbook rules are enough to fix it. Which evidence counts, and how much, is your call.
+Everything needed to fix that is in the folder. What counts as evidence, and how you check it, is your call.
 
 ## What 'done' looks like
 
-**Make it find the right people.** Teach it to read the evidence it's been ignoring, and show your work. A change counts when you can name who moved because of it.
+Three conditions, and how you meet them is yours.
 
-**Then build the thing that runs it.** An invite list, a brief per manager, a watch list of who's dropped off, an audit of whether the calls can be defended to the people who didn't make the cut. Names in it, evidence behind each one.
+**Find someone it misses.** The definition is prose in a file, so change what the program is looking for and different people surface. Three worked alternatives ship with it.
 
-There's no single right answer here, and tables that build the same thing have probably missed the point. You're given the five tiers (Explorer, Connector, Multiplier, **Flight Lead**, Review Hold) and the eight rules. What counts as evidence, and what you build on top, is yours.
+**Show the evidence.** Every claim should point at a record that supports it, and say so when it can't.
+
+**Let a person overrule it.** A disagreement that survives the next run is the difference between a tool and a one-off answer.
+
+There's no single right answer here, and tables that build the same thing have probably missed the point.
 
 ::: tip Everything stays local
-Nothing here is hosted and nothing is sent. Invitations, nominations and recognition are drafted and held for a person to approve. That's **R-005**, and it's in the playbook.
+Nothing here is hosted and nothing is sent. Invitations and nominations are drafted and held for a person to approve.
 :::
 
 ## The data
@@ -57,27 +61,25 @@ The point of shipping it is speed: you skip building a pipeline and spend the se
 | `ProgramContributions.csv` | 390 | What they made, whether it was reused, how many teams reached |
 | `PeerFeedback.csv` | 283 | Sentiment, theme, evidence depth, confidence |
 | `LearningCredentials.csv` | 275 | Completed, facilitated, coached |
-| `RecognitionHistory.csv` | 128 | Who's been recognized before - deliberately not a shortcut |
+| `RecognitionHistory.csv` | 128 | Who's been recognized before |
 | `AmbassadorApplications.csv` | 41 | Who put their hand up, which isn't the same as who's ready |
-| `PolicyRules.csv` | 8 | R-001 to R-008 |
-| `RewardTiers.csv` | 5 | The five tiers and the action at each one |
+| `PolicyRules.csv` | 8 | How the program says it makes calls |
+| `RewardTiers.csv` | 5 | What the program can offer someone |
 
-Two of the eight rules are the ones to look at first - **R-004** (prior recognition isn't a reason to recognize again) and **R-006** (repeated activity with weak quality doesn't outrank quieter high-multiplier work). Neither is implemented. Either one changes the list.
+Only `CandidateProfiles.csv` is read. The other eight hold what an ambassador actually does: whose guide got reused, who unblocked somebody, whose name a peer brings up.
 
 ## What each altitude starts from
 
 | | You start with | You build |
 | --- | --- | --- |
-| **🟢 Cowork** | The half-built skill, uploaded | Teach it to read more files, then build the output your table would use |
-| **🔵 Scout** | The same skill, imported | The same, plus somewhere for it to live - a board, a scheduled scan, a brief |
-| **🟣 Code** | A working cohort picker that can't show its work | Make it find who it misses, cite its evidence, and take an override |
+| **🟢 Cowork** | The Ambassador skill, uploaded | Something that meets the three conditions, built in chat |
+| **🔵 Scout** | The same skill, imported | The same, plus a fourth condition: it runs again without you |
+| **🟣 Code** | `cohort.py`, a working picker | The same three, in code you own |
 
-Same spine, harder as the tooling gets more capable. The playbook is plain text at every altitude, so the rules you write move between them unchanged.
+Same three conditions everywhere. The definition is plain text at every altitude, so what your table decides counts moves between them unchanged.
 
 ::: info Team model
-In Cowork and Scout, each person teaches the skill to read a different evidence file, then the table combines them and compares who surfaced.
-
-In Code, the table works to three conditions rather than a plan: find someone the shipped picker misses, make every claim cite a record, and let a person overrule it.
+Every altitude works to conditions rather than a plan. The table picks which one to go after, splits it, and shows one name their build found that the shipped version missed.
 :::
 
 ## Start building

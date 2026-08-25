@@ -1,49 +1,41 @@
 # Ambassador program playbook
 
-*This is the program, written down. It is fictional - see `program-data/DISCLAIMER.md`.*
+*How the program runs. It is fictional - see `program-data/DISCLAIMER.md`.*
 
 Ambassadors across nine regions help colleagues use the company's AI tools on top of their real
 jobs: office hours, answering questions, mentoring, peer coaching, and the reusable guides and
 localization aids other people build on.
 
-Nobody is paid for it. The program runs on what it can offer back, so every recommendation here is a
-next step rather than a reward: an invitation in, a facilitation slot, a nomination, a sponsor
-conversation. Getting those calls right is how the program keeps its people.
+Nobody is paid for it. The program runs on what it can offer back, so every recommendation is a next
+step rather than a reward. Getting those calls right is how the program keeps its people.
 
-It recognizes people who **make other people better at their jobs**. It is not an output leaderboard
-and it is not a popularity contest.
+## What the program can offer
 
-Anyone reading this should be able to work out why a given person got the recommendation they did,
-including the people who did not get one.
-
-## The tiers
-
-Everyone gets a tier and an action. Nobody is left with nothing.
-
-| Tier | Who is here | What happens next |
-| --- | --- | --- |
-| **Explorer** | Promising signals, early or narrow | Invite to a structured community activity |
-| **Connector** | Real peer support and participation | Offer a visible facilitation opportunity |
-| **Multiplier** | Repeatedly enables others, leaves reusable value behind | Nominate for the ambassador program |
-| **Flight Lead** | Sustained lift across a region or globally, and delegates | Leadership circle or sponsor conversation |
-| **Review Hold** | Signals incomplete, inconsistent, or concentrated in one dimension | Gather evidence before recognizing |
-
-## The rules
-
-| | |
+| Offer | When it fits |
 | --- | --- |
-| **R-001** | Consider evidence across collaboration, knowledge sharing, community contribution, and follow-through |
-| **R-002** | **High individual output alone is not enough.** Someone can be excellent and not be an ambassador |
-| **R-003** | Early-career or new-in-role people can be Explorers when peer-support evidence is strong but scope is still small |
-| **R-004** | Prior recognition is not a reason to recognize someone again. Look for current momentum |
-| **R-005** | Every recommendation carries its evidence and a safe next action |
-| **R-006** | Repeated activity with weak quality or poor follow-through does not outrank quieter high-multiplier work |
-| **R-007** | Someone can be right for a specific next action without being a top overall recommendation |
-| **R-008** | No sensitive personal detail, and no claim the evidence does not support |
+| **Invite to a structured activity** | Promising signals, early or narrow |
+| **Offer a facilitation slot** | Real peer support and participation, ready to be visible |
+| **Nominate for the program** | Repeatedly enables others, leaves reusable value behind |
+| **Sponsor conversation** | Sustained lift across a region, and delegates rather than absorbing |
+| **Gather more evidence** | Signals are thin, conflicting, or all in one dimension |
 
-## What we are trying to tell apart
+Everyone assessed gets one of these. Nobody is left with nothing.
 
-The hardest call in this program, stated plainly:
+## What counts as evidence
+
+`references/DEFINITION.md` says what the program is looking for. It can be edited, and editing it is
+how the program changes. These hold regardless of what it says:
+
+- **High individual output alone is not enough.** Someone can be excellent at their job and not be an
+  ambassador. The program is looking for people who make others better.
+- **Repeated activity is not the same as impact.** Forty sessions with weak follow-through does not
+  outrank eight that changed how a team works.
+- **Prior recognition is not a reason to recognize someone again.** Look for current momentum. The
+  cohort exists partly to reach people the program has not reached yet.
+- **Someone can be right for one specific offer** without being a top overall pick.
+- **New or early-career people count** when peer-support evidence is strong, even if scope is small.
+
+## The call that is hard to make
 
 | | Advocate signal | Volume signal |
 | --- | --- | --- |
@@ -54,31 +46,28 @@ Both produce impressive-looking numbers. Only one produces ambassadors.
 
 ## Every recommendation says three things
 
-Per **R-005**, and this is the whole output of the program:
-
-1. **What they have earned** - a tier, with the evidence behind it
-2. **What happens next** - the action from that tier, made specific to them
+1. **Who**, and one sentence on why they match the definition
+2. **What to offer them**, from the table above, made specific to them
 3. **Who needs to know** - the community manager, the program owner, whoever acts on it
 
-## Where a human decides
+## Where a person decides
 
 The program proposes. A person disposes.
 
-Anything going **to** a candidate - an invitation, a nomination, a recognition - is drafted and held
-for approval. Nothing is sent automatically, and nothing about a person is published without someone
-having read it.
+Anything going **to** a candidate is drafted and held for approval. Nothing is sent automatically,
+and nothing about a person is published without someone having read it.
 
-Route to a human whenever:
+Route to a person whenever:
 
-- evidence conflicts with itself
-- a tier would be assigned on thin or one-sided evidence
+- the evidence conflicts with itself
+- an offer would rest on thin or one-sided evidence
 - the recommendation depends on something the data does not actually show
-- **R-008** is in play
+- a sensitive personal detail is in play
 
 ## Fairness
 
 Recommendations should be defensible to the person who did not get one.
 
-That means the reasoning is written down, the same rules were applied to everyone, and it is possible
-to check whether outcomes skew by region, org, level, or tenure. If a tier cannot be explained
-without pointing at evidence, it should not be assigned.
+That means the reasoning is written down, the same definition was applied to everyone, and it is
+possible to check whether outcomes skew by region, org, level, or tenure. If an offer cannot be
+explained by pointing at evidence, it should not be made.

@@ -153,7 +153,7 @@ code $dest/the-dispatch-starter/the-dispatch.code-workspace
 
 ## Scenario 3 · The Ambassador
 
-A **half-built recognition program** that runs, ships nine data files, and reads one of them. Cowork and Scout share the same skill; Code gets a starter with the data already wired in.
+A **working cohort picker** that ships nine data files and reads one of them. Cowork and Scout share the same skill; Code gets a starter with the data already wired in.
 
 ### 🟢 Cowork · 🔵 Scout
 
@@ -161,7 +161,7 @@ A **half-built recognition program** that runs, ships nine data files, and reads
   <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-skill.zip" download>
     <span class="lab-card-emoji">🎖️</span>
     <span class="lab-card-title">Ambassador</span>
-    <span class="lab-card-desc">The half-built skill, plus <code>references/PLAYBOOK.md</code> - the ladder, the eight rules, and what a recommendation has to contain.</span>
+    <span class="lab-card-desc">The skill, the definition it runs on, and three worked alternatives.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
   <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-program-data.zip" download>
@@ -181,7 +181,7 @@ A **half-built recognition program** that runs, ships nine data files, and reads
 <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-starter.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">📦</span>
   <span class="lab-card-title">Starter</span>
-  <span class="lab-card-desc">Runs on the first command. Data and playbook included - nothing else to download.</span>
+  <span class="lab-card-desc">A working cohort picker, three alternative definitions, and the nine data files.</span>
   <span class="lab-card-cta">Download .zip →</span>
 </a>
 
