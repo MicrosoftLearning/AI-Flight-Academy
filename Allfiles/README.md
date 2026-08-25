@@ -5,8 +5,9 @@ Participant assets, one folder per scenario.
 | Folder | Scenario | Status |
 | --- | --- | --- |
 | `scenario-1-digital-twin/` | The Digital Twin | 🚧 Work in progress |
-| `scenario-2-greenlight/` | The Greenlight | 🚧 Work in progress |
+| `scenario-2-dispatch/` | Dispatch | 🚧 Work in progress |
 | `scenario-3-ambassador/` | The Ambassador | 🚧 Work in progress |
+| `scenario-2-greenlight/` | *(superseded by Dispatch)* | Not packaged. Safe to delete |
 
 ## How participants get these
 
