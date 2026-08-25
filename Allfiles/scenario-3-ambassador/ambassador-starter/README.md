@@ -1,53 +1,59 @@
 # Ambassador starter
 
-Half an AI Skilling Ambassador program. It runs, it produces recommendations, and it is wrong in
-ways you can see.
+Picks people for the next cohort of an AI skilling ambassador program.
 
 ```text
-run.py                  the entry point
+cohort.py             the entry point
+definition.md         what the program is looking for. Replace this
+definitions/          three worked alternatives: reach, depth, rising
+agent.py              ask() and ask_json(), over the GitHub Copilot CLI
 program/
-  data.py               loads every CSV, attaches evidence to candidates
-  evaluate.py           decides the tier. This is the half that was built
-program-data/           72 candidates, ~2,000 evidence records
-PLAYBOOK.md             the program's rules and tiers
+  data.py             loads the nine data files
+program-data/         72 candidates, ~2,000 evidence records
+PLAYBOOK.md           how the program describes itself
 ```
 
 ## Run it
 
 ```bash
-python run.py                      # the shortlist
-python run.py --all                # all 72, with what was ignored
-python run.py --who "Alex Kim"     # one candidate in full
-python run.py --export register.csv
+python cohort.py
+python cohort.py --who "Alex Kim"
+python cohort.py --definition definitions/depth.md
 ```
 
-No dependencies. Standard library only.
+Python 3.10+ and the GitHub Copilot CLI, signed in. No other dependencies.
 
-## What it does
+## How it works
 
-Reads `CandidateProfiles.csv`, scores on three columns, assigns a tier,
-proposes a next action. Everything it prints is a proposal - nothing is sent and no
-decision is recorded.
+`cohort.py` reads `definition.md`, summarizes all 72 candidates, and sends both
+to the model through `agent.py`. What comes back is a shortlist with a sentence
+of reasoning and a proposed next step per person.
+
+The definition is prose, not a formula. That is deliberate: no scoring function
+evaluates "someone whose work gets reused by people they have never met."
 
 ## What it does not do
 
-`data.py` loads all nine files and attaches every evidence record to its candidate.
-`evaluate.py` then uses **one** of them. Run `--all` and each line tells you what it
-ignored for that person.
+- **It reads `CandidateProfiles.csv` only.** `data.py` loads all nine files and
+  attaches every activity, peer comment, contribution, credential, recognition
+  record and application to its candidate. `cohort.py` sends the summary line.
+- **Claims are not checked against rows.** The model is given summary counts, so
+  it can say someone's work "gets reused across teams" without anything in
+  `ProgramContributions.csv` supporting it. Nothing catches that.
+- **A human cannot overrule it.** Run it twice and you get two lists. There is
+  nowhere to record that you disagree.
+- **Nothing is sent.** Everything printed is a proposal.
 
-Specifically:
+## Swap the definition
 
-- Four columns in `CandidateProfiles.csv` are never read - `PeerSupport`,
-  `KnowledgeSharing`, `CommunityContribution`, `MultiplierBehavior`
-- 866 activity records, 283 peer comments, 390 contributions, 275 credentials, 128
-  recognition events and 41 applications are all loaded and unused
-- The weights in `evaluate.py` are asserted. Nothing in `PLAYBOOK.md` justifies
-  `BusinessImpact` counting three times as much as anything else
-- **R-004** and **R-006** from the playbook are not implemented at all
+```bash
+python cohort.py --definition definitions/reach.md    # work that travels
+python cohort.py --definition definitions/depth.md    # helps individuals
+python cohort.py --definition definitions/rising.md   # trajectory over standing
+```
 
-## Where to start
+Three definitions, same 72 people, and the shortlists barely overlap. `depth.md`
+and `rising.md` share two names out of eight, and each finds four people no
+other definition surfaces.
 
-Run it and look at the top of the list. Then look up one of those people in the evidence
-files and see whether the recommendation survives contact.
-
-`evaluate.py` is about ninety lines. It is meant to be replaced.
+Edit `definition.md` to say what your program is looking for, then re-run.
