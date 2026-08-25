@@ -8,7 +8,7 @@ Each piece declares who it was written for in its front matter. The audience car
 | `P1-retail-learn-unit` | Learn module unit | AC-01 🛒 | ~480 |
 | `P2-health-howto` | Docs how-to | AC-03 🏥 | ~450 |
 | `P3-manufacturing-announce` | Blog post / announcement | AC-04 🏭 | ~430 |
-| `P4-exec-summary` | Whitepaper – executive summary | AC-01 🛒 | ~480 |
+| `P4-exec-summary` | Whitepaper - executive summary | AC-01 🛒 | ~480 |
 | `P5-quickstart` | Lab / quickstart | AC-01 🛒 | ~400 |
 
 ---
@@ -42,7 +42,7 @@ For each piece, your reviewer must emit the output contract from the Content Rub
 | # | |
 |:---:|---|
 | 1 | Run the same piece twice. Same verdict? If not, your criteria are too vague. |
-| 2 | Did you SHIP anything a careful human would send back? That's a **false green** – the worst failure. |
+| 2 | Did you SHIP anything a careful human would send back? That's a **false green** - the worst failure. |
 | 3 | Did you REJECT anything genuinely good? That's a false red. |
 | 4 | Does every score quote real text? |
 | 5 | Could a non-expert read your output and act on it? |

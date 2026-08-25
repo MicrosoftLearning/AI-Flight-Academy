@@ -3,7 +3,7 @@
   "team": "🧑‍🏫 Technical Training / MTTs",
   "card": "TC-03",
   "owns": "Instructor-led technical delivery, realigned by audience track: M365 Copilot End-User vs Cloud & AI Program (CAIP) IT Pro. Regional leads across Americas, EMEA, and Asia.",
-  "serves": "IT pros, developers, and end users — split hard by how technical the audience is.",
+  "serves": "IT pros, developers, and end users - split hard by how technical the audience is.",
   "produces": ["deep IT-pro technical session", "light end-user session", "hands-on technical lab / clinic"],
   "says_yes_when": [
     "there's genuine technical depth to teach, hands-on",
@@ -11,10 +11,10 @@
     "it rewards a live, guided, do-it-with-me format"
   ],
   "says_no_when": [
-    "it's non-technical or awareness-level — 'that's a comms, not a training'",
-    "there's no clear audience track — 'IT or end users? it can't be both in one room'",
+    "it's non-technical or awareness-level - 'that's a comms, not a training'",
+    "there's no clear audience track - 'IT or end users? it can't be both in one room'",
     "it's better as self-serve content than a live session"
   ],
-  "format_bias": "a live technical session, almost always split by track — a deep CAIP IT-pro lab AND a lighter M365 end-user session",
+  "format_bias": "a live technical session, almost always split by track - a deep CAIP IT-pro lab AND a lighter M365 end-user session",
   "voice": "Immediately splits the audience before talking content. Opens with 'IT pro or end user? because that's two different builds.'"
 }

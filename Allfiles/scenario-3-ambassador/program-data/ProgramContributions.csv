@@ -1,0 +1,391 @@
+ContributionId,CandidateId,CandidateName,ArtifactType,AdoptionStatus,ReuseValue,TeamsReached,ContributionRole
+CON-0001,CAND-001,Avery Chen,scenario notes,shared,very high,11,maintained
+CON-0002,CAND-001,Avery Chen,quickstart guide,under review,very high,9,created
+CON-0003,CAND-001,Avery Chen,training deck,under review,low,10,maintained
+CON-0004,CAND-001,Avery Chen,demo script,under review,low,7,maintained
+CON-0005,CAND-001,Avery Chen,localization aid,retired,low,17,co-created
+CON-0006,CAND-001,Avery Chen,role-based checklist,retired,low,4,maintained
+CON-0007,CAND-001,Avery Chen,training deck,draft,high,7,co-created
+CON-0008,CAND-001,Avery Chen,submission template,adopted cross-team,low,18,maintained
+CON-0009,CAND-001,Avery Chen,mentor playbook,adopted cross-team,low,16,created
+CON-0010,CAND-001,Avery Chen,mentor playbook,adopted cross-team,medium,14,created
+CON-0011,CAND-001,Avery Chen,localization aid,adopted by team,very high,9,created
+CON-0012,CAND-002,Riley Singh,demo script,retired,medium,10,co-created
+CON-0013,CAND-002,Riley Singh,training deck,adopted by team,low,5,reviewed
+CON-0014,CAND-002,Riley Singh,scenario notes,under review,medium,2,maintained
+CON-0015,CAND-002,Riley Singh,mentor playbook,shared,low,2,reviewed
+CON-0016,CAND-002,Riley Singh,scenario notes,draft,high,5,localized
+CON-0017,CAND-002,Riley Singh,mentor playbook,adopted by team,very high,4,created
+CON-0018,CAND-003,Drew Foster,community FAQ,retired,medium,16,maintained
+CON-0019,CAND-003,Drew Foster,localization aid,adopted cross-team,low,9,created
+CON-0020,CAND-003,Drew Foster,mentor playbook,adopted cross-team,very high,3,localized
+CON-0021,CAND-003,Drew Foster,quickstart guide,adopted cross-team,medium,1,reviewed
+CON-0022,CAND-003,Drew Foster,localization aid,retired,low,8,maintained
+CON-0023,CAND-003,Drew Foster,training deck,adopted by team,very high,15,created
+CON-0024,CAND-003,Drew Foster,localization aid,shared,medium,12,maintained
+CON-0025,CAND-003,Drew Foster,training deck,shared,very high,18,localized
+CON-0026,CAND-004,Parker White,quickstart guide,adopted cross-team,high,6,created
+CON-0027,CAND-004,Parker White,quickstart guide,adopted cross-team,high,9,localized
+CON-0028,CAND-004,Parker White,mentor playbook,under review,medium,17,reviewed
+CON-0029,CAND-004,Parker White,quickstart guide,shared,low,10,created
+CON-0030,CAND-004,Parker White,scenario notes,under review,low,5,maintained
+CON-0031,CAND-005,Cameron Scott,scenario notes,shared,high,11,reviewed
+CON-0032,CAND-005,Cameron Scott,role-based checklist,adopted by team,medium,11,reviewed
+CON-0033,CAND-005,Cameron Scott,community FAQ,adopted cross-team,high,1,co-created
+CON-0034,CAND-005,Cameron Scott,quickstart guide,retired,very high,1,created
+CON-0035,CAND-005,Cameron Scott,training deck,adopted cross-team,very high,13,maintained
+CON-0036,CAND-006,Alex Kim,demo script,retired,low,15,created
+CON-0037,CAND-006,Alex Kim,mentor playbook,adopted cross-team,high,13,co-created
+CON-0038,CAND-007,Morgan Lee,demo script,adopted cross-team,high,7,localized
+CON-0039,CAND-008,Taylor Brooks,community FAQ,under review,low,9,reviewed
+CON-0040,CAND-009,Jordan Patel,demo script,retired,high,8,co-created
+CON-0041,CAND-009,Jordan Patel,role-based checklist,adopted by team,low,9,localized
+CON-0042,CAND-009,Jordan Patel,submission template,shared,low,7,localized
+CON-0043,CAND-009,Jordan Patel,demo script,adopted by team,very high,6,maintained
+CON-0044,CAND-009,Jordan Patel,community FAQ,under review,medium,3,maintained
+CON-0045,CAND-009,Jordan Patel,training deck,under review,low,5,reviewed
+CON-0046,CAND-009,Jordan Patel,submission template,shared,high,7,created
+CON-0047,CAND-009,Jordan Patel,localization aid,retired,high,18,localized
+CON-0048,CAND-010,Sam Rivera,scenario notes,under review,low,11,localized
+CON-0049,CAND-010,Sam Rivera,scenario notes,adopted by team,low,17,localized
+CON-0050,CAND-010,Sam Rivera,role-based checklist,adopted by team,low,8,created
+CON-0051,CAND-010,Sam Rivera,office hours plan,adopted cross-team,very high,11,created
+CON-0052,CAND-010,Sam Rivera,scenario notes,shared,high,3,maintained
+CON-0053,CAND-011,Jamie Santos,community FAQ,under review,very high,3,co-created
+CON-0054,CAND-012,Cameron Patel,training deck,adopted by team,high,3,created
+CON-0055,CAND-012,Cameron Patel,quickstart guide,adopted cross-team,very high,1,maintained
+CON-0056,CAND-012,Cameron Patel,mentor playbook,adopted by team,medium,4,localized
+CON-0057,CAND-012,Cameron Patel,community FAQ,adopted by team,low,11,maintained
+CON-0058,CAND-013,Reese Foster,demo script,retired,very high,4,localized
+CON-0059,CAND-013,Reese Foster,submission template,draft,low,2,created
+CON-0060,CAND-013,Reese Foster,scenario notes,adopted by team,low,5,created
+CON-0061,CAND-013,Reese Foster,role-based checklist,draft,high,14,created
+CON-0062,CAND-014,Skyler Okafor,quickstart guide,retired,low,10,localized
+CON-0063,CAND-014,Skyler Okafor,scenario notes,draft,very high,8,maintained
+CON-0064,CAND-014,Skyler Okafor,submission template,draft,very high,13,localized
+CON-0065,CAND-014,Skyler Okafor,scenario notes,retired,low,11,created
+CON-0066,CAND-014,Skyler Okafor,role-based checklist,retired,high,7,created
+CON-0067,CAND-014,Skyler Okafor,demo script,draft,low,7,maintained
+CON-0068,CAND-015,Emery Silva,localization aid,adopted by team,high,14,localized
+CON-0069,CAND-015,Emery Silva,submission template,adopted cross-team,medium,8,co-created
+CON-0070,CAND-015,Emery Silva,quickstart guide,draft,medium,10,maintained
+CON-0071,CAND-016,Harper Olsen,localization aid,under review,high,10,maintained
+CON-0072,CAND-016,Harper Olsen,localization aid,shared,medium,16,reviewed
+CON-0073,CAND-016,Harper Olsen,submission template,adopted by team,high,12,created
+CON-0074,CAND-016,Harper Olsen,localization aid,retired,medium,2,co-created
+CON-0075,CAND-016,Harper Olsen,localization aid,retired,low,14,reviewed
+CON-0076,CAND-016,Harper Olsen,community FAQ,shared,medium,3,reviewed
+CON-0077,CAND-016,Harper Olsen,community FAQ,under review,very high,15,maintained
+CON-0078,CAND-017,Finley Yamada,submission template,retired,high,10,localized
+CON-0079,CAND-017,Finley Yamada,mentor playbook,shared,low,15,created
+CON-0080,CAND-017,Finley Yamada,role-based checklist,shared,low,8,co-created
+CON-0081,CAND-017,Finley Yamada,role-based checklist,retired,medium,8,localized
+CON-0082,CAND-017,Finley Yamada,mentor playbook,under review,very high,7,localized
+CON-0083,CAND-017,Finley Yamada,training deck,draft,high,1,created
+CON-0084,CAND-018,Devon Singh,quickstart guide,retired,low,5,reviewed
+CON-0085,CAND-018,Devon Singh,role-based checklist,shared,high,2,created
+CON-0086,CAND-018,Devon Singh,community FAQ,shared,high,6,co-created
+CON-0087,CAND-018,Devon Singh,office hours plan,under review,medium,11,maintained
+CON-0088,CAND-018,Devon Singh,community FAQ,shared,medium,1,co-created
+CON-0089,CAND-018,Devon Singh,office hours plan,draft,low,5,localized
+CON-0090,CAND-019,Sage Adams,mentor playbook,shared,high,15,co-created
+CON-0091,CAND-019,Sage Adams,mentor playbook,adopted by team,medium,17,maintained
+CON-0092,CAND-020,Alex Nakamura,demo script,draft,medium,5,co-created
+CON-0093,CAND-020,Alex Nakamura,community FAQ,retired,very high,12,reviewed
+CON-0094,CAND-020,Alex Nakamura,submission template,adopted cross-team,medium,2,maintained
+CON-0095,CAND-020,Alex Nakamura,submission template,shared,high,5,reviewed
+CON-0096,CAND-020,Alex Nakamura,community FAQ,draft,high,5,maintained
+CON-0097,CAND-020,Alex Nakamura,submission template,adopted cross-team,medium,3,localized
+CON-0098,CAND-020,Alex Nakamura,submission template,draft,medium,17,localized
+CON-0099,CAND-021,Kendall Ibrahim,role-based checklist,retired,very high,6,reviewed
+CON-0100,CAND-021,Kendall Ibrahim,mentor playbook,retired,very high,16,localized
+CON-0101,CAND-021,Kendall Ibrahim,office hours plan,retired,very high,2,co-created
+CON-0102,CAND-021,Kendall Ibrahim,community FAQ,shared,very high,8,localized
+CON-0103,CAND-021,Kendall Ibrahim,community FAQ,adopted by team,very high,13,maintained
+CON-0104,CAND-021,Kendall Ibrahim,training deck,adopted by team,high,18,created
+CON-0105,CAND-022,Remy Thompson,demo script,adopted by team,very high,17,reviewed
+CON-0106,CAND-022,Remy Thompson,community FAQ,retired,low,15,maintained
+CON-0107,CAND-022,Remy Thompson,submission template,adopted by team,very high,15,localized
+CON-0108,CAND-022,Remy Thompson,scenario notes,adopted cross-team,high,16,reviewed
+CON-0109,CAND-022,Remy Thompson,office hours plan,adopted cross-team,low,6,localized
+CON-0110,CAND-022,Remy Thompson,community FAQ,adopted by team,low,12,created
+CON-0111,CAND-022,Remy Thompson,office hours plan,retired,low,9,co-created
+CON-0112,CAND-023,Blair Rivera,demo script,draft,high,2,maintained
+CON-0113,CAND-023,Blair Rivera,community FAQ,adopted by team,medium,11,reviewed
+CON-0114,CAND-024,Elliot Kim,office hours plan,shared,medium,18,reviewed
+CON-0115,CAND-024,Elliot Kim,quickstart guide,adopted by team,high,12,localized
+CON-0116,CAND-024,Elliot Kim,scenario notes,retired,low,16,maintained
+CON-0117,CAND-024,Elliot Kim,training deck,adopted cross-team,medium,8,co-created
+CON-0118,CAND-024,Elliot Kim,role-based checklist,shared,very high,15,reviewed
+CON-0119,CAND-024,Elliot Kim,demo script,adopted by team,medium,14,localized
+CON-0120,CAND-024,Elliot Kim,community FAQ,adopted cross-team,very high,18,created
+CON-0121,CAND-024,Elliot Kim,mentor playbook,shared,medium,10,created
+CON-0122,CAND-024,Elliot Kim,role-based checklist,under review,high,11,co-created
+CON-0123,CAND-025,Hayden Garcia,scenario notes,under review,very high,18,reviewed
+CON-0124,CAND-025,Hayden Garcia,mentor playbook,retired,low,2,co-created
+CON-0125,CAND-025,Hayden Garcia,training deck,adopted by team,very high,13,co-created
+CON-0126,CAND-025,Hayden Garcia,scenario notes,draft,very high,7,localized
+CON-0127,CAND-025,Hayden Garcia,demo script,adopted by team,very high,10,created
+CON-0128,CAND-025,Hayden Garcia,training deck,draft,medium,2,maintained
+CON-0129,CAND-025,Hayden Garcia,role-based checklist,draft,medium,7,created
+CON-0130,CAND-026,Jules Bennett,office hours plan,shared,medium,10,maintained
+CON-0131,CAND-026,Jules Bennett,demo script,adopted cross-team,low,12,maintained
+CON-0132,CAND-026,Jules Bennett,quickstart guide,shared,high,14,localized
+CON-0133,CAND-026,Jules Bennett,training deck,draft,medium,18,localized
+CON-0134,CAND-026,Jules Bennett,role-based checklist,under review,low,13,co-created
+CON-0135,CAND-026,Jules Bennett,training deck,shared,high,14,localized
+CON-0136,CAND-026,Jules Bennett,training deck,retired,high,7,maintained
+CON-0137,CAND-027,Kiran Park,office hours plan,shared,low,5,localized
+CON-0138,CAND-027,Kiran Park,demo script,adopted cross-team,medium,17,reviewed
+CON-0139,CAND-027,Kiran Park,submission template,adopted cross-team,very high,15,maintained
+CON-0140,CAND-027,Kiran Park,quickstart guide,under review,low,10,localized
+CON-0141,CAND-027,Kiran Park,mentor playbook,under review,high,13,maintained
+CON-0142,CAND-027,Kiran Park,training deck,adopted cross-team,medium,6,maintained
+CON-0143,CAND-027,Kiran Park,scenario notes,adopted cross-team,very high,6,maintained
+CON-0144,CAND-027,Kiran Park,demo script,adopted cross-team,low,8,co-created
+CON-0145,CAND-028,Lane Zhang,localization aid,adopted by team,low,7,localized
+CON-0146,CAND-028,Lane Zhang,scenario notes,retired,low,12,created
+CON-0147,CAND-028,Lane Zhang,demo script,retired,high,14,localized
+CON-0148,CAND-028,Lane Zhang,training deck,adopted by team,medium,17,created
+CON-0149,CAND-028,Lane Zhang,role-based checklist,draft,low,15,localized
+CON-0150,CAND-029,Marley Nguyen,scenario notes,shared,very high,2,created
+CON-0151,CAND-029,Marley Nguyen,office hours plan,draft,medium,11,localized
+CON-0152,CAND-029,Marley Nguyen,role-based checklist,adopted cross-team,low,3,maintained
+CON-0153,CAND-029,Marley Nguyen,community FAQ,under review,very high,5,localized
+CON-0154,CAND-029,Marley Nguyen,office hours plan,shared,medium,1,maintained
+CON-0155,CAND-029,Marley Nguyen,demo script,shared,high,4,maintained
+CON-0156,CAND-030,Noel Scott,training deck,draft,low,9,co-created
+CON-0157,CAND-030,Noel Scott,role-based checklist,adopted by team,medium,7,created
+CON-0158,CAND-030,Noel Scott,localization aid,shared,very high,2,maintained
+CON-0159,CAND-030,Noel Scott,demo script,adopted cross-team,high,15,created
+CON-0160,CAND-030,Noel Scott,submission template,draft,low,13,co-created
+CON-0161,CAND-030,Noel Scott,community FAQ,adopted by team,medium,7,created
+CON-0162,CAND-030,Noel Scott,quickstart guide,adopted cross-team,low,1,reviewed
+CON-0163,CAND-031,Oakley Ali,demo script,shared,low,6,co-created
+CON-0164,CAND-031,Oakley Ali,quickstart guide,adopted cross-team,low,11,reviewed
+CON-0165,CAND-031,Oakley Ali,localization aid,under review,medium,7,maintained
+CON-0166,CAND-031,Oakley Ali,scenario notes,adopted cross-team,low,8,co-created
+CON-0167,CAND-032,Peyton Kowalski,mentor playbook,adopted by team,medium,1,localized
+CON-0168,CAND-032,Peyton Kowalski,mentor playbook,draft,very high,7,localized
+CON-0169,CAND-032,Peyton Kowalski,community FAQ,draft,high,12,created
+CON-0170,CAND-032,Peyton Kowalski,demo script,shared,very high,10,maintained
+CON-0171,CAND-032,Peyton Kowalski,role-based checklist,draft,medium,9,created
+CON-0172,CAND-032,Peyton Kowalski,submission template,adopted by team,very high,5,reviewed
+CON-0173,CAND-033,Robin Varga,mentor playbook,under review,very high,3,reviewed
+CON-0174,CAND-033,Robin Varga,quickstart guide,retired,very high,13,maintained
+CON-0175,CAND-033,Robin Varga,community FAQ,retired,low,8,created
+CON-0176,CAND-034,Shiloh Brooks,office hours plan,shared,very high,8,maintained
+CON-0177,CAND-034,Shiloh Brooks,demo script,draft,medium,12,localized
+CON-0178,CAND-035,Tatum White,community FAQ,shared,very high,7,created
+CON-0179,CAND-035,Tatum White,community FAQ,under review,very high,11,co-created
+CON-0180,CAND-035,Tatum White,office hours plan,adopted by team,low,17,localized
+CON-0181,CAND-035,Tatum White,office hours plan,draft,medium,11,reviewed
+CON-0182,CAND-035,Tatum White,community FAQ,shared,low,8,co-created
+CON-0183,CAND-036,Winter Khan,localization aid,adopted by team,medium,15,created
+CON-0184,CAND-036,Winter Khan,demo script,adopted cross-team,low,7,created
+CON-0185,CAND-036,Winter Khan,training deck,shared,medium,3,co-created
+CON-0186,CAND-036,Winter Khan,submission template,retired,medium,8,maintained
+CON-0187,CAND-036,Winter Khan,demo script,adopted cross-team,very high,10,co-created
+CON-0188,CAND-036,Winter Khan,community FAQ,shared,very high,6,maintained
+CON-0189,CAND-036,Winter Khan,community FAQ,adopted by team,high,15,co-created
+CON-0190,CAND-037,Nico Cruz,role-based checklist,draft,high,13,localized
+CON-0191,CAND-037,Nico Cruz,training deck,adopted cross-team,very high,14,maintained
+CON-0192,CAND-037,Nico Cruz,submission template,under review,very high,5,localized
+CON-0193,CAND-037,Nico Cruz,quickstart guide,adopted cross-team,very high,3,reviewed
+CON-0194,CAND-037,Nico Cruz,submission template,retired,medium,18,co-created
+CON-0195,CAND-037,Nico Cruz,office hours plan,adopted cross-team,very high,10,localized
+CON-0196,CAND-037,Nico Cruz,office hours plan,adopted cross-team,very high,3,reviewed
+CON-0197,CAND-037,Nico Cruz,training deck,under review,very high,7,co-created
+CON-0198,CAND-037,Nico Cruz,community FAQ,draft,low,17,reviewed
+CON-0199,CAND-038,Adrian Rahman,scenario notes,adopted cross-team,very high,12,localized
+CON-0200,CAND-038,Adrian Rahman,role-based checklist,adopted by team,low,14,created
+CON-0201,CAND-038,Adrian Rahman,demo script,adopted cross-team,medium,7,localized
+CON-0202,CAND-038,Adrian Rahman,office hours plan,under review,high,17,localized
+CON-0203,CAND-038,Adrian Rahman,mentor playbook,under review,low,13,localized
+CON-0204,CAND-038,Adrian Rahman,community FAQ,shared,very high,2,reviewed
+CON-0205,CAND-038,Adrian Rahman,quickstart guide,under review,medium,9,maintained
+CON-0206,CAND-038,Adrian Rahman,role-based checklist,under review,medium,9,co-created
+CON-0207,CAND-039,Milan Chen,quickstart guide,draft,low,13,localized
+CON-0208,CAND-039,Milan Chen,submission template,draft,medium,14,co-created
+CON-0209,CAND-039,Milan Chen,scenario notes,adopted by team,high,17,maintained
+CON-0210,CAND-040,Kai Torres,submission template,adopted by team,very high,3,created
+CON-0211,CAND-040,Kai Torres,submission template,adopted by team,medium,9,co-created
+CON-0212,CAND-040,Kai Torres,scenario notes,under review,high,1,co-created
+CON-0213,CAND-040,Kai Torres,role-based checklist,draft,low,3,localized
+CON-0214,CAND-040,Kai Torres,localization aid,adopted cross-team,high,14,co-created
+CON-0215,CAND-040,Kai Torres,training deck,adopted by team,medium,5,co-created
+CON-0216,CAND-040,Kai Torres,role-based checklist,shared,low,15,maintained
+CON-0217,CAND-041,Misha Morgan,training deck,shared,low,6,co-created
+CON-0218,CAND-041,Misha Morgan,office hours plan,adopted cross-team,very high,4,co-created
+CON-0219,CAND-041,Misha Morgan,demo script,adopted by team,low,13,created
+CON-0220,CAND-041,Misha Morgan,office hours plan,draft,high,1,maintained
+CON-0221,CAND-042,Arden Brown,role-based checklist,adopted cross-team,low,1,created
+CON-0222,CAND-042,Arden Brown,office hours plan,draft,low,4,co-created
+CON-0223,CAND-042,Arden Brown,localization aid,draft,very high,17,reviewed
+CON-0224,CAND-042,Arden Brown,role-based checklist,adopted cross-team,high,14,reviewed
+CON-0225,CAND-043,Lior Martinez,mentor playbook,adopted by team,medium,12,localized
+CON-0226,CAND-043,Lior Martinez,scenario notes,retired,low,12,reviewed
+CON-0227,CAND-043,Lior Martinez,demo script,draft,very high,13,co-created
+CON-0228,CAND-043,Lior Martinez,quickstart guide,retired,low,17,reviewed
+CON-0229,CAND-043,Lior Martinez,community FAQ,adopted by team,very high,16,maintained
+CON-0230,CAND-043,Lior Martinez,scenario notes,under review,medium,1,reviewed
+CON-0231,CAND-044,Sasha Wilson,mentor playbook,draft,high,15,co-created
+CON-0232,CAND-045,Ellis Lee,scenario notes,under review,low,12,localized
+CON-0233,CAND-045,Ellis Lee,role-based checklist,under review,low,13,reviewed
+CON-0234,CAND-045,Ellis Lee,submission template,shared,medium,17,maintained
+CON-0235,CAND-045,Ellis Lee,localization aid,draft,medium,16,created
+CON-0236,CAND-045,Ellis Lee,office hours plan,under review,very high,6,localized
+CON-0237,CAND-045,Ellis Lee,demo script,adopted cross-team,medium,8,co-created
+CON-0238,CAND-045,Ellis Lee,training deck,under review,low,4,localized
+CON-0239,CAND-045,Ellis Lee,quickstart guide,shared,high,13,reviewed
+CON-0240,CAND-046,Indigo Diaz,office hours plan,under review,very high,4,co-created
+CON-0241,CAND-046,Indigo Diaz,localization aid,under review,very high,3,reviewed
+CON-0242,CAND-046,Indigo Diaz,community FAQ,retired,low,11,localized
+CON-0243,CAND-046,Indigo Diaz,scenario notes,under review,very high,8,co-created
+CON-0244,CAND-047,Rio Miller,demo script,adopted by team,low,4,created
+CON-0245,CAND-047,Rio Miller,mentor playbook,under review,medium,4,maintained
+CON-0246,CAND-047,Rio Miller,mentor playbook,shared,high,13,maintained
+CON-0247,CAND-047,Rio Miller,quickstart guide,adopted by team,low,18,co-created
+CON-0248,CAND-047,Rio Miller,scenario notes,adopted cross-team,high,12,co-created
+CON-0249,CAND-048,Lennox Hansen,demo script,adopted cross-team,low,18,localized
+CON-0250,CAND-048,Lennox Hansen,mentor playbook,shared,high,8,localized
+CON-0251,CAND-048,Lennox Hansen,role-based checklist,shared,high,5,created
+CON-0252,CAND-048,Lennox Hansen,submission template,adopted by team,high,17,created
+CON-0253,CAND-049,Phoenix Santos,submission template,adopted cross-team,medium,16,reviewed
+CON-0254,CAND-049,Phoenix Santos,scenario notes,draft,high,5,co-created
+CON-0255,CAND-049,Phoenix Santos,community FAQ,under review,low,6,localized
+CON-0256,CAND-049,Phoenix Santos,scenario notes,adopted by team,medium,1,maintained
+CON-0257,CAND-049,Phoenix Santos,scenario notes,adopted by team,very high,16,reviewed
+CON-0258,CAND-050,Briar Patel,scenario notes,draft,high,10,co-created
+CON-0259,CAND-050,Briar Patel,localization aid,adopted cross-team,low,5,reviewed
+CON-0260,CAND-050,Briar Patel,submission template,draft,high,15,co-created
+CON-0261,CAND-050,Briar Patel,submission template,shared,very high,16,reviewed
+CON-0262,CAND-050,Briar Patel,training deck,shared,medium,7,created
+CON-0263,CAND-050,Briar Patel,mentor playbook,under review,low,5,localized
+CON-0264,CAND-050,Briar Patel,scenario notes,under review,medium,2,created
+CON-0265,CAND-051,Marlowe Foster,role-based checklist,shared,low,4,maintained
+CON-0266,CAND-051,Marlowe Foster,mentor playbook,retired,very high,5,localized
+CON-0267,CAND-051,Marlowe Foster,community FAQ,draft,low,8,localized
+CON-0268,CAND-051,Marlowe Foster,role-based checklist,adopted by team,medium,13,created
+CON-0269,CAND-051,Marlowe Foster,role-based checklist,under review,very high,9,localized
+CON-0270,CAND-051,Marlowe Foster,mentor playbook,draft,low,4,created
+CON-0271,CAND-052,Micah Okafor,role-based checklist,under review,medium,1,maintained
+CON-0272,CAND-052,Micah Okafor,submission template,retired,very high,9,created
+CON-0273,CAND-053,River Silva,scenario notes,adopted cross-team,very high,10,maintained
+CON-0274,CAND-053,River Silva,training deck,draft,high,3,maintained
+CON-0275,CAND-053,River Silva,training deck,adopted cross-team,low,13,maintained
+CON-0276,CAND-054,Sawyer Olsen,demo script,retired,low,7,created
+CON-0277,CAND-054,Sawyer Olsen,training deck,retired,medium,1,maintained
+CON-0278,CAND-054,Sawyer Olsen,role-based checklist,adopted by team,low,2,co-created
+CON-0279,CAND-054,Sawyer Olsen,submission template,shared,medium,3,maintained
+CON-0280,CAND-054,Sawyer Olsen,office hours plan,draft,low,4,maintained
+CON-0281,CAND-054,Sawyer Olsen,office hours plan,adopted by team,medium,14,created
+CON-0282,CAND-054,Sawyer Olsen,community FAQ,adopted by team,low,17,reviewed
+CON-0283,CAND-054,Sawyer Olsen,localization aid,adopted cross-team,medium,16,reviewed
+CON-0284,CAND-054,Sawyer Olsen,localization aid,adopted by team,medium,4,created
+CON-0285,CAND-054,Sawyer Olsen,community FAQ,draft,medium,5,reviewed
+CON-0286,CAND-054,Sawyer Olsen,community FAQ,shared,medium,12,reviewed
+CON-0287,CAND-054,Sawyer Olsen,training deck,under review,very high,3,maintained
+CON-0288,CAND-055,Sterling Yamada,office hours plan,adopted cross-team,medium,13,localized
+CON-0289,CAND-055,Sterling Yamada,demo script,adopted by team,very high,5,maintained
+CON-0290,CAND-055,Sterling Yamada,community FAQ,draft,high,7,reviewed
+CON-0291,CAND-055,Sterling Yamada,submission template,under review,medium,14,co-created
+CON-0292,CAND-055,Sterling Yamada,mentor playbook,adopted cross-team,very high,1,maintained
+CON-0293,CAND-056,Teagan Singh,demo script,adopted by team,low,18,created
+CON-0294,CAND-056,Teagan Singh,localization aid,adopted cross-team,low,11,created
+CON-0295,CAND-056,Teagan Singh,mentor playbook,adopted by team,high,5,co-created
+CON-0296,CAND-056,Teagan Singh,office hours plan,draft,low,13,co-created
+CON-0297,CAND-057,Val Adams,demo script,draft,medium,17,reviewed
+CON-0298,CAND-057,Val Adams,submission template,adopted cross-team,low,17,reviewed
+CON-0299,CAND-057,Val Adams,submission template,adopted by team,high,4,created
+CON-0300,CAND-057,Val Adams,training deck,adopted by team,very high,6,reviewed
+CON-0301,CAND-057,Val Adams,localization aid,retired,very high,16,maintained
+CON-0302,CAND-057,Val Adams,training deck,adopted by team,low,17,co-created
+CON-0303,CAND-057,Val Adams,training deck,shared,very high,9,created
+CON-0304,CAND-058,Yael Nakamura,community FAQ,under review,very high,15,co-created
+CON-0305,CAND-058,Yael Nakamura,role-based checklist,adopted by team,very high,17,reviewed
+CON-0306,CAND-058,Yael Nakamura,office hours plan,adopted cross-team,medium,10,created
+CON-0307,CAND-058,Yael Nakamura,office hours plan,adopted cross-team,high,3,created
+CON-0308,CAND-058,Yael Nakamura,demo script,under review,medium,3,co-created
+CON-0309,CAND-058,Yael Nakamura,submission template,draft,low,10,maintained
+CON-0310,CAND-059,Zion Ibrahim,quickstart guide,adopted cross-team,medium,16,localized
+CON-0311,CAND-059,Zion Ibrahim,localization aid,under review,low,13,created
+CON-0312,CAND-059,Zion Ibrahim,submission template,shared,low,14,maintained
+CON-0313,CAND-059,Zion Ibrahim,mentor playbook,shared,low,15,co-created
+CON-0314,CAND-059,Zion Ibrahim,localization aid,shared,medium,3,reviewed
+CON-0315,CAND-059,Zion Ibrahim,training deck,retired,high,2,localized
+CON-0316,CAND-059,Zion Ibrahim,role-based checklist,adopted cross-team,medium,12,created
+CON-0317,CAND-059,Zion Ibrahim,mentor playbook,under review,medium,18,created
+CON-0318,CAND-060,Ari Thompson,office hours plan,adopted cross-team,high,9,co-created
+CON-0319,CAND-060,Ari Thompson,quickstart guide,under review,very high,7,reviewed
+CON-0320,CAND-060,Ari Thompson,localization aid,draft,very high,16,created
+CON-0321,CAND-060,Ari Thompson,mentor playbook,draft,very high,11,reviewed
+CON-0322,CAND-060,Ari Thompson,mentor playbook,draft,low,12,co-created
+CON-0323,CAND-061,Brook Rivera,mentor playbook,draft,low,14,localized
+CON-0324,CAND-061,Brook Rivera,community FAQ,draft,medium,14,created
+CON-0325,CAND-061,Brook Rivera,role-based checklist,draft,medium,9,co-created
+CON-0326,CAND-061,Brook Rivera,role-based checklist,adopted cross-team,high,10,reviewed
+CON-0327,CAND-061,Brook Rivera,scenario notes,shared,high,4,localized
+CON-0328,CAND-061,Brook Rivera,role-based checklist,shared,medium,12,localized
+CON-0329,CAND-061,Brook Rivera,quickstart guide,adopted by team,medium,4,co-created
+CON-0330,CAND-062,Cedar Kim,quickstart guide,shared,very high,14,reviewed
+CON-0331,CAND-062,Cedar Kim,quickstart guide,shared,medium,16,reviewed
+CON-0332,CAND-062,Cedar Kim,demo script,adopted cross-team,very high,18,localized
+CON-0333,CAND-062,Cedar Kim,training deck,adopted by team,very high,17,localized
+CON-0334,CAND-062,Cedar Kim,training deck,draft,low,1,co-created
+CON-0335,CAND-062,Cedar Kim,training deck,adopted by team,low,8,created
+CON-0336,CAND-062,Cedar Kim,mentor playbook,adopted cross-team,low,14,localized
+CON-0337,CAND-062,Cedar Kim,office hours plan,adopted by team,very high,3,localized
+CON-0338,CAND-062,Cedar Kim,community FAQ,retired,medium,17,co-created
+CON-0339,CAND-063,Darian Garcia,office hours plan,draft,high,8,localized
+CON-0340,CAND-063,Darian Garcia,community FAQ,adopted cross-team,low,17,maintained
+CON-0341,CAND-063,Darian Garcia,training deck,shared,medium,8,created
+CON-0342,CAND-063,Darian Garcia,training deck,adopted cross-team,low,9,co-created
+CON-0343,CAND-063,Darian Garcia,training deck,adopted cross-team,low,7,created
+CON-0344,CAND-063,Darian Garcia,quickstart guide,adopted cross-team,very high,17,reviewed
+CON-0345,CAND-063,Darian Garcia,community FAQ,shared,high,14,localized
+CON-0346,CAND-063,Darian Garcia,quickstart guide,retired,very high,2,reviewed
+CON-0347,CAND-064,Ezra Bennett,office hours plan,adopted by team,high,12,localized
+CON-0348,CAND-064,Ezra Bennett,community FAQ,adopted by team,low,6,created
+CON-0349,CAND-064,Ezra Bennett,quickstart guide,draft,high,7,reviewed
+CON-0350,CAND-064,Ezra Bennett,role-based checklist,adopted by team,low,14,co-created
+CON-0351,CAND-064,Ezra Bennett,office hours plan,adopted cross-team,high,11,reviewed
+CON-0352,CAND-064,Ezra Bennett,demo script,draft,low,18,co-created
+CON-0353,CAND-065,Gray Park,mentor playbook,under review,high,17,maintained
+CON-0354,CAND-065,Gray Park,mentor playbook,shared,high,7,maintained
+CON-0355,CAND-065,Gray Park,scenario notes,draft,low,5,maintained
+CON-0356,CAND-065,Gray Park,demo script,draft,medium,7,localized
+CON-0357,CAND-065,Gray Park,demo script,draft,high,10,localized
+CON-0358,CAND-065,Gray Park,community FAQ,retired,medium,2,co-created
+CON-0359,CAND-066,Hollis Zhang,scenario notes,retired,high,18,reviewed
+CON-0360,CAND-066,Hollis Zhang,mentor playbook,adopted cross-team,low,14,created
+CON-0361,CAND-066,Hollis Zhang,role-based checklist,adopted cross-team,low,6,maintained
+CON-0362,CAND-066,Hollis Zhang,office hours plan,under review,medium,10,created
+CON-0363,CAND-067,Ira Nguyen,community FAQ,under review,very high,16,maintained
+CON-0364,CAND-068,Juniper Scott,training deck,adopted cross-team,very high,18,localized
+CON-0365,CAND-068,Juniper Scott,scenario notes,retired,high,7,co-created
+CON-0366,CAND-068,Juniper Scott,quickstart guide,shared,medium,1,maintained
+CON-0367,CAND-068,Juniper Scott,role-based checklist,retired,high,10,co-created
+CON-0368,CAND-068,Juniper Scott,office hours plan,under review,high,18,created
+CON-0369,CAND-068,Juniper Scott,training deck,shared,low,18,co-created
+CON-0370,CAND-069,Kit Ali,quickstart guide,under review,medium,9,co-created
+CON-0371,CAND-069,Kit Ali,office hours plan,draft,medium,7,maintained
+CON-0372,CAND-069,Kit Ali,demo script,draft,high,12,reviewed
+CON-0373,CAND-069,Kit Ali,demo script,under review,high,5,localized
+CON-0374,CAND-069,Kit Ali,submission template,adopted by team,high,2,created
+CON-0375,CAND-069,Kit Ali,mentor playbook,shared,high,6,reviewed
+CON-0376,CAND-069,Kit Ali,quickstart guide,retired,low,13,reviewed
+CON-0377,CAND-069,Kit Ali,submission template,retired,medium,15,co-created
+CON-0378,CAND-069,Kit Ali,mentor playbook,adopted by team,medium,13,co-created
+CON-0379,CAND-070,Lux Kowalski,community FAQ,under review,very high,12,co-created
+CON-0380,CAND-070,Lux Kowalski,role-based checklist,draft,very high,6,localized
+CON-0381,CAND-070,Lux Kowalski,training deck,shared,medium,16,co-created
+CON-0382,CAND-070,Lux Kowalski,office hours plan,draft,high,6,co-created
+CON-0383,CAND-070,Lux Kowalski,scenario notes,under review,medium,3,co-created
+CON-0384,CAND-070,Lux Kowalski,demo script,adopted cross-team,medium,15,localized
+CON-0385,CAND-070,Lux Kowalski,demo script,under review,medium,1,maintained
+CON-0386,CAND-070,Lux Kowalski,demo script,adopted cross-team,very high,1,created
+CON-0387,CAND-071,Monroe Varga,quickstart guide,shared,medium,3,reviewed
+CON-0388,CAND-072,Nova Brooks,submission template,draft,low,4,maintained
+CON-0389,CAND-072,Nova Brooks,mentor playbook,under review,low,7,co-created
+CON-0390,CAND-072,Nova Brooks,role-based checklist,retired,very high,6,reviewed

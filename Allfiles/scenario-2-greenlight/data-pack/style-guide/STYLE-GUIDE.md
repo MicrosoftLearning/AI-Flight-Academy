@@ -1,4 +1,4 @@
-# CONTOSO ENTERPRISE ENABLEMENT – STYLE GUIDE
+# CONTOSO ENTERPRISE ENABLEMENT - STYLE GUIDE
 ## One page. This is all of it.
 
 *Fictional style guide for a fictional company. See `../DISCLAIMER.md`.*
@@ -25,10 +25,10 @@
 
 | Do | Don't |
 |---|---|
-| Second person – *you* | Third person – *the user* |
+| Second person - *you* | Third person - *the user* |
 | Active voice | Passive voice |
 | Short sentences | Sentences with three clauses |
-| Plain verbs – *turn on*, *open*, *ask* | Enable · activate · provision · leverage · utilise |
+| Plain verbs - *turn on*, *open*, *ask* | Enable · activate · provision · leverage · utilize |
 | Say the limitation plainly | Bury it, or omit it |
 
 ## By genre
@@ -45,7 +45,7 @@
 
 | | |
 |---|---|
-| **Every capability claim must be true today** | Not announced, not planned, not in preview unless labelled |
+| **Every capability claim must be true today** | Not announced, not planned, not in preview unless labeled |
 | **No version numbers, SKUs, or interface paths** | They age the content out within a quarter |
 | **Attribute anything contested** | Name the owner, the system, or the source |
 | **Say what you don't know** | *"We don't have a control for this yet"* is a stronger sentence than a confident guess |
@@ -65,8 +65,8 @@
 | | |
 |---|---|
 | Avoid idioms, metaphors, and wordplay | Many readers are reading in a second language |
-| Expand an acronym on first use – unless the card says assume it | |
-| Don't rely on colour, position, or a screenshot to carry meaning | |
+| Expand an acronym on first use - unless the card says assume it | |
+| Don't rely on color, position, or a screenshot to carry meaning | |
 | Front-load the sentence | The important half comes first |
 
 ## Never

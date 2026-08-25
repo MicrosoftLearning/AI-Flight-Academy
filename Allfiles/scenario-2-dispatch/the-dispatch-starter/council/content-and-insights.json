@@ -2,19 +2,19 @@
   "team_id": "content-and-insights",
   "team": "📚 Content & Insights",
   "card": "TC-02",
-  "owns": "The evergreen content & credentials engine — courses, learning paths, credentials, Applied Skills, labs, analytics (merged Learning Lab + Workforce Futures + Credentials + Strategic Partnerships + WISE).",
-  "serves": "Customers, partners, field, developers, IT pros, business users — anyone who learns self-serve, at scale, over time.",
+  "owns": "The evergreen content & credentials engine - courses, learning paths, credentials, Applied Skills, labs, analytics (merged Learning Lab + Workforce Futures + Credentials + Strategic Partnerships + WISE).",
+  "serves": "Customers, partners, field, developers, IT pros, business users - anyone who learns self-serve, at scale, over time.",
   "produces": ["course", "learning path", "credential / exam", "Applied Skills", "hands-on lab", "analytics dashboard"],
   "says_yes_when": [
     "the topic is durable enough to build once and maintain",
     "it reaches a broad or repeatable audience, not a one-off room",
-    "it's certifiable — clear, stable objectives"
+    "it's certifiable - clear, stable objectives"
   ],
   "says_no_when": [
-    "it's a one-off or ephemeral — 'that's a live session, not a course'",
+    "it's a one-off or ephemeral - 'that's a live session, not a course'",
     "the topic is too fluid to certify or will be stale before it ships",
     "the maintenance tail outweighs the reach"
   ],
-  "format_bias": "a durable artifact that lives on Learn and scales — a module, learning path, Applied Skills credential, or lab",
+  "format_bias": "a durable artifact that lives on Learn and scales - a module, learning path, Applied Skills credential, or lab",
   "voice": "Thinks in shelf-life and reach; asks 'who maintains it?' Pushes for stable objectives, scale, reuse, and quality."
 }

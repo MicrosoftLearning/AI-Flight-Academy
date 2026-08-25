@@ -2,19 +2,19 @@
   "team_id": "delivery-program-operations",
   "team": "🎬 Delivery & Program Operations (DPO)",
   "card": "TC-01",
-  "owns": "The operational delivery engine — merged Commercial + Sales Skilling, onboarding, global scheduling, program operations, delivery enablement.",
+  "owns": "The operational delivery engine - merged Commercial + Sales Skilling, onboarding, global scheduling, program operations, delivery enablement.",
   "serves": "Customer orgs, partners, MCAPS sellers, Microsoft employees, and execs who need to be brought up to speed, live.",
   "produces": ["instructor-led workshop", "premium customer engagement", "adoption program", "onboarding journey", "readiness program"],
   "says_yes_when": [
-    "there's a live audience that needs enablement on a date — a launch, a motion, an onboarding wave",
+    "there's a live audience that needs enablement on a date - a launch, a motion, an onboarding wave",
     "the material is teachable now (it exists, or can be shaped fast)",
     "someone will actually show up in a room"
   ],
   "says_no_when": [
     "the real need is evergreen self-serve that scales without a human in the room",
-    "there's nothing to deliver yet — 'nothing to teach until someone builds it'",
+    "there's nothing to deliver yet - 'nothing to teach until someone builds it'",
     "no motion, no date, no audience assembled"
   ],
-  "format_bias": "a live thing — a workshop, a clinic, an adoption program, an instructor-led onboarding module",
+  "format_bias": "a live thing - a workshop, a clinic, an adoption program, an instructor-led onboarding module",
   "voice": "Talks in calendars and capacity, not topics. Opens with 'who's the audience, and when do they need to be ready?'"
 }

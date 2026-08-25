@@ -1,5 +1,5 @@
 # AUDIENCE CARD · AC-04
-## 🏭 Production Manager – Contoso Industries
+## 🏭 Production Manager - Contoso Industries
 
 > **In one line:** Owns a line that runs three shifts. Judges every tool by one question: does it stop the line, or keep it running?
 
@@ -9,7 +9,7 @@
 
 | | |
 |---|---|
-| **Business unit** | Contoso Industries – 22 plants, discrete manufacturing, ~24,000 employees |
+| **Business unit** | Contoso Industries - 22 plants, discrete manufacturing, ~24,000 employees |
 | **Their remit** | Two production lines, 3 shifts, ~180 people across shift supervisors and operators |
 | **Measured on** | OEE *(overall equipment effectiveness)* · scrap rate · on-time delivery · **recordable safety incidents** · overtime spend |
 | **Reports to** | Plant Manager → Regional Operations |
@@ -27,12 +27,12 @@
 
 | | |
 |---|---|
-| ✅ **Fluent – assume it, don't explain it** | Line balancing · changeover · preventive maintenance schedules · the MES · lockout/tagout · root-cause analysis · reading a control chart |
+| ✅ **Fluent - assume it, don't explain it** | Line balancing · changeover · preventive maintenance schedules · the MES · lockout/tagout · root-cause analysis · reading a control chart |
 | 🟣 **Comfortable** | HMI and PLC screens at an operator level · pulling data out of the MES · Excel for real analysis |
 | 🟡 **Shaky** | Anything on the corporate IT side of the network · SharePoint · why some sites are blocked from the plant floor |
 | ❌ **Never done** | Written code · used a terminal · touched a repo |
 
-> ⚠️ **They are technical – in a different direction than the content author.** They will not be impressed by IT terminology and will not be confused by complexity. What loses them is content that assumes the plant network behaves like the office network.
+> ⚠️ **They are technical - in a different direction than the content author.** They will not be impressed by IT terminology and will not be confused by complexity. What loses them is content that assumes the plant network behaves like the office network.
 
 ## Tools and access
 
@@ -49,7 +49,7 @@
 
 | | |
 |---|---|
-| 🔒 **The plant floor network is segmented from corporate IT** | This is a **security control**, not an oversight – and it will not be changed for a productivity tool |
+| 🔒 **The plant floor network is segmented from corporate IT** | This is a **security control**, not an oversight - and it will not be changed for a productivity tool |
 | ❌ Cannot install anything on a plant-floor terminal | Locked image, change-controlled |
 | ❌ Cannot connect a new system to line data without an OT change request | 6–8 weeks, engineering-owned |
 | ✅ **Can** authorize overtime and stop the line on safety grounds | Immediately, no approval |
@@ -87,13 +87,13 @@
 | 📵 **Connectivity** | Poor inside the building. **Assume it fails, not that it's slow.** |
 | 🧤 **Physical** | Gloves, noise, standing. Nothing requiring careful typing or a fine touch. |
 | ✋ **Approval** | Owns overtime and line stoppage. Anything touching OT systems or capex goes to the Plant Manager and engineering. |
-| 👷 **Pass-it-on** | Shift supervisors have to be able to use it too – **including on nights, when nobody is around to ask** |
+| 👷 **Pass-it-on** | Shift supervisors have to be able to use it too - **including on nights, when nobody is around to ask** |
 
 ## Risk reality
 
 | | |
 |---|---|
-| **Regulatory exposure** | High – OSHA, plus customer quality audits and traceability requirements |
+| **Regulatory exposure** | High - OSHA, plus customer quality audits and traceability requirements |
 | **Tolerance for a confident guess** | **Low.** A wrong number in a handover propagates through three shifts before anyone catches it. |
 | **Worst realistic outcome** | A safety incident, a quality escape reaching a customer, an unplanned line stop |
 
@@ -117,7 +117,7 @@
 |:---:|---|
 | 1 | Whether it works from where they actually stand |
 | 2 | What it does when the connection drops |
-| 3 | How long it takes to learn – in minutes, honestly |
+| 3 | How long it takes to learn - in minutes, honestly |
 | 4 | Whether a night-shift supervisor can use it unsupervised |
 | 5 | What it will not do, so they stop wondering |
 
@@ -130,7 +130,7 @@
 | from the plant-floor terminal | from your workstation |
 | this needs an OT change request | work with IT to connect it |
 | when the connection drops | in the event of network unavailability |
-| **it won't reach line data today** | *(vagueness)* – say it, they'll trust you more |
+| **it won't reach line data today** | *(vagueness)* - say it, they'll trust you more |
 
 **Assume without gloss:** OEE · changeover · scrap · lockout/tagout · MES · takt · nonconformance · PM *(preventive maintenance)* · escape
 

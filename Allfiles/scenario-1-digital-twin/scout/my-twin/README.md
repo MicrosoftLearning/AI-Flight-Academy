@@ -1,4 +1,4 @@
-# My Twin – the Scout altitude
+# My Twin - the Scout altitude
 
 A digital twin that reads the participant's own work, writes what it learns to plain files, and
 answers questions the way they would. **What gets built on top of it is up to them.**
@@ -8,7 +8,7 @@ answers questions the way they would. **What gets built on top of it is up to th
 ```text
 my-twin/
   SKILL.md                  activation contract, routing, setup, how to extend
-  references/               written at setup — persona.md, voice.md, setup.md
+  references/               written at setup - persona.md, voice.md, setup.md
   templates/                the persona structure, read once during setup
   extensions/
     command-center/         a worked example. Panels + a renderer -> a local HTML page
@@ -18,7 +18,7 @@ my-twin/
 
 ## Installing
 
-Scout → **Extensions** → **Import**, and drag in the **`my-twin` folder** — not `SKILL.md` on its
+Scout → **Extensions** → **Import**, and drag in the **`my-twin` folder** - not `SKILL.md` on its
 own, because the templates and the example extension have to come with it.
 
 Then start a **new session** and say `set up my twin`.
@@ -29,7 +29,7 @@ Then start a **new session** and say `set up my twin`.
 messages, drafts `persona.md` and `voice.md` with every line tagged `[observed]`, `[inferred]` or
 `[needs you]`, and presents them for correction. One round, then it writes.
 
-**It ends by proving itself.** Setup finishes with a live triage over what actually landed — not a
+**It ends by proving itself.** Setup finishes with a live triage over what actually landed - not a
 description of what it could do. Roughly fifteen minutes, and the participant has something working
 before they've decided what to build.
 
@@ -45,7 +45,7 @@ there's a worked reference, not because a page is the goal.
 | `what do I do about…` | One retrieval, one position, one draft in their voice |
 | `draft a reply to…` | Follows `voice.md`, including the parts that aren't tidy |
 | `what am I forgetting` | Reads across mail, Teams and calendar together |
-| `show me my persona.md` | Prints it in the chat — they never open a file |
+| `show me my persona.md` | Prints it in the chat - they never open a file |
 | `rename my twin to…` | Renames the skill, folder and trigger phrases together |
 
 ## Facilitator notes
@@ -58,7 +58,7 @@ there's a worked reference, not because a page is the goal.
   chats; if someone's build reads far more than that, expect slow runs and say so early.
 - **`[needs you]` on the `Never:` line is correct.** The skill refuses to invent a boundary. It's
   the highest-value line a participant can fill in.
-- **Scout ships its own Node**, under `resources/node/` in its install directory – participants
+- **Scout ships its own Node**, under `resources/node/` in its install directory - participants
   don't need to install anything. The skill is told to resolve that rather than a bare `node`.
-- Nothing goes out without an explicit approval, and a scheduled run never sends at all – there's
+- Nothing goes out without an explicit approval, and a scheduled run never sends at all - there's
   nobody there to approve it.

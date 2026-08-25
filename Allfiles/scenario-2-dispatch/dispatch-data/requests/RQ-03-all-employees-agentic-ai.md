@@ -9,7 +9,7 @@
 
 ## The ask
 
-> "Leadership wants *every* Microsoft employee to understand agentic AI — what agents are, why they matter, what's changing. Keep it to 30 minutes. Make it land for everyone, not just the technical folks. This is a culture moment, not a certification."
+> "Leadership wants *every* Microsoft employee to understand agentic AI - what agents are, why they matter, what's changing. Keep it to 30 minutes. Make it land for everyone, not just the technical folks. This is a culture moment, not a certification."
 
 ## Context
 
@@ -20,7 +20,7 @@ Internal audience, enormous scale (all employees), deliberately shallow depth, h
 | Field | Value |
 |---|---|
 | Stated audience | All Microsoft employees (internal, all roles) |
-| Topic | Agentic AI — what it is, why it matters |
+| Topic | Agentic AI - what it is, why it matters |
 | Desired outcome | Shared understanding & shared language across the company |
 | Deadline | Soon (culture moment, tied to leadership push) |
 | Trigger / motion | SLT sponsorship / internal culture initiative |

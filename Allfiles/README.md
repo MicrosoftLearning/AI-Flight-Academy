@@ -5,8 +5,9 @@ Participant assets, one folder per scenario.
 | Folder | Scenario | Status |
 | --- | --- | --- |
 | `scenario-1-digital-twin/` | The Digital Twin | 🚧 Work in progress |
-| `scenario-2-greenlight/` | The Greenlight | 🚧 Work in progress |
-| `scenario-3-tbd/` | TBD | Placeholder |
+| `scenario-2-dispatch/` | Dispatch | 🚧 Work in progress |
+| `scenario-3-ambassador/` | The Ambassador | 🚧 Work in progress |
+| `scenario-2-greenlight/` | *(superseded by Dispatch)* | Not packaged. Safe to delete |
 
 ## How participants get these
 
@@ -16,8 +17,8 @@ Participant assets, one folder per scenario.
 
 That means:
 
-- **Edit the source here** – downloads regenerate automatically.
-- **Never edit `docs/public/downloads/`** – it's generated and gitignored.
+- **Edit the source here** - downloads regenerate automatically.
+- **Never edit `docs/public/downloads/`** - it's generated and gitignored.
 - Nothing goes stale, because the zips are rebuilt from source on every build.
 
 ## Adding a scenario
@@ -31,5 +32,5 @@ That means:
 
 ::: tip Single files vs zips
 Some assets can't be zipped. Cowork's skill upload silently rejects `.zip`, so
-`SKILL.md` files must ship on their own – that's what `singles` is for.
+`SKILL.md` files must ship on their own - that's what `singles` is for.
 :::

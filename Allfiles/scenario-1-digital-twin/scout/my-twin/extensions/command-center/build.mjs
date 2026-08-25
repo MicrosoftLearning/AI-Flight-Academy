@@ -1,4 +1,4 @@
-// Renders the Command Center — a worked example of an extension.
+// Renders the Command Center - a worked example of an extension.
 //
 //   panels/<id>.md  ->  what to ask        (shareable, no personal data)
 //   data/<id>.json  ->  what it last found (private, never leaves this machine)
@@ -23,7 +23,7 @@ const ACCENTS = {
   red: "#c0392b",
   blue: "#2b6cb0",
   green: "#2f7d4f",
-  grey: "#5c6470",
+  gray: "#5c6470",
 };
 
 function parseFrontmatter(text) {
@@ -57,7 +57,7 @@ function loadPanels() {
       return {
         id,
         title: fm.title || id,
-        accent: ACCENTS[fm.accent] || ACCENTS.grey,
+        accent: ACCENTS[fm.accent] || ACCENTS.gray,
         order: Number.isFinite(order) ? order : 50,
         empty: (emptyLine || "").trim().split(/\r?\n\r?\n/)[0]?.trim() || "Nothing here.",
         data: loadData(id),
@@ -80,7 +80,7 @@ function loadData(id) {
   }
 }
 
-// A source reporting 0 is shown in warning colour: a panel that names a source
+// A source reporting 0 is shown in warning color: a panel that names a source
 // in its Pull and never reads it looks identical to one that read it and found
 // nothing, unless the page says so. Counts are coerced, so a string "0" still
 // trips the warning.

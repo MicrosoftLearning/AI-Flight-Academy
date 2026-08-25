@@ -1,4 +1,4 @@
-// The Greenlight — dashboard frontend. No build step, no framework: talks to
+// The Greenlight - dashboard frontend. No build step, no framework: talks to
 // the local server's /api/* endpoints and renders the council + run state.
 
 const state = {
@@ -12,7 +12,7 @@ const state = {
   // Plan-item "show draft" / "show scorecard" toggles the user has opened.
   // Persisted here (not just in the DOM) because the plan panel is fully
   // re-rendered from scratch on every poll tick while any item is still
-  // "checking" — without this, an expanded scorecard would get wiped out and
+  // "checking" - without this, an expanded scorecard would get wiped out and
   // silently collapsed within ~1.2s of opening it.
   expandedPlanSections: new Set()
 };
@@ -91,7 +91,7 @@ async function loadCouncil() {
   }
 }
 
-/** Shared avatar markup — an emoji bubble with an idle "bob" and a working "wiggle+glow+dots" state. */
+/** Shared avatar markup - an emoji bubble with an idle "bob" and a working "wiggle+glow+dots" state. */
 function avatarHtml(emoji, size) {
   const sizeClass = size === 'sm' ? 'avatar-sm' : '';
   return `
@@ -112,7 +112,7 @@ function renderCouncil(seats) {
   state.seatCardById.clear();
 
   if (!seats.length) {
-    els.councilRow.innerHTML = '<p class="muted">No seats yet — add council/*.json.</p>';
+    els.councilRow.innerHTML = '<p class="muted">No seats yet - add council/*.json.</p>';
     return;
   }
 
@@ -152,8 +152,8 @@ function renderCouncil(seats) {
 
 /**
  * Draw the deterministic-check chips on each seat card. These come from
- * check_content.py (checks.py) and are shown the instant a review starts — the
- * code half is fast, the model half takes seconds — so a code-caught FAIL is
+ * check_content.py (checks.py) and are shown the instant a review starts - the
+ * code half is fast, the model half takes seconds - so a code-caught FAIL is
  * visible next to (and sometimes against) the model's verdict.
  *
  * `status` lets an unbuilt/erroring check show a build-path hint on every seat
@@ -163,8 +163,8 @@ function renderCouncil(seats) {
 function applyChecks(checkSeats, status) {
   if (status === 'todo' || status === 'error') {
     const chip = status === 'todo'
-      ? '<span class="check-chip check-todo" title="Deterministic code checks (reading time, required installs, table width…) aren’t wired yet — implement check_content.py (and check_table_width in checks.py) to show code-caught fails next to each verdict.">⚙ code checks · not wired</span>'
-      : '<span class="check-chip check-error" title="The code checks couldn’t run — is Python installed and check_content.py valid?">⚠ code checks · error</span>';
+      ? '<span class="check-chip check-todo" title="Deterministic code checks (reading time, required installs, table width…) aren’t wired yet - implement check_content.py (and check_table_width in checks.py) to show code-caught fails next to each verdict.">⚙ code checks · not wired</span>'
+      : '<span class="check-chip check-error" title="The code checks couldn’t run - is Python installed and check_content.py valid?">⚠ code checks · error</span>';
     for (const card of state.seatCardById.values()) {
       const el = card.querySelector('.seat-checks');
       if (el) el.innerHTML = chip;
@@ -185,7 +185,7 @@ function applyChecks(checkSeats, status) {
       const cls = c.passed ? 'check-pass' : 'check-fail';
       const mark = c.passed ? '✓' : '✗';
       const name = String(c.check || '').replace(/^check_/, '');
-      return `<span class="check-chip ${cls}" title="${escapeHtml(`${c.criterion} — ${c.detail}`)}">${mark} code: ${escapeHtml(name)}</span>`;
+      return `<span class="check-chip ${cls}" title="${escapeHtml(`${c.criterion} - ${c.detail}`)}">${mark} code: ${escapeHtml(name)}</span>`;
     }).join('');
   }
 }
@@ -228,7 +228,7 @@ function seatCardFor(name) {
 
 function applySeatResult(seatResult) {
   const card = seatCardFor(seatResult.seat);
-  if (!card) return; // seat name from the CLI didn't match a known card — ignored, still shown in raw log
+  if (!card) return; // seat name from the CLI didn't match a known card - ignored, still shown in raw log
 
   const verdict = String(seatResult.verdict || '').toLowerCase();
   const verdictClass = ['ship', 'revise', 'reject'].includes(verdict) ? verdict : 'idle';
@@ -264,7 +264,7 @@ function applySeatResult(seatResult) {
 }
 
 /**
- * Keep the top council row synced with the remediation plan as it's checked —
+ * Keep the top council row synced with the remediation plan as it's checked -
  * this is what makes the top row eventually go all-green once every audience
  * is served, either by the original piece (status 'keep') or by a passing
  * drafted replacement (status 'make_new', checkStage 'pass'). Without this,
@@ -280,20 +280,20 @@ function applyPlanStatusToSeatCards(items) {
     const toggle = card.querySelector('.seat-toggle');
     const needsEl = card.querySelector('.seat-needs');
 
-    // 'keep' means the original review already shipped this seat — actively
+    // 'keep' means the original review already shipped this seat - actively
     // (re)assert Ship rather than trusting the card already shows it. If the
     // page state ever gets out of sync with the plan (e.g. a reload mid-plan,
     // or the plan built from a review this card never rendered), this keeps
     // the top row honest instead of silently leaving a stale "not yet
     // reviewed" badge sitting there. Tagged "via plan" like the drafted
-    // seats so it's clear *why* this verdict is showing — the plan checked
+    // seats so it's clear *why* this verdict is showing - the plan checked
     // and confirmed it, same as it did for the others.
     if (item.status === 'keep') {
       card.className = 'seat-card state-ship';
       setAvatarState(card, 'ship');
       badge.className = 'verdict-badge ship';
       badge.textContent = 'SHIP · via plan';
-      badge.title = 'Already served by the original piece — the plan confirmed no change was needed for this audience.';
+      badge.title = 'Already served by the original piece - the plan confirmed no change was needed for this audience.';
       card.dataset.viaPlan = '1';
       return;
     }
@@ -320,9 +320,9 @@ function applyPlanStatusToSeatCards(items) {
       setAvatarState(card, cls);
       badge.className = `verdict-badge ${cls}`;
       badge.textContent = `${(item.checkVerdict || 'REJECT').toUpperCase()} · plan draft`;
-      badge.title = 'Latest check of the plan\'s drafted replacement for this audience — not the original piece.';
+      badge.title = 'Latest check of the plan\'s drafted replacement for this audience - not the original piece.';
     } else {
-      return; // still pending its first check — leave the original review's verdict showing
+      return; // still pending its first check - leave the original review's verdict showing
     }
 
     card.dataset.viaPlan = '1';
@@ -352,7 +352,7 @@ function applyPlanStatusToSeatCards(items) {
 
 /**
  * Set the results heading as "<prefix> <label>" where a long label truncates
- * with a fade-out (no ellipsis text, no wrapping — just swallows the overflow)
+ * with a fade-out (no ellipsis text, no wrapping - just swallows the overflow)
  * instead of wrapping onto a second line and colliding with the row below it.
  * The fade class is only applied when the label actually overflows, so short
  * labels stay crisp.
@@ -374,7 +374,7 @@ async function startConvene(formData, label) {
   state.currentPlanId = null;
   els.greenlightPanel.hidden = true;
 
-  // The results panel is now a single, persistent "Summary" — it stays visible
+  // The results panel is now a single, persistent "Summary" - it stays visible
   // and gets rewritten on every convene run (running -> done/error), rather
   // than disappearing between runs. That's what makes it a running summary
   // instead of a one-shot verdict from the very first review.
@@ -388,7 +388,7 @@ async function startConvene(formData, label) {
   els.runStatusText.textContent = 'Deliberating…';
   els.runLog.textContent = '';
 
-  // Re-read the council fresh before every review — seats may have been
+  // Re-read the council fresh before every review - seats may have been
   // added/edited since the last run, and the roster should always reflect
   // what's actually on disk right now, not just what was loaded at page load.
   await loadCouncil();
@@ -428,7 +428,7 @@ function pollJob(jobId) {
         return;
       }
 
-      // done — this same panel updates in place every run: heading flips from
+      // done - this same panel updates in place every run: heading flips from
       // "Convening…" to "Verdict on X", and the meta line becomes non-duplicative
       // run info (how long it took, which model) instead of repeating the title.
       els.runStatusSpinner.hidden = true;
@@ -470,7 +470,7 @@ function showRunError(message, label) {
 }
 
 /** Rewrites the coverage/disagreement/all-green parts of the summary panel and
- * updates every seat card + the greenlight panel — called fresh on every run. */
+ * updates every seat card + the greenlight panel - called fresh on every run. */
 function renderResults(result) {
   if (!result) return;
 
@@ -491,7 +491,7 @@ function renderResults(result) {
   els.allGreenNote.hidden = !allShip;
 
   // The greenlight panel is the single, unified place for "build a plan" and
-  // "reconvene" — it appears the moment there's something to fix, and its one
+  // "reconvene" - it appears the moment there's something to fix, and its one
   // action button evolves through the whole loop from there.
   if (allShip) {
     els.greenlightPanel.hidden = true;
@@ -502,7 +502,7 @@ function renderResults(result) {
 }
 
 // --------------------------------------------------------------------------
-// Greenlight it — one unified panel that carries the whole loop:
+// Greenlight it - one unified panel that carries the whole loop:
 //   build plan -> reconvene -> reconvene again (as drafts get iterated) -> green
 // A single action button drives every stage; its label and behavior change
 // with plan state instead of handing off between separate buttons.
@@ -535,7 +535,7 @@ function setGreenlightState(kind, opts = {}) {
 
   switch (kind) {
     case 'start':
-      els.greenlightActionBtn.textContent = '🚦 Greenlight it — build a remediation plan';
+      els.greenlightActionBtn.textContent = '🚦 Greenlight it - build a remediation plan';
       els.greenlightBanner.textContent = '';
       els.greenlightBanner.className = 'plan-banner';
       break;
@@ -560,13 +560,13 @@ function setGreenlightState(kind, opts = {}) {
       const remaining = opts.remaining || 0;
       const total = opts.total || 0;
       els.greenlightActionBtn.textContent = `🔄 Reconvene again (${remaining} remaining)`;
-      els.greenlightBanner.textContent = `🟡 Not yet green — ${remaining} of ${total} drafts still failing`;
+      els.greenlightBanner.textContent = `🟡 Not yet green - ${remaining} of ${total} drafts still failing`;
       els.greenlightBanner.className = 'plan-banner not-green';
       break;
     }
     case 'green':
       els.greenlightActionBtn.hidden = true;
-      els.greenlightBanner.textContent = '✅ GREEN — every audience is served';
+      els.greenlightBanner.textContent = '✅ GREEN - every audience is served';
       els.greenlightBanner.className = 'plan-banner green';
       break;
     case 'error':
@@ -580,7 +580,7 @@ function setGreenlightState(kind, opts = {}) {
   }
 }
 
-/** The single button's click handler — dispatches based on where the loop currently is. */
+/** The single button's click handler - dispatches based on where the loop currently is. */
 async function handleGreenlightAction() {
   if (!state.currentPlanId) {
     await startPlan();
@@ -634,7 +634,7 @@ function pollPlan(planId) {
         return;
       }
 
-      // status === 'ready' — render current item states, then decide the
+      // status === 'ready' - render current item states, then decide the
       // button/banner state from where the loop actually is right now.
       renderPlanItems(data.items, data.leftOut);
 
@@ -704,12 +704,12 @@ async function submitPlan() {
   els.submitStatus.hidden = true;
   try {
     const res = await fetch(`/api/plan/${planId}/submit`, { method: 'POST' });
-    // Not wired yet — treat it like the other build paths: a toast, not an error.
+    // Not wired yet - treat it like the other build paths: a toast, not an error.
     if (res.status === 501) {
       showToast(
-        '<strong>Not wired yet — this one is yours to build.</strong>' +
+        '<strong>Not wired yet - this one is yours to build.</strong>' +
         '<p>Turn a green plan into a pull request into the hack repo: implement ' +
-        '<code>POST /api/plan/:planId/submit</code> in <code>server.js</code> — assemble the ' +
+        '<code>POST /api/plan/:planId/submit</code> in <code>server.js</code> - assemble the ' +
         'artifacts, open the PR, and return <code>{ prUrl }</code>.</p>' +
         '<span class="toast-hint">Click to dismiss</span>',
         { tone: 'build', timeout: 0, copyText: COPILOT_PROMPTS.submit }
@@ -738,7 +738,7 @@ async function submitPlan() {
 /**
  * Opens an in-page modal showing the plan export as text, with a "Copy to
  * clipboard" button. Deliberately never triggers a file download or any
- * browser navigation/new-window — some embedded/webview hosts (this
+ * browser navigation/new-window - some embedded/webview hosts (this
  * dashboard is frequently viewed inside one) don't support native download
  * flows, and both a direct Content-Disposition link and a blob-URL anchor
  * click were observed to misbehave badly there (up to closing/crashing the
@@ -750,7 +750,7 @@ async function openExportModal(format) {
   if (!planId) return;
 
   els.exportError.hidden = true;
-  els.exportModalTitle.textContent = format === 'json' ? 'Plan export — JSON' : 'Plan export — Markdown';
+  els.exportModalTitle.textContent = format === 'json' ? 'Plan export - JSON' : 'Plan export - Markdown';
   els.exportModalStatus.textContent = 'Loading…';
   els.exportModalStatus.hidden = false;
   els.exportModalText.hidden = true;
@@ -783,7 +783,7 @@ async function copyExportModalText() {
     await navigator.clipboard.writeText(text);
     els.exportModalCopyStatus.textContent = '✅ Copied!';
   } catch (err) {
-    // Clipboard API can be blocked in some contexts — fall back to the
+    // Clipboard API can be blocked in some contexts - fall back to the
     // classic select + execCommand('copy'), which works via a user gesture
     // even where the async Clipboard API is unavailable.
     try {
@@ -793,7 +793,7 @@ async function copyExportModalText() {
       document.execCommand('copy');
       els.exportModalCopyStatus.textContent = '✅ Copied!';
     } catch (fallbackErr) {
-      els.exportModalCopyStatus.textContent = 'Could not copy — select the text above and press Ctrl+C.';
+      els.exportModalCopyStatus.textContent = 'Could not copy - select the text above and press Ctrl+C.';
     }
   }
   setTimeout(() => { els.exportModalCopyStatus.textContent = ''; }, 4000);
@@ -807,7 +807,7 @@ function renderPlanItems(items, leftOut) {
   if (leftOut && leftOut.length) {
     const note = document.createElement('div');
     note.className = 'plan-item';
-    note.innerHTML = `<div class="plan-item-seat">⚠ Left out</div><div class="plan-item-reason">${leftOut.map(escapeHtml).join(', ')} — deliberately not served by this plan.</div>`;
+    note.innerHTML = `<div class="plan-item-seat">⚠ Left out</div><div class="plan-item-reason">${leftOut.map(escapeHtml).join(', ')} - deliberately not served by this plan.</div>`;
     els.planItems.appendChild(note);
   }
 }
@@ -956,7 +956,7 @@ function buildHistoryChipsHtml(seats) {
     const v = String(s.verdict || '').toLowerCase();
     if (verdictCounts[v] !== undefined) verdictCounts[v]++;
   });
-  // Compact summary shown when the row is collapsed — e.g. "1 Ship · 3 Reject" —
+  // Compact summary shown when the row is collapsed - e.g. "1 Ship · 3 Reject" -
   // so you can scan outcomes at a glance without expanding every entry.
   const summaryChips = ['ship', 'revise', 'reject']
     .filter((v) => verdictCounts[v] > 0)
@@ -1009,7 +1009,7 @@ function addHistoryEntry(jobId, label, result, finishedAt) {
 
 /**
  * Updates an existing history row's chips in place to reflect the *current*
- * best-known verdict per seat — e.g. once a remediation plan ships a
+ * best-known verdict per seat - e.g. once a remediation plan ships a
  * replacement for an audience that originally rejected the piece. Without
  * this, "Past runs" would freeze on the review's initial verdicts forever,
  * even after the plan brings every audience to Ship.
@@ -1043,7 +1043,7 @@ async function loadHistory() {
     if (!data.ok || !data.runs.length) return;
     els.historyList.innerHTML = '';
     // The server already returns runs newest-first. addHistoryEntry always
-    // prepends (so a live new run lands on top of existing history) — iterating
+    // prepends (so a live new run lands on top of existing history) - iterating
     // an already-descending list with prepend would reverse it back to
     // oldest-on-top, so we walk it in reverse to land back on newest-first.
     [...data.runs].reverse().forEach((run) => addHistoryEntry(run.id, run.contentLabel, run.result, run.finishedAt));
@@ -1063,7 +1063,7 @@ function escapeHtml(str) {
 }
 
 /**
- * A small dismissible popup note in the top-right — used for the "not wired
+ * A small dismissible popup note in the top-right - used for the "not wired
  * yet" build paths so a hint doesn't have to hijack the council status text.
  * Pass `copyText` to add a one-click "copy this prompt for Copilot Chat" button.
  */
@@ -1086,9 +1086,9 @@ function showToast(html, { tone = 'info', timeout = 9000, copyText = null } = {}
       e.stopPropagation(); // copying shouldn't dismiss the note
       try {
         await navigator.clipboard.writeText(copyText);
-        copyBtn.textContent = '✅ Copied — paste into Copilot Chat';
+        copyBtn.textContent = '✅ Copied - paste into Copilot Chat';
         return;
-      } catch { /* Clipboard API blocked in this context — fall back below. */ }
+      } catch { /* Clipboard API blocked in this context - fall back below. */ }
       // Fallback: a selectable textarea + execCommand, which works via the user
       // gesture even where the async Clipboard API is unavailable. If even that
       // fails, the box stays visible so the prompt is never trapped.
@@ -1106,7 +1106,7 @@ function showToast(html, { tone = 'info', timeout = 9000, copyText = null } = {}
       let ok = false;
       try { ok = document.execCommand('copy'); } catch { /* ignore */ }
       copyBtn.textContent = ok
-        ? '✅ Copied — paste into Copilot Chat'
+        ? '✅ Copied - paste into Copilot Chat'
         : '⚠ Select the prompt below and press Ctrl/Cmd+C';
     });
   }
@@ -1115,16 +1115,16 @@ function showToast(html, { tone = 'info', timeout = 9000, copyText = null } = {}
   if (timeout) setTimeout(dismiss, timeout);
 }
 
-// Ready-to-paste prompts for the build-path features — the "Copy prompt for
+// Ready-to-paste prompts for the build-path features - the "Copy prompt for
 // Copilot Chat" button in each toast hands these to the participant verbatim.
 const COPILOT_PROMPTS = {
   council: `In the Node/Express dashboard at the-greenlight-starter/dashboard, implement the "council editing" feature end to end.
 
-Backend — server.js (two TODO stubs already exist near "Council management"):
-- POST /api/council/seat: read the seat from req.body, shaped exactly like council/retail.example.json — { seat_id, audience, card, outcome, thresholds, criteria: [{ id, the_bar, fatal, anchors, watch_for }] }. Validate seat_id, audience, outcome and at least one criterion. Allow only [a-z0-9-_] in seat_id (so it can't escape the folder), then write council/<seat_id>.json with fs.writeFileSync(JSON.stringify(seat, null, 2)). Return { ok: true }.
+Backend - server.js (two TODO stubs already exist near "Council management"):
+- POST /api/council/seat: read the seat from req.body, shaped exactly like council/retail.example.json - { seat_id, audience, card, outcome, thresholds, criteria: [{ id, the_bar, fatal, anchors, watch_for }] }. Validate seat_id, audience, outcome and at least one criterion. Allow only [a-z0-9-_] in seat_id (so it can't escape the folder), then write council/<seat_id>.json with fs.writeFileSync(JSON.stringify(seat, null, 2)). Return { ok: true }.
 - DELETE /api/council/seat/:seatId: sanitize seatId the same way and delete council/<seatId>.json if it exists. Return { ok: true }.
 
-Frontend — public/index.html, public/app.js, public/styles.css:
+Frontend - public/index.html, public/app.js, public/styles.css:
 - Wire the existing #manage-seats button to open a modal that matches the existing modal + dark-theme styling.
 - The modal is a form for the seat shape above, with an add/remove list for criteria. On save POST /api/council/seat; add a delete action that calls DELETE /api/council/seat/:seatId; then call loadCouncil() to refresh the board and showToast() for feedback.
 
@@ -1132,21 +1132,21 @@ Follow the existing conventions in these files. Keep it minimal and readable.`,
   submit: `In the Node/Express dashboard at the-greenlight-starter/dashboard, implement the PR submission workflow in server.js at the POST /api/plan/:planId/submit TODO stub.
 
 From a GREEN plan (plans.get(planId), plan.overall === 'green'):
-1. Assemble artifacts from plan.items — each item with status "make_new" has draft_content; write each as a file, and reuse composePlanMarkdown(plan) for a full plan doc.
+1. Assemble artifacts from plan.items - each item with status "make_new" has draft_content; write each as a file, and reuse composePlanMarkdown(plan) for a full plan doc.
 2. Save the bundle under SUBMISSIONS_DIR/<plan.id>/ so there's an artifact even before the PR.
 3. Open a PR into SUBMISSION_REPO (base SUBMISSION_BASE): from a local clone, git checkout -b greenlight/<slug>, copy the files, git add/commit/push, then spawn(GH_BIN, ['pr','create','--repo',SUBMISSION_REPO,'--base',SUBMISSION_BASE,'--title',...,'--body-file',...]). Keep SUBMISSION_REPO a placeholder-safe default; only push when a real repo and local clone are configured.
-4. Return { ok: true, prUrl } — the front-end renders it as a link.
+4. Return { ok: true, prUrl } - the front-end renders it as a link.
 
 Follow the existing conventions in server.js.`
 };
 
 els.refreshCouncil.addEventListener('click', loadCouncil);
-// The seat editor is a participant build path — the button explains itself in a
+// The seat editor is a participant build path - the button explains itself in a
 // toast (with a copy-paste Copilot prompt) rather than opening a modal we
 // deliberately don't ship.
 els.manageSeats.addEventListener('click', () => {
   showToast(
-    '<strong>Not wired yet — this one is yours to build.</strong>' +
+    '<strong>Not wired yet - this one is yours to build.</strong>' +
     '<p>Add a small editor to add, edit, and remove seats, wired to the ' +
     '<code>POST</code> / <code>DELETE /api/council/seat</code> stubs in <code>server.js</code>, ' +
     'then <em>Reload council</em> to see your changes.</p>' +

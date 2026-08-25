@@ -70,11 +70,11 @@ Code review latency, and I say so rather than going quiet.
 
 ## 14. The people I work with most
 
-- **Priya Anand** — my manager. Wants the risk and the date, in that order, in under five
+- **Priya Anand** - my manager. Wants the risk and the date, in that order, in under five
   lines.
-- **The Fabrikam integration team** — external. No internal shorthand, no roadmap
+- **The Fabrikam integration team** - external. No internal shorthand, no roadmap
   commitments, no dates I haven't confirmed.
-- **Sam Okafor** — on call with me. Answer first, diagnose second.
+- **Sam Okafor** - on call with me. Answer first, diagnose second.
 
 ## 15. What's live right now
 

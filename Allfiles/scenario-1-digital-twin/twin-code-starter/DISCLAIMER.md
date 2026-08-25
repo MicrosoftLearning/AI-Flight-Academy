@@ -21,11 +21,11 @@ session runs against Jordan.
 ## Using it for yourself afterwards
 
 `persona.md` and `voice.md` are plain markdown in the Agent Skills format. To make the
-twin yours, replace the contents with your own — a Copilot surface with access to your
+twin yours, replace the contents with your own - a Copilot surface with access to your
 work can draft both from your sent mail and calendar, and you correct what it got wrong.
 
 Keep whatever you write local. Nothing personal belongs in a shared repo.
 
-## Licence
+## License
 
 MIT. Use it, fork it, break it.

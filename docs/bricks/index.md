@@ -4,23 +4,23 @@ title: Step-by-step guides
 
 # Step-by-step guides
 
-Full walkthroughs for each part of a build – every click, every prompt, every setting.
+Full walkthroughs for each part of a build - every click, every prompt, every setting.
 
 ::: tip How these fit with your build page
 Your [build page](/#start-here) gets you through the hack top to bottom, with the essentials expandable in place.
 
-**These are the complete versions.** Open one in a new tab and keep it beside your build page if you want every step spelled out – or come back to them after the hack when you're building something of your own.
+**These are the complete versions.** Open one in a new tab and keep it beside your build page if you want every step spelled out - or come back to them after the hack when you're building something of your own.
 :::
 
 ::: tip New to Work IQ?
-**[What Work IQ is – and what it can see](/bricks/work-iq)** is the shared grounding layer all three altitudes use. Read it once; the per-altitude guides below show how to put it to work.
+**[What Work IQ is - and what it can see](/bricks/work-iq)** is the shared grounding layer all three altitudes use. Read it once; the per-altitude guides below show how to put it to work.
 :::
 
 ## 🟢 Cowork {#cowork}
 | Guide | Use it when |
 | --- | --- |
 | [Install a provided skill](/bricks/cowork-install-skill) | You've downloaded a skill and need it running in Cowork |
-| [Connect Cowork to a data source](/bricks/cowork-connect-source) | You need to pull your mail, calendar, or files – and get it back in a shape you can reuse |
+| [Connect Cowork to a data source](/bricks/cowork-connect-source) | You need to pull your mail, calendar, or files - and get it back in a shape you can reuse |
 | [Ground Cowork in your work (Work IQ)](/bricks/cowork-work-iq) | You want a persona or audience profile drawn from your own mail and calendar |
 | [Write a reusable Cowork skill](/bricks/cowork-build-skill) | You're creating or editing a skill and want the full anatomy, limits, and sharing options |
 | [Produce a formatted output](/bricks/cowork-formatted-output) | Your output needs to come back the same way every time |

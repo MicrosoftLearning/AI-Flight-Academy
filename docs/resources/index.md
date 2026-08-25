@@ -4,7 +4,7 @@ title: Resources
 
 # Resources
 
-Everything to go deeper – before, during, and after the hack.
+Everything to go deeper - before, during, and after the hack.
 
 <!-- markdownlint-disable MD033 -->
 
@@ -14,13 +14,13 @@ Everything to go deeper – before, during, and after the hack.
   <a class="lab-card" href="/AI-Flight-Academy/resources/downloads">
     <span class="lab-card-emoji">⬇️</span>
     <span class="lab-card-title">Downloads</span>
-    <span class="lab-card-desc">Every skill, starter, and data pack for all three scenarios – straight from this site, no GitHub account needed.</span>
+    <span class="lab-card-desc">Every skill, starter, and data pack for all three scenarios - straight from this site, no GitHub account needed.</span>
     <span class="lab-card-cta">Get the files →</span>
   </a>
   <a class="lab-card" href="/AI-Flight-Academy/bricks/">
     <span class="lab-card-emoji">📓</span>
     <span class="lab-card-title">Guides</span>
-    <span class="lab-card-desc">Step-by-step how-tos for every altitude – install a skill, ground on your work, add a guardrail.</span>
+    <span class="lab-card-desc">Step-by-step how-tos for every altitude - install a skill, ground on your work, add a guardrail.</span>
     <span class="lab-card-cta">Browse guides →</span>
   </a>
 </div>
@@ -37,7 +37,7 @@ Everything to go deeper – before, during, and after the hack.
   <a class="lab-card" href="https://learn.microsoft.com/microsoft-scout/overview" target="_blank" rel="noopener">
     <span class="lab-card-emoji">🧩</span>
     <span class="lab-card-title">Microsoft Scout</span>
-    <span class="lab-card-desc">The agentic middle path – it builds and runs what you describe, grounded in your work.</span>
+    <span class="lab-card-desc">The agentic middle path - it builds and runs what you describe, grounded in your work.</span>
     <span class="lab-card-cta">Learn more →</span>
   </a>
   <a class="lab-card" href="https://docs.github.com/copilot/github-copilot-in-the-cli" target="_blank" rel="noopener">

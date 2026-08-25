@@ -1,19 +1,19 @@
 """
-The Greenlight — MCP Server
+The Greenlight - MCP Server
 ===========================
 
-Exposes the seated council so *other* agents — Cowork, Scout, a VS Code chat
-agent — can hook into the Greenlight review without going through the dashboard.
+Exposes the seated council so *other* agents - Cowork, Scout, a VS Code chat
+agent - can hook into the Greenlight review without going through the dashboard.
 
 Two tools work out of the box (no model call):
-    list_council()        — the seated audiences from council/*.json
-    run_checks(content)   — the deterministic checks (checks.py) per seat: the
+    list_council()        - the seated audiences from council/*.json
+    run_checks(content)   - the deterministic checks (checks.py) per seat: the
                             countable half a language model should not be doing
-    solo_baseline()       — the solo critic's recorded verdicts (the control)
+    solo_baseline()       - the solo critic's recorded verdicts (the control)
 
-Two tools are starter TODOs for you to implement — the model-calling half:
-    convene(content_path) — score every seat against its own criteria
-    greenlight(review)    — turn the gaps into a plan and re-score it
+Two tools are starter TODOs for you to implement - the model-calling half:
+    convene(content_path) - score every seat against its own criteria
+    greenlight(review)    - turn the gaps into a plan and re-score it
 
 Run:
     python mcp_server.py         # stdio, for VS Code / Cowork / Scout MCP clients
@@ -44,7 +44,7 @@ mcp = MCPServer(
         "Reviews content from several seated audiences at once. Use list_council to see the "
         "audiences, run_checks for the deterministic (countable) checks, and convene to score a "
         "piece from every seat. Every model score must carry a quote, a source, and a confidence "
-        "— no quote, no score."
+        "- no quote, no score."
     ),
 )
 
@@ -73,7 +73,7 @@ def _resolve_content(content: str, content_path: str) -> str:
 
 def _council_summary(seats: list[dict]) -> str:
     if not seats:
-        return ("No seats yet. Add council/*.json (copy retail.example.json to retail.json) — "
+        return ("No seats yet. Add council/*.json (copy retail.example.json to retail.json) - "
                 "at least two audiences with different outcomes, or the room can't disagree.")
     lines = [f"{len(seats)} seated audience(s):", ""]
     for s in seats:
@@ -95,11 +95,11 @@ def _run_all_checks(text: str, seats: list[dict]) -> str:
         out.append(f"## {s.get('audience', '?')}")
         results = g.run_checks_for_seat(s, text)
         if not results:
-            out.append("  (no deterministic checks wired — this audience is judged by the model only)")
+            out.append("  (no deterministic checks wired - this audience is judged by the model only)")
         for r in results:
             status = "PASS" if r.get("passed") else "FAIL"
             detail = r.get("detail") or r.get("error") or ""
-            out.append(f"  [{status}] {r.get('criterion')} · {r.get('check')} — {detail}")
+            out.append(f"  [{status}] {r.get('criterion')} · {r.get('check')} - {detail}")
         out.append("")
     return "\n".join(out).rstrip()
 
@@ -118,7 +118,7 @@ def list_council() -> str:
 
 @mcp.tool(
     description=(
-        "Run the deterministic checks (checks.py) for every seat against a piece of content — the "
+        "Run the deterministic checks (checks.py) for every seat against a piece of content - the "
         "countable half a language model should not do. Pass content (raw text) OR content_path (a "
         "file path; relative paths resolve against the starter or data-pack/content). No model call."
     )
@@ -130,19 +130,19 @@ def run_checks(content: str = "", content_path: str = "") -> str:
 
 @mcp.tool(
     description=(
-        "The solo critic's recorded baseline verdicts for the five data-pack pieces — the "
+        "The solo critic's recorded baseline verdicts for the five data-pack pieces - the "
         "one-reviewer 'before' the council is measured against. Read-only control; never edit it."
     )
 )
 def solo_baseline() -> str:
     try:
         rubric = json.loads(Path(g.DEFAULT_RUBRIC).read_text(encoding="utf-8"))
-    except Exception as e:  # noqa: BLE001 — surface any read problem to the caller
+    except Exception as e:  # noqa: BLE001 - surface any read problem to the caller
         return f"Could not read the solo rubric: {e}"
     scored = rubric.get("already_scored", {})
-    lines = ["Solo critic (one implied reader) — the number to beat:", ""]
+    lines = ["Solo critic (one implied reader) - the number to beat:", ""]
     for p in scored.get("pieces", []):
-        lines.append(f"  {p.get('content_id')}: {p.get('solo_verdict')} — {p.get('tell', '')}")
+        lines.append(f"  {p.get('content_id')}: {p.get('solo_verdict')} - {p.get('tell', '')}")
     if scored.get("headline"):
         lines += ["", scored["headline"]]
     return "\n".join(lines)
@@ -161,7 +161,7 @@ def convene(content_path: str) -> str:
         "TODO (MCP path): implement convene(content_path).\n"
         "  Start: read the file, get the seats from list_council(), and run\n"
         "  run_checks(content_path=...) for the countable half.\n"
-        "  The model half is yours to make — either shell out to the GitHub Copilot\n"
+        "  The model half is yours to make - either shell out to the GitHub Copilot\n"
         "  CLI (see dashboard/server.js execCopilotJson: `copilot -p <prompt>\n"
         "  --allow-all-tools` returning JSON), or compose the per-seat scoring prompt\n"
         "  and let the calling agent reason.\n"

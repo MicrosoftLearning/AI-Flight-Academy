@@ -16,7 +16,7 @@ Scout can already reach your mail, calendar, Teams, files, and org chart. There'
 1. Start a new Scout session.
 2. Ask for **one source at a time**. Mixing sources in a single request tends to produce a summary of everything and evidence of nothing.
 3. Tell it **not to summarize** before returning. Summaries throw away exactly the detail you need.
-4. Name the shape you want back – a table, a list of rows, specific fields.
+4. Name the shape you want back - a table, a list of rows, specific fields.
 5. Keep the prompt that worked. You'll want to run it again next month.
 
 **You'll know it worked when...** what comes back is specific enough that you could paste it straight into a file without editing it by hand.
@@ -63,7 +63,7 @@ That gap is usually the most useful thing you'll find, and it's the part nobody 
 
 You don't need a live connection. How someone works changes over months, not hours.
 
-Pull the evidence once, write it into a file, and regenerate it monthly or after a role change. That keeps it inspectable, reviewable, and portable – none of which is true of an inference you can't see.
+Pull the evidence once, write it into a file, and regenerate it monthly or after a role change. That keeps it inspectable, reviewable, and portable - none of which is true of an inference you can't see.
 
 ::: warning Don't build a Graph integration for this
 Azure AD app registration plus MSAL is 30–60 minutes and it will eat your session. Scout already has the access. Use it.

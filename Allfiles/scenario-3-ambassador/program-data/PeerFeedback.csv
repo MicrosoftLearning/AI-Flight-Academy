@@ -1,0 +1,284 @@
+FeedbackId,CandidateId,CandidateName,FeedbackSource,Sentiment,Theme,EvidenceDepth,Confidence
+FB-0001,CAND-001,Avery Chen,peer,positive,delegates without abandoning ownership,repeated pattern,high
+FB-0002,CAND-001,Avery Chen,peer,developmental,creates unnecessary churn when priorities change,specific example included,medium
+FB-0003,CAND-001,Avery Chen,community member,strong positive,makes others successful,repeated pattern,low
+FB-0004,CAND-001,Avery Chen,coach,positive,shares context generously,general observation,low
+FB-0005,CAND-001,Avery Chen,coach,developmental,needs clearer follow-through,specific example included,high
+FB-0006,CAND-002,Riley Singh,program lead,positive,delegates without abandoning ownership,repeated pattern,medium
+FB-0007,CAND-002,Riley Singh,community member,mixed,does not document decisions consistently,specific example included,low
+FB-0008,CAND-002,Riley Singh,manager note,strong positive,turns feedback into action,specific example included,medium
+FB-0009,CAND-002,Riley Singh,manager note,positive,creates reusable patterns,repeated pattern,high
+FB-0010,CAND-002,Riley Singh,program lead,developmental,over-indexes on personal execution,single event,low
+FB-0011,CAND-003,Drew Foster,community member,strong positive,builds confidence in peers,specific example included,low
+FB-0012,CAND-003,Drew Foster,program lead,strong positive,shares context generously,single event,low
+FB-0013,CAND-004,Parker White,community member,positive,makes others successful,single event,high
+FB-0014,CAND-004,Parker White,manager note,positive,builds confidence in peers,repeated pattern,medium
+FB-0015,CAND-004,Parker White,community member,strong positive,makes others successful,general observation,low
+FB-0016,CAND-005,Cameron Scott,coach,mixed,needs clearer follow-through,repeated pattern,medium
+FB-0017,CAND-005,Cameron Scott,manager note,positive,keeps a respectful tone under pressure,single event,medium
+FB-0018,CAND-006,Alex Kim,program lead,positive,creates reusable patterns,repeated pattern,low
+FB-0019,CAND-006,Alex Kim,peer,positive,creates reusable patterns,general observation,medium
+FB-0020,CAND-006,Alex Kim,coach,strong positive,builds confidence in peers,general observation,high
+FB-0021,CAND-006,Alex Kim,program lead,positive,builds confidence in peers,general observation,low
+FB-0022,CAND-007,Morgan Lee,coach,strong positive,keeps a respectful tone under pressure,general observation,medium
+FB-0023,CAND-007,Morgan Lee,program lead,strong positive,builds confidence in peers,specific example included,high
+FB-0024,CAND-007,Morgan Lee,program lead,strong positive,keeps a respectful tone under pressure,repeated pattern,medium
+FB-0025,CAND-008,Taylor Brooks,peer,developmental,creates unnecessary churn when priorities change,specific example included,medium
+FB-0026,CAND-008,Taylor Brooks,manager note,developmental,needs clearer follow-through,repeated pattern,low
+FB-0027,CAND-008,Taylor Brooks,community member,strong positive,keeps a respectful tone under pressure,single event,medium
+FB-0028,CAND-008,Taylor Brooks,coach,developmental,needs clearer follow-through,single event,medium
+FB-0029,CAND-008,Taylor Brooks,peer,positive,turns feedback into action,general observation,high
+FB-0030,CAND-008,Taylor Brooks,peer,positive,creates reusable patterns,single event,high
+FB-0031,CAND-009,Jordan Patel,community member,strong positive,shares context generously,specific example included,high
+FB-0032,CAND-009,Jordan Patel,community member,positive,delegates without abandoning ownership,general observation,low
+FB-0033,CAND-009,Jordan Patel,peer,strong positive,turns feedback into action,single event,low
+FB-0034,CAND-010,Sam Rivera,community member,strong positive,makes others successful,single event,low
+FB-0035,CAND-010,Sam Rivera,community member,positive,promotes inclusive participation,single event,medium
+FB-0036,CAND-010,Sam Rivera,community member,strong positive,keeps a respectful tone under pressure,repeated pattern,medium
+FB-0037,CAND-010,Sam Rivera,program lead,mixed,over-indexes on personal execution,single event,high
+FB-0038,CAND-010,Sam Rivera,community member,developmental,does not document decisions consistently,general observation,high
+FB-0039,CAND-011,Jamie Santos,program lead,positive,promotes inclusive participation,specific example included,low
+FB-0040,CAND-011,Jamie Santos,coach,strong positive,turns feedback into action,repeated pattern,low
+FB-0041,CAND-011,Jamie Santos,peer,developmental,does not document decisions consistently,specific example included,medium
+FB-0042,CAND-011,Jamie Santos,manager note,positive,creates reusable patterns,general observation,high
+FB-0043,CAND-011,Jamie Santos,program lead,positive,builds confidence in peers,general observation,medium
+FB-0044,CAND-012,Cameron Patel,community member,positive,makes others successful,repeated pattern,medium
+FB-0045,CAND-012,Cameron Patel,program lead,positive,turns feedback into action,specific example included,low
+FB-0046,CAND-012,Cameron Patel,manager note,strong positive,creates reusable patterns,specific example included,high
+FB-0047,CAND-012,Cameron Patel,manager note,positive,creates reusable patterns,general observation,medium
+FB-0048,CAND-013,Reese Foster,manager note,strong positive,creates reusable patterns,specific example included,high
+FB-0049,CAND-013,Reese Foster,coach,positive,turns feedback into action,single event,medium
+FB-0050,CAND-013,Reese Foster,peer,positive,turns feedback into action,repeated pattern,high
+FB-0051,CAND-014,Skyler Okafor,program lead,strong positive,creates reusable patterns,specific example included,low
+FB-0052,CAND-014,Skyler Okafor,community member,strong positive,builds confidence in peers,general observation,low
+FB-0053,CAND-014,Skyler Okafor,community member,strong positive,promotes inclusive participation,specific example included,medium
+FB-0054,CAND-014,Skyler Okafor,coach,strong positive,shares context generously,general observation,high
+FB-0055,CAND-014,Skyler Okafor,coach,strong positive,shares context generously,general observation,high
+FB-0056,CAND-014,Skyler Okafor,community member,strong positive,keeps a respectful tone under pressure,repeated pattern,high
+FB-0057,CAND-015,Emery Silva,program lead,strong positive,keeps a respectful tone under pressure,specific example included,low
+FB-0058,CAND-015,Emery Silva,manager note,positive,keeps a respectful tone under pressure,single event,medium
+FB-0059,CAND-015,Emery Silva,peer,mixed,needs clearer follow-through,general observation,low
+FB-0060,CAND-015,Emery Silva,coach,positive,delegates without abandoning ownership,specific example included,medium
+FB-0061,CAND-016,Harper Olsen,program lead,mixed,over-indexes on personal execution,specific example included,medium
+FB-0062,CAND-016,Harper Olsen,program lead,strong positive,keeps a respectful tone under pressure,single event,high
+FB-0063,CAND-016,Harper Olsen,program lead,positive,keeps a respectful tone under pressure,repeated pattern,low
+FB-0064,CAND-016,Harper Olsen,program lead,positive,shares context generously,general observation,high
+FB-0065,CAND-016,Harper Olsen,community member,strong positive,delegates without abandoning ownership,general observation,low
+FB-0066,CAND-017,Finley Yamada,peer,developmental,does not document decisions consistently,specific example included,low
+FB-0067,CAND-017,Finley Yamada,peer,positive,promotes inclusive participation,general observation,low
+FB-0068,CAND-017,Finley Yamada,manager note,strong positive,makes others successful,specific example included,medium
+FB-0069,CAND-018,Devon Singh,peer,strong positive,makes others successful,specific example included,high
+FB-0070,CAND-018,Devon Singh,program lead,strong positive,delegates without abandoning ownership,repeated pattern,low
+FB-0071,CAND-019,Sage Adams,coach,strong positive,creates reusable patterns,repeated pattern,medium
+FB-0072,CAND-019,Sage Adams,coach,strong positive,delegates without abandoning ownership,specific example included,low
+FB-0073,CAND-020,Alex Nakamura,program lead,positive,delegates without abandoning ownership,repeated pattern,low
+FB-0074,CAND-020,Alex Nakamura,peer,mixed,over-indexes on personal execution,general observation,high
+FB-0075,CAND-020,Alex Nakamura,community member,mixed,does not document decisions consistently,general observation,medium
+FB-0076,CAND-020,Alex Nakamura,program lead,positive,shares context generously,repeated pattern,medium
+FB-0077,CAND-020,Alex Nakamura,manager note,positive,delegates without abandoning ownership,specific example included,medium
+FB-0078,CAND-020,Alex Nakamura,coach,strong positive,shares context generously,general observation,medium
+FB-0079,CAND-021,Kendall Ibrahim,peer,positive,makes others successful,repeated pattern,medium
+FB-0080,CAND-021,Kendall Ibrahim,manager note,strong positive,creates reusable patterns,repeated pattern,high
+FB-0081,CAND-021,Kendall Ibrahim,program lead,developmental,does not document decisions consistently,single event,medium
+FB-0082,CAND-021,Kendall Ibrahim,program lead,developmental,does not document decisions consistently,specific example included,medium
+FB-0083,CAND-022,Remy Thompson,peer,strong positive,turns feedback into action,single event,medium
+FB-0084,CAND-022,Remy Thompson,peer,positive,shares context generously,general observation,medium
+FB-0085,CAND-022,Remy Thompson,program lead,strong positive,shares context generously,specific example included,medium
+FB-0086,CAND-022,Remy Thompson,program lead,developmental,creates unnecessary churn when priorities change,single event,low
+FB-0087,CAND-023,Blair Rivera,community member,mixed,does not document decisions consistently,repeated pattern,high
+FB-0088,CAND-023,Blair Rivera,manager note,developmental,creates unnecessary churn when priorities change,single event,medium
+FB-0089,CAND-023,Blair Rivera,manager note,positive,builds confidence in peers,specific example included,low
+FB-0090,CAND-024,Elliot Kim,program lead,positive,delegates without abandoning ownership,specific example included,low
+FB-0091,CAND-024,Elliot Kim,manager note,positive,shares context generously,specific example included,low
+FB-0092,CAND-024,Elliot Kim,program lead,strong positive,keeps a respectful tone under pressure,repeated pattern,high
+FB-0093,CAND-024,Elliot Kim,coach,positive,shares context generously,single event,medium
+FB-0094,CAND-025,Hayden Garcia,manager note,strong positive,turns feedback into action,repeated pattern,high
+FB-0095,CAND-025,Hayden Garcia,peer,strong positive,makes others successful,single event,low
+FB-0096,CAND-025,Hayden Garcia,manager note,strong positive,keeps a respectful tone under pressure,single event,medium
+FB-0097,CAND-026,Jules Bennett,program lead,strong positive,creates reusable patterns,single event,medium
+FB-0098,CAND-026,Jules Bennett,manager note,strong positive,promotes inclusive participation,specific example included,high
+FB-0099,CAND-027,Kiran Park,manager note,positive,turns feedback into action,general observation,high
+FB-0100,CAND-027,Kiran Park,manager note,strong positive,creates reusable patterns,single event,high
+FB-0101,CAND-027,Kiran Park,community member,positive,creates reusable patterns,specific example included,low
+FB-0102,CAND-027,Kiran Park,community member,positive,builds confidence in peers,repeated pattern,high
+FB-0103,CAND-027,Kiran Park,manager note,positive,keeps a respectful tone under pressure,specific example included,medium
+FB-0104,CAND-028,Lane Zhang,community member,developmental,does not document decisions consistently,specific example included,high
+FB-0105,CAND-028,Lane Zhang,community member,strong positive,delegates without abandoning ownership,specific example included,high
+FB-0106,CAND-028,Lane Zhang,peer,strong positive,creates reusable patterns,repeated pattern,low
+FB-0107,CAND-028,Lane Zhang,peer,strong positive,keeps a respectful tone under pressure,single event,high
+FB-0108,CAND-029,Marley Nguyen,community member,positive,promotes inclusive participation,specific example included,high
+FB-0109,CAND-029,Marley Nguyen,community member,positive,makes others successful,single event,high
+FB-0110,CAND-029,Marley Nguyen,manager note,positive,shares context generously,specific example included,high
+FB-0111,CAND-029,Marley Nguyen,manager note,positive,keeps a respectful tone under pressure,repeated pattern,low
+FB-0112,CAND-029,Marley Nguyen,manager note,positive,keeps a respectful tone under pressure,general observation,medium
+FB-0113,CAND-030,Noel Scott,community member,mixed,needs clearer follow-through,repeated pattern,low
+FB-0114,CAND-030,Noel Scott,program lead,strong positive,promotes inclusive participation,specific example included,high
+FB-0115,CAND-031,Oakley Ali,community member,strong positive,keeps a respectful tone under pressure,specific example included,high
+FB-0116,CAND-031,Oakley Ali,manager note,positive,turns feedback into action,general observation,medium
+FB-0117,CAND-031,Oakley Ali,coach,positive,creates reusable patterns,repeated pattern,medium
+FB-0118,CAND-031,Oakley Ali,program lead,positive,keeps a respectful tone under pressure,single event,medium
+FB-0119,CAND-031,Oakley Ali,coach,strong positive,turns feedback into action,general observation,low
+FB-0120,CAND-031,Oakley Ali,coach,positive,builds confidence in peers,single event,low
+FB-0121,CAND-032,Peyton Kowalski,coach,strong positive,promotes inclusive participation,specific example included,high
+FB-0122,CAND-032,Peyton Kowalski,program lead,strong positive,turns feedback into action,general observation,low
+FB-0123,CAND-032,Peyton Kowalski,manager note,positive,creates reusable patterns,single event,medium
+FB-0124,CAND-032,Peyton Kowalski,program lead,mixed,over-indexes on personal execution,single event,medium
+FB-0125,CAND-032,Peyton Kowalski,community member,mixed,needs clearer follow-through,general observation,medium
+FB-0126,CAND-033,Robin Varga,peer,strong positive,delegates without abandoning ownership,general observation,medium
+FB-0127,CAND-033,Robin Varga,manager note,positive,promotes inclusive participation,specific example included,low
+FB-0128,CAND-033,Robin Varga,peer,strong positive,builds confidence in peers,repeated pattern,medium
+FB-0129,CAND-034,Shiloh Brooks,manager note,strong positive,makes others successful,specific example included,low
+FB-0130,CAND-034,Shiloh Brooks,community member,mixed,over-indexes on personal execution,repeated pattern,low
+FB-0131,CAND-034,Shiloh Brooks,community member,mixed,does not document decisions consistently,specific example included,medium
+FB-0132,CAND-034,Shiloh Brooks,program lead,developmental,needs clearer follow-through,specific example included,high
+FB-0133,CAND-034,Shiloh Brooks,coach,positive,shares context generously,repeated pattern,medium
+FB-0134,CAND-034,Shiloh Brooks,coach,mixed,needs clearer follow-through,specific example included,medium
+FB-0135,CAND-035,Tatum White,program lead,mixed,does not document decisions consistently,single event,low
+FB-0136,CAND-035,Tatum White,program lead,strong positive,builds confidence in peers,repeated pattern,medium
+FB-0137,CAND-035,Tatum White,manager note,strong positive,makes others successful,repeated pattern,high
+FB-0138,CAND-035,Tatum White,coach,developmental,creates unnecessary churn when priorities change,single event,medium
+FB-0139,CAND-036,Winter Khan,community member,developmental,needs clearer follow-through,single event,high
+FB-0140,CAND-036,Winter Khan,peer,strong positive,creates reusable patterns,specific example included,high
+FB-0141,CAND-036,Winter Khan,program lead,positive,makes others successful,repeated pattern,high
+FB-0142,CAND-037,Nico Cruz,peer,strong positive,keeps a respectful tone under pressure,general observation,medium
+FB-0143,CAND-037,Nico Cruz,community member,strong positive,promotes inclusive participation,repeated pattern,low
+FB-0144,CAND-037,Nico Cruz,community member,developmental,needs clearer follow-through,general observation,low
+FB-0145,CAND-037,Nico Cruz,manager note,mixed,creates unnecessary churn when priorities change,specific example included,medium
+FB-0146,CAND-037,Nico Cruz,manager note,mixed,does not document decisions consistently,single event,medium
+FB-0147,CAND-038,Adrian Rahman,program lead,mixed,over-indexes on personal execution,repeated pattern,high
+FB-0148,CAND-038,Adrian Rahman,coach,strong positive,promotes inclusive participation,repeated pattern,medium
+FB-0149,CAND-038,Adrian Rahman,program lead,positive,makes others successful,single event,high
+FB-0150,CAND-038,Adrian Rahman,program lead,strong positive,promotes inclusive participation,repeated pattern,medium
+FB-0151,CAND-038,Adrian Rahman,program lead,positive,shares context generously,general observation,high
+FB-0152,CAND-039,Milan Chen,community member,mixed,does not document decisions consistently,single event,medium
+FB-0153,CAND-039,Milan Chen,community member,mixed,needs clearer follow-through,general observation,high
+FB-0154,CAND-039,Milan Chen,community member,positive,keeps a respectful tone under pressure,general observation,low
+FB-0155,CAND-040,Kai Torres,manager note,strong positive,promotes inclusive participation,general observation,low
+FB-0156,CAND-040,Kai Torres,peer,developmental,needs clearer follow-through,single event,low
+FB-0157,CAND-040,Kai Torres,peer,strong positive,builds confidence in peers,single event,high
+FB-0158,CAND-040,Kai Torres,program lead,positive,creates reusable patterns,specific example included,medium
+FB-0159,CAND-040,Kai Torres,peer,strong positive,shares context generously,single event,medium
+FB-0160,CAND-041,Misha Morgan,program lead,strong positive,delegates without abandoning ownership,repeated pattern,medium
+FB-0161,CAND-041,Misha Morgan,program lead,positive,promotes inclusive participation,single event,low
+FB-0162,CAND-041,Misha Morgan,program lead,positive,creates reusable patterns,single event,low
+FB-0163,CAND-041,Misha Morgan,peer,strong positive,builds confidence in peers,repeated pattern,medium
+FB-0164,CAND-041,Misha Morgan,program lead,strong positive,turns feedback into action,repeated pattern,high
+FB-0165,CAND-042,Arden Brown,program lead,strong positive,turns feedback into action,repeated pattern,high
+FB-0166,CAND-042,Arden Brown,manager note,positive,delegates without abandoning ownership,single event,high
+FB-0167,CAND-042,Arden Brown,peer,positive,shares context generously,specific example included,low
+FB-0168,CAND-042,Arden Brown,manager note,strong positive,delegates without abandoning ownership,repeated pattern,high
+FB-0169,CAND-042,Arden Brown,peer,developmental,over-indexes on personal execution,repeated pattern,high
+FB-0170,CAND-043,Lior Martinez,community member,strong positive,promotes inclusive participation,general observation,high
+FB-0171,CAND-043,Lior Martinez,community member,strong positive,builds confidence in peers,general observation,high
+FB-0172,CAND-043,Lior Martinez,manager note,positive,keeps a respectful tone under pressure,general observation,low
+FB-0173,CAND-043,Lior Martinez,program lead,strong positive,promotes inclusive participation,repeated pattern,low
+FB-0174,CAND-043,Lior Martinez,manager note,strong positive,builds confidence in peers,repeated pattern,high
+FB-0175,CAND-043,Lior Martinez,community member,strong positive,promotes inclusive participation,repeated pattern,high
+FB-0176,CAND-044,Sasha Wilson,program lead,positive,promotes inclusive participation,repeated pattern,high
+FB-0177,CAND-044,Sasha Wilson,coach,developmental,needs clearer follow-through,single event,low
+FB-0178,CAND-044,Sasha Wilson,program lead,strong positive,makes others successful,general observation,low
+FB-0179,CAND-044,Sasha Wilson,manager note,positive,builds confidence in peers,single event,low
+FB-0180,CAND-045,Ellis Lee,coach,strong positive,keeps a respectful tone under pressure,single event,medium
+FB-0181,CAND-045,Ellis Lee,peer,positive,builds confidence in peers,repeated pattern,low
+FB-0182,CAND-045,Ellis Lee,program lead,strong positive,creates reusable patterns,general observation,high
+FB-0183,CAND-045,Ellis Lee,coach,positive,creates reusable patterns,general observation,high
+FB-0184,CAND-045,Ellis Lee,coach,developmental,over-indexes on personal execution,general observation,medium
+FB-0185,CAND-046,Indigo Diaz,peer,strong positive,turns feedback into action,repeated pattern,low
+FB-0186,CAND-046,Indigo Diaz,manager note,strong positive,shares context generously,repeated pattern,high
+FB-0187,CAND-047,Rio Miller,peer,mixed,needs clearer follow-through,specific example included,medium
+FB-0188,CAND-047,Rio Miller,manager note,mixed,does not document decisions consistently,repeated pattern,high
+FB-0189,CAND-048,Lennox Hansen,coach,strong positive,makes others successful,single event,medium
+FB-0190,CAND-048,Lennox Hansen,program lead,developmental,needs clearer follow-through,specific example included,high
+FB-0191,CAND-049,Phoenix Santos,peer,strong positive,makes others successful,single event,low
+FB-0192,CAND-049,Phoenix Santos,program lead,strong positive,builds confidence in peers,single event,low
+FB-0193,CAND-049,Phoenix Santos,program lead,strong positive,delegates without abandoning ownership,single event,medium
+FB-0194,CAND-049,Phoenix Santos,peer,strong positive,builds confidence in peers,repeated pattern,medium
+FB-0195,CAND-050,Briar Patel,coach,positive,creates reusable patterns,general observation,medium
+FB-0196,CAND-050,Briar Patel,coach,positive,keeps a respectful tone under pressure,general observation,medium
+FB-0197,CAND-050,Briar Patel,manager note,positive,promotes inclusive participation,repeated pattern,high
+FB-0198,CAND-050,Briar Patel,manager note,positive,shares context generously,repeated pattern,high
+FB-0199,CAND-050,Briar Patel,peer,strong positive,promotes inclusive participation,specific example included,high
+FB-0200,CAND-051,Marlowe Foster,program lead,developmental,needs clearer follow-through,single event,high
+FB-0201,CAND-051,Marlowe Foster,community member,positive,shares context generously,single event,medium
+FB-0202,CAND-051,Marlowe Foster,community member,strong positive,turns feedback into action,general observation,low
+FB-0203,CAND-051,Marlowe Foster,program lead,positive,creates reusable patterns,single event,medium
+FB-0204,CAND-052,Micah Okafor,peer,strong positive,shares context generously,specific example included,high
+FB-0205,CAND-052,Micah Okafor,manager note,positive,shares context generously,repeated pattern,medium
+FB-0206,CAND-052,Micah Okafor,coach,strong positive,shares context generously,specific example included,low
+FB-0207,CAND-052,Micah Okafor,program lead,positive,turns feedback into action,general observation,medium
+FB-0208,CAND-052,Micah Okafor,community member,strong positive,promotes inclusive participation,repeated pattern,high
+FB-0209,CAND-052,Micah Okafor,coach,positive,turns feedback into action,repeated pattern,medium
+FB-0210,CAND-053,River Silva,coach,strong positive,shares context generously,repeated pattern,high
+FB-0211,CAND-053,River Silva,peer,strong positive,makes others successful,single event,low
+FB-0212,CAND-053,River Silva,manager note,strong positive,turns feedback into action,single event,high
+FB-0213,CAND-054,Sawyer Olsen,coach,positive,creates reusable patterns,repeated pattern,high
+FB-0214,CAND-054,Sawyer Olsen,community member,positive,promotes inclusive participation,specific example included,low
+FB-0215,CAND-054,Sawyer Olsen,peer,strong positive,delegates without abandoning ownership,specific example included,high
+FB-0216,CAND-054,Sawyer Olsen,program lead,developmental,over-indexes on personal execution,single event,high
+FB-0217,CAND-054,Sawyer Olsen,manager note,strong positive,delegates without abandoning ownership,general observation,low
+FB-0218,CAND-054,Sawyer Olsen,program lead,strong positive,turns feedback into action,single event,medium
+FB-0219,CAND-055,Sterling Yamada,manager note,strong positive,builds confidence in peers,single event,medium
+FB-0220,CAND-055,Sterling Yamada,coach,strong positive,turns feedback into action,general observation,low
+FB-0221,CAND-056,Teagan Singh,peer,positive,promotes inclusive participation,repeated pattern,low
+FB-0222,CAND-056,Teagan Singh,manager note,strong positive,promotes inclusive participation,single event,high
+FB-0223,CAND-056,Teagan Singh,peer,positive,creates reusable patterns,single event,medium
+FB-0224,CAND-056,Teagan Singh,program lead,positive,turns feedback into action,specific example included,high
+FB-0225,CAND-057,Val Adams,coach,strong positive,keeps a respectful tone under pressure,specific example included,medium
+FB-0226,CAND-057,Val Adams,manager note,mixed,does not document decisions consistently,specific example included,medium
+FB-0227,CAND-058,Yael Nakamura,manager note,developmental,creates unnecessary churn when priorities change,single event,low
+FB-0228,CAND-058,Yael Nakamura,manager note,strong positive,delegates without abandoning ownership,repeated pattern,medium
+FB-0229,CAND-058,Yael Nakamura,coach,strong positive,delegates without abandoning ownership,repeated pattern,high
+FB-0230,CAND-058,Yael Nakamura,program lead,mixed,does not document decisions consistently,repeated pattern,high
+FB-0231,CAND-058,Yael Nakamura,community member,positive,promotes inclusive participation,single event,low
+FB-0232,CAND-058,Yael Nakamura,peer,positive,creates reusable patterns,single event,low
+FB-0233,CAND-059,Zion Ibrahim,peer,strong positive,turns feedback into action,single event,medium
+FB-0234,CAND-059,Zion Ibrahim,coach,strong positive,delegates without abandoning ownership,specific example included,low
+FB-0235,CAND-059,Zion Ibrahim,community member,strong positive,creates reusable patterns,general observation,low
+FB-0236,CAND-060,Ari Thompson,community member,strong positive,shares context generously,single event,low
+FB-0237,CAND-060,Ari Thompson,coach,positive,shares context generously,general observation,medium
+FB-0238,CAND-060,Ari Thompson,community member,strong positive,keeps a respectful tone under pressure,specific example included,high
+FB-0239,CAND-060,Ari Thompson,coach,strong positive,builds confidence in peers,specific example included,high
+FB-0240,CAND-060,Ari Thompson,manager note,strong positive,turns feedback into action,specific example included,low
+FB-0241,CAND-060,Ari Thompson,coach,positive,shares context generously,specific example included,high
+FB-0242,CAND-061,Brook Rivera,program lead,strong positive,shares context generously,repeated pattern,low
+FB-0243,CAND-061,Brook Rivera,coach,positive,turns feedback into action,single event,high
+FB-0244,CAND-062,Cedar Kim,community member,strong positive,keeps a respectful tone under pressure,general observation,low
+FB-0245,CAND-062,Cedar Kim,manager note,mixed,does not document decisions consistently,specific example included,low
+FB-0246,CAND-063,Darian Garcia,peer,strong positive,builds confidence in peers,repeated pattern,medium
+FB-0247,CAND-063,Darian Garcia,community member,positive,promotes inclusive participation,general observation,low
+FB-0248,CAND-063,Darian Garcia,program lead,positive,promotes inclusive participation,general observation,medium
+FB-0249,CAND-063,Darian Garcia,manager note,strong positive,promotes inclusive participation,repeated pattern,low
+FB-0250,CAND-063,Darian Garcia,coach,positive,makes others successful,specific example included,low
+FB-0251,CAND-064,Ezra Bennett,manager note,strong positive,builds confidence in peers,specific example included,medium
+FB-0252,CAND-064,Ezra Bennett,coach,positive,builds confidence in peers,specific example included,high
+FB-0253,CAND-064,Ezra Bennett,manager note,developmental,creates unnecessary churn when priorities change,single event,high
+FB-0254,CAND-064,Ezra Bennett,community member,positive,creates reusable patterns,repeated pattern,low
+FB-0255,CAND-065,Gray Park,manager note,mixed,needs clearer follow-through,single event,high
+FB-0256,CAND-065,Gray Park,community member,strong positive,turns feedback into action,single event,low
+FB-0257,CAND-065,Gray Park,peer,mixed,over-indexes on personal execution,repeated pattern,medium
+FB-0258,CAND-065,Gray Park,coach,positive,builds confidence in peers,repeated pattern,low
+FB-0259,CAND-066,Hollis Zhang,coach,positive,creates reusable patterns,repeated pattern,high
+FB-0260,CAND-066,Hollis Zhang,coach,strong positive,makes others successful,repeated pattern,low
+FB-0261,CAND-067,Ira Nguyen,peer,positive,shares context generously,repeated pattern,medium
+FB-0262,CAND-067,Ira Nguyen,peer,positive,keeps a respectful tone under pressure,specific example included,high
+FB-0263,CAND-067,Ira Nguyen,community member,developmental,does not document decisions consistently,specific example included,medium
+FB-0264,CAND-067,Ira Nguyen,coach,strong positive,delegates without abandoning ownership,general observation,medium
+FB-0265,CAND-068,Juniper Scott,manager note,strong positive,builds confidence in peers,general observation,low
+FB-0266,CAND-068,Juniper Scott,community member,strong positive,delegates without abandoning ownership,single event,low
+FB-0267,CAND-068,Juniper Scott,manager note,strong positive,promotes inclusive participation,specific example included,low
+FB-0268,CAND-068,Juniper Scott,manager note,strong positive,builds confidence in peers,general observation,medium
+FB-0269,CAND-069,Kit Ali,coach,strong positive,promotes inclusive participation,single event,medium
+FB-0270,CAND-069,Kit Ali,manager note,positive,promotes inclusive participation,single event,high
+FB-0271,CAND-070,Lux Kowalski,coach,mixed,needs clearer follow-through,general observation,medium
+FB-0272,CAND-070,Lux Kowalski,coach,positive,builds confidence in peers,specific example included,high
+FB-0273,CAND-070,Lux Kowalski,peer,strong positive,turns feedback into action,general observation,high
+FB-0274,CAND-070,Lux Kowalski,coach,strong positive,shares context generously,single event,low
+FB-0275,CAND-070,Lux Kowalski,peer,strong positive,creates reusable patterns,general observation,low
+FB-0276,CAND-071,Monroe Varga,community member,strong positive,keeps a respectful tone under pressure,repeated pattern,medium
+FB-0277,CAND-071,Monroe Varga,program lead,strong positive,builds confidence in peers,single event,low
+FB-0278,CAND-071,Monroe Varga,community member,developmental,creates unnecessary churn when priorities change,general observation,low
+FB-0279,CAND-071,Monroe Varga,peer,mixed,does not document decisions consistently,specific example included,high
+FB-0280,CAND-072,Nova Brooks,manager note,strong positive,makes others successful,single event,high
+FB-0281,CAND-072,Nova Brooks,community member,strong positive,turns feedback into action,single event,medium
+FB-0282,CAND-072,Nova Brooks,program lead,mixed,needs clearer follow-through,single event,medium
+FB-0283,CAND-072,Nova Brooks,community member,positive,builds confidence in peers,specific example included,high

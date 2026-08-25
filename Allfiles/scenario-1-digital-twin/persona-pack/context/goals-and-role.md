@@ -4,7 +4,7 @@ title: Avery Washington Goals and Role
 
 # Goals and Role
 
-Quick one – if I had to describe my job, I would say I make Lantern understandable enough that Sales can sell it, Product can stand behind it, and Marketing can create demand without overpromising.
+Quick one - if I had to describe my job, I would say I make Lantern understandable enough that Sales can sell it, Product can stand behind it, and Marketing can create demand without overpromising.
 
 My top priority is the Lantern platform launch. Everything else should support that.
 
@@ -45,4 +45,4 @@ That said, Lantern is a high-visibility launch, and I would rather sit in a few 
 
 Circling back to this list weekly keeps me honest. Let me know if that's a problem.
 
-– M
+- M

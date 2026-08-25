@@ -1,4 +1,4 @@
-// The Dispatch — live routing board
+// The Dispatch - live routing board
 //
 // Serves a browser dashboard that:
 //  - reads council/*.json at request time and shows the seated Global Skilling teams
@@ -8,10 +8,10 @@
 //    each team takes a position, then the room lands ONE routing decision
 //    (owner · audience · plan of deliverables + reuse · disposition · next-action)
 //
-// Nothing here hardcodes the council — every run re-reads council/*.json, so
+// Nothing here hardcodes the council - every run re-reads council/*.json, so
 // editing those files (adding/removing a team) changes the room and the next
 // dispatch without touching this server. "Sharpen & re-dispatch" is just
-// re-dropping an edited request — no separate machinery.
+// re-dropping an edited request - no separate machinery.
 
 const express = require('express');
 const multer = require('multer');
@@ -25,7 +25,7 @@ const PORT = process.env.PORT || 4173;
 // This dashboard ships inside the-dispatch-starter/. The seated room is DATA
 // (council/*.json); the process references live in the sibling the-dispatch/
 // skill. Everything is discovered relative to the starter so it works on any
-// machine — override any path with an env var.
+// machine - override any path with an env var.
 const STARTER_DIR = path.resolve(__dirname, '..');
 const COUNCIL_DIR = process.env.DISPATCH_COUNCIL_DIR || path.join(STARTER_DIR, 'council');
 const SKILL_DIR = process.env.DISPATCH_SKILL_DIR || path.resolve(STARTER_DIR, '..', 'the-dispatch');
@@ -46,7 +46,7 @@ for (const dir of [UPLOADS_DIR, RUNS_DIR]) {
 
 // --- Config for the "act on the decision" path (TODO bonus) -----------------
 // Placeholder by default. Wiring the decision to a real action (open a work
-// item, post to a channel, route to the owner) is a build path — see the TODO
+// item, post to a channel, route to the owner) is a build path - see the TODO
 // stub at POST /api/dispatch/:id/act near the bottom of this file.
 const ACT_TARGET = process.env.DISPATCH_ACT_TARGET || '<your intake tracker or channel>';
 
@@ -56,7 +56,7 @@ const COPILOT_BIN = process.env.COPILOT_BIN || 'copilot';
 const COPILOT_MODEL = process.env.DISPATCH_MODEL !== undefined ? process.env.DISPATCH_MODEL : 'claude-sonnet-4.6';
 const COPILOT_TIMEOUT_MS = Number(process.env.DISPATCH_TIMEOUT_MS || 6 * 60 * 1000);
 
-// The intake gate — check_content.py at the starter root. Node shells to Python
+// The intake gate - check_content.py at the starter root. Node shells to Python
 // so the board can say "routable" or "sharpen first" before the room decides.
 const PYTHON_BIN = process.env.DISPATCH_PYTHON || 'python';
 const CHECK_SCRIPT = path.join(STARTER_DIR, 'check_content.py');
@@ -65,7 +65,7 @@ const CHECK_SCRIPT = path.join(STARTER_DIR, 'check_content.py');
  * Run the intake gate for a request. Resolves { status, routable, present,
  * missing, detail } where status is 'ok' (ran), 'todo' (check_content.py still
  * a stub), or 'error'. Best-effort: an unbuilt stub or missing Python never
- * blocks the room — the board just can't show the routable badge, so it lets
+ * blocks the room - the board just can't show the routable badge, so it lets
  * the request through and the model still applies the "sharpen if rough" rule.
  */
 function runIntakeGate(requestPath) {
@@ -98,7 +98,7 @@ function runIntakeGate(requestPath) {
 
 /**
  * On startup, confirm the GitHub Copilot CLI is reachable. Auth is the CLI's
- * own concern — a missing/unfound binary is the #1 first-run failure, so say so
+ * own concern - a missing/unfound binary is the #1 first-run failure, so say so
  * clearly instead of letting the first dispatch blow up with a raw spawn error.
  */
 function preflightCopilot() {
@@ -193,41 +193,41 @@ function buildPrompt({ seats, requestPath, requestLabel, routable, missing }) {
    Voice: ${s.voice}`).join('\n\n');
 
   const routableLine = routable
-    ? 'The intake gate says this request is ROUTABLE — it has enough to decide.'
-    : `The intake gate says this request is NOT yet routable — missing: ${(missing || []).join(', ') || 'required fields'}. The room's honest job is to SHARPEN it (pin the missing pieces); the disposition should be "defer" or "decline-and-redirect" (go back to the requester), NOT a confident route.`;
+    ? 'The intake gate says this request is ROUTABLE - it has enough to decide.'
+    : `The intake gate says this request is NOT yet routable - missing: ${(missing || []).join(', ') || 'required fields'}. The room's honest job is to SHARPEN it (pin the missing pieces); the disposition should be "defer" or "decline-and-redirect" (go back to the requester), NOT a confident route.`;
 
-  return `You are running THE DISPATCH skill's convene step as a backend job for a live dashboard — there is no human to ask follow-up questions, so make reasonable calls and proceed.
+  return `You are running THE DISPATCH skill's convene step as a backend job for a live dashboard - there is no human to ask follow-up questions, so make reasonable calls and proceed.
 
 Read "${CONVENE_REF_PATH}" for how each team takes a position, and "${DISPATCH_REF_PATH}" for how the room turns positions into ONE routing decision.
 
 The incoming skilling request is at: "${requestPath}"  (label: ${requestLabel})
 ${routableLine}
 
-Seat these Global Skilling teams, in this exact order. Each reacts to the request through its OWN lens — what it owns, who it serves, what makes it say yes or no, its format bias, its voice:
+Seat these Global Skilling teams, in this exact order. Each reacts to the request through its OWN lens - what it owns, who it serves, what makes it say yes or no, its format bias, its voice:
 
 ${seatBlock}
 
-STEP 1 — Each team takes a position. For every team above, decide:
+STEP 1 - Each team takes a position. For every team above, decide:
   - interest: "in" (wants to own it) | "support" (would help) | "out" (passes)
   - deliverable: what THIS team would make for it (draw from what it produces), or null if out
-  - reuse: a deliverable it could REUSE from another team, or one of ITS deliverables another team could reuse — or null
+  - reuse: a deliverable it could REUSE from another team, or one of ITS deliverables another team could reuse - or null
   - effort: "S" | "M" | "L"
   - ownership: "own" | "support" | "pass"
   - disposition_lean: proceed-as-is | reshape | split | defer | decline-and-redirect
   - rationale: one line in the team's own voice, grounded in its card
 
-STEP 2 — The room lands ONE routing decision. Who FIELDS it is often easy; the DEBATE is the PLAN — the deliverables, the audience, and especially REUSE (build once, reuse across teams). Decide:
+STEP 2 - The room lands ONE routing decision. Who FIELDS it is often easy; the DEBATE is the PLAN - the deliverables, the audience, and especially REUSE (build once, reuse across teams). Decide:
   - owner: exactly ONE primary team label that fields and coordinates it
-  - audience: who it's REALLY for (one or more) — may differ from the request's stated audience
-  - plan: the deliverables that satisfy it. Each: { what (the shape), builder (a team label), reused_by (team labels that reuse it, or []), audience (who that deliverable serves) }. Build once, reuse across teams — never have two teams build the same thing.
+  - audience: who it's REALLY for (one or more) - may differ from the request's stated audience
+  - plan: the deliverables that satisfy it. Each: { what (the shape), builder (a team label), reused_by (team labels that reuse it, or []), audience (who that deliverable serves) }. Build once, reuse across teams - never have two teams build the same thing.
   - disposition: proceed-as-is | reshape | split | defer | decline-and-redirect
   - next_action: one concrete next step with a team on it
 
-STEP 3 — Name the sharpest DISAGREEMENT in 1-2 sentences (usually about the plan or the reuse, not who owns it).
+STEP 3 - Name the sharpest DISAGREEMENT in 1-2 sentences (usually about the plan or the reuse, not who owns it).
 
 Guardrails: exactly one primary owner; audience is never blank or "everyone" without a primary; every audience named is served by at least one deliverable; if the audience is partners, Field & Partner must be the owner or in next_action; certify only stable topics; a NOT-routable request must defer or redirect, never route confidently.
 
-Respond with ONLY a single JSON object — no markdown code fences, no prose before or after it. It must match exactly this shape:
+Respond with ONLY a single JSON object - no markdown code fences, no prose before or after it. It must match exactly this shape:
 
 {
   "request_label": "${requestLabel}",
@@ -331,7 +331,7 @@ function execCopilotJson(prompt, { addDirs = [], job, timeoutMs = COPILOT_TIMEOU
 
 /** Pull the model's JSON object out of CLI output that may include tool-call
  *  logs (with their own braces) before the final answer. Returns the LAST
- *  top-level balanced {...} that parses — robust to preamble and trailing text. */
+ *  top-level balanced {...} that parses - robust to preamble and trailing text. */
 function extractJson(text) {
   // Prefer fenced ```json blocks, last one first.
   let fences = [...text.matchAll(/```json\s*([\s\S]*?)```/gi)].map((m) => m[1]);
@@ -340,7 +340,7 @@ function extractJson(text) {
     try { return JSON.parse(fences[i]); } catch { /* next */ }
   }
   // Otherwise scan for every top-level balanced object (ignoring braces inside
-  // strings) and return the last one that parses — that's the final answer.
+  // strings) and return the last one that parses - that's the final answer.
   const objs = [];
   let depth = 0;
   let start = -1;
@@ -379,7 +379,7 @@ app.use(express.json({ limit: '2mb' }));
 app.use(express.static(path.join(__dirname, 'public')));
 const upload = multer({ dest: UPLOADS_DIR });
 
-// The seated room — re-read every call so editing council/*.json shows up live.
+// The seated room - re-read every call so editing council/*.json shows up live.
 app.get('/api/council', (req, res) => {
   try {
     res.json({ seats: loadCouncil().seats });
@@ -428,8 +428,8 @@ app.get('/api/dispatch/:id', (req, res) => {
 });
 
 // --- Act on the decision (TODO bonus) --------------------------------------
-// Turning a routing decision into a real action — open a work item, post to a
-// channel, route to the owner — is a build path. Wire it up; until then it
+// Turning a routing decision into a real action - open a work item, post to a
+// channel, route to the owner - is a build path. Wire it up; until then it
 // answers 501 so the dashboard can show a "build path" hint.
 app.post('/api/dispatch/:id/act', (req, res) => {
   const job = jobs.get(req.params.id);

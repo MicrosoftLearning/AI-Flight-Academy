@@ -1,0 +1,129 @@
+RecognitionId,CandidateId,CandidateName,RecognitionType,RecognitionReason,Visibility,Period
+REC-0001,CAND-001,Avery Chen,cross-team award,execution,regional,Jan-Feb
+REC-0002,CAND-001,Avery Chen,community shoutout,delivery quality,regional,May-Jun
+REC-0003,CAND-001,Avery Chen,peer kudos,collaboration,global,Mar-Apr
+REC-0004,CAND-001,Avery Chen,community shoutout,execution,team,May-Jun
+REC-0005,CAND-002,Riley Singh,customer impact note,technical excellence,regional,Jul-Aug
+REC-0006,CAND-002,Riley Singh,manager spotlight,collaboration,regional,Jan-Feb
+REC-0007,CAND-002,Riley Singh,community shoutout,collaboration,team,May-Jun
+REC-0008,CAND-002,Riley Singh,cross-team award,collaboration,local,Jul-Aug
+REC-0009,CAND-003,Drew Foster,community shoutout,community building,local,Jan-Feb
+REC-0010,CAND-003,Drew Foster,manager spotlight,technical excellence,regional,May-Jun
+REC-0011,CAND-003,Drew Foster,cross-team award,execution,team,Jan-Feb
+REC-0012,CAND-003,Drew Foster,customer impact note,community building,team,Mar-Apr
+REC-0013,CAND-004,Parker White,peer kudos,community building,team,Jan-Feb
+REC-0014,CAND-004,Parker White,community shoutout,community building,team,Jul-Aug
+REC-0015,CAND-004,Parker White,community shoutout,delivery quality,local,May-Jun
+REC-0016,CAND-004,Parker White,manager spotlight,mentoring,regional,Mar-Apr
+REC-0017,CAND-005,Cameron Scott,customer impact note,community building,team,Mar-Apr
+REC-0018,CAND-005,Cameron Scott,manager spotlight,technical excellence,global,Mar-Apr
+REC-0019,CAND-006,Alex Kim,peer kudos,community building,global,Mar-Apr
+REC-0020,CAND-007,Morgan Lee,community shoutout,collaboration,team,Jul-Aug
+REC-0021,CAND-008,Taylor Brooks,cross-team award,execution,regional,Jul-Aug
+REC-0022,CAND-008,Taylor Brooks,manager spotlight,delivery quality,global,Jul-Aug
+REC-0023,CAND-009,Jordan Patel,community shoutout,collaboration,local,Jul-Aug
+REC-0024,CAND-009,Jordan Patel,peer kudos,technical excellence,regional,Mar-Apr
+REC-0025,CAND-009,Jordan Patel,cross-team award,mentoring,regional,Mar-Apr
+REC-0026,CAND-009,Jordan Patel,cross-team award,mentoring,regional,Jan-Feb
+REC-0027,CAND-009,Jordan Patel,community shoutout,technical excellence,global,Jan-Feb
+REC-0028,CAND-010,Sam Rivera,cross-team award,delivery quality,local,Jan-Feb
+REC-0029,CAND-012,Cameron Patel,customer impact note,collaboration,regional,Jan-Feb
+REC-0030,CAND-012,Cameron Patel,manager spotlight,mentoring,global,May-Jun
+REC-0031,CAND-012,Cameron Patel,peer kudos,collaboration,local,Mar-Apr
+REC-0032,CAND-013,Reese Foster,cross-team award,execution,global,Mar-Apr
+REC-0033,CAND-013,Reese Foster,program thank-you,execution,team,May-Jun
+REC-0034,CAND-014,Skyler Okafor,customer impact note,collaboration,global,Mar-Apr
+REC-0035,CAND-014,Skyler Okafor,peer kudos,collaboration,local,Mar-Apr
+REC-0036,CAND-015,Emery Silva,peer kudos,mentoring,local,Mar-Apr
+REC-0037,CAND-015,Emery Silva,program thank-you,collaboration,global,Jan-Feb
+REC-0038,CAND-016,Harper Olsen,community shoutout,delivery quality,local,Jan-Feb
+REC-0039,CAND-016,Harper Olsen,manager spotlight,delivery quality,global,Mar-Apr
+REC-0040,CAND-016,Harper Olsen,program thank-you,mentoring,regional,Jul-Aug
+REC-0041,CAND-017,Finley Yamada,cross-team award,collaboration,global,Mar-Apr
+REC-0042,CAND-017,Finley Yamada,customer impact note,collaboration,team,Mar-Apr
+REC-0043,CAND-017,Finley Yamada,customer impact note,execution,team,Mar-Apr
+REC-0044,CAND-017,Finley Yamada,cross-team award,execution,team,Jul-Aug
+REC-0045,CAND-018,Devon Singh,manager spotlight,execution,local,Jul-Aug
+REC-0046,CAND-019,Sage Adams,manager spotlight,delivery quality,global,Jan-Feb
+REC-0047,CAND-020,Alex Nakamura,community shoutout,technical excellence,local,May-Jun
+REC-0048,CAND-021,Kendall Ibrahim,cross-team award,delivery quality,local,May-Jun
+REC-0049,CAND-023,Blair Rivera,customer impact note,mentoring,global,Jan-Feb
+REC-0050,CAND-023,Blair Rivera,manager spotlight,technical excellence,global,Jul-Aug
+REC-0051,CAND-024,Elliot Kim,program thank-you,community building,team,May-Jun
+REC-0052,CAND-025,Hayden Garcia,cross-team award,delivery quality,local,Mar-Apr
+REC-0053,CAND-025,Hayden Garcia,customer impact note,technical excellence,regional,May-Jun
+REC-0054,CAND-025,Hayden Garcia,community shoutout,execution,team,May-Jun
+REC-0055,CAND-025,Hayden Garcia,customer impact note,community building,global,Jan-Feb
+REC-0056,CAND-026,Jules Bennett,customer impact note,delivery quality,global,Jul-Aug
+REC-0057,CAND-026,Jules Bennett,cross-team award,execution,team,May-Jun
+REC-0058,CAND-026,Jules Bennett,program thank-you,execution,regional,May-Jun
+REC-0059,CAND-026,Jules Bennett,cross-team award,mentoring,global,Jan-Feb
+REC-0060,CAND-028,Lane Zhang,program thank-you,technical excellence,local,Jan-Feb
+REC-0061,CAND-028,Lane Zhang,community shoutout,execution,global,May-Jun
+REC-0062,CAND-028,Lane Zhang,program thank-you,execution,team,Jan-Feb
+REC-0063,CAND-028,Lane Zhang,program thank-you,execution,global,Jul-Aug
+REC-0064,CAND-029,Marley Nguyen,peer kudos,mentoring,regional,Jan-Feb
+REC-0065,CAND-029,Marley Nguyen,peer kudos,execution,local,Jul-Aug
+REC-0066,CAND-029,Marley Nguyen,manager spotlight,mentoring,local,Mar-Apr
+REC-0067,CAND-029,Marley Nguyen,manager spotlight,collaboration,global,Jul-Aug
+REC-0068,CAND-031,Oakley Ali,cross-team award,technical excellence,team,May-Jun
+REC-0069,CAND-031,Oakley Ali,community shoutout,delivery quality,regional,Mar-Apr
+REC-0070,CAND-034,Shiloh Brooks,program thank-you,collaboration,local,Jan-Feb
+REC-0071,CAND-034,Shiloh Brooks,program thank-you,collaboration,team,Jan-Feb
+REC-0072,CAND-034,Shiloh Brooks,manager spotlight,delivery quality,local,May-Jun
+REC-0073,CAND-036,Winter Khan,customer impact note,execution,global,Mar-Apr
+REC-0074,CAND-036,Winter Khan,program thank-you,mentoring,global,May-Jun
+REC-0075,CAND-036,Winter Khan,manager spotlight,mentoring,team,Jan-Feb
+REC-0076,CAND-037,Nico Cruz,customer impact note,delivery quality,local,Jan-Feb
+REC-0077,CAND-039,Milan Chen,peer kudos,collaboration,global,Mar-Apr
+REC-0078,CAND-039,Milan Chen,peer kudos,mentoring,regional,Jan-Feb
+REC-0079,CAND-041,Misha Morgan,manager spotlight,delivery quality,regional,Jan-Feb
+REC-0080,CAND-041,Misha Morgan,program thank-you,community building,local,Mar-Apr
+REC-0081,CAND-041,Misha Morgan,cross-team award,mentoring,regional,Jul-Aug
+REC-0082,CAND-041,Misha Morgan,cross-team award,collaboration,local,Jul-Aug
+REC-0083,CAND-041,Misha Morgan,manager spotlight,execution,local,Jan-Feb
+REC-0084,CAND-042,Arden Brown,manager spotlight,technical excellence,regional,Jan-Feb
+REC-0085,CAND-044,Sasha Wilson,customer impact note,community building,local,Mar-Apr
+REC-0086,CAND-044,Sasha Wilson,community shoutout,collaboration,local,May-Jun
+REC-0087,CAND-045,Ellis Lee,community shoutout,mentoring,local,Jul-Aug
+REC-0088,CAND-045,Ellis Lee,program thank-you,community building,local,Jan-Feb
+REC-0089,CAND-045,Ellis Lee,peer kudos,delivery quality,team,May-Jun
+REC-0090,CAND-045,Ellis Lee,community shoutout,delivery quality,regional,Mar-Apr
+REC-0091,CAND-045,Ellis Lee,peer kudos,collaboration,local,Mar-Apr
+REC-0092,CAND-046,Indigo Diaz,community shoutout,execution,local,Jul-Aug
+REC-0093,CAND-046,Indigo Diaz,peer kudos,delivery quality,global,Mar-Apr
+REC-0094,CAND-047,Rio Miller,community shoutout,mentoring,team,Jan-Feb
+REC-0095,CAND-048,Lennox Hansen,cross-team award,community building,regional,Mar-Apr
+REC-0096,CAND-049,Phoenix Santos,peer kudos,technical excellence,team,Jan-Feb
+REC-0097,CAND-050,Briar Patel,program thank-you,delivery quality,local,Jan-Feb
+REC-0098,CAND-050,Briar Patel,customer impact note,technical excellence,local,Jan-Feb
+REC-0099,CAND-052,Micah Okafor,manager spotlight,collaboration,regional,May-Jun
+REC-0100,CAND-053,River Silva,program thank-you,community building,team,Jul-Aug
+REC-0101,CAND-053,River Silva,community shoutout,execution,local,Jan-Feb
+REC-0102,CAND-055,Sterling Yamada,program thank-you,delivery quality,regional,Mar-Apr
+REC-0103,CAND-055,Sterling Yamada,community shoutout,execution,regional,May-Jun
+REC-0104,CAND-055,Sterling Yamada,cross-team award,community building,team,May-Jun
+REC-0105,CAND-055,Sterling Yamada,manager spotlight,execution,local,Jan-Feb
+REC-0106,CAND-056,Teagan Singh,community shoutout,execution,global,May-Jun
+REC-0107,CAND-058,Yael Nakamura,cross-team award,technical excellence,regional,Mar-Apr
+REC-0108,CAND-058,Yael Nakamura,peer kudos,community building,team,Jan-Feb
+REC-0109,CAND-058,Yael Nakamura,program thank-you,execution,global,Jul-Aug
+REC-0110,CAND-058,Yael Nakamura,peer kudos,collaboration,global,Jan-Feb
+REC-0111,CAND-059,Zion Ibrahim,cross-team award,delivery quality,regional,Jan-Feb
+REC-0112,CAND-061,Brook Rivera,community shoutout,delivery quality,local,Jul-Aug
+REC-0113,CAND-061,Brook Rivera,community shoutout,delivery quality,local,Mar-Apr
+REC-0114,CAND-061,Brook Rivera,program thank-you,delivery quality,team,Jul-Aug
+REC-0115,CAND-061,Brook Rivera,cross-team award,collaboration,regional,Jan-Feb
+REC-0116,CAND-062,Cedar Kim,manager spotlight,collaboration,regional,May-Jun
+REC-0117,CAND-062,Cedar Kim,cross-team award,technical excellence,local,May-Jun
+REC-0118,CAND-063,Darian Garcia,cross-team award,delivery quality,global,Jan-Feb
+REC-0119,CAND-063,Darian Garcia,peer kudos,mentoring,global,May-Jun
+REC-0120,CAND-063,Darian Garcia,cross-team award,delivery quality,global,May-Jun
+REC-0121,CAND-065,Gray Park,customer impact note,technical excellence,team,Jan-Feb
+REC-0122,CAND-066,Hollis Zhang,customer impact note,community building,local,Mar-Apr
+REC-0123,CAND-067,Ira Nguyen,manager spotlight,community building,global,Jan-Feb
+REC-0124,CAND-067,Ira Nguyen,cross-team award,community building,regional,May-Jun
+REC-0125,CAND-067,Ira Nguyen,customer impact note,community building,local,Jan-Feb
+REC-0126,CAND-068,Juniper Scott,customer impact note,community building,regional,Mar-Apr
+REC-0127,CAND-069,Kit Ali,peer kudos,delivery quality,local,Jul-Aug
+REC-0128,CAND-071,Monroe Varga,customer impact note,mentoring,team,Jul-Aug

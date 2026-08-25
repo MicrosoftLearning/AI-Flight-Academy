@@ -2,7 +2,7 @@
   "seat_id": "compliance",
   "audience": "🏦 Compliance & Risk Lead",
   "card": "AC-02",
-  "outcome": "Decide whether 900 client-facing advisors can use this without creating a supervisory gap they'll be answering for in an exam — a control story that would hold up in an audit.",
+  "outcome": "Decide whether 900 client-facing advisors can use this without creating a supervisory gap they'll be answering for in an exam - a control story that would hold up in an audit.",
   "thresholds": { "SHIP": 2.0, "REVISE": 1.5, "REJECT": 1.5 },
   "criteria": [
     {
@@ -14,9 +14,9 @@
         "0": "Describes benefits with no mention of data handling, retention, or a control.",
         "1": "Gestures at 'secure' or 'review the output' without a named control, owner, or where the data goes.",
         "2": "Names the control and the data flow for the main capabilities.",
-        "3": "Every claim carries its data flow, retention, and owner — or says plainly that no control exists yet."
+        "3": "Every claim carries its data flow, retention, and owner - or says plainly that no control exists yet."
       },
-      "watch_for": "'Always review AI output before sending' offered as the whole safeguard — it puts the control on the human and calls it done.",
+      "watch_for": "'Always review AI output before sending' offered as the whole safeguard - it puts the control on the human and calls it done.",
       "checks": []
     },
     {

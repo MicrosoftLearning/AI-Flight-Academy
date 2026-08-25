@@ -11,7 +11,7 @@ title: Avery Washington Mid-Build Twist
 **Date:** Wed, Jul 29, 2026 8:49 PM  
 **Subject:** Exec reprioritization: partner board readout before Sales retro
 
-Avery – change of plan. ELT wants an Lantern partner-board readout by tomorrow at 4 PM. I need you to repurpose the Sales enablement retro work into a tighter executive story: launch performance, risk, and what we are doing about lead quality.
+Avery - change of plan. ELT wants an Lantern partner-board readout by tomorrow at 4 PM. I need you to repurpose the Sales enablement retro work into a tighter executive story: launch performance, risk, and what we are doing about lead quality.
 
 Do this before Graham's Sales retro. If he pushes back, tell him I made the call. I need a draft by noon.
 

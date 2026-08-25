@@ -2,7 +2,7 @@
   "name": "ai-flight-academy",
   "version": "1.0.0",
   "private": true,
-  "description": "AI Flight Academy — a 2-hour hands-on agent-building hack for Global Skilling Team Week.",
+  "description": "AI Flight Academy - a 2-hour hands-on agent-building hack for Global Skilling Team Week.",
   "devDependencies": {
     "markdownlint-cli2": "^0.22.0",
     "vitepress": "^2.0.0-alpha.12"
@@ -12,6 +12,6 @@
     "docs:dev": "npm run pack && vitepress dev docs",
     "docs:build": "npm run pack && vitepress build docs",
     "docs:preview": "vitepress preview docs",
-    "lint:md": "markdownlint-cli2 \"docs/**/*.md\" \"#docs/node_modules\""
+    "lint:md": "markdownlint-cli2 \"docs/**/*.md\" \"#docs/node_modules\" \"#docs/public/downloads\" \"#docs/.vitepress/dist\""
   }
 }

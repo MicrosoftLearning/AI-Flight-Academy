@@ -39,7 +39,7 @@ export const tracks: Track[] = [
     sub: "Copilot-Crafted",
     tool: "Microsoft 365 Copilot + Cowork",
     buildsVerb: "Builds with",
-    desc: "**Microsoft 365 Copilot Cowork** – just describe what you need. **Work IQ** pulls in your work context automatically.",
+    desc: "**Microsoft 365 Copilot Cowork** - just describe what you need. **Work IQ** pulls in your work context automatically.",
     guidesLink: "/bricks/#cowork",
     guides: [
       { text: "Install a provided skill", link: "/bricks/cowork-install-skill" },
@@ -58,7 +58,7 @@ export const tracks: Track[] = [
     sub: "Agent-Orchestrated",
     tool: "Microsoft Scout",
     buildsVerb: "Builds with",
-    desc: "**Microsoft Scout** – describe what you want and Scout builds it, grounded in your work through **Work IQ** and running against **GitHub Copilot CLI**.",
+    desc: "**Microsoft Scout** - describe what you want and Scout builds it, grounded in your work through **Work IQ** and running against **GitHub Copilot CLI**.",
     guidesLink: "/bricks/#scout",
     guides: [
       { text: "Set up Microsoft Scout", link: "/bricks/scout-setup" },
@@ -107,11 +107,11 @@ export const scenarios: Scenario[] = [
   },
   {
     id: "scenario-3",
-    emoji: "🎯",
+    emoji: "🎖️",
     label: "Scenario 3",
-    name: "TBD",
-    sub: "Still being locked with the LT",
-    status: "soon",
+    name: "The Ambassador",
+    sub: "Find who multiplies others, and show why",
+    status: "wip",
   },
 ];
 
@@ -123,9 +123,9 @@ export const buildStatus: Record<string, Status> = {
   "cowork-scenario-2": "wip",
   "scout-scenario-2": "wip",
   "code-scenario-2": "wip",
-  "cowork-scenario-3": "soon",
-  "scout-scenario-3": "soon",
-  "code-scenario-3": "soon",
+  "cowork-scenario-3": "wip",
+  "scout-scenario-3": "wip",
+  "code-scenario-3": "wip",
 };
 
 export const statusLabel: Record<Status, string> = {

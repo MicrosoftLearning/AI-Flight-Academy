@@ -2,13 +2,13 @@
   "seat_id": "retail",
   "audience": "🛒 Retail Store Operations Lead",
   "card": "AC-01",
-  "outcome": "A floor associate can act on this in one short standing read, and re-teach it to a supervisor — so it gets adopted without a training session that will never be scheduled.",
+  "outcome": "A floor associate can act on this in one short standing read, and re-teach it to a supervisor - so it gets adopted without a training session that will never be scheduled.",
   "thresholds": { "SHIP": 2.5, "REVISE": 1.5, "REJECT": 1.5 },
   "criteria": [
     {
       "id": "actionable_standing_up",
       "the_bar": "A distracted reader reaches the first useful action in the first two lines and finishes in under ~6 minutes standing up.",
-      "protects_outcome": "If they can't act before the first interruption, they never come back — there is no session two.",
+      "protects_outcome": "If they can't act before the first interruption, they never come back - there is no session two.",
       "fatal": true,
       "anchors": {
         "0": "No action reachable without a page of prose, or it assumes a desk and uninterrupted time.",
@@ -24,7 +24,7 @@
     {
       "id": "within_their_authority",
       "the_bar": "Every instructed action is something this reader can do with the access they have.",
-      "protects_outcome": "An instruction to open an admin center or install software isn't 'advanced' for this reader — it's impossible, so the whole piece stops working.",
+      "protects_outcome": "An instruction to open an admin center or install software isn't 'advanced' for this reader - it's impossible, so the whole piece stops working.",
       "fatal": true,
       "anchors": {
         "0": "Requires admin rights, install, or budget the reader can never get.",
@@ -32,7 +32,7 @@
         "2": "Fully within the reader's standing access.",
         "3": "Explicitly names what needs the DM's sign-off and what doesn't."
       },
-      "watch_for": "'Reach out to your IT admin.' AC-01's store has no IT admin — that's a dead end, not a workaround.",
+      "watch_for": "'Reach out to your IT admin.' AC-01's store has no IT admin - that's a dead end, not a workaround.",
       "checks": [
         { "fn": "check_requires_install", "args": {} }
       ]

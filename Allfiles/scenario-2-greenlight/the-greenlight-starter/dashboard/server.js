@@ -1,4 +1,4 @@
-// The Greenlight — live council dashboard
+// The Greenlight - live council dashboard
 //
 // Serves a browser dashboard that:
 //  - reads council/*.json at request time and shows the seated audiences
@@ -6,7 +6,7 @@
 //  - shells out to the GitHub Copilot CLI (`copilot`) to actually run the
 //    Greenlight review process and return a per-audience verdict
 //
-// Nothing here hardcodes the council — every run re-reads council/*.json,
+// Nothing here hardcodes the council - every run re-reads council/*.json,
 // so editing those files (adding/removing a seat) changes the dashboard and
 // the next review without touching this server.
 
@@ -22,7 +22,7 @@ const PORT = process.env.PORT || 4173;
 // This dashboard ships inside the-greenlight-starter/. The seated council is
 // DATA (council/*.json); the review PROCESS references live in the sibling
 // the-greenlight/ skill. Everything is discovered relative to the starter so
-// it works on any machine — override any path with an env var.
+// it works on any machine - override any path with an env var.
 const STARTER_DIR = path.resolve(__dirname, '..');
 const COUNCIL_DIR = process.env.GREENLIGHT_COUNCIL_DIR || path.join(STARTER_DIR, 'council');
 const SKILL_DIR = process.env.GREENLIGHT_SKILL_DIR || path.resolve(STARTER_DIR, '..', 'the-greenlight');
@@ -43,7 +43,7 @@ for (const dir of [UPLOADS_DIR, RUNS_DIR, PLANS_DIR, SUBMISSIONS_DIR]) {
 }
 
 // --- Config for the PR submission path (TODO) -------------------------------
-// Placeholder repo by default. The submission workflow is a build path — see
+// Placeholder repo by default. The submission workflow is a build path - see
 // the TODO stub at POST /api/plan/:planId/submit near the bottom of this file.
 const SUBMISSION_REPO = process.env.GREENLIGHT_SUBMISSION_REPO || '<your-org>/greenlight-submissions';
 const SUBMISSION_BASE = process.env.GREENLIGHT_SUBMISSION_BASE || 'main';
@@ -56,7 +56,7 @@ const COPILOT_BIN = process.env.COPILOT_BIN || 'copilot';
 const COPILOT_MODEL = process.env.GREENLIGHT_MODEL !== undefined ? process.env.GREENLIGHT_MODEL : '';
 const COPILOT_TIMEOUT_MS = Number(process.env.GREENLIGHT_TIMEOUT_MS || 6 * 60 * 1000);
 
-// The deterministic half — checks.py, run via check_content.py at the starter
+// The deterministic half - checks.py, run via check_content.py at the starter
 // root. Node shells to Python so the board can show code-caught fails next to
 // the model's verdicts.
 const PYTHON_BIN = process.env.GREENLIGHT_PYTHON || 'python';
@@ -66,7 +66,7 @@ const CHECK_SCRIPT = path.join(STARTER_DIR, 'check_content.py');
  * Run the deterministic checks for a piece. Resolves { status, seats } where
  * status is 'ok' (ran), 'todo' (check_content.py still a stub), or 'error'
  * (Python missing or the check crashed). Best-effort: a missing toolchain or an
- * unbuilt stub never blocks the model review — the board just shows a hint.
+ * unbuilt stub never blocks the model review - the board just shows a hint.
  */
 function runDeterministicChecks(contentPath) {
   return new Promise((resolve) => {
@@ -88,7 +88,7 @@ function runDeterministicChecks(contentPath) {
         return resolve({ status: 'ok', seats: parsed.seats });
       }
       // The starter ships check_content.py as a stub that prints
-      // {"error": "TODO (checks path): ..."} and exits 1 — surface that as a
+      // {"error": "TODO (checks path): ..."} and exits 1 - surface that as a
       // build-path hint rather than a silent blank or a scary error.
       const msg = (parsed && parsed.error) || err || '';
       if (/TODO|NotImplementedError/i.test(msg)) return resolve({ status: 'todo', seats: [] });
@@ -100,8 +100,8 @@ function runDeterministicChecks(contentPath) {
 
 /**
  * On startup, confirm the GitHub Copilot CLI is reachable. Auth is the CLI's
- * own concern — the dashboard just runs whatever account `copilot` is signed
- * into — but a missing/unfound binary is the #1 first-run failure, so say so
+ * own concern - the dashboard just runs whatever account `copilot` is signed
+ * into - but a missing/unfound binary is the #1 first-run failure, so say so
  * clearly instead of letting the first review blow up with a raw spawn error.
  */
 function preflightCopilot() {
@@ -129,7 +129,7 @@ function preflightCopilot() {
 }
 
 // ---------------------------------------------------------------------------
-// council/*.json loading  (the seated council is DATA — option A)
+// council/*.json loading  (the seated council is DATA - option A)
 // ---------------------------------------------------------------------------
 
 /**
@@ -211,7 +211,7 @@ function buildPrompt({ seats, contentPath, contentLabel }) {
     return `${i + 1}. ${s.label} (profile: ${s.profile || 'n/a'})\n   Goal: ${s.goal}\n   Verdict thresholds for THIS audience: Ship ${(s.thresholds && s.thresholds.SHIP != null) ? s.thresholds.SHIP : 2.5}+, Revise ${(s.thresholds && s.thresholds.REVISE != null) ? s.thresholds.REVISE : 1.5}+, else Reject\n   Criteria to score against (ONLY these):\n${crits}`;
   }).join('\n\n');
 
-  return `You are running THE GREENLIGHT skill's convene step as a backend job for a live dashboard — there is no human to ask follow-up questions, so make reasonable calls and proceed.
+  return `You are running THE GREENLIGHT skill's convene step as a backend job for a live dashboard - there is no human to ask follow-up questions, so make reasonable calls and proceed.
 
 Read "${CONVENE_REF_PATH}" for the exact review process: each audience judges the piece independently against only its own criteria, scoring each 0-3 with a quote, a reason, and a confidence (high/medium/low), then an overall verdict using THAT audience's own thresholds (shown per seat below); any deal-breaker criterion scored 0 forces Reject for that audience regardless of average.
 
@@ -221,11 +221,11 @@ Score against THESE seated audiences and their criteria, in this exact order:
 
 ${seatBlock}
 
-Judge each audience independently — don't let one verdict soften another. Every score needs a real quote from the content (or "no quote found" plus what you looked for). Every need needs a one-line "fix" when its score is 1 or lower.
+Judge each audience independently - don't let one verdict soften another. Every score needs a real quote from the content (or "no quote found" plus what you looked for). Every need needs a one-line "fix" when its score is 1 or lower.
 
 After scoring every audience, write 1-2 sentences on the sharpest disagreement between audiences (the same passage that split them), and say which audiences the piece serves as-is vs. does not serve.
 
-Respond with ONLY a single JSON object — no markdown code fences, no prose before or after it. It must match exactly this shape:
+Respond with ONLY a single JSON object - no markdown code fences, no prose before or after it. It must match exactly this shape:
 
 {
   "content_label": "${contentLabel}",
@@ -286,14 +286,14 @@ function persistRun(job, contentLabel) {
       result: job.result
     }, null, 2));
   } catch (e) {
-    // Non-fatal — history is a nice-to-have.
+    // Non-fatal - history is a nice-to-have.
   }
 }
 
 /**
  * Spawn the Copilot CLI with a prompt and resolve with the parsed JSON object
  * it returns. If `job` is passed, streams stdout/stderr into job.log as it
- * runs (works for both convene jobs and plans — both just have a .log string).
+ * runs (works for both convene jobs and plans - both just have a .log string).
  */
 function execCopilotJson(prompt, { addDirs = [], job, timeoutMs = COPILOT_TIMEOUT_MS } = {}) {
   return new Promise((resolve, reject) => {
@@ -375,7 +375,7 @@ function extractJson(text) {
 }
 
 // ---------------------------------------------------------------------------
-// "Greenlight it" — turn a review's gaps into a remediation plan, then let
+// "Greenlight it" - turn a review's gaps into a remediation plan, then let
 // the council reconvene on the drafted replacements until every audience
 // that rejected the original would accept it (greenlight.md's Plan step).
 // ---------------------------------------------------------------------------
@@ -405,7 +405,7 @@ function persistPlan(plan) {
   try {
     fs.writeFileSync(path.join(PLANS_DIR, `${plan.id}.json`), JSON.stringify(plan, null, 2));
   } catch (e) {
-    // Non-fatal — plans are re-buildable from a review at any time.
+    // Non-fatal - plans are re-buildable from a review at any time.
   }
 }
 
@@ -413,12 +413,12 @@ function persistPlan(plan) {
 function composePlanMarkdown(plan) {
   const lines = [];
   const overallLabel = plan.overall === 'green'
-    ? '✅ GREEN — every audience is served'
+    ? '✅ GREEN - every audience is served'
     : plan.overall === 'not_green'
-      ? '🟡 Not yet green — some drafts still need work'
+      ? '🟡 Not yet green - some drafts still need work'
       : plan.overall;
 
-  lines.push('# The Greenlight — Remediation Plan');
+  lines.push('# The Greenlight - Remediation Plan');
   lines.push('');
   lines.push(`**Reviewed piece:** ${plan.contentLabel}`);
   lines.push(`**Plan status:** ${overallLabel}`);
@@ -432,7 +432,7 @@ function composePlanMarkdown(plan) {
     lines.push('');
 
     if (item.status === 'keep') {
-      lines.push('**Status:** Keep as-is — this audience already ships the original piece.');
+      lines.push('**Status:** Keep as-is - this audience already ships the original piece.');
       if (item.checkReason) lines.push(`> ${item.checkReason}`);
       continue;
     }
@@ -477,7 +477,7 @@ function composePlanMarkdown(plan) {
     lines.push('');
     lines.push('## Left out');
     lines.push('');
-    lines.push(`${plan.leftOut.join(', ')} — deliberately not served by this plan.`);
+    lines.push(`${plan.leftOut.join(', ')} - deliberately not served by this plan.`);
   }
 
   lines.push('');
@@ -491,34 +491,34 @@ function buildPlanPrompt({ seats, convResult, contentPath, contentLabel }) {
   const seatsInfo = seats.map((s) => `- ${s.label} (profile: ${s.profile || 'n/a'})\n  Goal: ${s.goal}\n  Needs: ${s.needs.map((n) => `${n.name}${n.dealBreaker ? ' [deal-breaker]' : ''}`).join('; ')}`).join('\n');
 
   const dataPackNote = DATA_PACK_EXISTS
-    ? `\nAudience card detail, if useful for grounding "what must include", lives at "${DATA_PACK_DIR}\\audience-cards\\" — read the file matching each seat's profile id if you want more texture than the seat's criteria give.\n`
+    ? `\nAudience card detail, if useful for grounding "what must include", lives at "${DATA_PACK_DIR}\\audience-cards\\" - read the file matching each seat's profile id if you want more texture than the seat's criteria give.\n`
     : '';
 
-  return `You are running THE GREENLIGHT skill's "plan" step (see "${GREENLIGHT_REF_PATH}") as a backend job for a live dashboard. There is no human to ask follow-up questions — make reasonable calls and proceed.
+  return `You are running THE GREENLIGHT skill's "plan" step (see "${GREENLIGHT_REF_PATH}") as a backend job for a live dashboard. There is no human to ask follow-up questions - make reasonable calls and proceed.
 
 The piece already reviewed: "${contentLabel}" (file: "${contentPath}")
 
 The seated council and what each needs:
 ${seatsInfo}
 ${dataPackNote}
-Here is the review that already ran, as JSON — use its verdicts, quotes, and per-need fixes as the gaps to build from. Do not re-review the piece from scratch; build the plan FROM these results:
+Here is the review that already ran, as JSON - use its verdicts, quotes, and per-need fixes as the gaps to build from. Do not re-review the piece from scratch; build the plan FROM these results:
 
 ${JSON.stringify(convResult, null, 2)}
 
-For every seat whose verdict was Ship: mark it "keep" — the existing piece already serves them, no new artifact needed.
+For every seat whose verdict was Ship: mark it "keep" - the existing piece already serves them, no new artifact needed.
 
 For every seat whose verdict was Revise or Reject: write a build order per the Plan step's rules:
 - why it didn't work for them (the failed need + its quote, from the review above)
-- the honest format call — if the piece failed because of format (too long, wrong medium, needs a desk, needs sound, etc.) say so plainly; don't just say "trim it" when the real answer is "this shouldn't be a document"
+- the honest format call - if the piece failed because of format (too long, wrong medium, needs a desk, needs sound, etc.) say so plainly; don't just say "trim it" when the real answer is "this shouldn't be a document"
 - what to make: a concrete, specific title for the new artifact and its format (e.g. "a 90-second silent-captioned video script", "a one-page laminated job aid", "a three-line Teams message")
 - what it must include: 2-4 concrete things straight from that audience's needs/profile
 - what to leave out: things other audiences needed that this one explicitly does not
 
-Then ALSO draft the actual replacement content for every "make_new" item — not just a description of it. Write real text that could ship: if the format is a video, write the on-screen text / narration script line by line; if it's a job aid, write the actual job aid text; if it's a short message, write the actual message text. Keep it honest to the stated format's real-world constraints (time limits, reading level, offline/degraded-network realities, vocabulary) from that audience's criteria.
+Then ALSO draft the actual replacement content for every "make_new" item - not just a description of it. Write real text that could ship: if the format is a video, write the on-screen text / narration script line by line; if it's a job aid, write the actual job aid text; if it's a short message, write the actual message text. Keep it honest to the stated format's real-world constraints (time limits, reading level, offline/degraded-network realities, vocabulary) from that audience's criteria.
 
-If any seat is deliberately left with nothing planned for them, list it under left_out and say why that's a decision, not an accident. Ideally left_out is empty — every audience gets something.
+If any seat is deliberately left with nothing planned for them, list it under left_out and say why that's a decision, not an accident. Ideally left_out is empty - every audience gets something.
 
-Respond with ONLY a single JSON object — no markdown fences, no prose before or after it. Match exactly this shape:
+Respond with ONLY a single JSON object - no markdown fences, no prose before or after it. Match exactly this shape:
 
 {
   "content_label": "${contentLabel}",
@@ -526,12 +526,12 @@ Respond with ONLY a single JSON object — no markdown fences, no prose before o
     {
       "seat": "<exact seat string from the list above>",
       "status": "keep" | "make_new",
-      "reason": "<why it didn't work, with a quote — null if status is keep>",
-      "format_call": "<the honest format call — null if status is keep>",
-      "title": "<title of the new artifact — null if status is keep>",
+      "reason": "<why it didn't work, with a quote - null if status is keep>",
+      "format_call": "<the honest format call - null if status is keep>",
+      "title": "<title of the new artifact - null if status is keep>",
       "must_include": ["<2-4 concrete things>"],
       "leave_out": ["<things intentionally excluded>"],
-      "draft_content": "<the actual drafted replacement text, plain text with \\n for line breaks — null if status is keep>"
+      "draft_content": "<the actual drafted replacement text, plain text with \\n for line breaks - null if status is keep>"
     }
   ],
   "left_out": ["<any seat strings intentionally left unserved, ideally empty>"]
@@ -541,9 +541,9 @@ Output that JSON object now, and nothing else.`;
 }
 
 function buildRecheckPrompt({ items }) {
-  const itemsBlock = items.map((it, i) => `### Item ${i + 1} — for ${it.seat}
+  const itemsBlock = items.map((it, i) => `### Item ${i + 1} - for ${it.seat}
 Goal: ${it.goal}
-Needs to judge against (ONLY these — this draft was built for this one audience, don't apply any other audience's bar):
+Needs to judge against (ONLY these - this draft was built for this one audience, don't apply any other audience's bar):
 ${it.needs.map((n) => `- ${n.name}${n.dealBreaker ? ' [deal-breaker]' : ''}`).join('\n')}
 
 Title / intended format: ${it.title}
@@ -553,7 +553,7 @@ Draft content to score:
 ${it.draft_content}
 """`).join('\n\n');
 
-  return `You are running THE GREENLIGHT skill's "check the plan" step (see "${GREENLIGHT_REF_PATH}", Step 3) as a backend job. Score each drafted replacement artifact below against ONLY the single audience it was built for — the same needs, same 0-3 scale, same deal-breaker rule, same Ship/Revise/Reject bars as a normal review (Ship 2.5+, Revise 1.5+, Reject under 1.5; any deal-breaker need scored 0 forces Reject regardless of average).
+  return `You are running THE GREENLIGHT skill's "check the plan" step (see "${GREENLIGHT_REF_PATH}", Step 3) as a backend job. Score each drafted replacement artifact below against ONLY the single audience it was built for - the same needs, same 0-3 scale, same deal-breaker rule, same Ship/Revise/Reject bars as a normal review (Ship 2.5+, Revise 1.5+, Reject under 1.5; any deal-breaker need scored 0 forces Reject regardless of average).
 
 ${itemsBlock}
 
@@ -561,7 +561,7 @@ For each item, give a verdict, overall_score, whether a deal-breaker was hit, a 
 
 The rule for "good to go": this new artifact passes only if the audience that rejected the original would now accept this draft, judged on the same needs it judged the original by.
 
-Respond with ONLY a single JSON object — no markdown fences, no prose before or after it:
+Respond with ONLY a single JSON object - no markdown fences, no prose before or after it:
 
 {
   "results": [
@@ -585,9 +585,9 @@ function buildIteratePrompt(item, seatInfo) {
   const fixes = (item.checkNeeds || [])
     .filter((n) => n.fix)
     .map((n) => `- ${n.name}: ${n.fix}`)
-    .join('\n') || '(no specific per-need fixes recorded — use the reason below)';
+    .join('\n') || '(no specific per-need fixes recorded - use the reason below)';
 
-  return `You are running THE GREENLIGHT skill's iteration loop — revising a drafted remediation artifact so it would pass the same audience's review on the next pass.
+  return `You are running THE GREENLIGHT skill's iteration loop - revising a drafted remediation artifact so it would pass the same audience's review on the next pass.
 
 Audience: ${item.seat}
 Goal: ${seatInfo ? seatInfo.goal : ''}
@@ -604,9 +604,9 @@ Why it failed the last check: ${item.checkReason || '(unknown)'}
 Specific fixes requested:
 ${fixes}
 
-Rewrite the draft to address every fix while staying true to the stated format and everything it must include or leave out. Keep it realistic and concrete — actual content a reader would see, not a description of content.
+Rewrite the draft to address every fix while staying true to the stated format and everything it must include or leave out. Keep it realistic and concrete - actual content a reader would see, not a description of content.
 
-Respond with ONLY a single JSON object — no markdown fences, no prose before or after it:
+Respond with ONLY a single JSON object - no markdown fences, no prose before or after it:
 
 { "draft_content": "<the revised draft, plain text with \\n for line breaks>", "changelog": "<one sentence on what changed>" }
 
@@ -640,12 +640,12 @@ function runPlanBuild(plan, sourceJob) {
         iterationCount: 0,
         checkStage: it.status === 'keep' ? 'pass' : 'pending', // pending | checking | pass | fail
         checkVerdict: it.status === 'keep' ? 'Ship' : null,
-        checkReason: it.status === 'keep' ? 'Unchanged — already Ship for this audience.' : '',
+        checkReason: it.status === 'keep' ? 'Unchanged - already Ship for this audience.' : '',
         checkNeeds: [],
         checkScore: it.status === 'keep' ? null : null,
         checkDealBreaker: false,
         // What this seat's verdict was in the *original* review, before any
-        // plan/redraft — used so "Past runs" history can always compute an
+        // plan/redraft - used so "Past runs" history can always compute an
         // up-to-date verdict per seat even for items nobody has rechecked yet.
         originalVerdict: originalVerdictBySeat.get(it.seat) || null
       }));
@@ -664,9 +664,9 @@ function runPlanBuild(plan, sourceJob) {
 }
 
 /**
- * Recomputes each seat's *current best-known* verdict — Ship for a kept seat,
+ * Recomputes each seat's *current best-known* verdict - Ship for a kept seat,
  * the latest recheck verdict for a drafted replacement once it's been
- * checked, or otherwise the original review's verdict — and writes that back
+ * checked, or otherwise the original review's verdict - and writes that back
  * into the persisted run file for this plan's source review. Without this,
  * "Past runs" would freeze on the review's initial verdicts forever, even
  * after the plan brings every audience to Ship.
@@ -696,7 +696,7 @@ function updateRunFileWithEffectiveVerdicts(plan) {
     run.updatedAt = Date.now();
     fs.writeFileSync(runFile, JSON.stringify(run, null, 2));
   } catch (e) {
-    // Best-effort — history staying slightly stale is not worth failing the plan over.
+    // Best-effort - history staying slightly stale is not worth failing the plan over.
   }
 }
 
@@ -735,7 +735,7 @@ function runPlanRecheck(plan, itemsToCheck) {
       for (const it of itemsToCheck) {
         if (it.checkStage === 'checking') {
           it.checkStage = 'fail';
-          it.checkReason = 'No result returned for this item — try rechecking again.';
+          it.checkReason = 'No result returned for this item - try rechecking again.';
         }
       }
       recomputeOverall(plan);
@@ -852,7 +852,7 @@ app.get('/api/council', (req, res) => {
 
 // --- Council management (TODO)  ·  Path: re-seat / add / remove / customize --
 // The council is read-only today (GET above + "Reload council"). This path adds
-// editing it from the UI — two endpoints to build, plus a bit of UI to call them.
+// editing it from the UI - two endpoints to build, plus a bit of UI to call them.
 // Tip: the "Manage council seats" button has a one-click "Copy prompt for
 // Copilot Chat" that describes this whole feature.
 app.post('/api/council/seat', (req, res) => {
@@ -863,17 +863,17 @@ app.post('/api/council/seat', (req, res) => {
   //   - Expect a seat shaped like council/retail.example.json:
   //       { seat_id, audience, card, outcome, thresholds, criteria: [ ... ] }
   //   - Validate the essentials (seat_id, audience, outcome, >=1 criterion) and
-  //     reject anything missing — a malformed seat breaks convene.
+  //     reject anything missing - a malformed seat breaks convene.
   //   - Allow only [a-z0-9-_] in seat_id so it can't escape COUNCIL_DIR, then
   //     fs.writeFileSync(path.join(COUNCIL_DIR, `${seat_id}.json`), JSON...).
-  return res.status(501).json({ ok: false, error: 'Council editing not built yet — implement POST /api/council/seat.' });
+  return res.status(501).json({ ok: false, error: 'Council editing not built yet - implement POST /api/council/seat.' });
 });
 
 app.delete('/api/council/seat/:seatId', (req, res) => {
   // TODO (council path): remove council/<seatId>.json (guard the filename to
   // [a-z0-9-_]), then the next Reload reflects it. Refuse to drop below two
-  // seats — a council of one can't disagree.
-  return res.status(501).json({ ok: false, error: 'Council editing not built yet — implement DELETE /api/council/seat/:seatId.' });
+  // seats - a council of one can't disagree.
+  return res.status(501).json({ ok: false, error: 'Council editing not built yet - implement DELETE /api/council/seat/:seatId.' });
 });
 
 app.post('/api/convene', upload.single('file'), async (req, res) => {
@@ -904,10 +904,10 @@ app.post('/api/convene', upload.single('file'), async (req, res) => {
     return res.status(500).json({ ok: false, error: `Could not read the council (council/*.json): ${err.message}` });
   }
   if (!council.seats.length) {
-    return res.status(400).json({ ok: false, error: 'No seats in council/*.json yet — seat the council first.' });
+    return res.status(400).json({ ok: false, error: 'No seats in council/*.json yet - seat the council first.' });
   }
 
-  // The countable half runs first — it's instant, and showing it while the
+  // The countable half runs first - it's instant, and showing it while the
   // model deliberates is the whole "code catches what the model might miss" point.
   const { status: checksStatus, seats: checks } = await runDeterministicChecks(contentPath);
 
@@ -966,7 +966,7 @@ app.post('/api/plan', (req, res) => {
     return res.status(400).json({ ok: false, error: 'That review has not finished yet.' });
   }
   if (!sourceJob.seats || !sourceJob.seats.length) {
-    return res.status(400).json({ ok: false, error: 'That review has no seat data attached — re-run the review.' });
+    return res.status(400).json({ ok: false, error: 'That review has no seat data attached - re-run the review.' });
   }
 
   const plan = newPlan({
@@ -1005,7 +1005,7 @@ app.post('/api/plan/:planId/recheck', (req, res) => {
 
   const targetSeats = (req.body && req.body.seats) || null;
   // With no explicit seats requested, "reconvene" means: recheck everything
-  // that hasn't already passed — including drafts that were just revised via
+  // that hasn't already passed - including drafts that were just revised via
   // Iterate. Already-passing items are left alone so a second reconvene only
   // spends CLI time on what actually still needs it.
   const itemsToCheck = plan.items.filter((it) => {
@@ -1014,7 +1014,7 @@ app.post('/api/plan/:planId/recheck', (req, res) => {
     return it.checkStage !== 'pass';
   });
   if (!itemsToCheck.length) {
-    return res.status(400).json({ ok: false, error: 'Nothing left to check — every drafted item already passed.' });
+    return res.status(400).json({ ok: false, error: 'Nothing left to check - every drafted item already passed.' });
   }
 
   itemsToCheck.forEach((it) => { it.checkStage = 'checking'; });
@@ -1073,7 +1073,7 @@ app.post('/api/plan/:planId/submit', async (req, res) => {
   const plan = plans.get(req.params.planId);
   if (!plan) return res.status(404).json({ ok: false, error: 'Unknown plan id.' });
   if (plan.overall !== 'green') {
-    return res.status(400).json({ ok: false, error: 'Plan is not green yet — every audience must be served before submitting.' });
+    return res.status(400).json({ ok: false, error: 'Plan is not green yet - every audience must be served before submitting.' });
   }
 
   // TODO (submission path): open a PR into SUBMISSION_REPO from this green plan.
@@ -1092,10 +1092,10 @@ app.post('/api/plan/:planId/submit', async (req, res) => {
   //             SUBMISSION_BASE,'--title',...,'--body-file',...])
   //      Keep SUBMISSION_REPO a placeholder-safe default; only push when a real
   //      repo (and a local clone) are configured.
-  //   4. Return { ok: true, prUrl } on success — the front-end shows it as a link.
+  //   4. Return { ok: true, prUrl } on success - the front-end shows it as a link.
   return res.status(501).json({
     ok: false,
-    error: 'Submission workflow not built yet — implement POST /api/plan/:planId/submit (see the TODO in server.js).'
+    error: 'Submission workflow not built yet - implement POST /api/plan/:planId/submit (see the TODO in server.js).'
   });
 });
 

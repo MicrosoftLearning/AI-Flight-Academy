@@ -1,5 +1,5 @@
 """
-Deterministic checks — the countable half of the council.
+Deterministic checks - the countable half of the council.
 
 A language model catches what's contextual. Code catches what's countable. These
 functions are the countable part: reading time, forbidden prerequisites, table width.
@@ -7,7 +7,7 @@ functions are the countable part: reading time, forbidden prerequisites, table w
 THE RULE: a check pulls its threshold from a seat's CARD, not from a hardcoded value.
 So every function takes its threshold as an argument, and the seat JSON
 (council/*.json) supplies it. Retail's card says "5-10 minutes, standing", so its
-reading budget is 6 — passed in from the seat, never baked in here.
+reading budget is 6 - passed in from the seat, never baked in here.
 
 Run the built-in demo across the five articles:
     python checks.py
@@ -56,7 +56,7 @@ _BLOCKED_DEFAULT = [
 def check_requires_install(text: str, blocked: list[str] | None = None) -> dict:
     """Fail when the piece instructs an action the reader has no access to perform.
 
-    `blocked` comes from the card — AC-01's hard floor plus its stop-words.
+    `blocked` comes from the card - AC-01's hard floor plus its stop-words.
     """
     blocked = blocked or _BLOCKED_DEFAULT
     low = text.lower()
@@ -71,7 +71,7 @@ def check_requires_install(text: str, blocked: list[str] | None = None) -> dict:
 def check_table_width(text: str, max_cols: int) -> dict:
     """TODO  ·  Path: Deterministic checks + expansion.
 
-    Fail when a markdown table is wider than max_cols — a phone reader (AC-01)
+    Fail when a markdown table is wider than max_cols - a phone reader (AC-01)
     can't scroll a 6-column table. Pull max_cols from the seat card's screen
     constraint; do not hardcode it.
 

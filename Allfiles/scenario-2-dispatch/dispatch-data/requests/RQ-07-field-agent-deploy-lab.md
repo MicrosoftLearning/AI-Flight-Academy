@@ -13,13 +13,13 @@
 
 ## Context
 
-There's an appetite for something interactive and real — a sandbox tenant, guided tasks, a repeatable path. The end-of-quarter date is firm-ish (tied to a field readiness push).
+There's an appetite for something interactive and real - a sandbox tenant, guided tasks, a repeatable path. The end-of-quarter date is firm-ish (tied to a field readiness push).
 
 ## What we know
 
 | Field | Value |
 |---|---|
-| Stated audience | Field — sellers & SEs (who then show customers) |
+| Stated audience | Field - sellers & SEs (who then show customers) |
 | Topic | Deploying Copilot agents in a customer tenant |
 | Desired outcome | Field can confidently deploy/demo agent setup in a real tenant |
 | Deadline | End of quarter (~6 weeks) |

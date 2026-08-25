@@ -1,0 +1,42 @@
+ApplicationId,CandidateId,CandidateName,ApplicationStatus,StatedFocus,EvidenceQuality,CommitmentRisk,ReviewNote
+APP-0001,CAND-002,Riley Singh,needs review,event facilitation,thin,low,review impact claims
+APP-0002,CAND-003,Drew Foster,previous ambassador,regional activation,unclear,low,requires sponsor input
+APP-0003,CAND-004,Parker White,previous finalist,event facilitation,strong,low,ready for review
+APP-0004,CAND-005,Cameron Scott,previous finalist,event facilitation,unclear,high,check prior commitment
+APP-0005,CAND-006,Alex Kim,withdrew last cycle,technical mentoring,strong,high,check prior commitment
+APP-0006,CAND-008,Taylor Brooks,previous ambassador,event facilitation,strong,high,requires sponsor input
+APP-0007,CAND-009,Jordan Patel,new application,event facilitation,unclear,low,ready for review
+APP-0008,CAND-010,Sam Rivera,previous ambassador,event facilitation,thin,high,review impact claims
+APP-0009,CAND-011,Jamie Santos,not selected last cycle,regional activation,adequate,low,check prior commitment
+APP-0010,CAND-013,Reese Foster,not selected last cycle,regional activation,unclear,moderate,ready for review
+APP-0011,CAND-014,Skyler Okafor,new application,regional activation,adequate,high,ready for review
+APP-0012,CAND-015,Emery Silva,previous finalist,regional activation,thin,low,review impact claims
+APP-0013,CAND-017,Finley Yamada,withdrew last cycle,technical mentoring,unclear,high,ready for review
+APP-0014,CAND-025,Hayden Garcia,new application,event facilitation,strong,high,review impact claims
+APP-0015,CAND-027,Kiran Park,previous ambassador,regional activation,adequate,high,check prior commitment
+APP-0016,CAND-029,Marley Nguyen,previous ambassador,technical mentoring,unclear,moderate,ready for review
+APP-0017,CAND-031,Oakley Ali,not selected last cycle,regional activation,strong,moderate,ready for review
+APP-0018,CAND-035,Tatum White,not selected last cycle,technical mentoring,adequate,high,requires sponsor input
+APP-0019,CAND-037,Nico Cruz,needs review,technical mentoring,thin,moderate,check prior commitment
+APP-0020,CAND-038,Adrian Rahman,new application,content reuse,unclear,high,requires sponsor input
+APP-0021,CAND-039,Milan Chen,withdrew last cycle,technical mentoring,adequate,moderate,ready for review
+APP-0022,CAND-040,Kai Torres,not selected last cycle,regional activation,unclear,high,ready for review
+APP-0023,CAND-041,Misha Morgan,new application,content reuse,strong,high,requires sponsor input
+APP-0024,CAND-043,Lior Martinez,needs review,content reuse,unclear,moderate,requires sponsor input
+APP-0025,CAND-044,Sasha Wilson,needs review,technical mentoring,thin,low,check prior commitment
+APP-0026,CAND-048,Lennox Hansen,withdrew last cycle,community building,strong,high,check prior commitment
+APP-0027,CAND-053,River Silva,not selected last cycle,technical mentoring,adequate,high,ready for review
+APP-0028,CAND-054,Sawyer Olsen,new application,event facilitation,thin,high,review impact claims
+APP-0029,CAND-055,Sterling Yamada,not selected last cycle,technical mentoring,thin,low,requires sponsor input
+APP-0030,CAND-056,Teagan Singh,previous ambassador,community building,unclear,moderate,check prior commitment
+APP-0031,CAND-057,Val Adams,previous finalist,technical mentoring,strong,high,requires sponsor input
+APP-0032,CAND-058,Yael Nakamura,previous ambassador,event facilitation,thin,low,check prior commitment
+APP-0033,CAND-059,Zion Ibrahim,new application,regional activation,thin,moderate,review impact claims
+APP-0034,CAND-060,Ari Thompson,previous finalist,regional activation,thin,high,ready for review
+APP-0035,CAND-062,Cedar Kim,previous finalist,community building,adequate,high,requires sponsor input
+APP-0036,CAND-063,Darian Garcia,new application,event facilitation,adequate,low,review impact claims
+APP-0037,CAND-065,Gray Park,previous finalist,regional activation,unclear,high,review impact claims
+APP-0038,CAND-068,Juniper Scott,new application,community building,unclear,moderate,review impact claims
+APP-0039,CAND-069,Kit Ali,previous finalist,regional activation,strong,moderate,ready for review
+APP-0040,CAND-071,Monroe Varga,new application,regional activation,adequate,high,check prior commitment
+APP-0041,CAND-072,Nova Brooks,withdrew last cycle,event facilitation,strong,high,check prior commitment

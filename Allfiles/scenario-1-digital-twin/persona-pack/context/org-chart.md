@@ -17,13 +17,13 @@ title: Avery Washington Org Chart
 
 ## Avery's relationship notes
 
-- Victoria Burke – my boss; demanding, terse, and usually right about what will matter to executives.
-- Graham Barnes – peer with friction; he wants collateral now and assumes Marketing is slowing Sales down.
-- Maya Robinson – direct report; junior, eager, strong instincts, needs help prioritizing what matters first.
-- Caleb Miller – direct report; senior, capable, should own more decisions without waiting for me.
-- Amara White – external agency lead; professional, responsive, needs precise inputs to keep the SOW from expanding.
-- Miguel Reyes – Lantern Product Manager; I depend on him for defensible specs and claims approval.
-- Serena Davis – demand-gen peer; collaborative, practical, and focused on lead quality rather than vanity volume.
+- Victoria Burke - my boss; demanding, terse, and usually right about what will matter to executives.
+- Graham Barnes - peer with friction; he wants collateral now and assumes Marketing is slowing Sales down.
+- Maya Robinson - direct report; junior, eager, strong instincts, needs help prioritizing what matters first.
+- Caleb Miller - direct report; senior, capable, should own more decisions without waiting for me.
+- Amara White - external agency lead; professional, responsive, needs precise inputs to keep the SOW from expanding.
+- Miguel Reyes - Lantern Product Manager; I depend on him for defensible specs and claims approval.
+- Serena Davis - demand-gen peer; collaborative, practical, and focused on lead quality rather than vanity volume.
 
 ## Fictional email domain
 

@@ -33,17 +33,22 @@ const isWin = process.platform === "win32";
 rmSync(out, { recursive: true, force: true });
 mkdirSync(out, { recursive: true });
 
-function zipFolder(srcDir, zipPath, exclude = [], purge = []) {
+function zipFolder(srcDir, zipPath, exclude = [], purge = [], copyInto = []) {
   // When excluding subpaths, stage a filtered copy under the folder's own name
   // so the archive still contains a correctly-named top-level folder.
   let toZip = srcDir;
   let stageParent = null;
-  if (exclude.length || purge.length) {
+  if (exclude.length || purge.length || copyInto.length) {
     stageParent = mkdtempSync(join(tmpdir(), "pack-"));
     toZip = join(stageParent, basename(srcDir));
     cpSync(srcDir, toZip, { recursive: true });
     for (const rel of exclude) {
       rmSync(join(toZip, rel), { recursive: true, force: true });
+    }
+    // Pull in shared assets that live outside the folder, so a starter can ship
+    // self-contained without the repo carrying a second copy.
+    for (const { from, to } of copyInto) {
+      cpSync(from, join(toZip, to), { recursive: true });
     }
     if (purge.length) purgeFiles(toZip, purge);
   }
@@ -152,6 +157,31 @@ const jobs = [
     src: join(root, "Allfiles", "scenario-2-dispatch", "dispatch-data"),
     zip: "dispatch-data-pack.zip",
   },
+  {
+    src: join(root, "Allfiles", "scenario-3-ambassador", "ambassador"),
+    zip: "ambassador-skill.zip",
+  },
+  {
+    src: join(root, "Allfiles", "scenario-3-ambassador", "program-data"),
+    zip: "ambassador-program-data.zip",
+  },
+  {
+    src: join(root, "Allfiles", "scenario-3-ambassador", "ambassador-starter"),
+    zip: "ambassador-starter.zip",
+    // The starter ships self-contained: the data and the playbook are copied in
+    // at pack time so the repo keeps one copy of each.
+    copyInto: [
+      {
+        from: join(root, "Allfiles", "scenario-3-ambassador", "program-data"),
+        to: "program-data",
+      },
+      {
+        from: join(root, "Allfiles", "scenario-3-ambassador", "ambassador", "references", "PLAYBOOK.md"),
+        to: "PLAYBOOK.md",
+      },
+    ],
+    purge: ["**/__pycache__/"],
+  },
 ];
 
 for (const j of jobs) {
@@ -160,7 +190,7 @@ for (const j of jobs) {
     continue;
   }
   const dest = join(out, j.zip);
-  zipFolder(j.src, dest, j.exclude ?? [], j.purge ?? []);
+  zipFolder(j.src, dest, j.exclude ?? [], j.purge ?? [], j.copyInto ?? []);
   console.log(`  ${j.zip.padEnd(28)} ${(statSync(dest).size / 1024).toFixed(1)} KB`);
 }
 
