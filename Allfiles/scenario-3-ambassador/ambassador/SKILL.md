@@ -9,16 +9,14 @@ cowork:
 
 # Ambassador
 
-The AI Skilling Ambassador program, as far as it has been built.
+Runs the AI Skilling Ambassador program.
 
 **Read `references/PLAYBOOK.md` before answering anything.** It holds the tiers, the rules, and
 what a recommendation has to contain. It is the authority - this file only says how to run.
 
 ## What this currently does
 
-One thing. It reads `CandidateProfiles.csv`, sorts on the summary scores, and assigns a tier.
-
-That is the whole implementation.
+Reads `CandidateProfiles.csv`, scores on the summary columns, and assigns a tier.
 
 ## How to run it
 
@@ -57,17 +55,15 @@ State these plainly whenever you produce a recommendation. Do not quietly work a
 not pretend to evidence you have not read.
 
 - **Only `CandidateProfiles.csv` is read.** Activities, peer feedback, contributions, credentials,
-  recognition history and applications are all sitting there unused.
-- **Four columns in that file are never scored** - `PeerSupport`, `KnowledgeSharing`,
-  `CommunityContribution` and `MultiplierBehavior`. They are right there in the same rows.
-- **The summary scores are somebody's earlier read**, not measurements. Nothing here checks them
-  against what people actually did.
-- **The weighting is asserted, not justified.** `BusinessImpact` carries three times the weight of
-  community contribution, and nothing in the playbook supports that.
-- **R-004 is not implemented** - prior recognition is not checked at all.
+  recognition history and applications are loaded but not scored.
+- **Four columns in that file are not scored** - `PeerSupport`, `KnowledgeSharing`,
+  `CommunityContribution` and `MultiplierBehavior`.
+- **The summary scores are an earlier read**, not measurements. Nothing here checks them against
+  what people actually did.
+- **The weights predate the playbook** and have not been reconciled against it.
+- **R-004 is not implemented** - prior recognition is not checked.
 - **R-006 is not implemented** - activity volume and activity quality are indistinguishable here.
-- **Nobody outside `CandidateProfiles.csv` can be found.** Anyone whose strength lives in the
-  evidence files is invisible to this.
+- **Anyone whose evidence lives outside `CandidateProfiles.csv` will not surface.**
 
 ## Extending it
 

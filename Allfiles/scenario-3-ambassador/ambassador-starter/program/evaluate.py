@@ -1,33 +1,25 @@
-"""Decide what each candidate has earned.
+"""Score candidates and assign a tier.
 
-This is the half of the program that was actually built, and it only looks at the
-seven summary scores in CandidateProfiles.csv. Everything in `program-data/` other than
-that one file is loaded and then ignored.
+    from program.data import load
+    from program.evaluate import evaluate_all
 
-The weights below are asserted, not justified. `BusinessImpact` counts three times as
-much as community contribution, which is not something the playbook supports - it is
-just what somebody typed first.
-
-Every recommendation carries `unused_evidence` so the gap is visible in the output
-rather than only in this docstring.
+    for rec in evaluate_all(load()):
+        print(rec.name, rec.tier, rec.next_action)
 """
 
 from __future__ import annotations
 
 from dataclasses import dataclass, field
 
-# What the score is built from.
-#
-# This is where the program started: impact and reliability were the numbers
-# already being reported, so those are the numbers it scored on. The four
-# community-shaped columns sit in the same file, unread.
+# First pass uses the three scores already on the quarterly report, so the
+# output reconciles against numbers the program owner has seen before.
 WEIGHTS = {
     "BusinessImpact": 3,
     "ExecutionReliability": 2,
     "LeadershipSignals": 1,
 }
 
-# Columns that exist in CandidateProfiles.csv and are not used above.
+# In CandidateProfiles.csv, not scored yet.
 IGNORED_COLUMNS = [
     "PeerSupport",
     "KnowledgeSharing",
@@ -35,7 +27,6 @@ IGNORED_COLUMNS = [
     "MultiplierBehavior",
 ]
 
-# Where the tiers sit. Also asserted.
 BANDS = [
     (88, "Flight Lead", "Leadership circle or sponsor conversation"),
     (80, "Multiplier", "Nominate for the ambassador program"),
@@ -47,7 +38,7 @@ BANDS = [
 
 @dataclass
 class Recommendation:
-    """What the program proposes for one person. A proposal, not a decision."""
+    """One candidate's proposed tier and next action."""
 
     candidate_id: str
     name: str
@@ -86,7 +77,10 @@ def band_for(score: float) -> tuple[str, str]:
 
 
 def unused_for(candidate) -> list[str]:
-    """Name the evidence this evaluation loaded and then did not look at."""
+    """Evidence loaded for this candidate that the score did not use.
+
+    Recorded per R-005 so a reviewer can see what the recommendation is missing.
+    """
     unread = [f"{len(IGNORED_COLUMNS)} unused score columns"]
     for label, records in (
         ("activities", candidate.activities),
