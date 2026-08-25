@@ -14,7 +14,7 @@ search: false
 
 # Quick start
 
-AI Flight Academy is a hands-on agent build. You pick a scenario, pick the altitude you want to fly at, and leave with something that runs.
+AI Flight Academy is a hands-on agent build. You pick a scenario, pick the altitude you want to fly at, and leave with a working agent.
 
 **Sort out access before you arrive.** You have two hours on the day, and all of it is meant for building.
 
@@ -56,12 +56,13 @@ You can change your mind on the day.
 
 Microsoft 365 Copilot with Cowork, at [copilot.cloud.microsoft/cowork](https://copilot.cloud.microsoft/cowork). Nothing to install, no account to request, no terminal.
 
-The only mechanic worth knowing is how to import a skill. Your build page walks you through it on the day, and it's four steps:
+The one mechanic to know is importing a skill. Your build page repeats this on the day:
 
-1. Download the skill file. Leave it exactly as it downloads, a `.md` or a `.zip`, and don't unzip it.
-2. In the left menu, choose **Customize → Skills**.
-3. Select the arrow next to **Add**, then **Upload skill**, and drag the file in.
-4. Start a **new session**, then name the skill in your first message.
+1. In the left menu, choose **Customize → Skills**.
+2. Select the arrow next to **Add**, then **Upload skill**, and drag the file in.
+3. Start a **new session**, then name the skill in your first message.
+
+![The Add a skill dialog in Cowork, with a drag and drop area that accepts .MD, .ZIP, or .SKILL files](/img/cowork-add-skill-upload.png)
 
 ::: warning Skills are discovered at session start
 A skill you add mid-session stays invisible until you begin a fresh one. After uploading, start a new session before anything else.
@@ -69,7 +70,7 @@ A skill you add mid-session stays invisible until you begin a fresh one. After u
 
 ## Scout and Code both need a GitHub EMU account {#emu}
 
-Scout and Code both run on GitHub Copilot, so both need Copilot access on your Microsoft **EMU** (Enterprise Managed User) account. Sort this out first. It gates everything else on those two paths.
+Scout and Code both run on GitHub Copilot, so both need Copilot access on your Microsoft **EMU** (Enterprise Managed User) account. Do this first. Without it, Scout's GitHub sign-in fails and `copilot` won't run.
 
 | | |
 | --- | --- |
@@ -99,7 +100,7 @@ You describe what you want and Scout builds it, grounded in your real work. It c
 
 1. Install Scout and open it.
 2. Sign in with **M365** first, then with your **EMU** GitHub account (or the personal account you linked).
-3. Start a new session and ask for something that touches your real work:
+3. Start a new session and ask:
 
 ```text
 Summarize what I have on this week and what looks most time-sensitive.
@@ -165,8 +166,8 @@ Coaches are in the room throughout. On the day, wave one over rather than spendi
 | **3** | Build the smallest working version, then test it on a real prompt |
 | **4** | Demo the behavior: the before, the change you made, and the after |
 
-You leave with a working artifact and the files behind it.
+You leave with a working agent and the files behind it.
 
-Everything else, the scenarios and the build guides, is waiting for you on the day.
+The scenarios and the build guides come on the day.
 
 </div>
