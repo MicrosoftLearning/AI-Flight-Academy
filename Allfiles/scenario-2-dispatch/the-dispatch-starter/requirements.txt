@@ -1,0 +1,6 @@
+# The Dispatch starter — Python dependencies.
+#   pip install -r requirements.txt
+#
+# Only the MCP server needs a third-party package; check_content.py and
+# dispatchlib.py use the standard library only.
+mcp>=2.0.0,<3.0.0

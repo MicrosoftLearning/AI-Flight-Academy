@@ -1,13 +1,12 @@
 ---
-title: Set up Scout / GitHub Copilot
+title: Set up VS Code + GitHub Copilot
 ---
 
 <!-- markdownlint-disable MD013 MD025 -->
 
-# Set up Scout / GitHub Copilot
+# Set up VS Code + GitHub Copilot
 
 **Tool:** VS Code + GitHub Copilot agent mode or GitHub Copilot CLI
-**Source status:** Code altitude setup
 
 <!-- #region guide -->
 This block gives you a local agent workbench. You will use it to run portable Agent Skills, custom subagents, and MCP tools from the same project folder.

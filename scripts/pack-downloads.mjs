@@ -138,26 +138,24 @@ const jobs = [
     ],
   },
   {
-    src: join(root, "Allfiles", "scenario-2-greenlight", "the-greenlight-starter"),
-    zip: "the-greenlight-starter.zip",
+    src: join(root, "Allfiles", "scenario-2-dispatch", "the-dispatch-starter"),
+    zip: "the-dispatch-starter.zip",
     // The dashboard's deps and runtime output are regenerated (npm install /
     // at runtime), never shipped. Same for Python bytecode caches.
     exclude: [
       "dashboard/node_modules",
       "dashboard/uploads",
       "dashboard/runs",
-      "dashboard/plans",
-      "dashboard/submissions",
       "__pycache__",
     ],
   },
   {
-    src: join(root, "Allfiles", "scenario-2-greenlight", "the-greenlight"),
-    zip: "the-greenlight.zip",
+    src: join(root, "Allfiles", "scenario-2-dispatch", "the-dispatch"),
+    zip: "the-dispatch.zip",
   },
   {
-    src: join(root, "Allfiles", "scenario-2-greenlight", "data-pack"),
-    zip: "greenlight-data-pack.zip",
+    src: join(root, "Allfiles", "scenario-2-dispatch", "dispatch-data"),
+    zip: "dispatch-data-pack.zip",
   },
   {
     src: join(root, "Allfiles", "scenario-3-ambassador", "ambassador"),

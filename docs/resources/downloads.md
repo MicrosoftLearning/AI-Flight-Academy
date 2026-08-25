@@ -79,77 +79,79 @@ unzip -q /tmp/tcs.zip -d ~/twin-code
 code ~/twin-code/twin-code-starter
 ```
 :::
-## Scenario 2 · Greenlight
+## Scenario 2 · Dispatch
 
-Seat a **council of audiences** over an **asset** so the verdicts split, then have the room decide what to build. All three altitudes share the same **data pack** – five sample assets, four example audience cards, and a style guide.
+Seat a **room of Global Skilling teams** over an incoming **skilling request** so the positions split, then have the room land one routing decision — who fields it, who it's for, and a plan of deliverables built once and reused across teams. All three altitudes share the same **data pack** — sample requests, the team cards, and the routing policy.
 
-### 🟢 Cowork
+### 🟢 Cowork · 🔵 Scout
 
 <div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/the-greenlight.zip" download>
+  <a class="lab-card" href="/AI-Flight-Academy/downloads/the-dispatch.zip" download>
     <span class="lab-card-emoji">🟢</span>
-    <span class="lab-card-title">Greenlight</span>
-    <span class="lab-card-desc">The Greenlight skill with a council that seats new audiences, convenes for reviews, and greenlights assets.</span>
+    <span class="lab-card-title">Dispatch</span>
+    <span class="lab-card-desc">The Dispatch skill — the room that seats teams, takes positions, and lands one routing decision.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/greenlight-data-pack.zip" download>
+  <a class="lab-card" href="/AI-Flight-Academy/downloads/dispatch-data-pack.zip" download>
     <span class="lab-card-emoji">🗂️</span>
     <span class="lab-card-title">Data pack</span>
-    <span class="lab-card-desc">Five sample assets, four audience cards, and a style guide. The assets the council scores.</span>
+    <span class="lab-card-desc">Sample requests, the Global Skilling team cards, and the routing policy.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
 </div>
 
-**Installing Greenlight:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill** → pick the downloaded `SKILL.md`. Then **start a new session** – skills are only discovered at session start. Then point Cowork to the data pack and say **`seat the council and review P4.`**
+**Cowork:** **Customize** → **Skills** → **Add ▾** → **Upload skill** → the whole `the-dispatch.zip`. Start a **new session**, attach the data pack, and say **`seat the room and dispatch RQ-01.`**
+
+**Scout:** unzip, then **Extensions** → **Import** → drag in the `the-dispatch` **folder**. Start a new session and point it at the `dispatch-data` folder.
 
 ### 🟣 Code
 
 <div class="lab-grid lab-grid-3">
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/the-greenlight-starter.zip" download>
+  <a class="lab-card" href="/AI-Flight-Academy/downloads/the-dispatch-starter.zip" download>
     <span class="lab-card-emoji">📦</span>
     <span class="lab-card-title">Starter repo</span>
-    <span class="lab-card-desc">Council runner, deterministic checks, seat-as-data example, and a VS Code workspace file.</span>
+    <span class="lab-card-desc">The dashboard, a seated room, the intake gate, and the MCP server.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/the-greenlight.zip" download>
+  <a class="lab-card" href="/AI-Flight-Academy/downloads/the-dispatch.zip" download>
     <span class="lab-card-emoji">🟢</span>
-    <span class="lab-card-title">The Greenlight skill</span>
-    <span class="lab-card-desc">Same skill – the seat / convene / greenlight verbs and the solo-critic control.</span>
+    <span class="lab-card-title">The Dispatch skill</span>
+    <span class="lab-card-desc">Same skill – the seat / dispatch verbs and the single-triager control.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
-  <a class="lab-card" href="/AI-Flight-Academy/downloads/greenlight-data-pack.zip" download>
+  <a class="lab-card" href="/AI-Flight-Academy/downloads/dispatch-data-pack.zip" download>
     <span class="lab-card-emoji">🗂️</span>
     <span class="lab-card-title">Data pack</span>
-    <span class="lab-card-desc">The assets the council scores.</span>
+    <span class="lab-card-desc">The requests the room routes.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
 </div>
 
-Unzip all three so `the-greenlight-starter`, `the-greenlight`, and `data-pack` sit **side by side** – the runner and `checks.py` expect the data pack as a sibling. Then open `the-greenlight.code-workspace` in VS Code.
+Unzip all three so `the-dispatch-starter`, `the-dispatch`, and `dispatch-data` sit **side by side** – the dashboard and `check_content.py` expect the data pack as a sibling. Then open `the-dispatch.code-workspace` in VS Code.
 
 ::: details One-line setup in a terminal
 **PowerShell:**
 
 ```powershell
 $base='https://microsoftlearning.github.io/AI-Flight-Academy/downloads'
-$dest="$HOME\the-greenlight"
-foreach ($n in 'the-greenlight-starter','the-greenlight','greenlight-data-pack') {
+$dest="$HOME\the-dispatch"
+foreach ($n in 'the-dispatch-starter','the-dispatch','dispatch-data-pack') {
   $z="$env:TEMP\$n.zip"; iwr "$base/$n.zip" -OutFile $z
   Expand-Archive $z -DestinationPath $dest -Force
 }
-code "$dest\the-greenlight-starter\the-greenlight.code-workspace"
+code "$dest\the-dispatch-starter\the-dispatch.code-workspace"
 ```
 
 **macOS / Linux:**
 
 ```bash
 base=https://microsoftlearning.github.io/AI-Flight-Academy/downloads
-dest=~/the-greenlight
-for n in the-greenlight-starter the-greenlight greenlight-data-pack; do
+dest=~/the-dispatch
+for n in the-dispatch-starter the-dispatch dispatch-data-pack; do
   curl -L -o /tmp/$n.zip $base/$n.zip
   unzip -q /tmp/$n.zip -d $dest
 done
-code $dest/the-greenlight-starter/the-greenlight.code-workspace
+code $dest/the-dispatch-starter/the-dispatch.code-workspace
 ```
 :::
 

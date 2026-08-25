@@ -15,3 +15,6 @@ docs/public/downloads/
 # Python bytecode
 __pycache__/
 *.pyc
+
+# Uncropped art masters (kept locally for re-crops, not shipped)
+art-masters/

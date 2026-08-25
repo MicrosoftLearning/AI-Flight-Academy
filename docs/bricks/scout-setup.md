@@ -47,6 +47,12 @@ Skills give Scout a repeatable method. To add one:
 
 **You'll know it worked when...** the skill shows up in your extensions list and Scout uses it when you name it in a request.
 
+## Loading a data pack
+
+Some scenarios hand you a **data pack** – sample files to work from instead of (or alongside) your own. Add the pack's folder to your workspace, or upload the specific files in a new session and name them in your request.
+
+**You'll know it worked when...** Scout can quote or list the pack's contents back to you.
+
 ## Letting Scout build
 
 The thing that separates Scout from a chat window: it can scaffold a working app, install what it needs, run it, and fix it when it breaks.

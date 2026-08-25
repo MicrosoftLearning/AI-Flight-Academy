@@ -7,7 +7,6 @@ title: Build a custom connector (MCP)
 # Build a custom connector (MCP)
 
 **Tool:** Python + MCP + VS Code / GitHub Copilot
-**Source status:** Code altitude connector
 
 <!-- #region guide -->
 An MCP server turns your local spec into callable tools. Instead of pasting context into every prompt, you expose small functions like `read_policy()`, `check_boundary()`, or `lookup_customer_context()`.
