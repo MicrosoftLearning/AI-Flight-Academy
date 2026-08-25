@@ -72,7 +72,7 @@ A skill you add mid-session stays invisible until you begin a fresh one. After u
 
 Scout and Code both run on GitHub Copilot, so both need Copilot access on your Microsoft **EMU** (Enterprise Managed User) account. Do this first. Without it, Scout's GitHub sign-in fails and `copilot` won't run.
 
-Confirm your access at [aka.ms/copilot/explore](https://aka.ms/copilot/explore), signing in with your Microsoft account. Look under **Review your accounts**.
+Confirm your access at [aka.ms/copilot/explore](https://aka.ms/copilot/explore), signing in with your Microsoft account.
 
 **You're ready when** it reads **GitHub Copilot enabled** for your Enterprise Managed User (EMU) account.
 
