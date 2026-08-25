@@ -151,7 +151,7 @@ Eight files shipped with the program and the skill opens none of them:
 | `RecognitionHistory.csv` | 128 | Who's been recognized before |
 | `AmbassadorApplications.csv` | 41 | Who put their hand up |
 
-Point Scout at one and say what to do with it. Point it at all six at once and you won't know which one moved anybody.
+Point Scout at one and say what to do with it. Point it at all six at once and you won't know which file changed the shortlist.
 
 ### Ideas, not instructions
 

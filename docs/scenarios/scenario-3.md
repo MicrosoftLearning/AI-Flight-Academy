@@ -76,7 +76,7 @@ Only `CandidateProfiles.csv` is read. The other eight hold what an ambassador ac
 | **🔵 Scout** | The same skill, imported | The same, plus a fourth condition: it runs again without you |
 | **🟣 Code** | `cohort.py`, a working picker | The same three, in code you own |
 
-Same three conditions everywhere. The definition is plain text at every altitude, so what your table decides counts moves between them unchanged.
+Same three conditions everywhere. The definition is plain text at every altitude, so a table that switches tools carries its work across unchanged.
 
 ::: info Team model
 Every altitude works to conditions rather than a plan. The table picks which one to go after, splits it, and shows one name their build found that the shipped version missed.

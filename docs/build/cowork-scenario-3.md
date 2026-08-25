@@ -51,6 +51,10 @@ Invitations and nominations are drafted and held for a person to read. Keep that
 
 Do step 1 on your own. Everything after is the table.
 
+::: tip Nothing here is coding
+Everything is a sentence typed into a chat box. Cowork reads the files, edits them, and saves them for you. The only thing you handle is the download.
+:::
+
 ## Before you start
 
 <div class="lab-grid lab-grid-2">
@@ -98,7 +102,17 @@ Use definitions/depth.md as the definition instead. Re-run and tell me which nam
 
 Then try `definitions/rising.md`. Same 72 people, and the shortlists barely overlap: `depth.md` and `rising.md` share two names out of eight, and each surfaces four people no other definition finds.
 
-The definition is plain prose in a file. Open `references/DEFINITION.md`, write what your program would look for, and re-run.
+The definition is plain prose. Tell Cowork what your program is looking for and have it rewrite the file:
+
+```text
+Show me the definition you're using.
+```
+
+```text
+Rewrite it. We care about people whose work gets picked up by teams they've never worked with, and we'd rather reach someone new than someone who's already been recognized twice. Then re-run and tell me which names changed.
+```
+
+You never open a file. Cowork edits `references/DEFINITION.md` and re-runs against it.
 
 ### What it can't do
 
@@ -137,7 +151,7 @@ Eight files shipped with the program and the skill opens none of them:
 | `RecognitionHistory.csv` | 128 | Who's been recognized before |
 | `AmbassadorApplications.csv` | 41 | Who put their hand up |
 
-Attach one and tell the skill what to do with it. Attach all six and you won't know which one moved anybody.
+Attach one and tell the skill what to do with it. Attach all six and you won't know which file changed the shortlist.
 
 ### Ideas, not instructions
 
@@ -147,7 +161,7 @@ Starting points if you want one. Take one, combine two, or ignore all of them.
 | --- | --- |
 | 🔍 **Give it the evidence** | Attach peer feedback or contributions and have the skill weigh them. Different people surface |
 | 🧾 **Make it cite** | Every claim names the file and row behind it. Ask it to flag any claim it can't source |
-| ✋ **Let a person overrule** | A decisions file the skill reads before it recommends, so your call survives the next run |
+| ✋ **Let a person overrule** | Have Cowork keep a decisions file it reads before recommending, so your call survives the next run |
 | 🕳️ **Find the blind spot** | Break the definition into claims and ask which ones the data cannot answer |
 | 📨 **Draft the invitation** | In the program's voice, held for approval, never sent |
 | 📋 **A brief per manager** | Their people, what's proposed, and the evidence, on one page |
@@ -155,8 +169,8 @@ Starting points if you want one. Take one, combine two, or ignore all of them.
 
 **Pick by what your table would still run next time round**, not by what sounds most impressive.
 
-::: tip Definition, playbook, capability
-`references/DEFINITION.md` is what the program wants. `references/PLAYBOOK.md` is how the program runs. A new capability, like reading another file or checking a claim, belongs in its own `references/*.md`. The skill's instructions point Cowork toward that structure.
+::: tip Ask Cowork to file it in the right place
+`references/DEFINITION.md` is what the program wants. `references/PLAYBOOK.md` is how the program runs. A new capability, like reading another file or checking a claim, belongs in its own reference file. Say *"add that as a new reference file, don't put it in the definition"* and Cowork writes it where it belongs.
 :::
 
 <div class="table-check">
@@ -180,8 +194,8 @@ The more specific your ask, the less you'll undo:
 
 | Vague | Specific |
 | --- | --- |
-| *"Use the peer data"* | *"Weigh peer comments with evidence depth of 'repeated pattern' above single events, and show me who that moves."* |
-| *"Make it fairer"* | *"Show me whether the shortlist skews by region, and name anyone you can't justify from a record."* |
+| *"Use the peer data"* | *"Weigh peer comments with evidence depth of 'repeated pattern' above single events, and show me who enters the shortlist as a result."* |
+| *"Make it fairer"* | *"Show me whether the shortlist skews by region, and name anyone you can't trace to a record."* |
 | *"Make it better"* | *"For each name, cite the file and row that supports the claim."* |
 
 <div class="table-check">

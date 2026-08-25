@@ -51,8 +51,8 @@ The user will ask for more. When they do:
   judgment; edit it rather than arguing with the shortlist.
 - **A new capability** - reading another data file, checking a claim against a record, remembering an
   override - goes in its own `references/*.md`, opening with one line saying when it applies.
-- After any change, **re-run and say who moved**, by name. A change that surfaces someone new has
-  done something; a change that reorders the same eight names has not.
+- After any change, **re-run and name who entered or left the shortlist**. A change that surfaces
+  someone new has done something; a change that reorders the same eight names has not.
 
 ## Guardrails
 
