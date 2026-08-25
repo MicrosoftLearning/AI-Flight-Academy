@@ -18,17 +18,16 @@ The hard part is not connecting the data. The hard part is asking for the slice 
 
 ## Steps
 
-1. Open **M365 Copilot** at `m365.cloud.microsoft`.
-2. In the left rail, select the **Cowork** tab at the top, next to **Chat**.
-3. Start a **New task**.
-4. Ask for one specific source first. Good starter prompts:
+1. Open **Cowork** at `copilot.cloud.microsoft/cowork`.
+2. Start a **New task**.
+3. Ask for one specific source first. Good starter prompts:
    - `Find my last 10 sent emails. Return sender, recipient, date, subject, and the exact body text.`
    - `Summarize my calendar for the last 30 days. Group time by meeting category, organizer, and attendee count.`
    - `Find Teams messages where I was @mentioned last week. Return who asked, what they asked, and whether I replied.`
-5. Ask Cowork to return the data in a structured shape. Use a table when you will inspect it. Use JSON or markdown headings when another skill will consume it.
-6. To use a OneDrive or SharePoint file, attach it in the Cowork message or paste the file link. Then say exactly how it should be used, for example: `Use this file as the source of truth. Do not infer missing fields.`
-7. Narrow the range if the answer is too broad. Ask for `last 30 days`, `last 10 sent emails`, `only meetings I organized`, or `only messages from my manager`.
-8. Copy the useful prompt into your notes or skill instructions so you can run the same pull again.
+4. Ask Cowork to return the data in a structured shape. Use a table when you will inspect it. Use JSON or markdown headings when another skill will consume it.
+5. To use a OneDrive or SharePoint file, attach it in the Cowork message or paste the file link. Then say exactly how it should be used, for example: `Use this file as the source of truth. Do not infer missing fields.`
+6. Narrow the range if the answer is too broad. Ask for `last 30 days`, `last 10 sent emails`, `only meetings I organized`, or `only messages from my manager`.
+7. Copy the useful prompt into your notes or skill instructions so you can run the same pull again.
 
 **You'll know it worked when...** Cowork returns real work data that you recognize, with enough structure that you could paste it into a document, table, or skill input without cleaning it by hand.
 

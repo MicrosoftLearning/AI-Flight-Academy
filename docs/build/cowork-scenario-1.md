@@ -74,7 +74,7 @@ At each table check, bring **proof, not contents** - one thing that changed, one
 
 ## Before you start
 
-**Check you have this:** Microsoft 365 Copilot with a **Cowork** tab. Open [m365.cloud.microsoft](https://m365.cloud.microsoft) and look at the top of the left-hand menu - you should see **Chat** and **Cowork** side by side. No Cowork tab, tell a coach now.
+**Check you have this:** Microsoft 365 Copilot with Cowork. Open [copilot.cloud.microsoft/cowork](https://copilot.cloud.microsoft/cowork) - it should load Cowork rather than turning you away. If it doesn't, tell a coach now.
 
 **It uses your own mail and calendar.** It only ever sees what you can already see, and nothing you build is shared.
 

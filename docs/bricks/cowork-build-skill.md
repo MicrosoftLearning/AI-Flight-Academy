@@ -16,19 +16,18 @@ A Cowork skill is a reusable instruction file. It tells Cowork when to load the 
 
 ## Steps
 
-1. Open **M365 Copilot** at `m365.cloud.microsoft`.
-2. Select the **Cowork** tab in the left nav. It sits at the top next to **Chat**.
-3. Select **Customize** in the Cowork left nav.
-4. Open the **Skills** tab. You will see a search icon, a filter icon, and **Add**. Skills are grouped into **Your skills** for custom skills and **Built-in** for built-in skills. Built-ins include Word, Excel, PowerPoint, PDF, Email, Scheduling, Calendar Management, Meetings, Daily Briefing, Enterprise Search, Deep Research, Communications, Adaptive Cards, and image generation. More appear behind **Show more**. Built-in skills cannot be disabled.
-5. Select **Add**. Use the chevron for **More add options** to open the menu. The menu has exactly two items: **Create new** and **Upload skill**.
-6. Choose your creation path:
+1. Open **Cowork** at `copilot.cloud.microsoft/cowork`.
+2. Select **Customize** in the Cowork left nav.
+3. Open the **Skills** tab. You will see a search icon, a filter icon, and **Add**. Skills are grouped into **Your skills** for custom skills and **Built-in** for built-in skills. Built-ins include Word, Excel, PowerPoint, PDF, Email, Scheduling, Calendar Management, Meetings, Daily Briefing, Enterprise Search, Deep Research, Communications, Adaptive Cards, and image generation. More appear behind **Show more**. Built-in skills cannot be disabled.
+4. Select **Add**. Use the chevron for **More add options** to open the menu. The menu has exactly two items: **Create new** and **Upload skill**.
+5. Choose your creation path:
    - **Create new**: best for beginners. Choose this first. Cowork opens a guided flow, asks what the skill should do, drafts the instructions, and saves the skill for you.
    - **Ask Cowork in chat**: say `Build a skill that...` and let Cowork draft the `SKILL.md` interactively.
    - **Author manually**: create the file yourself in OneDrive at `/Documents/Cowork/skills/{skill-name}/SKILL.md`.
-7. Give the skill a short kebab-case name, such as `meeting-brief` or `draft-reviewer`.
-8. Write a description that includes the phrases users will actually type. Cowork decides which skills to load from the **description** field.
-9. Add clear markdown instructions. Tell Cowork what to do, what not to do, and what output shape to use.
-10. Start a **new Cowork session** before testing. Custom skills are discovered automatically at the start of each session.
+6. Give the skill a short kebab-case name, such as `meeting-brief` or `draft-reviewer`.
+7. Write a description that includes the phrases users will actually type. Cowork decides which skills to load from the **description** field.
+8. Add clear markdown instructions. Tell Cowork what to do, what not to do, and what output shape to use.
+9. Start a **new Cowork session** before testing. Custom skills are discovered automatically at the start of each session.
 
 **You'll know it worked when...** your skill appears under **Your skills**, and a new Cowork task loads it when you use one of the trigger phrases from the description.
 
