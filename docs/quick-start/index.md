@@ -72,12 +72,13 @@ A skill you add mid-session stays invisible until you begin a fresh one. After u
 
 Scout and Code both run on GitHub Copilot, so both need Copilot access on your Microsoft **EMU** (Enterprise Managed User) account. Do this first. Without it, Scout's GitHub sign-in fails and `copilot` won't run.
 
-| | |
-| --- | --- |
-| **Request Copilot access** | [aka.ms/copilot/explore](https://aka.ms/copilot/explore) |
-| **Link an existing GitHub account** · optional | [repos.opensource.microsoft.com](https://repos.opensource.microsoft.com/orgs/MicrosoftCopilot) |
+Confirm your access at [aka.ms/copilot/explore](https://aka.ms/copilot/explore), signing in with your Microsoft account. Look under **Review your accounts**.
 
-**You're ready when** [aka.ms/copilot/explore](https://aka.ms/copilot/explore) signs you in rather than stopping at an access request.
+**You're ready when** it reads **GitHub Copilot enabled** for your Enterprise Managed User (EMU) account.
+
+![The Copilot access page showing GitHub Copilot enabled for an Enterprise Managed User account](/img/copilot-emu-enabled.png)
+
+To use a personal GitHub account instead, link it at [repos.opensource.microsoft.com](https://repos.opensource.microsoft.com/orgs/MicrosoftCopilot).
 
 ::: tip Nothing to do here if you're on Cowork
 Cowork runs on your Microsoft 365 account and doesn't touch GitHub. You're already set.
@@ -126,7 +127,9 @@ You get a starter that runs and a contract to build against. You write the code.
 | **Node** | [nodejs.org](https://nodejs.org/) | `node --version` |
 | **Python 3** | [python.org/downloads](https://www.python.org/downloads/) | `python --version` |
 | **GitHub Copilot CLI** | `npm install -g @github/copilot` | `copilot --version` |
-| **VS Code** | [code.visualstudio.com](https://code.visualstudio.com/), then [set up Copilot](https://code.visualstudio.com/docs/setup/copilot) | Chat panel opens and is signed in |
+| **VS Code** | [code.visualstudio.com](https://code.visualstudio.com/) | Skip the next two rows if you'd rather stay in the terminal |
+| **GitHub Copilot** extension | [marketplace.visualstudio.com](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) | Listed under Extensions |
+| **GitHub Copilot Chat** extension | [marketplace.visualstudio.com](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) | Chat panel opens and is signed in |
 
 The starters need Python 3.10 or later and the Copilot CLI. **No other dependencies**, nothing to `pip install`.
 
