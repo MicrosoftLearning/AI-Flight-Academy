@@ -46,7 +46,7 @@ Every altitude produces the same portable spec. What changes is how much you bui
   </a>
 </div>
 
-You can change your mind on the day.
+You can change your mind on the day, and the setup below is worth doing for more than one altitude. Nothing here conflicts, so if you're between two, set up both.
 
 ## 🟢 Cowork {#cowork}
 
@@ -56,17 +56,7 @@ You can change your mind on the day.
 
 Microsoft 365 Copilot with Cowork, at [copilot.cloud.microsoft/cowork](https://copilot.cloud.microsoft/cowork). Nothing to install, no account to request, no terminal.
 
-The one mechanic to know is importing a skill. Your build page repeats this on the day:
-
-1. In the left menu, choose **Customize → Skills**.
-2. Select the arrow next to **Add**, then **Upload skill**, and drag the file in.
-3. Start a **new session**, then name the skill in your first message.
-
-![The Add a skill dialog in Cowork, with a drag and drop area that accepts .MD, .ZIP, or .SKILL files](/img/cowork-add-skill-upload.png)
-
-::: warning Skills are discovered at session start
-A skill you add mid-session stays invisible until you begin a fresh one. After uploading, start a new session before anything else.
-:::
+**You're ready when** that link opens Cowork.
 
 ## Scout and Code both need a GitHub EMU account {#emu}
 
