@@ -868,3 +868,25 @@ a.bonus-card:hover {
   }
 }
 
+
+/* A page that stands on its own: no nav, no sidebar, no links out. Shared
+   before the event, so it must not be a way into the rest of the site.
+   `layout: page` drops the doc container, so the prose styling comes back
+   here via .vp-doc. */
+.standalone-page {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 5rem;
+}
+
+.standalone-page > h1:first-child {
+  margin-top: 0;
+  font-size: 2.4rem;
+  letter-spacing: -0.02em;
+}
+
+@media (max-width: 640px) {
+  .standalone-page {
+    padding: 2rem 1rem 3.5rem;
+  }
+}
