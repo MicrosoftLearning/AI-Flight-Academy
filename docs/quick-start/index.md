@@ -80,7 +80,7 @@ Scout and Code both run on GitHub Copilot, so both need Copilot access on your M
 **You're ready when** [aka.ms/copilot/explore](https://aka.ms/copilot/explore) signs you in rather than stopping at an access request.
 
 ::: tip Nothing to do here if you're on Cowork
-Cowork runs on your Microsoft 365 account and doesn't touch GitHub. Skip to [the day itself](#what-happens-on-the-day).
+Cowork runs on your Microsoft 365 account and doesn't touch GitHub. You're already set.
 :::
 
 ## 🔵 Scout {#scout}
@@ -132,42 +132,20 @@ The starters need Python 3.10 or later and the Copilot CLI. **No other dependenc
 
 ### Check you're ready
 
-Run one prompt end to end:
+1. Run one prompt end to end:
 
-```powershell
-copilot -p "Reply with the word ready and nothing else." --allow-all-tools
-```
+   ```powershell
+   copilot -p "Reply with the word ready and nothing else." --allow-all-tools
+   ```
 
-**You're ready when** that returns `ready`. If it asks you to sign in, do that first and run it again.
+   **You're ready when** that returns `ready`. If it asks you to sign in, do that first and run it again.
+
+2. If you plan to use VS Code, open **Settings**, search `chat.agent.enabled`, and confirm **Chat › Agent: Enabled** is checked.
+
+   ![VS Code Settings filtered to chat.agent.enabled, with the Chat > Agent: Enabled checkbox ticked](/img/vscode-chat-agent-enabled.png)
 
 ::: tip Pick your own model
 No scenario depends on a particular model. Use whichever one you have access to and like working with.
 :::
-
-## If something won't work
-
-| What you're seeing | Try this |
-| --- | --- |
-| `aka.ms/copilot/explore` won't sign you in | You don't have Copilot on your EMU account yet. That's the request the page is for |
-| `copilot` not recognized | `npm install -g @github/copilot`, then open a new terminal so `PATH` refreshes |
-| Copilot CLI asks you to sign in | Run `copilot` on its own once and complete sign-in, then retry your command |
-| Scout signs in to M365 but not GitHub | Sign in with your EMU account, or the personal account you linked at [repos.opensource.microsoft.com](https://repos.opensource.microsoft.com/orgs/MicrosoftCopilot) |
-| A skill you uploaded isn't listed | Start a new session. Skills are only discovered at session start |
-| `python` not recognized on Windows | Try `py --version`. If that works, use `py` in place of `python` |
-
-Coaches are in the room throughout. On the day, wave one over rather than spending build time on setup.
-
-## What happens on the day
-
-| | |
-| --- | --- |
-| **1** | Pick your altitude and a scenario |
-| **2** | Download what that build page gives you, and run it once as shipped |
-| **3** | Build the smallest working version, then test it on a real prompt |
-| **4** | Demo the behavior: the before, the change you made, and the after |
-
-You leave with a working agent and the files behind it.
-
-The scenarios and the build guides come on the day.
 
 </div>
