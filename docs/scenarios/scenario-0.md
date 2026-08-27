@@ -142,6 +142,10 @@ Prefer the terminal? Put the same file in `~/.agents/skills/meeting-recap/SKILL.
 Write a Markdown file that gives AI context it can reuse.
 :::
 
+The skill is the method. The flight plan is the subject it works on: the facts about your team, your event, your customer. Keeping them apart is the point, because you can point the same skill at a different flight plan next week without touching the skill.
+
+It's a separate file. You are not editing the skill or adding anything to its folder.
+
 A title and a few sections is enough. Pick a pattern or write your own:
 
 | Flight plan | Sections |
@@ -176,7 +180,7 @@ A title and a few sections is enough. Pick a pattern or write your own:
 Use the skill and the flight plan together to produce one artifact.
 :::
 
-Attach or point at your flight plan, then type one of these:
+Attach the flight plan file to your message, or paste it in, then type one of these:
 
 ```text
 Using my flight plan and my saved skill, create an action plan I can use next week.
