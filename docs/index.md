@@ -71,13 +71,13 @@ hero:
 
 ## Before Team Week - Scenario 0 {#scenario-0}
 
-<p class="home-section-intro is-wide">A 60-minute call on September 11 or 12. Build a skill, write a flight plan, make something from both, and file a flight log so we know your tools work.</p>
+<p class="home-section-intro is-wide">A 60-minute call on September 11 or 12. Build a skill and file a flight log, so anything blocking you gets fixed before the day.</p>
 
 <div class="lab-grid lab-grid-2">
   <a class="lab-card" href="/AI-Flight-Academy/scenarios/scenario-0">
     <span class="lab-card-emoji">🛫</span>
     <span class="lab-card-title">Scenario 0 · Flight Clearance</span>
-    <span class="lab-card-desc">Three missions, one form. Turn up to Team Week with your tools already working.</span>
+    <span class="lab-card-desc">Build a skill and file a flight log. Turn up to Team Week with your tools already working.</span>
     <span class="lab-card-cta">Get cleared →</span>
   </a>
 </div>
