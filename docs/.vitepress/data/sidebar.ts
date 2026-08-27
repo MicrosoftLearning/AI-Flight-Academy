@@ -12,6 +12,7 @@ import {
   getTrack,
   getScenario,
   CHOOSER,
+  SCENARIO_0,
 } from "./paths";
 import { pageHeadings, type Heading } from "./headings";
 
@@ -50,6 +51,10 @@ function nestSteps(steps: Heading[], link: string) {
 export function navBuildItems() {
   return [
     { text: "🧭 Pick your path", link: CHOOSER },
+    {
+      text: `${SCENARIO_0.emoji} ${SCENARIO_0.label} · ${SCENARIO_0.name}`,
+      link: SCENARIO_0.link,
+    },
     ...scenarios.map((s) => ({
       text: `${s.emoji} ${s.label} · ${s.name}`,
       items: tracks.map((t) => ({
@@ -103,17 +108,23 @@ export function globalSidebar(
       }
     : {
         text: "Scenarios",
-        items: scenarios.map((s) => ({
-          text: `${s.emoji} ${s.name}`,
-          collapsed: true,
-          items: [
-            { text: "The brief", link: `/scenarios/${s.id}` },
-            ...tracks.map((t) => ({
-              text: `${t.emoji} ${t.label}${suffix(t.id, s.id)}`,
-              link: buildLink(t.id, s.id),
-            })),
-          ],
-        })),
+        items: [
+          {
+            text: `${SCENARIO_0.emoji} ${SCENARIO_0.name}`,
+            link: SCENARIO_0.link,
+          },
+          ...scenarios.map((s) => ({
+            text: `${s.emoji} ${s.name}`,
+            collapsed: true,
+            items: [
+              { text: "The brief", link: `/scenarios/${s.id}` },
+              ...tracks.map((t) => ({
+                text: `${t.emoji} ${t.label}${suffix(t.id, s.id)}`,
+                link: buildLink(t.id, s.id),
+              })),
+            ],
+          })),
+        ],
       };
 
   const guidesSection = track
@@ -176,5 +187,6 @@ export function sidebars(): Record<string, ReturnType<typeof globalSidebar>> {
     }
   }
   out["/"] = globalSidebar();
+  out[SCENARIO_0.link] = globalSidebar();
   return out;
 }

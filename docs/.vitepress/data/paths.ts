@@ -88,8 +88,19 @@ export const tracks: Track[] = [
   },
 ];
 
-export const scenarios: Scenario[] = [
-  {
+/**
+ * Scenario 0 is the pre-event readiness call, not a hack scenario. It's one
+ * page for all three altitudes, so it stays out of `scenarios` - that array is
+ * the build matrix, and anything in it generates a build page per track.
+ */
+export const SCENARIO_0 = {
+  emoji: "🛫",
+  label: "Scenario 0",
+  name: "Flight Clearance",
+  link: "/scenarios/scenario-0",
+};
+
+export const scenarios: Scenario[] = [  {
     id: "scenario-1",
     emoji: "🧬",
     label: "Scenario 1",
