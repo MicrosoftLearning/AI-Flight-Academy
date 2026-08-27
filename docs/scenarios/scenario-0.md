@@ -10,9 +10,7 @@ title: Scenario 0 · Flight Clearance
 This page is being built. The video and the form are not final.
 :::
 
-Sixty minutes, on September 11 or 12. You pick an altitude, build a skill, write a flight plan, use both to produce something you'd keep, and file a flight log.
-
-You leave knowing your tools work, and the crew leaves knowing who needs help before Team Week.
+This is a readiness challenge, not a feature tour. Three missions, then one form.
 
 <div class="brief">
 <span class="brief-badge">Your finish line</span>
@@ -195,7 +193,7 @@ If your own content is sensitive or something won't load, use one of the flight 
 
 ## 5 · File your flight log
 
-One form, once, at the end. It records your altitude, your proof, and whether you're ready.
+One form, once, at the end. No separate submission per mission, and no screenshot scavenger hunt.
 
 | Status | Pick this when |
 | --- | --- |
@@ -228,7 +226,7 @@ No. Cowork is chat only and needs nothing installed. Scout describes and builds.
 
 ::: details Is this a test?
 
-No. Nothing is scored and nothing is ranked. The flight log tells the crew who needs help.
+No. Nothing is scored and nothing is ranked. Filing the log is how you get help before Team Week.
 
 :::
 
@@ -258,7 +256,7 @@ File the flight log anyway and pick **Taxiing** or **Needs ground crew support**
 
 ::: details Why a form?
 
-It tells the crew who's ready, which altitudes to staff, and which blockers to fix before Team Week.
+So anything blocking you today gets fixed before Team Week, rather than on the day.
 
 :::
 
