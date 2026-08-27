@@ -166,14 +166,6 @@ Starting points if you want one. Take one, combine two, or ignore all of them.
   </div>
 </div>
 
-## 3 · Show it
-
-Four tables go up on the main screen, picked for contrast. Have ready:
-
-- The definition you wrote, in one sentence
-- One name your build found that `cohort.py` missed
-- The thing you'd fix first with another hour
-
 ## Push it further
 
 1. **Point it at something real** - the starter reads CSVs, but the shape is the same for a SharePoint list or a Teams channel export. Swap the loader, keep everything else.
