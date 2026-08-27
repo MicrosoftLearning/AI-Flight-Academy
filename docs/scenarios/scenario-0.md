@@ -83,6 +83,58 @@ If your Code setup isn't working, don't spend the call on it. Switch to Cowork o
   </div>
 </div>
 
+### Create the skill at your altitude
+
+A skill is a name, a description, and instructions. Where it lives is the only thing that changes.
+
+#### 🟢 Cowork
+
+1. Open **Customize → Skills**, then the arrow next to **Add**.
+2. Choose **Create new**. Cowork asks what the skill should do and drafts it with you.
+3. Name it in kebab-case, like `meeting-recap`.
+4. Write the description using the words you'd actually type when you want it. Cowork picks skills by matching your request against that description.
+
+**Start a new session before you test it.** Skills are discovered when a session begins.
+
+#### 🔵 Scout
+
+Scout reads skills from `~/.copilot/skills/`. You can write the file yourself, or have Scout do it:
+
+```text
+Create a skill called meeting-recap in my skills folder. It should turn my
+meeting notes into a summary with decisions, owners, and next steps.
+```
+
+The file is `~/.copilot/skills/meeting-recap/SKILL.md`, and it starts with frontmatter:
+
+```markdown
+---
+name: meeting-recap
+description: Turns meeting notes into a summary with decisions, owners, and next steps. Use when asked to recap a meeting.
+---
+
+Read the notes and return three sections: Decisions, Owners, Next steps.
+Keep each bullet to one line.
+```
+
+**Start a new session** so Scout picks it up.
+
+#### 🟣 Code
+
+Same file, different folder. The Copilot CLI reads from `~/.agents/skills/`, so create `~/.agents/skills/meeting-recap/SKILL.md` with the frontmatter above.
+
+Then in a Copilot session, check it loaded:
+
+```text
+/skills
+```
+
+Your skill appearing in that list is the proof.
+
+::: tip Same file, different folder
+The `SKILL.md` format is identical across altitudes, so a skill written for one works in another once you copy the folder. Only the location changes: Scout reads `~/.copilot/skills/`, the Copilot CLI reads `~/.agents/skills/`, and Cowork keeps its skills in Microsoft 365.
+:::
+
 ### Flight plan patterns
 
 Pick one, or write your own.
