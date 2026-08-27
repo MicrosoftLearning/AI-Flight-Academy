@@ -206,14 +206,6 @@ The more specific your ask, the less you'll undo:
   </div>
 </div>
 
-## 3 · Show it
-
-Four tables go up on the main screen, picked for contrast. Have ready:
-
-- The definition you wrote, in one sentence
-- One name your build found that the shipped skill missed
-- The thing you'd fix first with another hour
-
 ## Push it further
 
 1. **Point it at something real** - the skill reads attached files, and a SharePoint list export is the same shape.
