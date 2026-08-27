@@ -63,13 +63,7 @@ A skill is a name, a description, and instructions. Start from one of these, or 
 | **Content reviewer** | Checks a draft against your team's voice |
 | **Speaker bio generator** | Turns a role and history into a short bio |
 
-::: warning Say when it should fire, not just what it does
-The description is how the model decides whether to use your skill. If it only says what the skill does, it may never trigger. Add the words you'd actually type:
-
-> Turns meeting notes into a summary with decisions, owners, and next steps. **Use when asked to recap a meeting, write up notes, or pull actions out of a discussion.**
-
-If it fires when you don't want it, say so too: *Do not use for one-on-one notes.*
-:::
+The description is what makes a skill fire, so say when to use it, not just what it does.
 
 <AltitudeOnly track="cowork">
 
