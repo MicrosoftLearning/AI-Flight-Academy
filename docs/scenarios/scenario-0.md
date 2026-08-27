@@ -88,7 +88,8 @@ Scout reads skills from `~/.copilot/skills/`. Have Scout write the file:
 
 ```text
 Create a skill called meeting-recap in my skills folder. It should turn my
-meeting notes into a summary with decisions, owners, and next steps.
+meeting notes into a summary with decisions, owners, and next steps. In the
+description, say to use it when I ask to recap a meeting or write up notes.
 ```
 
 That produces `~/.copilot/skills/meeting-recap/SKILL.md`:
@@ -103,7 +104,7 @@ Read the notes and return three sections: Decisions, Owners, Next steps.
 Keep each bullet to one line.
 ```
 
-**Start a new session** so Scout picks it up.
+**Start a new session** so Scout picks it up, then ask it to use the skill by name.
 
 </AltitudeOnly>
 
@@ -112,7 +113,9 @@ Keep each bullet to one line.
 Do this in VS Code, in the Chat view with **Agent** selected. Copilot writes the skill for you:
 
 ```text
-/create-skill a skill that turns my meeting notes into decisions, owners, and next steps
+/create-skill a skill called meeting-recap that turns my meeting notes into
+decisions, owners, and next steps. Use it when I ask to recap a meeting or
+write up notes.
 ```
 
 It asks a couple of questions, then creates `.github/skills/meeting-recap/SKILL.md` in your open folder:
@@ -137,7 +140,7 @@ Prefer the terminal? Put the same file in `~/.agents/skills/meeting-recap/SKILL.
 
 </AltitudeOnly>
 
-**Done when:** the skill has a name and instructions, and it's saved. Screenshot it.
+**Done when:** the skill is saved and its description says when to use it. Screenshot it.
 
 ## 3 · Mission 2 - File your flight plan
 
