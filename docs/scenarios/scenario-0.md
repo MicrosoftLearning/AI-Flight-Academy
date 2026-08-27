@@ -43,51 +43,29 @@ The pre-flight safety video is scripted but not yet published. This block gets t
 
 Pick where you can get something done in the next fifty minutes. This is not a commitment for Team Week, and you can switch later.
 
-| Altitude | Pick this if | Before the missions start |
-| --- | --- | --- |
-| 🟢 **Cowork** | You want to build in chat, without code | Open Cowork and confirm you can reach **Customize → Skills** |
-| 🔵 **Scout** | You want an agent that builds and runs what you describe | Open Scout and confirm both sign-ins complete |
-| 🟣 **Code** | You work in VS Code or a terminal | Open VS Code and confirm Copilot is signed in |
+<AltitudePicker />
 
 ::: tip Code is validated here, not taught
 If your Code setup isn't working, don't spend the call on it. Switch to Cowork or Scout, finish the missions, and flag the blocker on your flight log.
 :::
 
-## 2 · The three missions
+## 2 · Mission 1 - Earn your pilot certification
 
-<div class="skill-steps">
-  <div class="skill-step">
-    <div class="skill-step-num">1</div>
-    <div class="skill-step-body">
-      <div class="skill-step-title">Earn your pilot certification · 12 min</div>
-      <p>Create and save one skill that would help with your everyday work. Keep it small.</p>
-      <p>Starter ideas: a meeting recap assistant, an event planning assistant, a customer feedback analyzer, a content reviewer, a speaker bio generator, a workshop planner.</p>
-      <p><strong>Done when:</strong> the skill has a name and instructions, and it's saved. Screenshot it.</p>
-    </div>
-  </div>
-  <div class="skill-step">
-    <div class="skill-step-num">2</div>
-    <div class="skill-step-body">
-      <div class="skill-step-title">File your flight plan · 10 min</div>
-      <p>Write a short Markdown file that gives AI context it can reuse. A title and a few sections is enough.</p>
-      <p><strong>Done when:</strong> the <code>.md</code> file has a title, sections, and content you'd open again next week. Screenshot it.</p>
-    </div>
-  </div>
-  <div class="skill-step">
-    <div class="skill-step-num">3</div>
-    <div class="skill-step-body">
-      <div class="skill-step-title">Ready for departure · 15 min</div>
-      <p>Use the skill and the flight plan together to produce one artifact that saves you time next week.</p>
-      <p><strong>Done when:</strong> you have an output on screen that you made from your own context. Screenshot it.</p>
-    </div>
-  </div>
-</div>
+::: info 12 minutes
+Create and save one skill. Keep it small.
+:::
 
-### Create the skill at your altitude
+A skill is a name, a description, and instructions. Start from one of these, or use your own:
 
-A skill is a name, a description, and instructions. Where it lives is the only thing that changes.
+| | |
+| --- | --- |
+| **Meeting recap assistant** | Turns notes into decisions, owners, next steps |
+| **Event planning assistant** | Turns a date and audience into a task list |
+| **Customer feedback analyzer** | Groups comments into themes |
+| **Content reviewer** | Checks a draft against your team's voice |
+| **Speaker bio generator** | Turns a role and history into a short bio |
 
-#### 🟢 Cowork
+<AltitudeOnly track="cowork">
 
 1. Open **Customize → Skills**, then the arrow next to **Add**.
 2. Choose **Create new**. Cowork asks what the skill should do and drafts it with you.
@@ -96,16 +74,18 @@ A skill is a name, a description, and instructions. Where it lives is the only t
 
 **Start a new session before you test it.** Skills are discovered when a session begins.
 
-#### 🔵 Scout
+</AltitudeOnly>
 
-Scout reads skills from `~/.copilot/skills/`. You can write the file yourself, or have Scout do it:
+<AltitudeOnly track="scout">
+
+Scout reads skills from `~/.copilot/skills/`. Have Scout write the file:
 
 ```text
 Create a skill called meeting-recap in my skills folder. It should turn my
 meeting notes into a summary with decisions, owners, and next steps.
 ```
 
-The file is `~/.copilot/skills/meeting-recap/SKILL.md`, and it starts with frontmatter:
+That produces `~/.copilot/skills/meeting-recap/SKILL.md`:
 
 ```markdown
 ---
@@ -119,25 +99,47 @@ Keep each bullet to one line.
 
 **Start a new session** so Scout picks it up.
 
-#### 🟣 Code
+</AltitudeOnly>
 
-Same file, different folder. The Copilot CLI reads from `~/.agents/skills/`, so create `~/.agents/skills/meeting-recap/SKILL.md` with the frontmatter above.
+<AltitudeOnly track="code">
 
-Then in a Copilot session, check it loaded:
+Do this in VS Code, in the Chat view with **Agent** selected. Copilot writes the skill for you:
 
 ```text
-/skills
+/create-skill a skill that turns my meeting notes into decisions, owners, and next steps
 ```
 
-Your skill appearing in that list is the proof.
+It asks a couple of questions, then creates `.github/skills/meeting-recap/SKILL.md` in your open folder:
 
-::: tip Same file, different folder
-The `SKILL.md` format is identical across altitudes, so a skill written for one works in another once you copy the folder. Only the location changes: Scout reads `~/.copilot/skills/`, the Copilot CLI reads `~/.agents/skills/`, and Cowork keeps its skills in Microsoft 365.
+```markdown
+---
+name: meeting-recap
+description: Turns meeting notes into a summary with decisions, owners, and next steps. Use when asked to recap a meeting.
+---
+
+Read the notes and return three sections: Decisions, Owners, Next steps.
+Keep each bullet to one line.
+```
+
+**Check it loaded:** type `/` in the chat box. Your skill appears in the list by name.
+
+::: warning The name must match the folder
+`name:` in the frontmatter has to equal the folder name exactly, lowercase with hyphens. If it doesn't, the skill fails to load and says nothing.
 :::
 
-### Flight plan patterns
+Prefer the terminal? Put the same file in `~/.agents/skills/meeting-recap/SKILL.md` and run `/skills` in a Copilot CLI session.
 
-Pick one, or write your own.
+</AltitudeOnly>
+
+**Done when:** the skill has a name and instructions, and it's saved. Screenshot it.
+
+## 3 · Mission 2 - File your flight plan
+
+::: info 10 minutes
+Write a Markdown file that gives AI context it can reuse.
+:::
+
+A title and a few sections is enough. Pick a pattern or write your own:
 
 | Flight plan | Sections |
 | --- | --- |
@@ -147,9 +149,31 @@ Pick one, or write your own.
 | **Content review guide** | Voice, accuracy, accessibility |
 | **Launch plan** | Audience, milestones, risks |
 
-### Prompts for mission 3
+```markdown
+# Event Checklist
 
-What to type once your skill and flight plan both exist:
+## Before
+- Confirm room and AV two weeks out
+- Send the pre-read on the Friday before
+
+## During
+- Start the recording
+- Capture questions you cannot answer live
+
+## After
+- Send notes within 24 hours
+- Log follow-ups with owners
+```
+
+**Done when:** the `.md` file has a title, sections, and content you'd open again next week. Screenshot it.
+
+## 4 · Mission 3 - Ready for departure
+
+::: info 15 minutes
+Use the skill and the flight plan together to produce one artifact.
+:::
+
+Attach or point at your flight plan, then type one of these:
 
 ```text
 Using my flight plan and my saved skill, create an action plan I can use next week.
@@ -164,10 +188,12 @@ Using this flight plan as context, create a reusable checklist for this work.
 ```
 
 ::: tip Blocked? Use a sample and keep moving
-If your own content is sensitive or something won't load, use one of the patterns above as your flight plan. Finishing the workflow is the point.
+If your own content is sensitive or something won't load, use one of the flight plan patterns above. Finishing the workflow is the point.
 :::
 
-## 3 · File your flight log
+**Done when:** you have an output on screen that you made from your own context. Screenshot it.
+
+## 5 · File your flight log
 
 One form, once, at the end. It records your altitude, your proof, and whether you're ready.
 

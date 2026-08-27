@@ -913,3 +913,114 @@ a.bonus-card:hover {
     height: 620px;
   }
 }
+
+/* Scenario 0 altitude picker. Choosing one filters every gated block on the
+   page, so a participant scrolls past their own path only. */
+.altitude-picker {
+  margin: 1.75rem 0 2rem;
+}
+
+.altitude-bubbles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.9rem;
+}
+
+.altitude-bubble {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1.1rem 1.2rem;
+  text-align: left;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 14px;
+  background: var(--vp-c-bg-soft);
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
+}
+
+.altitude-bubble:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+}
+
+.altitude-bubble.is-active {
+  border-color: var(--vp-c-brand-1);
+  background: var(--vp-c-brand-soft);
+}
+
+.altitude-bubble-emoji {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.altitude-bubble-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--vp-c-text-1);
+}
+
+.altitude-bubble-desc {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--vp-c-text-2);
+}
+
+.altitude-bubble-cta {
+  margin-top: 0.3rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+}
+
+.altitude-hint {
+  margin: 0.9rem 0 0;
+  font-size: 0.9rem;
+  color: var(--vp-c-text-2);
+}
+
+.altitude-reset {
+  margin-left: 0.4rem;
+  padding: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--vp-c-brand-1);
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* A block that belongs to one altitude. The left edge is the colour cue. */
+.altitude-block {
+  margin: 1.5rem 0;
+  padding: 0.2rem 0 0.2rem 1.15rem;
+  border-left: 3px solid var(--vp-c-divider);
+}
+
+.altitude-block.is-cowork { border-left-color: #3fb950; }
+.altitude-block.is-scout  { border-left-color: #58a6ff; }
+.altitude-block.is-code   { border-left-color: #a371f7; }
+
+.altitude-block-tag {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-bottom: 0.5rem;
+}
+
+.altitude-block-emoji {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+.altitude-block-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--vp-c-text-2);
+}
+
+.altitude-block-body > :first-child { margin-top: 0; }
+.altitude-block-body > :last-child { margin-bottom: 0; }

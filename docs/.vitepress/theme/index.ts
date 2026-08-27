@@ -5,6 +5,8 @@ import Layout from "./components/Layout.vue";
 import PathChooser from "./components/PathChooser.vue";
 import PathPicker from "./components/PathPicker.vue";
 import BuildMatrix from "./components/BuildMatrix.vue";
+import AltitudePicker from "./components/AltitudePicker.vue";
+import AltitudeOnly from "./components/AltitudeOnly.vue";
 
 export default {
   extends: DefaultTheme,
@@ -13,5 +15,7 @@ export default {
     app.component("PathChooser", PathChooser);
     app.component("PathPicker", PathPicker);
     app.component("BuildMatrix", BuildMatrix);
+    app.component("AltitudePicker", AltitudePicker);
+    app.component("AltitudeOnly", AltitudeOnly);
   },
 } satisfies Theme;
