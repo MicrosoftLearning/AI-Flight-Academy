@@ -6,54 +6,49 @@ title: Scenario 0 · Flight Clearance
 
 # Scenario 0 - Flight Clearance
 
-::: warning 🚧 Draft
-This page is being built. The video and the form are not final.
+::: warning 🚧 Draft — the video and the form aren't final yet
 :::
 
-This is a readiness challenge, not a feature tour. Build one skill, prove it works, and file a flight log.
-
 <div class="brief">
-<span class="brief-badge">Your finish line</span>
+<span class="brief-badge">Pre-flight checklist</span>
 
-<p class="brief-lead">One saved skill and one flight log filed.</p>
+<p class="brief-lead">Build a skill, run it, and file your flight log.</p>
+
+<p>A readiness gate, not a feature tour. You build on the altitude you'll use at Team Week, so any setup or access problem surfaces now instead of on the day.</p>
+
+<ul class="brief-stats">
+<li><strong>~45 min</strong> · one call</li>
+<li><strong>1 skill</strong> · built and run</li>
+<li><strong>1 flight log</strong> · filed either way</li>
+</ul>
 
 </div>
 
 ## What you need
 
-| | |
-| --- | --- |
-| **One altitude you can open today** | Cowork, Scout, or Code |
-| **A work-safe idea** | Something real enough to be useful, with nothing confidential in it |
-| **Somewhere to save a `.md` file** | Your machine or OneDrive |
+Your altitude, set up and signed in. The [quick-start guide](/quick-start/) lists the exact requirements and a "you're ready when…" check for each one — run through it first if you haven't already.
 
-::: warning Keep your screenshots clean
-You'll capture proof your skill works. Show only enough to prove it. No customer names, no personal data, no confidential content.
-:::
+Beyond that, all you need is **a work-safe idea** for your skill: something real enough to be useful, with nothing confidential in it.
+
+**Keep your proof clean.** You'll screenshot your skill working — show only enough to prove it. No customer names, no personal data, no confidential content.
 
 ## Watch this first
 
-::: danger Video not linked yet
-The pre-flight safety video is scripted but not yet published. This block gets the embed once the video exists.
-:::
+🎬 *Pre-flight safety video — scripted, publishing soon. The embed lands here once it's live.*
 
 ## 1 · Pick your altitude
 
-Pick where you can get something done. This is not a commitment for Team Week, and you can switch later.
+Pick where you can get something done today. This isn't a Team Week commitment — you can switch later.
 
 <AltitudePicker />
 
-::: tip Code is validated here, not taught
-If your Code setup isn't working, don't spend the call on it. Switch to Cowork or Scout, build your skill, and flag the blocker on your flight log.
-:::
+**Code is validated here, not taught.** If your setup won't cooperate, don't burn the call on it. Switch to Cowork or Scout, build your skill, and flag the blocker on your flight log.
 
-## 2 · Build a skill
+## 2 · Build your skill
 
-::: tip Keep it small
-You have plenty of time. Spend it on a skill that's genuinely useful, not a big one. A skill that does one thing well is the goal.
-:::
+A skill is three things: a **name**, a **description**, and **instructions**. Keep it small — one skill, one task.
 
-A skill is a name, a description, and instructions. Start from one of these, or use your own:
+Start from one of these everyday ideas, or bring your own:
 
 | | |
 | --- | --- |
@@ -63,7 +58,7 @@ A skill is a name, a description, and instructions. Start from one of these, or 
 | **Content reviewer** | Checks a draft against your team's voice |
 | **Speaker bio generator** | Turns a role and history into a short bio |
 
-The description is what makes a skill fire, so say when to use it, not just what it does.
+**The description is what tells the agent when to use a skill** — write *when to use it*, not just what it does.
 
 <AltitudeOnly track="cowork">
 
@@ -134,16 +129,16 @@ Prefer the terminal? Put the same file in `~/.agents/skills/meeting-recap/SKILL.
 
 </AltitudeOnly>
 
-**Done when:** the skill is saved and its description says when to use it. Screenshot it.
+**Done when:** you start a fresh session, describe the task in your own words, the skill runs on its own, and you capture a screenshot showing it worked. Skills are discovered at the start of a session, so testing requires a new session.
 
-### Want to go further?
+### Finish early? Make it your own
 
-A skill is complete with just `SKILL.md`. If you finish early, two optional add-ons, both real hack skills:
+A skill is complete with just `SKILL.md`. If you have time, two optional add-ons to push it further:
 
-- **A reference file.** Put a Markdown file in the same folder as your `SKILL.md` - a style guide, a team glossary, an FAQ - and point to it from your instructions. The skill can pull it in when it runs, so you don't paste that context into every prompt.
-- **A script.** Put a script in the folder and tell `SKILL.md` when to run it. Use this when the skill needs to *do* something, not just read something.
+- **A reference file.** Drop a Markdown file beside your `SKILL.md` - a style guide, a glossary, an FAQ - and point to it from your instructions. The skill pulls it in when it runs, so you stop re-pasting the same context every prompt.
+- **A script.** Put a script in the folder and tell `SKILL.md` when to run it. Use this when the skill needs to **do** something, not just read something.
 
-Neither is required to be cleared. They're here because the scenarios on the day lean on both.
+Neither is required to be cleared.
 
 ## 3 · File your flight log
 
@@ -216,17 +211,18 @@ So anything blocking you today gets fixed before Team Week, rather than on the d
 
 ## For facilitators
 
-::: details Run of show
+::: details Run of show (45 min)
 
 | Time | Segment | What you do |
 | --- | --- | --- |
 | 0:00 | Boarding | Welcome, name the finish line, point everyone at this page |
-| 0:05 | Pick altitude | Explain the three, everyone opens one |
-| 0:10 | Build a skill | Coaches help with navigation and access. Point early finishers at the reference file and script add-ons |
-| 0:45 | File the flight log | Open the form together |
-| 0:53 | Clearance | Read the three statuses, route blockers |
+| 0:04 | Pick altitude | Explain the three, everyone opens one and confirms access |
+| 0:10 | Build a skill | Coaches help with navigation and access, not skill design |
+| 0:28 | Run it | Everyone starts a fresh session, runs their skill, and screenshots the proof. Point early finishers at the make-it-your-own add-ons |
+| 0:36 | File the flight log | Open the form together |
+| 0:42 | Clearance | Read the three statuses out loud, route blockers |
 
-Call a time check at 0:30 and 0:45.
+Call a time check at 0:20 and 0:35.
 
 If someone is stuck for more than a few minutes, log the blocker and hand them a starter so they keep moving. Don't debug an environment in front of the room.
 

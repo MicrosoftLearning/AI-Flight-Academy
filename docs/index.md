@@ -71,8 +71,6 @@ hero:
 
 ## Before Team Week - Scenario 0 {#scenario-0}
 
-<p class="home-section-intro is-wide">A 60-minute call on September 11 or 12. Build a skill and file a flight log, so anything blocking you gets fixed before the day.</p>
-
 <div class="lab-grid lab-grid-2">
   <a class="lab-card" href="/AI-Flight-Academy/scenarios/scenario-0">
     <span class="lab-card-emoji">🛫</span>
