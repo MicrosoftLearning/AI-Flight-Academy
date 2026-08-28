@@ -69,21 +69,6 @@ hero:
 
 <div class="home-section">
 
-## Before Team Week - Scenario 0 {#scenario-0}
-
-<div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/scenarios/scenario-0">
-    <span class="lab-card-emoji">🛫</span>
-    <span class="lab-card-title">Scenario 0 · Flight Clearance</span>
-    <span class="lab-card-desc">Build a skill and file a flight log. Turn up to Team Week with your tools already working.</span>
-    <span class="lab-card-cta">Get cleared →</span>
-  </a>
-</div>
-
-</div>
-
-<div class="home-section">
-
 ## Start here - pick your altitude {#start-here}
 
 <p class="home-section-intro is-wide">Two clicks and you're building. Every scenario runs at every altitude - pick the tools you want open for two hours.</p>
