@@ -126,17 +126,13 @@ It reads `CandidateProfiles.csv` and nothing else. It can say someone's work "ge
 
 Those are the three conditions, and they're where the next 60 minutes go.
 
-<div class="table-check">
-  <div class="table-check-icon">👥</div>
-  <div class="table-check-body">
-    <span class="table-check-label">Table check</span>
-    <p>One line each: which definition did you run, and one name it found that the shipped one missed. Anyone whose skill isn't loading, say so now rather than at the end.</p>
-  </div>
-</div>
-
 ## 2 · Build
 
 **Done when:** one condition is met, on real output, with a name on screen.
+
+::: tip 🎈 This is the fun part - keep it low-stress
+Pick whatever direction sounds good and build it with your table. It doesn't have to be perfect, and it doesn't have to solve everything - the whole point is to explore your tool, trade ideas, and vibe-code something together. Use whatever you came here to learn, see how far you get, and have fun with it. You're here to learn by doing.
+:::
 
 ### Where the room is
 
@@ -173,14 +169,6 @@ Starting points if you want one. Take one, combine two, or ignore all of them.
 `references/DEFINITION.md` is what the program wants. `references/PLAYBOOK.md` is how the program runs. A new capability, like reading another file or checking a claim, belongs in its own reference file. Say *"add that as a new reference file, don't put it in the definition"* and Cowork writes it where it belongs.
 :::
 
-<div class="table-check">
-  <div class="table-check-icon">👥</div>
-  <div class="table-check-body">
-    <span class="table-check-label">Table check</span>
-    <p>Two minutes round the table: which condition are you going after, and who's doing what? Out loud, before anyone types.</p>
-  </div>
-</div>
-
 ### Build in layers
 
 Get one real name on screen before you add anything:
@@ -197,14 +185,6 @@ The more specific your ask, the less you'll undo:
 | *"Use the peer data"* | *"Weigh peer comments with evidence depth of 'repeated pattern' above single events, and show me who enters the shortlist as a result."* |
 | *"Make it fairer"* | *"Show me whether the shortlist skews by region, and name anyone you can't trace to a record."* |
 | *"Make it better"* | *"For each name, cite the file and row that supports the claim."* |
-
-<div class="table-check">
-  <div class="table-check-icon">👥</div>
-  <div class="table-check-body">
-    <span class="table-check-label">Table check</span>
-    <p>Halfway: does it produce output? If not, cut what it does in half and get one real name on screen before adding anything back.</p>
-  </div>
-</div>
 
 ## Push it further
 

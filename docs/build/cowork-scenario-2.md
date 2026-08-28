@@ -142,14 +142,6 @@ Every position is grounded in the team's card - what it owns, who it serves. If 
 Ask Cowork to draft a team's charter from your own work - *"draft the Content & Insights charter from what you can see"* - then correct it. Treat it as a first draft, not the answer.
 :::
 
-<div class="table-check">
-  <div class="table-check-icon">📨</div>
-  <div class="table-check-body">
-    <span class="table-check-label">Table check</span>
-    <p>Bring proof, not contents: one request, three teams, three different positions - and the plan they split on.</p>
-  </div>
-</div>
-
 ## 3 · Land the decision
 
 **Done when:** you've turned the positions into one routing decision - owner, audience, and a build-once/reuse plan - and named the next step.

@@ -94,14 +94,6 @@ You'll fix the rest in step 2, once you've seen which lines actually change an a
 
 Your twin finishes by **triaging what actually landed** in your mail and Teams, so you leave this step having watched it work rather than having read about it.
 
-<div class="table-check">
-  <div class="table-check-icon">👥</div>
-  <div class="table-check-body">
-    <span class="table-check-label">Table check</span>
-    <p>What did your twin get right that you didn't expect? And what did it get wrong?</p>
-  </div>
-</div>
-
 ## 2 · Push on it
 
 **Done when:** you've asked three real questions and fixed the line behind an answer you didn't like.
@@ -155,17 +147,13 @@ Fifteen sections drawn from your real work, each tagged:
 
 A line earns its place when it changes what your twin does - a name, a date, a threshold, something you'd never agree to without checking first. *"I value collaboration"* is true and changes nothing.
 
-<div class="table-check">
-  <div class="table-check-icon">👥</div>
-  <div class="table-check-body">
-    <span class="table-check-label">Table check</span>
-    <p>Name the <em>kind</em> of rule that changed an answer - a priority, a boundary, a check, a trade-off. Keep the people and dates to yourself.</p>
-  </div>
-</div>
-
 ## 3 · Build on it
 
 **Done when:** something's running that uses your twin, and you'd open it again tomorrow.
+
+::: tip 🎈 This is the fun part - keep it low-stress
+Pick whatever direction sounds good and build it with your table. It doesn't have to be perfect, and it doesn't have to solve everything - the whole point is to explore your tool, trade ideas, and vibe-code something together. Use whatever you came here to learn, see how far you get, and have fun with it. You're here to learn by doing.
+:::
 
 ### Pick a direction
 
@@ -181,14 +169,6 @@ Six starting points below. Take one as it is, combine two, or build something sp
 | 🎯 **Yours** | Whatever your job runs on: approvals, escalations, renewals, handoffs | *"I want my twin to [what]. Work out what that needs and build the smallest version first."* |
 
 **Pick by pain, not novelty** - something you forgot, chased, or redid by hand last week.
-
-<div class="table-check">
-  <div class="table-check-icon">👥</div>
-  <div class="table-check-body">
-    <span class="table-check-label">Table check</span>
-    <p>Two minutes round the table: what are you building, and what pain does it fix? Out loud, before anyone opens Scout.</p>
-  </div>
-</div>
 
 ### Split the work
 
@@ -232,14 +212,6 @@ The more specific your prompt, the less you'll have to undo afterwards:
 ::: warning You approve before anything goes out
 Keep the last step yours. Whatever you build should draft, show you who it's addressed to and what it says, then wait for a yes.
 :::
-
-<div class="table-check">
-  <div class="table-check-icon">👥</div>
-  <div class="table-check-body">
-    <span class="table-check-label">Table check</span>
-    <p>Halfway: is it running? If not, halve what it does and get <em>something</em> working before adding anything back.</p>
-  </div>
-</div>
 
 ## Push it further
 

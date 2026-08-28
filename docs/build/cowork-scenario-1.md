@@ -69,7 +69,7 @@ There are coaches moving around the room and an SME at every table. Wave one ove
 ::: tip How your table works
 **You each build your own**, and nobody has to show theirs. Yours reads your real mail and holds your real rules.
 
-At each table check, bring **proof, not contents** - one thing that changed, one thing it got wrong, one thing you had to teach it. Nobody needs to see the email or the rule behind it.
+When you compare notes with your table, bring **proof, not contents** - one thing that changed, one thing it got wrong, one thing you had to teach it. Nobody needs to see the email or the rule behind it.
 :::
 
 ## Before you start
@@ -157,14 +157,6 @@ You'll get a position, not a list of options. Whether you agree with it is what 
 Cowork only loads your twin when you name it - *"using my twin"*, *"ask my twin"*. Leave that out and you'll get an ordinary Copilot answer, not your twin's.
 :::
 
-<div class="table-check">
-  <div class="table-check-icon">👥</div>
-  <div class="table-check-body">
-    <span class="table-check-label">Table check</span>
-    <p>What did it get right about you that you didn't expect? And what did it get badly wrong?</p>
-  </div>
-</div>
-
 ## 2 · Check what it learned
 
 **Done when:** the lines it drew from your work context say what you'd actually say, and a request you'd already run comes back different.
@@ -201,17 +193,13 @@ Anything that changes what it does - a name, a date, a threshold, something you'
 Two likely reasons. The line is too vague - give it a specific action, not a description. Or your test didn't need it: a rule about slipping deadlines won't move an answer that has nothing to do with dates.
 :::
 
-<div class="table-check">
-  <div class="table-check-icon">👥</div>
-  <div class="table-check-body">
-    <span class="table-check-label">Table check</span>
-    <p>Name the <em>kind</em> of rule that changed an answer - a priority, a boundary, a check, a trade-off. Keep the actual people and dates to yourself.</p>
-  </div>
-</div>
-
 ## 3 · Teach it something it doesn't know
 
 **Done when:** everyone at the table has built the same reference, and each of you can show an answer that changed because of it.
+
+::: tip 🎈 This is the fun part - keep it low-stress
+Pick whatever direction sounds good and build it with your table. It doesn't have to be perfect, and it doesn't have to solve everything - the whole point is to explore your tool, trade ideas, and vibe-code something together. Use whatever you came here to learn, see how far you get, and have fun with it. You're here to learn by doing.
+:::
 
 Your twin answers well now. It takes a position, it drafts in your voice, it stops when one of your rules says stop.
 
@@ -307,14 +295,6 @@ Two things make it work: it says **when to read it** at the top, and every line 
 ::: warning Nothing sends on its own
 Whatever you build, keep it drafting and waiting. That's the difference between something you'd use on Monday and something you'd switch off.
 :::
-
-<div class="table-check">
-  <div class="table-check-icon">👥</div>
-  <div class="table-check-body">
-    <span class="table-check-label">Table check</span>
-    <p>Show the answer that changed once your reference was in. If it isn't working yet, say what you tried - someone else may have hit the same wall.</p>
-  </div>
-</div>
 
 ## Push it further
 
