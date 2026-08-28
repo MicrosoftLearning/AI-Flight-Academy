@@ -146,7 +146,7 @@ One short form. Your altitude, proof it works, and whether you're ready.
 
 | Status | Pick this when |
 | --- | --- |
-| 🟢 **Cleared for takeoff** | You built and saved a skill and your altitude works |
+| 🟢 **Cleared for takeoff** | You built a skill and ran it |
 | 🟡 **Taxiing** | You're close and have a small issue left |
 | 🔴 **Needs ground crew support** | Something blocks you from using the tool at all |
 

@@ -105,17 +105,13 @@ Keep that local - nothing personal belongs in a shared repo. `DISCLAIMER.md` has
 
 Try changing a rule to see it land. Open `references/persona.md`, edit section 12 (Jordan's bar), and re-run the same question - the answer moves with the file.
 
-<div class="table-check">
-  <div class="table-check-icon">👥</div>
-  <div class="table-check-body">
-    <span class="table-check-label">Table check</span>
-    <p>One line each: what rule did your twin cite, and did the answer change when you edited it? Then decide what you're building before anyone writes code.</p>
-  </div>
-</div>
-
 ## 2 · Build something that runs headless
 
 **Done when:** something runs without you typing into a chat, and it does it the way you would.
+
+::: tip 🎈 This is the fun part - keep it low-stress
+Pick whatever direction sounds good and build it with your table. It doesn't have to be perfect, and it doesn't have to solve everything - the whole point is to explore your tool, trade ideas, and vibe-code something together. Use whatever you came here to learn, see how far you get, and have fun with it. You're here to learn by doing.
+:::
 
 ### Pick a direction
 
@@ -133,19 +129,15 @@ Six starting points, plus your own. Take one, combine two, or build something sp
 
 **Pick by pain, not novelty** - something you forgot, chased, or redid by hand last week.
 
+::: tip 🔌 Eyeing the MCP server option? You don't have to build one
+Before you write a server, browse the [MCP Registry](https://github.com/mcp) - there may already be one that does what you need. Wiring an existing server into VS Code or the Copilot CLI is usually a small config change, and it's a faster way to give your twin a new capability than building it from scratch.
+:::
+
 ::: warning Three of these can eat your session
 **Twin vs twin** needs three agent turns per round, so a single iteration costs a few minutes. **The time machine** is only interesting if you already have a decision in mind and know how it turned out. **A daemon** that loops before it works once will burn the clock quietly.
 
 All three are good builds. Just get one pass working before you add the second call, the second twin, or the loop.
 :::
-
-<div class="table-check">
-  <div class="table-check-icon">👥</div>
-  <div class="table-check-body">
-    <span class="table-check-label">Table check</span>
-    <p>Two minutes round the table: what are you building, and what does it run on - a hook, a timer, a request? Out loud, before anyone opens an editor.</p>
-  </div>
-</div>
 
 ### Split the work
 
@@ -215,23 +207,6 @@ Read it for the pattern - gather input, bound it, ask for JSON, act on the verdi
 ::: warning You approve before anything goes out
 Your twin drafts, flags and reports. Sending, committing and posting stay yours - whatever you build should hand the decision back.
 :::
-
-<div class="table-check">
-  <div class="table-check-icon">👥</div>
-  <div class="table-check-body">
-    <span class="table-check-label">Table check</span>
-    <p>Halfway: is it running end to end, even badly? If not, cut it down until something works before adding anything back.</p>
-  </div>
-</div>
-
-## Push it further
-
-1. **Make it disagree with you** - have it flag where your own rules contradict each other.
-2. **Give it a memory** - a file it appends to, so the next run knows what the last one found.
-3. **Make it prove itself** - fixtures with known answers, so you can tell when a spec edit breaks something that used to work.
-4. **Put it in CI** - a workflow step instead of a local hook.
-5. **Let another agent call it** - wire `mcp_server.py` into VS Code and ask Copilot to consult your twin mid-task.
-6. **Take the rules with you** - `persona.md` and `voice.md` are plain text, so they move to Cowork or Scout unchanged.
 
 ---
 
