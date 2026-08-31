@@ -65,6 +65,17 @@ def voice() -> str:
 
 @mcp.tool(
     description=(
+        "How the user judges work in their domain: what they block, what they only "
+        "comment on, and what they leave alone. Read this before reviewing, rating, or "
+        "approving anything on their behalf."
+    )
+)
+def standards() -> str:
+    return _reference("standards")
+
+
+@mcp.tool(
+    description=(
         "Ask the twin to take a position on a situation, applying the user's own rules. "
         "Returns a decision and the rule behind it. Takes about a minute - it runs a "
         "full agent turn. Prefer persona() when you only need the rules themselves."

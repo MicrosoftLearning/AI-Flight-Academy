@@ -27,7 +27,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from twin import TwinError, ask_json  # noqa: E402
+from twin import TwinError, ask_json, remember  # noqa: E402
 
 # A large diff costs time and adds little - the twin only needs enough to judge the
 # change, and a review that takes four minutes will not survive contact with a hook.
@@ -42,9 +42,9 @@ PROMPT = """Return a single JSON object with these keys, and nothing else:
   rule     - the line from persona.md that drove the verdict, quoted
 
 The task: using my twin, review this diff the way I would review a colleague's pull
-request. Apply my own standards from persona.md - my bar, my non-negotiables, what I
-check before committing. Do not give generic code-review advice: if my files do not
-cover something, leave it alone.
+request. Apply my own standards from persona.md and standards.md - my bar, my
+non-negotiables, what I block, what I only comment on, what I leave alone. Do not give
+generic code-review advice: if my files do not cover something, leave it alone.
 
 Everything you need is below. Do not run any commands, do not look at the repository,
 and do not check git state.
@@ -139,6 +139,12 @@ def main() -> int:
         print(f"  rule: {review['rule']}")
     if truncated:
         print(f"  (reviewed the first {MAX_DIFF_CHARS} characters of the diff)")
+
+    # Log the verdict so the next review starts from what this one found. The program
+    # writes it, not the twin - a deterministic trace, not a second agent turn.
+    if verdict in ("block", "comment", "ok"):
+        remember(f"Review: {verdict} - {review.get('summary', '')} {review.get('rule', '')}".strip())
+        print("  (noted to memory.md)")
 
     return 1 if verdict == "block" else 0
 

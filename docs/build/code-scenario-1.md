@@ -12,9 +12,7 @@ Scenario 1 is still being built and tested. Steps, downloads, and screenshots ma
 
 **You'll build this in code - VS Code, GitHub Copilot, and the Copilot CLI.**
 
-Get a twin answering from a Python call in ten minutes, then build something real around it.
-
-## What you're solving
+## The problem
 
 You already know how you work. Which trade-off you make when two things conflict, what you check before you commit, how the wording changes between a partner team and your own.
 
@@ -22,24 +20,16 @@ None of that is written down anywhere an agent can reach. So it only gets applie
 
 Today you write it down as plain files and call it from code. Once an agent can reach your twin, it can ask at commit time, on a schedule, or mid-task - and get back what you would have said.
 
-## How this runs
+## Objectives
 
-**Whatever you build has to run without a chat window.** Your output is a command, a hook, a server, a scheduled job, or a local process - that's the bar, and it's the only rule.
+Get a twin answering from a Python call, then build something real around it that runs **without a chat window** - a command, a hook, a server, a scheduled job, a local process. That's the bar, and it's the only rule.
 
-| | Step | Time |
-| --- | --- | --- |
-| **1** | **Get your twin answering from code** | 10 min |
-| **2** | **Build something that runs headless** - pick a direction, split it across your table | 90 min |
+By the end, you should have:
 
-You'll do step 1 on your own. Step 2 is where the table works together, and it's most of the session.
+- **A twin answering from code** - `python twin.py "..."` returns a position and the `persona.md` rule behind it.
+- **Something headless built on it** - a reviewer, a triage, a status drafter, an MCP server: one real thing that uses the twin and runs without you in a chat, the way you would.
 
-## Before you start
-
-::: warning The twin comes pre-populated with fictional data
-You won't write a persona today. The starter ships as **Jordan Reyes**, a made-up engineer at a fictional company, so it answers on the first command and nothing of yours goes into a shared exercise. Everything you build runs against Jordan.
-
-`DISCLAIMER.md` in the starter lists what's invented, and how to point the twin at your own work after the session.
-:::
+## Setup
 
 **Check the Copilot CLI is installed and signed in:**
 
@@ -47,26 +37,24 @@ You won't write a persona today. The starter ships as **Jordan Reyes**, a made-u
 copilot --version
 ```
 
-Missing? `npm install -g @github/copilot`, then run `copilot` once to sign in.
+Missing? `npm install -g @github/copilot`, then run `copilot` once to sign in. The starter also needs **Python 3.10+**; nothing else to install unless you build the MCP server.
 
-**Python 3.10+** for the starter. Nothing to install unless you build the MCP server.
+::: warning The twin comes pre-populated with fictional data
+You won't write a persona today. The starter ships as **Jordan Reyes**, a made-up engineer at a fictional company, so it answers on the first command and nothing of yours goes into a shared exercise. Everything you build runs against Jordan.
+
+`DISCLAIMER.md` in the starter lists what's invented, and how to point the twin at your own work after the session.
+:::
+
+### 1 · Download the starter
 
 <a class="lab-card" href="/AI-Flight-Academy/downloads/twin-code-starter.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">📦</span>
   <span class="lab-card-title">Starter</span>
-  <span class="lab-card-desc">A fictional twin, ready to answer. One call that reaches it from Python, a worked example, and an MCP server.</span>
+  <span class="lab-card-desc">A fictional twin, ready to answer. One call that reaches it from Python, four worked examples spanning code and non-code, an MCP server, and a make-it-yours interview.</span>
   <span class="lab-card-cta">Download .zip →</span>
 </a>
 
-::: tip Two places to get unstuck
-Ask Copilot - it's building with you, so paste the error and let it fix it. For mechanics like MCP or guardrails, the **[Guides](/bricks/)** are short how-tos. Coaches are in the room and every table has an SME.
-:::
-
----
-
-## 1 · Get your twin answering from code
-
-**Done when:** `python twin.py "..."` comes back with a position and the rule behind it.
+### 2 · Open it and find the twin
 
 Unzip the starter and open the folder in VS Code. **Every command on this page runs from inside `twin-code-starter/`**, so open a terminal there:
 
@@ -75,116 +63,92 @@ cd twin-code-starter
 copilot skill list
 ```
 
-`my-twin` should appear under **Project skills** - that's the CLI finding `.github/skills/` in the current folder, so it only shows up when your terminal is in the starter. There's nothing to register.
+`my-twin` appears under **Project skills** - the CLI finds `.github/skills/` in the current folder, so it only shows up when your terminal is in the starter. There's nothing to register.
 
 ```text
 twin-code-starter/
-  .github/skills/my-twin/     the twin. Found here automatically
+  .github/skills/my-twin/     the twin. Every Copilot surface finds it here
     SKILL.md                  how it answers
     references/
       persona.md              how Jordan decides
       voice.md                how Jordan writes
+      standards.md            the bar for judging work (swap for your domain)
+      memory.md               a dated log it reads before recurring work, and writes after
   twin.py                     ask the twin, from Python
-  examples/review_diff.py     a worked example that runs headless
+  onboard.py                  make it yours: an interview that replaces Jordan
+  examples/                   review a diff, decide anything, triage an inbox, draft a status
   mcp_server.py               the twin as MCP tools
 ```
 
-Ask it something:
+**`.github/skills/` is the portable spot every surface reads**, so pick whichever you like: open the folder in **VS Code** and ask *"using my twin, ..."* in chat; run the examples from the **Copilot CLI**; or commit it and let the **GitHub coding agent** use the same twin. Nothing here is CLI-only.
+
+### 3 · Ask your twin
 
 ```bash
 python twin.py "Using my twin: a teammate is blocked on my review but I'm mid-migration. What do I do?"
 ```
 
-You'll get a position and the rule from `persona.md` that produced it. That's the whole loop - everything in step 2 is a different way to ask.
+You'll get a position and the rule from `persona.md` or `standards.md` that produced it. That's the whole loop - and it's not just code. The four examples show the range:
 
-::: tip Making it yours, after the hack
-`persona.md` and `voice.md` are plain markdown in an open format. Point a Copilot surface that can see your mail and calendar at them, let it draft both from how you actually write and decide, then correct what it got wrong.
+```bash
+python examples/decide.py "should I take the on-call swap this weekend?"    # any call, as you
+python examples/triage.py examples/inbox.sample.md                          # sort an inbox, draft replies
+python examples/status.py --to manager "guard shipped; lantern slips to thu"  # a status in your voice
+python examples/review_diff.py --staged                                     # review a diff, block on a hook
+```
 
-Keep that local - nothing personal belongs in a shared repo. `DISCLAIMER.md` has the detail.
-:::
+Change a rule to see it land: open `references/standards.md`, edit what Jordan blocks, and re-run `review_diff.py` - the verdict moves with the file.
 
-Try changing a rule to see it land. Open `references/persona.md`, edit section 12 (Jordan's bar), and re-run the same question - the answer moves with the file.
+<div class="callout-bubble">
+<span class="callout-bubble-icon">🧬</span>
 
-## 2 · Build something that runs headless
+**Want it to be *you* instead of Jordan?** Run `python onboard.py` - a short interview that swaps in your own persona, voice, and standards in a few minutes. Jordan is backed up so you can compare.
 
-**Done when:** something runs without you typing into a chat, and it does it the way you would.
+</div>
 
-::: tip 🎈 This is the fun part - keep it low-stress
-Pick whatever direction sounds good and build it with your table. It doesn't have to be perfect, and it doesn't have to solve everything - the whole point is to explore your tool, trade ideas, and vibe-code something together. Use whatever you came here to learn, see how far you get, and have fun with it. You're here to learn by doing.
-:::
+## The hack
+
+Now build something that runs headless - no chat window. Pick a direction with your table, split it into pieces, and build in small steps.
 
 ### Pick a direction
 
-Six starting points, plus your own. Take one, combine two, or build something specific to how you work.
+Take one, combine two, or build something specific to how you work.
 
 | | What it is | Your first ten minutes |
 | --- | --- | --- |
-| 🔍 **A reviewer that reviews like you** | Your standards and your recurring notes, applied to a diff before anyone else sees it | `examples/review_diff.py` already does this. Run it on a real diff, then change one rule in `persona.md` and watch the verdict move |
-| 😈 **A devil's advocate** | Steel-mans the opposite of whatever you just decided, using your own rules | One script, one argument: `python advocate.py "I'm going to ship it Friday"`. Ask for JSON with `strongest_objection` and `rule` |
-| ⏮️ **A time machine** | Replay a decision you made months ago, giving the twin only what you knew then | Write `decisions/one.json` with `known_then`, `what_i_did`. One call, then print the twin's call next to yours |
-| 🔌 **An MCP server** | Your twin as a tool any agent can reach - VS Code Copilot, another twin | From the starter folder: `pip install -r requirements.txt`, then `python mcp_server.py`. Confirm VS Code sees it, then add one tool worth calling |
-| 👻 **A daemon** | Watches a folder, a repo or a queue and flags what it finds, without being asked | One dry pass over one folder, five files maximum, findings written to a local file. Add the loop only once that works |
-| 🥊 **Twin vs twin** | Two specs argue the same call and have to converge | Two `references/` folders, both synthetic. Each returns JSON with `position` and `rule`; a third call returns `agree` or `next_question` |
-| 🎯 **Yours** | Anything that needs code and runs without a chat window | Write the command you wish existed, hard-code one input, and make that single case work end to end |
+| 🔍 **A reviewer that reviews like you** · code | Your bar and your recurring notes, applied to a diff before anyone else sees it | `examples/review_diff.py` already does this. Run it on a real diff, then change a rule in `standards.md` and watch the verdict move |
+| 📥 **A desk that clears your inbox** · non-code | Sorts what came in and drafts each reply the way you'd send it | `examples/triage.py` is the start. Point it at your own (work-safe) list, then add a bucket your job actually needs |
+| ✍️ **A drafter in your voice** · non-code | Turns rough notes into the update, reply, or summary you'd have written | `examples/status.py` drafts a status. Fork it for the thing you write most - a PR description, a weekly note, a decline |
+| 🧠 **A twin that remembers** | Reads what it did last time before it acts, so it gets sharper across a session | `decide.py --remember` and `review_diff.py` already log to `memory.md`. Build something that reads it first and changes its call because of it |
+| 😈 **A decision desk** | Takes a position on anything - or steel-mans the opposite, using your own rules | `examples/decide.py` returns position + rule as JSON. Add a second call that argues back before you commit |
+| 🔌 **An MCP server** | Your twin as a tool any agent can reach - GitHub Copilot in VS Code, the CLI, another twin | From the starter: `pip install -r requirements.txt`, then `python mcp_server.py`. Confirm VS Code sees it, then add one tool worth calling |
+| 🎯 **Yours** | Anything that runs without a chat window, code or not | Write the command you wish existed, hard-code one input, and make that single case work end to end |
 
-**Pick by pain, not novelty** - something you forgot, chased, or redid by hand last week.
+<div class="callout-bubble">
+<span class="callout-bubble-icon">🔗</span>
 
-::: tip 🔌 Eyeing the MCP server option? You don't have to build one
-Before you write a server, browse the [MCP Registry](https://github.com/mcp) - there may already be one that does what you need. Wiring an existing server into VS Code or the Copilot CLI is usually a small config change, and it's a faster way to give your twin a new capability than building it from scratch.
-:::
+**Ground it in your real work with Work IQ.** The twin reads static files today. To answer from your actual mail, calendar, Teams, and files, connect the [Work IQ MCP server](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview) - an existing Microsoft server, so there's nothing to build. It's the same Work IQ the Cowork and Scout altitudes use, reachable here as a tool. Needs a Microsoft 365 sign-in, so treat it as a stretch. For other capabilities, the [MCP Registry](https://github.com/mcp) is worth a browse before you write a server of your own.
 
-::: warning Three of these can eat your session
-**Twin vs twin** needs three agent turns per round, so a single iteration costs a few minutes. **The time machine** is only interesting if you already have a decision in mind and know how it turned out. **A daemon** that loops before it works once will burn the clock quietly.
-
-All three are good builds. Just get one pass working before you add the second call, the second twin, or the loop.
-:::
+</div>
 
 ### Split the work
 
-Pick one direction, then **take one piece each that runs on its own**. The natural seams:
+Take one piece each that runs on its own, along the natural seams:
 
 | Piece | Owns |
 | --- | --- |
-| **The trigger** | What starts it - the hook, the timer, the request |
-| **The input** | What gets gathered and how much. Bounds, filters, what's noise |
-| **The call** | The prompt and the shape that comes back. Where your rules get applied |
-| **The output** | Where it lands - exit code, comment, file, notification |
+| **Trigger** | What starts it - a hook, a timer, a request |
+| **Input** | What's gathered, and its bounds |
+| **Call** | The prompt and the shape that comes back - where your rules get applied |
+| **Output** | Where it lands - exit code, comment, file |
 
-**Stub the seams first** - fake input, a fake twin response, fake output - so the whole thing runs end to end in five minutes. Then each person replaces one fake with the real thing.
+**Stub every seam first** - fake input, fake twin reply, fake output - so the whole thing runs end to end in five minutes. Then each person swaps one fake for the real thing.
 
-If your direction doesn't split cleanly that way, split by **case** instead: one person per test case, fixture or question, each independently runnable. Merge the best ones at the end.
+### Build it in layers
 
-Share the **prompt that worked** and the **shape you settled on** - you're all running against the same twin, so there's nothing to keep back.
+Two constraints shape every build here: **a call takes 20-60 seconds** - a full agent turn, so bound what you read (one diff, one fixture) and never call per-file or in a loop - and **ask for JSON when a program reads the answer** (`ask_json()` returns a parsed object; prose is useless to a parser).
 
-### Two things that will shape the design
-
-**A call takes 20 to 60 seconds.** It's a full agent turn, not a completion. Put the bound in the first version rather than the fifth - one diff, one fixture, one folder, one question. Anything that calls the twin per-file or in a poll loop will be slower than anyone will wait for.
-
-**Ask for JSON when a program reads the answer.** `ask_json()` appends the instruction, strips a code fence if the model adds one, and gives you a parsed object:
-
-```python
-from twin import ask, ask_json
-
-ask("Using my twin: should I take this on before Friday?")
-
-ask_json("Using my twin: rate this change. Keys: verdict, reason.")
-```
-
-### Build in layers
-
-1. **The skeleton** - trigger fires, calls a stub, writes something. No twin yet
-2. **One real call** - swap the stub for `ask()`, print what comes back
-3. **A shape** - move to `ask_json()` so the output is parseable
-4. **Your rules** - make sure it's citing `persona.md` and not answering generically
-5. **A bound** - cap what it reads and how often it runs
-
-The more specific your prompt, the less you'll undo afterwards:
-
-| Vague | Specific |
-| --- | --- |
-| *"Review this code"* | *"Review this diff the way I would. Apply my bar from persona.md. If my files don't cover something, leave it alone."* |
-| *"Is this risky?"* | *"Return JSON: verdict (block/warn/ok), reason (one sentence), and the persona.md line behind it."* |
-| *"Make it better"* | *"Cite which rule decided each note, so I can tell when it's guessing."* |
+Then layer up: a skeleton on a stub, one real `ask()`, `ask_json()` for a parseable shape, your rules (make sure it cites `persona.md` or `standards.md`), a bound. Be specific - *"review this diff the way I would; apply my bar from standards.md; leave what my files don't cover"* beats *"review this code."*
 
 ::: details The worked example, if you want a running start
 
@@ -207,6 +171,12 @@ Read it for the pattern - gather input, bound it, ask for JSON, act on the verdi
 ::: warning You approve before anything goes out
 Your twin drafts, flags and reports. Sending, committing and posting stay yours - whatever you build should hand the decision back.
 :::
+
+## After today
+
+This is a starting point, not the finish line. You got a twin answering from code and built one headless thing on it - against fictional Jordan, so nothing of yours went into a shared exercise.
+
+Making it yours is the next step, and there are two ways. Run `python onboard.py` for a short interview that writes your own `persona.md`, `voice.md`, and `standards.md` - or edit them by hand, pointing a Copilot surface that can see your mail and calendar at them and correcting what it drafts. Keep that local - nothing personal belongs in a shared repo; `DISCLAIMER.md` has the detail. Everything you built today runs against your own twin unchanged.
 
 ---
 
