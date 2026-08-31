@@ -12,73 +12,32 @@ Scenario 1 is still being built and tested. Steps, downloads, and screenshots ma
 
 **You'll build this in Cowork. No code, and no experience needed.**
 
-## What you're solving
+## The problem
 
-Copilot already personalizes. It has memory, and **Work IQ** reads your mail, Teams and calendar. So it knows a surprising amount about how you work - you just can't see any of it, correct it, or take it anywhere else.
+Copilot already knows a lot about how you work. Its memory and Work IQ read across your mail, calendar, and Teams, so most drafts start close to right.
 
-So each session you re-brief it from scratch, or fix the output by hand.
+What it can't do is show you the picture it's formed of you, let you fix where it's wrong, or carry it into another tool. The calls you actually make - which priority wins when two collide, what you never send without checking, whose sign-off you wait for - it just re-guesses, session after session. So you re-brief it from scratch each time, and rewrite most of what it hands back.
 
-Today you point Work IQ at your own work, get what it finds written down as two files you can read and correct.
+## Objectives
 
-## What you'll walk out with
-
-**A colleague who already knows how you work.** Not a chatbot you brief from scratch every time - something that carries an accurate memory of your job into every request.
-
-You don't build it from scratch. **The twin works within minutes of installing it**, and the rest of the session is spent making it accurate and teaching it something it doesn't know.
-
-It starts with two reference documents:
+Build a **digital twin**: a `SKILL.md` plus a `references/` folder that hold how you work. Cowork writes the first version from your own mail, calendar, and Teams; you spend the session making it accurate and teaching it what it can't infer.
 
 | File | Holds |
 | --- | --- |
-| **`persona.md`** | The memory. Who you are and how you decide - who you serve, what wins when priorities collide, what you check before committing, and what's live right now |
+| **`persona.md`** | Who you are and how you decide - who you serve, what wins when priorities collide, what you check before committing, and what's live right now |
 | **`voice.md`** | How you write, plus a few of your own messages kept verbatim, so what comes out sounds like you rather than like Copilot |
 
-Both get written for you by **Work IQ**, from your own mail, Teams and calendar. **`persona.md` arrives filled in, built from what your work actually shows** - and some of it will need correcting, because your work proves what you did, not why you did it. Every line is tagged with how directly it knows, and going through those tags is step 2.
+By the end, your twin should:
 
-::: tip Nothing here is coding
-Everything is a sentence typed into a chat box. Cowork writes and saves the files for you - you never open one.
+- **Sound like you** - draft in your voice and take the positions you'd take, with a rule you can point to behind each one.
+- **Match how you actually work** - you've corrected the first read it wrote of you, fixing what it got wrong.
+- **Know what it couldn't infer** - you've added the context your history can't show: the people you deal with, what you've committed to, what's already been decided.
 
-Two things worth knowing before you start:
+## Setup
 
-- **Nothing sends.** Your twin drafts and waits. It can't email anyone.
-- **You can always look, and always start over.** *"Show me my persona.md"* prints it in the chat. *"Rebuild my twin"* does exactly that.
-:::
+Three quick steps to a working twin. **Open [Cowork](https://copilot.cloud.microsoft/cowork)** - if it doesn't load, grab a coach.
 
-## How this runs
-
-Three steps. The first two are quick; the third is the build.
-
-| | Step | You're done when |
-| --- | --- | --- |
-| **1** | **Let it read you** | It shows you two files built from your own work, and answers a real question the way you would |
-| **2** | **Check what it learned** | The lines it drew from context say what you'd actually say, and a request you'd already run comes back different |
-| **3** | **Teach it something it doesn't know** | Your table's reference works, and you can show an answer that changed because of it |
-
-**Steps 1 and 2 you do on your own**, at your own pace. **Step 3 you do as a table**, and it's where the rest of the time goes.
-
-Every step gives you a line you can paste. **Change it - it's a starting point, not the answer.**
-
-::: tip When you get stuck, ask Cowork
-Nobody expects you to already know how to do this. Cowork is the thing you're building with **and** the thing that helps you build it - use it both ways all day.
-
-Any time you're unsure what to type, or something doesn't behave, say so in the chat.
-
-There are coaches moving around the room and an SME at every table. Wave one over rather than stalling on something they'll fix fast.
-:::
-
-::: tip How your table works
-**You each build your own**, and nobody has to show theirs. Yours reads your real mail and holds your real rules.
-
-When you compare notes with your table, bring **proof, not contents** - one thing that changed, one thing it got wrong, one thing you had to teach it. Nobody needs to see the email or the rule behind it.
-:::
-
-## Before you start
-
-**Check you have this:** Microsoft 365 Copilot with Cowork. Open [copilot.cloud.microsoft/cowork](https://copilot.cloud.microsoft/cowork) - it should load Cowork rather than turning you away. If it doesn't, tell a coach now.
-
-**It uses your own mail and calendar.** It only ever sees what you can already see, and nothing you build is shared.
-
-**Download this:**
+### 1 · Download your twin
 
 <a class="lab-card" href="/AI-Flight-Academy/downloads/my-twin-SKILL.md" download="SKILL.md" style="max-width:30rem">
   <span class="lab-card-emoji">🧬</span>
@@ -87,15 +46,7 @@ When you compare notes with your table, bring **proof, not contents** - one thin
   <span class="lab-card-cta">Download SKILL.md →</span>
 </a>
 
-::: tip Stuck on a mechanic?
-The **[Guides](/bricks/)** in the top nav are short how-tos for the Cowork basics this scenario leans on - getting set up, connecting to your work, running something on a schedule. They're written for any scenario, not this one, so they won't repeat these steps. Open one in a new tab if a mechanic trips you up.
-:::
-
-## 1 · Let it read you
-
-**Done when:** it has shown you `persona.md` and `voice.md` built from your own work, and answered a real question the way you would.
-
-Install the skill you downloaded:
+### 2 · Install it
 
 1. In Cowork, open **Customize** in the left menu.
 2. Open the **Skills** tab.
@@ -104,27 +55,27 @@ Install the skill you downloaded:
 
 ![The twin showing under Your skills on the Cowork Customize page](/img/twin-forge-uploaded.png)
 
-::: details How skills work, if you're curious
-A skill is a plain text file with instructions in it. Cowork reads it and follows it. That's the whole idea.
+::: details How a skill works
+A skill is a plain-text Markdown file, `SKILL.md`, containing instructions Cowork loads and follows.
 
-The top few lines tell Cowork *when* to use the skill - it matches on the **description**, so that's where the phrases you'd actually type belong. Everything below is what to do.
+The file opens with frontmatter - a `name` and a `description`. Cowork chooses which skill to load by matching your request against the `description`, so the description defines when the skill applies. The body below the frontmatter is the instructions.
 
-Skills are saved in your OneDrive under `Documents/Cowork/skills/`. A skill can come with extra `.md` files in a `references/` folder - background it reads when it needs to. Those are its **references**, and that's exactly what your twin is about to write for itself.
+Skills are saved in your OneDrive under `Documents/Cowork/skills/<name>/`. A skill can include a `references/` folder of additional `.md` files; the skill reads them when its instructions call for them. Your twin writes its own references there.
 
-Skills use an open standard, so the same files also work in VS Code Copilot without changing anything.
+`SKILL.md` follows the Agent Skills open standard, so the same files run in other tools that support it, such as GitHub Copilot in VS Code.
 :::
 
-Then **start a new task** - a task is one conversation, like a new chat - and say:
+### 3 · Build it
+
+Start a new task and type in the following prompt:
 
 ```text
 Set up my twin.
 ```
 
-It tells you what it's about to read and waits for a yes. Then it reads your sent mail, your Teams messages and about a month of calendar, and comes back with a draft of both files and the evidence behind each line.
+It tells you what it's about to read and waits for a yes, then reads your sent mail, Teams messages, and about a month of calendar. **Its access is read-only** - it can only see what you already have access to, and it has no permission to send or share anything.
 
-**Your job here is to correct it.** It's working from what your mail proves, which is not the same as what you'd say about yourself.
-
-When you're happy with it, it writes itself:
+It comes back with a draft of both files and writes itself into your OneDrive:
 
 ```text
 Documents/Cowork/skills/my-twin/
@@ -135,31 +86,35 @@ Documents/Cowork/skills/my-twin/
     setup.md        ← how far it got, so it can pick up if you get pulled away
 ```
 
-**A skill plus references - that's all a twin is.** Everything in `references/` gets read before it answers anything. Step 3 is about adding to that folder.
+Everything in `references/` is read automatically before the twin answers.
 
-You never open any of these. Say *"show me my persona.md"* and it prints in the chat.
-
-::: warning It tags how well it knows each line
-Every line says where it came from. `[observed]` was found in your work. `[inferred]` is a reasonable read it can't point at directly. `[needs you]` means your work didn't cover it, so it wrote something to get you started.
-
-The tags are the point. Step 2 is going through them.
-:::
-
-Try it on something real before you move on. Ask it a question rather than for a draft - you want to see whether it thinks like you, not just whether it writes like you:
+Test it with a real question:
 
 ```text
 Using my twin, what should I do about [the thing you've been putting off]?
 ```
 
-You'll get a position, not a list of options. Whether you agree with it is what step 2 is for.
+It should take the position you'd take. Start your request with the twin's name - *"using my twin"* or *"ask my twin"* - or Cowork may not call the skill.
 
-::: tip Say the skill's name
-Cowork only loads your twin when you name it - *"using my twin"*, *"ask my twin"*. Leave that out and you'll get an ordinary Copilot answer, not your twin's.
-:::
+<div class="callout-bubble">
+<span class="callout-bubble-icon">📎</span>
 
-## 2 · Check what it learned
+**Give it a name you'll actually use.** Tell Cowork to rename it - *"rename my twin to Clippy"* - then call it by that from now on: *"Clippy, what should I do about...?"*
 
-**Done when:** the lines it drew from your work context say what you'd actually say, and a request you'd already run comes back different.
+</div>
+
+## The hack
+
+Your twin works, but it's generic - built from what your work *proves*, which isn't the same as what you'd say about yourself. The rest of the session is two moves: make it accurate, then teach it what it can't see.
+
+<div class="callout-bubble">
+<span class="callout-bubble-icon">🔒</span>
+
+**Keep it yours.** You each build your own twin on your real mail and rules - so when you compare with your table, share **proof, not contents**: one thing that changed, one thing it got wrong. Nobody needs to see your inbox.
+
+</div>
+
+### Correct your twin
 
 Ask to see what it built:
 
@@ -167,7 +122,7 @@ Ask to see what it built:
 Show me my persona.md.
 ```
 
-Fifteen sections, all filled from your real work, each tagged with how directly it knows:
+Each section is filled from your real work and tagged with how directly the twin knows it:
 
 | | |
 | --- | --- |
@@ -175,62 +130,35 @@ Fifteen sections, all filled from your real work, each tagged with how directly 
 | `[inferred]` | A reasonable read of what it found, but you never said it outright |
 | `[needs you]` | Your work didn't cover this, so it wrote a starting point for you to react to |
 
-**Start with `[inferred]` and `[needs you]`.** Those are the ones drawn furthest from the evidence. Some will land; a few won't - it can watch a month of your work and still not know what you'd refuse outright, or what actually drains you.
+**Start with `[inferred]` and `[needs you]`.** They're furthest from the evidence - the twin can watch a month of your work and still not know what you'd refuse outright. Then thicken the `[observed]` lines: accurate, but thin.
 
-**Then thicken the `[observed]` ones.** They're accurate but thin: *"align with collaborators"* is true and doesn't know who, or when it matters. Leave the line and add underneath it:
+Only add lines that change what the twin *does* - a name, a date, a threshold, a hard no. *"Balance competing priorities"* is too vague; add a line underneath that acts:
 
-> add: *"Check with Alex before I move anything he owns the concept for."*
+> *"When an internal deadline and a customer's collide, protect the customer's and renegotiate the internal one."*
 
-**Save a request and its answer first**, so you've got something to compare against. Then correct the file in the chat, and run the same request again word for word.
+**Test each change:** save a request and its answer, edit the file, then run the same request again. If nothing moves, the line was too vague or your test didn't need it. Stuck for what to add? Ask it: *"What don't you know about how I work that would change your answers?"*
 
-::: tip What's worth adding, and how to find it
-Anything that changes what it does - a name, a date, a threshold, something you'd never agree to without checking. *"I value collaboration"* doesn't: it's true, and it tells your twin nothing to do differently.
+### Teach your twin what it can't see
 
-**Stuck on what to say? Ask it.** *"What don't you know about how I work that would change your answers?"* It's read a month of your work, so it can point at what it's still guessing on.
-:::
+Your twin now knows *you* - your judgment and your voice. What it doesn't know is the context around you: the people you work with, what's already been decided, what the work is for, and what you're actually working on right now. You add that as references.
 
-::: details Nothing changed
-Two likely reasons. The line is too vague - give it a specific action, not a description. Or your test didn't need it: a rule about slipping deadlines won't move an answer that has nothing to do with dates.
-:::
-
-## 3 · Teach it something it doesn't know
-
-**Done when:** everyone at the table has built the same reference, and each of you can show an answer that changed because of it.
-
-::: tip 🎈 This is the fun part - keep it low-stress
-Pick whatever direction sounds good and build it with your table. It doesn't have to be perfect, and it doesn't have to solve everything - the whole point is to explore your tool, trade ideas, and vibe-code something together. Use whatever you came here to learn, see how far you get, and have fun with it. You're here to learn by doing.
-:::
-
-Your twin answers well now. It takes a position, it drafts in your voice, it stops when one of your rules says stop.
-
-**But it only knows you.** It doesn't know the people around you, what's already been decided, or what any of this is in service of - so it can tell you what you'd do, and not what it'll cost you with the person waiting on the other thing.
-
-**Decide as a group, then build together.** Start with one, add more if you've got time - the table works the same problem at the same time, so whatever one person figures out, everyone gets.
+**Decide as a table which reference to add, then build it in parallel** - each of you adds the same one to your own twin, so you can compare what worked. The list below is a starting menu; pick what's useful or invent your own. Start with one, add more if you've got time.
 
 | Reference | What your twin gains | Start with |
 | --- | --- | --- |
-| **`people.md`** | Who it's talking to. What each person needs, who wants the answer first, who you soften bad news for | *"Add a people reference - who I work with most, what each one needs from me, and how I talk to them. Read it whenever a named person is involved."* |
-| **`commitments.md`** | What you've already promised, so a new request lands against a real calendar rather than an empty one | *"Add a reference for what I've already committed to and when. Read it before you tell me to take anything else on."* |
-| **`decisions.md`** | What's already settled, so it stops reopening things the team closed weeks ago | *"Add a reference for decisions we've already made and why. Read it before you propose changing an approach."* |
-| **`goals.md`** | What the work is for, so it can tell you why something matters, not just what's next | *"Add a reference for what I'm actually trying to achieve this quarter. Read it when I ask what to prioritize."* |
-| **Yours** | Whatever your table's work actually runs on. Better than anything on this list | *"I want my twin to know [what]. Work out what file that needs and when you should read it."* |
+| 👥 **People** | Who it's talking to - what each person needs, who wants the answer first, who you soften bad news for | *"Add a reference for who I work with most, what each needs from me, and how I talk to them. Read it whenever a named person is involved."* |
+| 📅 **Commitments** | What you've already promised, so a new ask lands against a real calendar, not an empty one | *"Add a reference for what I've already committed to and when. Read it before telling me to take anything else on."* |
+| ✅ **Decisions** | What's already settled, so it stops reopening things the team closed weeks ago | *"Add a reference for decisions we've made and why. Read it before proposing a change of approach."* |
+| 🎯 **Goals** | What the work is for, so it weighs what matters, not just what's next | *"Add a reference for what I'm trying to achieve this quarter. Read it when I ask what to prioritize."* |
+| 🗂️ **Your working set** | The real material you're on now - briefs, drafts, past write-ups - so it grounds answers in your actual work, not just your rules | *"Add a reference capturing the projects I'm working on right now and a few of my own past write-ups. Read it when I ask about current work."* |
+| ✨ **Your own** | Anything the list doesn't cover - a reference your work actually needs, or a rethink of what the twin does. Rebuild the skill from scratch if you want | *"I want my twin to [what]. Work out what it needs - a new reference or a change to the skill itself - and when to use it."* |
 
-**Everything so far has been you correcting a file Cowork wrote.** This is the same move, pointed somewhere new: start with the line above, then argue with what comes back.
+Build each reference by iterating with Cowork: paste a prompt from the table, see what it drafts, then refine. **You'll know it worked when** the twin pulls the reference in on its own: re-run an earlier request and see if the answer changed.
 
-::: tip You don't have to wire it up
-Your twin reads everything in its `references/` folder before it answers, so a new file counts the moment it's saved. There's nothing to switch on and no list to add it to.
-
-What matters is the first line of the file - the one that says *when* to read it. That's what tells your twin the file applies to the question in front of it.
-:::
-
-**Use everything in the room.** Cowork is one tool - you've also got Copilot chat, the [Guides](/bricks/), an SME at your table, coaches walking around, and five other people solving the same problem. Nothing here is meant to be worked out alone.
-
-**You'll know it worked when** it uses the new reference without you mentioning it. Re-run a request from earlier - if the answer changed, it's wired in.
+Use everything in the room - Copilot chat, the [Guides](/bricks/), your SME, coaches, and the rest of your table.
 
 ::: details What a skill looks like
-The instructions. There's one of these - `SKILL.md` - and it's the file you uploaded.
-
-The top few lines tell Cowork **when** to load it. Everything below is what to do:
+The `SKILL.md` you uploaded. Frontmatter sets `name` and `description`; the body is the instructions:
 
 ```md
 ---
@@ -253,7 +181,7 @@ checked, then sort every one into Handled, Needs me, Blocked or Noise.
 :::
 
 ::: details What a reference looks like
-The knowledge. There can be as many of these as you like, and everything in `references/` gets read before your twin answers.
+A file in `references/`; the twin can read as many as you like.
 
 Here's a filled-in `people.md`, with made-up names:
 
@@ -292,20 +220,11 @@ what I need. Never bury it under context.
 Two things make it work: it says **when to read it** at the top, and every line says what to *do* rather than describing the person. "Sam is detail-oriented" changes nothing. "Number first, no hedging" changes the next draft.
 :::
 
-::: warning Nothing sends on its own
-Whatever you build, keep it drafting and waiting. That's the difference between something you'd use on Monday and something you'd switch off.
-:::
+## After today
 
-## Push it further
+This is a starting point, not the finish line. In one short session, alongside a table learning the same thing, you got a twin working and practiced the real skill: building and iterating with Cowork.
 
-Pick the next thing you want to prove.
-
-1. **Make it run without you** - *"Every weekday at 8, triage what landed overnight and have it waiting for me."*
-2. **Give it a memory** - a reference it writes to as well as reads, tracking what you owe people and what they owe you.
-3. **Make it stop** - give it a condition where it has to hand something back to you instead of drafting.
-4. **Make it narrower** - swap the triage buckets for what your job actually runs on: approvals, escalations, renewals.
-5. **Make it defend itself** - ask which file changed its answer, and why.
-6. **Take it with you** - your twin is a folder of text files. The same folder runs unchanged in VS Code Copilot.
+What you made today won't change the world, and it doesn't need to. The point is the muscle - say what you want, see what Cowork gives back, refine - and a twin that's yours to keep building on long after today.
 
 ---
 

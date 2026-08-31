@@ -26,7 +26,6 @@ html:not(.dark) .dark-only {
   max-width: 300px;
   max-height: 300px;
   z-index: 2;
-  animation: hero-float 6s ease-in-out infinite;
 }
 
 /* Cool circular glow behind the hero image (replaces the default blurred blob) */
@@ -47,24 +46,6 @@ html:not(.dark) .dark-only {
 /* A soft gradient ring that frames the image in a circle */
 .VPHero .image-container::before {
   content: none;
-}
-
-@keyframes hero-float {
-  0% {
-    transform: translate(-50%, calc(-50% + 10px));
-  }
-  50% {
-    transform: translate(-50%, calc(-50% - 10px));
-  }
-  100% {
-    transform: translate(-50%, calc(-50% + 10px));
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .VPHero .image-src {
-    animation: none;
-  }
 }
 
 /* Home page sections (rendered inside the home layout) */

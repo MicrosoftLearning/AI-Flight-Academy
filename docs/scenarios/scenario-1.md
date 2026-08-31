@@ -10,11 +10,11 @@ This scenario is drafted and being tested. Details may change before the event.
 
 ## The problem
 
-Copilot personalizes already - memory, plus Work IQ across mail, calendar, and files. That gets a draft most of the way.
+Copilot already knows a lot about how you work. Its memory and Work IQ read across your mail, calendar, and Teams, so most drafts start close to right.
 
-What it doesn't have is what you've explicitly decided: how you rank priorities that conflict, which commitments you protect, what you never send without checking. All of that is inferred from past activity. You can't inspect the inference, correct it, or carry it to another tool.
+What it can't do is show you the picture it's formed of you, let you fix where it's wrong, or carry it into another tool. The calls you actually make - which priority wins when two collide, what you never send without checking, whose sign-off you wait for - it just re-guesses, session after session. So you re-brief it from scratch each time, and rewrite most of what it hands back.
 
-The result is a rewrite on most drafts, and the same context re-supplied every session.
+In this scenario you build a **digital twin**: one small, portable file that holds how you work in plain language you can read, correct, and reuse. You point it at your own work, fix what it gets wrong, and add the things your history can't show - until the draft comes back sounding like you, for reasons you can name.
 
 ## What 'done' looks like
 
