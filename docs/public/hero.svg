@@ -17,10 +17,6 @@
 
   <circle cx="180" cy="180" r="168" fill="url(#sky)"/>
 
-  <!-- horizon glow -->
-  <path d="M12 236 a168 168 0 0 0 336 0 z" fill="#1d4ed8" opacity="0.45"/>
-  <ellipse cx="180" cy="238" rx="132" ry="20" fill="#f97316" opacity="0.28"/>
-
   <!-- climb trail -->
   <path d="M52 300 C118 292 176 250 224 176" stroke="url(#trail)" stroke-width="9"
         stroke-linecap="round" stroke-dasharray="2 26" fill="none"/>
