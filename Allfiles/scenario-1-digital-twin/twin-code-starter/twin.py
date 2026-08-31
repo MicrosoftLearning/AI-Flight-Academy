@@ -27,9 +27,11 @@ import re
 import shutil
 import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 
 ROOT = Path(__file__).parent
+MEMORY = ROOT / ".github" / "skills" / "my-twin" / "references" / "memory.md"
 
 # The prompt is piped in on stdin, so there is no OS command-line limit. This
 # cap is about the agent turn: more context per call is slower and vaguer.
@@ -38,6 +40,18 @@ _ARG_LIMIT = 20000
 
 class TwinError(RuntimeError):
     """The CLI is missing, failed, timed out, or returned nothing usable."""
+
+
+def remember(note: str) -> None:
+    """Append one dated line to the twin's memory log.
+
+    The programs that call the twin own their own logging, so a run leaves a trace the
+    next one can read. Deterministic on purpose - no agent turn, no chance of the model
+    deciding not to write it. Append-only; existing lines are never touched.
+    """
+    line = f"- {date.today().isoformat()} - {note.strip()}\n"
+    with MEMORY.open("a", encoding="utf-8") as handle:
+        handle.write(line)
 
 
 def _final_message(stdout: str) -> tuple[str, int | None]:
