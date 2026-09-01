@@ -53,7 +53,10 @@ export function navBuildItems() {
     { text: "🧭 Pick your path", link: CHOOSER },
     {
       text: `${SCENARIO_0.emoji} ${SCENARIO_0.label} · ${SCENARIO_0.name}`,
-      link: SCENARIO_0.link,
+      items: tracks.map((t) => ({
+        text: `${t.emoji} ${t.label} - ${t.tool}${suffix(t.id, SCENARIO_0.id)}`,
+        link: buildLink(t.id, SCENARIO_0.id),
+      })),
     },
     ...scenarios.map((s) => ({
       text: `${s.emoji} ${s.label} · ${s.name}`,
@@ -75,7 +78,7 @@ export function navBuildItems() {
  * rail answers both "which path am I on" and "where am I in it".
  */
 export function globalSidebar(
-  opts: { scenario?: string; track?: string; steps?: boolean } = {}
+  opts: { scenario?: string; track?: string; steps?: boolean; lean?: boolean } = {}
 ) {
   const scenario = opts.scenario ? getScenario(opts.scenario) : undefined;
   const track = opts.track ? getTrack(opts.track) : undefined;
@@ -101,7 +104,10 @@ export function globalSidebar(
     ? {
         text: `${scenario.emoji} ${scenario.name}`,
         items: [
-          { text: "The brief", link: `/scenarios/${scenario.id}` },
+          {
+            text: scenario.id === SCENARIO_0.id ? "Start here" : "The brief",
+            link: `/scenarios/${scenario.id}`,
+          },
           ...trackItems(scenario.id),
           { text: "↔ Switch scenario", link: CHOOSER },
         ],
@@ -111,7 +117,14 @@ export function globalSidebar(
         items: [
           {
             text: `${SCENARIO_0.emoji} ${SCENARIO_0.name}`,
-            link: SCENARIO_0.link,
+            collapsed: true,
+            items: [
+              { text: "Start here", link: `/scenarios/${SCENARIO_0.id}` },
+              ...tracks.map((t) => ({
+                text: `${t.emoji} ${t.label}${suffix(t.id, SCENARIO_0.id)}`,
+                link: buildLink(t.id, SCENARIO_0.id),
+              })),
+            ],
           },
           ...scenarios.map((s) => ({
             text: `${s.emoji} ${s.name}`,
@@ -144,6 +157,13 @@ export function globalSidebar(
         })),
       };
 
+  // A lean rail is just "where am I in this path" - nothing else. Scenario 0 is
+  // the pre-event readiness gate, so the site-wide links, guides, and finish
+  // line would only be noise on its pages.
+  if (opts.lean) {
+    return [scenarioSection];
+  }
+
   return [
     {
       text: "AI Flight Academy",
@@ -171,15 +191,19 @@ export function globalSidebar(
  */
 export function sidebars(): Record<string, ReturnType<typeof globalSidebar>> {
   const out: Record<string, any> = {};
-  for (const s of scenarios) {
+  for (const s of [SCENARIO_0, ...scenarios]) {
     for (const t of tracks) {
       out[buildLink(t.id, s.id)] = globalSidebar({
         scenario: s.id,
         track: t.id,
         steps: true,
+        lean: s.id === SCENARIO_0.id,
       });
     }
-    out[`/scenarios/${s.id}`] = globalSidebar({ scenario: s.id });
+    out[`/scenarios/${s.id}`] = globalSidebar({
+      scenario: s.id,
+      lean: s.id === SCENARIO_0.id,
+    });
   }
   for (const t of tracks) {
     for (const g of t.guides) {
@@ -187,6 +211,5 @@ export function sidebars(): Record<string, ReturnType<typeof globalSidebar>> {
     }
   }
   out["/"] = globalSidebar();
-  out[SCENARIO_0.link] = globalSidebar();
   return out;
 }

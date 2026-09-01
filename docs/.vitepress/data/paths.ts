@@ -89,15 +89,19 @@ export const tracks: Track[] = [
 ];
 
 /**
- * Scenario 0 is the pre-event readiness call, not a hack scenario. It's one
- * page for all three altitudes, so it stays out of `scenarios` - that array is
- * the build matrix, and anything in it generates a build page per track.
+ * Scenario 0 is the pre-event readiness call, not a hack scenario. It has the
+ * same page-per-track shape as the real scenarios - a brief plus one build page
+ * per altitude - but it stays out of `scenarios` on purpose. That array drives
+ * the home-page chooser and the hack scenario list, and Scenario 0 belongs in
+ * neither. It's wired in explicitly by the nav/sidebar builders instead.
  */
-export const SCENARIO_0 = {
+export const SCENARIO_0: Scenario = {
+  id: "scenario-0",
   emoji: "🛫",
   label: "Scenario 0",
   name: "Flight Clearance",
-  link: "/scenarios/scenario-0",
+  sub: "Your pre-flight readiness check",
+  status: "wip",
 };
 
 export const scenarios: Scenario[] = [  {
@@ -128,6 +132,9 @@ export const scenarios: Scenario[] = [  {
 
 // Status of each track x scenario build page. Anything not listed is "soon".
 export const buildStatus: Record<string, Status> = {
+  "cowork-scenario-0": "ready",
+  "scout-scenario-0": "ready",
+  "code-scenario-0": "ready",
   "cowork-scenario-1": "wip",
   "scout-scenario-1": "wip",
   "code-scenario-1": "wip",
@@ -162,7 +169,7 @@ export function getTrack(trackId: string): Track | undefined {
 }
 
 export function getScenario(scenarioId: string): Scenario | undefined {
-  return scenarios.find((s) => s.id === scenarioId);
+  return [SCENARIO_0, ...scenarios].find((s) => s.id === scenarioId);
 }
 
 
