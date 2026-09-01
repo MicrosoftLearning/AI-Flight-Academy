@@ -69,6 +69,23 @@ hero:
 
 <div class="home-section">
 
+## Scenario 0 {#scenario-0}
+
+<p class="home-section-intro is-wide">Flight Clearance is your pre-Team Week readiness run. Build a skill, run it, and file your flight log - so any setup or access snag surfaces now, not on the day.</p>
+
+<div class="lab-grid lab-grid-2">
+  <a class="lab-card" href="/AI-Flight-Academy/scenarios/scenario-0">
+    <span class="lab-card-emoji">🛫</span>
+    <span class="lab-card-title">Scenario 0 · Flight Clearance</span>
+    <span class="lab-card-desc">The brief: what you need, how the call runs, and your three altitudes to build it at. Start here.</span>
+    <span class="lab-card-cta">Read the brief →</span>
+  </a>
+</div>
+
+</div>
+
+<div class="home-section">
+
 ## Start here - pick your altitude {#start-here}
 
 <p class="home-section-intro is-wide">Two clicks and you're building. Every scenario runs at every altitude - pick the tools you want open for two hours.</p>

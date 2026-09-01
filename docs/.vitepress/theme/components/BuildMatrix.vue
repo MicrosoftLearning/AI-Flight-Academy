@@ -4,6 +4,7 @@ import { withBase } from "vitepress";
 import {
   tracks,
   scenarios,
+  SCENARIO_0,
   buildLink,
   statusFor,
   statusLabel,
@@ -22,8 +23,12 @@ const props = withDefaults(
 const shownTracks = computed(() =>
   props.track ? tracks.filter((t) => t.id === props.track) : tracks
 );
+// "Show all" lists only the hack scenarios; Scenario 0 renders only when it's
+// asked for by id, so it never leaks into the home chooser or a full listing.
 const shownScenarios = computed(() =>
-  props.scenario ? scenarios.filter((s) => s.id === props.scenario) : scenarios
+  props.scenario
+    ? [SCENARIO_0, ...scenarios].filter((s) => s.id === props.scenario)
+    : scenarios
 );
 
 function href(trackId: string, scenarioId: string) {
