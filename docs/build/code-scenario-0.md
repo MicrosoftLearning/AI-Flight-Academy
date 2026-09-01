@@ -50,7 +50,7 @@ Once linked, navigate to [github.com/settings/copilot/features](https://github.c
 
 ::::
 
-## Set up VS Code + Copilot
+## Set up GitHub Copilot
 
 The **Check with** commands run in any terminal: PowerShell, Command Prompt, Windows Terminal, or the built-in terminal in VS Code (**View → Terminal**). It makes no difference which.
 
