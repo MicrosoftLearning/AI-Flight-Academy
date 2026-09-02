@@ -9,14 +9,33 @@ title: Flight Clearance - Code
 ::: warning 🚧 Draft - the video and the form aren't final yet
 :::
 
-**Planning to fly the Code altitude?** Follow this guide and its short exercises to get set up and warmed up before Team Week.
+This guide gets you ready to fly the **Code altitude** for our AI Flight Academy session during Team Week. It assumes you're starting fresh: you'll set up your tools, then run a short exercise that proves everything works against your real Microsoft 365 work. At the end you'll take a screenshot and fill out a quick form to get certified.
 
-Here's what we'll do:
+Two parts:
 
-1. Confirm your GitHub sign-in.
-2. Install the tools - VS Code, the Copilot CLI, and a few requirements.
-3. Check you're ready in the Copilot CLI or the GitHub Copilot app.
-4. Install the **Work IQ** MCP and put it to work against your real Microsoft 365 work.
+<div class="lab-grid lab-grid-2">
+  <a class="lab-card" href="#set-up-github-copilot">
+    <span class="lab-card-emoji">🛠️</span>
+    <span class="lab-card-title">1 · Setup</span>
+    <span class="lab-card-desc">Confirm your GitHub sign-in, install the tools, and check you're ready in the Copilot CLI or the GitHub Copilot app.</span>
+    <span class="lab-card-cta">Start setup →</span>
+  </a>
+  <a class="lab-card" href="#weekly-status-report-with-work-iq">
+    <span class="lab-card-emoji">🎯</span>
+    <span class="lab-card-title">2 · Exercise</span>
+    <span class="lab-card-desc">Install the Work IQ plugin, then use it to build a weekly status report from your real Microsoft 365 work.</span>
+    <span class="lab-card-cta">Go to exercise →</span>
+  </a>
+</div>
+
+<div class="callout-bubble">
+<span class="callout-bubble-icon">⚡</span>
+
+**Already a GitHub guru?** Skim the prerequisites to verify your setup, then [skip ahead to the exercise](#weekly-status-report-with-work-iq).
+
+</div>
+
+## Set up GitHub Copilot
 
 <a id="emu"></a>
 
@@ -50,24 +69,22 @@ Once linked, navigate to [github.com/settings/copilot/features](https://github.c
 
 ::::
 
-## Set up GitHub Copilot
+### Prerequisites
 
-The **Check with** commands run in any terminal: PowerShell, Command Prompt, Windows Terminal, or the built-in terminal in VS Code (**View → Terminal**). It makes no difference which.
+Install each prerequisite for the AI Flight Academy Code altitude, then confirm it with the command in **Check with** - run in any terminal (PowerShell, Command Prompt, Windows Terminal, or VS Code's built-in terminal via **View → Terminal**). The last row, VS Code, is only needed for the GitHub Copilot app; skip it if you'd rather stay in the terminal.
 
 | Requirement | Get it from | Check with |
 | --- | --- | --- |
-| **GitHub EMU access** | [Above](#emu). Do this first | |
+| **GitHub account with GitHub Copilot access** | [Above](#emu). Do this first | |
 | **Node** | [nodejs.org](https://nodejs.org/) | `node --version` |
 | **Python 3** | [python.org/downloads](https://www.python.org/downloads/) | `python --version` |
 | **Git** | [git-scm.com](https://git-scm.com/install/windows) | `git --version` |
 | **GitHub Copilot CLI** | `npm install -g @github/copilot` | `copilot --version` |
-| **VS Code** | [code.visualstudio.com](https://code.visualstudio.com/) | Skip the next two rows if you'd rather stay in the terminal |
-| **GitHub Copilot** extension | [marketplace.visualstudio.com](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) | Listed under Extensions |
-| **GitHub Copilot Chat** extension | [marketplace.visualstudio.com](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot-chat) | Chat panel opens and is signed in |
+| **VS Code** | [code.visualstudio.com](https://code.visualstudio.com/) | `code --version` |
 
-The table above is the complete list - once those are installed, there's nothing extra to `pip install` or set up.
+### Check you're ready
 
-**Check you're ready:** pick the surface you'll use.
+Pick the surface you'll use.
 
 <ReadyCheck>
 <template #cli>
@@ -152,9 +169,17 @@ The table above is the complete list - once those are installed, there's nothing
 No scenario depends on a particular model. Auto routes each task based on what you're doing, current system health, and model performance. You can change it any time - by typing `/model` in the CLI, or by selecting a model from within the prompt window in the GitHub Copilot app - but we recommend leaving it on Auto unless you have a reason to switch.
 :::
 
-## Install the Work IQ MCP
+## Weekly status report with Work IQ
 
-Work IQ grounds Copilot in your real Microsoft 365 work - mail, calendar, Teams, and files. Install it as an MCP plugin, then try it out.
+The exercise: install the Work IQ plugin, then use it to pull a week of your real meetings, email, and Teams activity and turn it into a status report you could actually send.
+
+::: info The minimum to get certified
+Install the plugin (step 1), run one prompt against Work IQ, and screenshot the response (step 2). Steps 3 to 6 are extra - they turn that response into a full weekly status report.
+:::
+
+### 1 · Install the Work IQ plugin
+
+Work IQ grounds Copilot in your real Microsoft 365 work - mail, calendar, Teams, and files. Install it as a plugin, then confirm it loaded.
 
 <ReadyCheck>
 <template #cli>
@@ -206,32 +231,74 @@ Work IQ grounds Copilot in your real Microsoft 365 work - mail, calendar, Teams,
 
    ![The Plugins list showing workiq installed and enabled](/img/app-workiq-enabled.png)
 
+> **Note:** Installing Work IQ through the GitHub Copilot app also makes it available in the GitHub Copilot Chat harness in VS Code - the same plugin works in both.
+
 </template>
 </ReadyCheck>
 
-## Now put Work IQ to work
+### 2 · Gather your week's meetings
 
-With **workiq** installed, start a new session and try a prompt. For example:
-
-```text
-Look at my meetings for the rest of this week. For each one, tell me who the key attendee is, find the most recent email thread with that person, and flag any meeting where I owe someone a reply before we meet.
-```
-
-Or:
+Start a new session and pull the data your status report is built on. Ask Work IQ about your meetings from the past week:
 
 ```text
-Build me a single-page HTML dashboard of my week: meetings by day, who I'm meeting most, and unread email count by sender. Save it and open it.
+Summarize all my meetings from the past 7 days. For each meeting, include the title, date, attendees, and key discussion points or decisions made.
 ```
 
-From here, take it any direction you like - with Work IQ installed, Copilot is usable against Git and any of your repos, grounded in your real Microsoft 365 work.
+Review what Copilot returns. This is the foundation of your status report - it captures what you discussed, decided, and committed to throughout the week.
+
+> **Note:** If you're running against the GitHub Copilot app in VS Code after installing Work IQ for the first time, you may get a prompt to authenticate. Select the **authenticate** hyperlink and sign in with your Microsoft account.
+
+![The GitHub Copilot app prompt with an authenticate hyperlink to sign in](/img/app-workiq-authenticate.png)
+
+> **Tip:** Work IQ pulls from your Microsoft 365 meeting data when available. Meetings without notes or summaries show basic calendar info only.
 
 <div class="callout-bubble is-important">
 <span class="callout-bubble-icon">🎖️</span>
 <div>
 
-**Last step - get your Pilot Certification.** Once it works, take a screenshot of a prompt you ran against Work IQ (or something you built with it) as your proof.
+**That's the bar - get your Pilot Certification.** You've run a prompt against Work IQ and have a response on screen. Screenshot it as your proof - that's all you need to be certified. Everything below is extra.
 
 <a class="callout-bubble-cta" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR_Bd56YTwD1Gsu3sHRReLNdUQ0lPVkNOTEpaVkMxNkxHMkxXVEZOVVFXSy4u" target="_blank" rel="noreferrer">Upload your proof and get certified →</a>
 
 </div>
 </div>
+
+Want the full report? Keep going.
+
+### 3 · Pull email highlights
+
+Next, gather the important email threads from the week:
+
+```text
+What are the most important email threads I was involved in over the past 7 days? Focus on threads where decisions were made, actions were assigned to me, or I was asked to follow up on something.
+```
+
+This surfaces the email conversations that matter - not every newsletter or notification, but the threads with real work content.
+
+### 4 · Check Teams discussions
+
+Pull relevant Teams activity to capture what happened in your channels:
+
+```text
+Summarize any important Teams messages or channel discussions I was part of in the past 7 days. Highlight anything where I was mentioned, action items were assigned, or key decisions were made.
+```
+
+### 5 · Generate your weekly status report
+
+Now bring it all together. Ask Copilot to synthesize everything into a structured report:
+
+```text
+Based on everything we just gathered from my meetings, emails, and Teams discussions this past week, create a weekly status report with these sections: 1) Key Accomplishments - what was completed or decided. 2) In Progress - work that's actively underway. 3) Action Items - things I need to follow up on, with owners and due dates if mentioned. 4) Risks or Blockers - anything flagged as a concern. 5) Next Week Focus - what I should prioritize based on what's coming up. Format it professionally so I could share it with my manager or stakeholders.
+```
+
+Review the report Copilot generates. It should be a clean, organized summary drawn from your actual work data - not a generic template.
+
+### 6 · Save it as a reusable prompt
+
+This is something you'll want every week, so save it as a reusable prompt file you can run with a single command. Create `weekly-status.prompt.md` in your `.github/prompts/` directory (or wherever your team stores prompt files):
+
+```text
+Create a file called weekly-status.prompt.md with the following content: A prompt that queries Work IQ for the past 7 days of meetings, emails, and Teams discussions, then synthesizes a weekly status report with sections for Key Accomplishments, In Progress, Action Items, Risks/Blockers, and Next Week Focus. Format it as a reusable Copilot prompt file.
+```
+
+Now every Friday you can run this prompt to generate your status report in minutes instead of assembling it by hand.
