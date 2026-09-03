@@ -118,7 +118,7 @@ Complete **Before you start**, then pick your scope, set up your assistant, and 
 
 ### Before you start
 
-Two things to set up first: connect Scout to Teams so your briefs can reach you, and turn on memory so your assistant doesn't repeat itself.
+Two things to set up first: connect Scout to Teams so your briefs can reach you, and allow the permissions your assistant needs to read your work and remember what it's told you.
 
 #### Connect Teams
 
@@ -131,17 +131,25 @@ Two things to set up first: connect Scout to Teams so your briefs can reach you,
 
    ![The Teams bot setup steps in Scout](/img/scout-teams-bot-setup.png)
 
-#### Enable memory
+#### Enable permissions
 
-1. Navigate to **Automations** and select **Heartbeat**. Then under **Permissions**, select **Manage permissions**.
+Your assistant reads across your work and remembers what it's told you, so it needs a few permissions set to **Allow**. Anything left on **Ask** is skipped when Scout runs in the background.
+
+1. Navigate to **Automations** and select **Heartbeat**. Then under **Permissions**, select **Manage permissions**, then **Custom**.
 
    ![The Automations permissions panel with Manage permissions](/img/scout-manage-permissions.png)
 
-2. Select **Custom**, expand **App tools**, and set **memory** to **Allow**.
+2. Under **App tools**, set **memory** to **Allow**. This stops your assistant from telling you the same thing twice.
 
-   ![The permissions editor with memory set to Allow under App tools](/img/scout-memory-allow.png)
+   ![memory set to Allow under App tools](/img/scout-memory-allow.png)
 
-Anything left on **Ask** is skipped when Scout runs in the background, so memory has to be on **Allow** - it's what stops your assistant from telling you the same thing twice.
+3. Under **Teams**, set **List your chats** to **Allow** so it can read your recent Teams chats.
+
+   ![List your chats set to Allow under Teams](/img/scout-list-chats.png)
+
+4. Under **Work IQ > Email**, set **List emails** to **Allow** so it can read your recent mail.
+
+   ![List emails set to Allow under Work IQ Email](/img/scout-list-emails.png)
 
 ### 1 · Decide what deserves to interrupt you
 
