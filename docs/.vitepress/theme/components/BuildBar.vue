@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 import { useRoute, withBase } from "vitepress";
-import { getTrack, getScenario, statusFor, statusLabel, CHOOSER } from "../../data/paths";
+import { getTrack, getScenario, statusFor, statusLabel, CHOOSER, SCENARIO_0 } from "../../data/paths";
 
 const route = useRoute();
 
@@ -27,7 +27,7 @@ const parsed = computed(() => {
       </span>
       <span v-if="parsed.status" class="build-bar-status">{{ parsed.status }}</span>
     </div>
-    <nav class="build-bar-links">
+    <nav v-if="parsed.scenario.id !== SCENARIO_0.id" class="build-bar-links">
       <a :href="withBase(CHOOSER)">Switch path</a>
     </nav>
   </div>

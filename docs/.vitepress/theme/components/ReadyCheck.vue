@@ -1,13 +1,13 @@
 <script setup lang="ts">
 /**
  * A two-option selector for the Scenario 0 Code readiness check: pick the
- * surface you'll actually use - the Copilot CLI or the Copilot app in VS Code -
+ * surface you'll actually use - the Copilot CLI or the VS Code Agents window -
  * and see only that path. Content for each comes from named slots, so it stays
  * authored in Markdown.
  */
 import { ref } from "vue";
 
-type Option = "cli" | "app";
+type Option = "cli" | "app" | "vscode";
 const active = ref<Option>("cli");
 </script>
 
@@ -34,6 +34,16 @@ const active = ref<Option>("cli");
       >
         GitHub Copilot App
       </button>
+      <button
+        type="button"
+        role="tab"
+        class="ready-check-tab"
+        :class="{ active: active === 'vscode' }"
+        :aria-selected="active === 'vscode'"
+        @click="active = 'vscode'"
+      >
+        VS Code Agents Window
+      </button>
     </div>
 
     <div v-show="active === 'cli'" class="ready-check-panel" role="tabpanel">
@@ -41,6 +51,9 @@ const active = ref<Option>("cli");
     </div>
     <div v-show="active === 'app'" class="ready-check-panel" role="tabpanel">
       <slot name="app" />
+    </div>
+    <div v-show="active === 'vscode'" class="ready-check-panel" role="tabpanel">
+      <slot name="vscode" />
     </div>
   </div>
 </template>

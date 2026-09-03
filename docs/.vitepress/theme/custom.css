@@ -23,9 +23,19 @@ html:not(.dark) .dark-only {
 
 /* Home hero icon */
 .VPHero .image-src {
+  width: 300px;
+  height: 300px;
   max-width: 300px;
   max-height: 300px;
   z-index: 2;
+}
+
+/* Keep it sensible on small screens */
+@media (max-width: 640px) {
+  .VPHero .image-src {
+    width: 220px;
+    height: 220px;
+  }
 }
 
 /* Cool circular glow behind the hero image (replaces the default blurred blob) */

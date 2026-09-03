@@ -109,7 +109,9 @@ export function globalSidebar(
             link: `/scenarios/${scenario.id}`,
           },
           ...trackItems(scenario.id),
-          { text: "↔ Switch scenario", link: CHOOSER },
+          ...(scenario.id === SCENARIO_0.id
+            ? []
+            : [{ text: "↔ Switch scenario", link: CHOOSER }]),
         ],
       }
     : {
