@@ -7,7 +7,7 @@
  */
 import { ref } from "vue";
 
-type Option = "cli" | "vscode";
+type Option = "cli" | "app" | "vscode";
 const active = ref<Option>("cli");
 </script>
 
@@ -28,6 +28,16 @@ const active = ref<Option>("cli");
         type="button"
         role="tab"
         class="ready-check-tab"
+        :class="{ active: active === 'app' }"
+        :aria-selected="active === 'app'"
+        @click="active = 'app'"
+      >
+        GitHub Copilot App
+      </button>
+      <button
+        type="button"
+        role="tab"
+        class="ready-check-tab"
         :class="{ active: active === 'vscode' }"
         :aria-selected="active === 'vscode'"
         @click="active = 'vscode'"
@@ -38,6 +48,9 @@ const active = ref<Option>("cli");
 
     <div v-show="active === 'cli'" class="ready-check-panel" role="tabpanel">
       <slot name="cli" />
+    </div>
+    <div v-show="active === 'app'" class="ready-check-panel" role="tabpanel">
+      <slot name="app" />
     </div>
     <div v-show="active === 'vscode'" class="ready-check-panel" role="tabpanel">
       <slot name="vscode" />

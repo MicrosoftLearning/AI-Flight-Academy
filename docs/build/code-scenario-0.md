@@ -82,10 +82,11 @@ Install each prerequisite for the AI Flight Academy Code altitude, then confirm 
 | **Git** | [git-scm.com](https://git-scm.com/install/windows) | `git --version` |
 | **GitHub Copilot CLI** | `npm install -g @github/copilot` | `copilot --version` |
 | **VS Code** | [code.visualstudio.com](https://code.visualstudio.com/) | `code --version` |
+| **GitHub Copilot app** | [github.com/features/ai/github-app](https://github.com/features/ai/github-app) | |
 
 ### Check you're ready
 
-Pick the surface you'll use.
+Pick the GitHub Copilot surface that fits your workflow. You're not limited to the ones below either - prefer working in the VS Code editor? Go for it.
 
 <ReadyCheck>
 <template #cli>
@@ -121,6 +122,13 @@ Pick the surface you'll use.
    ![The Copilot CLI replying with the word ready](/img/cli-prompt-response.png)
 
 **You're ready when** it replies `ready`.
+
+</template>
+<template #app>
+
+::: info Coming soon
+Steps for the GitHub Copilot app are on the way. For now, use the GitHub Copilot CLI or the VS Code Agents window.
+:::
 
 </template>
 <template #vscode>
@@ -208,6 +216,13 @@ Work IQ grounds Copilot in your real Microsoft 365 work - mail, calendar, Teams,
 5. Scroll down and look for **workiq** under **plugin**.
 
    ![The Copilot CLI skills list showing workiq listed under plugin](/img/workiq-confirm.png)
+
+</template>
+<template #app>
+
+::: info Coming soon
+Work IQ install steps for the GitHub Copilot app are on the way. For now, use the GitHub Copilot CLI or the VS Code Agents window.
+:::
 
 </template>
 <template #vscode>
