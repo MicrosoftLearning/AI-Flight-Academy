@@ -1,5 +1,6 @@
 ---
 title: Flight Clearance - Code
+navbar: false
 ---
 
 <!-- markdownlint-disable MD013 MD025 MD033 -->
@@ -9,29 +10,29 @@ title: Flight Clearance - Code
 ::: warning 🚧 Draft - the video and the form aren't final yet
 :::
 
-This guide gets you ready to fly the **Code altitude** for our AI Flight Academy session during Team Week. It assumes you're starting fresh: you'll set up your tools, then run a short exercise that proves everything works against your real Microsoft 365 work. At the end you'll take a screenshot and fill out a quick form to get certified.
+This guide gets you ready to fly the **Code altitude** for our AI Flight Academy session during Team Week. It assumes you're starting fresh: you'll set up your tools, then run a short test flight that proves everything works against your real Microsoft 365 work. At the end you'll take a screenshot and fill out a quick form to get certified.
 
 Two parts:
 
 <div class="lab-grid lab-grid-2">
   <a class="lab-card" href="#set-up-github-copilot">
     <span class="lab-card-emoji">🛠️</span>
-    <span class="lab-card-title">1 · Setup</span>
-    <span class="lab-card-desc">Confirm your GitHub sign-in, install the tools, and check you're ready in the Copilot CLI or the GitHub Copilot app.</span>
-    <span class="lab-card-cta">Start setup →</span>
+    <span class="lab-card-title">1 · Systems check</span>
+    <span class="lab-card-desc">Confirm your GitHub sign-in, install the tools, and check you're ready in the Copilot CLI or the VS Code Agents window.</span>
+    <span class="lab-card-cta">Start the systems check →</span>
   </a>
   <a class="lab-card" href="#weekly-status-report-with-work-iq">
     <span class="lab-card-emoji">🎯</span>
-    <span class="lab-card-title">2 · Exercise</span>
+    <span class="lab-card-title">2 · Test flight</span>
     <span class="lab-card-desc">Install the Work IQ plugin, then use it to build a weekly status report from your real Microsoft 365 work.</span>
-    <span class="lab-card-cta">Go to exercise →</span>
+    <span class="lab-card-cta">Start the test flight →</span>
   </a>
 </div>
 
 <div class="callout-bubble">
 <span class="callout-bubble-icon">⚡</span>
 
-**Already a GitHub guru?** Skim the prerequisites to verify your setup, then [skip ahead to the exercise](#weekly-status-report-with-work-iq).
+**Already a GitHub guru?** Skim the prerequisites to verify your setup, then [skip ahead to the test flight](#weekly-status-report-with-work-iq).
 
 </div>
 
@@ -71,7 +72,7 @@ Once linked, navigate to [github.com/settings/copilot/features](https://github.c
 
 ### Prerequisites
 
-Install each prerequisite for the AI Flight Academy Code altitude, then confirm it with the command in **Check with** - run in any terminal (PowerShell, Command Prompt, Windows Terminal, or VS Code's built-in terminal via **View → Terminal**). The last row, VS Code, is only needed for the GitHub Copilot app; skip it if you'd rather stay in the terminal.
+Install each prerequisite for the AI Flight Academy Code altitude, then confirm it with the command in **Check with** - run in any terminal (PowerShell, Command Prompt, Windows Terminal, or VS Code's built-in terminal via **View → Terminal**).
 
 | Requirement | Get it from | Check with |
 | --- | --- | --- |
@@ -122,7 +123,7 @@ Pick the surface you'll use.
 **You're ready when** it replies `ready`.
 
 </template>
-<template #app>
+<template #vscode>
 
 1. Open VS Code.
 
@@ -158,7 +159,7 @@ Pick the surface you'll use.
    Reply with the word ready and nothing else
    ```
 
-   ![The GitHub Copilot app replying with the word ready](/img/app-ready-response.png)
+   ![The VS Code Agents window replying with the word ready](/img/app-ready-response.png)
 
 **You're ready when** it replies `ready`.
 
@@ -166,12 +167,12 @@ Pick the surface you'll use.
 </ReadyCheck>
 
 ::: tip Leave the model on Auto
-No scenario depends on a particular model. Auto routes each task based on what you're doing, current system health, and model performance. You can change it any time - by typing `/model` in the CLI, or by selecting a model from within the prompt window in the GitHub Copilot app - but we recommend leaving it on Auto unless you have a reason to switch.
+No scenario depends on a particular model. Auto routes each task based on what you're doing, current system health, and model performance. You can change it any time - by typing `/model` in the CLI, or by selecting a model from within the prompt window in the VS Code Agents window - but we recommend leaving it on Auto unless you have a reason to switch.
 :::
 
 ## Weekly status report with Work IQ
 
-The exercise: install the Work IQ plugin, then use it to pull a week of your real meetings, email, and Teams activity and turn it into a status report you could actually send.
+The test flight: install the Work IQ plugin, then use it to pull a week of your real meetings, email, and Teams activity and turn it into a status report you could actually send.
 
 ::: info The minimum to get certified
 Install the plugin (step 1), run one prompt against Work IQ, and screenshot the response (step 2). Steps 3 to 6 are extra - they turn that response into a full weekly status report.
@@ -209,11 +210,11 @@ Work IQ grounds Copilot in your real Microsoft 365 work - mail, calendar, Teams,
    ![The Copilot CLI skills list showing workiq listed under plugin](/img/workiq-confirm.png)
 
 </template>
-<template #app>
+<template #vscode>
 
-1. In the GitHub Copilot app, select **Plugins**.
+1. In the VS Code Agents window, select **Plugins**.
 
-   ![The GitHub Copilot app with the Plugins option selected](/img/app-workiq-plugins.png)
+   ![The VS Code Agents window with the Plugins option selected](/img/app-workiq-plugins.png)
 
 2. In **Search plugin marketplace…**, type `workiq`.
 
@@ -231,7 +232,7 @@ Work IQ grounds Copilot in your real Microsoft 365 work - mail, calendar, Teams,
 
    ![The Plugins list showing workiq installed and enabled](/img/app-workiq-enabled.png)
 
-> **Note:** Installing Work IQ through the GitHub Copilot app also makes it available in the GitHub Copilot Chat harness in VS Code - the same plugin works in both.
+> **Note:** Installing Work IQ through the VS Code Agents window also makes it available in the GitHub Copilot Chat harness in VS Code - the same plugin works in both.
 
 </template>
 </ReadyCheck>
@@ -246,9 +247,9 @@ Summarize all my meetings from the past 7 days. For each meeting, include the ti
 
 Review what Copilot returns. This is the foundation of your status report - it captures what you discussed, decided, and committed to throughout the week.
 
-> **Note:** If you're running against the GitHub Copilot app in VS Code after installing Work IQ for the first time, you may get a prompt to authenticate. Select the **authenticate** hyperlink and sign in with your Microsoft account.
+> **Note:** If you're running in the VS Code Agents window after installing Work IQ for the first time, you may get a prompt to authenticate. Select the **authenticate** hyperlink and sign in with your Microsoft account.
 
-![The GitHub Copilot app prompt with an authenticate hyperlink to sign in](/img/app-workiq-authenticate.png)
+![The VS Code Agents window prompt with an authenticate hyperlink to sign in](/img/app-workiq-authenticate.png)
 
 > **Tip:** Work IQ pulls from your Microsoft 365 meeting data when available. Meetings without notes or summaries show basic calendar info only.
 

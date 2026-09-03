@@ -1,5 +1,6 @@
 ---
 title: Flight Clearance - Scout
+navbar: false
 ---
 
 <!-- markdownlint-disable MD013 MD025 MD033 -->
@@ -9,29 +10,29 @@ title: Flight Clearance - Scout
 ::: warning 🚧 Draft - the video and the form aren't final yet
 :::
 
-This guide gets you ready to fly the **Scout altitude** for our AI Flight Academy session during Team Week. It assumes you're starting fresh: you'll set up Microsoft Scout, then run a short exercise that builds something real from your Microsoft 365 work. At the end you'll take a screenshot and fill out a quick form to get certified.
+This guide gets you ready to fly the **Scout altitude** for our AI Flight Academy session during Team Week. It assumes you're starting fresh: you'll set up Microsoft Scout, then run a short test flight that builds something real from your Microsoft 365 work. At the end you'll take a screenshot and fill out a quick form to get certified.
 
 Two parts:
 
 <div class="lab-grid lab-grid-2">
   <a class="lab-card" href="#set-up-scout">
     <span class="lab-card-emoji">🛠️</span>
-    <span class="lab-card-title">1 · Setup</span>
+    <span class="lab-card-title">1 · Systems check</span>
     <span class="lab-card-desc">Confirm your GitHub sign-in, set up Microsoft Scout, and check you're ready.</span>
-    <span class="lab-card-cta">Start setup →</span>
+    <span class="lab-card-cta">Start the systems check →</span>
   </a>
   <a class="lab-card" href="#build-your-own-personal-assistant">
     <span class="lab-card-emoji">🎯</span>
-    <span class="lab-card-title">2 · Exercise</span>
+    <span class="lab-card-title">2 · Test flight</span>
     <span class="lab-card-desc">Build a personal assistant that watches your work and briefs you in Teams when something needs you.</span>
-    <span class="lab-card-cta">Go to exercise →</span>
+    <span class="lab-card-cta">Start the test flight →</span>
   </a>
 </div>
 
 <div class="callout-bubble">
 <span class="callout-bubble-icon">⚡</span>
 
-**Already running Scout?** [Skip ahead to the exercise](#build-your-own-personal-assistant) - there's nothing to install beyond Scout itself and signing in.
+**Already running Scout?** [Skip ahead to the test flight](#build-your-own-personal-assistant) - there's nothing to install beyond Scout itself and signing in.
 
 </div>
 
@@ -290,7 +291,7 @@ Your reply routes into Scout, which picks it up and acts on it. Or, if you'd rat
 <div class="callout-bubble">
 <span class="callout-bubble-icon">🎛️</span>
 
-**Why your assistant is hands-off instead of acting.** That's a choice, not a limit. This prompt is scoped read-only on purpose - it notices and reports, then waits for you. If you'd rather it act on its own (auto-accept certain meetings, send from a template, and so on), you can widen the prompt and grant the matching permissions in **Manage permissions** - for example, setting Work IQ > email to **Allow**. This exercise shows one safe possibility; the boundary is yours to move.
+**Why your assistant is hands-off instead of acting.** That's a choice, not a limit. This prompt is scoped read-only on purpose - it notices and reports, then waits for you. If you'd rather it act on its own (auto-accept certain meetings, send from a template, and so on), you can widen the prompt and grant the matching permissions in **Manage permissions** - for example, setting Work IQ > email to **Allow**. This test flight shows one safe possibility; the boundary is yours to move.
 
 </div>
 
