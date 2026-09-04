@@ -126,9 +126,31 @@ Pick the GitHub Copilot surface that fits your workflow. You're not limited to t
 </template>
 <template #app>
 
-::: info Coming soon
-Steps for the GitHub Copilot app are on the way. For now, use the GitHub Copilot CLI or the VS Code Agents window.
-:::
+1. Open the GitHub Copilot app.
+
+2. Select **Sign in to GitHub**.
+
+   ![The GitHub Copilot app welcome screen with the Sign in to GitHub button highlighted](/img/ghapp-sign-in.png)
+
+3. Sign in based on your account type:
+   - **EMU account** - enter your `<alias>_Microsoft` address, then select **Sign in with your identity provider**.
+   - **Personal account** - enter your GitHub credentials.
+
+   Unsure of your login? See [Don't know your GitHub login?](#emu) above.
+
+4. In the sidebar, select **+** next to **Chats**, then select **New chat**.
+
+   ![The GitHub Copilot app sidebar with the plus button next to Chats and the New chat option highlighted](/img/ghapp-new-chat.png)
+
+5. In the prompt window, enter:
+
+   ```text
+   Reply with the word ready and nothing else
+   ```
+
+   ![The GitHub Copilot app replying with the word ready](/img/ghapp-ready-response.png)
+
+**You're ready when** it replies `ready`.
 
 </template>
 <template #vscode>
@@ -220,9 +242,19 @@ Work IQ grounds Copilot in your real Microsoft 365 work - mail, calendar, Teams,
 </template>
 <template #app>
 
-::: info Coming soon
-Work IQ install steps for the GitHub Copilot app are on the way. For now, use the GitHub Copilot CLI or the VS Code Agents window.
-:::
+1. In the navigation pane on the left, select **Customize**.
+
+   ![The GitHub Copilot app sidebar with Customize highlighted](/img/ghapp-customize.png)
+
+2. Select the **Plugins** tab.
+
+   ![The Customize page with the Plugins tab highlighted](/img/ghapp-plugins-tab.png)
+
+3. In the search field in the top-right corner, type `WorkIQ`.
+
+4. Select **+ Install** to the right of the **workiq** plugin.
+
+   ![The Plugins tab with WorkIQ searched and the Install button highlighted](/img/ghapp-workiq-install.png)
 
 </template>
 <template #vscode>
@@ -247,10 +279,10 @@ Work IQ install steps for the GitHub Copilot app are on the way. For now, use th
 
    ![The Plugins list showing workiq installed and enabled](/img/app-workiq-enabled.png)
 
-> **Note:** Installing Work IQ through the VS Code Agents window also makes it available in the GitHub Copilot Chat harness in VS Code - the same plugin works in both.
-
 </template>
 </ReadyCheck>
+
+> **Note:** Installing Work IQ in one of these tools typically makes it available across all GitHub Copilot harnesses. For example, if you install it in the CLI, it's also available in the GitHub Copilot app and in VS Code (Agents window and editor).
 
 ### 2 · Gather your week's meetings
 
