@@ -1,11 +1,11 @@
 ---
-title: Flight Clearance - Scout
+title: Pre-Flight Checklist - Scout
 navbar: false
 ---
 
 <!-- markdownlint-disable MD013 MD025 MD033 -->
 
-# 🛫 Flight Clearance
+# 🛫 Pre-Flight Checklist
 
 ::: warning 🚧 Draft - the video and the form aren't final yet
 :::

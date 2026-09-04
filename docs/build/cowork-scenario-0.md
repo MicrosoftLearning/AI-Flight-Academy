@@ -1,11 +1,11 @@
 ---
-title: Flight Clearance - Cowork
+title: Pre-Flight Checklist - Cowork
 navbar: false
 ---
 
 <!-- markdownlint-disable MD013 MD025 MD033 -->
 
-# 🛫 Flight Clearance
+# 🛫 Pre-Flight Checklist
 
 ::: warning 🚧 Draft - the certification form isn't final yet
 :::

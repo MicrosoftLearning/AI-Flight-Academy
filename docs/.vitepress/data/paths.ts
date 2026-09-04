@@ -99,7 +99,7 @@ export const SCENARIO_0: Scenario = {
   id: "scenario-0",
   emoji: "🛫",
   label: "Scenario 0",
-  name: "Flight Clearance",
+  name: "Pre-Flight Checklist",
   sub: "Your pre-flight readiness check",
   status: "wip",
 };
