@@ -31,14 +31,6 @@ hero:
 
 <div class="home-section">
 
-## Watch this first
-
-<p class="home-section-intro is-wide">🎬 Pre-flight safety video - scripted, publishing soon. The embed lands here once it's live.</p>
-
-</div>
-
-<div class="home-section">
-
 ## Pick your altitude
 
 <p class="home-section-intro is-wide">Pick where you can get something done today. This isn't a Team Week commitment - you can switch later. Each altitude has its own guide with the exact steps.</p>
