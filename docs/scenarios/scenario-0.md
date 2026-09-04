@@ -1,15 +1,15 @@
 ---
 layout: home
 navbar: false
-title: Scenario 0 · Flight Clearance
+title: Scenario 0 · Pre-Flight Checklist
 
 hero:
-  name: Flight Clearance
+  name: Pre-Flight Checklist
   text: Scenario 0
   tagline: Get set up on your altitude and confirm you're ready to fly before Team Week.
   image:
     src: /hero.svg
-    alt: Flight Clearance
+    alt: Pre-Flight Checklist
 ---
 
 <!-- markdownlint-disable MD013 MD025 MD033 MD041 -->
