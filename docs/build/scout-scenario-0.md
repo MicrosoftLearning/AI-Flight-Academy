@@ -5,10 +5,7 @@ navbar: false
 
 <!-- markdownlint-disable MD013 MD025 MD033 -->
 
-# 🛫 Pre-Flight Checklist
-
-::: warning 🚧 Draft - the video and the form aren't final yet
-:::
+# 🛩️ Scout
 
 This guide gets you ready to fly the **Scout altitude** for our AI Flight Academy session during Team Week. It assumes you're starting fresh: you'll set up Microsoft Scout, then run a short test flight that builds something real from your Microsoft 365 work. At the end you'll take a screenshot and fill out a quick form to get certified.
 
@@ -136,6 +133,8 @@ Two things to set up first: connect Scout to Teams so your briefs can reach you,
 
 Your assistant reads across your work and remembers what it's told you, so it needs a few permissions set to **Allow**. Anything left on **Ask** is skipped when Scout runs in the background.
 
+> **Heartbeat runs in its own sandbox.** It has a tighter permission policy than the rest of Scout, edited right here in the Heartbeat panel - so you can run Scout wide open day to day while this background loop stays locked down to only what it needs.
+
 1. Navigate to **Automations** and select **Heartbeat**. Then under **Permissions**, select **Manage permissions**, then **Custom**.
 
    ![The Automations permissions panel with Manage permissions](/img/scout-manage-permissions.png)
@@ -151,6 +150,24 @@ Your assistant reads across your work and remembers what it's told you, so it ne
 4. Under **Work IQ > Email**, set **List emails** to **Allow** so it can read your recent mail.
 
    ![List emails set to Allow under Work IQ Email](/img/scout-list-emails.png)
+
+::: details Permissions not looking right?
+By default, selecting **Custom** sets the read permissions to **Allow**. If you've changed them, select **Reset to defaults** at the bottom - or, if you'd prefer to stay in full control, set the following to **Allow**:
+
+| # | Tool |
+| --- | --- |
+| 1 | `m_recall`, `m_remember`, `m_forget` |
+| 2 | `workiq_get_my_profile` |
+| 3 | `workiq_get_my_manager` |
+| 4 | `workiq_list_emails` |
+| 5 | `workiq_get_email` |
+| 6 | `workiq_search_emails` |
+| 7 | `workiq_list_chats` |
+| 8 | `workiq_search_chats` |
+| 9 | `workiq_list_chat_messages` |
+| 10 | `workiq_list_events` |
+
+:::
 
 ### 1 · Decide what deserves to interrupt you
 
@@ -192,12 +209,16 @@ Paste a short list like that straight into the prompt.
 
 Open **Automations > Heartbeat** and select **Enable**, then set the schedule:
 
-- **Frequency:** every 15, 30, 60, or 120 minutes (we recommend **15**)
+- **Frequency:** every 15, 30, 60, or 120 minutes (we recommend **every 2 hours**)
 - **Schedule:** Monday to Friday, 8am to 6pm
 
-![The Scout Heartbeat settings with frequency and schedule](/img/scout-heartbeat-settings.png)
+![The Scout Heartbeat settings with frequency and schedule](/img/scout-heartbeat-timing.png)
 
-Paste the prompt below into the **Prompt** field, replacing the bracketed scope line with your sentence from step 1. It calls your assistant **Clippy** as a placeholder - change both instances to whatever you like, since every brief arrives signed with that name.
+Paste the prompt below into the **Prompt** field, then make three swaps so it's yours:
+
+- **Name** - replace every `[Clippy]` (it appears four times) with a name you like. Every brief is signed with it, so pick something you'll recognize. Default: **Clippy**.
+- **Scope** - in **STEP 2**, replace `[PASTE YOUR SCOPE SENTENCE HERE]` with your sentence from step 1.
+- **Quiet reply** *(optional)* - in **STEP 6**, `[Nothing new to report]` is exactly what it says on a run with nothing to raise. Reword it if you like, or leave it as is.
 
 ```text
 Your name is [Clippy]. You are my personal assistant. You run on your own in the
@@ -213,6 +234,11 @@ STEP 1 - CHECK WHAT YOU ALREADY RAISED
 Call m_recall with the query "[Clippy] raised". Anything you find there has already
 been reported. Do not raise it again.
 
+m_recall is your ONLY source of truth for this. If it returns nothing, then nothing
+has been raised - treat every candidate as new, however familiar it looks. Never
+treat your own earlier Teams messages or briefs as evidence that you already
+reported something; your own past output is not memory.
+
 STEP 2 - SCAN
 Look at, from the last 24 hours: [PASTE YOUR SCOPE SENTENCE HERE]
 
@@ -220,7 +246,8 @@ STEP 3 - FILTER OUT NOISE
 Ignore external senders unless my scope names them. Ignore newsletters, promotions,
 shipping, billing, security alerts, surveys, and automated notifications. Ignore
 anything where I am only on CC and nobody asked me anything. Ignore anything that
-looks already resolved. Ignore anything you found in STEP 1.
+looks already resolved. Ignore anything you found in STEP 1. Do not drop something
+just because it feels familiar - only STEP 1 memory can rule something out.
 
 STEP 4 - GATHER CONTEXT
 For each item that survives, dig before you report it. Find the rest of the thread,
@@ -234,9 +261,13 @@ with "[Clippy] raised" then the person and a short description. Do this before y
 write your answer.
 
 STEP 6 - DECIDE WHETHER TO SPEAK AT ALL
-If NOTHING survived the filter: produce NO output whatsoever. Do not write "All
-quiet". Do not write any explanation, acknowledgement, or status line. End your turn
-with a completely empty response.
+If NOTHING survived the filter, your entire response must be exactly this and
+nothing else:
+
+[Nothing new to report]
+
+No explanation, no status line, no summary of what you checked, no list of what you
+dropped.
 
 If something DID survive: your final response IS the notification. Do not call any
 messaging tool. Write the brief directly as your answer, signed "[Clippy]". For each
@@ -255,15 +286,19 @@ You are read-only. Never send an email. Never draft an email. Never message anyo
 Never write, create, or modify any file.
 ```
 
-> **Why it has to remember.** Each run starts fresh. Without steps 1 and 5, it would report the same item every 15 minutes until you dealt with it. Memory is what makes it tolerable to leave on - so `m_remember` and `m_recall` must be set to **Allow**.
+::: info Already have a Heartbeat you don't want to touch?
+If you've already got a Heartbeat set up that you'd rather not disturb, don't edit it. Instead, copy the prompt above - with your three swaps made - paste it into Scout, and ask Scout to put it on a schedule for you.
+
+One catch: run this way, your assistant uses your **global Scout permissions**, not the Heartbeat sandbox. Before you schedule it, go to **Settings > Permissions** and set every tool listed under **Permissions not looking right?** (above) to **Allow**.
+:::
 
 ### 3 · Run it and read your first brief
 
-You're not going to sit and wait 15 minutes. In the Heartbeat panel, select **Run now**, then open Teams. Within a minute or so you should have a brief from Microsoft Scout like the example above.
+You're not going to sit and wait two hours. In the Heartbeat panel, select **Run now**, then open Teams. Within a minute or so you should have a brief from Microsoft Scout like the example above.
 
 Read it properly. The interesting part isn't that it found things - it's the context it went and got: who else already replied, what meeting it collides with, what you said you'd do and haven't.
 
-> **If nothing arrives, congratulations - you're all caught up.** The person who wrote this note envies you. A quiet run produces no output, so no message is expected - it isn't broken, you just can't prove it works until there's something to catch. Have a colleague @mention you a fake task in Teams, then select **Run now** again. First confirm your scope in **STEP 2** of the prompt includes Teams @mentions, or there'll be nothing to trip it.
+> **If nothing arrives, congratulations - you're all caught up.** The person who wrote this note envies you. A quiet run just replies `[Nothing new to report]` instead of a brief - it isn't broken, you just can't prove it works until there's something to catch. Have a colleague @mention you a fake task in Teams, then select **Run now** again. First confirm your scope in **STEP 2** of the prompt includes Teams @mentions, or there'll be nothing to trip it.
 
 <div class="callout-bubble is-important">
 <span class="callout-bubble-icon">🎖️</span>
@@ -297,7 +332,7 @@ Your reply routes into Scout, which picks it up and acts on it. Or, if you'd rat
 
 ### 5 · Tune it until you'd keep it on
 
-The first version is always slightly wrong. Fix it by editing the heartbeat prompt - this is the actual skill.
+The first version is always slightly wrong. Fix it by editing the heartbeat prompt.
 
 - **It raised junk.** Name the offender in the prompt's STEP 3: *"Also ignore anything from noreply addresses, anything marked [EXTERNAL] unless it's from a domain in my scope, and anything from Viva or Yammer."*
 - **It was too quiet.** Widen the prompt's STEP 2 by one source - add Teams mentions, or one more person.

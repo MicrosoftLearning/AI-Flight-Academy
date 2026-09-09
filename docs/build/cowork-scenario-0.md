@@ -5,10 +5,7 @@ navbar: false
 
 <!-- markdownlint-disable MD013 MD025 MD033 -->
 
-# 🛫 Pre-Flight Checklist
-
-::: warning 🚧 Draft - the certification form isn't final yet
-:::
+# 🛩️ Cowork
 
 This guide gets you ready to fly the **Cowork altitude** for our AI Flight Academy session during Team Week. Cowork is cloud-hosted - nothing to install - so setup is as easy as navigating to a link. From there you'll complete a flight from our existing AI Skill Building catalog, then screenshot your result to get certified.
 
