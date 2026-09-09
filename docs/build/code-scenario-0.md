@@ -5,10 +5,7 @@ navbar: false
 
 <!-- markdownlint-disable MD013 MD025 MD033 -->
 
-# 🛫 Pre-Flight Checklist
-
-::: warning 🚧 Draft - the video and the form aren't final yet
-:::
+# 🛩️ Code
 
 This guide gets you ready to fly the **Code altitude** for our AI Flight Academy session during Team Week. It assumes you're starting fresh: you'll set up your tools, then run a short test flight that proves everything works against your real Microsoft 365 work. At the end you'll take a screenshot and fill out a quick form to get certified.
 
