@@ -140,13 +140,17 @@ Two things to set up first: connect Scout to Teams so your briefs can reach you,
 
    ![The Teams bot setup steps in Scout](/img/scout-teams-bot-setup.png)
 
+   > **Note:** To reach **Manage your apps**, select **Store** (**+**) in the Teams navigation rail, then at the bottom of the Teams window select **Manage your apps**. In **Manage your apps**, select **Upload an app** (or **...**, depending on window size) > **Upload a custom app**.
+   > 
+   > ![Manage your apps in Teams, with Upload a custom app selected](/img/scout-manage-apps.png)
+
 #### Enable permissions
 
 Your assistant reads across your work and remembers what it's told you, so it needs a few permissions set to **Allow**. Anything left on **Ask** is skipped when Scout runs in the background.
 
 > **Heartbeat runs in its own sandbox.** It has a tighter permission policy than the rest of Scout, edited right here in the Heartbeat panel - so you can run Scout wide open day to day while this background loop stays locked down to only what it needs.
 
-1. Navigate to **Automations** and select **Heartbeat**. Then under **Permissions**, select **Manage permissions**, then **Custom**.
+1. Navigate to **Automations** and select **Heartbeat**. Then under **Permissions**, select **Customize Permissions**, then **Custom**.
 
    ![The Automations permissions panel with Manage permissions](/img/scout-manage-permissions.png)
 
@@ -154,7 +158,7 @@ Your assistant reads across your work and remembers what it's told you, so it ne
 
    ![memory set to Allow under App tools](/img/scout-memory-allow.png)
 
-3. Under **Teams**, set **List your chats** to **Allow** so it can read your recent Teams chats.
+3. Under **Work IQ > Teams**, set **List your chats** to **Allow** so it can read your recent Teams chats.
 
    ![List your chats set to Allow under Teams](/img/scout-list-chats.png)
 
@@ -167,16 +171,16 @@ By default, selecting **Custom** sets the read permissions to **Allow**. If you'
 
 | # | Tool |
 | --- | --- |
-| 1 | `m_recall`, `m_remember`, `m_forget` |
-| 2 | `workiq_get_my_profile` |
-| 3 | `workiq_get_my_manager` |
-| 4 | `workiq_list_emails` |
-| 5 | `workiq_get_email` |
-| 6 | `workiq_search_emails` |
-| 7 | `workiq_list_chats` |
-| 8 | `workiq_search_chats` |
-| 9 | `workiq_list_chat_messages` |
-| 10 | `workiq_list_events` |
+| 1 | `App Tools > Memory > Look up saved memory` |
+| 2 | `Work IQ Tools > People > Read your own profile` |
+| 3 | `Work IQ Tools > People > Look up your manager` |
+| 4 | `Work IQ Tools > Email > List emails` |
+| 5 | `Work IQ Tools > Email > Read emails` |
+| 6 | `Work IQ Tools > Email > Search emails` |
+| 7 | `Work IQ Tools > Teams > List your chats` |
+| 8 | `Work IQ Tools > Teams > Search chats` |
+| 9 | `Work IQ Tools > Teams > Read messages in a chat` |
+| 10 | `Work IQ Tools > Calendar > List calendar events` |
 
 :::
 
