@@ -152,7 +152,7 @@ Your assistant reads across your work and remembers what it's told you, so it ne
 
 1. Navigate to **Automations** and select **Heartbeat**. Then under **Permissions**, select **Customize Permissions**, then **Custom**.
 
-   ![The Automations permissions panel with Manage permissions](/img/scout-manage-permissions.png)
+   ![The Automations permissions panel with Manage permissions](/img/scout-manage-permissions1.png)
 
 2. Under **App tools**, set **memory** to **Allow**. This stops your assistant from telling you the same thing twice.
 
