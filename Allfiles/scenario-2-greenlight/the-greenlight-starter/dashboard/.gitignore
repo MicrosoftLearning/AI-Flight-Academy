@@ -1,8 +1,0 @@
-# Installed by `npm install` — never committed.
-node_modules/
-
-# Runtime output — regenerated per run.
-uploads/
-runs/
-plans/
-submissions/
