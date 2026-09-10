@@ -142,7 +142,7 @@ Two things to set up first: connect Scout to Teams so your briefs can reach you,
 
    > **Note:** To reach **Manage your apps**, select **Store** (**+**) in the Teams navigation rail, then at the bottom of the Teams window select **Manage your apps**. In **Manage your apps**, select **Upload an app** (or **...**, depending on window size) > **Upload a custom app**.
    > 
-   > ![Manage your apps in Teams, with Upload a custom app selected](/img/scout-manage-apps.png)
+   > ![Manage your apps in Teams, with Upload a custom app selected](/img/scout_manage_apps.png)
 
 #### Enable permissions
 
