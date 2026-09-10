@@ -112,7 +112,7 @@ Use definitions/depth.md as the definition instead. Re-run and tell me which nam
 
 Then try `definitions/rising.md`. Same 72 people, and the shortlists barely overlap: `depth.md` and `rising.md` share two names out of eight, and each surfaces four people no other definition finds.
 
-The definition is plain prose in a file. Open `references/DEFINITION.md`, write what your program would look for, and re-run.
+The definition is plain prose in a file. Open `references/DEFINITION.md` from the folder where your Scout skills are imported to (`%USERPROFILE%/.scout/m-skills/ambassador`), write what your program would look for, and re-run.
 
 ### What it can't do
 
