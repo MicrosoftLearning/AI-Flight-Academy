@@ -9,6 +9,17 @@ navbar: false
 
 This guide gets you ready to fly the **Scout altitude** for our AI Flight Academy session during Team Week. It assumes you're starting fresh: you'll set up Microsoft Scout, then run a short test flight that builds something real from your Microsoft 365 work. At the end you'll take a screenshot and fill out a quick form to get certified.
 
+<div class="callout-bubble is-important">
+<span class="callout-bubble-icon">🎖️</span>
+<div>
+
+**Your goal: Pilot Certification.** Finish the minimum for this altitude, screenshot your result, and upload it to the form. Keep this link handy - it's how you get certified.
+
+<a class="callout-bubble-cta" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR_Bd56YTwD1Gsu3sHRReLNdUQ0lPVkNOTEpaVkMxNkxHMkxXVEZOVVFXSy4u" target="_blank" rel="noreferrer">Open the certification form →</a>
+
+</div>
+</div>
+
 Two parts:
 
 <div class="lab-grid lab-grid-2">
@@ -303,6 +314,8 @@ Read it properly. The interesting part isn't that it found things - it's the con
 <div class="callout-bubble is-important">
 <span class="callout-bubble-icon">🎖️</span>
 <div>
+
+🚨 **IMPORTANT**
 
 **That's the bar - get your Pilot Certification.** Your assistant has sent you a brief in Teams. Screenshot it as your proof - that's all you need to be certified. Everything below is extra.
 

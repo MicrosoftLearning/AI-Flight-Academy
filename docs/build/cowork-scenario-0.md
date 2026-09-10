@@ -9,6 +9,17 @@ navbar: false
 
 This guide gets you ready to fly the **Cowork altitude** for our AI Flight Academy session during Team Week. Cowork is cloud-hosted - nothing to install - so setup is as easy as navigating to a link. From there you'll complete a flight from our existing AI Skill Building catalog, then screenshot your result to get certified.
 
+<div class="callout-bubble is-important">
+<span class="callout-bubble-icon">🎖️</span>
+<div>
+
+**Your goal: Pilot Certification.** Finish the minimum for this altitude, screenshot your result, and upload it to the form. Keep this link handy - it's how you get certified.
+
+<a class="callout-bubble-cta" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR_Bd56YTwD1Gsu3sHRReLNdUQ0lPVkNOTEpaVkMxNkxHMkxXVEZOVVFXSy4u" target="_blank" rel="noreferrer">Open the certification form →</a>
+
+</div>
+</div>
+
 Two parts:
 
 <div class="lab-grid lab-grid-2">
@@ -83,6 +94,8 @@ Pick any option below and complete it - any one gets you certified.
 <div class="callout-bubble is-important">
 <span class="callout-bubble-icon">🎖️</span>
 <div>
+
+🚨 **IMPORTANT**
 
 **Get your Pilot Certification.** Finish any one flight, screenshot its final output, and upload it as your proof. Make It Your Own (Path A) is our pick, but any flight counts.
 

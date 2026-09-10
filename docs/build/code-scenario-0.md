@@ -9,6 +9,17 @@ navbar: false
 
 This guide gets you ready to fly the **Code altitude** for our AI Flight Academy session during Team Week. It assumes you're starting fresh: you'll set up your tools, then run a short test flight that proves everything works against your real Microsoft 365 work. At the end you'll take a screenshot and fill out a quick form to get certified.
 
+<div class="callout-bubble is-important">
+<span class="callout-bubble-icon">🎖️</span>
+<div>
+
+**Your goal: Pilot Certification.** Finish the minimum for this altitude, screenshot your result, and upload it to the form. Keep this link handy - it's how you get certified.
+
+<a class="callout-bubble-cta" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=v4j5cvGGr0GRqy180BHbR_Bd56YTwD1Gsu3sHRReLNdUQ0lPVkNOTEpaVkMxNkxHMkxXVEZOVVFXSy4u" target="_blank" rel="noreferrer">Open the certification form →</a>
+
+</div>
+</div>
+
 Two parts:
 
 <div class="lab-grid lab-grid-2">
@@ -300,6 +311,8 @@ Review what Copilot returns. This is the foundation of your status report - it c
 <div class="callout-bubble is-important">
 <span class="callout-bubble-icon">🎖️</span>
 <div>
+
+🚨 **IMPORTANT**
 
 **That's the bar - get your Pilot Certification.** You've run a prompt against Work IQ and have a response on screen. Screenshot it as your proof - that's all you need to be certified. Everything below is extra.
 
