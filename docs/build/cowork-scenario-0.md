@@ -61,10 +61,10 @@ Nothing to install - Cowork lives inside Microsoft 365 Copilot.
 
 ## Choose an option
 
-Pick any option below and complete it - any one gets you certified.
+Pick any option below and complete it - any one gets you certified. If you want the most relevant prep, **Make It Your Own → Path A: Build Your Own Skill** is our pick, since building a skill is the mechanic we will build on at Team Week.
 
-::: tip Want the most relevant prep?
-**Make It Your Own → Path A: Build Your Own Skill** is our pick, since building a skill is the mechanic we build on at Team Week.
+::: tip Before you take off
+Each flight opens in a new tab. When you're done, come back to this page to grab the link to submit your pilot log.
 :::
 
 <div class="lab-grid lab-grid-3">

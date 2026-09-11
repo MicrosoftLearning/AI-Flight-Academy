@@ -86,6 +86,10 @@ Install each prerequisite for the AI Flight Academy Scout altitude.
 | --- | --- |
 | **GitHub account with GitHub Copilot access** | [Above](#emu). Do this first |
 | **Microsoft Scout** | [aka.ms/scout-internal](https://aka.ms/scout-internal) |
+| **Scout access** (if you've never installed it) | [Request access](https://aka.ms/clawpilot-request) |
+| **Latest Scout version** | [Releases page](https://github.com/gim-home/m/releases) — download v0.23.779 |
+
+   > **Note:** Worried you'll lose your conversation history? Ask Scout to back up your sessions, conversations, automations, skills, and any locally stored settings or memory to OneDrive. Questions? Reach out to an expert.
 
 ### Check you're ready
 
