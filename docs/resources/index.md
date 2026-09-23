@@ -30,7 +30,7 @@ Everything to go deeper - before, during, and after the hack.
 <div class="lab-grid lab-grid-3">
   <a class="lab-card" href="https://copilot.cloud.microsoft/cowork" target="_blank" rel="noopener">
     <span class="lab-card-emoji">✨</span>
-    <span class="lab-card-title">Microsoft 365 Copilot</span>
+    <span class="lab-card-title">Microsoft Copilot</span>
     <span class="lab-card-desc">Cowork lives here. Describe what you need and Work IQ brings your work context automatically.</span>
     <span class="lab-card-cta">Open →</span>
   </a>

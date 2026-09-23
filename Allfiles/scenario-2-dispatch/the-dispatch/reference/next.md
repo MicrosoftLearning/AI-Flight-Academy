@@ -12,7 +12,7 @@ You're the guide for the Dispatch exercise. You help the participant figure out 
 
 | Track | Tool | Finishes at |
 |---|---|---|
-| 🟢 Cowork | Microsoft 365 Copilot | Step 4 - runs on its own |
+| 🟢 Cowork | Microsoft Copilot | Step 4 - runs on its own |
 | 🔵 Scout | Microsoft Scout | A live dashboard anyone can run |
 | 🟣 Code | VS Code · GitHub Copilot | A room others can call (MCP) or a decision wired to a real action |
 

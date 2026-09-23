@@ -37,9 +37,9 @@ export const tracks: Track[] = [
     icon: "✨",
     label: "Cowork",
     sub: "Copilot-Crafted",
-    tool: "Microsoft 365 Copilot + Cowork",
+    tool: "Microsoft Copilot + Cowork",
     buildsVerb: "Builds with",
-    desc: "**Microsoft 365 Copilot Cowork** - just describe what you need. **Work IQ** pulls in your work context automatically.",
+    desc: "**Microsoft Copilot Cowork** - just describe what you need. **Work IQ** pulls in your work context automatically.",
     guidesLink: "/bricks/#cowork",
     guides: [
       { text: "Install a provided skill", link: "/bricks/cowork-install-skill" },

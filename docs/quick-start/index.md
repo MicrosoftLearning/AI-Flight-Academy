@@ -46,11 +46,11 @@ You can change your mind on the day, and the setup below is worth doing for more
 
 ## 🟢 Cowork {#cowork}
 
-**You'll build with:** Microsoft 365 Copilot + Cowork
+**You'll build with:** Microsoft Copilot + Cowork
 
 ### What you need
 
-Microsoft 365 Copilot with Cowork, at [copilot.cloud.microsoft/cowork](https://copilot.cloud.microsoft/cowork). Nothing to install, no account to request, no terminal.
+Microsoft Copilot with Cowork, at [copilot.cloud.microsoft/cowork](https://copilot.cloud.microsoft/cowork). Nothing to install, no account to request, no terminal.
 
 **You're ready when** that link opens Cowork.
 

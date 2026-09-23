@@ -12,7 +12,7 @@ Pick where you'll actually get something done.
 
 | | You'll build with | You'll spend the time | You'll walk out with |
 | --- | --- | --- | --- |
-| 🟢 **Cowork** · Copilot-Crafted | Microsoft 365 Copilot + Cowork | Writing instructions, not code. Guided end to end. | A working agent, built entirely in chat |
+| 🟢 **Cowork** · Copilot-Crafted | Microsoft Copilot + Cowork | Writing instructions, not code. Guided end to end. | A working agent, built entirely in chat |
 | 🔵 **Scout** · Agent-Orchestrated | Microsoft Scout | Describing what you want and letting Scout build it. | The same, plus a running console you can point at |
 | 🟣 **Code** · Code-Extended | VS Code + GitHub Copilot | Writing real code. You get a contract, not a solution. | The same, plus a server other agents can call |
 

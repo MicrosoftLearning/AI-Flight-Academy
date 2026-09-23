@@ -46,16 +46,16 @@ Two parts:
 
 ## Set up Cowork
 
-Nothing to install - Cowork lives inside Microsoft 365 Copilot.
+Nothing to install - Cowork lives inside Microsoft Copilot.
 
-1. Open [Microsoft 365 Copilot](https://m365.cloud.microsoft/chat/).
+1. Open [Microsoft Copilot](https://m365.cloud.microsoft/chat/).
 2. Select **Cowork**.
 
-   ![Microsoft 365 Copilot showing Cowork highlighted in a white box](/img/cowork-select-cowork.png)
+   ![Microsoft Copilot showing Cowork highlighted in a white box](/img/cowork-select-cowork.png)
 
 3. You'll land on the Copilot Cowork homepage, where you can type a new task, try a pre-built sample, or pick up a recent one.
 
-   ![Microsoft 365 Copilot showing the Cowork task view](/img/cowork-task-view.png)
+   ![Microsoft Copilot showing the Cowork task view](/img/cowork-task-view.png)
 
 **You're ready when** Cowork opens.
 
