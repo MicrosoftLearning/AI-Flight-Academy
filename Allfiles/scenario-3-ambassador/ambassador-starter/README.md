@@ -23,6 +23,10 @@ python cohort.py --definition definitions/depth.md
 
 Python 3.10+ and the GitHub Copilot CLI, signed in. No other dependencies.
 
+The model defaults to `claude-sonnet-5`. Set `AMBASSADOR_MODEL` to change it
+(`auto` lets the CLI pick); if your account can't use the pinned model, the call
+falls back to the default on its own.
+
 ## How it works
 
 `cohort.py` reads `definition.md`, summarizes all 72 candidates, and sends both

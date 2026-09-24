@@ -4,11 +4,6 @@ title: Dispatch - Cowork
 
 # 🟢 Dispatch
 
-::: warning 🚧 Work in progress
-Scenario 2 is still being built and tested. Steps, downloads, and screenshots may change before the event.
-:::
-**You'll build this in Cowork. No code, and no experience needed.**
-
 <div class="scene">
 
 ![In a dim ops room, a woman in a mustard cardigan stands beside four empty, unstaffed dispatch desks.](/img/scenario-2-dispatch-cowork-hero.png)
@@ -201,4 +196,4 @@ Seat a room of look-alike teams and they all route the same way - that's not fai
 
 ---
 
-[← Back to start](/) · [What this scenario is about](/scenarios/scenario-2)
+[← Back to start](/)

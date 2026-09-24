@@ -162,6 +162,47 @@ html:not(.dark) .dark-only {
   color: var(--vp-c-brand-1);
 }
 
+/* Support variant - a bigger, blue bubble for the "if you get stuck" help path. */
+.callout-bubble.is-support {
+  margin: 2rem 0;
+  padding: 1.75rem 2rem;
+  gap: 1.1rem;
+  border-radius: 16px;
+  border-width: 2px;
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.callout-bubble.is-support .callout-bubble-icon {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.callout-bubble.is-support > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.callout-bubble.is-support h3 {
+  margin: 0;
+  padding: 0;
+  border-top: none;
+  font-size: 1.3rem;
+}
+
+.callout-bubble.is-support ol {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+
+.callout-bubble.is-support li {
+  margin: 0.4rem 0;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--vp-c-text-1);
+}
+
 /* Table check - the two-minute group moment in a build page */
 .table-check {
   display: flex;

@@ -6,12 +6,6 @@ title: The Ambassador - Code
 
 # 🎖️ The Ambassador
 
-::: warning 🚧 Work in progress
-Scenario 3 is still being built and tested. Steps, downloads, and screenshots may change before the event.
-:::
-
-**You'll build this in code - VS Code, GitHub Copilot, and the Copilot CLI.**
-
 <div class="brief">
   <span class="brief-badge">The handoff</span>
   <p class="brief-lead">The AI Skilling Ambassador program runs on people who volunteer for it, and it has to keep them. The person who ran it left halfway through.</p>
@@ -57,13 +51,7 @@ Do step 1 on your own. Everything after is the table.
 Invented people, invented scores, invented feedback. Nothing here describes a real person and no real program is being modeled. `program-data/DISCLAIMER.md` has the details.
 :::
 
-**Python 3.10+** and the **GitHub Copilot CLI**, signed in:
-
-```bash
-copilot --version
-```
-
-Missing? `npm install -g @github/copilot`, then run `copilot` once to sign in.
+You set up your tools in the pre-flight check. Build with whichever GitHub Copilot surface you like - VS Code, the Copilot CLI, or the GitHub Copilot app - but the starter calls the **Copilot CLI** behind the scenes, so keep it signed in. You'll also need **Python 3.10+**.
 
 <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-starter.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">📦</span>
@@ -94,7 +82,7 @@ python cohort.py --definition definitions/depth.md
 python cohort.py --definition definitions/rising.md
 ```
 
-Same 72 people. `depth.md` and `rising.md` share two names out of eight, and each surfaces four people no other definition finds. The definition is doing the work, and it's plain prose in a file you can edit.
+Same 72 people, different shortlists - compare them and you'll see only a few names overlap. The definition is doing the work, and it's plain prose in a file you can edit.
 
 Open `definition.md` and write what your program would look for. Re-run.
 
@@ -105,7 +93,7 @@ Then read **What it does not do** in the README. Those are the three conditions,
 **Done when:** one condition is met, on real output, with a name on screen.
 
 ::: tip 🎈 This is the fun part - keep it low-stress
-Pick whatever direction sounds good and build it with your table. It doesn't have to be perfect, and it doesn't have to solve everything - the whole point is to explore your tool, trade ideas, and vibe-code something together. Use whatever you came here to learn, see how far you get, and have fun with it. You're here to learn by doing.
+Pick whatever direction sounds good and build it with your table. It doesn't have to be perfect, and it doesn't have to solve everything - the whole point is to explore your tool, trade ideas, and vibe-code something together. Use whatever you came here to learn, see how far you get, and have fun with it. You're here to learn by doing. Anything on this page phrased as a prompt is an example, not a script; say it your way.
 :::
 
 ### Where the room is
@@ -139,7 +127,7 @@ Starting points if you want one. Take one, combine two, or ignore all of them.
 **Pick by what your table would still run next time round**, not by what sounds most impressive.
 
 ::: tip 🎛️ Pick the model that fits the job
-A long-context model can hold all nine files at once; a faster one is better while you're iterating. Switch in the model picker and compare on the same question.
+A long-context model can hold all nine files at once; a faster one is better while you're iterating. In Copilot Chat, switch in the model picker. For `cohort.py`, set `AMBASSADOR_MODEL` (for example `$env:AMBASSADOR_MODEL = "claude-haiku-4.5"` in PowerShell) and compare on the same question.
 :::
 
 ## Push it further
@@ -152,4 +140,4 @@ A long-context model can hold all nine files at once; a faster one is better whi
 
 ---
 
-[← Back to start](/) · [What this scenario is about](/scenarios/scenario-3)
+[← Back to start](/)

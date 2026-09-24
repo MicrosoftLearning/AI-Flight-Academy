@@ -79,6 +79,11 @@ not forty files.
 **Ask for JSON when a program reads the answer.** Prose is fine for a terminal and useless
 to a parser.
 
+**Change the model with `TWIN_MODEL`.** It defaults to `claude-sonnet-5`; set it to any
+model your account can use (`$env:TWIN_MODEL = "claude-haiku-4.5"` in PowerShell), or to
+`auto` for the CLI's default. If your account can't use the pinned model, the call falls
+back to the default on its own.
+
 ## The four examples
 
 Each is a different kind of work, same `ask()` underneath. Read one, copy it, or delete it.

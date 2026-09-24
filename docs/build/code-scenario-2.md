@@ -4,11 +4,6 @@ title: Dispatch - Code
 
 # 🟣 Dispatch
 
-::: warning 🚧 Work in progress
-Scenario 2 is still being built and tested. Steps, downloads, and screenshots may change before the event.
-:::
-**You'll build this in code - VS Code, GitHub Copilot, and the Copilot CLI.**
-
 <div class="scene">
 
 ![An operations engineer in a headset stands at a wide airport ops console of glowing monitors; purple data-lines fan out across the dusk tarmac to a row of airliners parked at their gates.](/img/scenario-2-dispatch-code-hero.png)
@@ -86,6 +81,8 @@ npm install -g @github/copilot       # GitHub Copilot CLI - the board calls it
 
 Prefer installers? Grab [Node.js](https://nodejs.org/), [Python 3](https://www.python.org/downloads/), and the [GitHub Copilot CLI](https://www.npmjs.com/package/@github/copilot). Then run `copilot` once and sign in.
 
+Build with whichever GitHub Copilot surface you like - VS Code, the Copilot CLI, or the GitHub Copilot app - but the board calls the **Copilot CLI** behind the scenes, so keep it signed in.
+
 **Node** is required to start the board; **Python 3** is only needed once you wire the intake gate in Step 4 (until then the board runs and the gate shows "not built"). Open the **the-dispatch-starter** project in VS Code.
 
 ---
@@ -95,7 +92,7 @@ Prefer installers? Grab [Node.js](https://nodejs.org/), [Python 3](https://www.p
 Now that you have the project downloaded, it's time to get started on the build.
 
 ::: tip The board points out what to build
-Anywhere the board shows an amber **"not wired"** marker - the intake badge and **Act on this decision** - that's a build path. The runs use a pinned, cost-predictable model (`claude-sonnet-4.6`); change it with `DISPATCH_MODEL` if you like.
+Anywhere the board shows an amber **"not wired"** marker - the intake badge and **Act on this decision** - that's a build path. The runs use a pinned model (`claude-sonnet-5`) and fall back to the CLI default if your account can't use it; change it with `DISPATCH_MODEL` if you like.
 :::
 
 ### 1 · Start the board
@@ -269,4 +266,4 @@ First wiring rarely compiles. Errors aren't the end - read the trace, fix a seat
 
 ---
 
-[← Back to start](/) · [What this scenario is about](/scenarios/scenario-2)
+[← Back to start](/)

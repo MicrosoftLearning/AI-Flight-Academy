@@ -6,12 +6,6 @@ title: The Digital Twin - Code
 
 # 🟣 The Digital Twin
 
-::: warning 🚧 Work in progress
-Scenario 1 is still being built and tested. Steps, downloads, and screenshots may change before the event.
-:::
-
-**You'll build this in code - VS Code, GitHub Copilot, and the Copilot CLI.**
-
 ## The problem
 
 You already know how you work. Which trade-off you make when two things conflict, what you check before you commit, how the wording changes between a partner team and your own.
@@ -31,16 +25,10 @@ By the end, you should have:
 
 ## Setup
 
-**Check the Copilot CLI is installed and signed in:**
-
-```bash
-copilot --version
-```
-
-Missing? `npm install -g @github/copilot`, then run `copilot` once to sign in. The starter also needs **Python 3.10+**; nothing else to install unless you build the MCP server.
+You set up your tools in the pre-flight check. Build with whichever GitHub Copilot surface you like - VS Code, the Copilot CLI, or the GitHub Copilot app - but the starter calls the **Copilot CLI** behind the scenes, so keep it signed in. The starter also needs **Python 3.10+**; nothing else to install unless you build the MCP server.
 
 ::: warning The twin comes pre-populated with fictional data
-You won't write a persona today. The starter ships as **Jordan Reyes**, a made-up engineer at a fictional company, so it answers on the first command and nothing of yours goes into a shared exercise. Everything you build runs against Jordan.
+You don't need to write a persona today. The starter ships as **Jordan Reyes**, a made-up engineer at a fictional company, so it answers on the first command and nothing of yours goes into a shared exercise. Everything you build runs against Jordan - unless you take the optional step below to use your own.
 
 `DISCLAIMER.md` in the starter lists what's invented, and how to point the twin at your own work after the session.
 :::
@@ -56,7 +44,7 @@ You won't write a persona today. The starter ships as **Jordan Reyes**, a made-u
 
 ### 2 · Open it and find the twin
 
-Unzip the starter and open the folder in VS Code. **Every command on this page runs from inside `twin-code-starter/`**, so open a terminal there:
+Unzip the starter and open the folder in the Copilot surface you prefer. You'll also need a terminal open inside it. **Every command on this page runs from inside `twin-code-starter/`**:
 
 ```bash
 cd twin-code-starter
@@ -80,35 +68,44 @@ twin-code-starter/
   mcp_server.py               the twin as MCP tools
 ```
 
-**`.github/skills/` is the portable spot every surface reads**, so pick whichever you like: open the folder in **VS Code** and ask *"using my twin, ..."* in chat; run the examples from the **Copilot CLI**; or commit it and let the **GitHub coding agent** use the same twin. Nothing here is CLI-only.
+**Use whichever Copilot surface you like** - the GitHub Copilot app, the GitHub Copilot CLI, the VS Code Agents window, or Copilot Chat in the VS Code editor. Whichever you pick, you'll work in two places side by side:
+
+| | What it's for |
+| --- | --- |
+| **A terminal** in `twin-code-starter/` | Running the twin from code - `python twin.py` and the examples. This is what you're building: something that works without a chat window. |
+| **Your Copilot surface** | Getting Copilot to write and change that code with you. |
 
 ### 3 · Ask your twin
+
+**In the terminal**, run one question to confirm everything works - Python, the Copilot CLI, and your sign-in:
 
 ```bash
 python twin.py "Using my twin: a teammate is blocked on my review but I'm mid-migration. What do I do?"
 ```
 
-You'll get a position and the rule from `persona.md` or `standards.md` that produced it. That's the whole loop - and it's not just code. The four examples show the range:
+You'll get a position and the rule from `persona.md` or `standards.md` that produced it. Each call takes 20-60 seconds - it's a full agent turn, not a hang. That's the whole loop; the `examples/` folder shows what you can build on it, and each direction below points at one.
 
-```bash
-python examples/decide.py "should I take the on-call swap this weekend?"    # any call, as you
-python examples/triage.py examples/inbox.sample.md                          # sort an inbox, draft replies
-python examples/status.py --to manager "guard shipped; lantern slips to thu"  # a status in your voice
-python examples/review_diff.py --staged                                     # review a diff, block on a hook
-```
+::: tip Asking in chat works too
+Ask the same question in your Copilot surface's chat and the twin answers there as well. In chat it also adds one dated line to `references/memory.md` - that's by design, so it remembers the call next time. The terminal run above is still the one to get working, because it's the path your code uses.
+:::
 
-Change a rule to see it land: open `references/standards.md`, edit what Jordan blocks, and re-run `review_diff.py` - the verdict moves with the file.
+::: details Optional · Use your own work instead of Jordan (about 10-15 minutes)
+Skip this if you'd rather get straight to building - everything on this page works with Jordan.
 
-<div class="callout-bubble">
-<span class="callout-bubble-icon">🧬</span>
+1. **Run the interview:** `python onboard.py`. Answer a handful of short questions and it writes your own `persona.md`, `voice.md`, and `standards.md`. It runs locally and sends nothing anywhere. Jordan's files are backed up as `*.jordan.md`, so you can compare or switch back.
+2. **Deepen it from your real work (optional).** Open one of the new files in a Copilot surface that can see your mail and calendar, and ask it to fill in a thin section from how you actually work. Correct what it drafts.
+3. **Re-run your question** with `python twin.py` and check the answer now sounds like you.
 
-**Want it to be *you* instead of Jordan?** Run `python onboard.py` - a short interview that swaps in your own persona, voice, and standards in a few minutes. Jordan is backed up so you can compare.
-
-</div>
+Keep your own files local - nothing personal belongs in a shared repo. `DISCLAIMER.md` has the detail.
+:::
 
 ## The hack
 
-Now build something that runs headless - no chat window. Pick a direction with your table, split it into pieces, and build in small steps.
+Now build something that runs headless - no chat window. Pick a direction with your table and build in small steps.
+
+::: tip 🎈 You don't need to be a developer
+Copilot writes the code with you. Describe what you want, run it, and correct what comes back - that's the skill here. Anything on this page phrased as a prompt is an example, not a script; say it your way.
+:::
 
 ### Pick a direction
 
@@ -116,7 +113,7 @@ Take one, combine two, or build something specific to how you work.
 
 | | What it is | Your first ten minutes |
 | --- | --- | --- |
-| 🔍 **A reviewer that reviews like you** · code | Your bar and your recurring notes, applied to a diff before anyone else sees it | `examples/review_diff.py` already does this. Run it on a real diff, then change a rule in `standards.md` and watch the verdict move |
+| 🔍 **A reviewer that reviews like you** · code | Your bar and your recurring notes, applied to a diff before anyone else sees it | `examples/review_diff.py` already does this. Make the starter a git repo first (see the worked example below), then change a rule in `standards.md` and watch the verdict move |
 | 📥 **A desk that clears your inbox** · non-code | Sorts what came in and drafts each reply the way you'd send it | `examples/triage.py` is the start. Point it at your own (work-safe) list, then add a bucket your job actually needs |
 | ✍️ **A drafter in your voice** · non-code | Turns rough notes into the update, reply, or summary you'd have written | `examples/status.py` drafts a status. Fork it for the thing you write most - a PR description, a weekly note, a decline |
 | 🧠 **A twin that remembers** | Reads what it did last time before it acts, so it gets sharper across a session | `decide.py --remember` and `review_diff.py` already log to `memory.md`. Build something that reads it first and changes its call because of it |
@@ -131,8 +128,7 @@ Take one, combine two, or build something specific to how you work.
 
 </div>
 
-### Split the work
-
+::: details Splitting the work across your table
 Take one piece each that runs on its own, along the natural seams:
 
 | Piece | Owns |
@@ -143,6 +139,7 @@ Take one piece each that runs on its own, along the natural seams:
 | **Output** | Where it lands - exit code, comment, file |
 
 **Stub every seam first** - fake input, fake twin reply, fake output - so the whole thing runs end to end in five minutes. Then each person swaps one fake for the real thing.
+:::
 
 ### Build it in layers
 
@@ -152,12 +149,18 @@ Then layer up: a skeleton on a stub, one real `ask()`, `ask_json()` for a parsea
 
 ::: details The worked example, if you want a running start
 
-`examples/review_diff.py` reviews a diff against your `persona.md` and **exits 1 if your twin would block it**. That exit code is what makes it a hook rather than a chat:
+`examples/review_diff.py` reviews a diff against your `persona.md` and **exits 1 if your twin would block it**. The starter isn't a git repo yet, so make it one and commit the starting point - then edit a file, stage it, and review it:
 
 ```bash
+git init
+git add -A
+git commit -m "starter"
+# edit a file, then:
+git add -A
 python examples/review_diff.py --staged
-git diff main... | python examples/review_diff.py --stdin
 ```
+
+If git asks who you are, run the two `git config` commands it prints, then commit again. That exit code is what makes it a hook rather than a chat:
 
 ```sh
 # .git/hooks/pre-commit
@@ -180,4 +183,4 @@ Making it yours is the next step, and there are two ways. Run `python onboard.py
 
 ---
 
-[← Back to start](/) · [What this scenario is about](/scenarios/scenario-1)
+[← Back to start](/)

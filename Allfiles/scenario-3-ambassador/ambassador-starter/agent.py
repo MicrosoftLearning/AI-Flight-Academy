@@ -17,11 +17,15 @@ Two things that shape anything built on this:
   Anything that calls per-candidate over 72 people needs a bound.
 * **Ask for JSON when a program reads the answer.** `ask_json()` does that and
   copes with a model that adds prose or a code fence anyway.
+* **Change the model with `AMBASSADOR_MODEL`.** It defaults to `claude-sonnet-5`;
+  `auto` lets the CLI pick. If your account can't use the pinned model, the call
+  falls back to the default.
 """
 
 from __future__ import annotations
 
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -34,6 +38,11 @@ ROOT = Path(__file__).parent
 # cap is a guard against sending an entire dataset by accident; raise it if you
 # have a reason to.
 _ARG_LIMIT = 200000
+
+MODEL = os.environ.get("AMBASSADOR_MODEL", "claude-sonnet-5")
+_MODEL_UNAVAILABLE = re.compile(
+    r"--model flag is not available|model\b[^\n]{0,80}\bnot (?:available|supported)", re.I
+)
 
 
 class AgentError(RuntimeError):
@@ -89,26 +98,35 @@ def ask(prompt: str, *, timeout: int = 180) -> str:
             "Send less evidence per call rather than splitting the question."
         )
 
-    try:
-        result = subprocess.run(
-            # The prompt goes in on stdin, not as `-p`. A multi-line value passed
-            # as an argument is truncated at the first newline, and the model
-            # answers whatever the first line happened to say.
-            [executable, "--output-format", "json", "--allow-all-tools"],
-            input=prompt,
-            capture_output=True,
-            text=True,
-            timeout=timeout,
-            cwd=str(ROOT),
-            encoding="utf-8",
-            errors="replace",
-        )
-    except subprocess.TimeoutExpired as exc:
-        raise AgentError(f"No answer within {timeout}s.") from exc
-    except OSError as exc:
-        raise AgentError(f"Could not run {executable}: {exc}") from exc
+    # Which models an account can use varies, so an unavailable pin retries on the default.
+    models = [MODEL, None] if MODEL and MODEL.lower() != "auto" else [None]
+    for model in models:
+        args = [executable, "--output-format", "json", "--allow-all-tools"]
+        if model:
+            args += ["--model", model]
+        try:
+            result = subprocess.run(
+                # The prompt goes in on stdin, not as `-p`. A multi-line value passed
+                # as an argument is truncated at the first newline, and the model
+                # answers whatever the first line happened to say.
+                args,
+                input=prompt,
+                capture_output=True,
+                text=True,
+                timeout=timeout,
+                cwd=str(ROOT),
+                encoding="utf-8",
+                errors="replace",
+            )
+        except subprocess.TimeoutExpired as exc:
+            raise AgentError(f"No answer within {timeout}s.") from exc
+        except OSError as exc:
+            raise AgentError(f"Could not run {executable}: {exc}") from exc
 
-    stderr = (result.stderr or "").strip()
+        stderr = (result.stderr or "").strip()
+        if model and _MODEL_UNAVAILABLE.search(stderr):
+            continue
+        break
 
     if result.returncode != 0:
         raise AgentError(f"Copilot CLI exited {result.returncode}: {stderr[:300]}")

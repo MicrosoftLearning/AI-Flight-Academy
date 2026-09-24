@@ -75,7 +75,6 @@ function bold(s: string) {
         >
           <span class="picker-bubble-emoji">{{ a.icon }}</span>
           <span class="picker-bubble-title">{{ a.emoji }} {{ a.label }}</span>
-          <span class="picker-bubble-sub">{{ a.sub }}</span>
           <span class="picker-bubble-builds">{{ a.buildsVerb }}</span>
           <!-- eslint-disable-next-line vue/no-v-html -- build-time constant -->
           <span class="picker-bubble-desc" v-html="bold(a.desc)"></span>

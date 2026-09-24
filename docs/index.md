@@ -13,21 +13,43 @@ hero:
       text: Start building
       link: /#start-here
     - theme: alt
-      text: How the hack works
-      link: /how-it-works/
+      text: What to expect
+      link: /#what-to-expect
 ---
 
 <!-- markdownlint-disable MD033 MD041 -->
 <div class="home-section">
 
-## What to expect
+## What to expect {#what-to-expect}
 
-<p class="home-section-intro is-wide">Everyone builds. You don't need to be a developer - you just pick a problem and a way to build. Coaches roam the room, and in two hours you'll have something that actually works.</p>
+<p class="home-section-intro is-wide">This session is about getting your hands on the keyboard, trying something new, and discovering practical ways to work with AI.</p>
+
+Our goals are simple:
+
+- **Get hands-on with AI.** Spend less time watching and more time building.
+- **Move beyond your comfort zone.** Choose an altitude that challenges you and see where it takes you.
+- **Start small.** You aren't expected to finish a production-ready system. Use an MVP mindset to prototype, experiment, and learn.
+- **Have fun together.** Collaborate with your table, share what you discover, and find new ways to use AI.
 
 <div class="callout-bubble">
 <span class="callout-bubble-icon">🎢</span>
 
-**New to agents?** That's the point. There's a comfortable on-ramp at every altitude, and a coach is never far away. You'll stretch - just a little - no matter where you start.
+**You don't need to be a developer.** Everything in this session can be built with help from AI. Ever heard of vibe coding? This is your chance to try it. Getting stuck is part of experimenting, and you have several ways to get support.
+
+</div>
+
+<div class="callout-bubble is-support">
+<span class="callout-bubble-icon">🛟</span>
+
+<div>
+
+### If you get stuck
+
+1. **Ask AI first.** Describe what you're trying to do, share the problem, and ask for a next step. Cowork, Scout, and GitHub Copilot might surprise you.
+2. **Ask your table subject matter expert (SME).** Each table has a dedicated first line of support. Find out who your SME is before you begin.
+3. **Find a coach.** Coaches wear bright yellow vests. If you and your table SME are stumped, wave down a coach for help.
+
+</div>
 
 </div>
 
@@ -35,41 +57,20 @@ hero:
 
 <div class="home-section">
 
-## How it works
+## Start here - pick your path {#start-here}
+
+<p class="home-section-intro is-wide">Two clicks and you're building. Pick your altitude, then a scenario - every scenario runs at every altitude. The picker takes you straight to your build page.</p>
 
 <!-- markdownlint-disable MD033 -->
-<div class="lab-grid">
-  <a class="lab-card" href="/AI-Flight-Academy/levels/">
-    <span class="lab-card-emoji">🎚️</span>
-    <span class="lab-card-title">1 · Pick your altitude</span>
-    <span class="lab-card-desc">Cowork with no code, Scout in between, or real code in VS Code. Pick your tools.</span>
-    <span class="lab-card-cta">Compare →</span>
-  </a>
-  <a class="lab-card" href="/AI-Flight-Academy/scenarios/">
-    <span class="lab-card-emoji">🎯</span>
-    <span class="lab-card-title">2 · Pick a scenario</span>
-    <span class="lab-card-desc">🚧 Scenario 1 is The Digital Twin, Scenario 2 is Dispatch, Scenario 3 is The Ambassador. All still in progress.</span>
-    <span class="lab-card-cta">See scenarios →</span>
-  </a>
-  <a class="lab-card" href="/AI-Flight-Academy/#start-here">
-    <span class="lab-card-emoji">🧱</span>
-    <span class="lab-card-title">3 · Follow your build page</span>
-    <span class="lab-card-desc">Everything you need is on one page, start to finish. No hunting around.</span>
-    <span class="lab-card-cta">Start building →</span>
-  </a>
-  <a class="lab-card" href="/AI-Flight-Academy/submit/">
-    <span class="lab-card-emoji">🚀</span>
-    <span class="lab-card-title">4 · Build your demo & submit</span>
-    <span class="lab-card-desc">Put together a short demo of what you built, then submit your project.</span>
-    <span class="lab-card-cta">Submit a project →</span>
-  </a>
-</div>
+<PathPicker />
 
 </div>
 
 <div class="home-section">
 
-## Scenario 0 {#scenario-0}
+## New here? Start with the pre-flight checklist
+
+<p class="home-section-intro is-wide">Not sure where to begin? Scenario 0 walks you through what you need and how the session runs.</p>
 
 <div class="lab-grid lab-grid-2">
   <a class="lab-card" href="/AI-Flight-Academy/scenarios/scenario-0">
@@ -84,27 +85,11 @@ hero:
 
 <div class="home-section">
 
-## Start here - pick your altitude {#start-here}
+## Keep exploring
 
-<p class="home-section-intro is-wide">Two clicks and you're building. Every scenario runs at every altitude - pick the tools you want open for two hours.</p>
-
-<PathPicker />
-
-</div>
-
-<div class="home-section">
-
-## The finish line
-
-<p class="home-section-intro is-wide">Built something? Package a short demo and submit your project. Then explore the resources to keep going after the hack.</p>
+<p class="home-section-intro is-wide">Explore the resources to keep building and experimenting after the session.</p>
 
 <div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/submit/">
-    <span class="lab-card-emoji">🚀</span>
-    <span class="lab-card-title">Submit your project</span>
-    <span class="lab-card-desc">Built an agent or a demo? Package it up and submit it here - this is how your work gets seen.</span>
-    <span class="lab-card-cta">Submit a project →</span>
-  </a>
   <a class="lab-card" href="/AI-Flight-Academy/resources/">
     <span class="lab-card-emoji">📚</span>
     <span class="lab-card-title">Resources</span>

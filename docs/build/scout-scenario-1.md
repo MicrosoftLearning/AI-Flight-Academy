@@ -6,12 +6,6 @@ title: The Digital Twin - Scout
 
 # 🔵 The Digital Twin
 
-::: warning 🚧 Work in progress
-Scenario 1 is still being built and tested. Steps, downloads, and screenshots may change before the event.
-:::
-
-**You'll build this in Microsoft Scout. You describe what you want; Scout writes it.**
-
 ::: details New to Scout?
 An agentic assistant that runs on your machine. Two things plug into it:
 
@@ -91,7 +85,7 @@ It finishes by **triaging what actually landed** in your mail and Teams, so you 
 
 ## The hack
 
-Your twin works, but it's generic - built from what your work *proves*, which isn't the same as what you'd say about yourself. Two moves: correct it, then build something on it.
+Your twin works, but it's generic - built from what your work *proves*, which isn't the same as what you'd say about yourself. Do a quick correction pass, then get to the main event: building something on it.
 
 <div class="callout-bubble">
 <span class="callout-bubble-icon">🔒</span>
@@ -100,45 +94,28 @@ Your twin works, but it's generic - built from what your work *proves*, which is
 
 </div>
 
-### Correct your twin
+### Quick-correct your twin (~15 min)
 
-Use it for real - ask about something, don't just ask it to write:
+Your twin's first read of you is close, not right. Do one short pass, then get building - you'll keep fixing it as you go.
 
-```text
-Using my twin, what should I do about [the thing you've been putting off]?
-```
+1. **Ask it something real** - something like *"using my twin, what should I do about [the thing I've been putting off]?"* Lead with the twin's name; a generic answer usually means Scout didn't call it.
+2. **Find what's off.** When an answer isn't yours, ask which rule made it say that, or ask to see your persona.
+3. **Fix two or three lines, then move on.** Tell it what to change in your own words, then ask your question again to see if the answer moves. A good line changes what the twin *does* - a name, a date, a hard no.
 
-You'll get a position and a draft, not a menu of options. Then try the rest of what your twin does:
+::: tip Prompts are examples, not scripts
+Say it however you'd naturally say it - the twin understands paraphrase.
+:::
 
-| Ask | You get |
+::: details More things to try, and what the persona tags mean
+
+| Ask something like | You get |
 | --- | --- |
 | *"Triage what landed today."* | Mail and Teams sorted into needs-me, blocked, handled and noise, with drafts |
 | *"Draft a reply to [a real thread]."* | Something you could send, in your voice |
 | *"What am I forgetting this week?"* | Your calendar and your commitments read together |
 | *"What don't you know about how I work?"* | Its own gaps, named - it's read a month of your work |
 
-Trigger the twin by name - *"using my twin"*, *"ask my twin"*, *"triage what landed"*, *"what am I forgetting"*. A generic answer usually means Scout didn't call it.
-
-<div class="callout-bubble">
-<span class="callout-bubble-icon">📎</span>
-
-**Give it a name you'll actually use.** Say *"rename my twin to Clippy"*, then start a new session so Scout picks it up - and call it by that from now on.
-
-</div>
-
-**Fix the line behind an answer.** Take an answer you didn't like and trace it:
-
-```text
-Which line made you say that?
-```
-
-Fix that line in the chat, then **re-run the same question, word for word**. If the answer moves, you've found a rule that does real work. Then go looking for the rest:
-
-```text
-Show me my persona.md.
-```
-
-Its sections are drawn from your real work, each tagged:
+Your persona's sections are each tagged by how directly the twin knows them:
 
 | | |
 | --- | --- |
@@ -146,9 +123,10 @@ Its sections are drawn from your real work, each tagged:
 | `[inferred]` | A reasonable read, but you never said it outright |
 | `[needs you]` | Nothing in your work reached this, so it wrote a starting point |
 
-**Start with `[inferred]` and `[needs you]`** - they reach furthest from the evidence, so they're likeliest to be wrong. You don't need to work through them all: fix whatever is costing you an answer and leave the rest.
+`[inferred]` and `[needs you]` are likeliest to be wrong, so they're a good place to look first.
 
-A line earns its place when it changes what the twin does - a name, a date, a threshold, something you'd never agree to without checking. *"I value collaboration"* is true and changes nothing.
+**Give it a name you'll actually use.** Say *"rename my twin to Clippy"*, then start a new session so Scout picks it up.
+:::
 
 ### Build on your twin
 
@@ -192,4 +170,4 @@ What you made won't change the world, and it doesn't need to. The twin is yours 
 
 ---
 
-[← Back to start](/) · [What this scenario is about](/scenarios/scenario-1)
+[← Back to start](/)

@@ -6,12 +6,6 @@ title: The Ambassador - Scout
 
 # 🎖️ The Ambassador
 
-::: warning 🚧 Work in progress
-Scenario 3 is still being built and tested. Steps, downloads, and screenshots may change before the event.
-:::
-
-**You'll build this in Microsoft Scout. You describe what you want; Scout writes it.**
-
 <div class="brief">
   <span class="brief-badge">The handoff</span>
   <p class="brief-lead">The AI Skilling Ambassador program runs on people who volunteer for it, and it has to keep them. The person who ran it left halfway through.</p>
@@ -196,4 +190,4 @@ The more specific your prompt, the less you'll undo:
 
 ---
 
-[← Back to start](/) · [What this scenario is about](/scenarios/scenario-3)
+[← Back to start](/)

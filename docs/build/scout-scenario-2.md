@@ -4,11 +4,6 @@ title: Dispatch - Scout
 
 # 🔵 Dispatch
 
-::: warning 🚧 Work in progress
-Scenario 2 is still being built and tested. Steps, downloads, and screenshots may change before the event.
-:::
-**You'll build this in Microsoft Scout, with GitHub Copilot CLI running the room behind a live dashboard. Scout does the building - you won't hand-write the app.**
-
 You run the room, then turn it into something you can watch.
 
 <div class="scene">
@@ -198,4 +193,4 @@ Let Scout off the leash and it might build you forty booths. When it overshoots,
 
 ---
 
-[← Back to start](/) · [What this scenario is about](/scenarios/scenario-2)
+[← Back to start](/)

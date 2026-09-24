@@ -6,12 +6,6 @@ title: The Digital Twin - Cowork
 
 # 🧬 The Digital Twin
 
-::: warning 🚧 Work in progress
-Scenario 1 is still being built and tested. Steps, downloads, and screenshots may change before the event.
-:::
-
-**You'll build this in Cowork. No code, and no experience needed.**
-
 ## The problem
 
 Copilot already knows a lot about how you work. Its memory and Work IQ read across your mail, calendar, and Teams, so most drafts start close to right.
@@ -105,7 +99,7 @@ It should take the position you'd take. Start your request with the twin's name 
 
 ## The hack
 
-Your twin works, but it's generic - built from what your work *proves*, which isn't the same as what you'd say about yourself. The rest of the session is two moves: make it accurate, then teach it what it can't see.
+Your twin works, but it's generic - built from what your work *proves*, which isn't the same as what you'd say about yourself. Do a quick correction pass, then get to the main event: teaching it what it can't see.
 
 <div class="callout-bubble">
 <span class="callout-bubble-icon">🔒</span>
@@ -114,15 +108,20 @@ Your twin works, but it's generic - built from what your work *proves*, which is
 
 </div>
 
-### Correct your twin
+### Quick-correct your twin (~15 min)
 
-Ask to see what it built:
+Your twin's first read of you is close, not right. Do one short pass, then move on to the main event below - you'll keep fixing it as you go.
 
-```text
-Show me my persona.md.
-```
+1. **Look at what it built** - ask something like *"show me my persona.md."* Start with the lines tagged `[inferred]` or `[needs you]`; they're likeliest to be wrong.
+2. **Fix two or three lines that change what it does** - a name, a date, a threshold, a hard no. *"Balance competing priorities"* changes nothing; *"when an internal deadline and a customer's collide, protect the customer's"* does.
+3. **Test it, then move on.** Ask a question you asked earlier and see if the answer moves. If nothing changes, the line was too vague.
 
-Each section is filled from your real work and tagged with how directly the twin knows it:
+::: tip Prompts are examples, not scripts
+Say it however you'd naturally say it - the twin understands paraphrase.
+:::
+
+::: details What the persona tags mean, and what to add if you're stuck
+Each section of your persona is tagged by how directly the twin knows it:
 
 | | |
 | --- | --- |
@@ -130,13 +129,8 @@ Each section is filled from your real work and tagged with how directly the twin
 | `[inferred]` | A reasonable read of what it found, but you never said it outright |
 | `[needs you]` | Your work didn't cover this, so it wrote a starting point for you to react to |
 
-**Start with `[inferred]` and `[needs you]`.** They're furthest from the evidence - the twin can watch a month of your work and still not know what you'd refuse outright. Then thicken the `[observed]` lines: accurate, but thin.
-
-Only add lines that change what the twin *does* - a name, a date, a threshold, a hard no. *"Balance competing priorities"* is too vague; add a line underneath that acts:
-
-> *"When an internal deadline and a customer's collide, protect the customer's and renegotiate the internal one."*
-
-**Test each change:** save a request and its answer, edit the file, then run the same request again. If nothing moves, the line was too vague or your test didn't need it. Stuck for what to add? Ask it: *"What don't you know about how I work that would change your answers?"*
+Stuck for what to add? Ask it something like *"what don't you know about how I work that would change your answers?"*
+:::
 
 ### Teach your twin what it can't see
 
@@ -228,4 +222,4 @@ What you made today won't change the world, and it doesn't need to. The point is
 
 ---
 
-[← Back to start](/) · [What this scenario is about](/scenarios/scenario-1)
+[← Back to start](/)

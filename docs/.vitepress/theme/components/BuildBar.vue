@@ -19,9 +19,6 @@ const parsed = computed(() => {
 <template>
   <div v-if="parsed" class="build-bar">
     <div class="build-bar-context">
-      <span class="build-bar-scenario">
-        {{ parsed.scenario.emoji }} {{ parsed.scenario.name }}
-      </span>
       <span class="build-bar-track">
         {{ parsed.track.emoji }} {{ parsed.track.label }}
       </span>
@@ -52,15 +49,9 @@ const parsed = computed(() => {
   color: var(--vp-c-text-2);
 }
 
-.build-bar-scenario {
+.build-bar-track {
   font-weight: 600;
   color: var(--vp-c-text-1);
-}
-
-.build-bar-track::before {
-  content: "·";
-  margin-right: 0.5rem;
-  color: var(--vp-c-divider);
 }
 
 .build-bar-status {
