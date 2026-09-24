@@ -9,7 +9,6 @@ export interface Track {
   emoji: string;
   icon: string;
   label: string;
-  sub: string;
   tool: string;
   /** Preposition that fits the tool: you build *with* Cowork, *in* VS Code. */
   buildsVerb: string;
@@ -36,7 +35,6 @@ export const tracks: Track[] = [
     emoji: "🟢",
     icon: "✨",
     label: "Cowork",
-    sub: "Copilot-Crafted",
     tool: "Microsoft Copilot + Cowork",
     buildsVerb: "Builds with",
     desc: "**Microsoft Copilot Cowork** - just describe what you need. **Work IQ** pulls in your work context automatically.",
@@ -55,7 +53,6 @@ export const tracks: Track[] = [
     emoji: "🔵",
     icon: "🧩",
     label: "Scout",
-    sub: "Agent-Orchestrated",
     tool: "Microsoft Scout",
     buildsVerb: "Builds with",
     desc: "**Microsoft Scout** - describe what you want and Scout builds it, grounded in your work through **Work IQ** and running against **GitHub Copilot CLI**.",
@@ -72,10 +69,9 @@ export const tracks: Track[] = [
     emoji: "🟣",
     icon: "🛰️",
     label: "Code",
-    sub: "Code-Extended",
     tool: "VS Code + GitHub Copilot",
     buildsVerb: "Builds in",
-    desc: "**VS Code with GitHub Copilot and the Copilot CLI**. Write the agents yourself and enforce guardrails in the tool rather than the prompt.",
+    desc: "**GitHub Copilot on the surface of your choice - VS Code, the Copilot CLI, or the GitHub Copilot app.** Write the agents yourself and enforce guardrails in the tool rather than the prompt.",
     guidesLink: "/bricks/#code",
     guides: [
       { text: "Set up VS Code + GitHub Copilot", link: "/bricks/code-setup" },
@@ -148,7 +144,7 @@ export const buildStatus: Record<string, Status> = {
 
 export const statusLabel: Record<Status, string> = {
   ready: "",
-  wip: "🚧",
+  wip: "",
   soon: "Coming soon",
 };
 

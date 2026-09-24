@@ -162,6 +162,47 @@ html:not(.dark) .dark-only {
   color: var(--vp-c-brand-1);
 }
 
+/* Support variant - a bigger, blue bubble for the "if you get stuck" help path. */
+.callout-bubble.is-support {
+  margin: 2rem 0;
+  padding: 1.75rem 2rem;
+  gap: 1.1rem;
+  border-radius: 16px;
+  border-width: 2px;
+  border-color: #3b82f6;
+  background: rgba(59, 130, 246, 0.08);
+}
+
+.callout-bubble.is-support .callout-bubble-icon {
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.callout-bubble.is-support > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.callout-bubble.is-support h3 {
+  margin: 0;
+  padding: 0;
+  border-top: none;
+  font-size: 1.3rem;
+}
+
+.callout-bubble.is-support ol {
+  margin: 0;
+  padding-left: 1.3rem;
+}
+
+.callout-bubble.is-support li {
+  margin: 0.4rem 0;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  color: var(--vp-c-text-1);
+}
+
 /* Table check - the two-minute group moment in a build page */
 .table-check {
   display: flex;
@@ -669,6 +710,151 @@ a.bonus-card:hover {
 
 .path-body > :first-child {
   margin-top: 0;
+}
+
+/* Direction bubbles (Code scenarios) */
+.direction-bubbles {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 0.9rem;
+  margin: 1.25rem 0 1.75rem;
+}
+
+.direction-bubble {
+  --db-accent: #3b82f6;
+  --db-tint: rgba(59, 130, 246, 0.1);
+  border: 1px solid var(--db-accent);
+  border-radius: 18px;
+  background: var(--db-tint);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.direction-bubble.is-green { --db-accent: #16a34a; --db-tint: rgba(22, 163, 74, 0.1); }
+.direction-bubble.is-purple { --db-accent: #8b5cf6; --db-tint: rgba(139, 92, 246, 0.1); }
+.direction-bubble.is-orange { --db-accent: #ea580c; --db-tint: rgba(234, 88, 12, 0.1); }
+.direction-bubble.is-pink { --db-accent: #db2777; --db-tint: rgba(219, 39, 119, 0.1); }
+.direction-bubble.is-teal { --db-accent: #0d9488; --db-tint: rgba(13, 148, 136, 0.1); }
+.direction-bubble.is-gray { --db-accent: #64748b; --db-tint: rgba(100, 116, 139, 0.12); }
+
+.direction-bubble:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.direction-bubble.is-open {
+  grid-column: 1 / -1;
+  transform: none;
+}
+
+.direction-bubble-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  width: 100%;
+  padding: 1.1rem 1.2rem;
+  text-align: left;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+.direction-bubble-emoji {
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.direction-bubble-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  flex: 1;
+}
+
+.direction-bubble-title {
+  font-weight: 600;
+  color: var(--vp-c-text-1);
+}
+
+.direction-bubble-tag {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--db-accent);
+  border: 1px solid var(--db-accent);
+  vertical-align: middle;
+}
+
+.direction-bubble-what {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--vp-c-text-2);
+}
+
+.direction-bubble-toggle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--db-accent);
+}
+
+.direction-bubble-body {
+  padding: 0 1.2rem 1.2rem 3.8rem;
+}
+
+.direction-bubble-start {
+  margin: 0 0 0.9rem;
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.direction-bubble-prompt-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--db-accent);
+  margin-bottom: 0.4rem;
+}
+
+.direction-bubble-prompt {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  background: var(--vp-c-bg);
+  border: 1px solid var(--vp-c-divider);
+}
+
+.direction-bubble-prompt p {
+  margin: 0;
+  flex: 1;
+  font-size: 0.92rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.direction-bubble-copy {
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--db-accent);
+  border-radius: 999px;
+  background: none;
+  cursor: pointer;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--db-accent);
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .direction-bubble-body {
+    padding-left: 1.2rem;
+  }
 }
 
 /* Take-it-with-you page (Learn Cowork with Cowork) */.takeaway-hero {

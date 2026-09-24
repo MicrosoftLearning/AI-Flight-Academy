@@ -4,19 +4,15 @@ title: The Digital Twin - Cowork
 
 <!-- markdownlint-disable MD013 MD025 MD033 -->
 
-# 🧬 The Digital Twin
+# The Digital Twin
 
-::: warning 🚧 Work in progress
-Scenario 1 is still being built and tested. Steps, downloads, and screenshots may change before the event.
-:::
-
-**You'll build this in Cowork. No code, and no experience needed.**
-
-## The problem
+<div class="brief">
+<span class="brief-badge">The problem</span>
 
 Copilot already knows a lot about how you work. Its memory and Work IQ read across your mail, calendar, and Teams, so most drafts start close to right.
 
 What it can't do is show you the picture it's formed of you, let you fix where it's wrong, or carry it into another tool. The calls you actually make - which priority wins when two collide, what you never send without checking, whose sign-off you wait for - it just re-guesses, session after session. So you re-brief it from scratch each time, and rewrite most of what it hands back.
+</div>
 
 ## Objectives
 
@@ -103,9 +99,9 @@ It should take the position you'd take. Start your request with the twin's name 
 
 </div>
 
-## The hack
+## Build
 
-Your twin works, but it's generic - built from what your work *proves*, which isn't the same as what you'd say about yourself. The rest of the session is two moves: make it accurate, then teach it what it can't see.
+Your twin works, but it's generic - built from what your work *proves*, which isn't the same as what you'd say about yourself. Do a quick correction pass, then get to the main event: teaching it what it can't see.
 
 <div class="callout-bubble">
 <span class="callout-bubble-icon">🔒</span>
@@ -114,15 +110,20 @@ Your twin works, but it's generic - built from what your work *proves*, which is
 
 </div>
 
-### Correct your twin
+### Quick-correct your twin (~15 min)
 
-Ask to see what it built:
+Your twin's first read of you is close, not right. Do one short pass, then move on to the main event below - you'll keep fixing it as you go.
 
-```text
-Show me my persona.md.
-```
+1. **Look at what it built** - ask something like *"show me my persona.md."* Start with the lines tagged `[inferred]` or `[needs you]`; they're likeliest to be wrong.
+2. **Fix two or three lines that change what it does** - a name, a date, a threshold, a hard no. *"Balance competing priorities"* changes nothing; *"when an internal deadline and a customer's collide, protect the customer's"* does.
+3. **Test it, then move on.** Ask a question you asked earlier and see if the answer moves. If nothing changes, the line was too vague.
 
-Each section is filled from your real work and tagged with how directly the twin knows it:
+::: tip Prompts are examples, not scripts
+Say it however you'd naturally say it - the twin understands paraphrase.
+:::
+
+::: details What the persona tags mean, and what to add if you're stuck
+Each section of your persona is tagged by how directly the twin knows it:
 
 | | |
 | --- | --- |
@@ -130,28 +131,57 @@ Each section is filled from your real work and tagged with how directly the twin
 | `[inferred]` | A reasonable read of what it found, but you never said it outright |
 | `[needs you]` | Your work didn't cover this, so it wrote a starting point for you to react to |
 
-**Start with `[inferred]` and `[needs you]`.** They're furthest from the evidence - the twin can watch a month of your work and still not know what you'd refuse outright. Then thicken the `[observed]` lines: accurate, but thin.
+Stuck for what to add? Ask it something like *"what don't you know about how I work that would change your answers?"*
+:::
 
-Only add lines that change what the twin *does* - a name, a date, a threshold, a hard no. *"Balance competing priorities"* is too vague; add a line underneath that acts:
-
-> *"When an internal deadline and a customer's collide, protect the customer's and renegotiate the internal one."*
-
-**Test each change:** save a request and its answer, edit the file, then run the same request again. If nothing moves, the line was too vague or your test didn't need it. Stuck for what to add? Ask it: *"What don't you know about how I work that would change your answers?"*
-
-### Teach your twin what it can't see
+### Pick a direction
 
 Your twin now knows *you* - your judgment and your voice. What it doesn't know is the context around you: the people you work with, what's already been decided, what the work is for, and what you're actually working on right now. You add that as references.
 
 **Decide as a table which reference to add, then build it in parallel** - each of you adds the same one to your own twin, so you can compare what worked. The list below is a starting menu; pick what's useful or invent your own. Start with one, add more if you've got time.
 
-| Reference | What your twin gains | Start with |
-| --- | --- | --- |
-| 👥 **People** | Who it's talking to - what each person needs, who wants the answer first, who you soften bad news for | *"Add a reference for who I work with most, what each needs from me, and how I talk to them. Read it whenever a named person is involved."* |
-| 📅 **Commitments** | What you've already promised, so a new ask lands against a real calendar, not an empty one | *"Add a reference for what I've already committed to and when. Read it before telling me to take anything else on."* |
-| ✅ **Decisions** | What's already settled, so it stops reopening things the team closed weeks ago | *"Add a reference for decisions we've made and why. Read it before proposing a change of approach."* |
-| 🎯 **Goals** | What the work is for, so it weighs what matters, not just what's next | *"Add a reference for what I'm trying to achieve this quarter. Read it when I ask what to prioritize."* |
-| 🗂️ **Your working set** | The real material you're on now - briefs, drafts, past write-ups - so it grounds answers in your actual work, not just your rules | *"Add a reference capturing the projects I'm working on right now and a few of my own past write-ups. Read it when I ask about current work."* |
-| ✨ **Your own** | Anything the list doesn't cover - a reference your work actually needs, or a rethink of what the twin does. Rebuild the skill from scratch if you want | *"I want my twin to [what]. Work out what it needs - a new reference or a change to the skill itself - and when to use it."* |
+<script setup>
+const references = [
+  {
+    emoji: "👥", color: "blue", title: "People",
+    what: "Who it's talking to - what each person needs, who wants the answer first, who you soften bad news for.",
+    start: "Add a `people.md` reference and tell the twin to read it whenever a named person is involved.",
+    prompt: "Add a reference for who I work with most, what each needs from me, and how I talk to them. Read it whenever a named person is involved.",
+  },
+  {
+    emoji: "📅", color: "green", title: "Commitments",
+    what: "What you've already promised, so a new ask lands against a real calendar, not an empty one.",
+    start: "Add a reference of what you've committed to and when, read before you agree to more.",
+    prompt: "Add a reference for what I've already committed to and when. Read it before telling me to take anything else on.",
+  },
+  {
+    emoji: "✅", color: "purple", title: "Decisions",
+    what: "What's already settled, so it stops reopening things the team closed weeks ago.",
+    start: "Add a reference of decisions and why, read before it proposes a change of approach.",
+    prompt: "Add a reference for decisions we've made and why. Read it before proposing a change of approach.",
+  },
+  {
+    emoji: "🎯", color: "orange", title: "Goals",
+    what: "What the work is for, so it weighs what matters, not just what's next.",
+    start: "Add a reference for this quarter's goals, read when you ask what to prioritize.",
+    prompt: "Add a reference for what I'm trying to achieve this quarter. Read it when I ask what to prioritize.",
+  },
+  {
+    emoji: "🗂️", color: "teal", title: "Your working set",
+    what: "The real material you're on now - briefs, drafts, past write-ups - so it grounds answers in your actual work, not just your rules.",
+    start: "Point a reference at your current projects and a few past write-ups, read when you ask about current work.",
+    prompt: "Add a reference capturing the projects I'm working on right now and a few of my own past write-ups. Read it when I ask about current work.",
+  },
+  {
+    emoji: "✨", color: "gray", title: "Your own",
+    what: "Anything the list doesn't cover - a reference your work actually needs, or a rethink of what the twin does.",
+    start: "Describe what you want and let the twin work out the reference or skill change it needs. Rebuild from scratch if you want.",
+    prompt: "I want my twin to [what]. Work out what it needs - a new reference or a change to the skill itself - and when to use it.",
+  },
+];
+</script>
+
+<DirectionBubbles :items="references" start-label="Where to start" />
 
 Build each reference by iterating with Cowork: paste a prompt from the table, see what it drafts, then refine. **You'll know it worked when** the twin pulls the reference in on its own: re-run an earlier request and see if the answer changed.
 
@@ -228,4 +258,4 @@ What you made today won't change the world, and it doesn't need to. The point is
 
 ---
 
-[← Back to start](/) · [What this scenario is about](/scenarios/scenario-1)
+[← Back to start](/)

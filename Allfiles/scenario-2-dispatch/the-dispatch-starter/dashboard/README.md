@@ -35,7 +35,7 @@ The **📤 Act on this decision** button is a stub (`501`). Wire `POST /api/disp
 | `DISPATCH_SKILL_DIR` | `../../the-dispatch` | Where `reference/convene.md` and `reference/dispatch.md` live |
 | `DISPATCH_DATA_PACK` | `../../dispatch-data` | Teams / requests / policy, for grounding |
 | `COPILOT_BIN` | `copilot` | The GitHub Copilot CLI binary |
-| `DISPATCH_MODEL` | `claude-sonnet-4.6` | Pinned model for every CLI call - cheap-ish and cost-predictable; set to `''` or `auto` to let the CLI pick |
+| `DISPATCH_MODEL` | `claude-sonnet-5` | Pinned model for every CLI call; set to `''` or `auto` to let the CLI pick. If your account can't use the pinned model, runs fall back to the CLI default |
 | `DISPATCH_TIMEOUT_MS` | `360000` (6 min) | Kill the CLI if a run takes longer |
 | `DISPATCH_PYTHON` | `python` | Python for the intake gate |
 | `DISPATCH_ACT_TARGET` | `<your intake tracker or channel>` | Where the act path would route |

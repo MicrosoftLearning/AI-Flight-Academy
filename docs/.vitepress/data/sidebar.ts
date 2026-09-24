@@ -68,6 +68,17 @@ export function navBuildItems() {
   ];
 }
 
+/** "Guides" nav dropdown: one group per track, sourced from shared metadata. */
+export function navGuideItems() {
+  return tracks.map((track) => ({
+    text: `${track.emoji} ${track.label}`,
+    items: track.guides.map((guide) => ({
+      text: guide.text,
+      link: guide.link,
+    })),
+  }));
+}
+
 /**
  * The sidebar is scoped to the choice you've made. Once you're in a scenario
  * the other scenarios disappear entirely - you see your scenario's three paths
@@ -104,10 +115,9 @@ export function globalSidebar(
     ? {
         text: `${scenario.emoji} ${scenario.name}`,
         items: [
-          {
-            text: scenario.id === SCENARIO_0.id ? "Start here" : "The brief",
-            link: `/scenarios/${scenario.id}`,
-          },
+          ...(scenario.id === SCENARIO_0.id
+            ? [{ text: "Start here", link: `/scenarios/${scenario.id}` }]
+            : []),
           ...trackItems(scenario.id),
           ...(scenario.id === SCENARIO_0.id
             ? []
@@ -132,7 +142,6 @@ export function globalSidebar(
             text: `${s.emoji} ${s.name}`,
             collapsed: true,
             items: [
-              { text: "The brief", link: `/scenarios/${s.id}` },
               ...tracks.map((t) => ({
                 text: `${t.emoji} ${t.label}${suffix(t.id, s.id)}`,
                 link: buildLink(t.id, s.id),
@@ -171,19 +180,11 @@ export function globalSidebar(
       text: "AI Flight Academy",
       items: [
         { text: "Home", link: "/" },
-        { text: "How the hack works", link: "/how-it-works/" },
         { text: "Which altitude is right for me?", link: "/levels/" },
       ],
     },
     scenarioSection,
     guidesSection,
-    {
-      text: "Finish line",
-      items: [
-        { text: "Downloads", link: "/resources/downloads" },
-        { text: "Submit your project", link: "/submit/" },
-      ],
-    },
   ];
 }
 
@@ -202,10 +203,12 @@ export function sidebars(): Record<string, ReturnType<typeof globalSidebar>> {
         lean: s.id === SCENARIO_0.id,
       });
     }
-    out[`/scenarios/${s.id}`] = globalSidebar({
-      scenario: s.id,
-      lean: s.id === SCENARIO_0.id,
-    });
+    if (s.id === SCENARIO_0.id) {
+      out[`/scenarios/${s.id}`] = globalSidebar({
+        scenario: s.id,
+        lean: true,
+      });
+    }
   }
   for (const t of tracks) {
     for (const g of t.guides) {

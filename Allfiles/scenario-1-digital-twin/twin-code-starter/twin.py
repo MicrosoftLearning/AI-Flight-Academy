@@ -18,11 +18,14 @@ Two things worth knowing before you build on this:
   that calls the twin in a loop needs to bound how many times it runs.
 * **Ask for JSON when a program is reading the answer.** `ask_json()` does that, and
   copes with a model that adds prose or a code fence anyway.
+* **Change the model with `TWIN_MODEL`.** It defaults to `claude-sonnet-5`; `auto` lets the
+  CLI pick. If your account can't use the pinned model, the call falls back to the default.
 """
 
 from __future__ import annotations
 
 import json
+import os
 import re
 import shutil
 import subprocess
@@ -36,6 +39,11 @@ MEMORY = ROOT / ".github" / "skills" / "my-twin" / "references" / "memory.md"
 # The prompt is piped in on stdin, so there is no OS command-line limit. This
 # cap is about the agent turn: more context per call is slower and vaguer.
 _ARG_LIMIT = 20000
+
+MODEL = os.environ.get("TWIN_MODEL", "claude-sonnet-5")
+_MODEL_UNAVAILABLE = re.compile(
+    r"--model flag is not available|model\b[^\n]{0,80}\bnot (?:available|supported)", re.I
+)
 
 
 class TwinError(RuntimeError):
@@ -104,26 +112,35 @@ def ask(prompt: str, *, timeout: int = 180) -> str:
             "Send less context per call rather than splitting the question."
         )
 
-    try:
-        result = subprocess.run(
-            # The prompt goes in on stdin, not as `-p`. A multi-line value passed
-            # as an argument is truncated at the first newline, and the twin
-            # answers whatever the first line happened to say.
-            [executable, "--output-format", "json", "--allow-all-tools"],
-            input=prompt,
-            capture_output=True,
-            text=True,
-            timeout=timeout,
-            cwd=str(ROOT),
-            encoding="utf-8",
-            errors="replace",
-        )
-    except subprocess.TimeoutExpired as exc:
-        raise TwinError(f"No answer within {timeout}s.") from exc
-    except OSError as exc:
-        raise TwinError(f"Could not run {executable}: {exc}") from exc
+    # Which models an account can use varies, so an unavailable pin retries on the default.
+    models = [MODEL, None] if MODEL and MODEL.lower() != "auto" else [None]
+    for model in models:
+        args = [executable, "--output-format", "json", "--allow-all-tools"]
+        if model:
+            args += ["--model", model]
+        try:
+            result = subprocess.run(
+                # The prompt goes in on stdin, not as `-p`. A multi-line value passed
+                # as an argument is truncated at the first newline, and the twin
+                # answers whatever the first line happened to say.
+                args,
+                input=prompt,
+                capture_output=True,
+                text=True,
+                timeout=timeout,
+                cwd=str(ROOT),
+                encoding="utf-8",
+                errors="replace",
+            )
+        except subprocess.TimeoutExpired as exc:
+            raise TwinError(f"No answer within {timeout}s.") from exc
+        except OSError as exc:
+            raise TwinError(f"Could not run {executable}: {exc}") from exc
 
-    stderr = (result.stderr or "").strip()
+        stderr = (result.stderr or "").strip()
+        if model and _MODEL_UNAVAILABLE.search(stderr):
+            continue
+        break
 
     # A non-zero exit is usually sign-in or quota. Without this check the error text
     # comes back as though the twin had said it.

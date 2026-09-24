@@ -51,9 +51,11 @@ for (const dir of [UPLOADS_DIR, RUNS_DIR]) {
 const ACT_TARGET = process.env.DISPATCH_ACT_TARGET || '<your intake tracker or channel>';
 
 const COPILOT_BIN = process.env.COPILOT_BIN || 'copilot';
-// Pin a cheap-ish model so runs are cost-predictable across the hack; override
-// with DISPATCH_MODEL (set it to '' or 'auto' to let the CLI pick).
-const COPILOT_MODEL = process.env.DISPATCH_MODEL !== undefined ? process.env.DISPATCH_MODEL : 'claude-sonnet-4.6';
+// Pin a model so runs are predictable across the hack; override with
+// DISPATCH_MODEL (set it to '' or 'auto' to let the CLI pick). If the account
+// can't use the pinned model, each run falls back to the CLI default.
+const COPILOT_MODEL = process.env.DISPATCH_MODEL !== undefined ? process.env.DISPATCH_MODEL : 'claude-sonnet-5';
+const MODEL_UNAVAILABLE = /--model flag is not available|model\b[^\n]{0,80}\bnot (?:available|supported)/i;
 const COPILOT_TIMEOUT_MS = Number(process.env.DISPATCH_TIMEOUT_MS || 6 * 60 * 1000);
 
 // The intake gate - check_content.py at the starter root. Node shells to Python
@@ -291,14 +293,14 @@ function persistRun(job, requestLabel) {
  * Spawn the Copilot CLI with a prompt and resolve with the parsed JSON object
  * it returns. Streams stdout/stderr into job.log as it runs.
  */
-function execCopilotJson(prompt, { addDirs = [], job, timeoutMs = COPILOT_TIMEOUT_MS } = {}) {
+function execCopilotJson(prompt, { addDirs = [], job, timeoutMs = COPILOT_TIMEOUT_MS, model = COPILOT_MODEL } = {}) {
   return new Promise((resolve, reject) => {
     const args = ['-p', prompt, '--allow-all-tools'];
     for (const dir of addDirs) args.push('--add-dir', dir);
-    if (COPILOT_MODEL) args.push('--model', COPILOT_MODEL);
+    if (model) args.push('--model', model);
     args.push('-s');
 
-    if (job) appendLog(job, `$ ${COPILOT_BIN} -p "<prompt omitted, ${prompt.length} chars>"${COPILOT_MODEL ? ` --model ${COPILOT_MODEL}` : ''} --allow-all-tools ${addDirs.map((d) => `--add-dir "${d}"`).join(' ')} -s\n\n`);
+    if (job) appendLog(job, `$ ${COPILOT_BIN} -p "<prompt omitted, ${prompt.length} chars>"${model ? ` --model ${model}` : ''} --allow-all-tools ${addDirs.map((d) => `--add-dir "${d}"`).join(' ')} -s\n\n`);
 
     let child;
     try {
@@ -319,10 +321,14 @@ function execCopilotJson(prompt, { addDirs = [], job, timeoutMs = COPILOT_TIMEOU
     child.on('error', (err) => { clearTimeout(killTimer); reject(new Error(`Copilot CLI process error: ${err.message}`)); });
     child.on('close', (code) => {
       clearTimeout(killTimer);
+      const parsed = extractJson(stdout);
+      if (!parsed && model && MODEL_UNAVAILABLE.test(`${stderr}\n${stdout}`)) {
+        if (job) appendLog(job, `\n[dashboard] model "${model}" isn't available on this account - retrying with the CLI default\n`);
+        return resolve(execCopilotJson(prompt, { addDirs, job, timeoutMs, model: '' }));
+      }
       if (code !== 0 && !stdout.trim()) {
         return reject(new Error(`Copilot CLI exited with code ${code}${stderr ? `: ${stderr.slice(-2000)}` : ''}`));
       }
-      const parsed = extractJson(stdout);
       if (!parsed) return reject(new Error('Could not find a JSON result in the Copilot CLI output. See the raw log below.'));
       resolve(parsed);
     });
