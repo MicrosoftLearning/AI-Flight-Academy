@@ -71,6 +71,10 @@ Set up my twin.
 
 It tells you what it's about to read and waits for a yes, then reads your sent mail, Teams messages, and about a month of calendar. **Its access is read-only** - it can only see what you already have access to, and it has no permission to send or share anything.
 
+::: tip Cowork asks before it changes anything
+When a prompt makes Cowork add or edit a file - your persona, a reference - it shows you the change and waits for you to approve or reject it. That's expected; approve to let it through.
+:::
+
 It comes back with a draft of both files and writes itself into your OneDrive:
 
 ```text
