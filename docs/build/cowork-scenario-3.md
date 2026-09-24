@@ -82,7 +82,7 @@ Then ask it the question the program exists to answer - name the skill so Cowork
 Using the ambassador skill, who should be in the next cohort?
 ```
 
-Eight names, a reason each, and what to offer them. Start each request with *"using the ambassador skill"* - that's the skill's name, and Cowork may not call it otherwise. Now change what it's looking for:
+Eight names, a reason each, and what to offer them. Name the ambassador skill in each request - that's how Cowork knows to call it. Now change what it's looking for:
 
 ```text
 Using the ambassador skill, use definitions/depth.md as the definition instead. Re-run and tell me which names changed.
@@ -93,14 +93,18 @@ Then try `definitions/rising.md`. Same 72 people, and the shortlists barely over
 The definition is plain prose. Tell Cowork what your program is looking for and have it rewrite the file:
 
 ```text
-Using the ambassador skill, show me the definition you're using.
+Show me the definition you're using in the ambassador skill.
 ```
 
 ```text
-Using the ambassador skill, rewrite the definition. We care about people whose work gets picked up by teams they've never worked with, and we'd rather reach someone new than someone who's already been recognized twice. Then re-run and tell me which names changed.
+Rewrite the ambassador skill definition. We care about people whose work gets picked up by teams they've never worked with, and we'd rather reach someone new than someone who's already been recognized twice. Then re-run and tell me which names changed.
 ```
 
 You never open a file. Cowork edits `references/DEFINITION.md` and re-runs against it.
+
+::: tip Cowork asks before it changes anything
+When a prompt makes Cowork edit a file - the definition, a reference - it shows you the change and waits for you to approve or reject it. That's expected; approve to let it through.
+:::
 
 ## Build
 
@@ -110,90 +114,68 @@ You never open a file. Cowork edits `references/DEFINITION.md` and re-runs again
 Pick whatever direction sounds good and build it with your table. It doesn't have to be perfect, and it doesn't have to solve everything - the whole point is to explore your tool, trade ideas, and vibe-code something together. Use whatever you came here to learn, see how far you get, and have fun with it. You're here to learn by doing.
 :::
 
-The skill reads one file and ignores eight - the real evidence about what people ran, the feedback they got, and what they've shipped is sitting in the program data, unopened. Attach a file and tell the skill what to do with it; attach all of them at once and you won't know which one changed the shortlist.
+The program already ships everything you need to judge these people: nine files, 72 candidates, ~2,000 evidence records - what they ran, the feedback they got, what they've shipped. **You don't build the data; it's here.** What the skill *doesn't* do is use most of it - it reads one file and ignores eight. So the builds below come in two shapes: **leverage** the skill as it is to make something new from its picks - a dashboard, a scheduled digest - or **build onto** the skill so it reads more, weighs it differently, or checks its own claims every run. Work one change at a time; throw everything at it at once and you won't know what moved the shortlist.
 
 ### Pick a direction
 
-Starting points if you want one. Take one, combine two, or ignore all of them. Click a bubble for where to start and an example prompt.
+Pick one or two and spend the session building. Take one as-is, combine two, or bring your own. Click a bubble for where to start and a prompt to open with.
 
 <script setup>
 const ideas = [
   {
-    emoji: "🔍", color: "blue", title: "Recruitment", tag: "easiest",
-    what: "The people one file can't see: strong peer evidence, ordinary activity numbers.",
-    start: "Attach `PeerFeedback.csv` and ask Cowork to weigh repeated patterns over one-off praise, then compare with the shipped shortlist.",
-    prompt: "Find people whose peer feedback shows a repeated pattern of enabling others, not one-off praise, and tell me which of them the shipped definition missed.",
+    emoji: "🖥️", color: "blue", title: "A live cohort dashboard",
+    what: "An interactive page of the current pick - each name, the records behind it, filters for region and level.",
+    start: "Leverage the skill's output: have Cowork render the shortlist as a page you can click through.",
+    prompt: "Using the ambassador skill, build an interactive dashboard of the current cohort - each pick, the evidence behind it, and filters for region and level.",
   },
   {
-    emoji: "🎯", color: "orange", title: "Assignment",
-    what: "Who to pick for one specific job - not the same as who tops the shortlist.",
-    start: "Describe the job and audience, and ask who fits and why over the next-best.",
-    prompt: "I need someone to run a session for a new-hire audience in EMEA. Who, and why them over the next-best?",
+    emoji: "📅", color: "orange", title: "A daily digest",
+    what: "The pick, re-run on its own each morning, with an email of what changed.",
+    start: "Ask Cowork to schedule the run and mail you only the movement since last time.",
+    prompt: "Using the ambassador skill, re-run the pick every morning and email me a summary of who newly matches and who fell off since yesterday.",
   },
   {
-    emoji: "⚖️", color: "purple", title: "Fairness audit",
-    what: "Whether your shortlist skews by region, org, level, or tenure.",
-    start: "Ask Cowork to check the eight names against region, level, and tenure and name any skew.",
-    prompt: "Audit the eight names against region, level, and tenure. Name any skew you'd have to explain.",
+    emoji: "🔍", color: "teal", title: "Read the evidence it ignores", tag: "easiest",
+    what: "The skill judges on the summary scores alone. Teach it to open the real records underneath.",
+    start: "Point it at the peer feedback and contributions the summary hides, and weigh repeated patterns over one-off praise.",
+    prompt: "Add to the ambassador skill: read PeerFeedback.csv and ProgramContributions.csv, not just the summary scores, and weigh a repeated pattern over one-off praise. Then show me who that surfaces who wasn't in the shipped eight.",
   },
   {
-    emoji: "🎖️", color: "pink", title: "Their own view",
-    what: "What one candidate would read about their own standing.",
-    start: "Pick one name and ask for what they'd see, grounded in the records.",
-    prompt: "Write what one candidate would see: where they stand, what the records show, and what would put them in.",
+    emoji: "⚖️", color: "purple", title: "A fairness check on every run",
+    what: "A standing check the skill runs with every pick - not a one-off audit you have to remember.",
+    start: "Build the check into the skill so it flags skew and unbacked claims automatically.",
+    prompt: "Add a fairness check to the ambassador skill - every pick flags skew by region, level, and tenure, and any claim with no record behind it.",
   },
   {
-    emoji: "📨", color: "green", title: "The invitation",
-    what: "The message that actually goes out, in the program's voice, held for approval.",
-    start: "Ask Cowork to draft the invitations and hold them, not send.",
-    prompt: "Draft the invitation for each of the eight in the program's voice. Hold them for approval, don't send.",
+    emoji: "📨", color: "green", title: "The invitation pipeline",
+    what: "Draft each invite in the program's voice, hold for approval, track who's said yes - nothing sends on its own.",
+    start: "Have the skill draft and hold, and keep a record of the state.",
+    prompt: "Add an invitation step to the ambassador skill: draft each pick's invite in the program's voice, hold them for approval, and track who's sent, accepted, or declined. Nothing sends on its own.",
   },
   {
-    emoji: "🌐", color: "green", title: "Point it at something real",
-    what: "Run the pick on a live source - a SharePoint list export is the same shape as the sample files.",
-    start: "Swap the attached CSV for your own export; the skill reads it the same way.",
-    prompt: "I've attached a SharePoint list export instead of the sample data. Run the same pick against it and tell me what changed.",
+    emoji: "🌐", color: "pink", title: "Point it at real data",
+    what: "Swap the sample files for a live SharePoint or Teams export and run the whole pick against it.",
+    start: "The skill reads what you attach - give it your export instead of the sample CSVs.",
+    prompt: "Using the ambassador skill, run the whole pick against my SharePoint export instead of the sample data, and show me what changed.",
   },
   {
-    emoji: "📅", color: "blue", title: "Run it on a schedule",
-    what: "Have Cowork re-run on its own and tell you who's newly matching.",
-    start: "Ask Cowork to schedule the run and summarize what changed since last time.",
-    prompt: "Re-run this weekly and send me only the people who newly match the definition since the last run.",
-  },
-  {
-    emoji: "🤝", color: "orange", title: "Two definitions, one room",
-    what: "Compare your table's definition against another table's on the same data.",
-    start: "Swap definitions with another table and diff the two shortlists.",
-    prompt: "Here's another table's definition. Run both against the same data and show me where the two shortlists disagree.",
-  },
-  {
-    emoji: "🧪", color: "teal", title: "Test the hard cases",
-    what: "A few candidates you already have an opinion on, checked against your build.",
-    start: "Name five people with the outcome you'd expect and see where the build disagrees.",
-    prompt: "Help me write five test candidates I know the answer for, and check which ones my build gets wrong.",
-  },
-  {
-    emoji: "🧳", color: "purple", title: "Take the definition with you",
-    what: "Reuse the plain-text definition outside this skill.",
-    start: "`DEFINITION.md` is just prose - drop it into another Cowork task and it still describes what 'good' looks like.",
-    prompt: "Help me reuse DEFINITION.md outside this skill, and tell me what stays the same and what I'd change.",
+    emoji: "🤝", color: "teal", title: "Two definitions, head to head",
+    what: "Run two definitions over the same 72 and show exactly where they disagree - your table's brief against another's.",
+    start: "Add a compare step so the skill runs both and diffs the shortlists.",
+    prompt: "Add a compare mode to the ambassador skill: run our definition and another table's over the same 72 people, and show me where the two shortlists disagree.",
   },
   {
     emoji: "✨", color: "gray", title: "Yours",
-    what: "Whatever your table thinks this program is missing.",
-    start: "Describe what's missing and build the smallest version first.",
-    prompt: "The program needs [what]. Work out what that takes and build the smallest version first.",
+    what: "The most ambitious thing your table can name - leverage the skill, or build onto it.",
+    start: "Describe the end state and get the smallest working version on screen first.",
+    prompt: "I want to add [big idea] to the ambassador skill. Work out what it takes and get the smallest working version on screen first.",
   },
 ];
 </script>
 
 <DirectionBubbles :items="ideas" start-label="Where to start" />
 
-**Pick by what your table would still run next time round**, not by what sounds most impressive.
-
-::: tip Ask Cowork to file it in the right place
-`references/DEFINITION.md` is what the program wants. `references/PLAYBOOK.md` is how the program runs. A new capability, like reading another file or checking a claim, belongs in its own reference file. Say *"add that as a new reference file, don't put it in the definition"* and Cowork writes it where it belongs.
-:::
+**Pick by what your table would actually use**, not by what sounds most impressive - then spend the time making it real.
 
 ### Build in layers
 

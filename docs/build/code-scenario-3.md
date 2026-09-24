@@ -88,86 +88,74 @@ Same 72 people, different shortlists - compare them and you'll see only a few na
 Pick whatever direction sounds good and build it with your table. It doesn't have to be perfect, and it doesn't have to solve everything - the whole point is to explore your tool, trade ideas, and vibe-code something together. Use whatever you came here to learn, see how far you get, and have fun with it. You're here to learn by doing. Anything on this page phrased as a prompt is an example, not a script; say it your way.
 :::
 
-Everything's loaded and nothing's used: `cohort.py` sends the model a one-line summary per person, so the real evidence - what people ran, the feedback they got, what they've shipped - sits in `data.py` untouched. That's the room to build in.
+The starter ships everything you need: nine files, 72 candidates, ~2,000 evidence records. **You don't build the data; it's here.** What `cohort.py` doesn't do is use most of it - it sends the model a one-line summary per person and ignores the eight files of real evidence in `program-data/`. So the builds below come in two shapes: **leverage** the run to make something new from its picks - a dashboard, a consistency sweep - or **build onto** the picker so it reads the real records, adds an agent that argues back, or checks its own claims every run. Work one change at a time.
 
 ### Pick a direction
 
-Remember what `cohort.py` does today: it sends the model one summary line per person - never the full records - and hands back eight names it can't back up. Each idea below starts from one of those gaps. Take one, combine two, or ignore all of them. Click a bubble for where to start and an example prompt to open the conversation with Copilot.
+Pick one or two and spend the session building. Take one as-is, combine two, or bring your own. Click a bubble for where to start and a prompt to open with Copilot.
 
 <script setup>
 const ideas = [
   {
-    emoji: "🔍", color: "blue", title: "Recruitment", tag: "easiest",
-    what: "Give the model the real feedback instead of a one-line summary, and see who it surfaces that the default run misses.",
-    start: "Today `cohort.py` sends one summary line per person. Send each person's actual `PeerFeedback.csv` rows instead, run it again, and compare the new eight names with the original eight.",
-    prompt: "Change cohort.py so it sends each candidate's full PeerFeedback.csv rows instead of the one-line summary. Then show me who's on the new shortlist but not the original one, with a short invitation drafted for each.",
+    emoji: "🔍", color: "blue", title: "Read the evidence it ignores", tag: "easiest",
+    what: "`cohort.py` sends one summary line per person. Change it to send the real records and see who surfaces.",
+    start: "Send each candidate's actual PeerFeedback.csv and ProgramContributions.csv rows instead of the summary line, and weigh repeated patterns over one-off praise.",
+    prompt: "Change cohort.py to send each candidate's full PeerFeedback.csv and ProgramContributions.csv rows instead of the one-line summary, weigh a repeated pattern over one-off praise, then show me who's on the new shortlist but not the original.",
   },
   {
-    emoji: "🥊", color: "orange", title: "A second opinion",
-    what: "Two agents look at the same people and disagree on purpose - one picks the cohort, one argues against it.",
-    start: "Add a second agent with the opposite brief, so you see both sides instead of one confident answer. Agents live in `.github/agents/` and can each run a different model.",
-    prompt: "Add a second agent that argues against the shortlist using the same records. Run both and print where they disagree - don't resolve it, just show me.",
+    emoji: "🖥️", color: "teal", title: "A dashboard you can open",
+    what: "Turn the run into a local page: the eight, the records behind each, filters, and what's waiting on a decision.",
+    start: "Have a small script beside cohort.py render the run as an HTML page and open it.",
+    prompt: "Add a step that renders the shortlist as a local HTML dashboard - each pick, the evidence behind it, filters for region and level - and opens it.",
   },
   {
-    emoji: "🔄", color: "teal", title: "The run-to-run diff",
-    what: "After someone edits the definition, show only what changed in the shortlist - not the whole list again.",
-    start: "Save each run's eight names to a file, then compare the latest run with the previous one so the change stands out.",
-    prompt: "Save each run's shortlist to a timestamped JSON file, and add a --diff option that compares the latest run with the one before it by CandidateId.",
+    emoji: "🎭", color: "orange", title: "A panel of agents",
+    what: "Orchestrate three agents on the same records - a picker, a challenger, and a referee that weighs them - instead of one confident answer.",
+    start: "Agents live in `.github/agents/` and can each run a different model. Add a challenger and a referee, and have cohort.py run them in turn.",
+    prompt: "Add two agents under .github/agents/: a challenger that argues against the shortlist on the same records, and a referee that reads both and produces a final eight with its reasoning. Orchestrate all three from cohort.py and show me each stage.",
   },
   {
-    emoji: "⚖️", color: "purple", title: "Fairness audit at scale",
-    what: "Run the same request many times to see which names are steady and which are just luck of the draw.",
-    start: "The model isn't perfectly consistent. Run the same definition ten times, collect the shortlists, and count how often each person survives.",
+    emoji: "🤖", color: "pink", title: "The same question, two models",
+    what: "Run the pick across two models and compare - keep only the names both land on, or show where they split.",
+    start: "Set `AMBASSADOR_MODEL` for each run - the call falls back to the default if a model isn't available - then diff the two shortlists.",
+    prompt: "Run the same definition through two different models by setting AMBASSADOR_MODEL each time, then show me the names both models agree on and where they split.",
+  },
+  {
+    emoji: "⚖️", color: "purple", title: "A fairness gate on every run",
+    what: "A check the picker runs every time - flags skew by region, level, and tenure, and any claim with no record behind it.",
+    start: "Build the check into cohort.py so it runs with every pick, not as a one-off.",
+    prompt: "Add a fairness check to cohort.py: every run flags skew by region, level, and tenure, and any claim it can't trace to a record.",
+  },
+  {
+    emoji: "🔁", color: "green", title: "Consistency at scale",
+    what: "The model isn't perfectly consistent. Run the same definition many times and see which names are steady and which are luck of the draw.",
+    start: "Loop the run, collect the shortlists, and count how often each person survives.",
     prompt: "Run the same definition ten times, collect the shortlists, and print how often each CandidateId makes the cut. Flag anyone who appears in fewer than half the runs.",
   },
   {
-    emoji: "🎖️", color: "pink", title: "Their own view",
-    what: "Write what a single candidate would read about their own standing, using only their records.",
-    start: "Instead of one shortlist for everyone, send just one person's records and generate their own summary. Get one name right before scaling to all 72.",
-    prompt: "For one CandidateId, send only that person's records and write what they'd read about their own standing. Get one name right before we loop over everyone.",
+    emoji: "🤝", color: "teal", title: "Two definitions, head to head",
+    what: "Run two definitions over the same 72 and show exactly where they disagree.",
+    start: "Add a compare mode: pass two definition files and diff the shortlists.",
+    prompt: "Add a compare mode to cohort.py: run two definitions over the same 72 people and show me where the two shortlists disagree, name by name.",
   },
   {
-    emoji: "🌐", color: "green", title: "Point it at something real",
-    what: "Run the picker on live data - a SharePoint list or Teams export - instead of the sample files.",
-    start: "The starter reads CSVs in `data.py`. Swap that loader for your own source; as long as the record shape matches, nothing else has to change.",
-    prompt: "Replace the CSV loader in data.py with one that reads from my SharePoint list, keeping the same record shape so cohort.py doesn't change.",
+    emoji: "🌐", color: "blue", title: "Point it at real data",
+    what: "Run the picker on your own export instead of the sample CSVs. Your columns won't match - so `data.py` and `definition.md` may need reworking, and Copilot can do that with you.",
+    start: "The starter reads CSVs in `data.py`. Swap that loader for your source; if the shape differs, rework the loader and the definition to match.",
+    prompt: "Replace the CSV loader in data.py with one that reads my own export. If the columns don't match the sample shape, help me rework data.py and definition.md, then show me what changed in the shortlist.",
   },
   {
-    emoji: "📦", color: "blue", title: "Package it as a skill",
-    what: "Wrap what you built into a reusable skill you can run anywhere Copilot runs.",
-    start: "Put your definition and code behind a `.github/skills/<name>/SKILL.md` file, so it works in VS Code, the Copilot CLI, and the GitHub cloud agent.",
-    prompt: "Package this as a skill under .github/skills/<name>/SKILL.md so I can run the same shortlist from VS Code, the CLI, or the cloud agent.",
-  },
-  {
-    emoji: "🤖", color: "orange", title: "Two models, one question",
-    what: "Ask two different models the same thing and see where their picks differ.",
-    start: "Run `cohort.py` twice, once per model, by setting `AMBASSADOR_MODEL` each time, then compare the two shortlists.",
-    prompt: "Run the same definition through two different models and show me where the two shortlists differ.",
-  },
-  {
-    emoji: "🧪", color: "teal", title: "Test the hard cases",
-    what: "Pick a few people you already have an opinion on, and check your build agrees.",
-    start: "Write five candidates with the outcome you'd expect, then run your build against them and see where it disagrees with you.",
-    prompt: "Help me write five test candidates I know the answer for, and a quick check that flags any my build gets wrong.",
-  },
-  {
-    emoji: "🧳", color: "purple", title: "Take the definition with you",
-    what: "Reuse the plain-text definition outside this starter - in a normal Copilot chat.",
-    start: "`definition.md` is just prose describing what 'good' looks like. Drop it into a Copilot chat elsewhere and it still works.",
-    prompt: "Help me reuse definition.md outside this starter, in a plain Copilot chat, and tell me what stays the same and what I'd change.",
-  },
-  {
-    emoji: "🎯", color: "gray", title: "Yours",
-    what: "Whatever your table thinks the program is still missing.",
-    start: "Start with the smallest version that runs.",
-    prompt: "Our table thinks the program is missing [describe it]. Help us build the smallest version that runs on the starter data.",
+    emoji: "✨", color: "gray", title: "Yours",
+    what: "The most ambitious thing your table can name. You've got Python, agents, git, and the CLI - aim high.",
+    start: "Start with the smallest version that runs on the starter data.",
+    prompt: "Our table wants to build [describe it]. Work out what it takes - a change to cohort.py, a new agent, a scheduled run - and get the smallest version running first.",
   },
 ];
 </script>
 
 <DirectionBubbles :items="ideas" start-label="Where to start" />
 
-**Pick by what your table would still run next time round**, not by what sounds most impressive.
+**Pick by what your table would actually use**, not by what sounds most impressive - then spend the time making it real.
 
 
 ::: tip 🎛️ Pick the model that fits the job

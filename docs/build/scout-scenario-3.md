@@ -99,84 +99,68 @@ The definition is plain prose in a file. Open `references/DEFINITION.md` from th
 Pick whatever direction sounds good and build it with your table. It doesn't have to be perfect, and it doesn't have to solve everything - the whole point is to explore your tool, trade ideas, and vibe-code something together. Use whatever you came here to learn, see how far you get, and have fun with it. You're here to learn by doing.
 :::
 
-The skill reads one file and ignores eight - the real evidence about what people ran, the feedback they got, and what they've shipped is sitting in the program data, unopened. Point Scout at a file and say what to do with it; point it at all of them at once and you won't know which one changed the shortlist.
+The program already ships everything you need to judge these people: nine files, 72 candidates, ~2,000 evidence records - what they ran, the feedback they got, what they've shipped. **You don't build the data; it's here.** What the skill *doesn't* do is use most of it - it reads one file and ignores eight. Scout can reach a lot to change that: it reads and writes files, runs on a schedule, and drives the CLI and git on your machine. So the builds below come in two shapes: **leverage** the skill as it is to make something new from its picks - a local board, a scheduled scan - or **build onto** the skill so it reads more, remembers what it decided, or holds a call for a human every run. Work one change at a time; throw everything at it at once and you won't know what moved the shortlist.
 
 ### Pick a direction
 
-Starting points if you want one. Take one, combine two, or ignore all of them. Click a bubble for where to start and an example prompt.
+Pick one or two and spend the session building. Take one as-is, combine two, or bring your own. Click a bubble for where to start and a prompt to open with.
 
 <script setup>
 const ideas = [
   {
-    emoji: "🖥️", color: "blue", title: "A board", tag: "easiest",
-    what: "A local page you open: who's proposed, the evidence behind each, what's waiting on a decision.",
-    start: "Ask Scout to build a local HTML page from the current run and open it.",
-    prompt: "Build a local HTML page showing the current eight, the records behind each, and anything waiting on a decision.",
+    emoji: "🖥️", color: "blue", title: "A local cohort board", tag: "easiest",
+    what: "A page on your machine: the current pick, the records behind each, filters, and a column for what's waiting on a decision - all local, nothing hosted.",
+    start: "Leverage the skill's output: have Scout build a local HTML board from the run and open it.",
+    prompt: "Using the ambassador skill, build a local HTML board of the current cohort - each pick, the evidence behind it, filters for region and level, and a column for what's waiting on a decision.",
   },
   {
-    emoji: "⏰", color: "orange", title: "A scheduled scan",
-    what: "Runs on a timer and reports only what changed.",
-    start: "Get it running once, then ask Scout to schedule it and diff against the last run.",
-    prompt: "Run this on a schedule and tell me only who entered or left the shortlist since last time.",
+    emoji: "⏰", color: "orange", title: "A scheduled scan that runs itself",
+    what: "It re-runs on your machine on a timer and writes a short diff of who moved - nobody has to kick it off.",
+    start: "Get one clean run, then have Scout schedule it and diff against the last run on disk.",
+    prompt: "Using the ambassador skill, run the pick on a schedule on my machine, save each run to disk, and write me a short note of who entered or left the shortlist since last time.",
   },
   {
-    emoji: "👀", color: "teal", title: "The watch",
-    what: "Who's climbing and who's stopped showing up.",
-    start: "Point it at the activity dates and ask who's picking up and who's gone quiet.",
-    prompt: "Build a watch list from activity dates: who's picking up, who's gone quiet, and who was recognized before and stalled.",
+    emoji: "🔍", color: "teal", title: "Read the evidence it ignores",
+    what: "The skill judges on the summary scores. Teach it to open the real records - peer feedback, contributions - and weigh them.",
+    start: "Point it at the files the summary hides, and weigh repeated patterns over one-off praise.",
+    prompt: "Add to the ambassador skill: read PeerFeedback.csv and ProgramContributions.csv, not just the summary scores, and weigh a repeated pattern over one-off praise. Then show me who that surfaces who wasn't in the shipped eight.",
   },
   {
-    emoji: "🔍", color: "pink", title: "Recruitment",
-    what: "The people one file can't see, with the records that surfaced them.",
-    start: "Have Scout read peer feedback and contributions and diff against the shipped eight.",
-    prompt: "Read peer feedback and contributions, then tell me who that surfaces who wasn't in the shipped eight.",
+    emoji: "🧠", color: "purple", title: "Give it a memory",
+    what: "A file it writes as well as reads, so every run knows what the last one decided - including a human override.",
+    start: "Have the skill persist each run and any human call to disk, and read it back next time.",
+    prompt: "Add a memory to the ambassador skill: write each run and any human override to a file, and read it on the next run so decisions carry forward.",
   },
   {
-    emoji: "🌐", color: "green", title: "Point it at something real",
-    what: "Run the pick on a live source - a SharePoint list export is the same shape as the sample files.",
-    start: "Swap the sample folder for your own export; Scout reads it the same way.",
-    prompt: "Point this at a SharePoint list export instead of the sample data and tell me what changed.",
+    emoji: "🛑", color: "pink", title: "Make it stop",
+    what: "A rule that routes thin evidence to a person with a specific question, instead of guessing.",
+    start: "Build the hold into the skill so weak-evidence picks wait for a human call.",
+    prompt: "Add a rule to the ambassador skill: when a candidate's evidence is thin, don't decide - write the specific question a person should answer, and hold it.",
   },
   {
-    emoji: "🧠", color: "blue", title: "Give it a memory",
-    what: "A file it writes as well as reads, so it reports what changed since last run.",
-    start: "Have Scout persist each run to disk and compare the latest with the one before.",
-    prompt: "Save each run to a file and, on the next run, tell me only what changed since last time.",
+    emoji: "🌐", color: "green", title: "Point it at real data",
+    what: "Swap the sample files for your own export and run the whole pick locally. Your columns won't match the samples - so the definition and the reader may need reworking, and Scout can do that with you.",
+    start: "Give Scout your export instead of the sample CSVs; if the shape differs, have it rework DEFINITION.md and how the skill reads the files.",
+    prompt: "Using the ambassador skill, run the whole pick against my own export instead of the sample data. If the columns don't line up, help me rework DEFINITION.md and how the skill reads the files, then show me what changed.",
   },
   {
-    emoji: "🛑", color: "orange", title: "Make it stop",
-    what: "A rule that routes thin evidence to a person with a specific question.",
-    start: "Ask Scout to flag any pick whose evidence is weak and hold it for a human call.",
-    prompt: "When a candidate's evidence is thin, don't decide - write the specific question a person should answer and hold it.",
-  },
-  {
-    emoji: "🤝", color: "teal", title: "Two definitions, one room",
-    what: "Compare your table's definition against another table's on the same data.",
-    start: "Swap definitions with another table and diff the two shortlists.",
-    prompt: "Here's another table's definition. Run both against the same data and show me where the two shortlists disagree.",
-  },
-  {
-    emoji: "🧳", color: "purple", title: "Take the definition with you",
-    what: "Reuse the plain-text definition outside this skill.",
-    start: "`DEFINITION.md` is just prose - drop it into a chat elsewhere and it still describes what 'good' looks like.",
-    prompt: "Help me reuse DEFINITION.md outside this skill, and tell me what stays the same and what I'd change.",
+    emoji: "🤝", color: "teal", title: "Two definitions, head to head",
+    what: "Run two definitions over the same 72 and show where they disagree - your table's brief against another's.",
+    start: "Add a compare step so the skill runs both and diffs the shortlists.",
+    prompt: "Add a compare mode to the ambassador skill: run our definition and another table's over the same 72 people, and show me where the two shortlists disagree.",
   },
   {
     emoji: "✨", color: "gray", title: "Yours",
-    what: "Whatever your table thinks this program is missing.",
-    start: "Describe what's missing, build the smallest version that runs, then make it run again on its own.",
-    prompt: "The program needs [what]. Build the smallest version that runs, then make it run again on its own.",
+    what: "The most ambitious thing your table can name - leverage the skill, or build onto it. Scout reaches the CLI, git, and your files, so aim high.",
+    start: "Describe the end state and get the smallest working version running first.",
+    prompt: "I want to add [big idea] to the ambassador skill. Work out what it takes - files, a schedule, a CLI step - and get the smallest working version running first.",
   },
 ];
 </script>
 
 <DirectionBubbles :items="ideas" start-label="Where to start" />
 
-**Pick by what your table would still run next time round**, not by what sounds most impressive.
-
-::: tip Definition, playbook, capability
-`references/DEFINITION.md` is what the program wants. `references/PLAYBOOK.md` is how the program runs. A new capability, like reading another file or checking a claim, belongs in its own `references/*.md`. The skill's instructions point Scout toward that structure.
-:::
+**Pick by what your table would actually use**, not by what sounds most impressive - then spend the time making it real.
 
 ### Build in layers
 
