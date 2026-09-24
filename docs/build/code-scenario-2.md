@@ -2,7 +2,7 @@
 title: Dispatch - Code
 ---
 
-# 🟣 Dispatch
+# Dispatch
 
 <div class="scene">
 

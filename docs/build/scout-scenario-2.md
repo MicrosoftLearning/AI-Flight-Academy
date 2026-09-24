@@ -2,7 +2,7 @@
 title: Dispatch - Scout
 ---
 
-# 🔵 Dispatch
+# Dispatch
 
 You run the room, then turn it into something you can watch.
 

@@ -4,24 +4,17 @@ title: The Digital Twin - Scout
 
 <!-- markdownlint-disable MD013 MD025 MD033 -->
 
-# 🔵 The Digital Twin
+# The Digital Twin
 
-::: details New to Scout?
-An agentic assistant that runs on your machine. Two things plug into it:
-
-- **Microsoft 365**, through **Work IQ** - your mail, calendar, Teams, files and org context. Nothing to connect, and it only sees what you can already see.
-- **GitHub Copilot CLI** - so it can write and run code locally.
-
-That pairing is why this scenario works here: Scout can read your real work *and* build against it in the same conversation. Setup is in the **[Guides](/bricks/scout-setup)**.
-:::
-
-## The problem
+<div class="brief">
+<span class="brief-badge">The problem</span>
 
 Scout can already do your work - on your machine, across your repos, into your mail and calendar. Files, code, git, whatever the job needs. What it can't do is any of it **as you**: decide which of two priorities wins, hold back the thing you'd check first, shift its writing between your manager and a partner team.
 
 So every session starts with you re-explaining yourself. Work IQ closes some of that by inference, but you can't read what it inferred, correct it, or take it anywhere.
 
-Today you write it down as files you own, and get **an agent that works the way you do**.
+Today you write it down as files you own, and get **a skill that works the way you do**.
+</div>
 
 ## Objectives
 
@@ -83,7 +76,7 @@ my-twin/
 
 It finishes by **triaging what actually landed** in your mail and Teams, so you leave setup having watched it work.
 
-## The hack
+## Build
 
 Your twin works, but it's generic - built from what your work *proves*, which isn't the same as what you'd say about yourself. Do a quick correction pass, then get to the main event: building something on it.
 
@@ -128,25 +121,64 @@ Your persona's sections are each tagged by how directly the twin knows them:
 **Give it a name you'll actually use.** Say *"rename my twin to Clippy"*, then start a new session so Scout picks it up.
 :::
 
-### Build on your twin
+### Pick a direction
 
-Now build something that uses the twin - pick a direction with your table, split it into pieces, and build in small steps.
+Now build something that uses the twin - take one as it is, combine two, or build something specific to how you work.
 
-#### Pick a direction
+<script setup>
+const ideas = [
+  {
+    emoji: "📬", color: "blue", title: "A morning brief", tag: "easiest",
+    what: "Runs before you're awake and leaves what needs you waiting.",
+    start: "Build it to run once now, then schedule it for weekday mornings.",
+    prompt: "Build a morning brief I can run once now, then schedule for weekdays at 7am. Triage what landed overnight and write the result somewhere local.",
+  },
+  {
+    emoji: "🏖️", color: "green", title: "An out-of-office catch-up",
+    what: "Ranks what arrived while you were away, so coming back is a list instead of 400 unread.",
+    start: "Point it at the window you were away and have it rank what needs you first.",
+    prompt: "Build an out-of-office catch-up for [dates I was away]. Read mail and Teams from that window, rank what needs me first, and write a local catch-up list.",
+  },
+  {
+    emoji: "💭", color: "purple", title: "A sounding board",
+    what: "Think an idea through against your own rules, with something that pushes where you'd push.",
+    start: "Have it ask what you'd ask and use your persona to challenge, not agree.",
+    prompt: "Build me something I can think out loud at - it should ask what I'd ask, and use my persona to challenge the idea rather than agree with it.",
+  },
+  {
+    emoji: "📊", color: "orange", title: "A dashboard",
+    what: "A page you open in the morning: what's waiting, what's slipping, what you owe. One ships as an example.",
+    start: "Start from the command-center example, then swap in the panels you care about.",
+    prompt: "Show me the command center example, then build me one with panels for [what you care about].",
+  },
+  {
+    emoji: "🔌", color: "pink", title: "Connect an MCP server", tag: "advanced",
+    what: "Give your twin a real tool instead of building one - point Scout at an existing MCP server so it can read from or act on a live system.",
+    start: "Pick a server from Microsoft's catalog (linked below), connect it, then turn what it finds into a draft in your voice.",
+    prompt: "Add the [system] MCP server to Scout, have my twin pull [my open items] through it, and draft [the weekly update] applying my persona and voice.",
+  },
+  {
+    emoji: "🗂️", color: "teal", title: "Grounded in your work",
+    what: "Point your twin at a folder of your real material so it answers from your actual work, not just your rules.",
+    start: "Point it at a folder of past write-ups and current drafts, read when you ask about current projects.",
+    prompt: "Point my twin at [a folder of my real work and past writing]. Read it when I ask about current projects, and match how those were written.",
+  },
+  {
+    emoji: "✨", color: "gray", title: "Your own",
+    what: "Whatever your job runs on - approvals, escalations, renewals, handoffs - or a rework of the twin itself.",
+    start: "Describe what you want and build the smallest version first.",
+    prompt: "I want my twin to [what]. Work out what that needs and build the smallest version first.",
+  },
+];
+</script>
 
-Take one as it is, combine two, or build something specific to how you work.
+<DirectionBubbles :items="ideas" start-label="Where to start" />
 
-| | What it is | Start with |
-| --- | --- | --- |
-| 📬 **A morning brief** · easiest | Runs before you're awake and leaves what needs you waiting | *"Build a morning brief I can run once now, then schedule for weekdays at 7am. Triage what landed overnight and write the result somewhere local."* |
-| 🏖️ **An out-of-office catch-up** | Ranks what arrived while you were away, so coming back is a list instead of 400 unread | *"Build an out-of-office catch-up for [dates I was away]. Read mail and Teams from that window, rank what needs me first, and write a local catch-up list."* |
-| 💭 **A sounding board** | Think an idea through against your own rules, with something that pushes where you'd push | *"Build me something I can think out loud at - it should ask what I'd ask, and use my persona to challenge the idea rather than agree with it."* |
-| 📊 **A dashboard** | A page you open in the morning: what's waiting, what's slipping, what you owe. One ships as an example | *"Show me the command center example, then build me one with panels for [what you care about]."* |
-| 🔌 **Connect an MCP server** · advanced | Give your twin a real tool instead of building one. Point Scout at an existing MCP server from Microsoft's [catalog](https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-mcpserver-connectors) so it can read from or act on a live system, then turn what it finds into a draft in your voice | *"Add the [system] MCP server to Scout, have my twin pull [my open items] through it, and draft [the weekly update] applying my persona and voice."* |
-| 🗂️ **Grounded in your work** | Point your twin at a folder of your real material - past write-ups, project docs, current drafts - so it answers from your actual work, not just your rules | *"Point my twin at [a folder of my real work and past writing]. Read it when I ask about current projects, and match how those were written."* |
-| ✨ **Your own** | Whatever your job runs on - approvals, escalations, renewals, handoffs - or a rework of the twin itself | *"I want my twin to [what]. Work out what that needs and build the smallest version first."* |
+::: tip 🔌 The MCP option uses an existing server
+Browse Microsoft's [MCP server catalog](https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-mcpserver-connectors) and connect one, rather than building a tool of your own.
+:::
 
-#### Build in layers
+### Build in layers
 
 Get it running end to end, then add one thing at a time:
 
@@ -154,9 +186,6 @@ Get it running end to end, then add one thing at a time:
 2. **Your rules** - *"Use my persona and voice so it takes a position and sounds like me."*
 3. **One addition** - *"That works. Now add [one thing]."*
 4. **A bound** - *"Cap this at [N days] and [N items] per run."*
-5. **The runtime** - *"If this needs JavaScript, use Scout's bundled Node under `resources/node`, not a bare `node`."*
-
-Be specific - *"a page with one panel: things I asked for in the last 21 days with no reply"* gets you further than *"build me a dashboard."*
 
 ::: warning You approve before anything goes out
 Keep the last step yours. Whatever you build should draft, show you who it's addressed to and what it says, then wait for a yes.

@@ -2,7 +2,7 @@
 title: Dispatch - Cowork
 ---
 
-# 🟢 Dispatch
+# Dispatch
 
 <div class="scene">
 
