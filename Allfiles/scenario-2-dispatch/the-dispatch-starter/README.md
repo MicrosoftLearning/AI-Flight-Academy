@@ -31,7 +31,7 @@ The board needs the sibling `../dispatch-data/` (teams + requests + policy) and 
 
 ## What you build
 
-- `council/*.json` - one seat per team: what it **owns**, who it **serves**, what makes it **say yes/no**, its **format bias**, its **voice**. Five core teams ship; `team.example.json` is the copyable shape. **At least three teams that want different things** - or the room can't disagree.
+- `council/*.json` - one seat per team: what it **owns**, who it **serves**, what makes it **say yes/no**, its **format bias**, its **voice**. Five core teams ship; `team.example.json` is the copyable shape. **At least three teams that want different things** - or every team gives the same answer.
 - `check_content.py` - the intake gate the board calls (a `TODO` stub; `dispatchlib` does the parsing).
 - Your path - `mcp_server.py` to make the room callable by other agents, or the "act on the decision" route in `dashboard/server.js` to hand a decision off (save it to a file in `dashboard/outbox/`).
 

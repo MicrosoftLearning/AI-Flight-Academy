@@ -23,8 +23,8 @@ In this activity, you build a **room of teams** that looks at each request toget
 | | Step | You're done when |
 | --- | --- | --- |
 | **1** | **Import & load** | Scout has the Dispatch skill and the data pack loaded. |
-| **2** | **Seat three teams that disagree** | Three teams give *different* positions on the same request, in the chat. Nothing is built yet. |
-| **3** | **Put the room on a board** | You drop a request onto a live dashboard, and the teams light up with their positions. |
+| **2** | **Seat three teams, each with its own view** | Each of the three teams gives its own position on the same request, with a reason from its card, in the chat. Nothing is built yet. |
+| **3** | **Put the room on a board** | You drop a request onto a live dashboard, and the teams light up with their positions and the reasons behind them. |
 | **4** | **Make it start in one step** | You (or a teammate) can start the board with one command or on a schedule. |
 
 Steps 3 and 4 are the main build. The single triager never changes, so you can compare your room against it. Most steps include a prompt you can paste. **Change it as you like. It's a starting point, not the answer.**
@@ -69,22 +69,22 @@ Open Microsoft Scout. You'll add the Dispatch skill in Step 1. The dashboard in 
 
 **Done when:** Scout has the Dispatch skill and the data pack loaded.
 
-1. Unzip `the-dispatch.zip`. In Scout, go to **Extensions → Import**, and drag in the unzipped skill **folder**.
+1. Download `the-dispatch.zip`. In Scout, go to **Extensions → Import**, and drag in zipped skill **file**. There's no need to unzip the file.
 
    ![Screenshot of the Import Skill dialog window in Microsoft Scout.](./media/scout-import-skill-folder.png)
-1. Start a new chat in Scout, and upload **dispatch-data-pack.zip**.
+1. Start a **new chat** in Scout, and drag/drop or upload **dispatch-data-pack.zip** to the chat session. It is important to start a **new chat** in Scout for the skill files to load.
 
-## 2 · Seat three teams that disagree
+## 2 · Seat three teams, each with its own view
 
-**Done when:** three teams give *different* positions on the same request. You do this in the chat, and you don't build anything yet.
+**Done when:** each of the three teams gives its own position on the same request, with a reason from that team's card. You do this in the chat, and you don't build anything yet.
 
-Remember, a **seat** is one team in the room. Each seat says what the team owns, who it serves, and what makes the team want a request or turn it down. Your goal isn't only to *list* teams. Your goal is to choose teams that **disagree about the plan**. If a team would route every request the same way as another team, it's a copy.
+Remember, a **seat** is one team in the room. Each seat says what the team owns, who it serves, and what makes the team want a request or turn it down. Your goal isn't only to *list* teams. Your goal is for each team to **reason from its own card**. When teams differ, the difference should come from their cards, not from being told to disagree. If a team would route every request the same way as another team, for the same reasons, it's a copy.
 
-Start with these three teams, because they disagree the most: **Content & Insights**, **Delivery & Program Operations**, and **Field & Partner**. Ask Scout to seat them in `THE-ROOM.md`, and then dispatch **Agent governance training before launch**. This request shows the difference clearly:
+Start with these three teams, because their cards are the most different: **Content & Insights**, **Delivery & Program Operations**, and **Field & Partner**. Ask Scout to seat them in `THE-ROOM.md`, and then dispatch **Agent governance training before launch**. This request shows the difference clearly:
 
 > *"Use Dispatch to seat Content & Insights, Delivery & Program Operations, and Field & Partner from the data pack, then dispatch the agent governance request."*
 
-**Dispatching** is the most important part. Every team gives a position on the same request at the same time, based on its team card. Then the room makes one decision. The agent governance request is a good example. The room *agrees on the owner* (Content & Insights), but it *disagrees about the plan*. The plan is to build the learning path once, reuse it in live sessions and in the regions, and change the audience so that partners come first.
+**Dispatching** is the most important part. Every team gives a position on the same request at the same time, based on its team card. Then the room makes one decision. The agent governance request is a good example. The room *agrees on the owner* (Content & Insights), and each team adds its own part of the plan. The plan is to build the learning path once, reuse it in live sessions and in the regions, and change the audience so that partners come first.
 
 | Request | Single triager | The room |
 |---|---|---|
@@ -111,6 +111,7 @@ Now make the plan visible. Ask Scout to build a web dashboard that runs on your 
 Tell Scout what you want:
 
 - a card for each team that shows its position (in, support, or out) when you dispatch a request
+- on each team's card, its one-line reason, and the part of its team card that the reason comes from
 - on each team's card, the deliverable that the team suggests and the teams that reuse it
 - a place to drop in a request or paste a rough idea
 - the final routing decision (owner, audience, and the build-once, reuse-everywhere plan), easy to read at a glance
@@ -121,7 +122,7 @@ Scout builds the app and connects it to the Copilot CLI. When you give the board
 ::: details Stuck on the prompt? Start with this one
 Paste this prompt into Scout, and then change it as you need:
 
-> Build me a local web dashboard for the Dispatch room. Use **GitHub Copilot CLI as the backend** to run the Dispatch skill: a small **Node** web server that shells out to `copilot`, with a plain HTML/CSS/JS front-end - no build step, minimal dependencies, so it starts with one command. Show a card for each team in `THE-ROOM.md` with its position (in / support / out), its proposed deliverable, and any reuse. Add a place to drop a request or paste a rough idea, and a panel for the final routing decision - owner, audience, and the plan of deliverables with who builds and who reuses. Start simple - I'll ask for more.
+> Build me a local web dashboard for the Dispatch room. Use **GitHub Copilot CLI as the backend** to run the Dispatch skill: a small **Node** web server that shells out to `copilot`, with a plain HTML/CSS/JS front-end - no build step, minimal dependencies, so it starts with one command. Show a card for each team in `THE-ROOM.md` with its position (in / support / out), its one-line reason and the part of its team card that the reason comes from, its proposed deliverable, and any reuse. Add a place to drop a request or paste a rough idea, and a panel for the final routing decision - owner, audience, and the plan of deliverables with who builds and who reuses. Start simple - I'll ask for more.
 
 The trick is to **start small and add one thing at a time**. First, get the team cards to show positions for one request. Then ask for one new feature at a time, like the decision panel, a reuse map, or a theme. Don't ask for everything in one prompt.
 :::
@@ -130,7 +131,7 @@ The trick is to **start small and add one thing at a time**. First, get the team
 Every computer is set up differently. Node versions, missing packages, and CLI sign-in can all cause problems. If the dashboard won't run on your computer, continue in the Scout chat. The room still works there. Try to get the board running, but don't let it stop you from dispatching requests.
 :::
 
-**Done when:** you give the dashboard a request, and you see the teams light up with their positions.
+**Done when:** you give the dashboard a request, and you see the teams light up with their positions and the reasons behind them.
 
 ## 4 · Make it start in one step
 
@@ -170,7 +171,7 @@ When the board is running, you can add more features. Keep each feature small, a
 | What you're seeing | What to do |
 | --- | --- |
 | Scout ignores the skill | Start a new session. Skills load only when a session starts. |
-| Every team gives the same position | Make the team cards more different from each other. |
+| Every team gives the same position | Check each team's reason. If each reason comes from that team's card, agreement is a fine answer. If the reasons are vague or all the same, make the team cards more specific. |
 | The dashboard won't start | Check that GitHub Copilot CLI is signed in and that Node is installed. While you fix it, keep dispatching in the Scout chat. |
 | The board doesn't show anything | Check that the skill is imported. Then check that the CLI can run the skill on its own. |
 | The room can't see the request | Give Scout the data pack, and point the board to the same files. |

@@ -11,7 +11,7 @@ This is the heart of the exercise. The result isn't one answer - it's one positi
 ## What to do, in order
 
 ### 1. Load the room
-Read `THE-ROOM.md`. Get every team, what it owns, and what makes it say yes or no. If there are fewer than two teams, stop and say: "One team can't disagree with itself. Seat at least one more that wants something different - ask to seat the room."
+Read `THE-ROOM.md`. Get every team, what it owns, and what makes it say yes or no. If there are fewer than two teams, stop and say: "One team can't give you a second view. Seat at least one more that wants something different - ask to seat the room."
 
 ### 2. Read the request - and check it's routable
 Read the request. Does it say who it's for, the topic, and the desired outcome? If it's missing those - a rough idea - **don't route it.** Say what's missing and sharpen it first (pin the audience and outcome), then come back. A confident route on an under-specified request is exactly the miss to avoid.
@@ -33,10 +33,10 @@ For each team, react to the request through *that team's* charter only. Do them 
 | 🎬 DPO | support | live readiness workshop | reuse C&I's path | "Live pre-GA - but capacity's tight; I'd reuse the path." |
 | 🌍 Field & Partner | in | partner activation | reuse the path, regionalized | "Partners *deploy* governance - they need it first." |
 
-### 5. Talk through the disagreements
-This is what makes it a room and not a stack of separate opinions. Find the real clashes - and notice they're usually about the **plan**, not who owns it.
+### 5. Talk through where the teams differ
+This is what makes it a room and not a stack of separate opinions. Find where the positions really differ - and notice it's usually about the **plan**, not who owns it. If the teams genuinely agree, say so. Don't invent a clash.
 
-> **The clash:** Content & Insights wants one evergreen path built once. DPO wants a live workshop now; Field & Partner says the real audience is partners, not customers.
+> **Where they differ:** Content & Insights wants one evergreen path built once. DPO wants a live workshop now; Field & Partner says the real audience is partners, not customers.
 > **What it shows:** the request isn't simply "route to team X" - it's a plan where one deliverable is built once and reused live and regionally. That reuse is the decision the room exists to make. (That's what `dispatch.md` lands next.)
 
 Keep it grounded: every position cites the team's charter. A team doesn't get to just "want" a request - it argues from what it owns and serves.
@@ -67,7 +67,7 @@ If every team lands the same plan, say so plainly - that's the thing to fix:
 
 - **Judge each team on its own charter.** Don't let one position bleed into another.
 - **Interest, deliverable, rationale - every time.** Grounded in the card.
-- **Name the disagreement; don't smooth it over.** The clash - usually about the plan and the reuse - is the useful part.
+- **Name real differences; don't smooth them over, and don't invent them.** Where the teams differ - usually on the plan and the reuse - is the useful part.
 - **Don't invent a team's appetite.** If a team's card doesn't support wanting this, it passes.
 - **A rough idea gets sharpened, not routed.** Missing audience/topic/outcome → say what's missing first.
 - **Anything can be the request.** A pasted brief or a rough idea is fine.

@@ -102,7 +102,7 @@ function renderResult(r) {
       <div class="deliverables">${(d.plan || []).map(renderDeliverable).join('') || '<em>no deliverables</em>'}</div>
     </div>
     <div class="next-action"><span class="df-label">Next</span> &nbsp;${escapeHtml(d.next_action || '-')}</div>`;
-  if (r.debate) { $('debate').hidden = false; $('debate').innerHTML = `<strong>Where the room split:</strong> ${escapeHtml(r.debate)}`; }
+  if (r.debate) { $('debate').hidden = false; $('debate').innerHTML = `<strong>Where the teams differ:</strong> ${escapeHtml(r.debate)}`; }
   $('act-row').hidden = false;
   renderPositions(r.positions || []);
 }

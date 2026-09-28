@@ -33,7 +33,7 @@ If you're not sure what they want, open `reference/next.md` - it works out where
 
 **Who fields the request is often agreed; the debate is the plan.** The shape, the audience, and especially the **deliverables** - because one team's deliverable is another team's reuse.
 
-A quick test: would two teams answer this the same way? *Who owns it* - often yes, the room agrees. *What to build, for whom, and who reuses it* - often no. That disagreement is the product. A good plan says **build once here, reuse there**, so every team that needs the request is served without building the same thing twice.
+A quick test: would two teams answer this the same way? *Who owns it* - often yes, the room agrees. *What to build, for whom, and who reuses it* - often no. That difference is the product, as long as each team's view comes from its own card, not from being told to disagree. A good plan says **build once here, reuse there**, so every team that needs the request is served without building the same thing twice.
 
 When the participant wants to add or sharpen a team, that always means editing **`THE-ROOM.md`** - the one file they own.
 
@@ -67,7 +67,7 @@ Each sample request in the data pack's `requests/` folder has front matter with 
 
 Everything the participant adds ends the same way:
 
-**seat or sharpen a team in `THE-ROOM.md` → dispatch a request → see where the teams split on the plan → adjust.**
+**seat or sharpen a team in `THE-ROOM.md` → dispatch a request → see where the teams differ on the plan, and why → adjust.**
 
 They won't know if the room got sharper until they run it again, so nudge them to re-dispatch. And for a rough idea, the honest move is to **sharpen it first** - pin the audience and outcome - then re-dispatch.
 
@@ -96,3 +96,5 @@ After that, each track climbs its own way:
 ## The check worth repeating
 
 If every team routes every request the same way - same owner, same plan - the room is really just one triager wearing different hats. Either the teams aren't reasoning from their own charters yet, or the request is so obvious it isn't worth a room. Say this early, kindly, and say it again.
+
+Agreement on one request is fine when each team gives a real reason from its own card. Check the reasons, not the count of different answers - never push teams to disagree.

@@ -90,7 +90,7 @@ def list_room() -> str:
     teams = _load_teams()
     if not teams:
         return ("No teams seated. Add council/*.json (copy team.example.json) - at least three "
-                "teams that want different things, or the room can't disagree.")
+                "teams that want different things, or every team gives the same answer.")
     lines = [f"{len(teams)} seated team(s):", ""]
     for t in teams:
         lines.append(f"## {t.get('team', '?')}  (card {t.get('card', '?')})")

@@ -12,7 +12,7 @@ Think of it as filling a room - and the room only works if the teams want differ
 
 **Use Work IQ first if it's available.** A real team the participant actually works with beats a made-up one. Pull what the org data already knows - the team's charter, who it serves, what it ships - then ask only what it can't tell you. Say which parts you found and which you're guessing. The team cards in `../dispatch-data/teams/` are a ready-made starting roster.
 
-**Ask how many teams they want.** Two is the floor. **Three or four** is the sweet spot for a couple of hours - enough to disagree, few enough to follow.
+**Ask how many teams they want.** Two is the floor. **Three or four** is the sweet spot for a couple of hours - enough for different views, few enough to follow.
 
 ---
 
@@ -22,7 +22,7 @@ Before anything else, get what the team owns and who it serves:
 
 > "For this team, what are they accountable for, and who's their work for? That's what decides whether a request is theirs."
 
-Everything else - what makes them say yes, their format bias - flows from that. Skip it and you'll get a team that wants everything, and the room won't disagree.
+Everything else - what makes them say yes, their format bias - flows from that. Skip it and you'll get a team that wants everything, with no reason of its own.
 
 A few examples:
 
@@ -67,14 +67,14 @@ Then move on. The clock matters.
 | They say… | You do… |
 |---|---|
 | "I know our real teams" | Best case. Seat three with genuinely different charters. |
-| "Give me some" | Seat three from the cards whose instincts clash - Content & Insights (build once), DPO (deliver live), and Field & Partner (repoint to partners) is the sharpest trio. |
+| "Give me some" | Seat three from the cards that differ most - Content & Insights (build once), DPO (deliver live), and Field & Partner (repoint to partners) is the clearest trio. |
 | "They all seem similar" | Then you have one team, not a room. Change one hard: a platform team that says "don't build a one-off, build the system." Different instinct, different plan. |
 
 ---
 
 ## After adding
 
-1. **Read the roster back** - the charters side by side. If two are basically the same, say so: the room won't disagree.
+1. **Read the roster back** - the charters side by side. If two are basically the same, say so: they'll give the same answer for the same reasons.
 2. **Point at the contrast:** "These three want different things - dispatch the agent governance request and you'll see them split on the plan."
 3. **Next:** dispatch a request, or add one more team first.
 

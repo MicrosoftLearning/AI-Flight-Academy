@@ -2,7 +2,7 @@
 
 This is the file you edit. Every team you seat and what it cares about lives here. The skill reads this file when it dispatches a request.
 
-**It starts with two teams on purpose.** Add at least one more that wants something *different* - if every team would route a request the same way, the room can't disagree, and the disagreement is the whole point. The team cards in `../dispatch-data/teams/` are ready to seat; copy the ones you want, or write your own.
+**It starts with two teams on purpose.** Add at least one more that wants something *different* - if every team would route every request the same way, the room adds nothing. Each team reasons from its own card, and the differences that come from those cards are the point. The team cards in `../dispatch-data/teams/` are ready to seat; copy the ones you want, or write your own.
 
 ---
 
