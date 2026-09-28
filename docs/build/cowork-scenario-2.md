@@ -21,7 +21,7 @@ In this activity, you build a **room of teams** that looks at each request toget
 | | Step | You're done when |
 | --- | --- | --- |
 | **1** | **See why one triager isn't enough** | Dispatch is running, and you've seen the single triager pick only one owner for each request. This is your "before." |
-| **2** | **Seat three teams that disagree** | Three teams give *different* positions on the same request, and they disagree about the plan. |
+| **2** | **Seat three teams, each with its own view** | Each of the three teams gives its own position on the same request, with a reason from its card. |
 | **3** | **Make the decision** | You have one routing decision (owner, audience, and a build-once, reuse-everywhere plan) and a next step. |
 
 Step 3 takes most of your time. Your room is saved in `THE-ROOM.md`, so you can edit it and use it again for new requests. Most steps include a prompt you can paste. **Change it as you like. It's a starting point, not the answer.** If you get stuck, tell Cowork in the chat, or ask your table SME or a coach.
@@ -108,25 +108,25 @@ Upload the whole `the-dispatch.zip` file, not only `SKILL.md`. The zip file incl
 
 </div>
 
-## 2 · Seat three teams that disagree
+## 2 · Seat three teams, each with its own view
 
-**Done when:** three teams give *different* positions on the same request, and they disagree about the plan.
+**Done when:** each of the three teams gives its own position on the same request, and each position gives a reason from that team's card.
 
-Remember, a **seat** is one team in the room. Each seat says what the team owns, who it serves, and what makes the team want a request or turn it down. Your goal isn't only to list teams. Your goal is to choose teams that **disagree about the plan**.
+Remember, a **seat** is one team in the room. Each seat says what the team owns, who it serves, and what makes the team want a request or turn it down. Your goal isn't only to list teams. Your goal is for each team to **reason from its own card**. When teams differ, the difference should come from their cards, not from being told to disagree.
 
-Start with these three teams, because they disagree the most: **Content & Insights**, **Delivery & Program Operations**, and **Field & Partner**. Ask Dispatch to seat all three in your `THE-ROOM.md` file and dispatch the first request:
+Start with these three teams, because their cards are the most different: **Content & Insights**, **Delivery & Program Operations**, and **Field & Partner**. Ask Dispatch to seat all three in your `THE-ROOM.md` file and dispatch the first request:
 
 ```text
 Seat Content & Insights, Delivery & Program Operations, and Field & Partner from the pack, then dispatch the agent governance request.
 ```
 
-You should get a separate position from each team, and each position should be based on that team's card. The teams should also disagree:
+You should get a separate position from each team, and each position should be based on that team's card. Where the teams differ, you can see why:
 
 - **Content & Insights** wants to build a learning path once and keep it available.
 - **Delivery & Program Operations** wants to teach it live before the launch date.
 - **Field & Partner** says the real audience is partners, because partners set up governance in their own tenants.
 
-**Make each team different.** If a team would route every request the same way as another team, it's a copy. A room full of copies can't disagree. Give each team its own point of view:
+**Make each team different.** If a team would route every request the same way as another team, it's a copy. A room full of copies gives the same answer in different words. Give each team its own point of view:
 
 | Sounds like every other team | Has its own point of view |
 | --- | --- |
@@ -152,7 +152,7 @@ The positions aren't the finish line. The decision is. Choosing the owner is usu
 
 Next, try a **rough idea** (a file whose name starts with `rough-idea-`). A rough idea is missing its audience or its outcome. The honest answer is to **sharpen it first**, not to route it. That's the point: a good room doesn't guess.
 
-If your three teams always agree on the same plan, go back and make their team cards more different.
+If your three teams always agree on the same plan, check their reasons. If each reason comes from that team's card, agreement is fine. If the reasons are vague or all the same, make the team cards more specific.
 
 ## Go further - make it run without you
 
@@ -181,7 +181,7 @@ Now, when a request arrives in your inbox, the room has already made a plan (own
 | Cowork ignores Dispatch | Start a **new** Cowork session. Skills load only when a session starts. |
 | The upload seemed to do nothing | Upload the whole `the-dispatch.zip` file, not only `SKILL.md`. |
 | Cowork can't see the requests | Attach the data pack files to the session. |
-| Every team gives the same position | Make the team cards more different from each other. Then dispatch again. |
+| Every team gives the same position | Check each team's reason. If each reason comes from that team's card, agreement is a fine answer. If the reasons are vague or all the same, make the team cards more specific. Then dispatch again. |
 | Cowork confidently routed a rough idea | Ask it to check whether the request has enough detail to route. Sharpen first. Don't guess. |
 
 ::: details 🎬 Nobody gets it right the first time

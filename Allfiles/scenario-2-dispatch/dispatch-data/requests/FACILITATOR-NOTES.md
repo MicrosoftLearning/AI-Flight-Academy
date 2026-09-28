@@ -1,6 +1,8 @@
 # Facilitator notes - the expected split
 
-**Coach-only.** Don't hand this to participants; discovering the disagreement is the exercise. Use it to tell whether a room is genuinely splitting or just nodding along. A healthy Dispatch run produces **at least three distinct positions** on each formed request.
+**Coach-only.** Don't hand this to participants; discovering how each team sees the request is the exercise. Use it to tell whether each team is reasoning from its own card or just nodding along. A healthy Dispatch run usually produces **at least three distinct positions** on each complete request, and every position gives a reason from its team's card.
+
+**Agreement isn't failure.** If teams agree and each gives a real reason from its own card, that's a fine answer - don't push them to disagree. Ask: *"Which line of the card led to that position?"* Vague or identical reasons mean the cards are too alike.
 
 ---
 

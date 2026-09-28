@@ -2,7 +2,7 @@
 
 Give one of these requests to your seated room, and let each team take a position.
 
-## Complete requests - ready to route, but the room will still disagree
+## Complete requests - ready to route, and each team sees different work
 
 | Request | What they're asking for |
 |---|---|

@@ -92,7 +92,7 @@ From here it depends on your track - see below.
 
 | If they're… | Say… |
 |---|---|
-| Automating before the room disagrees | "Automation will happily run a room that agrees with itself. Dispatch a request first - if every team routes it the same way, they're not reasoning from different charters yet." |
+| Automating before the room reasons from its cards | "Automation will happily run a room that isn't reasoning from its cards. Dispatch a request first - check that each team's reason comes from its own charter." |
 | Stuck on a third team | "Seat Content & Insights, DPO, and Field & Partner. One builds once, one delivers live, one repoints to partners. Dispatch the agent governance request and they'll split." |
 | Debating the owner forever | "Who fields it is usually the easy part - pick the best-fit team and move on. The debate worth having is the plan: what gets built, and who reuses it." |
 | Routing a rough idea confidently | "That request is missing its outcome - it's an idea, not a routable request. Sharpen it first; defer is an honest answer." |

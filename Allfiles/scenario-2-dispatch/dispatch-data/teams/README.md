@@ -1,6 +1,6 @@
 # The room - Global Skilling teams
 
-One card per team. Seat **3–5** of these in your room (`THE-ROOM.md`). Start with teams that want *different* things - if they'd all route a request the same way, the room can't disagree, and the disagreement is the whole point.
+One card per team. Seat **3–5** of these in your room (`THE-ROOM.md`). Start with teams that want *different* things - if they'd all route every request the same way, the room adds nothing. Each team reasons from its own card, and the differences that come from those cards are the point.
 
 ## Core five - start here
 

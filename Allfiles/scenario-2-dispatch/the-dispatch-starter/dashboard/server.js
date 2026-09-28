@@ -262,7 +262,7 @@ STEP 2 - The room lands ONE routing decision. Who FIELDS it is often easy; the D
   - disposition: proceed-as-is | reshape | split | defer | decline-and-redirect
   - next_action: one concrete next step with a team on it
 
-STEP 3 - Name the sharpest DISAGREEMENT in 1-2 sentences (usually about the plan or the reuse, not who owns it).
+STEP 3 - Name where the teams differ most, in 1-2 sentences (usually about the plan or the reuse, not who owns it). If they genuinely agree, say so - don't invent a clash.
 
 Guardrails: exactly one primary owner; audience is never blank or "everyone" without a primary; every audience named is served by at least one deliverable; if the audience is partners, Field & Partner must be the owner or in next_action; certify only stable topics; a NOT-routable request must defer or redirect, never route confidently.
 
@@ -292,7 +292,7 @@ Respond with ONLY a single JSON object - no markdown code fences, no prose befor
     "disposition": "proceed-as-is" | "reshape" | "split" | "defer" | "decline-and-redirect",
     "next_action": "<one concrete next step with a team on it>"
   },
-  "debate": "<1-2 sentences on the sharpest clash, naming both sides>"
+  "debate": "<1-2 sentences on where the teams differ most, naming both sides - or that they genuinely agree, and why>"
 }
 
 Output that JSON object now, and nothing else.`;

@@ -33,7 +33,7 @@ decision: {
   disposition (proceed-as-is|reshape|split|defer|decline-and-redirect),
   next_action (one concrete step with a team on it)
 }
-debate: the sharpest clash - usually about the plan or the reuse, not who owns it
+debate: where the teams differ most - usually about the plan or the reuse, not who owns it (or that they genuinely agree, and why)
 ```
 
 ## House rules
@@ -42,6 +42,6 @@ debate: the sharpest clash - usually about the plan or the reuse, not who owns i
 2. **One primary owner.** Zero owners, or two "primary" owners, is invalid.
 3. **Build once, reuse across teams.** If two teams need the same thing, the plan says *build once, reused by* - never the same deliverable built twice. Make the reuse explicit.
 4. **Cover the audience.** Every audience the decision names is served by at least one deliverable in the plan.
-5. **A room of one is a triager with extra steps.** Seat **at least three** teams that want different things, or the room can't disagree - and the disagreement is the point.
+5. **A room of one is a triager with extra steps.** Seat **at least three** teams that want different things. Each team reasons from its own card, and the differences that come from those cards are the point. Don't push teams to disagree.
 6. **Certify only what's stable.** A credential/certification deliverable needs stable objectives; if the request flags churn, downgrade it or pair it with a revisit condition.
 7. **The thing that decides is not allowed to act.** The room proposes the route; a human approves before anything is opened, posted, or sent.

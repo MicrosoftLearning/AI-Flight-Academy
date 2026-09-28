@@ -27,8 +27,8 @@ You work on your own, in five steps, and Copilot Chat helps you build each one:
 | | Step | You're done when |
 | --- | --- | --- |
 | **1** | **Start the board** | `http://localhost:4173` is running, and the Copilot CLI is signed in. |
-| **2** | **Dispatch a request and see the teams disagree** | The teams give different positions on the same request. No code yet. |
-| **3** | **Seat a team that disagrees** | Your own team (a new file in `council/`) gives a different position from another team on the same request. |
+| **2** | **Dispatch a request and hear each team's view** | Each team gives its own position on the same request, with a reason from its card. No code yet. |
+| **3** | **Seat a team with its own view** | Your own team (a new file in `council/`) gives its own position on the same request, with a reason from its card. |
 | **4** | **Wire the intake gate** | The intake gate (`check_content.py`) labels a rough idea "sharpen first" before the room routes it. |
 | **5** | **Pick a path** | You finish Path A (a seat editor on the board) or Path B (saving the room's decision to a handoff file). |
 
@@ -120,7 +120,7 @@ Drag a request file onto the board, or select **Browse…** and choose it. Use *
 Paste the **whole file**, including the headings and the table of fields. Don't paste only the quoted ask. The board reads the fields in the table, so without them, even a complete request looks unfinished.
 :::
 
-Your room agrees on the owner, but it **disagrees about the plan**:
+Your room agrees on the owner, and **each team adds its own part of the plan**:
 
 - Content & Insights builds the governance learning path once.
 - Delivery reuses it in live sessions.
@@ -129,13 +129,13 @@ Your room agrees on the owner, but it **disagrees about the plan**:
 
 Each position comes from that team's card. You haven't written any code yet, and one owner has already become a plan with reuse.
 
-**Done when:** the teams give different positions on the same request, and each position is based on a team card.
+**Done when:** each team gives its own position on the same request, and each position gives a reason from that team's card.
 
-### 3 · Seat a team that disagrees
+### 3 · Seat a team with its own view
 
 Remember, a **seat** is one team in the room. It says what the team owns, who it serves, and what makes the team want a request or turn it down. Each seat is a small file in the `council/` folder. Five teams are already included.
 
-Add a seat for a team that *you* work with. The key is the team card. Give your team a different point of view from the others, like a different audience or a different favorite format. Then your team will *disagree* about the plan. (If a team would route every request the same way as another team, it's a copy.)
+Add a seat for a team that *you* work with. The key is the team card. Give your team its own point of view, like a different audience or a different favorite format. Then its position comes from its own card, not from copying the others. (If a team would route every request the same way as another team, for the same reasons, it's a copy.)
 
 You don't have to write the file yourself. Open an AI tool that knows your work, such as **Copilot**, **Cowork**, or **Scout**. Point it at the sample file `council/team.example.json`, and ask:
 
@@ -144,12 +144,12 @@ You don't have to write the file yourself. Open an AI tool that knows your work,
 When you review the result, check these three parts:
 
 - **owns / serves:** what makes a request belong to this team.
-- **says_yes_when / says_no_when:** what makes the team want a request or turn it down. These fields are what make the room disagree.
+- **says_yes_when / says_no_when:** what makes the team want a request or turn it down. Each team's reasons come from these fields.
 - **format_bias:** the kind of deliverable that the team prefers. This often shows up in the plan.
 
 Save the file in `council/` with a new name. (If you use an existing name, you replace that team.) Then select **Reload room** on the board.
 
-**Done when:** your team gives a different position from another team on the same request.
+**Done when:** your team gives its own position on the same request, and its reason points to something on its card.
 
 <div class="scene scene--flip">
 
@@ -307,7 +307,7 @@ Scout can start the same server: add it as a **Command** MCP server, and use ful
 | The board won't start | Check that Node is installed. Run `npm install` in `dashboard/` first. |
 | The server says the CLI is missing | Install the GitHub Copilot CLI (on Windows: `winget install GitHub.Copilot`), sign in, and restart the server. |
 | The board can't find the room | Keep `the-dispatch-starter`, `the-dispatch`, and `dispatch-data` next to each other in the same folder. |
-| Every team gives the same position | Make the team cards more different from each other. |
+| Every team gives the same position | Check each team's reason. If each reason comes from that team's card, agreement is a fine answer. If the reasons are vague or all the same, make the team cards more specific. |
 | The intake badge says "not built" | This is expected until you finish `check_content.py`. After that, the board shows whether each request is ready to route. |
 | Copilot asks you to approve too many actions | Use `--allow-all-tools`, but only in your own practice repo. |
 | A complete request says "sharpen first" | Drop or browse to the whole file. If you paste, paste all of it, including the table of fields. |

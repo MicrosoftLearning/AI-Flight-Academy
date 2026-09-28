@@ -14,7 +14,7 @@ Everything the room needs to route a real skilling request.
 
 ## The one idea
 
-The same request means **different work to different teams**. One team sees a 20-minute lab; another sees a whole learning path; a third says "not us - send it to Partner." That disagreement isn't noise - it's the point. Routing isn't obvious; it's a negotiation, and Dispatch makes the negotiation visible.
+The same request means **different work to different teams**. One team sees a 20-minute lab; another sees a whole learning path; a third says "not us - send it to Partner." Those differences aren't noise - they're the point, as long as each one comes from the team's own card. Routing isn't obvious; it's a negotiation, and Dispatch makes the negotiation visible.
 
 ## How to use it
 
