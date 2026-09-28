@@ -146,6 +146,7 @@ const jobs = [
       "dashboard/node_modules",
       "dashboard/uploads",
       "dashboard/runs",
+      "dashboard/outbox",
       "__pycache__",
     ],
   },

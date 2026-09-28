@@ -8,11 +8,11 @@ This starter gives you the plumbing and a working board. You write the teams, th
 
 ## The intake gate
 
-Before the room routes a request, one countable question: **is it even routable?** A formed request (`RQ-…`) has its fields; a rough idea (`IDEA-…`) is missing some - and should be *sharpened*, not confidently routed.
+Before the room routes a request, one countable question: **is it even routable?** A complete request (`request-…`) has its fields; a rough idea (`rough-idea-…`) is missing some - and should be *sharpened*, not confidently routed.
 
 ```powershell
-python check_content.py ../dispatch-data/requests/RQ-01-agent-governance-before-ga.md
-python check_content.py ../dispatch-data/requests/IDEA-01-seller-copilot-roi.md
+python check_content.py ../dispatch-data/requests/request-agent-governance-before-launch.md
+python check_content.py ../dispatch-data/requests/rough-idea-seller-copilot-value.md
 ```
 
 `check_content.py` ships as a `TODO` stub - building it is the exercise. `dispatchlib.py` does the parsing (`parse_request`, `field_value`, `is_placeholder`); you decide present vs missing against `REQUIRED_FIELDS` and return `{routable, present, missing, detail}`. A language model catches what's contextual; code catches what's countable - whether the request has enough in it to route is countable.
@@ -33,7 +33,34 @@ The board needs the sibling `../dispatch-data/` (teams + requests + policy) and 
 
 - `council/*.json` - one seat per team: what it **owns**, who it **serves**, what makes it **say yes/no**, its **format bias**, its **voice**. Five core teams ship; `team.example.json` is the copyable shape. **At least three teams that want different things** - or the room can't disagree.
 - `check_content.py` - the intake gate the board calls (a `TODO` stub; `dispatchlib` does the parsing).
-- Your path - `mcp_server.py` to make the room callable by other agents, or the "act on the decision" route in `dashboard/server.js` to route a decision onward (open a work item, post to a channel).
+- Your path - `mcp_server.py` to make the room callable by other agents, or the "act on the decision" route in `dashboard/server.js` to hand a decision off (save it to a file in `dashboard/outbox/`).
+
+## The MCP server (bonus)
+
+`mcp_server.py` needs one package (`mcp`). Install it in an environment inside this folder, so nothing else on your machine changes (delete `.venv` to undo):
+
+```powershell
+py -3.12 -m venv .venv
+.venv\Scripts\python -m pip install -r requirements.txt
+```
+
+On macOS or Linux: `python3 -m venv .venv`, then `.venv/bin/python -m pip install -r requirements.txt`.
+
+Don't start the server in a terminal - over stdio it waits silently for an agent to connect. Let VS Code start it instead, with `.vscode/mcp.json` in this folder (on macOS or Linux, use `.venv/bin/python`):
+
+```json
+{
+  "servers": {
+    "the-dispatch": {
+      "type": "stdio",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "args": ["${workspaceFolder}/mcp_server.py"]
+    }
+  }
+}
+```
+
+Pass file names to `check_routable` as `request_path` (for example `request-agent-governance-before-launch.md`). `request` is for raw request text, though a single `.md` file name there also works.
 
 ## The starter at a glance
 
@@ -47,7 +74,7 @@ The board needs the sibling `../dispatch-data/` (teams + requests + policy) and 
 
 ## The split tell
 
-Run **RQ-01** (agent governance before GA) first. Who *fields* it, the room often agrees on. The **plan** is the argument: one team sees an evergreen learning path, another a live workshop, another an ASN journey, and Field & Partner says the real audience is partners. That split - and the reuse it forces (build once, reuse across teams) - is the whole point; a single triager structurally can't produce it.
+Run **Agent governance training before launch** first. Who *fields* it, the room often agrees on. The **plan** is the argument: one team sees an evergreen learning path, another a live workshop, another an ASN journey, and Field & Partner says the real audience is partners. That split - and the reuse it forces (build once, reuse across teams) - is the whole point; a single triager structurally can't produce it.
 
 ## House rule
 

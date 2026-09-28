@@ -139,7 +139,7 @@ async function act() {
   try {
     const res = await fetch('/api/dispatch/' + currentJobId + '/act', { method: 'POST' });
     const body = await res.json();
-    $('act-status').textContent = res.ok ? '✅ routed' : `🔧 ${body.hint || body.error || 'not wired yet'}`;
+    $('act-status').textContent = res.ok ? `✅ ${body.message || 'handed off'}` : `🔧 ${body.hint || body.error || 'not wired yet'}`;
   } catch (e) {
     $('act-status').textContent = '⚠️ ' + e.message;
   }
@@ -171,14 +171,15 @@ function escapeAttr(s) { return escapeHtml(s).replace(/\s+/g, ' ').trim(); }
 // Wire up.
 $('dispatch-text-btn').addEventListener('click', dispatchText);
 $('browse-btn').addEventListener('click', () => $('file-input').click());
-$('file-input').addEventListener('change', (e) => { if (e.target.files[0]) dispatchFile(e.target.files[0]); });
+// Reset after each pick so choosing the same file again still dispatches it.
+$('file-input').addEventListener('change', (e) => { if (e.target.files[0]) dispatchFile(e.target.files[0]); e.target.value = ''; });
 $('refresh-council').addEventListener('click', loadCouncil);
 $('toggle-log').addEventListener('click', () => { const l = $('run-log'); l.hidden = !l.hidden; });
 $('act-btn').addEventListener('click', act);
 
 const dz = $('dropzone');
-['dragover', 'dragenter'].forEach((ev) => dz.addEventListener(ev, (e) => { e.preventDefault(); dz.classList.add('drag'); }));
-['dragleave', 'drop'].forEach((ev) => dz.addEventListener(ev, (e) => { e.preventDefault(); dz.classList.remove('drag'); }));
+['dragover', 'dragenter'].forEach((ev) => dz.addEventListener(ev, (e) => { e.preventDefault(); dz.classList.add('dragover'); }));
+['dragleave', 'drop'].forEach((ev) => dz.addEventListener(ev, (e) => { e.preventDefault(); dz.classList.remove('dragover'); }));
 dz.addEventListener('drop', (e) => { const f = e.dataTransfer.files[0]; if (f) dispatchFile(f); });
 
 loadCouncil();
