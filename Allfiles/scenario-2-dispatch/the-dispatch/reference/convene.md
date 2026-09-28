@@ -77,5 +77,5 @@ If every team lands the same plan, say so plainly - that's the thing to fix:
 ## When to run it
 
 - After seating or changing any team - this is the feedback loop.
-- Start with **RQ-01** (agent governance before GA). It splits the room cleanly across owner, audience, and plan.
+- Start with **Agent governance training before launch**. It splits the room cleanly across owner, audience, and plan.
 - Before you land the decision - the positions this turns up are what the decision is built from.

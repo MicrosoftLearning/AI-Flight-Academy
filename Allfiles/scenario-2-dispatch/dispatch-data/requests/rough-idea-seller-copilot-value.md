@@ -1,5 +1,11 @@
-# IDEA · IDEA-01
-## Something about helping sellers talk about Copilot ROI?
+---
+id: IDEA-01
+type: rough-idea
+title: "Rough idea: help sellers talk about Copilot value?"
+legacy_file: IDEA-01-seller-copilot-roi.md
+---
+
+# Rough idea: help sellers talk about Copilot value?
 
 **From:** a hallway conversation, jotted into the intake alias
 **Date:** whenever
@@ -14,7 +20,7 @@
 
 | Field | Value |
 |---|---|
-| Stated audience | "Sellers" (which sellers? MCAPS? partners?) |
+| Stated audience | "Sellers" (which sellers? Microsoft sellers? Partner sellers?) |
 | Topic | Talking about Copilot ROI |
 | Desired outcome | - *unclear* |
 | Deadline | - *none* |

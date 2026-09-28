@@ -22,11 +22,11 @@ One pass over the sample requests. This is what a room has to beat. Notice what 
 
 | Request | Lone triager sends it to | The tell |
 |---|---|---|
-| RQ-01 · governance before GA | Content & Insights | **The tell.** Routes to the obvious owner and stops. Can't see that partners need it *first*, or that the path should be built once and reused by DPO (live) and Field & Partner (regional). One owner hides a three-team plan. |
-| RQ-02 · partners misconfigure DLP | "the training team" | Picks a generic owner. Misses that the audience is explicitly partners and the fix is a hands-on lab the field can reuse. |
-| RQ-03 · all employees, agentic AI, 30 min | Content & Insights | Defaults to content. Misses that it's a reach/first-touch play, not a durable module - and that no team cleanly owns "all employees." |
-| RQ-05 · Copilot Studio cert | Credentials | Says "build a cert." Misses that the product churns (not cert-ready yet) and someone has to *prep* builders, which is a different job from *owning* the cert. |
-| RQ-07 · field agent-deploy lab, EOQ | "the labs team" | Assigns the lab. Misses the build-time-vs-EOQ squeeze and that the audience is field, who'd reuse it live with customers. |
+| Agent governance training before launch | Content & Insights | **The tell.** Routes to the obvious owner and stops. Can't see that partners need it *first*, or that the path should be built once and reused by DPO (live) and Field & Partner (regional). One owner hides a three-team plan. |
+| Partners keep setting up data protection wrong | "the training team" | Picks a generic owner. Misses that the audience is explicitly partners and the fix is a hands-on lab the field can reuse. |
+| AI agents explained to every employee in 30 minutes | Content & Insights | Defaults to content. Misses that it's a reach/first-touch play, not a durable module - and that no team cleanly owns "all employees." |
+| A certification for Copilot Studio agent builders | Credentials | Says "build a cert." Misses that the product churns (not cert-ready yet) and someone has to *prep* builders, which is a different job from *owning* the cert. |
+| A hands-on agent deployment lab for sellers (end of quarter) | "the labs team" | Assigns the lab. Misses the build-time-vs-EOQ squeeze and that the audience is field, who'd reuse it live with customers. |
 
 > **The point this makes:** every request got exactly one owner and no plan. The triager isn't *wrong* - it's *thin*. It can't repoint an audience or say "build once, reuse across teams," because it only holds one team at a time.
 

@@ -1,6 +1,6 @@
 # Intake fields - what a request needs to be routable
 
-Before the room can route a request, the request has to *say enough*. These are the fields the **intake-completeness check** looks for. A formed `RQ-…` has them all; a rough `IDEA-…` is missing several on purpose.
+Before the room can route a request, the request has to *say enough*. These are the fields the **intake-completeness check** looks for. A complete `request-…` has them all; a `rough-idea-…` is missing several on purpose.
 
 | Field | Required? | What "present" means |
 |---|---|---|

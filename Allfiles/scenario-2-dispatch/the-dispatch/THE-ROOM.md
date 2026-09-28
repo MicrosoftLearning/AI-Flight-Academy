@@ -82,7 +82,7 @@ a request the other two took at face value. That contrast is the point. See TC-0
 | You have… | Do this |
 |---|---|
 | One or two teams | Add one more with a *different* instinct - ask to seat the room. |
-| Three or more | Dispatch a request (start with RQ-01) and see where they split on the plan. |
+| Three or more | Dispatch a request (start with the agent governance request) and see where they split on the plan. |
 | A split | Land the routing decision - owner, audience, and a plan that builds once and reuses. |
 | A rough idea | Sharpen it first (pin the audience and outcome), then dispatch. |
 | A working room | Ask what's next for your track. |

@@ -1,26 +1,26 @@
 # Incoming requests
 
-Drop one of these in front of your seated room and let each team take a position.
+Give one of these requests to your seated room, and let each team take a position.
 
-## Formed requests - routable, but the room will still disagree
+## Complete requests - ready to route, but the room will still disagree
 
-| Request | The ask in a phrase |
+| Request | What they're asking for |
 |---|---|
-| [RQ-01](RQ-01-agent-governance-before-ga.md) | Skill customers on Copilot agent governance before GA |
-| [RQ-02](RQ-02-partners-purview-dlp.md) | Partners keep misconfiguring Purview DLP - fix their hands-on skills, fast |
-| [RQ-03](RQ-03-all-employees-agentic-ai.md) | Every MS employee "gets" agentic AI in 30 minutes |
-| [RQ-05](RQ-05-copilot-studio-certification.md) | A real certification for Copilot Studio agent builders |
-| [RQ-07](RQ-07-field-agent-deploy-lab.md) | A hands-on lab: deploying agents in a customer tenant, by EOQ |
+| [Agent governance training before launch](request-agent-governance-before-launch.md) | Teach customers how to control Copilot agents before the feature launches in about 8 weeks. |
+| [Partners keep setting up data protection wrong](request-partner-data-protection-mistakes.md) | Partners set up data loss prevention (DLP) wrong in customer tenants. Fix their hands-on skills, fast. |
+| [AI agents explained to every employee in 30 minutes](request-ai-agents-for-every-employee.md) | Leadership wants every Microsoft employee to understand AI agents in a 30-minute session. |
+| [A certification for Copilot Studio agent builders](request-copilot-studio-certification.md) | Partners want a recognized credential that proves someone can build agents. |
+| [A hands-on agent deployment lab for sellers](request-seller-agent-deployment-lab.md) | Sellers need a lab to practice deploying agents in a real tenant by the end of the quarter. |
 
-## Rough ideas - *not* routable yet; sharpen them first
+## Rough ideas - *not* ready to route; sharpen them first
 
-| Idea | Why it's not ready |
+| Idea | Why it isn't ready |
 |---|---|
-| [IDEA-01](IDEA-01-seller-copilot-roi.md) | Real itch, no shape - audience and outcome undefined |
-| [IDEA-02](IDEA-02-emea-partners-smb.md) | "AI stuff" for SMB via EMEA partners - topic and audience undefined |
+| [Help sellers talk about Copilot value?](rough-idea-seller-copilot-value.md) | A real need, but no shape yet. The audience and the outcome aren't defined. |
+| ["AI stuff" for partners' small-business customers?](rough-idea-partner-small-business-ai.md) | The topic is a placeholder, and the audience is two steps away. |
 
 ## Start here
 
-New to the room? Run **RQ-01** first - it splits the room cleanly across format, audience, and ownership. Then try a rough **IDEA-…** to see the room sharpen a request before it can route it.
+New to the room? Start with **Agent governance training before launch**. It splits the room clearly on format, audience, and ownership. Then try a **rough idea** to see the room sharpen a request before it routes it.
 
-> Coaches: `FACILITATOR-NOTES.md` has the expected split for each request. Don't hand it to participants - the discovery *is* the exercise.
+> Coaches: `FACILITATOR-NOTES.md` has the expected split for each request. Don't give it to participants - discovering the split *is* the exercise. Each request also keeps its original code (`RQ-01`, `IDEA-01`, and so on) in its front matter, and the notes map every code to its new title.

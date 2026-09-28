@@ -9,7 +9,7 @@ Everything the room needs to route a real skilling request.
 | Folder | What it is |
 |---|---|
 | `teams/` | The room - one card per Global Skilling team (needs, audience, output, appetite, and how they argue). Seat 3–5 of these. |
-| `requests/` | Incoming skilling requests to route. Some are fully-formed briefs (`RQ-…`); two are deliberately-rough ideas (`IDEA-…`) the room has to sharpen first. |
+| `requests/` | Incoming skilling requests to route. Some are complete requests (`request-…`); two are deliberately rough ideas (`rough-idea-…`) the room has to sharpen first. |
 | `policy/` | The intake rules - the fields a request needs to be routable, and the routing rules the deterministic check enforces. |
 
 ## The one idea
@@ -19,7 +19,7 @@ The same request means **different work to different teams**. One team sees a 20
 ## How to use it
 
 1. **Seat the room** - pick 3–5 teams from `teams/` (start with ones that want *different* things).
-2. **Drop a request** - start with `requests/RQ-01…`, or a rough `IDEA-…`.
+2. **Drop a request** - start with `requests/request-agent-governance-before-launch.md`, or a `rough-idea-…`.
 3. **Let each team take a position** - want it? what would they make? how big? own it?
 4. **Dispatch** - the room lands one decision: `owner · audience · plan · disposition · next-action`.
 

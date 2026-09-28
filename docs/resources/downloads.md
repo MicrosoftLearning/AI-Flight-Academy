@@ -92,7 +92,7 @@ Seat a **room of Global Skilling teams** over an incoming **skilling request** s
   </a>
 </div>
 
-**Cowork:** **Customize** → **Skills** → **Add ▾** → **Upload skill** → the whole `the-dispatch.zip`. Start a **new session**, attach the data pack, and say **`seat the room and dispatch RQ-01.`**
+**Cowork:** **Customize** → **Skills** → **Add ▾** → **Upload skill** → the whole `the-dispatch.zip`. Start a **new session**, attach the data pack, and say **`seat the room and dispatch the agent governance request.`**
 
 **Scout:** unzip, then **Extensions** → **Import** → drag in the `the-dispatch` **folder**. Start a new session and point it at the `dispatch-data` folder.
 

@@ -6,8 +6,9 @@ This repo is the Code-track Microsoft hackathon starter for **The Dispatch**: a 
 
 An intake queue with one triager holds one implied answer - where *they'd* send it - so it can never surface *"this means different work to different teams."* The room fixes that by seating many teams, each with a **different audience, output, and appetite**, each taking its own position. **Who fields the request is often agreed; the debate is the plan** - the shape, the audience, and especially the **deliverables**, because one team's deliverable is another team's reuse (build once, reuse across teams). That negotiation is the product.
 
-Use the synthetic requests in `../dispatch-data/` (formed `RQ-…`, rough `IDEA-…`) and the real Global Skilling team cards (`teams/TC-…`, no individuals named). Do not introduce real personal data.
+Use the synthetic requests in `../dispatch-data/` (complete `request-…`, rough `rough-idea-…`) and the real Global Skilling team cards (`teams/TC-…`, no individuals named). Do not introduce real personal data.
 
+Each sample request has front matter with an `id` (like `RQ-01` or `IDEA-01`) and a `legacy_file` (its old file name). Coaches and older materials may use these codes. If someone uses one, match it to the request file by `id` or `legacy_file`, but use the request's `title` when you talk to the participant.
 ## File layout
 
 - `council/*.json` - the seated teams, as data. Each: `team_id`, `team`, `card`, `owns`, `serves`, `produces`, `says_yes_when`, `says_no_when`, `format_bias`, `voice`. `team.example.json` is the copyable shape.
@@ -37,7 +38,7 @@ debate: the sharpest clash - usually about the plan or the reuse, not who owns i
 
 ## House rules
 
-1. **Sharpen before you route.** A request missing its audience, topic, or desired outcome (a rough `IDEA-…`) is not routable - the honest disposition is `defer` or `decline-and-redirect`, never a confident route. The intake gate catches this; don't override it.
+1. **Sharpen before you route.** A request missing its audience, topic, or desired outcome (a `rough-idea-…`) is not routable - the honest disposition is `defer` or `decline-and-redirect`, never a confident route. The intake gate catches this; don't override it.
 2. **One primary owner.** Zero owners, or two "primary" owners, is invalid.
 3. **Build once, reuse across teams.** If two teams need the same thing, the plan says *build once, reused by* - never the same deliverable built twice. Make the reuse explicit.
 4. **Cover the audience.** Every audience the decision names is served by at least one deliverable in the plan.

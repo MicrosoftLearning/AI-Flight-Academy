@@ -38,7 +38,7 @@ After that, each track climbs its own way - see **By track**.
 ## What to say at each step
 
 ### Not started → Step 1
-> Start by seating the room. You need at least three teams that want *different* things - teams that would route the same request differently. The cards in `../dispatch-data/teams/` are ready to seat. Then dispatch RQ-01 and watch them split on the plan.
+> Start by seating the room. You need at least three teams that want *different* things - teams that would route the same request differently. The cards in `../dispatch-data/teams/` are ready to seat. Then dispatch the agent governance request and watch them split on the plan.
 
 ### Step 1 done → Step 2
 > Now make the room show its reasons. Every team's position - in, support, or out - needs a reason from its own charter, not a vibe. Then talk through the clashes: usually not *who owns it* (the room agrees), but *what to build and who reuses it*. A team that this isn't for should say "not mine" instead of reaching for it.
@@ -93,7 +93,7 @@ From here it depends on your track - see below.
 | If they're… | Say… |
 |---|---|
 | Automating before the room disagrees | "Automation will happily run a room that agrees with itself. Dispatch a request first - if every team routes it the same way, they're not reasoning from different charters yet." |
-| Stuck on a third team | "Seat Content & Insights, DPO, and Field & Partner. One builds once, one delivers live, one repoints to partners. Dispatch RQ-01 and they'll split." |
+| Stuck on a third team | "Seat Content & Insights, DPO, and Field & Partner. One builds once, one delivers live, one repoints to partners. Dispatch the agent governance request and they'll split." |
 | Debating the owner forever | "Who fields it is usually the easy part - pick the best-fit team and move on. The debate worth having is the plan: what gets built, and who reuses it." |
 | Routing a rough idea confidently | "That request is missing its outcome - it's an idea, not a routable request. Sharpen it first; defer is an honest answer." |
 | Skipping the reuse | "The reuse is the point. If two teams need the same thing, say build-once-reused-by - don't let them build it twice." |
