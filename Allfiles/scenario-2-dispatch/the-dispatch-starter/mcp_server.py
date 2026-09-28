@@ -61,6 +61,9 @@ def _load_teams() -> list[dict]:
 
 def _resolve_request(request: str, request_path: str) -> str:
     """Accept raw text, or a path resolved against the starter then dispatch-data/requests."""
+    # Agents sometimes pass a file name as `request` - treat a one-line .md value as a path.
+    if request.strip() and "\n" not in request.strip() and request.strip().lower().endswith(".md"):
+        request, request_path = "", request.strip()
     if request.strip():
         return request
     if request_path.strip():

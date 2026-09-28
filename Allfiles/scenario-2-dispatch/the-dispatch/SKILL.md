@@ -51,6 +51,12 @@ A team that wants a request with no reason from its own charter is exactly what 
 
 ---
 
+## Request codes
+
+Each sample request in the data pack's `requests/` folder has front matter with an `id` (like `RQ-01` or `IDEA-01`) and a `legacy_file` (its old file name). Coaches and older materials may use these codes. If someone uses a code or an old file name, match it to the request by `id` or `legacy_file`. When you talk to the participant, always use the request's `title`, not the code.
+
+---
+
 ## Leave the single-triager baseline alone
 
 `reference/solo.md` is the "before" - how one person triaging the queue would route these requests, already written. Don't change it. It's what the room is compared against, so if it moves, the comparison stops meaning anything.

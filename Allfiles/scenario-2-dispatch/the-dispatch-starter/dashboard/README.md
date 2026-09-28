@@ -16,15 +16,19 @@ This dashboard ships inside `the-dispatch-starter/`. The seated room is **data**
 
 ## The flow
 
-1. **Drop/paste a request** - a formed `RQ-…` or a rough `IDEA-…`.
+1. **Drop/paste a request** - a complete `request-…` or a `rough-idea-…`.
 2. **Intake gate** - `check_content.py` says whether it's routable or needs sharpening first.
 3. **The room takes positions** - each team reacts through its own lens.
 4. **The routing decision** - owner · audience · plan (deliverables + reuse) · disposition · next-action.
 5. **Sharpen & re-dispatch** - edit the request and drop it again; there's no separate loop.
 
-## Act on the decision (build path)
+## If a dispatch fails
 
-The **📤 Act on this decision** button is a stub (`501`). Wire `POST /api/dispatch/:id/act` in `server.js` to route a decision onward - open a work item, post to a channel, notify the owner.
+The board looks for the room's answer in the Copilot CLI output. If the reply can't be read as JSON, the board asks the CLI once more. If the second reply also fails (or the run times out), the board saves the raw output to `runs/failed-<id>.txt` and shows that path in the error. Dispatch the request again, and if it keeps failing, send that file to a coach. This error is about the AI's reply - the intake gate already passed.
+
+## Act on the decision (Path B)
+
+The **📤 Act on this decision** button is a stub. It returns `501` (not implemented) on purpose, because it's the part you build. Make `POST /api/dispatch/:id/act` in `server.js` save the decision (`job.result.decision`) to a handoff file in `dashboard/outbox/`, and return `{ message }` with the file path. The board shows that message. Optional extension: send the handoff to a real tracker or channel (`DISPATCH_ACT_TARGET`).
 
 ## Environment overrides
 
@@ -34,11 +38,11 @@ The **📤 Act on this decision** button is a stub (`501`). Wire `POST /api/disp
 | `DISPATCH_COUNCIL_DIR` | `../council` | The seated team `council/*.json` |
 | `DISPATCH_SKILL_DIR` | `../../the-dispatch` | Where `reference/convene.md` and `reference/dispatch.md` live |
 | `DISPATCH_DATA_PACK` | `../../dispatch-data` | Teams / requests / policy, for grounding |
-| `COPILOT_BIN` | `copilot` | The GitHub Copilot CLI binary |
+| `COPILOT_BIN` | `copilot` | The GitHub Copilot CLI binary. On Windows, an npm install (`copilot.cmd`) is found and handled automatically. |
 | `DISPATCH_MODEL` | `claude-sonnet-5` | Pinned model for every CLI call; set to `''` or `auto` to let the CLI pick. If your account can't use the pinned model, runs fall back to the CLI default |
 | `DISPATCH_TIMEOUT_MS` | `360000` (6 min) | Kill the CLI if a run takes longer |
 | `DISPATCH_PYTHON` | `python` | Python for the intake gate |
-| `DISPATCH_ACT_TARGET` | `<your intake tracker or channel>` | Where the act path would route |
+| `DISPATCH_ACT_TARGET` | `<your intake tracker or channel>` | Optional: a real destination for the Path B extension |
 
 ## API
 

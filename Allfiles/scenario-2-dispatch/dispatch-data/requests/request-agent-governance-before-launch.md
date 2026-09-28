@@ -1,5 +1,11 @@
-# REQUEST · RQ-01
-## Skill customers on Copilot agent governance before GA
+---
+id: RQ-01
+type: request
+title: "Agent governance training before launch"
+legacy_file: RQ-01-agent-governance-before-ga.md
+---
+
+# Agent governance training before launch
 
 **Requester:** Priya N., Product Marketing (Copilot Control System)
 **Came in via:** email to the Global Skilling intake alias
@@ -9,7 +15,7 @@
 
 ## The ask
 
-> "Copilot agent governance goes GA in ~8 weeks. Customers are already nervous about agents acting in their tenant. We need to get them skilled on governance - controls, guardrails, admin setup - *before* GA so it doesn't become a support fire. Can Global Skilling own this?"
+> "Copilot agent governance becomes generally available (GA) in about 8 weeks. Customers are already nervous about agents acting in their tenant. We need to get them skilled on governance - controls, guardrails, admin setup - *before* launch so it doesn't become a support fire. Can Global Skilling own this?"
 
 ## Context
 
@@ -19,10 +25,10 @@ Governance is the #1 blocker in customer conversations. Admins want to know how 
 
 | Field | Value |
 |---|---|
-| Stated audience | "Customers" (unspecified role) |
+| Stated audience | "Customers" (role not specified) |
 | Topic | Copilot agent governance - controls, guardrails, admin setup |
 | Desired outcome | Customers can confidently set up governance before they turn agents on |
-| Deadline | ~8 weeks (before GA) |
+| Deadline | About 8 weeks (before GA) |
 | Trigger / motion | GA launch |
 
 ## Notes

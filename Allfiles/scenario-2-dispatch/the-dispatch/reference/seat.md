@@ -75,7 +75,7 @@ Then move on. The clock matters.
 ## After adding
 
 1. **Read the roster back** - the charters side by side. If two are basically the same, say so: the room won't disagree.
-2. **Point at the contrast:** "These three want different things - dispatch RQ-01 and you'll see them split on the plan."
+2. **Point at the contrast:** "These three want different things - dispatch the agent governance request and you'll see them split on the plan."
 3. **Next:** dispatch a request, or add one more team first.
 
 > A quick self-check: if you can't say in one sentence how two teams would route the *same* request *differently*, you haven't added two teams yet - you've added one twice.

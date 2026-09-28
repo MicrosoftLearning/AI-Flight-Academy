@@ -1,5 +1,11 @@
-# REQUEST · RQ-02
-## Partners keep misconfiguring Purview DLP in customer tenants
+---
+id: RQ-02
+type: request
+title: "Partners keep setting up data protection wrong"
+legacy_file: RQ-02-partners-purview-dlp.md
+---
+
+# Partners keep setting up data protection wrong
 
 **Requester:** Marcus T., Partner Technical Enablement
 **Came in via:** Teams message escalated to intake
@@ -9,7 +15,7 @@
 
 ## The ask
 
-> "We're seeing partners stand up Purview DLP wrong in customer tenants - over-blocking, or leaving gaps. It's generating support tickets and eroding trust. We need something that fixes their hands-on skills, fast. Not a webinar they'll forget."
+> "We're seeing partners set up Microsoft Purview Data Loss Prevention (DLP) wrong in customer tenants - over-blocking, or leaving gaps. It's generating support tickets and eroding trust. We need something that fixes their hands-on skills, fast. Not a webinar they'll forget."
 
 ## Context
 

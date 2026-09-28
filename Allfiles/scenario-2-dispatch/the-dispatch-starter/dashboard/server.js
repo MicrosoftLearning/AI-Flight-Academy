@@ -44,13 +44,42 @@ for (const dir of [UPLOADS_DIR, RUNS_DIR]) {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
 }
 
-// --- Config for the "act on the decision" path (TODO bonus) -----------------
-// Placeholder by default. Wiring the decision to a real action (open a work
-// item, post to a channel, route to the owner) is a build path - see the TODO
-// stub at POST /api/dispatch/:id/act near the bottom of this file.
+// --- Config for the "act on the decision" path (Path B) ---------------------
+// Path B saves the decision to a handoff file in dashboard/outbox/ - see the
+// TODO stub at POST /api/dispatch/:id/act near the bottom of this file.
+// Optional extension: set DISPATCH_ACT_TARGET to a real tracker or channel.
 const ACT_TARGET = process.env.DISPATCH_ACT_TARGET || '<your intake tracker or channel>';
 
 const COPILOT_BIN = process.env.COPILOT_BIN || 'copilot';
+
+// On Windows, `npm install -g @github/copilot` creates a copilot.cmd launcher,
+// which spawn() can't start without a shell. (The winget install is a real
+// copilot.exe and works as is.) If the first copilot on PATH is that launcher,
+// find the Copilot program inside the npm package and start it directly - the
+// same file the launcher runs.
+function resolveCopilotBin(bin) {
+  if (process.platform !== 'win32' || /\.exe$/i.test(bin)) return bin;
+  const fromNpm = (dir) => {
+    try {
+      const pkgDir = path.join(dir, 'node_modules', '@github', 'copilot');
+      return require.resolve(`@github/copilot-${process.platform}-${process.arch}`, { paths: [pkgDir] });
+    } catch {
+      return null;
+    }
+  };
+  if (path.isAbsolute(bin)) return fromNpm(path.dirname(bin)) || bin;
+  for (const entry of (process.env.PATH || '').split(path.delimiter)) {
+    const dir = entry.replace(/"/g, '').trim();
+    if (!dir) continue;
+    if (fs.existsSync(path.join(dir, `${bin}.exe`))) return bin;
+    if (fs.existsSync(path.join(dir, `${bin}.cmd`))) {
+      const exe = fromNpm(dir);
+      if (exe) return exe;
+    }
+  }
+  return bin;
+}
+const COPILOT_CMD = resolveCopilotBin(COPILOT_BIN);
 // Pin a model so runs are predictable across the hack; override with
 // DISPATCH_MODEL (set it to '' or 'auto' to let the CLI pick). If the account
 // can't use the pinned model, each run falls back to the CLI default.
@@ -107,14 +136,20 @@ function preflightCopilot() {
   console.log(`[dispatch] listening on http://localhost:${PORT}`);
   let child;
   try {
-    child = spawn(COPILOT_BIN, ['--version'], { windowsHide: true, shell: false });
+    if (COPILOT_CMD !== COPILOT_BIN) console.log(`[dispatch] Using the GitHub Copilot CLI from your npm install: ${COPILOT_CMD}`);
+    child = spawn(COPILOT_CMD, ['--version'], { windowsHide: true, shell: false });
   } catch {
     child = null;
   }
+  let warned = false;
   const warn = () => {
+    // A missing program fires both 'error' and 'close' - warn once.
+    if (warned) return;
+    warned = true;
     console.warn(`\n[dispatch] Could not run the GitHub Copilot CLI ("${COPILOT_BIN}").`);
-    console.warn('[dispatch] Install it and sign in to your GitHub account (the one with a Copilot seat),');
-    console.warn('[dispatch] or set COPILOT_BIN to its full path. Dispatches will fail until this works.\n');
+    console.warn('[dispatch] Install it and sign in to your GitHub account (the one with a Copilot seat).');
+    console.warn('[dispatch] On Windows: winget install GitHub.Copilot. Or set COPILOT_BIN to its full path.');
+    console.warn('[dispatch] Dispatches will fail until this works.\n');
   };
   if (!child) return warn();
   let out = '';
@@ -135,7 +170,8 @@ function preflightCopilot() {
  *  and the prompt builds from. `*.example.json` is a template and is skipped. */
 function seatFromJson(seat, index) {
   const label = seat.team || seat.team_id || `Team ${index + 1}`;
-  const emojiMatch = label.match(/^(\p{Extended_Pictographic}\uFE0F?)\s*(.*)$/u);
+  // Keep multi-part emoji (🧑‍🏫, skin tones, 🏳️‍🌈) together as one icon.
+  const emojiMatch = label.match(/^(\p{Extended_Pictographic}(?:\uFE0F|\p{Emoji_Modifier})?(?:\u200D\p{Extended_Pictographic}(?:\uFE0F|\p{Emoji_Modifier})?)*)\s*(.*)$/u);
   return {
     id: seat.team_id || `team-${index}`,
     emoji: emojiMatch ? emojiMatch[1] : '🏷️',
@@ -203,6 +239,7 @@ function buildPrompt({ seats, requestPath, requestLabel, routable, missing }) {
 Read "${CONVENE_REF_PATH}" for how each team takes a position, and "${DISPATCH_REF_PATH}" for how the room turns positions into ONE routing decision.
 
 The incoming skilling request is at: "${requestPath}"  (label: ${requestLabel})
+If the request file has front matter with an internal code (such as RQ-01), don't mention the code - refer to the request by its title.
 ${routableLine}
 
 Seat these Global Skilling teams, in this exact order. Each reacts to the request through its OWN lens - what it owns, who it serves, what makes it say yes or no, its format bias, its voice:
@@ -289,11 +326,37 @@ function persistRun(job, requestLabel) {
   } catch { /* history is a nice-to-have */ }
 }
 
+/** A dispatch result has team positions and a decision - anything else is noise. */
+function isDecision(obj) {
+  return !!(obj && Array.isArray(obj.positions) && obj.decision && typeof obj.decision === 'object');
+}
+
+// Appended to the prompt for the one automatic retry after an unreadable reply.
+const RETRY_NOTE = '\n\nIMPORTANT: A previous attempt returned a reply that was not valid JSON. Reply with ONLY the JSON object: straight double quotes, no trailing commas, and no text or code fences around it.';
+
+/** Keep the raw CLI output of a failed run so a learner can send it to a coach.
+ *  Returns the path to show in the error, or '' if saving failed. */
+function saveFailedOutput(job, { stdout, stderr, code, model }) {
+  try {
+    const file = path.join(RUNS_DIR, `failed-${job ? job.id : crypto.randomUUID()}.txt`);
+    fs.writeFileSync(file, [
+      `exit code: ${code}`,
+      `model: ${model || '(CLI default)'}`,
+      `saved: ${new Date().toISOString()}`,
+      '', '===== stdout =====', stdout,
+      '', '===== stderr =====', stderr
+    ].join('\n'));
+    return path.relative(STARTER_DIR, file);
+  } catch {
+    return '';
+  }
+}
+
 /**
  * Spawn the Copilot CLI with a prompt and resolve with the parsed JSON object
  * it returns. Streams stdout/stderr into job.log as it runs.
  */
-function execCopilotJson(prompt, { addDirs = [], job, timeoutMs = COPILOT_TIMEOUT_MS, model = COPILOT_MODEL } = {}) {
+function execCopilotJson(prompt, { addDirs = [], job, timeoutMs = COPILOT_TIMEOUT_MS, model = COPILOT_MODEL, retried = false } = {}) {
   return new Promise((resolve, reject) => {
     const args = ['-p', prompt, '--allow-all-tools'];
     for (const dir of addDirs) args.push('--add-dir', dir);
@@ -304,14 +367,16 @@ function execCopilotJson(prompt, { addDirs = [], job, timeoutMs = COPILOT_TIMEOU
 
     let child;
     try {
-      child = spawn(COPILOT_BIN, args, { cwd: RUN_CWD, windowsHide: true, shell: false });
+      child = spawn(COPILOT_CMD, args, { cwd: RUN_CWD, windowsHide: true, shell: false });
     } catch (err) {
       return reject(new Error(`Could not launch the GitHub Copilot CLI ("${COPILOT_BIN}"). Is it installed, signed in, and on PATH (or set COPILOT_BIN)? Details: ${err.message}`));
     }
 
     let stdout = '';
     let stderr = '';
+    let timedOut = false;
     const killTimer = setTimeout(() => {
+      timedOut = true;
       if (job) appendLog(job, `\n[dashboard] timed out after ${timeoutMs}ms, killing process\n`);
       child.kill();
     }, timeoutMs);
@@ -321,29 +386,44 @@ function execCopilotJson(prompt, { addDirs = [], job, timeoutMs = COPILOT_TIMEOU
     child.on('error', (err) => { clearTimeout(killTimer); reject(new Error(`Copilot CLI process error: ${err.message}`)); });
     child.on('close', (code) => {
       clearTimeout(killTimer);
-      const parsed = extractJson(stdout);
-      if (!parsed && model && MODEL_UNAVAILABLE.test(`${stderr}\n${stdout}`)) {
+      // The answer normally arrives on stdout, but some CLI versions or setups
+      // may write it elsewhere - so fall back to both streams together.
+      const parsed = extractJson(stdout, isDecision) || extractJson(`${stdout}\n${stderr}`, isDecision);
+      if (parsed) return resolve(parsed);
+      if (model && MODEL_UNAVAILABLE.test(`${stderr}\n${stdout}`)) {
         if (job) appendLog(job, `\n[dashboard] model "${model}" isn't available on this account - retrying with the CLI default\n`);
-        return resolve(execCopilotJson(prompt, { addDirs, job, timeoutMs, model: '' }));
+        return resolve(execCopilotJson(prompt, { addDirs, job, timeoutMs, model: '', retried }));
       }
-      if (code !== 0 && !stdout.trim()) {
+      if (code !== 0 && !stdout.trim() && !timedOut) {
         return reject(new Error(`Copilot CLI exited with code ${code}${stderr ? `: ${stderr.slice(-2000)}` : ''}`));
       }
-      if (!parsed) return reject(new Error('Could not find a JSON result in the Copilot CLI output. See the raw log below.'));
-      resolve(parsed);
+      // One automatic retry for an unreadable reply (not for a timeout - that would double the wait).
+      if (!retried && !timedOut) {
+        if (job) appendLog(job, '\n[dashboard] the reply wasn\'t readable JSON - asking once more\n\n');
+        return resolve(execCopilotJson(prompt + RETRY_NOTE, { addDirs, job, timeoutMs, model, retried: true }));
+      }
+      const saved = saveFailedOutput(job, { stdout, stderr, code, model });
+      const reason = timedOut
+        ? `The AI took longer than ${Math.round(timeoutMs / 60000)} minutes, so the board stopped it.`
+        : 'The AI replied, but not in a format the board could read.';
+      reject(new Error(`Your request passed the intake gate - this is a problem with the AI's reply, not your request. ${reason} Dispatch the request again to retry.${saved ? ` If it keeps happening, send ${saved} to a coach.` : ''}`));
     });
   });
 }
 
 /** Pull the model's JSON object out of CLI output that may include tool-call
  *  logs (with their own braces) before the final answer. Returns the LAST
- *  top-level balanced {...} that parses - robust to preamble and trailing text. */
-function extractJson(text) {
+ *  top-level balanced {...} that parses and passes `accept` - robust to
+ *  preamble and trailing text. */
+function extractJson(text, accept = () => true) {
   // Prefer fenced ```json blocks, last one first.
   let fences = [...text.matchAll(/```json\s*([\s\S]*?)```/gi)].map((m) => m[1]);
   if (!fences.length) fences = [...text.matchAll(/```\s*([\s\S]*?)```/g)].map((m) => m[1]);
   for (let i = fences.length - 1; i >= 0; i--) {
-    try { return JSON.parse(fences[i]); } catch { /* next */ }
+    try {
+      const parsed = JSON.parse(fences[i]);
+      if (accept(parsed)) return parsed;
+    } catch { /* next */ }
   }
   // Otherwise scan for every top-level balanced object (ignoring braces inside
   // strings) and return the last one that parses - that's the final answer.
@@ -370,7 +450,7 @@ function extractJson(text) {
   for (let i = objs.length - 1; i >= 0; i--) {
     try {
       const parsed = JSON.parse(objs[i]);
-      if (parsed && typeof parsed === 'object') return parsed;
+      if (parsed && typeof parsed === 'object' && accept(parsed)) return parsed;
     } catch { /* next */ }
   }
   return null;
@@ -433,16 +513,18 @@ app.get('/api/dispatch/:id', (req, res) => {
   });
 });
 
-// --- Act on the decision (TODO bonus) --------------------------------------
-// Turning a routing decision into a real action - open a work item, post to a
-// channel, route to the owner - is a build path. Wire it up; until then it
-// answers 501 so the dashboard can show a "build path" hint.
+// --- Act on the decision (Path B TODO) ---------------------------------------
+// Path B: save job.result.decision to a handoff file in dashboard/outbox/ and
+// answer { message: "Saved to <path>" } - the board shows that message.
+// Selecting the button is the human approval; the board never acts on its own.
+// Until it's built, this answers 501 (not implemented) so the board shows a hint.
+// Optional extension: send the handoff to ACT_TARGET (a tracker or channel).
 app.post('/api/dispatch/:id/act', (req, res) => {
   const job = jobs.get(req.params.id);
   if (!job || !job.result) return res.status(404).json({ error: 'No decision to act on yet.' });
   res.status(501).json({
-    error: 'Not wired yet (build path).',
-    hint: `Wire this to ${ACT_TARGET}: open a work item for the owner, post the decision to a channel, or route it onward. The decision is in job.result.decision.`
+    error: 'Not built yet (Path B).',
+    hint: 'Not built yet - this is Path B. Save the decision (job.result.decision) to a file in dashboard/outbox/, and return { message } with the file path.'
   });
 });
 

@@ -1,7 +1,13 @@
-# REQUEST · RQ-03
-## Leadership wants every MS employee to "get" agentic AI in 30 minutes
+---
+id: RQ-03
+type: request
+title: "AI agents explained to every employee in 30 minutes"
+legacy_file: RQ-03-all-employees-agentic-ai.md
+---
 
-**Requester:** Chief of Staff, on behalf of an SLT sponsor
+# AI agents explained to every employee in 30 minutes
+
+**Requester:** Chief of Staff, on behalf of a senior leadership (SLT) sponsor
 **Came in via:** exec escalation
 **Date:** this week
 

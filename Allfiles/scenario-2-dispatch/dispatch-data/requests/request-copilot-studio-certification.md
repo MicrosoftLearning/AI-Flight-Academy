@@ -1,5 +1,11 @@
-# REQUEST · RQ-05
-## We need a certification for Copilot Studio agent builders
+---
+id: RQ-05
+type: request
+title: "A certification for Copilot Studio agent builders"
+legacy_file: RQ-05-copilot-studio-certification.md
+---
+
+# A certification for Copilot Studio agent builders
 
 **Requester:** Ravi K., a Strategic Partnerships lead
 **Came in via:** intake form

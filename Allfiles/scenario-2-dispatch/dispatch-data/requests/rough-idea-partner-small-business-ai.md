@@ -1,5 +1,11 @@
-# IDEA · IDEA-02
-## EMEA partners want "AI stuff" for their SMB customers?
+---
+id: IDEA-02
+type: rough-idea
+title: "Rough idea: \"AI stuff\" for partners' small-business customers?"
+legacy_file: IDEA-02-emea-partners-smb.md
+---
+
+# Rough idea: "AI stuff" for partners' small-business customers?
 
 **From:** forwarded note from a regional lead
 **Date:** recent
@@ -8,7 +14,7 @@
 
 ## The whole thing
 
-> "Getting asks from EMEA partners - they want 'AI stuff' they can use with their SMB customers. That's all I've got. It's clearly a thing, lots of partners saying it. Can someone figure out what we do here?"
+> "Getting asks from EMEA (Europe, Middle East, and Africa) partners - they want 'AI stuff' they can use with their SMB (small and medium business) customers. That's all I've got. It's clearly a thing, lots of partners saying it. Can someone figure out what we do here?"
 
 ## What we know
 

@@ -4,7 +4,7 @@ title: Dispatch - Scout
 
 # Dispatch
 
-You run the room, then turn it into something you can watch.
+First, you run the room in a chat. Then, you turn it into a live board that you can watch.
 
 <div class="scene">
 
@@ -14,58 +14,54 @@ You run the room, then turn it into something you can watch.
 
 </div>
 
-## What you're solving
+## Objectives
 
-One triager isn't enough when the same skilling request means different work to different teams. A governance-before-GA ask is an evergreen learning path to one team, a live workshop to another, and a partner-first activation to a third - and one of those deliverables should be built once and reused by the others.
+Skilling requests arrive all day. Usually, one person (the *triager*) reads each request and sends it to one team. But the same request can mean different work for different teams. For example, a request for agent governance training before a product launch could become a self-paced learning path, a live workshop, and a partner rollout. The best plan is to build it once and let every team reuse it.
 
-A single triager picks one owner and misses all of that. Here you seat a room of teams, dispatch the same request to each, and put the whole room on a live board so the plan - and the reuse - is something you can see.
-
-## What you'll walk out with
-
-| What you make | What it does |
-| --- | --- |
-| **Your room** | Three or more teams and what each one wants, in `THE-ROOM.md`. |
-| **A dispatch** | Each team's position on the same request, grounded in its charter. |
-| **A live dashboard** | Each team lights up with its position, and the room lands one decision. |
-| **A one-step run** | A simple way to start the board - a command or a scheduled task. |
-
-The single triager stays unchanged - the one-owner "before" you compare against.
-
-## How this runs
-
-Four steps. The first two are quick; the board is the build.
+In this activity, you build a **room of teams** that looks at each request together. Then you put the room on a live board, so you can see the plan. You work on your own, in four steps:
 
 | | Step | You're done when |
 | --- | --- | --- |
 | **1** | **Import & load** | Scout has the Dispatch skill and the data pack loaded. |
-| **2** | **Seat a room that splits** | Three teams return *different* positions on the same request - proven in conversation, nothing built yet. |
-| **3** | **Put the room on a board** | You drop a request on a live dashboard and the teams light up with their positions. |
-| **4** | **Make it one-step to run** | You can start the board with one command or a schedule. |
+| **2** | **Seat three teams that disagree** | Three teams give *different* positions on the same request, in the chat. Nothing is built yet. |
+| **3** | **Put the room on a board** | You drop a request onto a live dashboard, and the teams light up with their positions. |
+| **4** | **Make it start in one step** | You (or a teammate) can start the board with one command or on a schedule. |
 
-**Step 2 you do as a table** - each person seats one team, then you combine them into one room. Steps 3–4 are the build.
+Steps 3 and 4 are the main build. The single triager never changes, so you can compare your room against it. Most steps include a prompt you can paste. **Change it as you like. It's a starting point, not the answer.**
 
-Every step gives you a line you can paste. **Change it - it's a starting point, not the answer.**
+::: details Glossary
+
+- **Triager:** the person who reads a request and decides which team gets it.
+- **Route:** to send a request to the team (or teams) that will do the work.
+- **Team card:** a short description of a team. It says what the team owns, who it serves, and what kind of work it wants. It's also called a *charter*.
+- **Room:** a group of teams that looks at the same request together.
+- **Seat:** one team's place in the room. To *seat* a team means to add it to the room.
+- **Dispatch:** to send one request to every team in the room at the same time.
+- **Position:** a team's answer to a request, based on its team card.
+- **Rough idea:** a request that's missing important details. It needs to be *sharpened* (given more detail) before anyone routes it.
+
+:::
 
 ## Before you start
 
-Download both and keep them side by side.
+Download both files and keep them in the same folder.
 
 <div class="lab-grid lab-grid-2">
 	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-dispatch.zip" download>
 		<span class="lab-card-emoji">🔵</span>
 		<span class="lab-card-title">Dispatch skill</span>
-		<span class="lab-card-desc">The room method and the unchanged single-triager baseline.</span>
+		<span class="lab-card-desc">How the room routes a request, plus the single triager's decisions. This is the "before" that you compare against, and it never changes.</span>
 		<span class="lab-card-cta">Download .zip →</span>
 	</a>
 	<a class="lab-card" href="/AI-Flight-Academy/downloads/dispatch-data-pack.zip" download>
 		<span class="lab-card-emoji">🗂️</span>
 		<span class="lab-card-title">Data pack</span>
-		<span class="lab-card-desc">Sample requests, the Global Skilling team cards, and the routing policy. Use it instead of real work data.</span>
+		<span class="lab-card-desc">Sample requests, the Global Skilling team cards, and the routing rules. Use these instead of real work data.</span>
 		<span class="lab-card-cta">Download .zip →</span>
 	</a>
 </div>
 
-Open Microsoft Scout and add the Dispatch skill. The dashboard step later also uses **GitHub Copilot CLI** and **Node** - Scout installs what the app needs, but the CLI has to be signed in and working.
+Open Microsoft Scout. You'll add the Dispatch skill in Step 1. The dashboard in Step 3 also uses **GitHub Copilot CLI** and **Node**. Scout installs what the app needs, but you must make sure that the Copilot CLI is signed in and working.
 
 ---
 
@@ -73,31 +69,31 @@ Open Microsoft Scout and add the Dispatch skill. The dashboard step later also u
 
 **Done when:** Scout has the Dispatch skill and the data pack loaded.
 
-1. Extract `the-dispatch.zip` and, in Scout, go to **Extensions → Import** and drag the extracted skill **folder** in.
+1. Unzip `the-dispatch.zip`. In Scout, go to **Extensions → Import**, and drag in the unzipped skill **folder**.
 
    ![Screenshot of the Import Skill dialog window in Microsoft Scout.](./media/scout-import-skill-folder.png)
-1. Start a new chat in Scout and upload **dispatch-data-pack.zip**.
+1. Start a new chat in Scout, and upload **dispatch-data-pack.zip**.
 
-## 2 · Seat a room that splits
+## 2 · Seat three teams that disagree
 
-**Done when:** three teams return *different* positions on the same request - proven in conversation, with nothing built yet.
+**Done when:** three teams give *different* positions on the same request. You do this in the chat, and you don't build anything yet.
 
-A **seat** is one team - what it owns, who it serves, and what makes it want a request or pass it on. The goal isn't to *list* teams - it's to seat ones that **disagree about the plan**: a team that would route everything the same way as another is a duplicate.
+Remember, a **seat** is one team in the room. Each seat says what the team owns, who it serves, and what makes the team want a request or turn it down. Your goal isn't only to *list* teams. Your goal is to choose teams that **disagree about the plan**. If a team would route every request the same way as another team, it's a copy.
 
-As a table, each person seats one team - start with **Content & Insights**, **Delivery & Program Operations**, and **Field & Partner**, the sharpest trio - then combine them into one `THE-ROOM.md`. Ask Scout to seat them, then dispatch **RQ-01**, the request chosen to prove the point:
+Start with these three teams, because they disagree the most: **Content & Insights**, **Delivery & Program Operations**, and **Field & Partner**. Ask Scout to seat them in `THE-ROOM.md`, and then dispatch **Agent governance training before launch**. This request shows the difference clearly:
 
-> *"Use Dispatch to seat Content & Insights, Delivery & Program Operations, and Field & Partner from the data pack, then dispatch RQ-01 (agent governance before GA)."*
+> *"Use Dispatch to seat Content & Insights, Delivery & Program Operations, and Field & Partner from the data pack, then dispatch the agent governance request."*
 
-**Dispatching** is the heart of it: every team takes a position on the same request at once - grounded in its charter - and the room lands one decision. RQ-01 is exactly the case where the room *agrees who owns it* (Content & Insights) but *splits on the plan*: build the path once and reuse it live and regionally, and repoint the audience to partners-first.
+**Dispatching** is the most important part. Every team gives a position on the same request at the same time, based on its team card. Then the room makes one decision. The agent governance request is a good example. The room *agrees on the owner* (Content & Insights), but it *disagrees about the plan*. The plan is to build the learning path once, reuse it in live sessions and in the regions, and change the audience so that partners come first.
 
 | Request | Single triager | The room |
 |---|---|---|
-| **Governance before GA (RQ-01)** | Send it to Content & Insights | **C&I builds the path once · DPO & Field & Partner reuse it · audience repointed to partners-first** |
+| **Agent governance training before launch** | Send it to Content & Insights | **Content & Insights builds the path once · Delivery & Program Operations and Field & Partner reuse it · partners are the first audience** |
 
-That split - same request, one owner but three reuses, each charter-backed - *is* the result of this step. The thinking is done here, with nothing installed; everything after just makes it visible and repeatable.
+That result is the goal of this step: one request, one owner, three kinds of reuse, and every position based on a team card. You did the hard thinking in the chat, without installing anything. The next steps make the result visible and easy to repeat.
 
 ::: tip Seat a real team with Work IQ
-Scout is grounded in your Microsoft 365 work through **Work IQ** - it only ever sees what you already can. Ask it to draft a team's charter from those real signals - *"Scout, draft a team card for [a team you work with] from Work IQ that mimics the cards in THE-ROOM.md"* - then correct it with people who know that team. Treat it as a first draft, not the answer.
+Scout uses **Work IQ** to see your Microsoft 365 work. It only sees what you can already see. Ask Scout to draft a team card from that work. For example: *"Scout, draft a team card for [a team you work with] from Work IQ that mimics the cards in THE-ROOM.md."* Then check the card with people who know that team, and fix anything that's wrong. Treat the result as a first draft, not the final answer.
 :::
 
 <div class="scene scene--flip">
@@ -110,54 +106,54 @@ Scout is grounded in your Microsoft 365 work through **Work IQ** - it only ever 
 
 ## 3 · Put the room on a board
 
-Now make the plan visible. Ask Scout to build a local web dashboard for the room, using **GitHub Copilot CLI as the backend** that runs the Dispatch skill.
+Now make the plan visible. Ask Scout to build a web dashboard that runs on your own computer. The dashboard uses **GitHub Copilot CLI as the backend** to run the Dispatch skill.
 
-Describe what you want:
+Tell Scout what you want:
 
-- a card for each team that shows its position - in, support, or out - as you dispatch a request
-- the deliverable and reuse each team proposes, on its card
+- a card for each team that shows its position (in, support, or out) when you dispatch a request
+- on each team's card, the deliverable that the team suggests and the teams that reuse it
 - a place to drop in a request or paste a rough idea
-- the final routing decision - owner, audience, and the build-once/reuse plan - at a glance
-- a creative theme for the room or a custom name
+- the final routing decision (owner, audience, and the build-once, reuse-everywhere plan), easy to read at a glance
+- a fun theme or a custom name for the room
 
-Scout scaffolds the app and wires it to the Copilot CLI backend. When you feed the board a request, the CLI runs the room and the cards update.
+Scout builds the app and connects it to the Copilot CLI. When you give the board a request, the CLI runs the room, and the cards update.
 
-::: details Stuck on the prompt? Start with this
-Paste this into Scout, then adjust from there:
+::: details Stuck on the prompt? Start with this one
+Paste this prompt into Scout, and then change it as you need:
 
 > Build me a local web dashboard for the Dispatch room. Use **GitHub Copilot CLI as the backend** to run the Dispatch skill: a small **Node** web server that shells out to `copilot`, with a plain HTML/CSS/JS front-end - no build step, minimal dependencies, so it starts with one command. Show a card for each team in `THE-ROOM.md` with its position (in / support / out), its proposed deliverable, and any reuse. Add a place to drop a request or paste a rough idea, and a panel for the final routing decision - owner, audience, and the plan of deliverables with who builds and who reuses. Start simple - I'll ask for more.
 
-The real trick is to **start small and layer on**: get the team cards showing positions on one request first, then ask for one addition at a time (the decision panel, a reuse map, a theme) instead of everything in a single prompt.
+The trick is to **start small and add one thing at a time**. First, get the team cards to show positions for one request. Then ask for one new feature at a time, like the decision panel, a reuse map, or a theme. Don't ask for everything in one prompt.
 :::
 
 ::: warning If the app won't start
-Setups vary - Node versions, dependencies, CLI sign-in. If the dashboard won't run on your machine, keep going in the Scout conversation; the room still works there. Get the board up if you can, but don't let it block the dispatch.
+Every computer is set up differently. Node versions, missing packages, and CLI sign-in can all cause problems. If the dashboard won't run on your computer, continue in the Scout chat. The room still works there. Try to get the board running, but don't let it stop you from dispatching requests.
 :::
 
-**Done when:** you feed the dashboard a request and watch the teams light up with their positions.
+**Done when:** you give the dashboard a request, and you see the teams light up with their positions.
 
-## 4 · Make it one-step to run
+## 4 · Make it start in one step
 
-Turn the dashboard into something you start in one step, so a teammate can open the board without wiring it up again. Ask Scout for either:
+Make the dashboard easy to start, so a teammate can open the board without setting everything up again. Ask Scout for one of these options:
 
-- a single **start command** - install once, then one command boots the server and opens the browser, or
-- a **scheduled task** that launches it so the board is always there.
+- a single **start command**: you install once, and then one command starts the server and opens your browser
+- a **scheduled task** that starts the board for you, so it's always running
 
-::: tip Unsure how? Ask Scout!
-Ask Scout what the right option is for your situation. One solution doesn't fit everyone - much like the different teams in this exercise. Ironic, don't you think?
+::: tip Not sure which one? Ask Scout!
+Ask Scout which option is right for your situation. No single option is right for everyone, just like the teams in this exercise. Ironic, don't you think?
 :::
 
 **Done when:** you (or a teammate) can start the board in one step and drop in a new request.
 
 ## Go further - the bonus
 
-Once the board runs, the bonus is adding features to it. Keep each one small and let Scout build it:
+When the board is running, you can add more features. Keep each feature small, and let Scout build it:
 
-- an **intake gate** badge - flag a rough idea as "sharpen first" before the room routes it
-- a **reuse map** - draw the build-once deliverable fanning out to the teams that reuse it
-- a history, so you can watch a request get sharpened and re-dispatched
-- a button that opens a work item for the decision's owner
-- animations for when the room is deliberating
+- an **intake gate** badge that marks a rough idea as "sharpen first" before the room routes it
+- a **reuse map** that shows how one deliverable is built once and reused by other teams
+- a history, so you can see how a request changes as it's sharpened and dispatched again
+- a button that creates a work item for the decision's owner
+- animations that play while the room is thinking
 
 ---
 
@@ -173,13 +169,13 @@ Once the board runs, the bonus is adding features to it. Keep each one small and
 
 | What you're seeing | What to do |
 | --- | --- |
-| Scout ignores the skill | Start a new session - skills load at the start. |
-| Every team gives the same position | Give them more distinct charters. |
-| The dashboard won't start | Check that GitHub Copilot CLI is signed in and Node is available; meanwhile, dispatch in the Scout conversation. |
-| The board shows nothing back | Confirm the skill is imported and the CLI can run it on its own first. |
-| The room can't see the request | Give Scout the data pack, and point the board at the same files. |
+| Scout ignores the skill | Start a new session. Skills load only when a session starts. |
+| Every team gives the same position | Make the team cards more different from each other. |
+| The dashboard won't start | Check that GitHub Copilot CLI is signed in and that Node is installed. While you fix it, keep dispatching in the Scout chat. |
+| The board doesn't show anything | Check that the skill is imported. Then check that the CLI can run the skill on its own. |
+| The room can't see the request | Give Scout the data pack, and point the board to the same files. |
 
-::: details 🎬 Nobody nails it first try
+::: details 🎬 Nobody gets it right the first time
 <div class="scene scene--flip">
 
 ![He returns to find dozens of identical blue dispatch booths receding into the distance.](/img/scenario-2-dispatch-scout-blooper.png)
@@ -188,7 +184,7 @@ Once the board runs, the bonus is adding features to it. Keep each one small and
 
 </div>
 
-Let Scout off the leash and it might build you forty booths. When it overshoots, rein it in and re-run - steering the agent *is* the build.
+If you give Scout too much freedom, it might build you forty booths. When it does too much, steer it back and run it again. Steering the agent *is* the build.
 :::
 
 ---

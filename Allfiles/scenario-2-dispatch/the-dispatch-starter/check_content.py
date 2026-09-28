@@ -4,7 +4,7 @@ check_content.py - TODO  ·  Path: the intake gate (deterministic check)
 
 Before the room routes a request, the dashboard shells out to THIS script to
 answer one countable question: **is the request even routable?** A request
-missing its audience, topic, or desired outcome (a rough IDEA-…) shouldn't be
+missing its audience, topic, or desired outcome (a rough-idea-… file) shouldn't be
 confidently routed - it should be sharpened first. That's a check, not a vibe,
 and it's the honest gate that keeps the room from guessing.
 
