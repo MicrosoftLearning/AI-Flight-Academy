@@ -1,7 +1,7 @@
 """Load the program data.
 
 Reads the CSVs in `program-data/` and gives you candidates with their evidence attached.
-Nothing here makes a judgment - that's `evaluate.py`.
+Nothing here makes a judgment; it only loads and joins the files.
 
     from program.data import load
 

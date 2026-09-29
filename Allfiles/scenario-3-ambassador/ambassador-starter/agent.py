@@ -1,7 +1,7 @@
 """Ask the model something, from Python.
 
 Shells out to the GitHub Copilot CLI and returns the reply. Use it where a
-judgment or a piece of writing is wanted; use `evaluate.py` where a number is.
+judgment or a piece of writing is wanted.
 
     from agent import ask, ask_json
 
@@ -79,8 +79,13 @@ def _final_message(stdout: str) -> tuple[str, int | None]:
     return answer, exit_code
 
 
-def ask(prompt: str, *, timeout: int = 180) -> str:
-    """Send `prompt` to the model and return its reply as text."""
+def ask(prompt: str, *, timeout: int = 180, model: str | None = None) -> str:
+    """Send `prompt` to the model and return its reply as text.
+
+    `model` overrides `AMBASSADOR_MODEL` for this one call. That is how a role
+    file asks for a different model than the one the picker runs on - a second
+    opinion is worth more when it does not share the first one's blind spots.
+    """
     # Resolve the executable rather than relying on the OS to find it. npm
     # installs the CLI as copilot.cmd on Windows, which CreateProcess will not
     # launch by bare name - it only appends .exe.
@@ -99,7 +104,8 @@ def ask(prompt: str, *, timeout: int = 180) -> str:
         )
 
     # Which models an account can use varies, so an unavailable pin retries on the default.
-    models = [MODEL, None] if MODEL and MODEL.lower() != "auto" else [None]
+    wanted = model or MODEL
+    models = [wanted, None] if wanted and wanted.lower() != "auto" else [None]
     for model in models:
         args = [executable, "--output-format", "json", "--allow-all-tools"]
         if model:
