@@ -19,11 +19,13 @@ recommend follows from it. `references/PLAYBOOK.md` describes how the program ru
 1. Read `references/DEFINITION.md`, then `references/PLAYBOOK.md`.
 2. Read `CandidateProfiles.csv` from the data the user attached or pointed you at. If you cannot find
    it, say so and ask for it rather than guessing.
-3. Pick the eight strongest matches for the definition. For each one give:
+3. Pick the eight strongest matches for the definition and put them forward for a person to
+   review. For each one give:
    - the **name**
    - **one sentence** on why they match the definition
    - the **next step** you would propose: invite, offer a facilitation slot, nominate, sponsor
-4. Lead with the strongest. Say how many candidates you assessed and which definition you applied.
+4. Say how many candidates you assessed, which definition you applied, and which evidence you did
+   and did not read. A person makes the final call, so give them something they can check.
 
 ## What this currently does
 

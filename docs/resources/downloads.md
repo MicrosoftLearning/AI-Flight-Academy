@@ -168,9 +168,9 @@ A **working cohort picker** that ships nine data files and reads one of them. Co
   </a>
 </div>
 
-**Cowork:** **Customize** → **Skills** → **Add ▾** → **Upload skill** → the whole `ambassador-skill.zip`. Start a **new session**, attach `CandidateProfiles.csv`, and say **`run the ambassador program`**.
+**Cowork:** **Customize** → **Skills** → **Add ▾** → **Upload skill** → the whole `ambassador-skill.zip`. Start a **new session**, attach all nine CSVs from `program-data`, and say **`using the ambassador skill, who should be in the next cohort?`**
 
-**Scout:** unzip, then **Extensions** → **Import** → drag in the `ambassador` **folder**. Start a new session and point it at the `program-data` folder.
+**Scout:** unzip, then **Extensions** → **Import** → drag in the `ambassador` **folder**. Start a **new chat** and point it at the `program-data` folder.
 
 ### 🟣 Code
 

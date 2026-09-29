@@ -6,52 +6,57 @@ title: The Ambassador - Cowork
 
 # The Ambassador
 
-<div class="brief">
-<span class="brief-badge">The problem</span>
-
-The AI Skilling Ambassador program runs on people who volunteer for it - 72 of them across nine regions, doing office hours, mentoring, and writing the quickstarts everyone leans on, all on top of their real jobs. Nobody's paid, so the program keeps them with what it can offer back: an invitation in, a facilitation slot, a nomination. Last round five withdrew and seven were passed over, and the person who ran it left halfway through.
-
-The **Ambassador skill** they left behind picks the next cohort. It reads `DEFINITION.md`, applies it to the candidates, and comes back with eight names, a reason for each, and what to offer them. It's fast and confident - and it can't show its work. Nine data files ship with it; the skill reads one, checks no claim against a record, and gives no one a way to overrule it.
-</div>
-
 ## Objectives
 
-Ship something that makes the pick trustworthy: it surfaces someone the shipped skill misses, backs every claim with evidence, and keeps a person in the loop. How you meet that is yours - a table that ships one of these well beats a table that half-ships three.
+Contoso's AI Skilling Ambassador program is a group of volunteers who help colleagues use the company's AI tools - running office hours, mentoring, answering questions, and writing the guides everyone leans on, all on top of their day jobs. Each round the program brings in eight new ambassadors, chosen from people across nine regions already doing some of this informally.
 
-By the end, you should have at least one of:
+The **Ambassador skill** was built to take some of that work off whoever runs the round, and it isn't finished. It reads a short written description of what the program looks for, applies it to every candidate, and returns eight names with a reason for each. It's fast and confident, and it can't show you the evidence behind any of it - so nobody can check whether those reasons hold up.
 
-- **Someone the skill misses** - surfaced from the evidence it currently ignores.
-- **Every claim backed by a record** - no assertion without a row behind it.
-- **A person who can overrule it** - and a next run that remembers the correction.
+In this activity you run that skill, change what it looks for, and then start extending it. Three steps:
 
-::: warning Nothing gets sent
-Invitations and nominations are drafted and held for a person to read. Keep that in whatever you build.
+| | Step | You're done when |
+| --- | --- | --- |
+| **1** | **Upload and run** | Cowork has the Ambassador skill loaded and returns eight names from the program data. |
+| **2** | **Change what it looks for** | You've swapped the written description of what the program wants, re-run, and seen different names come back. |
+| **3** | **Extend it** | The skill does something it couldn't before. |
+
+Step 3 is the main build, and it isn't one change. Close a gap, re-run, see what moved, then close the next one. Most cards include a prompt you can paste. **Change it as you like. It's a starting point, not the answer.**
+
+**The skill proposes. A person decides.** The eight names are a recommendation someone has to act on, so every change you make should make that person's job easier: more evidence on screen, clearer reasoning, a faster way to overrule it.
+
+::: details Glossary
+
+- **Skill:** a folder of plain-text instructions Cowork loads and follows. You can read it and edit it.
+- **Cohort:** the group of eight the program brings in each round. Picking the next one is the job.
+- **Candidate:** one of the volunteers the program could bring in. Not an applicant - 31 of the 72 never put themselves forward.
+- **Definition:** the written description of what the program is looking for. The skill applies it to every candidate. Editing it is how you change the result.
+- **Shortlist:** the eight names the skill returns. A proposal for a person to act on, not a decision.
+- **Evidence:** the records behind a claim - what someone ran, the feedback they got, what they contributed.
+
 :::
 
-## Setup
+## Before you start
 
-::: tip Nothing here is coding
-Everything is a sentence typed into a chat box. Cowork reads the files, edits them, and saves them for you. The only thing you handle is the download.
-:::
-
-**The data is fictional.** Invented people, invented scores, invented feedback. Nothing here describes a real person and no real program is being modeled.
-
-### 1 · Download the skill and the data
+Download both files.
 
 <div class="lab-grid lab-grid-2">
   <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-skill.zip" download>
     <span class="lab-card-emoji">🎖️</span>
-    <span class="lab-card-title">Ambassador</span>
-    <span class="lab-card-desc">The skill, the definition it runs on, and three alternatives.</span>
+    <span class="lab-card-title">Ambassador skill</span>
+    <span class="lab-card-desc">How the program picks its next eight, plus three alternative definitions of what it's looking for. This is the "before" you compare against.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
   <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-program-data.zip" download>
     <span class="lab-card-emoji">🗂️</span>
     <span class="lab-card-title">Program data</span>
-    <span class="lab-card-desc">72 candidates and ~2,000 evidence records across nine files.</span>
+    <span class="lab-card-desc">72 candidates and ~2,000 evidence records across nine files. Use these instead of real people data.</span>
     <span class="lab-card-cta">Download .zip →</span>
   </a>
 </div>
+
+Open Cowork. You'll add the Ambassador skill in Step 1. Nothing here needs code - every change is a sentence typed into the chat. The CSVs you attach travel with your prompt to the model, which is why the data is fictional.
+
+**The data is fictional.** Invented people, invented scores, invented feedback. Nothing here describes a real person and no real program is being modeled.
 
 What's in the skill:
 
@@ -68,105 +73,138 @@ ambassador/
 You're building with Cowork, so it can also fix what you're building. Paste the error, or describe what came back wrong. Coaches are in the room if that doesn't land.
 :::
 
-### 2 · Run it, and swap the definition
+---
 
-**Done when:** two definitions have given you two different shortlists.
+## 1 · Upload and run
 
-1. In Cowork, open **Customize** → **Skills** → the arrow next to **Add** → **Upload skill**, and drag in the whole `ambassador-skill.zip`. Upload the zip, not the `SKILL.md` inside it: `references/` holds the definition and the playbook.
-2. Start a **new** Cowork session. Skills only load at the start.
-3. Unzip the program data and drag **`CandidateProfiles.csv`** into the session.
+**Done when:** Cowork returns eight names from the program data.
 
-Then ask it the question the program exists to answer - name the skill so Cowork calls it:
+1. In Cowork, open **Customize** → **Skills** → the arrow next to **Add** → **Upload skill**, and drag in `ambassador-skill.zip` (or the unzipped folder - Cowork takes either).
 
-```text
-Using the ambassador skill, who should be in the next cohort?
-```
+1. Start a **new** Cowork session. Skills load only when a session starts.
 
-Eight names, a reason each, and what to offer them. Name the ambassador skill in each request - that's how Cowork knows to call it. Now change what it's looking for:
+1. Unzip `ambassador-program-data.zip` and drag in **all nine CSVs** to the session - the `.csv` files only, not the two markdown files beside them.
+
+1. Ask Cowork to run it. Start every request with *"Using the ambassador skill"* - that's how Cowork knows to call it.
+
+   ```text
+   Using the ambassador skill, who should be in the next cohort?
+   ```
+
+   You should see 8 names appear.
+
+   **Those eight are a first guess, not an answer.** The skill judged everyone on seven summary scores and nothing else, and those scores are invented - some of them deliberately misleading. Finding where the list is wrong is the rest of the exercise.
+
+::: warning Upload the skill, not just SKILL.md
+Cowork takes either the zip or the unzipped folder. Either way, give it the whole thing - `references/` holds the definition and the playbook, and `SKILL.md` on its own won't work.
+:::
+
+## 2 · Change what it looks for
+
+**Done when:** a different definition has given you a different shortlist.
+
+The skill judges every candidate against `DEFINITION.md` - a few sentences of plain text. Swap it and the answer changes. Three worked alternatives ship with the skill.
 
 ```text
 Using the ambassador skill, use definitions/depth.md as the definition instead. Re-run and tell me which names changed.
 ```
 
-Then try `definitions/rising.md`. Same 72 people, and the shortlists barely overlap: `depth.md` and `rising.md` share two names out of eight, and each surfaces four people no other definition finds.
+Then try `definitions/rising.md`. Same candidates, different results - and you changed it by swapping a paragraph of text, not by touching code.
 
-The definition is plain prose. Tell Cowork what your program is looking for and have it rewrite the file:
-
-```text
-Show me the definition you're using in the ambassador skill.
-```
-
-```text
-Rewrite the ambassador skill definition. We care about people whose work gets picked up by teams they've never worked with, and we'd rather reach someone new than someone who's already been recognized twice. Then re-run and tell me which names changed.
-```
-
-You never open a file. Cowork edits `references/DEFINITION.md` and re-runs against it.
-
-::: tip Cowork asks before it changes anything
-When a prompt makes Cowork edit a file - the definition, a reference - it shows you the change and waits for you to approve or reject it. That's expected; approve to let it through.
+::: tip Cowork may ask before it changes a file
+When a prompt makes Cowork edit a file - the definition, a reference - it often shows you the change and waits for you to approve it. Approve it, or the change won't happen. If you aren't asked, that's fine too; check the result and keep going.
 :::
 
-## Build
+## 3 · Extend it
 
-**Done when:** one condition is met, on real output, with a name on screen.
+**Done when:** the skill does something it couldn't before.
 
-::: tip 🎈 This is the fun part - keep it low-stress
-Pick whatever direction sounds good and build it with your table. It doesn't have to be perfect, and it doesn't have to solve everything - the whole point is to explore your tool, trade ideas, and vibe-code something together. Use whatever you came here to learn, see how far you get, and have fun with it. You're here to learn by doing.
-:::
+`program-data` has nine files. The skill only reads one of them, `CandidateProfiles.csv`, a summary of seven scores per person. The other eight are sitting there unused: what people actually ran, what colleagues said, what they left behind, who applied. Tell the skill to read those too and the shortlist changes.
 
-The program already ships everything you need to judge these people: nine files, 72 candidates, ~2,000 evidence records - what they ran, the feedback they got, what they've shipped. **You don't build the data; it's here.** What the skill *doesn't* do is use most of it - it reads one file and ignores eight. So the builds below come in two shapes: **leverage** the skill as it is to make something new from its picks - a dashboard, a scheduled digest - or **build onto** the skill so it reads more, weighs it differently, or checks its own claims every run. Work one change at a time; throw everything at it at once and you won't know what moved the shortlist.
+That's one gap. There are others.
 
 ### Pick a direction
 
-Pick one or two and spend the session building. Take one as-is, combine two, or bring your own. Click a bubble for where to start and a prompt to open with.
+The cards below are **starters, not finished builds**. Use them for inspiration, or ignore them and build what your table actually wants.
+
+<div class="skill-steps">
+  <div class="skill-step">
+    <div class="skill-step-num">1</div>
+    <div class="skill-step-body">
+      <span class="skill-step-title">Talk it through</span>
+      <p>Scan the cards for ideas and decide as a table where to start. Add as much as you want from there.</p>
+    </div>
+  </div>
+  <div class="skill-step">
+    <div class="skill-step-num">2</div>
+    <div class="skill-step-body">
+      <span class="skill-step-title">Sketch it</span>
+      <p>Two minutes on what it should do and what it needs to read.</p>
+    </div>
+  </div>
+  <div class="skill-step">
+    <div class="skill-step-num">3</div>
+    <div class="skill-step-body">
+      <span class="skill-step-title">Build it by talking</span>
+      <p>You bring the idea, Cowork does the building. Describe what you want, look at what comes back, then tell it what to change. Ask it for options when you're stuck — <em>"what else could this dashboard show?"</em></p>
+    </div>
+  </div>
+  <div class="skill-step">
+    <div class="skill-step-num">4</div>
+    <div class="skill-step-body">
+      <span class="skill-step-title">Re-run</span>
+      <p>See what moved. Change one thing at a time - if you change three at once, you won't know which one did it.</p>
+    </div>
+  </div>
+</div>
 
 <script setup>
 const ideas = [
   {
     emoji: "🖥️", color: "blue", title: "A live cohort dashboard",
-    what: "An interactive page of the current pick - each name, the records behind it, filters for region and level.",
-    start: "Leverage the skill's output: have Cowork render the shortlist as a page you can click through.",
-    prompt: "Using the ambassador skill, build an interactive dashboard of the current cohort - each pick, the evidence behind it, and filters for region and level.",
+    what: "An interactive page of the current shortlist - each name, the records behind it, filters for region and level.",
+    start: "Have Cowork render the shortlist as a page you can click through.",
+    prompt: "Using the ambassador skill, build an interactive dashboard of the current cohort - each name, the evidence behind it, and filters for region and level.",
   },
   {
-    emoji: "📅", color: "orange", title: "A daily digest",
-    what: "The pick, re-run on its own each morning, with an email of what changed.",
-    start: "Ask Cowork to schedule the run and mail you only the movement since last time.",
-    prompt: "Using the ambassador skill, re-run the pick every morning and email me a summary of who newly matches and who fell off since yesterday.",
+    emoji: "🧠", color: "orange", title: "Give it a memory",
+    what: "A file it writes as well as reads, so every run knows what the last one decided - including a human override.",
+    start: "Have Cowork write each run and any human call to a file, and read it back on the next run.",
+    prompt: "Add a memory to the ambassador skill: write each run and any human override to a file, and read it on the next run so decisions carry forward.",
   },
   {
     emoji: "🔍", color: "teal", title: "Read the evidence it ignores", tag: "easiest",
     what: "The skill judges on the summary scores alone. Teach it to open the real records underneath.",
     start: "Point it at the peer feedback and contributions the summary hides, and weigh repeated patterns over one-off praise.",
-    prompt: "Add to the ambassador skill: read PeerFeedback.csv and ProgramContributions.csv, not just the summary scores, and weigh a repeated pattern over one-off praise. Then show me who that surfaces who wasn't in the shipped eight.",
+    prompt: "Add to the ambassador skill: read PeerFeedback.csv and ProgramContributions.csv, not just the summary scores, and weigh a repeated pattern over one-off praise. Then show me who that adds who wasn't in the original eight.",
   },
   {
     emoji: "⚖️", color: "purple", title: "A fairness check on every run",
-    what: "A standing check the skill runs with every pick - not a one-off audit you have to remember.",
-    start: "Build the check into the skill so it flags skew and unbacked claims automatically.",
-    prompt: "Add a fairness check to the ambassador skill - every pick flags skew by region, level, and tenure, and any claim with no record behind it.",
+    what: "A standing check the skill runs on every shortlist - not a one-off audit you have to remember.",
+    start: "Build the check into the skill so it flags clustering and unbacked claims automatically.",
+    prompt: "Add a fairness check to the ambassador skill - every shortlist flags when the list clusters by region, level, or tenure, and any claim with no record behind it.",
   },
   {
-    emoji: "📨", color: "green", title: "The invitation pipeline",
-    what: "Draft each invite in the program's voice, hold for approval, track who's said yes - nothing sends on its own.",
-    start: "Have the skill draft and hold, and keep a record of the state.",
-    prompt: "Add an invitation step to the ambassador skill: draft each pick's invite in the program's voice, hold them for approval, and track who's sent, accepted, or declined. Nothing sends on its own.",
+    emoji: "📨", color: "green", title: "Draft the invitations",
+    what: "Write each invite in the program's voice, with the evidence that earned it sitting alongside so a person can check the reasoning before they act on it.",
+    start: "Have the skill draft each invite and attach the records behind each name.",
+    prompt: "Add an invitation step to the ambassador skill: draft each candidate's invite in the program's voice, and show the records behind that pick alongside the draft so I can check the reasoning before I use it.",
   },
   {
-    emoji: "🌐", color: "pink", title: "Point it at real data",
-    what: "Swap the sample files for a live SharePoint or Teams export and run the whole pick against it.",
-    start: "The skill reads what you attach - give it your export instead of the sample CSVs.",
-    prompt: "Using the ambassador skill, run the whole pick against my SharePoint export instead of the sample data, and show me what changed.",
+    emoji: "🧭", color: "pink", title: "Your program, your rules",
+    what: "You probably run something shaped like this - a nomination, a shortlist, a review. Work out what a skill would need to help, using what you just learned here.",
+    start: "Describe your own program to Cowork and have it draft the definition and the evidence list you'd need. Stay on paper - no real names, no exports.",
+    prompt: "I run [your program]. Using what the ambassador skill does, help me write the definition it would need, list the evidence I'd have to collect, and name where a person must stay in the loop. Keep it on paper - no real names and no exports.",
   },
   {
     emoji: "🤝", color: "teal", title: "Two definitions, head to head",
-    what: "Run two definitions over the same 72 and show exactly where they disagree - your table's brief against another's.",
-    start: "Add a compare step so the skill runs both and diffs the shortlists.",
-    prompt: "Add a compare mode to the ambassador skill: run our definition and another table's over the same 72 people, and show me where the two shortlists disagree.",
+    what: "Run two definitions over the same candidates and show where they disagree - your table's brief against another's.",
+    start: "Add a compare step so the skill runs both and shows what changed between the two shortlists.",
+    prompt: "Add a compare mode to the ambassador skill: run our definition and another table's over the same candidates, and show me where the two shortlists disagree.",
   },
   {
     emoji: "✨", color: "gray", title: "Yours",
-    what: "The most ambitious thing your table can name - leverage the skill, or build onto it.",
+    what: "The most ambitious thing your table can name - build something new from the shortlist, or change how the skill decides.",
     start: "Describe the end state and get the smallest working version on screen first.",
     prompt: "I want to add [big idea] to the ambassador skill. Work out what it takes and get the smallest working version on screen first.",
   },
@@ -175,28 +213,20 @@ const ideas = [
 
 <DirectionBubbles :items="ideas" start-label="Where to start" />
 
-**Pick by what your table would actually use**, not by what sounds most impressive - then spend the time making it real.
+::: tip 🎈 Start small
+Nothing has to be perfect or finished. Get the smallest version working, then build on it. Time and token budget are the real limits - so aim at something you can show, not something you can finish.
+:::
 
-### Build in layers
+## Stuck?
 
-Get one real name on screen before you add anything:
-
-1. **The smallest version** - one file attached, one change to the definition, re-run.
-2. **The evidence** - every line carries the record behind it, and says which files it read.
-3. **One addition** - one file, one rule, one check at a time.
-4. **A bound** - cap what it considers, and say what it left out.
-
-The more specific your ask, the less you'll undo:
-
-| Vague | Specific |
+| What you're seeing | What to do |
 | --- | --- |
-| *"Use the peer data"* | *"Weigh peer comments with evidence depth of 'repeated pattern' above single events, and show me who enters the shortlist as a result."* |
-| *"Make it fairer"* | *"Show me whether the shortlist skews by region, and name anyone you can't trace to a record."* |
-| *"Make it better"* | *"For each name, cite the file and row that supports the claim."* |
-
-## After today
-
-This is a starting point, not the finish line. In one session, alongside a table doing the same thing, you took a fast, opaque pick and made a piece of it trustworthy - and practiced the real skill: describing what you want, watching Cowork build it, and correcting from there.
+| Cowork ignores the skill | Start a **new** Cowork session. Skills load only when a session starts. Begin your request with *"using the ambassador skill"*. |
+| Upload didn't work | Give it the zip or the whole unzipped folder - not `SKILL.md` on its own. |
+| Cowork can't find the data | Attach all nine CSVs to the session. Cowork only sees what you attach. |
+| The same eight names every time | Check Cowork is reading the definition you edited. Ask it to show you the definition it just used. |
+| A claim with no record behind it | Ask which file and row it came from. If it can't answer, it guessed - tell it to say so instead. |
+| It changed more than you asked | Ask what it changed and why. Reject the change and try again with a narrower ask. |
 
 ---
 

@@ -10,6 +10,8 @@ agent.py              ask() and ask_json(), over the GitHub Copilot CLI
 program/
   data.py             loads the nine data files
 program-data/         72 candidates, ~2,000 evidence records
+AGENTS.md             what Copilot reads to learn this repo before it helps you
+.github/agents/       role files. challenger.agent.md is wired up by --challenge
 PLAYBOOK.md           how the program describes itself
 ```
 
@@ -17,6 +19,7 @@ PLAYBOOK.md           how the program describes itself
 
 ```bash
 python cohort.py
+python cohort.py --challenge
 python cohort.py --who "Alex Kim"
 python cohort.py --definition definitions/depth.md
 ```
@@ -56,8 +59,7 @@ python cohort.py --definition definitions/depth.md    # helps individuals
 python cohort.py --definition definitions/rising.md   # trajectory over standing
 ```
 
-Three definitions, same 72 people, and the shortlists barely overlap. `depth.md`
-and `rising.md` share two names out of eight, and each finds four people no
-other definition surfaces.
+Three definitions, same 72 people, and the shortlists barely overlap. The lists should
+differ; if they come back the same, say so and run again.
 
 Edit `definition.md` to say what your program is looking for, then re-run.
