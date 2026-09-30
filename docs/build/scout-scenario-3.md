@@ -20,7 +20,7 @@ In this activity you run that skill, change what it looks for, and then start ex
 | **2** | **Change what it looks for** | A different definition has given you a different shortlist. |
 | **3** | **Extend it** | The skill does something it couldn't before. |
 
-Steps 1 and 2 you do on your own, and they're quick. **Step 3 is the main build, and it's where your table works together** - pick a direction, split the work, compare what each of you got. It isn't one change either: extend the skill, re-run, see what moved, then extend it again. Most cards include a prompt you can paste. **Change it as you like. It's a starting point, not the answer.**
+Step 3 is the main build, and it isn't one change. Extend the skill, re-run, see what moved, then extend it again. Most cards include a prompt you can paste. **Change it as you like. It's a starting point, not the answer.**
 
 **The skill proposes. A person decides.** The eight names are a recommendation someone has to act on, so every change you make should make that person's job easier: more evidence on screen, clearer reasoning, a faster way to overrule it.
 
@@ -79,7 +79,12 @@ You're building with Scout, so it can also fix what you're building. Paste the e
 
 **Done when:** Scout returns eight names from the program data.
 
-1. Download `ambassador-skill.zip` and unzip it. In Scout, go to **Extensions → Import**, and drag in the `ambassador` folder - the one with `SKILL.md` inside. Use the **skill folder** drop zone, not the `.md` one. The trust warning is normal; this is the lab download.
+1. Download `ambassador-skill.zip` and unzip it. In Scout, go to **Extensions → Import**, and drag in the `ambassador` folder - the one with `SKILL.md` inside. The trust warning is normal; this is the lab download.
+
+   ::: warning Import the folder, not the file
+   `SKILL.md` on its own won't work. `references/` sits beside it and holds the definition and the playbook. Use the **skill folder** drop zone, not the `.md` one.
+   :::
+
    ![Screenshot of the Import Skill dialog window in Microsoft Scout.](./media/scout-import-skill-folder.png)
 
 1. Unzip `ambassador-program-data.zip` somewhere Scout can reach it. You want the `program-data` folder - copy its full path, you'll paste it in a moment.
@@ -100,7 +105,9 @@ You're building with Scout, so it can also fix what you're building. Paste the e
 
 **Done when:** a different definition has given you a different shortlist.
 
-The skill judges every candidate against `DEFINITION.md` - a few sentences of plain text. Swap it and the answer changes. Three worked alternatives ship with the skill.
+The skill judges every candidate against `DEFINITION.md` - a few sentences of plain text saying what the program wants. Swap that file and the answer changes.
+
+Three alternative definitions ship with it: `reach.md` (work that gets reused), `depth.md` (one-to-one support), and `rising.md` (trajectory over standing).
 
 ```text
 Using the ambassador skill, use definitions/depth.md as the definition instead. Re-run and tell me which names changed.

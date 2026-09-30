@@ -6,36 +6,45 @@ title: The Digital Twin - Code
 
 # The Digital Twin
 
-<div class="brief">
-<span class="brief-badge">The problem</span>
+## Objectives
 
 You already know how you work. Which trade-off you make when two things conflict, what you check before you commit, how the wording changes between a partner team and your own.
 
 None of that is written down anywhere an agent can reach. So it only gets applied while you're sitting there applying it.
 
-Here you turn it into a skill an agent can load - and call it from code. Once an agent can reach your twin, it can ask at commit time, on a schedule, or mid-task - and get back what you would have said.
-</div>
+Here you turn it into a skill an agent can load. Once an agent can reach your twin, it can ask at commit time, on a schedule, or mid-task - and get back what you would have said.
 
-## Objectives
+In this activity you set it up, confirm it answers, and extend it. Three steps:
 
-Get a twin answering from a Python call, then make it better - extend the skill so it works the way you want.
+| | Step | You're done when |
+| --- | --- | --- |
+| **1** | **Set it up** | `copilot skill list` shows `my-twin` under Project skills. |
+| **2** | **Ask your twin** | `python twin.py "..."` returns a position and the `persona.md` rule behind it. |
+| **3** | **Extend it** | The twin does something it couldn't before. |
 
-By the end, you should have:
+Steps 1 and 2 are quick - about 15 minutes together. Step 3 is the main build, and it isn't one change: extend it, re-run, see what moved, then extend it again. Most cards include a prompt you can paste. **Change it as you like. It's a starting point, not the answer.**
 
-- **A twin answering from code** - `python twin.py "..."` returns a position and the `persona.md` rule behind it.
-- **A change that extends the skill** - structured memory, evaluations, feedback, domain standards, or any other way you made the twin sharper.
+**Your twin drafts. You send.** Sending, committing and posting stay yours - whatever you build should hand the decision back.
 
-## Setup
+::: details Glossary
 
-Build with whichever GitHub Copilot surface you like - VS Code, the Copilot CLI, or the GitHub Copilot app - but the starter calls the **Copilot CLI** behind the scenes, so keep it signed in. The starter also needs **Python 3.10+**; nothing else to install unless you build the MCP server.
+- **Digital twin:** what an agent needs to know to answer as you - how you decide, how you write, the bar you hold work to. It lives in a few text files you own and can edit.
+- **Skill:** a folder of plain-text instructions a Copilot surface loads and follows. Your twin is one, and it lives in `.github/skills/`.
+- **`persona.md`:** who you serve, what wins when priorities collide, what you check before committing.
+- **`standards.md`:** the bar you judge work against - swap it for whatever your domain actually is.
+- **`ask_json()`:** the call to use when a *program* reads the answer. It returns a parsed object; prose is useless to a parser.
+
+:::
+
+## Before you start
+
+Build with whichever GitHub Copilot surface you like - VS Code, the Copilot CLI, or the GitHub Copilot app.
 
 ::: warning The twin comes pre-populated with fictional data
 You don't need to write a persona today. The starter ships as **Jordan Reyes**, a made-up engineer at a fictional company, so it answers on the first command and nothing of yours goes into a shared exercise. Everything you build runs against Jordan - unless you take the optional step below to use your own.
 
 `DISCLAIMER.md` in the starter lists what's invented, and how to point the twin at your own work after the session.
 :::
-
-### 1 · Download the starter
 
 <a class="lab-card" href="/AI-Flight-Academy/downloads/twin-code-starter.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">📦</span>
@@ -44,16 +53,20 @@ You don't need to write a persona today. The starter ships as **Jordan Reyes**, 
   <span class="lab-card-cta">Download .zip →</span>
 </a>
 
-### 2 · Open it and find the twin
+---
 
-Unzip the starter and open the folder in the Copilot surface you prefer. You'll also need a terminal open inside it. **Every command on this page runs from inside `twin-code-starter/`**:
+## 1 · Set it up
 
-```bash
-cd twin-code-starter
-copilot skill list
-```
+**Done when:** `copilot skill list` shows `my-twin` under Project skills.
 
-`my-twin` appears under **Project skills** - the CLI finds `.github/skills/` in the current folder, so it only shows up when your terminal is in the starter. There's nothing to register.
+1. Unzip the starter and open the folder in the Copilot surface you prefer. You'll also need a terminal open inside it. **Every command on this page runs from inside `twin-code-starter/`**:
+
+   ```bash
+   cd twin-code-starter
+   copilot skill list
+   ```
+
+   `my-twin` appears under **Project skills** - the CLI finds `.github/skills/` in the current folder, so it only shows up when your terminal is in the starter. There's nothing to register.
 
 ```text
 twin-code-starter/
@@ -70,22 +83,24 @@ twin-code-starter/
   mcp_server.py               the twin as MCP tools
 ```
 
-**Use whichever Copilot surface you like** - the GitHub Copilot app, the GitHub Copilot CLI, the VS Code Agents window, or Copilot Chat in the VS Code editor. Whichever you pick, you'll work in two places side by side:
+You'll work in two places side by side:
 
 | | What it's for |
 | --- | --- |
 | **A terminal** in `twin-code-starter/` | Running the twin from code - `python twin.py` and the examples. This is what you're building: something that works without a chat window. |
 | **Your Copilot surface** | Getting Copilot to write and change that code with you. |
 
-### 3 · Ask your twin
+## 2 · Ask your twin
 
-**In the terminal**, run one question to confirm everything works - Python, the Copilot CLI, and your sign-in:
+**Done when:** `python twin.py "..."` returns a position and the rule behind it.
 
-```bash
-python twin.py "Using my twin: a teammate is blocked on my review but I'm mid-migration. What do I do?"
-```
+1. **In the terminal**, run one question to confirm everything works - Python, the Copilot CLI, and your sign-in:
 
-You'll get a position and the rule from `persona.md` or `standards.md` that produced it. Each call takes 20-60 seconds - it's a full agent turn, not a hang. That's the whole loop; the `examples/` folder shows what you can build on it, and each direction below points at one.
+   ```bash
+   python twin.py "Using my twin: a teammate is blocked on my review but I'm mid-migration. What do I do?"
+   ```
+
+   You'll get a position and the rule from `persona.md` or `standards.md` that produced it. Each call takes 20-60 seconds - it's a full agent turn, not a hang. That's the whole loop; the `examples/` folder shows what you can build on it, and each direction below points at one.
 
 ::: tip Asking in chat works too
 Ask the same question in your Copilot surface's chat and the twin answers there as well. In chat it also adds one dated line to `references/memory.md` - that's by design, so it remembers the call next time. Still make sure the terminal command above works. The code you build calls the twin the same way, so if it works in the terminal, it will work in your code.
@@ -101,17 +116,50 @@ Skip this if you'd rather get straight to building - everything on this page wor
 Keep your own files local - nothing personal belongs in a shared repo. `DISCLAIMER.md` has the detail.
 :::
 
-## Build
+## 3 · Extend it
+
+**Done when:** the twin does something it couldn't before.
 
 Now make your twin better: extend the skill so it works the way you want. Pick a direction with your table and build in small steps.
 
-::: tip 🎈 You don't need to be a developer
-Copilot writes the code with you. Describe what you want, run it, and correct what comes back - that's the skill here. Anything on this page phrased as a prompt is an example, not a script; say it your way.
+::: tip Prompts are examples, not scripts
+Copilot writes the code with you. Describe what you want, run it, and correct what comes back - that's the skill here. Anything on this page phrased as a prompt is a starting point; say it your way.
 :::
 
 ### Pick a direction
 
 Take one, combine two, or pick your own. Click a bubble to see where to start and an example prompt that builds the change and then tests it.
+
+<div class="skill-steps">
+  <div class="skill-step">
+    <div class="skill-step-num">1</div>
+    <div class="skill-step-body">
+      <span class="skill-step-title">Talk it through</span>
+      <p>Scan the cards for ideas and decide as a table where to start. Add as much as you want from there.</p>
+    </div>
+  </div>
+  <div class="skill-step">
+    <div class="skill-step-num">2</div>
+    <div class="skill-step-body">
+      <span class="skill-step-title">Sketch it</span>
+      <p>Two minutes on what it should do and what it needs to read.</p>
+    </div>
+  </div>
+  <div class="skill-step">
+    <div class="skill-step-num">3</div>
+    <div class="skill-step-body">
+      <span class="skill-step-title">Create it by talking</span>
+      <p>You bring the idea, Copilot writes the code. Describe what you want, run it, then tell it what to change. Ask it for options when you're stuck — <em>"what else could this check catch?"</em></p>
+    </div>
+  </div>
+  <div class="skill-step">
+    <div class="skill-step-num">4</div>
+    <div class="skill-step-body">
+      <span class="skill-step-title">Re-run</span>
+      <p>See what moved. Change one thing at a time - if you change three at once, you won't know which one did it.</p>
+    </div>
+  </div>
+</div>
 
 <script setup>
 const directions = [
@@ -187,58 +235,21 @@ const directions = [
 
 </div>
 
-::: details Splitting the work across your table
-Take one piece each that runs on its own, along the natural seams:
+::: tip 🎈 Start small
+Nothing has to be perfect or finished. Get the smallest version working, then build on it. Time and token budget are the real limits - so aim at something you can show, not something you can finish.
+:::
 
-| Piece | Owns |
+## Stuck?
+
+| What you're seeing | What to do |
 | --- | --- |
-| **Trigger** | What starts it - a hook, a timer, a request |
-| **Input** | What's gathered, and its bounds |
-| **Call** | The prompt and the shape that comes back - where your rules get applied |
-| **Output** | Where it lands - exit code, comment, file |
-
-**Stub every seam first** - fake input, fake twin reply, fake output - so the whole thing runs end to end in five minutes. Then each person swaps one fake for the real thing.
-:::
-
-### Build in layers
-
-Two constraints shape every build here: **a call takes 20-60 seconds** - a full agent turn, so bound what you read (one diff, one fixture) and never call per-file or in a loop - and **ask for JSON when a program reads the answer** (`ask_json()` returns a parsed object; prose is useless to a parser).
-
-Then layer up: a skeleton on a stub, one real `ask()`, `ask_json()` for a parseable shape, your rules (make sure it cites `persona.md` or `standards.md`), a bound. Be specific - *"review this diff the way I would; apply my bar from standards.md; leave what my files don't cover"* beats *"review this code."*
-
-::: details The worked example, if you want a running start
-
-`examples/review_diff.py` reviews a diff against your `persona.md` and **exits 1 if your twin would block it**. The starter isn't a git repo yet, so make it one and commit the starting point - then edit a file, stage it, and review it:
-
-```bash
-git init
-git add -A
-git commit -m "starter"
-# edit a file, then:
-git add -A
-python examples/review_diff.py --staged
-```
-
-If git asks who you are, run the two `git config` commands it prints, then commit again. That exit code is what makes it a hook rather than a chat:
-
-```sh
-# .git/hooks/pre-commit
-#!/bin/sh
-python examples/review_diff.py --staged || exit 1
-```
-
-Read it for the pattern - gather input, bound it, ask for JSON, act on the verdict - then build something else with it.
-:::
-
-::: warning You approve before anything goes out
-Your twin drafts, flags and reports. Sending, committing and posting stay yours - whatever you build should hand the decision back.
-:::
-
-## After today
-
-This is a starting point, not the finish line. You got a twin answering from code and built one headless thing on it - against fictional Jordan, so nothing of yours went into a shared exercise.
-
-Making it yours is the next step, and there are two ways. Run `python onboard.py` for a short interview that writes your own `persona.md`, `voice.md`, and `standards.md` - or edit them by hand, pointing a Copilot surface that can see your mail and calendar at them and correcting what it drafts. Keep that local - nothing personal belongs in a shared repo; `DISCLAIMER.md` has the detail. Everything you built today runs against your own twin unchanged.
+| `copilot: command not found` | The Copilot CLI isn't installed or isn't signed in. The starter calls it behind the scenes, so `twin.py` can't run without it. |
+| `my-twin` isn't in `copilot skill list` | Your terminal isn't in `twin-code-starter/`. The CLI finds `.github/skills/` in the current folder only - `cd` into the starter. |
+| `python: command not found` | Try `py` instead on Windows. You need Python 3.10+. |
+| A call seems to hang | It isn't hanging. Each call is a full agent turn - 20 to 60 seconds. If you're calling per-file or in a loop, stop and bound it to one input. |
+| Your script can't parse the answer | You used `ask()`, which returns prose. Use `ask_json()` when a program reads the result. |
+| The answers don't sound like anyone | That's Jordan, the fictional engineer the starter ships with. Run `python onboard.py` to replace him with your own persona. |
+| It changed more than you asked | Ask Copilot what it changed and why. Undo the parts you didn't want, then make one change at a time. |
 
 ---
 

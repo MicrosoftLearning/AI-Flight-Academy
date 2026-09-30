@@ -6,109 +6,106 @@ title: The Digital Twin - Scout
 
 # The Digital Twin
 
-<div class="brief">
-<span class="brief-badge">The problem</span>
-
-Scout can already do your work - on your machine, across your repos, into your mail and calendar. Files, code, git, whatever the job needs. What it can't do is any of it **as you**: decide which of two priorities wins, hold back the thing you'd check first, shift its writing between your manager and a partner team.
-
-So every session starts with you re-explaining yourself. Work IQ closes some of that by inference, but you can't read what it inferred, correct it, or take it anywhere.
-
-Today you write it down as files you own, and get **a skill that works the way you do**.
-</div>
-
 ## Objectives
 
-Build a **digital twin** - a `SKILL.md` and a `references/` folder that hold how you work - then build something on top of it that runs on your machine. Scout writes the first version from your own mail, calendar, and Teams; you correct it, then point it at a real job.
+Scout can already read your mail, your calendar, and your files. What it can't do is any of it **as you** - decide which of two priorities wins, hold back the thing you'd check first, write differently to your manager than to a partner team. So every chat starts with you re-explaining yourself, and you rewrite most of what comes back.
 
-| File | Holds |
-| --- | --- |
-| **`persona.md`** | Who you are and how you decide - who you serve, what wins when priorities collide, what you check before committing |
-| **`voice.md`** | How you write, plus a few of your own messages kept verbatim, so output sounds like you |
+Your **digital twin** is exactly that, written down and saved as a skill. You don't write it from scratch: Scout drafts it from your own mail, calendar, and Teams, and you correct what it got wrong. From then on, everything you create with Scout starts already knowing you.
 
-By the end, you should have:
+In this activity you set up a twin, correct what it got wrong, and put it to work on something real. Three steps:
 
-- **A twin that works like you** - it drafts in your voice and takes the positions you'd take, and you've corrected what it got wrong.
-- **Something built on it that runs** - a brief, a catch-up, a dashboard, an MCP server: one real thing that uses the twin and that you'd open again tomorrow.
+| | Step | You're done when |
+| --- | --- | --- |
+| **1** | **Set it up** | Scout has written `persona.md` and `voice.md` from your work, and shown you what landed in your mail and Teams. |
+| **2** | **Correct it** | You've changed two or three lines and watched an answer change because of it. |
+| **3** | **Extend it** | The twin does something it couldn't before. |
 
-## Setup
+Steps 1 and 2 are quick - about 20 minutes together. Step 3 is the main build, and it isn't one change: extend it, re-run, see what moved, then extend it again. Most cards include a prompt you can paste. **Change it as you like. It's a starting point, not the answer.**
 
-**Check Scout is signed in and Work IQ is live.** Ask *"what's on my calendar tomorrow?"* - a real answer means you're ready. If not, grab a coach.
-
-### 1 · Download your twin
-
-<a class="lab-card" href="/AI-Flight-Academy/downloads/my-twin-scout.zip" download style="max-width:30rem">
-  <span class="lab-card-emoji">🧬</span>
-  <span class="lab-card-title">Your twin</span>
-  <span class="lab-card-desc">The skill, plus one worked example built on it. Unzip and import the folder.</span>
-  <span class="lab-card-cta">Download .zip →</span>
-</a>
-
-### 2 · Import it
-
-1. Unzip the download. You'll get a folder called `my-twin`.
-2. In Scout, open **Extensions** → **Import** and drag in the **folder**.
-
-   ![Screenshot of the Import Skill dialog window in Microsoft Scout.](./media/scout-import-skill-folder.png)
-
-3. Start a **new session** - skills load when a session begins.
-
-::: warning Import the folder, not the file
-`SKILL.md` isn't the whole skill. Templates and a worked example sit beside it, and dragging the file alone leaves them behind.
-:::
-
-### 3 · Build it
-
-Start a new session and type in the following prompt:
-
-```text
-Set up my twin.
-```
-
-Your twin tells you what it's about to read and waits for a yes, then reads your sent mail, Teams messages, and about a month of calendar. **Its access is read-only** - it only sees what you can already see, and its files stay on your machine. It drafts two files with the evidence under each line, tagged by how directly it knows:
-
-```text
-my-twin/
-  references/
-    persona.md      ← who you are and how you work
-    voice.md        ← how you write
-    setup.md        ← how far setup got
-```
-
-It finishes by **triaging what actually landed** in your mail and Teams, so you leave setup having watched it work.
-
-## Build
-
-Your twin works, but it's generic - built from what your work *proves*, which isn't the same as what you'd say about yourself. Do a quick correction pass, then get to the main event: building something on it.
+**Your twin drafts. You send.** Whatever you build should show you who it's addressed to and what it says, then wait for a yes.
 
 <div class="callout-bubble">
 <span class="callout-bubble-icon">🔒</span>
 
-**Keep it yours.** You each build your own twin on your real mail and rules. When you compare with your table, share the **prompt that worked, not your mailbox** - a prompt carries none of your inbox with it.
+**Your twin is yours.** It reads only what you can already see, and the files it writes stay on your machine. When you compare with your table, share **the prompt that worked, not your mailbox** - a prompt carries none of your inbox with it.
 
 </div>
 
-### Quick-correct your twin (~15 min)
+::: details Glossary
 
-Your twin's first read of you is close, not right. Do one short pass, then get building - you'll keep fixing it as you go.
+- **Digital twin:** what Scout needs to know to act as you - how you decide, how you write, who you answer to. It lives in two text files you own and can edit.
+- **Skill:** a folder of plain-text instructions Scout loads and follows. Your twin is one.
+- **`persona.md`:** who you serve, what wins when priorities collide, what you check before committing.
+- **`voice.md`:** how you write, plus a few of your own messages kept word for word.
+- **Triage:** sorting what arrived into what needs you, what's waiting on someone else, and what doesn't.
 
-1. **Ask it something real** - something like *"using my twin, what should I do about [the thing I've been putting off]?"* Lead with the twin's name; a generic answer usually means Scout didn't call it.
-2. **Find what's off.** When an answer isn't yours, ask which rule made it say that, or ask to see your persona.
-3. **Fix two or three lines, then move on.** Tell it what to change in your own words, then ask your question again to see if the answer moves. A good line changes what the twin *does* - a name, a date, a hard no.
-
-::: tip Prompts are examples, not scripts
-Say it however you'd naturally say it - the twin understands paraphrase.
 :::
 
-::: details More things to try, and what the persona tags mean
+## Before you start
+
+**Check Scout is signed in and Work IQ is live.** Ask *"what's on my calendar tomorrow?"* - a real answer means you're ready. If not, grab a coach.
+
+<a class="lab-card" href="/AI-Flight-Academy/downloads/my-twin-scout.zip" download style="max-width:30rem">
+  <span class="lab-card-emoji">🧬</span>
+  <span class="lab-card-title">Your twin</span>
+  <span class="lab-card-desc">The skill, plus one worked example built on it.</span>
+  <span class="lab-card-cta">Download .zip →</span>
+</a>
+
+---
+
+## 1 · Set it up
+
+**Done when:** Scout has written `persona.md` and `voice.md` from your work, and shown you what landed.
+
+1. Unzip the download. You'll get a folder called `my-twin`.
+
+1. In Scout, open **Extensions** → **Import** and drag in the `my-twin` **folder** - the one with `SKILL.md` inside.
+
+   ::: warning Import the folder, not the file
+   `SKILL.md` isn't the whole skill. Templates and a worked example sit beside it, and dragging the file alone leaves them behind.
+   :::
+
+   ![Screenshot of the Import Skill dialog window in Microsoft Scout.](./media/scout-import-skill-folder.png)
+
+1. Start a **new chat**. Skills load when a chat begins.
+
+1. Ask it to set itself up.
+
+   ```text
+   Set up my twin.
+   ```
+
+   It tells you what it's about to read and waits for a yes, then reads your sent mail, Teams messages, and about a month of calendar. It drafts two files with the evidence under each line, then triages what actually landed - so you leave setup having watched it work.
+
+## 2 · Correct it
+
+**Done when:** you've changed two or three lines and watched an answer change.
+
+Your twin's first read of you is close, not right. It's built from what your work *proves*, which isn't the same as what you'd say about yourself.
+
+1. **Ask it something real** - *"using my twin, what should I do about [the thing I've been putting off]?"* Lead with the twin's name; a generic answer usually means Scout didn't call it.
+1. **Find what's off.** When an answer isn't yours, ask which rule made it say that, or ask to see your persona.
+1. **Fix two or three lines, then move on.** Tell it what to change in your own words, then ask your question again. A good line changes what the twin *does* - a name, a date, a hard no.
+
+Don't try to finish this. You'll keep correcting it while you build.
+
+::: tip 🏷️ Give it a name you'll actually use
+Say *"rename my twin to Clippy"* - or whatever you want to call it - then start a new chat so Scout picks it up. You'll be talking to this thing all afternoon; "using my twin" gets old.
+:::
+
+::: details More things to try, and what the tags mean
+
+Start every one of these with your twin's name. Drop the name and Scout answers as itself.
 
 | Ask something like | You get |
 | --- | --- |
-| *"Triage what landed today."* | Mail and Teams sorted into needs-me, blocked, handled and noise, with drafts |
-| *"Draft a reply to [a real thread]."* | Something you could send, in your voice |
-| *"What am I forgetting this week?"* | Your calendar and your commitments read together |
-| *"What don't you know about how I work?"* | Its own gaps, named - it's read a month of your work |
+| *"Clippy, triage what landed today."* | Mail and Teams sorted into needs-me, blocked, handled and noise, with drafts |
+| *"Clippy, draft a reply to [a real thread]."* | Something you could send, in your voice |
+| *"Clippy, what am I forgetting this week?"* | Your calendar and your commitments read together |
+| *"Clippy, what don't you know about how I work?"* | Its own gaps, named - it's read a month of your work |
 
-Your persona's sections are each tagged by how directly the twin knows them:
+Every section of your persona is tagged by how directly the twin knows it:
 
 | | |
 | --- | --- |
@@ -116,14 +113,49 @@ Your persona's sections are each tagged by how directly the twin knows them:
 | `[inferred]` | A reasonable read, but you never said it outright |
 | `[needs you]` | Nothing in your work reached this, so it wrote a starting point |
 
-`[inferred]` and `[needs you]` are likeliest to be wrong, so they're a good place to look first.
-
-**Give it a name you'll actually use.** Say *"rename my twin to Clippy"*, then start a new session so Scout picks it up.
+`[inferred]` and `[needs you]` are likeliest to be wrong. Start there.
 :::
+
+## 3 · Extend it
+
+**Done when:** the twin does something it couldn't before.
+
+Right now the twin answers questions. It doesn't run on its own, doesn't remember what you told it last time, and only knows what your mail and calendar happened to show. Building on it is how that changes.
 
 ### Pick a direction
 
-Now build something that uses the twin - take one as it is, combine two, or build something specific to how you work.
+The cards below are **starters, not finished builds**. Use them for inspiration, or ignore them and build what your job actually needs.
+
+<div class="skill-steps">
+  <div class="skill-step">
+    <div class="skill-step-num">1</div>
+    <div class="skill-step-body">
+      <span class="skill-step-title">Talk it through</span>
+      <p>Scan the cards and decide where to start. Add as much as you want from there.</p>
+    </div>
+  </div>
+  <div class="skill-step">
+    <div class="skill-step-num">2</div>
+    <div class="skill-step-body">
+      <span class="skill-step-title">Sketch it</span>
+      <p>Two minutes on what it should do and what it needs to read.</p>
+    </div>
+  </div>
+  <div class="skill-step">
+    <div class="skill-step-num">3</div>
+    <div class="skill-step-body">
+      <span class="skill-step-title">Build it by talking</span>
+      <p>You bring the idea, Scout does the building. Describe what you want, look at what comes back, then tell it what to change. Ask it for options when you're stuck — <em>"what else could this brief include?"</em></p>
+    </div>
+  </div>
+  <div class="skill-step">
+    <div class="skill-step-num">4</div>
+    <div class="skill-step-body">
+      <span class="skill-step-title">Re-run</span>
+      <p>See what changed. Change one thing at a time - if you change three at once, you won't know which one did it.</p>
+    </div>
+  </div>
+</div>
 
 <script setup>
 const ideas = [
@@ -154,7 +186,7 @@ const ideas = [
   {
     emoji: "🔌", color: "pink", title: "Connect an MCP server", tag: "advanced",
     what: "Give your twin a real tool instead of building one - point Scout at an existing MCP server so it can read from or act on a live system.",
-    start: "Pick a server from Microsoft's catalog (linked below), connect it, then turn what it finds into a draft in your voice.",
+    start: "Pick a server from [Microsoft's MCP catalog](https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-mcpserver-connectors), connect it, then turn what it finds into a draft in your voice.",
     prompt: "Add the [system] MCP server to Scout, have my twin pull [my open items] through it, and draft [the weekly update] applying my persona and voice.",
   },
   {
@@ -174,28 +206,20 @@ const ideas = [
 
 <DirectionBubbles :items="ideas" start-label="Where to start" />
 
-::: tip 🔌 The MCP option uses an existing server
-Browse Microsoft's [MCP server catalog](https://learn.microsoft.com/en-us/connectors/connector-reference/connector-reference-mcpserver-connectors) and connect one, rather than building a tool of your own.
+::: tip 🎈 Start small
+Nothing has to be perfect or finished. Get the smallest version working, then build on it. Time and token budget are the real limits - so aim at something you can show, not something you can finish.
 :::
 
-### Build in layers
+## Stuck?
 
-Get it running end to end, then add one thing at a time:
-
-1. **Smallest version** - *"Build the smallest version that runs end to end."*
-2. **Your rules** - *"Use my persona and voice so it takes a position and sounds like me."*
-3. **One addition** - *"That works. Now add [one thing]."*
-4. **A bound** - *"Cap this at [N days] and [N items] per run."*
-
-::: warning You approve before anything goes out
-Keep the last step yours. Whatever you build should draft, show you who it's addressed to and what it says, then wait for a yes.
-:::
-
-## After today
-
-This is a starting point, not the finish line. In one session, alongside a table learning the same thing, you got a twin working and built one real thing on top of it - and practiced the skill that matters: describing what you want, watching Scout build it, and correcting from there.
-
-What you made won't change the world, and it doesn't need to. The twin is yours to keep - `persona.md` and `voice.md` are plain text, so they move to another altitude unchanged - and whatever you built today, you can keep building tomorrow.
+| What you're seeing | What to do |
+| --- | --- |
+| Scout ignores the twin | Start a new chat. Skills load only when a chat starts. Begin your request with *"using my twin"*. |
+| Import didn't work | Unzip first, then import the `my-twin` **folder** - not the zip, and not `SKILL.md` on its own. |
+| Setup can't read your mail | Check Work IQ is connected - ask *"what's on my calendar tomorrow?"* and see if you get a real answer. |
+| The answers don't sound like you | Ask which rule made it say that, then fix that line. Vague lines change nothing - name a person, a date, a hard no. |
+| It's writing about you, not as you | Your persona is describing rather than instructing. "Sam is detail-oriented" changes nothing; "number first, no hedging" changes the next draft. |
+| It changed more than you asked | Ask what it changed and why. Undo the parts you didn't want, then make one change at a time. |
 
 ---
 
