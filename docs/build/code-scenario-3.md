@@ -97,7 +97,9 @@ You're building with Copilot, so it can also fix what you're building. Paste the
 
 **Done when:** a different definition has given you a different shortlist.
 
-`cohort.py` judges every candidate against `definition.md` - a few sentences of plain text. Swap it and the answer changes. Three worked alternatives ship with the starter.
+`cohort.py` judges every candidate against `definition.md` - a few sentences of plain text saying what the program wants. Swap that file and the answer changes.
+
+Three alternative definitions ship with it: `reach.md` (work that gets reused), `depth.md` (one-to-one support), and `rising.md` (trajectory over standing).
 
 ```bash
 python cohort.py --definition definitions/depth.md

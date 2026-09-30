@@ -69,14 +69,15 @@ Open Microsoft Scout. You'll add the Dispatch skill in Step 1. The dashboard in 
 
 **Done when:** Scout has the Dispatch skill and the data pack loaded.
 
-1. Download `the-dispatch.zip` and unzip it. In Scout, go to **Extensions → Import**, and drag in **unzipped folder**.
+1. Download `the-dispatch.zip` and unzip it. In Scout, go to **Extensions → Import**, and drag in the `the-dispatch` folder - the one with `SKILL.md` inside.
+
+   ::: warning Unzip the-dispatch.zip first
+   Different than Cowork, you must unzip and import the Dispatch skill folder, not the zip.
+   :::
+
    ![Screenshot of the Import Skill dialog window in Microsoft Scout.](./media/scout-import-skill-folder.png)
 
 1. Start a **new chat** in Scout, and drag/drop or upload **dispatch-data-pack.zip** to the chat session. It is important to start a **new chat** in Scout for the skill files to load.
-
-::: warning Unzip the-dispatch.zip first
-Different than Cowork, you must unzip and import the Dispatch skill folder, not the zip.
-:::
 
 ## 2 · Seat three teams, each with its own view
 

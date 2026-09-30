@@ -51,6 +51,10 @@ If you want to do more, the **MCP bonus** lets your other agents use the room to
 
 Download all three files below, and unzip them into the same folder. Keep `the-dispatch-starter`, `the-dispatch`, and `dispatch-data` **next to each other**. The board expects to find them there.
 
+::: warning Watch for the folder inside the folder
+Each zip already contains its own folder, so Windows **Extract All** wraps it in a second one - you end up with `the-dispatch-starter\the-dispatch-starter\`. Drag the inner folder out and delete the wrapper. All three have to sit side by side or the dashboard won't find the data.
+:::
+
 <div class="lab-grid lab-grid-3">
 	<a class="lab-card" href="/AI-Flight-Academy/downloads/the-dispatch-starter.zip" download>
 		<span class="lab-card-emoji">📦</span>

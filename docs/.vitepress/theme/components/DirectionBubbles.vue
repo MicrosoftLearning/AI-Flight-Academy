@@ -23,7 +23,12 @@ function toggle(i: number) {
 // Only page-authored copy reaches here; escape it, then turn `code` into <code>.
 function inline(text: string) {
   const escaped = text.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
-  return escaped.replace(/`([^`]+)`/g, "<code>$1</code>");
+  return escaped
+    .replace(/`([^`]+)`/g, "<code>$1</code>")
+    .replace(
+      /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
+      '<a href="$2" target="_blank" rel="noreferrer">$1</a>',
+    );
 }
 
 async function copy(i: number) {

@@ -81,6 +81,10 @@ You're building with Cowork, so it can also fix what you're building. Paste the 
 
 1. In Cowork, open **Customize** → **Skills** → the arrow next to **Add** → **Upload skill**, and drag in `ambassador-skill.zip` (or the unzipped folder - Cowork takes either).
 
+   ::: warning Upload the folder, not just the SKILL.md
+   `SKILL.md` on its own won't work. `references/` sits beside it and holds the definition and the playbook.
+   :::
+
 1. Start a **new** Cowork session. Skills load only when a session starts.
 
 1. Unzip `ambassador-program-data.zip` and drag in **all nine CSVs** to the session - the `.csv` files only, not the two markdown files beside them.
@@ -95,15 +99,13 @@ You're building with Cowork, so it can also fix what you're building. Paste the 
 
    **Those eight are a first guess, not an answer.** The skill judged everyone on seven summary scores and nothing else, and those scores are invented - some of them deliberately misleading. Finding where the list is wrong is the rest of the exercise.
 
-::: warning Upload the skill, not just SKILL.md
-Cowork takes either the zip or the unzipped folder. Either way, give it the whole thing - `references/` holds the definition and the playbook, and `SKILL.md` on its own won't work.
-:::
-
 ## 2 · Change what it looks for
 
 **Done when:** a different definition has given you a different shortlist.
 
-The skill judges every candidate against `DEFINITION.md` - a few sentences of plain text. Swap it and the answer changes. Three worked alternatives ship with the skill.
+The skill judges every candidate against `DEFINITION.md` - a few sentences of plain text saying what the program wants. Swap that file and the answer changes.
+
+Three alternative definitions ship with it: `reach.md` (work that gets reused), `depth.md` (one-to-one support), and `rising.md` (trajectory over standing).
 
 ```text
 Using the ambassador skill, use definitions/depth.md as the definition instead. Re-run and tell me which names changed.
