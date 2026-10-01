@@ -70,10 +70,13 @@ Download these two files now. You'll need them in the first few minutes.
 
 In this step, you install the skill, load the data pack, and meet the triager that you're going to outsmart.
 
-1. In Cowork, open **Customize** → **Skills**. Select the arrow next to **Add**, and then select **Upload skill**. Drag in the whole `the-dispatch.zip` file.
+1. In Cowork, open **Customize**. Select the arrow next to **Add**, and then select **Upload**. Drag in the whole `the-dispatch.zip` file.
+
 	::: warning Two common mistakes
 	Upload the whole `the-dispatch.zip` file, not only `SKILL.md`. The zip file includes `THE-ROOM.md` and other reference files that the skill needs. Also, **don't edit the single triager**. It's the fixed "before" that you compare against.
 	:::
+
+	![The Cowork Customize page, with Customize in the left menu, the Add dropdown open, and Upload highlighted](/img/cowork-upload-skill.png)
 	
 2. Start a **new** Cowork chat session. (Skills load only when a session starts.) Drag in the `dispatch-data` zip file, and then enter this prompt:
 

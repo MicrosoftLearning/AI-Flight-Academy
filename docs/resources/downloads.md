@@ -25,7 +25,7 @@ A portable spec of how you work. It reads your mail, Teams and calendar through 
   </a>
 </div>
 
-**Installing it:** Cowork → **Customize** → **Skills** → **Add ▾** → **Upload skill** → pick the downloaded `SKILL.md`. Then **start a new task** - skills are only discovered when a task begins.
+**Installing it:** Cowork → **Customize** → **Add ▾** → **Upload** → pick the downloaded `SKILL.md`. Then **start a new task** - skills are only discovered when a task begins.
 
 [Full walkthrough →](/build/cowork-scenario-1)
 
@@ -119,7 +119,7 @@ Seat a **room of Global Skilling teams** over an incoming **skilling request** s
   </a>
 </div>
 
-**Installing it:** **Customize** → **Skills** → **Add ▾** → **Upload skill** → the whole `the-dispatch.zip`. Start a **new session**, attach the data pack, and say **`seat the room and dispatch the agent governance request.`**
+**Installing it:** **Customize** → **Add ▾** → **Upload** → the whole `the-dispatch.zip`. Start a **new session**, attach the data pack, and say **`seat the room and dispatch the agent governance request.`**
 
 ::: warning Upload the zip as it downloads
 Cowork takes the archive directly - there's no need to unzip it first.
@@ -246,7 +246,7 @@ A **working cohort picker** that ships nine data files and reads one of them. Fi
   </a>
 </div>
 
-**Installing it:** **Customize** → **Skills** → **Add ▾** → **Upload skill** → the whole `ambassador-skill.zip`. Start a **new session**, attach all nine CSVs from `program-data`, and say **`using the ambassador skill, who should be in the next cohort?`**
+**Installing it:** **Customize** → **Add ▾** → **Upload** → the whole `ambassador-skill.zip`. Start a **new session**, attach all nine CSVs from `program-data`, and say **`using the ambassador skill, who should be in the next cohort?`**
 
 ::: warning Upload the folder, not just the SKILL.md
 `SKILL.md` on its own won't work. `references/` sits beside it and holds the definition and the playbook.

@@ -16,7 +16,7 @@ A **skill** is a set of instructions your agent follows. All three altitudes use
 
 | | Where it lives | How to add one |
 | --- | --- | --- |
-| 🟢 **Cowork** | Your OneDrive, under `Documents/Cowork/skills/` | **Customize → Skills → Add ▾ → Upload skill**, then start a new task |
+| 🟢 **Cowork** | Your OneDrive, under `Documents/Cowork/skills/` | **Customize → Add ▾ → Upload**, then start a new task |
 | 🔵 **Scout** | A skills directory on your machine | **Extensions → Import**, then start a new chat |
 | 🟣 **Code** | `.github/skills/` in the folder you're working in | Nothing to register - the CLI finds it |
 

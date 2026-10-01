@@ -58,9 +58,9 @@ Steps 1 and 2 are quick - about 20 minutes together. Step 3 is the main build, a
 
 **Done when:** Cowork has written `persona.md` and `voice.md` from your work, and answered a real question as you.
 
-1. In Cowork, open **Customize** in the left menu, then the **Skills** tab. Select the arrow next to **Add**, then **Upload skill**, and choose the `SKILL.md` file from your Downloads folder.
+1. In Cowork, open **Customize** in the left menu. Select the arrow next to **Add**, then **Upload**, and choose the `SKILL.md` file from your Downloads folder.
 
-   ![The twin showing under Your skills on the Cowork Customize page](/img/twin-forge-uploaded.png)
+   ![The Cowork Customize page, with Customize in the left menu, the Add dropdown open, and Upload highlighted](/img/cowork-upload-skill.png)
 
 1. Start a **new task**. Skills load when a task begins.
 
