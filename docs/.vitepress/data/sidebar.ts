@@ -52,7 +52,7 @@ function nestSteps(steps: Heading[], link: string) {
  *
  * Scenario 0 is deliberately absent. It's the pre-event readiness gate, and
  * during the event a stray click on it drops someone into setup instead of the
- * hack. Its pages still build and stay reachable by URL - see the SCENARIO_0
+ * scenarios. Its pages still build and stay reachable by URL - see the SCENARIO_0
  * comment in paths.ts for how to put the links back afterwards.
  */
 export function navBuildItems() {

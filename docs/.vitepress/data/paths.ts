@@ -1,4 +1,4 @@
-// Single source of truth for the hack's build matrix: tracks x scenarios.
+// Single source of truth for the build matrix: tracks x scenarios.
 // Imported by .vitepress/config.mts (nav + sidebar) and by the Vue components
 // (PathPicker, BuildMatrix) so every entry point stays in sync automatically.
 
@@ -56,10 +56,10 @@ export const tracks: Track[] = [
 ];
 
 /**
- * Scenario 0 is the pre-event readiness call, not a hack scenario. It has the
+ * Scenario 0 is the pre-event readiness call, not a build scenario. It has the
  * same page-per-track shape as the real scenarios - a brief plus one build page
  * per altitude - but it stays out of `scenarios` on purpose. That array drives
- * the home-page chooser and the hack scenario list, and Scenario 0 belongs in
+ * the home-page chooser and the scenario list, and Scenario 0 belongs in
  * neither.
  *
  * For Team Week it is also hidden from the "Start Building" dropdown and the

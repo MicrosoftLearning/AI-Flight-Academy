@@ -23,7 +23,7 @@ const props = withDefaults(
 const shownTracks = computed(() =>
   props.track ? tracks.filter((t) => t.id === props.track) : tracks
 );
-// "Show all" lists only the hack scenarios; Scenario 0 renders only when it's
+// "Show all" lists only the build scenarios; Scenario 0 renders only when it's
 // asked for by id, so it never leaks into the home chooser or a full listing.
 const shownScenarios = computed(() =>
   props.scenario
