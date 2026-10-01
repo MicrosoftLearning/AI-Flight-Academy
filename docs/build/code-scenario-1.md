@@ -22,7 +22,7 @@ In this activity you set it up, confirm it answers, and extend it. Three steps:
 | **2** | **Ask your twin** | `python twin.py "..."` returns a position and the `persona.md` rule behind it. |
 | **3** | **Extend it** | The twin does something it couldn't before. |
 
-Steps 1 and 2 are quick - about 15 minutes together. Step 3 is the main build, and it isn't one change: extend it, re-run, see what moved, then extend it again. Most cards include a prompt you can paste. **Change it as you like. It's a starting point, not the answer.**
+Steps 1 and 2 are quick - about 15 minutes together. Step 3 is the main build, and it isn't one change: extend it, re-run, see what moved, then extend it again.
 
 **Your twin drafts. You send.** Sending, committing and posting stay yours - whatever you build should hand the decision back.
 

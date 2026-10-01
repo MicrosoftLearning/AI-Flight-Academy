@@ -4,7 +4,7 @@ layout: home
 hero:
   name: AI Flight Academy
   text: Train. Build. Take off.
-  tagline: Two hours, your tools, and a real problem to crack. Pick how you want to build, and walk out with an agent that's yours.
+  tagline: Two hours, your tools, and a real problem to crack. Pick how you want to build.
   image:
     src: /hero.png
     alt: AI Flight Academy

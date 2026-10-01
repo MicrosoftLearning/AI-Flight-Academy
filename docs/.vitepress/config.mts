@@ -4,7 +4,7 @@ import { navBuildItems, sidebars, isBuildPage } from "./data/sidebar";
 export default defineConfig({
   title: "AI Flight Academy",
   description:
-    "A 2-hour hands-on agent-building session for Global Skilling Team Week. Train, build, and take off with a working agent that's yours.",
+    "A 2-hour hands-on agent-building session for Global Skilling Team Week. Two hours, your tools, and a real problem to crack.",
   base: "/AI-Flight-Academy/",
   cleanUrls: true,
   // The packer writes a .md into public/ for Cowork to download. Without this,

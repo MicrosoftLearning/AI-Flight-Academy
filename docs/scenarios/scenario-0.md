@@ -8,7 +8,7 @@ hero:
   text: Scenario 0
   tagline: Get set up on your altitude and confirm you're ready to fly before Team Week.
   image:
-    src: /hero.svg
+    src: /hero.png
     alt: Pre-Flight Checklist
 ---
 
