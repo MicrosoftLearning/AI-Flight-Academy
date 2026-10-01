@@ -14,7 +14,20 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
       <span class="album-band">The Ground Crew</span>
       <span class="album-name">Cleared for Takeoff</span>
     </div>
-    <span class="album-sticker" aria-hidden="true">Limited pressing<br>Team Week 2026</span>
+    <span class="album-hype" aria-hidden="true">
+      <span class="album-hype-lead">Includes the hit single</span>
+      <span class="album-hype-title">"My Army of Agents"</span>
+    </span>
+    <span class="album-barcode" aria-hidden="true">
+      <span class="album-barcode-bars"></span>
+      <span class="album-barcode-digits">0 26004 10062 6</span>
+      <span class="album-barcode-cat">GS-004 · Limited pressing</span>
+    </span>
+    <span class="album-advisory" aria-hidden="true">
+      <span class="album-advisory-top">Parental</span>
+      <span class="album-advisory-mid">Advisory</span>
+      <span class="album-advisory-bottom">Agentic content</span>
+    </span>
   </div>
   <figcaption>
     <strong>The Ground Crew - <em>Cleared for Takeoff</em></strong> (2026). Pictured, left to right: Erin Jacobsen, Matt Quinlan, Darrin Hanson, Andrew Conniff, Steve Luper, Dipanjan Ghosh, Christian Talavera, Iliyas Chawdhary, Aurelie Saada, George Smpyrakis.
