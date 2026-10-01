@@ -28,7 +28,7 @@ export default defineConfig({
         items: navBuildItems(),
       },
       {
-        text: "The basics",
+        text: "Reference",
         link: "/bricks/",
       },
       {

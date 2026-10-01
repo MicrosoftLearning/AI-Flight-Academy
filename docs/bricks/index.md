@@ -1,79 +1,86 @@
 ---
-title: The basics
+title: Reference
 ---
 
 <!-- markdownlint-disable MD013 MD025 MD033 -->
 
-# The basics
+# Reference
 
-Your build page has the steps for your scenario, and a **Stuck?** table at the bottom for when something goes wrong. This page covers the few things that trip people up on *every* scenario, whichever altitude you're flying.
+Your build page has the steps for your scenario. This page is for looking things up - how the tools behave, and where the official documentation lives.
 
-If you're stuck on something not listed here: ask your AI first, then your table SME, then wave down a coach in a yellow vest.
+Nothing here is required reading. Use it if you want detail the build page doesn't cover, or if you're carrying something on past the session.
 
-## Skills load when a session starts
+## How skills load
 
-The single most common problem in the room. You install a skill, ask for it, and the agent answers as itself - no skill, no reference files, generic reply.
+A **skill** is a set of instructions your agent follows. All three altitudes use the same idea, with different plumbing.
 
-Skills are discovered **when a session begins**. One added mid-session stays invisible until you start a fresh one.
+| | Where it lives | How to add one |
+| --- | --- | --- |
+| 🟢 **Cowork** | Your OneDrive, under `Documents/Cowork/skills/` | **Customize → Skills → Add ▾ → Upload skill**, then start a new task |
+| 🔵 **Scout** | A skills directory on your machine | **Extensions → Import**, then start a new chat |
+| 🟣 **Code** | `.github/skills/` in the folder you're working in | Nothing to register - the CLI finds it |
 
-| | What to do |
-| --- | --- |
-| 🟢 **Cowork** | Install the skill, then start a **new task** |
-| 🔵 **Scout** | Import the skill, then start a **new chat** |
-| 🟣 **Code** | Run `copilot skill list` from inside the starter folder - the CLI reads `.github/skills/` in whatever folder your terminal is in, so it only appears when you've `cd`'d into the starter |
+Two behaviours worth knowing, because neither is visible in the UI:
 
-Then **name the skill in your request** - *"using my twin"*, *"using the ambassador skill"*. Drop the name and the agent often answers as itself.
+- **Skills are discovered when a session begins.** One added part-way through a session isn't picked up until you start a new one.
+- **`SKILL.md` is the instructions, not the whole skill.** When a skill ships with a folder around it, that folder holds reference files the instructions point at - definitions, templates, playbooks. The exception is a skill that ships as a lone `.md`, which some do.
 
-## Install the whole thing, not just `SKILL.md`
+Cowork takes a `.zip` as it downloads. Scout wants it unzipped, and imports the folder.
 
-`SKILL.md` is the instructions. The folder around it holds the reference files the skill reads - definitions, templates, playbooks, worked examples. Upload the file alone and the skill loads but can't reach any of them.
+**Docs:** [Upload a skill (Cowork)](https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-customize#upload-a-skill) · [Manage skills (Scout)](https://learn.microsoft.com/microsoft-scout/use-microsoft-scout#manage-skills)
 
-- 🟢 **Cowork** takes the archive **as it downloads**. Don't unzip it first. [Customize → Skills → Add ▾ → Upload skill](https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-customize#upload-a-skill)
-- 🔵 **Scout** needs it **unzipped**. **Extensions → Import**, then drag in the **folder** that contains `SKILL.md` - use the skill-folder drop zone, not the `.md` one.
+## Work IQ
 
-The one exception: Scenario 1 on Cowork ships a single self-contained `SKILL.md` with nothing beside it, so there the file *is* the whole skill.
+**Work IQ** is the layer that grounds an agent in your Microsoft 365 work. Cowork and Scout reach it with no setup; from code you add it as an MCP server.
 
-## Work IQ: what your agent can already see
+What it can reach is what **you** can already reach: mail and sent mail, calendar, Teams chats and channels, OneDrive and SharePoint files, and people and org context. It never sees more than your own account does.
 
-**Work IQ** grounds your agent in your real Microsoft 365 work. There's nothing to connect and no auth to build - Cowork and Scout both reach it with no setup.
+If you want to check grounding is live before you rely on it, ask for something only your account could answer - *"what's on my calendar tomorrow?"*
 
-It can see what **you** can already see: mail and sent mail, calendar, Teams chats and channels, OneDrive and SharePoint files, and people and org context. It never sees more than you can, and nothing leaves your tenant.
-
-**Quick check that grounding is live:** ask *"what's on my calendar tomorrow?"* A real answer means you're good. If it asks you to paste something in, grab a coach.
-
-On 🟣 **Code**, Work IQ isn't automatic - you add it as an [MCP server](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview). It's an existing Microsoft server, so there's nothing to build.
+**Docs:** [Work IQ overview](https://learn.microsoft.com/microsoft-365/copilot/extensibility/work-iq) · [Work IQ MCP server](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview) · [Work IQ CLI](https://learn.microsoft.com/microsoft-365/copilot/extensibility/work-iq/cli)
 
 ::: warning Keep your own work on your own screen
-You're each building against your real mail and calendar. When you compare with your table, share **the prompt that worked, not your mailbox**.
+The scenarios run against your real mail and calendar. When you compare with your table, share the prompt rather than the output.
 :::
 
-## When it changes more than you asked
+## Running the Code starters
 
-Expected, and recoverable. Ask what it changed and why, undo the parts you didn't want, then make **one change at a time**. Change three things at once and you won't know which one did it.
+The Scenario starters are Python, and they call the GitHub Copilot CLI to do the agent work.
 
-Same rule when an answer is wrong: ask which rule or file produced it, fix that one line, then ask again. If nothing moves, the line was too vague - name a person, a date, a hard no.
-
-## Before you run anything on 🟣 Code
-
-| Check | Command | If it fails |
+| | Check | If it's missing |
 | --- | --- | --- |
-| Python 3.10+ | `python --version` | Try `py` on Windows |
+| Python 3.10+ | `python --version` | `py --version` on Windows |
 | Copilot CLI | `copilot --version` | `npm install -g @github/copilot`, then sign in |
-| Skill found | `copilot skill list` | `cd` into the starter folder first |
+| Skill visible | `copilot skill list` | The CLI reads `.github/skills/` in the current folder - `cd` into the starter |
 
-**A call takes 20-60 seconds.** That's a full agent turn, not a hang - don't cancel it, and never call in a loop or per-file. When a *program* reads the answer, ask for JSON: `ask_json()` returns a parsed object, and prose is useless to a parser.
+Each call to the CLI is a full agent turn and takes roughly 20-60 seconds, so bound what you send it rather than calling per-file or in a loop. When a program needs to read the result, ask for JSON - the starters' `ask_json()` returns a parsed object.
 
-## Going deeper
+**Docs:** [GitHub Copilot CLI](https://docs.github.com/copilot/how-tos/use-copilot-agents/use-copilot-cli) · [Copilot in VS Code](https://code.visualstudio.com/docs/copilot/overview) · [Agent mode](https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode) · [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro)
 
-Official documentation, if you want more than the session covers:
+## All the documentation
 
-| | |
+| 🟢 Cowork | |
 | --- | --- |
-| [Customize Copilot Cowork](https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-customize) | Skills, plugins, and how to upload them |
-| [Use Copilot Cowork](https://learn.microsoft.com/microsoft-365/copilot/cowork/use-cowork#cowork-skills) | What Cowork does and how skills fit |
-| [Cowork FAQ](https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-faq) | Common questions |
-| [Get started with Microsoft Scout](https://learn.microsoft.com/microsoft-scout/get-started) | Install, sign-in, and settings |
-| [Use Microsoft Scout](https://learn.microsoft.com/microsoft-scout/use-microsoft-scout#manage-skills) | Managing skills, including writing your own |
-| [Microsoft Scout FAQ](https://learn.microsoft.com/microsoft-scout/faq) | Permissions, shell commands, custom skills |
-| [Work IQ MCP server](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview) | Reaching your M365 work from code |
-| [About GitHub Copilot CLI](https://docs.github.com/copilot/concepts/agents/about-copilot-cli) | The CLI the Code starters call |
+| [Use Copilot Cowork](https://learn.microsoft.com/microsoft-365/copilot/cowork/use-cowork) | What it does, and how skills fit |
+| [Customize Cowork](https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-customize) | Skills, plugins, uploading |
+| [Common questions](https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-faq) | FAQ |
+| [What's new](https://learn.microsoft.com/microsoft-365/copilot/cowork/whats-new) | Release notes |
+
+| 🔵 Scout | |
+| --- | --- |
+| [Get started](https://learn.microsoft.com/microsoft-scout/get-started) | Install, sign-in, settings |
+| [Use Microsoft Scout](https://learn.microsoft.com/microsoft-scout/use-microsoft-scout) | Skills, shell commands, browser control |
+| [Overview](https://learn.microsoft.com/microsoft-scout/overview) | What it is and what ships with it |
+| [Common questions](https://learn.microsoft.com/microsoft-scout/faq) | Permissions, custom skills |
+| [What's new](https://learn.microsoft.com/microsoft-scout/whats-new) | Release notes |
+
+| 🟣 Code | |
+| --- | --- |
+| [GitHub Copilot CLI](https://docs.github.com/copilot/how-tos/use-copilot-agents/use-copilot-cli) | The CLI the starters call |
+| [Copilot in VS Code](https://code.visualstudio.com/docs/copilot/overview) | Setup and features |
+| [Agent mode](https://code.visualstudio.com/docs/copilot/chat/chat-agent-mode) | Letting Copilot edit across files |
+| [Model Context Protocol](https://modelcontextprotocol.io/docs/getting-started/intro) | The standard behind MCP servers |
+
+## If you're stuck
+
+The bottom of every build page has a **Stuck?** table for that scenario. Past that: ask your AI, then your table SME, then a coach in a yellow vest.

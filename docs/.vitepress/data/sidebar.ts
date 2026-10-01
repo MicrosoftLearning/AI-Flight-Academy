@@ -132,7 +132,7 @@ export function globalSidebar(
   // One page now, so there's nothing to scope per track - just a link to it.
   const guidesSection = {
     text: "Reference",
-    items: [{ text: "The basics", link: "/bricks/" }],
+    items: [{ text: "Tools and documentation", link: "/bricks/" }],
   };
 
   // A lean rail is just "where am I in this path" - nothing else. Scenario 0 is
