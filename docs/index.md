@@ -63,40 +63,6 @@ Our goals are simple:
 
 <!-- markdownlint-disable MD033 -->
 <PathPicker />
-
-</div>
-
-<div class="home-section">
-
-## New here? Start with the pre-flight checklist
-
-<p class="home-section-intro is-wide">Not sure where to begin? Scenario 0 walks you through what you need and how the session runs.</p>
-
-<div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/scenarios/scenario-0">
-    <span class="lab-card-emoji">🛫</span>
-    <span class="lab-card-title">Scenario 0 · Pre-Flight Checklist</span>
-    <span class="lab-card-desc">The brief: what you need, how the call runs, and your three altitudes to build it at. Start here.</span>
-    <span class="lab-card-cta">Read the brief →</span>
-  </a>
-</div>
-
-</div>
-
-<div class="home-section">
-
-## Keep exploring
-
-<p class="home-section-intro is-wide">Explore the resources to keep building and experimenting after the session.</p>
-
-<div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/resources/">
-    <span class="lab-card-emoji">📚</span>
-    <span class="lab-card-title">Resources</span>
-    <span class="lab-card-desc">Docs, guides, and links to go deeper - before, during, and after the hack.</span>
-    <span class="lab-card-cta">View resources →</span>
-  </a>
-</div>
 <!-- markdownlint-enable MD033 -->
 
 </div>

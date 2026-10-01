@@ -35,12 +35,18 @@ export default defineConfig({
         text: "Resources",
         items: [
           { text: "Downloads", link: "/resources/downloads" },
-          { text: "More", link: "/resources/" },
         ],
       },
     ],
     search: {
       provider: "local",
+    },
+    // The prev/next footer walks sidebar order, which isn't a reading order
+    // here - it sent people from a Scout guide to a Code build page, and from
+    // Downloads to "Next page: Home". Every page ends with its own way back.
+    docFooter: {
+      prev: false,
+      next: false,
     },
     outline: { level: [2, 3] },
     sidebar: sidebars(),

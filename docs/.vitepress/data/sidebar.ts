@@ -47,17 +47,17 @@ function nestSteps(steps: Heading[], link: string) {
   return out;
 }
 
-/** "Start Building" nav dropdown: one group per scenario, one item per track. */
+/**
+ * "Start Building" nav dropdown: one group per scenario, one item per track.
+ *
+ * Scenario 0 is deliberately absent. It's the pre-event readiness gate, and
+ * during the event a stray click on it drops someone into setup instead of the
+ * hack. Its pages still build and stay reachable by URL - see the SCENARIO_0
+ * comment in paths.ts for how to put the links back afterwards.
+ */
 export function navBuildItems() {
   return [
     { text: "🧭 Pick your path", link: CHOOSER },
-    {
-      text: `${SCENARIO_0.emoji} ${SCENARIO_0.label} · ${SCENARIO_0.name}`,
-      items: tracks.map((t) => ({
-        text: `${t.emoji} ${t.label} - ${t.tool}${suffix(t.id, SCENARIO_0.id)}`,
-        link: buildLink(t.id, SCENARIO_0.id),
-      })),
-    },
     ...scenarios.map((s) => ({
       text: `${s.emoji} ${s.label} · ${s.name}`,
       items: tracks.map((t) => ({
@@ -127,17 +127,6 @@ export function globalSidebar(
     : {
         text: "Scenarios",
         items: [
-          {
-            text: `${SCENARIO_0.emoji} ${SCENARIO_0.name}`,
-            collapsed: true,
-            items: [
-              { text: "Start here", link: `/scenarios/${SCENARIO_0.id}` },
-              ...tracks.map((t) => ({
-                text: `${t.emoji} ${t.label}${suffix(t.id, SCENARIO_0.id)}`,
-                link: buildLink(t.id, SCENARIO_0.id),
-              })),
-            ],
-          },
           ...scenarios.map((s) => ({
             text: `${s.emoji} ${s.name}`,
             collapsed: true,

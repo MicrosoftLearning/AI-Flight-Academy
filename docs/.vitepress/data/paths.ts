@@ -89,7 +89,13 @@ export const tracks: Track[] = [
  * same page-per-track shape as the real scenarios - a brief plus one build page
  * per altitude - but it stays out of `scenarios` on purpose. That array drives
  * the home-page chooser and the hack scenario list, and Scenario 0 belongs in
- * neither. It's wired in explicitly by the nav/sidebar builders instead.
+ * neither.
+ *
+ * For Team Week it is also hidden from the "Start Building" dropdown and the
+ * sidebar, so nobody lands in setup by mistake during the event. The pages are
+ * still generated and still work when you navigate straight to them - restoring
+ * the links after the event means adding it back in `navBuildItems` and the
+ * unscoped branch of `globalSidebar` in sidebar.ts.
  */
 export const SCENARIO_0: Scenario = {
   id: "scenario-0",
