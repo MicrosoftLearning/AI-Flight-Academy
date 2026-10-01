@@ -1167,15 +1167,23 @@ a.bonus-card:hover {
   right: -0.5rem;
   font-size: 4.5rem;
   line-height: 1;
-  opacity: 0.13;
+  opacity: var(--goal-emoji-opacity, 0.13);
   transform: rotate(12deg);
   pointer-events: none;
   user-select: none;
   transition: opacity 0.25s ease, transform 0.25s ease;
 }
 
+/* A mid-tone emoji on a near-white card has far less contrast than the same
+   emoji on a dark one, so light mode needs more opacity and a little more
+   saturation to land at the same visual weight. */
+html:not(.dark) .goal-card-emoji {
+  --goal-emoji-opacity: 0.26;
+  filter: saturate(1.2);
+}
+
 .goal-card:hover .goal-card-emoji {
-  opacity: 0.22;
+  opacity: calc(var(--goal-emoji-opacity, 0.13) + 0.09);
   transform: rotate(6deg) scale(1.06);
 }
 

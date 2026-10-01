@@ -7,6 +7,9 @@ export default defineConfig({
     "A 2-hour hands-on agent-building session for Global Skilling Team Week. Train, build, and take off with a working agent that's yours.",
   base: "/AI-Flight-Academy/",
   cleanUrls: true,
+  // Dark by default - the scenario art and the altitude colours were built
+  // against it. The toggle still works for anyone who prefers light.
+  appearance: "dark",
   // Build pages carry their steps in the sidebar, under the level you're on,
   // so the right-hand outline would just be a second copy of the same list.
   transformPageData(pageData) {
