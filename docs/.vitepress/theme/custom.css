@@ -774,6 +774,47 @@ html:not(.dark) .goal-card-emoji {
   margin: 0;
 }
 
+/* Easter egg: hovering the cover slowly reveals the full ten-person crew under the stickers */
+.album-cover img.album-alt {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+  filter: blur(6px);
+  transform: scale(1.08);
+  transition: opacity 0.8s ease-in, transform 0.8s ease-in, filter 0.8s ease-in;
+}
+
+.album-cover:hover img.album-alt {
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1);
+  transition: opacity 2s ease-in-out, transform 3.5s cubic-bezier(0.2, 0.7, 0.2, 1), filter 2.5s ease-out;
+}
+
+.album-lineup-alt {
+  display: none;
+}
+
+.album:has(.album-cover:hover) .album-lineup {
+  display: none;
+}
+
+.album:has(.album-cover:hover) .album-lineup-alt {
+  display: inline;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .album-cover img.album-alt,
+  .album-cover:hover img.album-alt {
+    filter: none;
+    transform: none;
+    transition: opacity 1.2s ease-in-out;
+  }
+}
+
 .album-title {
   position: absolute;
   top: 6%;

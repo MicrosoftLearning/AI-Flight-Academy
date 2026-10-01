@@ -10,7 +10,8 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
 <figure class="album">
   <div class="album-cover">
     <img src="/img/about/band-banner.jpg" alt="Stylized 1990s alt-rock album cover of the seven-piece AI Flight Academy V-team standing on an airfield tarmac at dusk, with a vintage propeller plane and an open hangar behind them." width="1536" height="1024">
-    <div class="album-title" aria-hidden="true">
+        <img class="album-alt" src="/img/about/band-banner-full.jpg" alt="" aria-hidden="true" width="1536" height="1024" loading="lazy">
+        <div class="album-title" aria-hidden="true">
       <span class="album-band">The Ground Crew</span>
       <span class="album-name">Cleared for Takeoff</span>
     </div>
@@ -30,7 +31,7 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
     </span>
   </div>
   <figcaption>
-    <strong>The Ground Crew - <em>Cleared for Takeoff</em></strong> (2026). Pictured, left to right: Erin Jacobsen, Steve Luper, Darrin Hanson, Matt Quinlan (front), Andrew Conniff, Dipanjan Ghosh, Christian Talavera.
+    <strong>The Ground Crew - <em>Cleared for Takeoff</em></strong> (2026). <span class="album-lineup">Pictured, left to right: Erin Jacobsen, Steve Luper, Darrin Hanson, Matt Quinlan (front), Andrew Conniff, Dipanjan Ghosh, Christian Talavera.</span><span class="album-lineup-alt" aria-hidden="true">Deluxe edition with the full ground crew. Pictured, left to right: Erin Jacobsen, Matt Quinlan, Darrin Hanson, Andrew Conniff, Steve Luper, Dipanjan Ghosh, Christian Talavera, Iliyas Chawdhary, Aurelie Saada, George Smpyrakis.</span>
   </figcaption>
 </figure>
 
