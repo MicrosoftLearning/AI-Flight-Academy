@@ -180,7 +180,10 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
 </article>
 
 <article class="crew-card crew-card--support">
-  <img class="crew-portrait" src="/img/about/george-smpyrakis.jpg" alt="Stylized portrait of George Smpyrakis in a pilot cap and hoodie with captain stripes" width="512" height="512" loading="lazy">
+  <div class="crew-portrait-egg">
+    <img class="crew-portrait" src="/img/about/george-smpyrakis.jpg" alt="Stylized portrait of George Smpyrakis in a pilot cap and hoodie with captain stripes" width="512" height="512" loading="lazy">
+    <img class="crew-portrait crew-portrait-alt" src="/img/about/george-smpyrakis-cat.jpg" alt="" aria-hidden="true" width="512" height="512" loading="lazy">
+  </div>
   <div class="crew-body">
     <h3 class="crew-name">George Smpyrakis</h3>
     <p class="crew-role">In-flight announcements · Pre-flight video and readiness</p>
@@ -190,7 +193,10 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
 </article>
 
 <article class="crew-card crew-card--support">
-  <img class="crew-portrait" src="/img/about/iliyas-chawdhary.jpg" alt="Stylized portrait of Iliyas Chawdhary in a dark coat" width="512" height="512" loading="lazy">
+  <div class="crew-portrait-egg">
+    <img class="crew-portrait" src="/img/about/iliyas-chawdhary.jpg" alt="Stylized portrait of Iliyas Chawdhary in a dark coat" width="512" height="512" loading="lazy">
+    <img class="crew-portrait crew-portrait-alt" src="/img/about/iliyas-chawdhary-cat.jpg" alt="" aria-hidden="true" width="512" height="512" loading="lazy">
+  </div>
   <div class="crew-body">
     <h3 class="crew-name">Iliyas Chawdhary</h3>
     <p class="crew-role">A&amp;R · Advisor and SME</p>
