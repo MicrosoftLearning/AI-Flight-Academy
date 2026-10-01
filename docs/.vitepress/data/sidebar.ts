@@ -68,17 +68,6 @@ export function navBuildItems() {
   ];
 }
 
-/** "Guides" nav dropdown: one group per track, sourced from shared metadata. */
-export function navGuideItems() {
-  return tracks.map((track) => ({
-    text: `${track.emoji} ${track.label}`,
-    items: track.guides.map((guide) => ({
-      text: guide.text,
-      link: guide.link,
-    })),
-  }));
-}
-
 /**
  * The sidebar is scoped to the choice you've made. Once you're in a scenario
  * the other scenarios disappear entirely - you see your scenario's three paths
@@ -140,22 +129,11 @@ export function globalSidebar(
         ],
       };
 
-  const guidesSection = track
-    ? {
-        // Guides live at /bricks/ and are reached from the top nav, so these
-        // link out rather than to an on-page anchor.
-        text: `Guides for ${track.emoji} ${track.label}`,
-        collapsed: true,
-        items: track.guides.map((g) => ({ text: g.text, link: g.link })),
-      }
-    : {
-        text: "Guides",
-        items: tracks.map((t) => ({
-          text: `${t.emoji} ${t.label}`,
-          collapsed: true,
-          items: t.guides,
-        })),
-      };
+  // One page now, so there's nothing to scope per track - just a link to it.
+  const guidesSection = {
+    text: "Reference",
+    items: [{ text: "The basics", link: "/bricks/" }],
+  };
 
   // A lean rail is just "where am I in this path" - nothing else. Scenario 0 is
   // the pre-event readiness gate, so the site-wide links, guides, and finish
@@ -199,11 +177,7 @@ export function sidebars(): Record<string, ReturnType<typeof globalSidebar>> {
       });
     }
   }
-  for (const t of tracks) {
-    for (const g of t.guides) {
-      out[g.link] = globalSidebar({ track: t.id });
-    }
-  }
+  out["/bricks/"] = globalSidebar();
   out["/"] = globalSidebar();
   return out;
 }

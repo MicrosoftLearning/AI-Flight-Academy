@@ -1,45 +1,79 @@
 ---
-title: Step-by-step guides
+title: The basics
 ---
 
-# Step-by-step guides
+<!-- markdownlint-disable MD013 MD025 MD033 -->
 
-Full walkthroughs for each part of a build - every click, every prompt, every setting.
+# The basics
 
-::: tip How these fit with your build page
-Your [build page](/#start-here) gets you through the hack top to bottom, with the essentials expandable in place.
+Your build page has the steps for your scenario, and a **Stuck?** table at the bottom for when something goes wrong. This page covers the few things that trip people up on *every* scenario, whichever altitude you're flying.
 
-**These are the complete versions.** Open one in a new tab and keep it beside your build page if you want every step spelled out - or come back to them after the hack when you're building something of your own.
+If you're stuck on something not listed here: ask your AI first, then your table SME, then wave down a coach in a yellow vest.
+
+## Skills load when a session starts
+
+The single most common problem in the room. You install a skill, ask for it, and the agent answers as itself - no skill, no reference files, generic reply.
+
+Skills are discovered **when a session begins**. One added mid-session stays invisible until you start a fresh one.
+
+| | What to do |
+| --- | --- |
+| 🟢 **Cowork** | Install the skill, then start a **new task** |
+| 🔵 **Scout** | Import the skill, then start a **new chat** |
+| 🟣 **Code** | Run `copilot skill list` from inside the starter folder - the CLI reads `.github/skills/` in whatever folder your terminal is in, so it only appears when you've `cd`'d into the starter |
+
+Then **name the skill in your request** - *"using my twin"*, *"using the ambassador skill"*. Drop the name and the agent often answers as itself.
+
+## Install the whole thing, not just `SKILL.md`
+
+`SKILL.md` is the instructions. The folder around it holds the reference files the skill reads - definitions, templates, playbooks, worked examples. Upload the file alone and the skill loads but can't reach any of them.
+
+- 🟢 **Cowork** takes the archive **as it downloads**. Don't unzip it first. [Customize → Skills → Add ▾ → Upload skill](https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-customize#upload-a-skill)
+- 🔵 **Scout** needs it **unzipped**. **Extensions → Import**, then drag in the **folder** that contains `SKILL.md` - use the skill-folder drop zone, not the `.md` one.
+
+The one exception: Scenario 1 on Cowork ships a single self-contained `SKILL.md` with nothing beside it, so there the file *is* the whole skill.
+
+## Work IQ: what your agent can already see
+
+**Work IQ** grounds your agent in your real Microsoft 365 work. There's nothing to connect and no auth to build - Cowork and Scout both reach it with no setup.
+
+It can see what **you** can already see: mail and sent mail, calendar, Teams chats and channels, OneDrive and SharePoint files, and people and org context. It never sees more than you can, and nothing leaves your tenant.
+
+**Quick check that grounding is live:** ask *"what's on my calendar tomorrow?"* A real answer means you're good. If it asks you to paste something in, grab a coach.
+
+On 🟣 **Code**, Work IQ isn't automatic - you add it as an [MCP server](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview). It's an existing Microsoft server, so there's nothing to build.
+
+::: warning Keep your own work on your own screen
+You're each building against your real mail and calendar. When you compare with your table, share **the prompt that worked, not your mailbox**.
 :::
 
-::: tip New to Work IQ?
-**[What Work IQ is - and what it can see](/bricks/work-iq)** is the shared grounding layer all three altitudes use. Read it once; the per-altitude guides below show how to put it to work.
-:::
+## When it changes more than you asked
 
-## 🟢 Cowork {#cowork}
-| Guide | Use it when |
-| --- | --- |
-| [Install a provided skill](/bricks/cowork-install-skill) | You've downloaded a skill and need it running in Cowork |
-| [Connect Cowork to a data source](/bricks/cowork-connect-source) | You need to pull your mail, calendar, or files - and get it back in a shape you can reuse |
-| [Ground Cowork in your work (Work IQ)](/bricks/cowork-work-iq) | You want a persona or audience profile drawn from your own mail and calendar |
-| [Write a reusable Cowork skill](/bricks/cowork-build-skill) | You're creating or editing a skill and want the full anatomy, limits, and sharing options |
-| [Produce a formatted output](/bricks/cowork-formatted-output) | Your output needs to come back the same way every time |
-| [Re-run a skill on new inputs](/bricks/cowork-rerun-skill) | You want it to run on a schedule, or fire on an email or @mention |
+Expected, and recoverable. Ask what it changed and why, undo the parts you didn't want, then make **one change at a time**. Change three things at once and you won't know which one did it.
 
-## 🔵 Scout {#scout}
-| Guide | Use it when |
-| --- | --- |
-| [Set up Microsoft Scout](/bricks/scout-setup) | Getting Scout ready, importing a skill, and confirming it can reach your work |
-| [Ground Scout in your work (Work IQ)](/bricks/scout-work-iq) | Pulling real evidence out of mail and calendar |
-| [Have Scout build you an app](/bricks/scout-build-app) | Getting Scout to scaffold and run something local |
-| [Make it run without you](/bricks/scout-autonomy) | Schedules, triggers, and keeping approval on anything outbound |
+Same rule when an answer is wrong: ask which rule or file produced it, fix that one line, then ask again. If nothing moves, the line was too vague - name a person, a date, a hard no.
 
-## 🟣 Code {#code}
-| Guide | Use it when |
+## Before you run anything on 🟣 Code
+
+| Check | Command | If it fails |
+| --- | --- | --- |
+| Python 3.10+ | `python --version` | Try `py` on Windows |
+| Copilot CLI | `copilot --version` | `npm install -g @github/copilot`, then sign in |
+| Skill found | `copilot skill list` | `cd` into the starter folder first |
+
+**A call takes 20-60 seconds.** That's a full agent turn, not a hang - don't cancel it, and never call in a loop or per-file. When a *program* reads the answer, ask for JSON: `ask_json()` returns a parsed object, and prose is useless to a parser.
+
+## Going deeper
+
+Official documentation, if you want more than the session covers:
+
+| | |
 | --- | --- |
-| [Set up VS Code + GitHub Copilot](/bricks/code-setup) | Getting agent mode, the CLI, and custom agent files working |
-| [Run the starter project](/bricks/code-run-starter) | Getting a scenario's starter installed and running locally (Node, Python, the CLI) |
-| [Build against a contract with Copilot](/bricks/code-build-with-agent) | Finishing a stub, TODO, or docstring by pointing Copilot agent mode at it |
-| [Ground on live data with Work IQ](/bricks/code-work-iq) | Turning real calendar and mail behavior into evidence |
-| [Build a custom connector (MCP)](/bricks/code-mcp-connector) | Exposing your agent as tools other agents can call |
-| [Add a guardrail / output check](/bricks/code-guardrail) | Stopping an agent doing something it shouldn't |
+| [Customize Copilot Cowork](https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-customize) | Skills, plugins, and how to upload them |
+| [Use Copilot Cowork](https://learn.microsoft.com/microsoft-365/copilot/cowork/use-cowork#cowork-skills) | What Cowork does and how skills fit |
+| [Cowork FAQ](https://learn.microsoft.com/microsoft-365/copilot/cowork/cowork-faq) | Common questions |
+| [Get started with Microsoft Scout](https://learn.microsoft.com/microsoft-scout/get-started) | Install, sign-in, and settings |
+| [Use Microsoft Scout](https://learn.microsoft.com/microsoft-scout/use-microsoft-scout#manage-skills) | Managing skills, including writing your own |
+| [Microsoft Scout FAQ](https://learn.microsoft.com/microsoft-scout/faq) | Permissions, shell commands, custom skills |
+| [Work IQ MCP server](https://learn.microsoft.com/en-us/microsoft-365/copilot/extensibility/work-iq/mcp/overview) | Reaching your M365 work from code |
+| [About GitHub Copilot CLI](https://docs.github.com/copilot/concepts/agents/about-copilot-cli) | The CLI the Code starters call |

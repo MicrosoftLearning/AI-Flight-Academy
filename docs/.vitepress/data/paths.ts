@@ -14,10 +14,6 @@ export interface Track {
   buildsVerb: string;
   /** Card copy. `**bold**` is rendered by PathPicker - keep it to tool names. */
   desc: string;
-  /** Section of /bricks/ holding the step-by-step guides for this track. */
-  guidesLink: string;
-  /** The guides themselves, for the sidebar. */
-  guides: { text: string; link: string }[];
 }
 
 export interface Scenario {
@@ -38,15 +34,6 @@ export const tracks: Track[] = [
     tool: "Microsoft Copilot + Cowork",
     buildsVerb: "Builds with",
     desc: "**Microsoft Copilot Cowork** - just describe what you need. **Work IQ** pulls in your work context automatically.",
-    guidesLink: "/bricks/#cowork",
-    guides: [
-      { text: "Install a provided skill", link: "/bricks/cowork-install-skill" },
-      { text: "Connect to a data source", link: "/bricks/cowork-connect-source" },
-      { text: "Ground Cowork in your work (Work IQ)", link: "/bricks/cowork-work-iq" },
-      { text: "Write a reusable skill", link: "/bricks/cowork-build-skill" },
-      { text: "Produce a formatted output", link: "/bricks/cowork-formatted-output" },
-      { text: "Re-run a skill on new inputs", link: "/bricks/cowork-rerun-skill" },
-    ],
   },
   {
     id: "scout",
@@ -56,13 +43,6 @@ export const tracks: Track[] = [
     tool: "Microsoft Scout",
     buildsVerb: "Builds with",
     desc: "**Microsoft Scout** - describe what you want and Scout builds it, grounded in your work through **Work IQ** and running against **GitHub Copilot CLI**.",
-    guidesLink: "/bricks/#scout",
-    guides: [
-      { text: "Set up Microsoft Scout", link: "/bricks/scout-setup" },
-      { text: "Ground Scout in your work (Work IQ)", link: "/bricks/scout-work-iq" },
-      { text: "Have Scout build you an app", link: "/bricks/scout-build-app" },
-      { text: "Make it run without you", link: "/bricks/scout-autonomy" },
-    ],
   },
   {
     id: "code",
@@ -72,15 +52,6 @@ export const tracks: Track[] = [
     tool: "VS Code + GitHub Copilot",
     buildsVerb: "Builds in",
     desc: "**GitHub Copilot on the surface of your choice - VS Code, the Copilot CLI, or the GitHub Copilot app.** Write the agents yourself and enforce guardrails in the tool rather than the prompt.",
-    guidesLink: "/bricks/#code",
-    guides: [
-      { text: "Set up VS Code + GitHub Copilot", link: "/bricks/code-setup" },
-      { text: "Run the starter project", link: "/bricks/code-run-starter" },
-      { text: "Build against a contract with Copilot", link: "/bricks/code-build-with-agent" },
-      { text: "Ground on live data with Work IQ", link: "/bricks/code-work-iq" },
-      { text: "Build a custom connector (MCP)", link: "/bricks/code-mcp-connector" },
-      { text: "Add a guardrail / output check", link: "/bricks/code-guardrail" },
-    ],
   },
 ];
 

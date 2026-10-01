@@ -1,5 +1,5 @@
 import { defineConfig } from "vitepress";
-import { navBuildItems, navGuideItems, sidebars, isBuildPage } from "./data/sidebar";
+import { navBuildItems, sidebars, isBuildPage } from "./data/sidebar";
 
 export default defineConfig({
   title: "AI Flight Academy",
@@ -28,8 +28,8 @@ export default defineConfig({
         items: navBuildItems(),
       },
       {
-        text: "Guides",
-        items: navGuideItems(),
+        text: "The basics",
+        link: "/bricks/",
       },
       {
         text: "Resources",

@@ -59,7 +59,7 @@ Download these two files now. You'll need them in the first few minutes.
 </div>
 
 ::: tip Want more detail on a task?
-The **[Guides](/bricks/)** in the top menu explain the basic tasks on this page: how to install a skill, how to connect Cowork to your own work, and how to run things on a schedule. The guides work for every scenario. If you get stuck on one of these tasks, open the guide in a new tab.
+**[The basics](/bricks/)** in the top menu covers what trips people up on every scenario - skills loading at session start, uploading the whole skill, and what Work IQ can see. It also links to the official docs if you want to go further.
 :::
 
 ---
