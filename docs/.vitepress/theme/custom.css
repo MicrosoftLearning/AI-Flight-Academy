@@ -1006,25 +1006,6 @@ html:not(.dark) .goal-card-emoji {
   color: var(--vp-c-brand-1);
 }
 
-.tracklist {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 0 32px;
-  max-width: 640px;
-  font-family: "Courier New", Courier, monospace;
-}
-
-.about-page .tracklist-side {
-  margin-bottom: 0.25rem;
-  font-weight: 700;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.about-page .tracklist ol {
-  margin-top: 0;
-}
-
 /* Wide screens: horizontal band cards in a 2-column grid */
 @media (min-width: 960px) {
   .crew-grid {

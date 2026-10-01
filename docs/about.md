@@ -135,31 +135,6 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
 
 </div>
 
-## Liner notes
-
-<div class="tracklist">
-  <div>
-    <p class="tracklist-side">Side A</p>
-    <ol>
-      <li>Pre-Flight Checklist</li>
-      <li>Three Altitudes</li>
-      <li>40/40/20</li>
-      <li>Engage Their Managers</li>
-      <li>Cleared for Takeoff</li>
-    </ol>
-  </div>
-  <div>
-    <p class="tracklist-side">Side B</p>
-    <ol start="6">
-      <li>My Army of Agents</li>
-      <li>Chipmunk at 2x Speed</li>
-      <li>Tab Open Since Ignite</li>
-      <li>Anaheim (Time, Not Distance)</li>
-      <li>Huzzah (Reprise)</li>
-    </ol>
-  </div>
-</div>
-
 ## Ground Crew Support
 
 <p class="about-intro">Every band needs the people who keep the van running. These three kept the show on the road.</p>
