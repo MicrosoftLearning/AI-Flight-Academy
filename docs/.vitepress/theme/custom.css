@@ -1024,7 +1024,7 @@ html:not(.dark) .goal-card-emoji {
   margin-top: 0;
 }
 
-/* Wide screens: horizontal cards in a balanced 2 x 5 grid */
+/* Wide screens: horizontal band cards in a 2-column grid */
 @media (min-width: 960px) {
   .crew-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1041,6 +1041,61 @@ html:not(.dark) .goal-card-emoji {
     aspect-ratio: auto;
     min-height: 100%;
     object-fit: cover;
+  }
+
+  /* Center an odd last card instead of leaving it stranded on the left */
+  .crew-grid:not(.crew-grid--support) > .crew-card:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: calc(50% - 10px);
+  }
+}
+
+/* Ground Crew Support: smaller, vertical cards */
+.about-page .crew-grid--support {
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 1.5rem 0 2rem;
+}
+
+.about-page .crew-card--support {
+  flex-direction: column;
+}
+
+.about-page .crew-card--support .crew-portrait {
+  flex: none;
+  width: 100%;
+  min-height: 0;
+  aspect-ratio: 4 / 3;
+  object-position: center 30%;
+}
+
+.about-page .crew-card--support .crew-body {
+  padding: 12px 14px 14px;
+}
+
+.about-page .crew-card--support .crew-name {
+  font-size: 1rem;
+}
+
+.about-page .crew-card--support .crew-role {
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.about-page .crew-card--support .crew-summary {
+  margin-bottom: 0.75rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.about-page .crew-card--support .crew-quote p {
+  font-size: 0.85rem;
+}
+
+@media (min-width: 960px) {
+  .about-page .crew-grid--support {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 

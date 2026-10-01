@@ -9,7 +9,7 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
 
 <figure class="album">
   <div class="album-cover">
-    <img src="/img/about/band-banner.jpg" alt="Stylized 1990s alt-rock album cover of the ten-person AI Flight Academy V-team standing on an airfield tarmac at dusk, with a vintage propeller plane and an open hangar behind them." width="1536" height="1024">
+    <img src="/img/about/band-banner.jpg" alt="Stylized 1990s alt-rock album cover of the seven-piece AI Flight Academy V-team standing on an airfield tarmac at dusk, with a vintage propeller plane and an open hangar behind them." width="1536" height="1024">
     <div class="album-title" aria-hidden="true">
       <span class="album-band">The Ground Crew</span>
       <span class="album-name">Cleared for Takeoff</span>
@@ -30,13 +30,13 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
     </span>
   </div>
   <figcaption>
-    <strong>The Ground Crew - <em>Cleared for Takeoff</em></strong> (2026). Pictured, left to right: Erin Jacobsen, Matt Quinlan, Darrin Hanson, Andrew Conniff, Steve Luper, Dipanjan Ghosh, Christian Talavera, Iliyas Chawdhary, Aurelie Saada, George Smpyrakis.
+    <strong>The Ground Crew - <em>Cleared for Takeoff</em></strong> (2026). Pictured, front: Erin Jacobsen and Matt Quinlan. Back, left to right: Steve Luper, Darrin Hanson, Andrew Conniff, Dipanjan Ghosh, Christian Talavera.
   </figcaption>
 </figure>
 
 # Meet the crew
 
-<p class="about-intro">AI Flight Academy started life as the Imagineer Hack. Ten people from Global Skilling turned it into two hours of hands-on agent building for Team Week, with three scenarios at three altitudes, more than 20 coaches, and a room full of builders in Anaheim. Here's who's in the band.</p>
+<p class="about-intro">AI Flight Academy started life as the Imagineer Hack. A seven-piece band from Global Skilling, backed by a ground crew of support players, turned it into two hours of hands-on agent building for Team Week, with three scenarios at three altitudes, more than 20 coaches, and a room full of builders in Anaheim. Here's who's in the band.</p>
 
 <p class="about-fineprint">Portraits are AI-stylized from each person's profile photo. Quotes tagged <span class="quote-tag is-real">Actually said</span> are real; quotes tagged <span class="quote-tag">Liner notes</span> are affectionate fiction.</p>
 
@@ -112,36 +112,6 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
   </div>
 </article>
 
-<article class="crew-card">
-  <img class="crew-portrait" src="/img/about/iliyas-chawdhary.jpg" alt="Stylized portrait of Iliyas Chawdhary in a dark coat" width="512" height="512" loading="lazy">
-  <div class="crew-body">
-    <h3 class="crew-name">Iliyas Chawdhary</h3>
-    <p class="crew-role">Session player &amp; A&amp;R · Advisor and SME</p>
-    <p class="crew-summary">Shaped the Intake and Loyalty scenario ideas, lined the hack up with the AI Upskilling series, and gathered feedback. He also pitched the companion September Global Skilling Hackathon, a "Shark Tank" incubator to Team Week's activator.</p>
-    <blockquote class="crew-quote"><p>"Great hack. Now, what if there were sharks?"</p><span class="quote-tag">Liner notes</span></blockquote>
-  </div>
-</article>
-
-<article class="crew-card">
-  <img class="crew-portrait" src="/img/about/aurelie-saada.jpg" alt="Stylized portrait of Aurelie Saada in a leather jacket and patterned scarf" width="512" height="512" loading="lazy">
-  <div class="crew-body">
-    <h3 class="crew-name">Aurelie Saada</h3>
-    <p class="crew-role">Sound engineer · Scenario testing and helpdesk</p>
-    <p class="crew-summary">Tested the scenarios end to end, consolidated tester feedback, and worked the fixes through with Matt and Darrin. She was a big part of the helpdesk, unblocking people one by one and making sure everyone got their flight logs submitted.</p>
-    <blockquote class="crew-quote"><p>"A flying brain and hands for any of you who need me."</p><span class="quote-tag is-real">Actually said</span></blockquote>
-  </div>
-</article>
-
-<article class="crew-card">
-  <img class="crew-portrait" src="/img/about/george-smpyrakis.jpg" alt="Stylized portrait of George Smpyrakis in a pilot cap and hoodie with captain stripes" width="512" height="512" loading="lazy">
-  <div class="crew-body">
-    <h3 class="crew-name">George Smpyrakis</h3>
-    <p class="crew-role">Keys &amp; in-flight announcements · Pre-flight video and readiness</p>
-    <p class="crew-summary">Wrote and recorded the airline-safety-style pre-flight video, built readiness content, and coached. His first reaction to the flight theme was a wardrobe request.</p>
-    <blockquote class="crew-quote"><p>"I need to get a pilot costume."</p><span class="quote-tag is-real">Actually said</span></blockquote>
-  </div>
-</article>
-
 </div>
 
 ## Liner notes
@@ -167,6 +137,44 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
       <li>Huzzah (Reprise)</li>
     </ol>
   </div>
+</div>
+
+## Ground Crew Support
+
+<p class="about-intro">Every band needs the people who keep the van running. These three kept the show on the road.</p>
+
+<div class="crew-grid crew-grid--support">
+
+<article class="crew-card crew-card--support">
+  <img class="crew-portrait" src="/img/about/aurelie-saada.jpg" alt="Stylized portrait of Aurelie Saada in a leather jacket and patterned scarf" width="512" height="512" loading="lazy">
+  <div class="crew-body">
+    <h3 class="crew-name">Aurelie Saada</h3>
+    <p class="crew-role">Sound engineer · Scenario testing and helpdesk</p>
+    <p class="crew-summary">Tested the scenarios end to end, consolidated tester feedback, and worked the fixes through with Matt and Darrin. She was a big part of the helpdesk, unblocking people one by one and making sure everyone got their flight logs submitted.</p>
+    <blockquote class="crew-quote"><p>"A flying brain and hands for any of you who need me."</p><span class="quote-tag is-real">Actually said</span></blockquote>
+  </div>
+</article>
+
+<article class="crew-card crew-card--support">
+  <img class="crew-portrait" src="/img/about/george-smpyrakis.jpg" alt="Stylized portrait of George Smpyrakis in a pilot cap and hoodie with captain stripes" width="512" height="512" loading="lazy">
+  <div class="crew-body">
+    <h3 class="crew-name">George Smpyrakis</h3>
+    <p class="crew-role">In-flight announcements · Pre-flight video and readiness</p>
+    <p class="crew-summary">Wrote and recorded the airline-safety-style pre-flight video, built readiness content, and coached. His first reaction to the flight theme was a wardrobe request.</p>
+    <blockquote class="crew-quote"><p>"I need to get a pilot costume."</p><span class="quote-tag is-real">Actually said</span></blockquote>
+  </div>
+</article>
+
+<article class="crew-card crew-card--support">
+  <img class="crew-portrait" src="/img/about/iliyas-chawdhary.jpg" alt="Stylized portrait of Iliyas Chawdhary in a dark coat" width="512" height="512" loading="lazy">
+  <div class="crew-body">
+    <h3 class="crew-name">Iliyas Chawdhary</h3>
+    <p class="crew-role">A&amp;R · Advisor and SME</p>
+    <p class="crew-summary">Shaped the Intake and Loyalty scenario ideas, lined the hack up with the AI Upskilling series, and gathered feedback. He also pitched the companion September Global Skilling Hackathon, a "Shark Tank" incubator to Team Week's activator.</p>
+    <blockquote class="crew-quote"><p>"Great hack. Now, what if there were sharks?"</p><span class="quote-tag">Liner notes</span></blockquote>
+  </div>
+</article>
+
 </div>
 
 <p class="about-intro">Recorded live at Team Week 2026, Anaheim. Thanks to every coach, SME, and tester who joined the ground crew. Ready to fly? <a href="/AI-Flight-Academy/#start-here">Pick your path</a>.</p>
