@@ -122,10 +122,6 @@ const jobs = [
     purge: ["__pycache__/", "**/__pycache__/", ".twin-scratch/"],
   },
   {
-    src: join(root, "Allfiles", "scenario-1-digital-twin", "persona-pack"),
-    zip: "avery-persona-pack.zip",
-  },
-  {
     src: join(root, "Allfiles", "scenario-1-digital-twin", "scout", "my-twin"),
     zip: "my-twin-scout.zip",
     // Everything below is produced by running the twin and is personal to
