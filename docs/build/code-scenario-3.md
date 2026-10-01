@@ -20,7 +20,7 @@ In this activity you run it, change what it looks for, and then start extending 
 | **2** | **Change what it looks for** | You've swapped the written description of what the program wants, re-run, and seen different names come back. |
 | **3** | **Extend it** | `cohort.py` does something it couldn't before. |
 
-Step 3 is the main build, and it isn't one change. Extend it, re-run, see what moved, then extend it again. Most cards include a prompt you can paste. **Change it as you like. It's a starting point, not the answer.**
+Step 3 is the main build, and it isn't one change. Extend it, re-run, see what moved, then extend it again.
 
 **cohort.py proposes. A person decides.** The eight names are a recommendation someone has to act on, so every change you make should make that person's job easier: more evidence on screen, clearer reasoning, a faster way to overrule it.
 

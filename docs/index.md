@@ -4,9 +4,9 @@ layout: home
 hero:
   name: AI Flight Academy
   text: Train. Build. Take off.
-  tagline: Two hours, your tools, and a real problem to crack. Pick how you want to build, and walk out with an agent that's yours.
+  tagline: Two hours, your tools, and a real problem to crack.
   image:
-    src: /hero.svg
+    src: /hero.png
     alt: AI Flight Academy
   actions:
     - theme: brand
@@ -24,26 +24,30 @@ hero:
 
 <p class="home-section-intro is-wide">This session is about getting your hands on the keyboard, trying something new, and discovering practical ways to work with AI.</p>
 
-Our goals are simple:
+<p class="goal-grid-label">Our goals are simple</p>
 
 <div class="goal-grid">
   <div class="goal-card is-blue">
     <span class="goal-card-emoji">🛠️</span>
+    <span class="goal-card-num">01</span>
     <span class="goal-card-title">Get hands-on with AI</span>
     <span class="goal-card-desc">Spend less time watching and more time building.</span>
   </div>
   <div class="goal-card is-orange">
     <span class="goal-card-emoji">🧗</span>
+    <span class="goal-card-num">02</span>
     <span class="goal-card-title">Move beyond your comfort zone</span>
     <span class="goal-card-desc">Choose an altitude that challenges you and see where it takes you.</span>
   </div>
   <div class="goal-card is-green">
     <span class="goal-card-emoji">🌱</span>
+    <span class="goal-card-num">03</span>
     <span class="goal-card-title">Start small</span>
     <span class="goal-card-desc">You aren't expected to finish a production-ready system. Use an MVP mindset to prototype, experiment, and learn.</span>
   </div>
   <div class="goal-card is-purple">
     <span class="goal-card-emoji">🤝</span>
+    <span class="goal-card-num">04</span>
     <span class="goal-card-title">Have fun together</span>
     <span class="goal-card-desc">Collaborate with your table, share what you discover, and find new ways to use AI.</span>
   </div>

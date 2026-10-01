@@ -20,7 +20,7 @@ In this activity you set up a twin, correct what it got wrong, and put it to wor
 | **2** | **Correct it** | You've changed two or three lines and watched an answer change because of it. |
 | **3** | **Extend it** | The twin does something it couldn't before. |
 
-Steps 1 and 2 are quick - about 20 minutes together. Step 3 is the main build, and it isn't one change: extend it, re-run, see what moved, then extend it again. Most cards include a prompt you can paste. **Change it as you like. It's a starting point, not the answer.**
+Steps 1 and 2 are quick - about 20 minutes together. Step 3 is the main build, and it isn't one change: extend it, re-run, see what moved, then extend it again.
 
 **Your twin drafts. You send.** Whatever you build should show you who it's addressed to and what it says, then wait for a yes.
 

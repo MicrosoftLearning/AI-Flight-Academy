@@ -20,7 +20,7 @@ In this activity you run that skill, change what it looks for, and then start ex
 | **2** | **Change what it looks for** | A different definition has given you a different shortlist. |
 | **3** | **Extend it** | The skill does something it couldn't before. |
 
-Step 3 is the main build, and it isn't one change. Extend the skill, re-run, see what moved, then extend it again. Most cards include a prompt you can paste. **Change it as you like. It's a starting point, not the answer.**
+Step 3 is the main build, and it isn't one change. Extend the skill, re-run, see what moved, then extend it again.
 
 **The skill proposes. A person decides.** The eight names are a recommendation someone has to act on, so every change you make should make that person's job easier: more evidence on screen, clearer reasoning, a faster way to overrule it.
 
