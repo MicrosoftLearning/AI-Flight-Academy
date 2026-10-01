@@ -113,8 +113,8 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
   <img class="crew-portrait" src="/img/about/aurelie-saada.jpg" alt="Stylized portrait of Aurelie Saada in a leather jacket and patterned scarf" width="512" height="512" loading="lazy">
   <div class="crew-body">
     <h3 class="crew-name">Aurelie Saada</h3>
-    <p class="crew-role">Sound engineer · Scenario review and testing</p>
-    <p class="crew-summary">Tested the scenarios end to end, consolidated tester feedback, and worked the fixes through with Matt and Darrin. Her product troubleshooting know-how caught problems before participants could.</p>
+    <p class="crew-role">Sound engineer · Scenario testing and helpdesk</p>
+    <p class="crew-summary">Tested the scenarios end to end, consolidated tester feedback, and worked the fixes through with Matt and Darrin. She was a big part of the helpdesk, unblocking people one by one and making sure everyone got their flight logs submitted.</p>
     <blockquote class="crew-quote"><p>"A flying brain and hands for any of you who need me."</p><span class="quote-tag is-real">Actually said</span></blockquote>
   </div>
 </article>
