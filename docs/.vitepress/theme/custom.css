@@ -621,11 +621,9 @@ a.lab-card:hover {
    set of colours. */
 .goal-grid-label {
   margin: 2rem 0 0.9rem;
-  font-size: 0.78rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--vp-c-text-3);
+  color: var(--vp-c-text-1);
 }
 
 .goal-grid {
