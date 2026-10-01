@@ -30,7 +30,7 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
     </span>
   </div>
   <figcaption>
-    <strong>The Ground Crew - <em>Cleared for Takeoff</em></strong> (2026). Pictured, front: Erin Jacobsen and Matt Quinlan. Back, left to right: Steve Luper, Darrin Hanson, Andrew Conniff, Dipanjan Ghosh, Christian Talavera.
+    <strong>The Ground Crew - <em>Cleared for Takeoff</em></strong> (2026). Pictured, left to right: Erin Jacobsen, Steve Luper, Darrin Hanson, Matt Quinlan (front), Andrew Conniff, Dipanjan Ghosh, Christian Talavera.
   </figcaption>
 </figure>
 
