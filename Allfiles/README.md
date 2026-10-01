@@ -2,12 +2,11 @@
 
 Participant assets, one folder per scenario.
 
-| Folder | Scenario | Status |
-| --- | --- | --- |
-| `scenario-1-digital-twin/` | The Digital Twin | 🚧 Work in progress |
-| `scenario-2-dispatch/` | Dispatch | 🚧 Work in progress |
-| `scenario-3-ambassador/` | The Ambassador | 🚧 Work in progress |
-| `scenario-2-greenlight/` | *(superseded by Dispatch)* | Not packaged. Safe to delete |
+| Folder | Scenario |
+| --- | --- |
+| `scenario-1-digital-twin/` | The Digital Twin |
+| `scenario-2-dispatch/` | Dispatch |
+| `scenario-3-ambassador/` | The Ambassador |
 
 ## How participants get these
 
@@ -28,10 +27,9 @@ That means:
 3. Register the assets in `scripts/pack-downloads.mjs`:
    - folders that should be zipped go in `jobs`
    - single files that ship as-is go in `singles`
-4. Link them from `docs/resources/downloads.md` and the relevant build page.
+4. Link them from the relevant build page.
 
-::: tip Single files vs zips
-Cowork accepts a `.md`, or a `.zip`/`.skill` archive with `SKILL.md` at its root
-plus companion files. Use `singles` when a skill is genuinely one self-contained
-file and a zip would add nothing; use `jobs` when it has references beside it.
-:::
+> **Single files vs zips.** Cowork accepts a `.md`, or a `.zip`/`.skill` archive
+> with `SKILL.md` at its root plus companion files. Use `singles` when a skill is
+> genuinely one self-contained file and a zip would add nothing; use `jobs` when
+> it has references beside it.

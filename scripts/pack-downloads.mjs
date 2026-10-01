@@ -3,7 +3,7 @@
 // touch GitHub or run git clone.
 //
 // Adding a scenario: add its folders to jobs (zipped) or singles (copied
-// as-is), then link them from docs/resources/downloads.md.
+// as-is), then link them from the relevant build page.
 //
 // Runs automatically before docs:dev and docs:build, so the downloads can't
 // drift from the source files.

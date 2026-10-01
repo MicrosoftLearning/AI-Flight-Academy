@@ -7,6 +7,9 @@ export default defineConfig({
     "A 2-hour hands-on agent-building session for Global Skilling Team Week. Train, build, and take off with a working agent that's yours.",
   base: "/AI-Flight-Academy/",
   cleanUrls: true,
+  // The packer writes a .md into public/ for Cowork to download. Without this,
+  // VitePress also renders it as a page at /public/downloads/.
+  srcExclude: ["public/**"],
   // Dark by default - the scenario art and the altitude colours were built
   // against it. The toggle still works for anyone who prefers light.
   appearance: "dark",

@@ -1,16 +1,65 @@
-# Microsoft Lab Exercises
-<!-- Change the title above as appropriate -->
+# AI Flight Academy
 
-<!-- Review the notes in the index.md file to set up the repo for GitHub Pages -->
+A two-hour hands-on agent-building session for Global Skilling Team Week.
 
-This repo contains exercises and supporting files for Microsoft skilling content.
+Three scenarios, each buildable at three altitudes, so everyone works on the same problem at the level that suits them.
 
-The exercises may be used in both self-paced skilling experiences on [Microsoft Learn](https://learn.microsoft.com) and in Microsoft authorized instructor-led training.
-<!-- Update the paragraph above with a link to a specific Learning Path or course as appropriate -->
+| | Scenario | What you build |
+| --- | --- | --- |
+| 🧬 | **The Digital Twin** | A portable spec of how you work, saved as a skill |
+| 🎛️ | **Dispatch** | A room of teams that routes a skilling request |
+| 🎖️ | **The Ambassador** | A cohort picker that shows the evidence behind its choices |
 
-## Information for MCTs
-<!-- You can remove this section if the exercises will not be used to support Microsoft Official Curriculum ILT -->
+| | Altitude | Built with |
+| --- | --- | --- |
+| 🟢 | **Cowork** | Microsoft Copilot + Cowork |
+| 🔵 | **Scout** | Microsoft Scout |
+| 🟣 | **Code** | VS Code + GitHub Copilot, or the Copilot CLI |
 
-**Are you an MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
+## The site
 
-Any MCT (Microsoft Certified Trainer) can submit a pull request to the code or content in the GitHub repro. Microsoft and the course author will then triage and include content and lab code changes as needed. You can submit bugs, changes, improvement, and ideas. Find a new Azure or Microsoft 365 feature before we have? Submit a new demo!
+<https://microsoftlearning.github.io/AI-Flight-Academy/>
+
+Built with [VitePress](https://vitepress.dev/) and deployed to GitHub Pages by `.github/workflows/deploy-vitepress.yml` on every push to `main`.
+
+```bash
+npm install
+npm run docs:dev      # local, hot-reloads
+npm run docs:build    # production build into docs/.vitepress/dist
+npm run docs:preview  # serve the production build
+```
+
+## Layout
+
+```text
+docs/
+  index.md              home page, with the altitude x scenario picker
+  glossary.md           product terms, linked to the official docs
+  build/                one page per altitude x scenario - the session content
+  levels/               which altitude is right for me
+  scenarios/            Scenario 0, the pre-event readiness brief
+  public/               images, and generated downloads (gitignored)
+  .vitepress/
+    config.mts          nav, theme, site config
+    data/paths.ts       single source of truth for tracks x scenarios
+    data/sidebar.ts     nav and sidebar builders
+    theme/              custom components and CSS
+
+Allfiles/               participant assets, one folder per scenario
+scripts/
+  pack-downloads.mjs    zips Allfiles into docs/public/downloads before a build
+```
+
+## Participant downloads
+
+Participants never browse this repo. `scripts/pack-downloads.mjs` runs automatically before `docs:dev` and `docs:build`, zipping the folders in `Allfiles/` into `docs/public/downloads/` so the site serves them directly.
+
+**Edit the source in `Allfiles/`** - the downloads regenerate on every build. Never edit `docs/public/downloads/`; it's generated and gitignored.
+
+## Scenario 0
+
+The pre-event readiness checklist lives at `/scenarios/scenario-0` and `/build/*-scenario-0`. It's deliberately **hidden from the navigation** during the event so nobody lands in setup by mistake. The pages still build and still work when you navigate straight to them - see the `SCENARIO_0` comment in `docs/.vitepress/data/paths.ts` for how to restore the links afterwards.
+
+## Contributing
+
+See [CONTRIBUTING.md](.github/CONTRIBUTING.md).
