@@ -1051,6 +1051,45 @@ html:not(.dark) .goal-card-emoji {
   }
 }
 
+/* Easter egg: a second portrait that fades in when the card is hovered */
+.about-page .crew-portrait-egg {
+  position: relative;
+  overflow: hidden;
+}
+
+.about-page .crew-portrait-egg .crew-portrait {
+  width: 100%;
+  height: 100%;
+}
+
+.about-page .crew-portrait-egg .crew-portrait-alt {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.crew-card:hover .crew-portrait-alt {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page .crew-portrait-egg .crew-portrait-alt {
+    transition: none;
+  }
+}
+
+@media (min-width: 960px) {
+  .about-page .crew-portrait-egg {
+    flex: 0 0 40%;
+    width: 40%;
+  }
+
+  .about-page .crew-portrait-egg .crew-portrait {
+    min-height: 100%;
+  }
+}
+
 /* Ground Crew Support: smaller, vertical cards */
 .about-page .crew-grid--support {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));

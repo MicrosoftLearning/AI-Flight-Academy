@@ -53,7 +53,10 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
 </article>
 
 <article class="crew-card">
-  <img class="crew-portrait" src="/img/about/matt-quinlan.jpg" alt="Stylized portrait of Matt Quinlan in a red plaid flannel shirt" width="512" height="512" loading="lazy">
+  <div class="crew-portrait-egg">
+    <img class="crew-portrait" src="/img/about/matt-quinlan.jpg" alt="Stylized portrait of Matt Quinlan in a red plaid flannel shirt" width="512" height="512" loading="lazy">
+    <img class="crew-portrait crew-portrait-alt" src="/img/about/matt-quinlan-cat.jpg" alt="" aria-hidden="true" style="object-position: 22% center" width="512" height="512" loading="lazy">
+  </div>
   <div class="crew-body">
     <h3 class="crew-name">Matt Quinlan</h3>
     <p class="crew-role">Lead guitar &amp; producer · Scenario and learning design lead</p>
@@ -63,7 +66,10 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
 </article>
 
 <article class="crew-card">
-  <img class="crew-portrait" src="/img/about/darrin-hanson.jpg" alt="Stylized portrait of Darrin Hanson in a brown leather jacket" width="512" height="512" loading="lazy">
+  <div class="crew-portrait-egg">
+    <img class="crew-portrait" src="/img/about/darrin-hanson.jpg" alt="Stylized portrait of Darrin Hanson in a brown leather jacket" width="512" height="512" loading="lazy">
+    <img class="crew-portrait crew-portrait-alt" src="/img/about/darrin-hanson-cat.jpg" alt="" aria-hidden="true" width="512" height="512" loading="lazy">
+  </div>
   <div class="crew-body">
     <h3 class="crew-name">Darrin Hanson</h3>
     <p class="crew-role">Rhythm guitar &amp; quality control · Scenario 2 owner</p>
