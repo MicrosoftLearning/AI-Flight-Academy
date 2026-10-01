@@ -68,12 +68,12 @@ Download these two files now. You'll need them in the first few minutes.
 
 **Done when:** Dispatch is running on the sample requests, and you've seen how the single triager picks only one owner. This is your "before."
 
-In this step, you install the skill, load the data pack, and meet the triager that you're going to outsmart.
+In this step, you install the skill, load the data pack, and meet the triager that you're going to outsmart. **Leave the single triager as it is** - it's the fixed "before" you compare against.
 
 1. In Cowork, open **Customize**. Select the arrow next to **Add**, and then select **Upload**. Drag in the whole `the-dispatch.zip` file.
 
-	::: warning Two common mistakes
-	Upload the whole `the-dispatch.zip` file, not only `SKILL.md`. The zip file includes `THE-ROOM.md` and other reference files that the skill needs. Also, **don't edit the single triager**. It's the fixed "before" that you compare against.
+	::: warning Upload the whole zip, not just SKILL.md
+	`SKILL.md` is only the instructions. The zip also carries `THE-ROOM.md` and the reference files the skill reads.
 	:::
 
 	![The Cowork Customize page, with Customize in the left menu, the Add dropdown open, and Upload highlighted](/img/cowork-upload-skill.png)

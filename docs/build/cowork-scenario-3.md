@@ -81,8 +81,8 @@ You're building with Cowork, so it can also fix what you're building. Paste the 
 
 1. In Cowork, open **Customize** → the arrow next to **Add** → **Upload**, and drag in `ambassador-skill.zip` (or the unzipped folder - Cowork takes either).
 
-   ::: warning Upload the folder, not just the SKILL.md
-   `SKILL.md` on its own won't work. `references/` sits beside it and holds the definition and the playbook.
+   ::: warning Upload the whole zip, not just SKILL.md
+   `SKILL.md` is only the instructions. The zip also carries `references/` and `definitions/`, which hold the definition it runs on, the playbook, and the three alternatives.
    :::
 
    ![The Cowork Customize page, with Customize in the left menu, the Add dropdown open, and Upload highlighted](/img/cowork-upload-skill.png)

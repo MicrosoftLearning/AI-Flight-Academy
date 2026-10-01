@@ -121,8 +121,8 @@ Seat a **room of Global Skilling teams** over an incoming **skilling request** s
 
 **Installing it:** **Customize** → **Add ▾** → **Upload** → the whole `the-dispatch.zip`. Start a **new session**, attach the data pack, and say **`seat the room and dispatch the agent governance request.`**
 
-::: warning Upload the zip as it downloads
-Cowork takes the archive directly - there's no need to unzip it first.
+::: warning Upload the whole zip, not just SKILL.md
+`SKILL.md` is only the instructions. The zip also carries `THE-ROOM.md` and the reference files the skill reads - and Cowork takes the archive directly, so there's no need to unzip it first.
 :::
 
 [Full walkthrough →](/build/cowork-scenario-2)
@@ -248,8 +248,8 @@ A **working cohort picker** that ships nine data files and reads one of them. Fi
 
 **Installing it:** **Customize** → **Add ▾** → **Upload** → the whole `ambassador-skill.zip`. Start a **new session**, attach all nine CSVs from `program-data`, and say **`using the ambassador skill, who should be in the next cohort?`**
 
-::: warning Upload the folder, not just the SKILL.md
-`SKILL.md` on its own won't work. `references/` sits beside it and holds the definition and the playbook.
+::: warning Upload the whole zip, not just SKILL.md
+`SKILL.md` is only the instructions. The zip also carries `references/` and `definitions/`, which hold the definition it runs on, the playbook, and the three alternatives.
 :::
 
 [Full walkthrough →](/build/cowork-scenario-3)
