@@ -37,6 +37,8 @@ Step 3 takes most of your time. Your room is saved in `THE-ROOM.md`, so you can 
 - **Position:** a team's answer to a request, based on its team card.
 - **Rough idea:** a request that's missing important details. It needs to be *sharpened* (given more detail) before anyone routes it.
 
+For more definitions, see the [Glossary](/glossary).
+
 :::
 
 ## Before you start
@@ -59,7 +61,7 @@ Download these two files now. You'll need them in the first few minutes.
 </div>
 
 ::: tip Want more detail on a task?
-The **[Guides](/bricks/)** in the top menu explain the basic tasks on this page: how to install a skill, how to connect Cowork to your own work, and how to run things on a schedule. The guides work for every scenario. If you get stuck on one of these tasks, open the guide in a new tab.
+**[Glossary](/glossary)** in the top menu defines the product terms - skill, session, Work IQ, MCP - and links to the official documentation for each.
 :::
 
 ---
@@ -68,12 +70,15 @@ The **[Guides](/bricks/)** in the top menu explain the basic tasks on this page:
 
 **Done when:** Dispatch is running on the sample requests, and you've seen how the single triager picks only one owner. This is your "before."
 
-In this step, you install the skill, load the data pack, and meet the triager that you're going to outsmart.
+In this step, you install the skill, load the data pack, and meet the triager that you're going to outsmart. **Leave the single triager as it is** - it's the fixed "before" you compare against.
 
-1. In Cowork, open **Customize** → **Skills**. Select the arrow next to **Add**, and then select **Upload skill**. Drag in the whole `the-dispatch.zip` file.
-	::: warning Two common mistakes
-	Upload the whole `the-dispatch.zip` file, not only `SKILL.md`. The zip file includes `THE-ROOM.md` and other reference files that the skill needs. Also, **don't edit the single triager**. It's the fixed "before" that you compare against.
+1. In Cowork, open **Customize**. Select the arrow next to **Add**, and then select **Upload**. Drag in the whole `the-dispatch.zip` file.
+
+	::: warning Upload the whole zip, not just SKILL.md
+	`SKILL.md` is only the instructions. The zip also carries `THE-ROOM.md` and the reference files the skill reads.
 	:::
+
+	![The Cowork Customize page, with Customize in the left menu, the Add dropdown open, and Upload highlighted](/img/cowork-upload-skill.png)
 	
 2. Start a **new** Cowork chat session. (Skills load only when a session starts.) Drag in the `dispatch-data` zip file, and then enter this prompt:
 

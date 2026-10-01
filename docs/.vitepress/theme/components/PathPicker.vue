@@ -199,6 +199,8 @@ function bold(s: string) {
 }
 
 .picker-bubble {
+  position: relative;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -241,14 +243,50 @@ function bold(s: string) {
   font-weight: 600;
 }
 
+/* Oversized and clipped into the corner, so it reads as texture rather than
+   another thing to look at. The text sits above it via position: relative. */
 .picker-bubble-emoji {
-  font-size: 1.6rem;
+  position: absolute;
+  top: -0.7rem;
+  right: -0.6rem;
+  font-size: 5rem;
+  line-height: 1;
+  opacity: var(--pb-emoji-opacity, 0.12);
+  transform: rotate(12deg);
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Light mode needs more of it: the same emoji has far less contrast against a
+   near-white card than against a dark one. */
+html:not(.dark) .picker-bubble-emoji {
+  --pb-emoji-opacity: 0.25;
+  filter: saturate(1.2);
+}
+
+.picker-bubble:hover:not(:disabled) .picker-bubble-emoji {
+  opacity: calc(var(--pb-emoji-opacity, 0.12) + 0.08);
+  transform: rotate(6deg) scale(1.06);
+}
+
+.picker-bubble.selected .picker-bubble-emoji {
+  opacity: calc(var(--pb-emoji-opacity, 0.12) + 0.14);
+}
+
+.picker-bubble-title,
+.picker-bubble-sub,
+.picker-bubble-desc,
+.picker-bubble-builds,
+.picker-bubble-status {
+  position: relative;
 }
 
 .picker-bubble-title {
   font-weight: 700;
   font-size: 1.05rem;
   color: var(--vp-c-text-1);
+  padding-right: 2.5rem;
 }
 
 .picker-bubble-sub {
@@ -339,5 +377,20 @@ function bold(s: string) {
 .picker-reset:hover {
   border-color: var(--vp-c-brand-1);
   color: var(--vp-c-text-1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .picker-bubble,
+  .picker-bubble-emoji {
+    transition: none;
+  }
+
+  .picker-bubble:hover:not(:disabled) {
+    transform: none;
+  }
+
+  .picker-bubble:hover:not(:disabled) .picker-bubble-emoji {
+    transform: rotate(12deg);
+  }
 }
 </style>

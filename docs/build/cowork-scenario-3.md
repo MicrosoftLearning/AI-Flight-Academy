@@ -33,6 +33,8 @@ Step 3 is the main build, and it isn't one change. Close a gap, re-run, see what
 - **Shortlist:** the eight names the skill returns. A proposal for a person to act on, not a decision.
 - **Evidence:** the records behind a claim - what someone ran, the feedback they got, what they contributed.
 
+For more definitions, see the [Glossary](/glossary).
+
 :::
 
 ## Before you start
@@ -79,11 +81,13 @@ You're building with Cowork, so it can also fix what you're building. Paste the 
 
 **Done when:** Cowork returns eight names from the program data.
 
-1. In Cowork, open **Customize** → **Skills** → the arrow next to **Add** → **Upload skill**, and drag in `ambassador-skill.zip` (or the unzipped folder - Cowork takes either).
+1. In Cowork, open **Customize** → the arrow next to **Add** → **Upload**, and drag in `ambassador-skill.zip` (or the unzipped folder - Cowork takes either).
 
-   ::: warning Upload the folder, not just the SKILL.md
-   `SKILL.md` on its own won't work. `references/` sits beside it and holds the definition and the playbook.
+   ::: warning Upload the whole zip, not just SKILL.md
+   `SKILL.md` is only the instructions. The zip also carries `references/` and `definitions/`, which hold the definition it runs on, the playbook, and the three alternatives.
    :::
+
+   ![The Cowork Customize page, with Customize in the left menu, the Add dropdown open, and Upload highlighted](/img/cowork-upload-skill.png)
 
 1. Start a **new** Cowork session. Skills load only when a session starts.
 

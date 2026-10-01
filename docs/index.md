@@ -26,10 +26,28 @@ hero:
 
 Our goals are simple:
 
-- **Get hands-on with AI.** Spend less time watching and more time building.
-- **Move beyond your comfort zone.** Choose an altitude that challenges you and see where it takes you.
-- **Start small.** You aren't expected to finish a production-ready system. Use an MVP mindset to prototype, experiment, and learn.
-- **Have fun together.** Collaborate with your table, share what you discover, and find new ways to use AI.
+<div class="goal-grid">
+  <div class="goal-card is-blue">
+    <span class="goal-card-emoji">🛠️</span>
+    <span class="goal-card-title">Get hands-on with AI</span>
+    <span class="goal-card-desc">Spend less time watching and more time building.</span>
+  </div>
+  <div class="goal-card is-orange">
+    <span class="goal-card-emoji">🧗</span>
+    <span class="goal-card-title">Move beyond your comfort zone</span>
+    <span class="goal-card-desc">Choose an altitude that challenges you and see where it takes you.</span>
+  </div>
+  <div class="goal-card is-green">
+    <span class="goal-card-emoji">🌱</span>
+    <span class="goal-card-title">Start small</span>
+    <span class="goal-card-desc">You aren't expected to finish a production-ready system. Use an MVP mindset to prototype, experiment, and learn.</span>
+  </div>
+  <div class="goal-card is-purple">
+    <span class="goal-card-emoji">🤝</span>
+    <span class="goal-card-title">Have fun together</span>
+    <span class="goal-card-desc">Collaborate with your table, share what you discover, and find new ways to use AI.</span>
+  </div>
+</div>
 
 <div class="callout-bubble">
 <span class="callout-bubble-icon">🎢</span>
@@ -63,40 +81,6 @@ Our goals are simple:
 
 <!-- markdownlint-disable MD033 -->
 <PathPicker />
-
-</div>
-
-<div class="home-section">
-
-## New here? Start with the pre-flight checklist
-
-<p class="home-section-intro is-wide">Not sure where to begin? Scenario 0 walks you through what you need and how the session runs.</p>
-
-<div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/scenarios/scenario-0">
-    <span class="lab-card-emoji">🛫</span>
-    <span class="lab-card-title">Scenario 0 · Pre-Flight Checklist</span>
-    <span class="lab-card-desc">The brief: what you need, how the call runs, and your three altitudes to build it at. Start here.</span>
-    <span class="lab-card-cta">Read the brief →</span>
-  </a>
-</div>
-
-</div>
-
-<div class="home-section">
-
-## Keep exploring
-
-<p class="home-section-intro is-wide">Explore the resources to keep building and experimenting after the session.</p>
-
-<div class="lab-grid lab-grid-2">
-  <a class="lab-card" href="/AI-Flight-Academy/resources/">
-    <span class="lab-card-emoji">📚</span>
-    <span class="lab-card-title">Resources</span>
-    <span class="lab-card-desc">Docs, guides, and links to go deeper - before, during, and after the hack.</span>
-    <span class="lab-card-cta">View resources →</span>
-  </a>
-</div>
 <!-- markdownlint-enable MD033 -->
 
 </div>

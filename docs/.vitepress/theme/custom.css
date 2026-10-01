@@ -81,41 +81,6 @@ html:not(.dark) .dark-only {
   max-width: none;
 }
 
-/* Highlighted "big question" bubble */
-.question-bubble {
-  position: relative;
-  margin: 1.5rem 0;
-  padding: 1.75rem 2rem;
-  border-radius: 18px;
-  border: 1px solid var(--vp-c-brand-1);
-  background: linear-gradient(
-    135deg,
-    var(--vp-c-brand-soft),
-    var(--vp-c-bg-soft)
-  );
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-}
-
-.question-bubble::before {
-  content: "💭";
-  position: absolute;
-  top: -0.85rem;
-  left: 1.5rem;
-  font-size: 1.4rem;
-  background: var(--vp-c-bg);
-  border-radius: 999px;
-  padding: 0.1rem 0.35rem;
-  line-height: 1;
-}
-
-.question-bubble p {
-  margin: 0;
-  font-size: 1.35rem;
-  line-height: 1.5;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
-}
-
 /* Callout bubble (e.g. event instructions) without note/tip chrome */
 .callout-bubble {
   display: flex;
@@ -203,129 +168,6 @@ html:not(.dark) .dark-only {
   color: var(--vp-c-text-1);
 }
 
-/* Table check - the two-minute group moment in a build page */
-.table-check {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.9rem;
-  margin: 2rem 0;
-  padding: 1.1rem 1.4rem;
-  border-radius: 14px;
-  border: 1px solid var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
-}
-
-.table-check .table-check-icon {
-  font-size: 1.4rem;
-  line-height: 1.4;
-}
-
-.table-check .table-check-body {
-  min-width: 0;
-}
-
-.table-check .table-check-label {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--vp-c-brand-1);
-  margin-bottom: 0.2rem;
-}
-
-.table-check p {
-  margin: 0;
-  line-height: 1.6;
-  color: var(--vp-c-text-1);
-}
-
-/* The brief - what you inherited and what you're being asked to do, in one
-   block at the top of a build page. Replaces a run of intro paragraphs. */
-.brief {
-  position: relative;
-  margin: 2rem 0 2.5rem;
-  padding: 1.9rem 2rem 1.6rem;
-  border-radius: 18px;
-  border: 1px solid var(--vp-c-brand-1);
-  background: linear-gradient(
-    135deg,
-    var(--vp-c-brand-soft),
-    var(--vp-c-bg-soft)
-  );
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-}
-
-.brief .brief-badge {
-  position: absolute;
-  top: -0.72rem;
-  left: 1.6rem;
-  padding: 0.15rem 0.7rem;
-  border-radius: 999px;
-  border: 1px solid var(--vp-c-brand-1);
-  background: var(--vp-c-bg);
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-  color: var(--vp-c-brand-1);
-  line-height: 1.55;
-}
-
-.brief p {
-  margin: 0 0 0.85rem;
-  line-height: 1.65;
-  color: var(--vp-c-text-1);
-}
-
-.brief .brief-lead {
-  margin-bottom: 0.9rem;
-  font-size: 1.28rem;
-  line-height: 1.4;
-  font-weight: 700;
-}
-
-.brief .brief-ask {
-  margin: 1.15rem 0 0;
-  padding-top: 1rem;
-  border-top: 1px solid var(--vp-c-divider);
-  font-size: 1.05rem;
-  font-weight: 700;
-}
-
-.brief .brief-stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.45rem;
-  margin: 1.1rem 0 0;
-  padding: 0;
-  list-style: none;
-}
-
-.brief .brief-stats li {
-  margin: 0;
-  padding: 0.28rem 0.7rem;
-  border-radius: 999px;
-  border: 1px solid var(--vp-c-divider);
-  background: var(--vp-c-bg);
-  font-size: 0.82rem;
-  color: var(--vp-c-text-2);
-}
-
-.brief .brief-stats strong {
-  color: var(--vp-c-brand-1);
-}
-
-@media (max-width: 640px) {
-  .brief {
-    padding: 1.7rem 1.3rem 1.4rem;
-  }
-
-  .brief .brief-lead {
-    font-size: 1.15rem;
-  }
-}
-
 /* Lab bubbles */
 .lab-grid {
   display: grid;
@@ -361,18 +203,6 @@ a.lab-card:hover {
   border-color: var(--vp-c-brand-1);
   box-shadow: 0 6px 22px rgba(0, 0, 0, 0.12);
   transform: translateY(-2px);
-}
-
-.lab-card-badge {
-  align-self: flex-start;
-  font-size: 0.72rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
-  border-radius: 999px;
-  padding: 0.2rem 0.7rem;
 }
 
 .lab-card-meta {
@@ -416,216 +246,6 @@ a.lab-card:hover {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--vp-c-brand-1);
-}
-
-.lab-card--soon {
-  border-style: dashed;
-  background: transparent;
-}
-
-.lab-card--soon .lab-card-emoji,
-.lab-card--soon .lab-card-title,
-.lab-card--soon .lab-card-desc,
-.lab-card--soon .lab-card-time,
-.lab-card--soon .lab-card-cta {
-  opacity: 0.6;
-}
-
-.lab-card--soon .lab-card-cta {
-  color: var(--vp-c-text-3);
-}
-
-/* Optional "take it with you" card below the flights */
-.bonus-card {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  margin-top: 1.25rem;
-  padding: 1.4rem 1.6rem;
-  border: 1px dashed var(--vp-c-divider);
-  border-radius: 16px;
-  background: var(--vp-c-bg-soft);
-  text-decoration: none !important;
-  color: inherit;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-a.bonus-card:hover {
-  border-color: var(--vp-c-brand-1);
-  border-style: solid;
-  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-}
-
-.bonus-card-emoji {
-  font-size: 1.9rem;
-  line-height: 1;
-  flex: none;
-}
-
-.bonus-card-body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-  flex: 1;
-}
-
-.bonus-card-badge {
-  align-self: flex-start;
-  font-size: 0.68rem;
-  font-weight: 600;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--vp-c-text-2);
-  background: var(--vp-c-bg);
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  padding: 0.15rem 0.6rem;
-}
-
-.bonus-card-title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
-}
-
-.bonus-card-desc {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  color: var(--vp-c-text-2);
-}
-
-.bonus-card-cta {
-  flex: none;
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--vp-c-brand-1);
-  white-space: nowrap;
-}
-
-@media (max-width: 640px) {
-  .bonus-card {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-/* Resources bubble (homepage link to resources page) */
-.resource-bubble {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1.25rem;
-  padding: 0.5rem 0.85rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 999px;
-  background: transparent;
-  text-decoration: none;
-  transition: border-color 0.2s ease, color 0.2s ease;
-}
-
-.resource-bubble:hover {
-  border-color: var(--vp-c-brand-1);
-}
-
-.resource-bubble:hover .resource-bubble-title {
-  color: var(--vp-c-brand-1);
-}
-
-.resource-bubble-icon {
-  flex: none;
-  font-size: 0.95rem;
-}
-
-.resource-bubble-text {
-  display: inline;
-}
-
-.resource-bubble-title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
-}
-
-.resource-bubble-desc {
-  display: none;
-}
-
-.resource-bubble-cta {
-  flex: none;
-  font-size: 0.85rem;
-  color: var(--vp-c-text-3);
-  white-space: nowrap;
-}
-
-/* Resources page */
-.resource-group {
-  margin-top: 1.25rem;
-}
-
-.resource-group-title {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
-  margin: 1.75rem 0 0.85rem;
-}
-
-.resource-group-title:first-child {
-  margin-top: 0;
-}
-
-.resource-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 0.85rem;
-}
-
-.resource-link {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
-  padding: 0.9rem 1.1rem;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 12px;
-  background: var(--vp-c-bg-soft);
-  text-decoration: none !important;
-  color: inherit;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.resource-link:hover {
-  border-color: var(--vp-c-brand-1);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-  transform: translateY(-1px);
-}
-
-.resource-link-title {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--vp-c-text-1);
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-}
-
-.resource-link:hover .resource-link-title {
-  color: var(--vp-c-brand-1);
-}
-
-.resource-link-meta {
-  font-size: 0.8rem;
-  color: var(--vp-c-text-3);
-}
-
-.resource-link-tag {
-  font-size: 0.62rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--vp-c-brand-1);
-  background: var(--vp-c-brand-soft);
-  border-radius: 999px;
-  padding: 0.1rem 0.45rem;
 }
 
 /* Path chooser (Lab 03) */
@@ -857,47 +477,6 @@ a.bonus-card:hover {
   }
 }
 
-/* Take-it-with-you page (Learn Cowork with Cowork) */.takeaway-hero {
-  margin: 1.75rem 0 2rem;
-  padding: 2rem 2.25rem;
-  border-radius: 18px;
-  border: 1px solid var(--vp-c-brand-1);
-  background: linear-gradient(
-    135deg,
-    var(--vp-c-brand-soft),
-    var(--vp-c-bg-soft)
-  );
-  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
-}
-
-.takeaway-hero-eyebrow {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--vp-c-brand-1);
-  margin-bottom: 0.6rem;
-}
-
-.takeaway-hero h2,
-.takeaway-hero-title {
-  margin: 0 0 0.5rem;
-  border: none;
-  padding: 0;
-  font-size: 1.6rem;
-  font-weight: 700;
-  line-height: 1.25;
-  color: var(--vp-c-text-1);
-}
-
-.takeaway-hero p {
-  margin: 0;
-  max-width: 62ch;
-  line-height: 1.65;
-  color: var(--vp-c-text-2);
-}
-
 /* Numbered "get the skill" steps */
 .skill-steps {
   margin: 1.75rem 0;
@@ -958,56 +537,6 @@ a.bonus-card:hover {
   margin: 0;
   line-height: 1.6;
   color: var(--vp-c-text-2);
-}
-
-/* Download button */
-.skill-download {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 0.85rem;
-  padding: 0.6rem 1.3rem;
-  border-radius: 999px;
-  background: var(--vp-c-brand-1);
-  color: #fff !important;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none !important;
-  border: 1px solid var(--vp-c-brand-1);
-  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.skill-download:hover {
-  background: var(--vp-c-brand-2);
-  transform: translateY(-1px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
-
-/* Share / note bubble at the end */
-.takeaway-share {
-  display: flex;
-  align-items: flex-start;
-  gap: 0.85rem;
-  margin: 2rem 0 0.5rem;
-  padding: 1.1rem 1.4rem;
-  border-radius: 14px;
-  border: 1px solid var(--vp-c-divider);
-  background: var(--vp-c-bg-soft);
-}
-
-.takeaway-share-icon {
-  font-size: 1.4rem;
-  line-height: 1.4;
-}
-
-.takeaway-share p {
-  margin: 0;
-  line-height: 1.6;
-  color: var(--vp-c-text-2);
-}
-
-.takeaway-share p strong {
-  color: var(--vp-c-text-1);
 }
 
 /* Scenario "scene" banners: an ultra-wide, headline-free image with a short
@@ -1087,26 +616,116 @@ a.bonus-card:hover {
   }
 }
 
-/* Microsoft Form embed. The iframe has a fixed intrinsic size, so it gets a
-   responsive wrapper rather than the width/height attributes Forms suggests. */
-.form-embed {
-  margin: 1.75rem 0;
-  border: 1px solid var(--vp-c-divider);
-  border-radius: 12px;
+/* Goal cards - four across on the home page, with a watermark emoji in the
+   corner. Accents reuse the DirectionBubbles palette so the site keeps one
+   set of colours. */
+.goal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1.75rem 0 0.5rem;
+}
+
+@media (max-width: 1100px) {
+  .goal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .goal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.goal-card {
+  position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1.35rem 1.35rem 1.5rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 16px;
   background: var(--vp-c-bg-soft);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.form-embed iframe {
-  display: block;
-  width: 100%;
-  height: 720px;
-  border: none;
+/* The accent only shows on the top edge, so the cards read as a set rather
+   than four unrelated boxes. */
+.goal-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--goal-accent, var(--vp-c-brand-1));
 }
 
-@media (max-width: 640px) {
-  .form-embed iframe {
-    height: 620px;
+.goal-card:hover {
+  border-color: var(--goal-accent, var(--vp-c-brand-1));
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.goal-card-emoji {
+  position: absolute;
+  top: -0.6rem;
+  right: -0.5rem;
+  font-size: 4.5rem;
+  line-height: 1;
+  opacity: var(--goal-emoji-opacity, 0.13);
+  transform: rotate(12deg);
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* A mid-tone emoji on a near-white card has far less contrast than the same
+   emoji on a dark one, so light mode needs more opacity and a little more
+   saturation to land at the same visual weight. */
+html:not(.dark) .goal-card-emoji {
+  --goal-emoji-opacity: 0.26;
+  filter: saturate(1.2);
+}
+
+.goal-card:hover .goal-card-emoji {
+  opacity: calc(var(--goal-emoji-opacity, 0.13) + 0.09);
+  transform: rotate(6deg) scale(1.06);
+}
+
+.goal-card-title {
+  position: relative;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--vp-c-text-1);
+  padding-right: 2.25rem;
+}
+
+.goal-card-desc {
+  position: relative;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--vp-c-text-2);
+}
+
+.goal-card.is-blue { --goal-accent: #3b82f6; }
+.goal-card.is-green { --goal-accent: #16a34a; }
+.goal-card.is-orange { --goal-accent: #ea580c; }
+.goal-card.is-purple { --goal-accent: #8b5cf6; }
+
+@media (prefers-reduced-motion: reduce) {
+  .goal-card,
+  .goal-card-emoji {
+    transition: none;
+  }
+
+  .goal-card:hover {
+    transform: none;
+  }
+
+  .goal-card:hover .goal-card-emoji {
+    transform: rotate(12deg);
   }
 }
 

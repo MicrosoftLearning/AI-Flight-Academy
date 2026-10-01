@@ -47,17 +47,17 @@ function nestSteps(steps: Heading[], link: string) {
   return out;
 }
 
-/** "Start Building" nav dropdown: one group per scenario, one item per track. */
+/**
+ * "Start Building" nav dropdown: one group per scenario, one item per track.
+ *
+ * Scenario 0 is deliberately absent. It's the pre-event readiness gate, and
+ * during the event a stray click on it drops someone into setup instead of the
+ * scenarios. Its pages still build and stay reachable by URL - see the SCENARIO_0
+ * comment in paths.ts for how to put the links back afterwards.
+ */
 export function navBuildItems() {
   return [
     { text: "🧭 Pick your path", link: CHOOSER },
-    {
-      text: `${SCENARIO_0.emoji} ${SCENARIO_0.label} · ${SCENARIO_0.name}`,
-      items: tracks.map((t) => ({
-        text: `${t.emoji} ${t.label} - ${t.tool}${suffix(t.id, SCENARIO_0.id)}`,
-        link: buildLink(t.id, SCENARIO_0.id),
-      })),
-    },
     ...scenarios.map((s) => ({
       text: `${s.emoji} ${s.label} · ${s.name}`,
       items: tracks.map((t) => ({
@@ -66,17 +66,6 @@ export function navBuildItems() {
       })),
     })),
   ];
-}
-
-/** "Guides" nav dropdown: one group per track, sourced from shared metadata. */
-export function navGuideItems() {
-  return tracks.map((track) => ({
-    text: `${track.emoji} ${track.label}`,
-    items: track.guides.map((guide) => ({
-      text: guide.text,
-      link: guide.link,
-    })),
-  }));
 }
 
 /**
@@ -127,17 +116,6 @@ export function globalSidebar(
     : {
         text: "Scenarios",
         items: [
-          {
-            text: `${SCENARIO_0.emoji} ${SCENARIO_0.name}`,
-            collapsed: true,
-            items: [
-              { text: "Start here", link: `/scenarios/${SCENARIO_0.id}` },
-              ...tracks.map((t) => ({
-                text: `${t.emoji} ${t.label}${suffix(t.id, SCENARIO_0.id)}`,
-                link: buildLink(t.id, SCENARIO_0.id),
-              })),
-            ],
-          },
           ...scenarios.map((s) => ({
             text: `${s.emoji} ${s.name}`,
             collapsed: true,
@@ -151,22 +129,11 @@ export function globalSidebar(
         ],
       };
 
-  const guidesSection = track
-    ? {
-        // Guides live at /bricks/ and are reached from the top nav, so these
-        // link out rather than to an on-page anchor.
-        text: `Guides for ${track.emoji} ${track.label}`,
-        collapsed: true,
-        items: track.guides.map((g) => ({ text: g.text, link: g.link })),
-      }
-    : {
-        text: "Guides",
-        items: tracks.map((t) => ({
-          text: `${t.emoji} ${t.label}`,
-          collapsed: true,
-          items: t.guides,
-        })),
-      };
+  // Everything that isn't a scenario.
+  const guidesSection = {
+    text: "Reference",
+    items: [{ text: "Glossary", link: "/glossary" }],
+  };
 
   // A lean rail is just "where am I in this path" - nothing else. Scenario 0 is
   // the pre-event readiness gate, so the site-wide links, guides, and finish
@@ -210,11 +177,7 @@ export function sidebars(): Record<string, ReturnType<typeof globalSidebar>> {
       });
     }
   }
-  for (const t of tracks) {
-    for (const g of t.guides) {
-      out[g.link] = globalSidebar({ track: t.id });
-    }
-  }
+  out["/glossary"] = globalSidebar();
   out["/"] = globalSidebar();
   return out;
 }

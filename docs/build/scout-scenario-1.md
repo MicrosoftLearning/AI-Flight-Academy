@@ -39,6 +39,8 @@ Steps 1 and 2 are quick - about 20 minutes together. Step 3 is the main build, a
 - **`voice.md`:** how you write, plus a few of your own messages kept word for word.
 - **Triage:** sorting what arrived into what needs you, what's waiting on someone else, and what doesn't.
 
+For more definitions, see the [Glossary](/glossary).
+
 :::
 
 ## Before you start
