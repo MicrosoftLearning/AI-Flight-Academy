@@ -39,7 +39,7 @@ Steps 1 and 2 are quick - about 20 minutes together. Step 3 is the main build, a
 - **`voice.md`:** how you write, plus a few of your own messages kept word for word.
 - **Reference:** an extra file the twin reads when its instructions call for it. Step 3 is about adding these.
 
-Product terms like skill, session, Work IQ and MCP are in the [Glossary](/glossary).
+For more definitions, see the [Glossary](/glossary).
 
 :::
 

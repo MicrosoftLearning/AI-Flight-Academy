@@ -45,7 +45,7 @@ If you want to do more, the **MCP bonus** lets your other agents use the room to
 - **Position:** a team's answer to a request, based on its team card.
 - **Rough idea:** a request that's missing important details. It needs to be *sharpened* (given more detail) before anyone routes it.
 
-Product terms like skill, session, Work IQ and MCP are in the [Glossary](/glossary).
+For more definitions, see the [Glossary](/glossary).
 
 :::
 

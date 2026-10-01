@@ -34,7 +34,7 @@ Steps 1 and 2 are quick - about 15 minutes together. Step 3 is the main build, a
 - **`standards.md`:** the bar you judge work against - swap it for whatever your domain actually is.
 - **`ask_json()`:** the call to use when a *program* reads the answer. It returns a parsed object; prose is useless to a parser.
 
-Product terms like skill, session, Work IQ and MCP are in the [Glossary](/glossary).
+For more definitions, see the [Glossary](/glossary).
 
 :::
 

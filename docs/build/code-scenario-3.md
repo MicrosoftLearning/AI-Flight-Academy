@@ -33,7 +33,7 @@ Step 3 is the main build, and it isn't one change. Extend it, re-run, see what m
 - **Evidence:** the records behind a claim - what someone ran, the feedback they got, what they contributed.
 - **Agent:** a Markdown file under `.github/agents/` that gives Copilot a role and a model to use. `challenger.agent.md` is a worked example. It's a text file, not a service - nothing is deployed.
 
-Product terms like skill, session, Work IQ and MCP are in the [Glossary](/glossary).
+For more definitions, see the [Glossary](/glossary).
 
 :::
 

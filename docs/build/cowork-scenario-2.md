@@ -37,7 +37,7 @@ Step 3 takes most of your time. Your room is saved in `THE-ROOM.md`, so you can 
 - **Position:** a team's answer to a request, based on its team card.
 - **Rough idea:** a request that's missing important details. It needs to be *sharpened* (given more detail) before anyone routes it.
 
-Product terms like skill, session, Work IQ and MCP are in the [Glossary](/glossary).
+For more definitions, see the [Glossary](/glossary).
 
 :::
 
