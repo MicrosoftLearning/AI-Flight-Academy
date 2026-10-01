@@ -26,10 +26,28 @@ hero:
 
 Our goals are simple:
 
-- **Get hands-on with AI.** Spend less time watching and more time building.
-- **Move beyond your comfort zone.** Choose an altitude that challenges you and see where it takes you.
-- **Start small.** You aren't expected to finish a production-ready system. Use an MVP mindset to prototype, experiment, and learn.
-- **Have fun together.** Collaborate with your table, share what you discover, and find new ways to use AI.
+<div class="goal-grid">
+  <div class="goal-card is-blue">
+    <span class="goal-card-emoji">🛠️</span>
+    <span class="goal-card-title">Get hands-on with AI</span>
+    <span class="goal-card-desc">Spend less time watching and more time building.</span>
+  </div>
+  <div class="goal-card is-orange">
+    <span class="goal-card-emoji">🧗</span>
+    <span class="goal-card-title">Move beyond your comfort zone</span>
+    <span class="goal-card-desc">Choose an altitude that challenges you and see where it takes you.</span>
+  </div>
+  <div class="goal-card is-green">
+    <span class="goal-card-emoji">🌱</span>
+    <span class="goal-card-title">Start small</span>
+    <span class="goal-card-desc">You aren't expected to finish a production-ready system. Use an MVP mindset to prototype, experiment, and learn.</span>
+  </div>
+  <div class="goal-card is-purple">
+    <span class="goal-card-emoji">🤝</span>
+    <span class="goal-card-title">Have fun together</span>
+    <span class="goal-card-desc">Collaborate with your table, share what you discover, and find new ways to use AI.</span>
+  </div>
+</div>
 
 <div class="callout-bubble">
 <span class="callout-bubble-icon">🎢</span>

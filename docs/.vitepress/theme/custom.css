@@ -1110,3 +1110,108 @@ a.bonus-card:hover {
   }
 }
 
+/* Goal cards - four across on the home page, with a watermark emoji in the
+   corner. Accents reuse the DirectionBubbles palette so the site keeps one
+   set of colours. */
+.goal-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1.75rem 0 0.5rem;
+}
+
+@media (max-width: 1100px) {
+  .goal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .goal-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.goal-card {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: 1.35rem 1.35rem 1.5rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 16px;
+  background: var(--vp-c-bg-soft);
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* The accent only shows on the top edge, so the cards read as a set rather
+   than four unrelated boxes. */
+.goal-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: var(--goal-accent, var(--vp-c-brand-1));
+}
+
+.goal-card:hover {
+  border-color: var(--goal-accent, var(--vp-c-brand-1));
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.goal-card-emoji {
+  position: absolute;
+  top: -0.6rem;
+  right: -0.5rem;
+  font-size: 4.5rem;
+  line-height: 1;
+  opacity: 0.13;
+  transform: rotate(12deg);
+  pointer-events: none;
+  user-select: none;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.goal-card:hover .goal-card-emoji {
+  opacity: 0.22;
+  transform: rotate(6deg) scale(1.06);
+}
+
+.goal-card-title {
+  position: relative;
+  font-size: 1.02rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: var(--vp-c-text-1);
+  padding-right: 2.25rem;
+}
+
+.goal-card-desc {
+  position: relative;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--vp-c-text-2);
+}
+
+.goal-card.is-blue { --goal-accent: #3b82f6; }
+.goal-card.is-green { --goal-accent: #16a34a; }
+.goal-card.is-orange { --goal-accent: #ea580c; }
+.goal-card.is-purple { --goal-accent: #8b5cf6; }
+
+@media (prefers-reduced-motion: reduce) {
+  .goal-card,
+  .goal-card-emoji {
+    transition: none;
+  }
+
+  .goal-card:hover {
+    transform: none;
+  }
+
+  .goal-card:hover .goal-card-emoji {
+    transform: rotate(12deg);
+  }
+}
+
