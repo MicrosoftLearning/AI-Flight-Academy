@@ -37,6 +37,7 @@ export default defineConfig({
         text: "Glossary",
         link: "/glossary",
       },
+      { text: "About", link: "/about" },
     ],
     search: {
       provider: "local",
