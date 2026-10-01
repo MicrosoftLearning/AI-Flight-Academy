@@ -43,7 +43,10 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
 <div class="crew-grid">
 
 <article class="crew-card">
-  <img class="crew-portrait" src="/img/about/erin-jacobsen.jpg" alt="Stylized portrait of Erin Jacobsen in a denim jacket with a pilot-wings pin" width="512" height="512" loading="lazy">
+  <div class="crew-portrait-egg">
+    <img class="crew-portrait" src="/img/about/erin-jacobsen.jpg" alt="Stylized portrait of Erin Jacobsen in a denim jacket with a pilot-wings pin" width="512" height="512" loading="lazy">
+    <img class="crew-portrait crew-portrait-alt" src="/img/about/erin-jacobsen-cat.jpg" alt="" aria-hidden="true" style="object-position: 45% center" width="512" height="512" loading="lazy">
+  </div>
   <div class="crew-body">
     <h3 class="crew-name">Erin Jacobsen</h3>
     <p class="crew-role">Lead vocals &amp; tour manager · Program lead</p>
@@ -79,7 +82,10 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
 </article>
 
 <article class="crew-card">
-  <img class="crew-portrait" src="/img/about/andrew-conniff.jpg" alt="Stylized portrait of Andrew Conniff in an olive jacket with sunglasses pushed up on his head" width="512" height="512" loading="lazy">
+  <div class="crew-portrait-egg">
+    <img class="crew-portrait" src="/img/about/andrew-conniff.jpg" alt="Stylized portrait of Andrew Conniff in an olive jacket with sunglasses pushed up on his head" width="512" height="512" loading="lazy">
+    <img class="crew-portrait crew-portrait-alt" src="/img/about/andrew-conniff-cat.jpg" alt="" aria-hidden="true" style="object-position: 55% center" width="512" height="512" loading="lazy">
+  </div>
   <div class="crew-body">
     <h3 class="crew-name">Andrew Conniff</h3>
     <p class="crew-role">Bass &amp; booking agent · Scenario owner and coach operations</p>
@@ -89,7 +95,10 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
 </article>
 
 <article class="crew-card">
-  <img class="crew-portrait" src="/img/about/steve-luper.jpg" alt="Stylized portrait of Steve Luper in a dark blazer holding a microphone" width="512" height="512" loading="lazy">
+  <div class="crew-portrait-egg">
+    <img class="crew-portrait" src="/img/about/steve-luper.jpg" alt="Stylized portrait of Steve Luper in a dark blazer holding a microphone" width="512" height="512" loading="lazy">
+    <img class="crew-portrait crew-portrait-alt" src="/img/about/steve-luper-cat.jpg" alt="" aria-hidden="true" style="object-position: 58% center" width="512" height="512" loading="lazy">
+  </div>
   <div class="crew-body">
     <h3 class="crew-name">Steve Luper</h3>
     <p class="crew-role">Frontman · MC and SME/coach program lead</p>
@@ -99,7 +108,10 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
 </article>
 
 <article class="crew-card">
-  <img class="crew-portrait" src="/img/about/dipanjan-ghosh.jpg" alt="Stylized portrait of Dipanjan Ghosh in an olive bomber jacket over a black turtleneck" width="512" height="512" loading="lazy">
+  <div class="crew-portrait-egg">
+    <img class="crew-portrait" src="/img/about/dipanjan-ghosh.jpg" alt="Stylized portrait of Dipanjan Ghosh in an olive bomber jacket over a black turtleneck" width="512" height="512" loading="lazy">
+    <img class="crew-portrait crew-portrait-alt" src="/img/about/dipanjan-ghosh-cat.jpg" alt="" aria-hidden="true" style="object-position: 55% center" width="512" height="512" loading="lazy">
+  </div>
   <div class="crew-body">
     <h3 class="crew-name">Dipanjan Ghosh</h3>
     <p class="crew-role">Drums &amp; stage tech · Run of show and judging</p>
@@ -109,7 +121,10 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
 </article>
 
 <article class="crew-card">
-  <img class="crew-portrait" src="/img/about/christian-talavera.jpg" alt="Stylized portrait of Christian Talavera in a striped shirt with headphones around his neck" width="512" height="512" loading="lazy">
+  <div class="crew-portrait-egg">
+    <img class="crew-portrait" src="/img/about/christian-talavera.jpg" alt="Stylized portrait of Christian Talavera in a striped shirt with headphones around his neck" width="512" height="512" loading="lazy">
+    <img class="crew-portrait crew-portrait-alt" src="/img/about/christian-talavera-cat.jpg" alt="" aria-hidden="true" style="object-position: 52% center" width="512" height="512" loading="lazy">
+  </div>
   <div class="crew-body">
     <h3 class="crew-name">Christian Talavera</h3>
     <p class="crew-role">Hype man &amp; light show · Experience owner</p>
@@ -152,7 +167,10 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
 <div class="crew-grid crew-grid--support">
 
 <article class="crew-card crew-card--support">
-  <img class="crew-portrait" src="/img/about/aurelie-saada.jpg" alt="Stylized portrait of Aurelie Saada in a leather jacket and patterned scarf" width="512" height="512" loading="lazy">
+  <div class="crew-portrait-egg">
+    <img class="crew-portrait" src="/img/about/aurelie-saada.jpg" alt="Stylized portrait of Aurelie Saada in a leather jacket and patterned scarf" width="512" height="512" loading="lazy">
+    <img class="crew-portrait crew-portrait-alt" src="/img/about/aurelie-saada-cat.jpg" alt="" aria-hidden="true" style="object-position: 55% 38%" width="512" height="512" loading="lazy">
+  </div>
   <div class="crew-body">
     <h3 class="crew-name">Aurelie Saada</h3>
     <p class="crew-role">Sound engineer · Scenario testing and helpdesk</p>
