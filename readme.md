@@ -49,17 +49,3 @@ Allfiles/               participant assets, one folder per scenario
 scripts/
   pack-downloads.mjs    zips Allfiles into docs/public/downloads before a build
 ```
-
-## Participant downloads
-
-Participants never browse this repo. `scripts/pack-downloads.mjs` runs automatically before `docs:dev` and `docs:build`, zipping the folders in `Allfiles/` into `docs/public/downloads/` so the site serves them directly.
-
-**Edit the source in `Allfiles/`** - the downloads regenerate on every build. Never edit `docs/public/downloads/`; it's generated and gitignored.
-
-## Scenario 0
-
-The pre-event readiness checklist lives at `/scenarios/scenario-0` and `/build/*-scenario-0`. It's deliberately **hidden from the navigation** during the event so nobody lands in setup by mistake. The pages still build and still work when you navigate straight to them - see the `SCENARIO_0` comment in `docs/.vitepress/data/paths.ts` for how to restore the links afterwards.
-
-## Contributing
-
-See [CONTRIBUTING.md](.github/CONTRIBUTING.md).
