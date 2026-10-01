@@ -129,10 +129,13 @@ export function globalSidebar(
         ],
       };
 
-  // One page now, so there's nothing to scope per track - just a link to it.
+  // Everything that isn't a scenario: the files, and the vocabulary.
   const guidesSection = {
-    text: "Reference",
-    items: [{ text: "Tools and documentation", link: "/bricks/" }],
+    text: "Resources",
+    items: [
+      { text: "Downloads", link: "/resources/downloads" },
+      { text: "Glossary", link: "/resources/glossary" },
+    ],
   };
 
   // A lean rail is just "where am I in this path" - nothing else. Scenario 0 is
@@ -177,7 +180,8 @@ export function sidebars(): Record<string, ReturnType<typeof globalSidebar>> {
       });
     }
   }
-  out["/bricks/"] = globalSidebar();
+  out["/resources/downloads"] = globalSidebar();
+  out["/resources/glossary"] = globalSidebar();
   out["/"] = globalSidebar();
   return out;
 }

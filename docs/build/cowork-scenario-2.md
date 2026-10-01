@@ -59,7 +59,7 @@ Download these two files now. You'll need them in the first few minutes.
 </div>
 
 ::: tip Want more detail on a task?
-**[Reference](/bricks/)** in the top menu covers how skills load, what Work IQ can reach, and links to the official documentation for each tool.
+**[Glossary](/resources/glossary)** in the top menu defines the terms the scenarios share - skill, session, Work IQ, MCP - and links to the official documentation for each.
 :::
 
 ---

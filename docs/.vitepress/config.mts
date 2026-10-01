@@ -28,13 +28,10 @@ export default defineConfig({
         items: navBuildItems(),
       },
       {
-        text: "Reference",
-        link: "/bricks/",
-      },
-      {
         text: "Resources",
         items: [
           { text: "Downloads", link: "/resources/downloads" },
+          { text: "Glossary", link: "/resources/glossary" },
         ],
       },
     ],
