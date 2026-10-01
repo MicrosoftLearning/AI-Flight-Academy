@@ -28,11 +28,8 @@ export default defineConfig({
         items: navBuildItems(),
       },
       {
-        text: "Resources",
-        items: [
-          { text: "Downloads", link: "/resources/downloads" },
-          { text: "Glossary", link: "/resources/glossary" },
-        ],
+        text: "Glossary",
+        link: "/glossary",
       },
     ],
     search: {

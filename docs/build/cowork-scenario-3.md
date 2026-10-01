@@ -33,6 +33,8 @@ Step 3 is the main build, and it isn't one change. Close a gap, re-run, see what
 - **Shortlist:** the eight names the skill returns. A proposal for a person to act on, not a decision.
 - **Evidence:** the records behind a claim - what someone ran, the feedback they got, what they contributed.
 
+Product terms like skill, session, Work IQ and MCP are in the [Glossary](/glossary).
+
 :::
 
 ## Before you start

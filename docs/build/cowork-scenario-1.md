@@ -39,6 +39,8 @@ Steps 1 and 2 are quick - about 20 minutes together. Step 3 is the main build, a
 - **`voice.md`:** how you write, plus a few of your own messages kept word for word.
 - **Reference:** an extra file the twin reads when its instructions call for it. Step 3 is about adding these.
 
+Product terms like skill, session, Work IQ and MCP are in the [Glossary](/glossary).
+
 :::
 
 ## Before you start
@@ -231,7 +233,7 @@ const references = [
 
 **You'll know it worked when** the twin pulls the reference in on its own: re-run an earlier request and see if the answer changed.
 
-Use everything in the room - Copilot chat, the [glossary](/resources/glossary), your SME, coaches, and the rest of your table.
+Use everything in the room - Copilot chat, the [glossary](/glossary), your SME, coaches, and the rest of your table.
 
 ::: tip 🎈 Start small
 Nothing has to be perfect or finished. Get one reference working, then add another. Time is the real limit - so aim at something you can show, not something you can finish.

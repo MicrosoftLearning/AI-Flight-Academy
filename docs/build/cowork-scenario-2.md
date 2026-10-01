@@ -37,6 +37,8 @@ Step 3 takes most of your time. Your room is saved in `THE-ROOM.md`, so you can 
 - **Position:** a team's answer to a request, based on its team card.
 - **Rough idea:** a request that's missing important details. It needs to be *sharpened* (given more detail) before anyone routes it.
 
+Product terms like skill, session, Work IQ and MCP are in the [Glossary](/glossary).
+
 :::
 
 ## Before you start
@@ -59,7 +61,7 @@ Download these two files now. You'll need them in the first few minutes.
 </div>
 
 ::: tip Want more detail on a task?
-**[Glossary](/resources/glossary)** in the top menu defines the terms the scenarios share - skill, session, Work IQ, MCP - and links to the official documentation for each.
+**[Glossary](/glossary)** in the top menu defines the product terms - skill, session, Work IQ, MCP - and links to the official documentation for each.
 :::
 
 ---
