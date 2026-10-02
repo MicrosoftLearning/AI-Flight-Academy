@@ -22,8 +22,6 @@ In this activity you set up a twin, correct what it got wrong, and put it to wor
 
 Steps 1 and 2 are quick - about 20 minutes together. Step 3 is the main build, and it isn't one change: extend it, re-run, see what moved, then extend it again.
 
-**Your twin drafts. You send.** Whatever you create should show you who it's addressed to and what it says, then wait for a yes.
-
 <div class="callout-bubble">
 <span class="callout-bubble-icon">🔒</span>
 
@@ -46,6 +44,8 @@ For more definitions, see the [Glossary](/glossary).
 ## Before you start
 
 **Open [Cowork](https://copilot.cloud.microsoft/cowork) and check it loads.** If it doesn't, grab a coach.
+
+Download the skill.
 
 <a class="lab-card" href="/AI-Flight-Academy/downloads/my-twin-SKILL.md" download="SKILL.md" style="max-width:30rem">
   <span class="lab-card-emoji">🧬</span>

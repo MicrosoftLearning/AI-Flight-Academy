@@ -24,8 +24,6 @@ In this activity you set it up, confirm it answers, and extend it. Three steps:
 
 Steps 1 and 2 are quick - about 15 minutes together. Step 3 is the main build, and it isn't one change: extend it, re-run, see what moved, then extend it again.
 
-**Your twin drafts. You send.** Sending, committing, and posting stay yours - whatever you build should hand the decision back.
-
 ::: details Glossary
 
 - **Digital twin:** what an agent needs to know to answer as you - how you decide, how you write, the bar you hold work to. It lives in a few text files you own and can edit.
@@ -47,6 +45,8 @@ You don't need to write a persona today. The starter ships as **Jordan Reyes**, 
 
 `DISCLAIMER.md` in the starter lists what's invented, and how to point the twin at your own work after the session.
 :::
+
+Download the starter.
 
 <a class="lab-card" href="/AI-Flight-Academy/downloads/twin-code-starter.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">📦</span>
