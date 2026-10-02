@@ -33,7 +33,7 @@ export const tracks: Track[] = [
     label: "Cowork",
     tool: "Microsoft Copilot + Cowork",
     buildsVerb: "Builds with",
-    desc: "**Microsoft Copilot Cowork** - just describe what you need. **Work IQ** pulls in your work context automatically.",
+    desc: "**Copilot Cowork** - just describe what you need. **Work IQ** pulls in your work context automatically.",
   },
   {
     id: "scout",

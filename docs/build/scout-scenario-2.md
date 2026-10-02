@@ -22,7 +22,7 @@ In this activity, you build a **room of teams** that looks at each request toget
 
 | | Step | You're done when |
 | --- | --- | --- |
-| **1** | **Import & load** | Scout has the Dispatch skill and the data pack loaded. |
+| **1** | **Import and load** | Scout has the Dispatch skill and the data pack loaded. |
 | **2** | **Seat three teams, each with its own view** | Each of the three teams gives its own position on the same request, with a reason from its card, in the chat. Nothing is built yet. |
 | **3** | **Put the room on a board** | You drop a request onto a live dashboard, and the teams light up with their positions and the reasons behind them. |
 | **4** | **Make it start in one step** | You (or a teammate) can start the board with one command or on a schedule. |
@@ -67,14 +67,14 @@ Open Microsoft Scout. You'll add the Dispatch skill in Step 1. The dashboard in 
 
 ---
 
-## 1 · Import & load
+## 1 · Import and load
 
 **Done when:** Scout has the Dispatch skill and the data pack loaded.
 
 1. Download `the-dispatch.zip` and unzip it. In Scout, go to **Extensions → Import**, and drag in the `the-dispatch` folder - the one with `SKILL.md` inside.
 
    ::: warning Unzip the-dispatch.zip first
-   Different than Cowork, you must unzip and import the Dispatch skill folder, not the zip.
+   Unlike Cowork, Scout needs the unzipped Dispatch skill folder, not the zip.
    :::
 
    ![Screenshot of the Import Skill dialog window in Microsoft Scout.](./media/scout-import-skill-folder.png)

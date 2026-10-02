@@ -32,7 +32,7 @@ const active = ref<Option>("cli");
         :aria-selected="active === 'app'"
         @click="active = 'app'"
       >
-        GitHub Copilot App
+        GitHub Copilot app
       </button>
       <button
         type="button"
@@ -42,7 +42,7 @@ const active = ref<Option>("cli");
         :aria-selected="active === 'vscode'"
         @click="active = 'vscode'"
       >
-        VS Code Agents Window
+        VS Code Agents window
       </button>
     </div>
 

@@ -159,7 +159,7 @@ Save the file in `council/` with a new name. (If you use an existing name, you r
 
 <div class="scene scene--flip">
 
-![The engineer patches purple cables into desks labeled Content, Delivery, Product, Field and MTTs beside an intake-gate switch.](/img/scenario-2-dispatch-code-wiring.png)
+![The engineer patches purple cables into desks labeled Content, Delivery, Product, Field, and MTTs beside an intake-gate switch.](/img/scenario-2-dispatch-code-wiring.png)
 
 <p class="scene-cap">Code the room.</p>
 

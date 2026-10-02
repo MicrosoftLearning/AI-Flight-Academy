@@ -24,7 +24,7 @@ In this activity you set it up, confirm it answers, and extend it. Three steps:
 
 Steps 1 and 2 are quick - about 15 minutes together. Step 3 is the main build, and it isn't one change: extend it, re-run, see what moved, then extend it again.
 
-**Your twin drafts. You send.** Sending, committing and posting stay yours - whatever you build should hand the decision back.
+**Your twin drafts. You send.** Sending, committing, and posting stay yours - whatever you build should hand the decision back.
 
 ::: details Glossary
 
@@ -151,7 +151,7 @@ Take one, combine two, or pick your own. Click a bubble to see where to start an
     <div class="skill-step-num">3</div>
     <div class="skill-step-body">
       <span class="skill-step-title">Create it by talking</span>
-      <p>You bring the idea, Copilot writes the code. Describe what you want, run it, then tell it what to change. Ask it for options when you're stuck — <em>"what else could this check catch?"</em></p>
+      <p>You bring the idea, Copilot writes the code. Describe what you want, run it, then tell it what to change. Ask it for options when you're stuck - <em>"what else could this check catch?"</em></p>
     </div>
   </div>
   <div class="skill-step">
