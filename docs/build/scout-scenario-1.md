@@ -45,7 +45,7 @@ For more definitions, see the [Glossary](/glossary).
 
 **Check Scout is signed in and Work IQ is live.** Ask *"what's on my calendar tomorrow?"* - a real answer means you're ready. If not, grab a coach.
 
-Download the skill.
+Download the skill below.
 
 <a class="lab-card" href="/AI-Flight-Academy/downloads/my-twin-scout.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">🧬</span>

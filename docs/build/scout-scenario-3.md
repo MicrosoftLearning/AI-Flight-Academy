@@ -39,7 +39,7 @@ For more definitions, see the [Glossary](/glossary).
 
 ## Before you start
 
-Download both files and keep them in the same folder.
+Download both files below and keep them in the same folder.
 
 <div class="lab-grid lab-grid-2">
   <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-skill.zip" download>

@@ -45,7 +45,7 @@ For more definitions, see the [Glossary](/glossary).
 
 **Open [Cowork](https://copilot.cloud.microsoft/cowork) and check it loads.** If it doesn't, grab a coach.
 
-Download the skill.
+Download the skill below.
 
 <a class="lab-card" href="/AI-Flight-Academy/downloads/my-twin-SKILL.md" download="SKILL.md" style="max-width:30rem">
   <span class="lab-card-emoji">🧬</span>

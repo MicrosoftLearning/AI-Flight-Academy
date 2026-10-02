@@ -46,7 +46,7 @@ You don't need to write a persona today. The starter ships as **Jordan Reyes**, 
 `DISCLAIMER.md` in the starter lists what's invented, and how to point the twin at your own work after the session.
 :::
 
-Download the starter.
+Download the starter below.
 
 <a class="lab-card" href="/AI-Flight-Academy/downloads/twin-code-starter.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">📦</span>
