@@ -39,7 +39,7 @@ For more definitions, see the [Glossary](/glossary).
 
 ## Before you start
 
-Download the starter.
+Download the starter below.
 
 <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-starter.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">📦</span>
@@ -149,7 +149,7 @@ The cards below are **starters, not finished builds**. Use them for inspiration,
     <div class="skill-step-num">3</div>
     <div class="skill-step-body">
       <span class="skill-step-title">Build it by talking</span>
-      <p>You bring the idea, Copilot writes the code. Describe what you want, run it, then tell it what to change. Ask it for options when you're stuck — <em>"what else could this dashboard show?"</em></p>
+      <p>You bring the idea, Copilot writes the code. Describe what you want, run it, then tell it what to change. Ask it for options when you're stuck - <em>"what else could this dashboard show?"</em></p>
     </div>
   </div>
   <div class="skill-step">

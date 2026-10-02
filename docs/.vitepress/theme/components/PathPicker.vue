@@ -60,7 +60,7 @@ function bold(s: string) {
         <span class="picker-step-label">Pick your altitude</span>
       </div>
       <p class="picker-step-note">
-        What the team builds with. Fly at the altitude that suits you – pick
+        What the team builds with. Fly at the altitude that suits you - pick
         where you'll actually get something done.
         <a :href="withBase('/levels/')">Compare them →</a>
       </p>
@@ -114,7 +114,7 @@ function bold(s: string) {
       <p v-if="ready" class="picker-summary">
         {{ chosenTrack?.emoji }} <strong>{{ chosenTrack?.label }}</strong>
         · {{ chosenScenario?.label }} ({{ chosenScenario?.name }})
-        <span v-if="chosenStatus"> – {{ chosenStatus }}</span>
+        <span v-if="chosenStatus"> - {{ chosenStatus }}</span>
       </p>
       <div class="picker-actions">
         <button

@@ -626,6 +626,18 @@ a.lab-card:hover {
   color: var(--vp-c-text-1);
 }
 
+/* VitePress nudges the hero image up and left by 32px, which suits an
+   illustration that bleeds off its box. The patch is a self-contained circle,
+   so the vertical half of that offset just leaves it sitting high against the
+   text. Keep the horizontal nudge, drop the vertical one.
+   Scoped to match VitePress's own breakpoint - below 960px the hero stacks and
+   centres the image with margin auto, so any transform here knocks it askew. */
+@media (min-width: 960px) {
+  .VPHero .image-container {
+    transform: translate(-32px, 0);
+  }
+}
+
 .goal-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

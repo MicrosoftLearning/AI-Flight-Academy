@@ -26,9 +26,9 @@ A skill that needs more than instructions ships as a folder: `SKILL.md` plus ref
 
 ## Session, task, and chat
 
-Names for the same thing: one conversation with an agent. Cowork calls it a **task**, Scout a **chat** or **session**, the Copilot CLI a **session**.
+Names for the same thing: one conversation with an agent. Cowork calls it a **task**, Scout a **chat** or **session**, and the Copilot CLI a **session**.
 
-Skills are discovered when one begins. A skill installed part-way through isn't picked up until the next one starts.
+Skills are discovered when one begins. A skill installed partway through isn't picked up until the next one starts.
 
 ## Work IQ
 

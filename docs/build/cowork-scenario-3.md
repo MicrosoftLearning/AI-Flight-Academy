@@ -39,7 +39,7 @@ For more definitions, see the [Glossary](/glossary).
 
 ## Before you start
 
-Download both files.
+Download both files below.
 
 <div class="lab-grid lab-grid-2">
   <a class="lab-card" href="/AI-Flight-Academy/downloads/ambassador-skill.zip" download>
@@ -152,7 +152,7 @@ The cards below are **starters, not finished builds**. Use them for inspiration,
     <div class="skill-step-num">3</div>
     <div class="skill-step-body">
       <span class="skill-step-title">Build it by talking</span>
-      <p>You bring the idea, Cowork does the building. Describe what you want, look at what comes back, then tell it what to change. Ask it for options when you're stuck — <em>"what else could this dashboard show?"</em></p>
+      <p>You bring the idea, Cowork does the building. Describe what you want, look at what comes back, then tell it what to change. Ask it for options when you're stuck - <em>"what else could this dashboard show?"</em></p>
     </div>
   </div>
   <div class="skill-step">

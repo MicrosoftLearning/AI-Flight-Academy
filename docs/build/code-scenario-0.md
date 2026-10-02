@@ -109,7 +109,7 @@ Pick the GitHub Copilot surface that fits your workflow. You're not limited to t
    - **Option 1** - your org account, for your **EMU** login.
    - **Option 2** - a linked personal account.
 
-   ![The Copilot CLI login prompt asking which account type to log into, with the org and linked-account options](/img/cli-account-type.png)
+   ![The Copilot CLI login prompt asking which account type to log in to, with the org and linked-account options](/img/cli-account-type.png)
 
 4. At **How do you want to sign in?**, select **Sign in with your browser (recommended)**.
 

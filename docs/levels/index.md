@@ -18,7 +18,7 @@ There's no prize for picking the hardest altitude, and no reason to reach for Sc
   <div class="lab-card">
     <span class="lab-card-emoji">🔵</span>
     <span class="lab-card-title">Scout</span>
-    <span class="lab-card-desc"><strong>Some setup - M365 + a GitHub account.</strong> Expect some permission and connection config up front. Once you're set up, describe what you want and Scout builds it, grounded in your work.</span>
+    <span class="lab-card-desc"><strong>Some setup - Microsoft 365 + a GitHub account.</strong> Expect some permission and connection config up front. Once you're set up, describe what you want and Scout builds it, grounded in your work.</span>
   </div>
   <div class="lab-card">
     <span class="lab-card-emoji">🟣</span>
@@ -31,7 +31,7 @@ There's no prize for picking the hardest altitude, and no reason to reach for Sc
 ## Not sure?
 
 - **Never built an agent before, or don't want any setup?** 🟢 **Cowork**. Point and go - nothing to install.
-- **Happy to do a little setup for something more capable?** 🔵 **Scout**. Needs M365 and a GitHub account.
+- **Happy to do a little setup for something more capable?** 🔵 **Scout**. Needs Microsoft 365 and a GitHub account.
 - **Comfortable in VS Code, or up for vibe coding?** 🟣 **Code**.
 
 Ready? [**Pick your altitude and scenario →**](/#start-here)

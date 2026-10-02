@@ -22,8 +22,6 @@ In this activity you set up a twin, correct what it got wrong, and put it to wor
 
 Steps 1 and 2 are quick - about 20 minutes together. Step 3 is the main build, and it isn't one change: extend it, re-run, see what moved, then extend it again.
 
-**Your twin drafts. You send.** Whatever you build should show you who it's addressed to and what it says, then wait for a yes.
-
 <div class="callout-bubble">
 <span class="callout-bubble-icon">🔒</span>
 
@@ -46,6 +44,8 @@ For more definitions, see the [Glossary](/glossary).
 ## Before you start
 
 **Check Scout is signed in and Work IQ is live.** Ask *"what's on my calendar tomorrow?"* - a real answer means you're ready. If not, grab a coach.
+
+Download the skill below.
 
 <a class="lab-card" href="/AI-Flight-Academy/downloads/my-twin-scout.zip" download style="max-width:30rem">
   <span class="lab-card-emoji">🧬</span>
@@ -102,7 +102,7 @@ Start every one of these with your twin's name. Drop the name and Scout answers 
 
 | Ask something like | You get |
 | --- | --- |
-| *"Clippy, triage what landed today."* | Mail and Teams sorted into needs-me, blocked, handled and noise, with drafts |
+| *"Clippy, triage what landed today."* | Mail and Teams sorted into needs-me, blocked, handled, and noise, with drafts |
 | *"Clippy, draft a reply to [a real thread]."* | Something you could send, in your voice |
 | *"Clippy, what am I forgetting this week?"* | Your calendar and your commitments read together |
 | *"Clippy, what don't you know about how I work?"* | Its own gaps, named - it's read a month of your work |
@@ -111,7 +111,7 @@ Every section of your persona is tagged by how directly the twin knows it:
 
 | | |
 | --- | --- |
-| `[observed]` | Found in your mail, chats or calendar, and the twin can quote it |
+| `[observed]` | Found in your mail, chats, or calendar, and the twin can quote it |
 | `[inferred]` | A reasonable read, but you never said it outright |
 | `[needs you]` | Nothing in your work reached this, so it wrote a starting point |
 
@@ -147,7 +147,7 @@ The cards below are **starters, not finished builds**. Use them for inspiration,
     <div class="skill-step-num">3</div>
     <div class="skill-step-body">
       <span class="skill-step-title">Build it by talking</span>
-      <p>You bring the idea, Scout does the building. Describe what you want, look at what comes back, then tell it what to change. Ask it for options when you're stuck — <em>"what else could this brief include?"</em></p>
+      <p>You bring the idea, Scout does the building. Describe what you want, look at what comes back, then tell it what to change. Ask it for options when you're stuck - <em>"what else could this brief include?"</em></p>
     </div>
   </div>
   <div class="skill-step">
