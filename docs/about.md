@@ -1,7 +1,7 @@
 ---
 layout: page
 sidebar: false
-description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
+description: Meet the V-team behind AI Flight Academy.
 ---
 
 <!-- markdownlint-disable MD033 MD041 -->
@@ -37,7 +37,7 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
 
 # Meet the crew
 
-<p class="about-intro">AI Flight Academy started life as the Imagineer Hack. A seven-piece band from Global Skilling, backed by a ground crew of support players, turned it into two hours of hands-on agent building for Team Week, with three scenarios at three altitudes, more than 20 coaches, and a room full of builders in Anaheim. Here's who's in the band.</p>
+<p class="about-intro">A seven-piece band from Global Skilling, backed by a ground crew of support players, built AI Flight Academy: two hours of hands-on agent building for Team Week, with three scenarios at three altitudes, more than 20 coaches, and a room full of builders in Anaheim. Here's who's in the band.</p>
 
 <p class="about-fineprint">Portraits are AI-stylized from each person's profile photo. Quotes tagged <span class="quote-tag is-real">Actually said</span> are real; quotes tagged <span class="quote-tag">Liner notes</span> are affectionate fiction.</p>
 
@@ -51,7 +51,7 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
   <div class="crew-body">
     <h3 class="crew-name">Erin Jacobsen</h3>
     <p class="crew-role">Lead vocals &amp; tour manager · Program lead</p>
-    <p class="crew-summary">Owned the hack end to end: event planning, coach and SME staffing, readiness sessions, comms, and logistics. She steered the switch from "Imagineer" to the flight theme and set the 40/40/20 guided-to-open progression behind every scenario. She's also why there are captain armbands and marshalling wands.</p>
+    <p class="crew-summary">Owned the hack end to end: event planning, coach and SME staffing, readiness sessions, comms, and logistics. She steered the flight theme. She's also why there are captain armbands and marshalling wands.</p>
     <blockquote class="crew-quote"><p>"If you're not responding, that's fine. Your manager is."</p><span class="quote-tag">Liner notes</span></blockquote>
   </div>
 </article>
@@ -64,7 +64,7 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
   <div class="crew-body">
     <h3 class="crew-name">Matt Quinlan</h3>
     <p class="crew-role">Lead guitar &amp; producer · Scenario and learning design lead</p>
-    <p class="crew-summary">Built this site and its short links, wrote the Scenario 0 Pre-Flight Checklist, Scenario 1 (Digital Twin), and Scenario 3 (Ambassador), and gave the hack its vocabulary: Altitudes, Hangar, Flight Plan, Cleared for Takeoff. He's also the repo's top committer by a wide margin.</p>
+    <p class="crew-summary">Built this site and its short links, wrote the Scenario 0 Pre-Flight Checklist and Scenario 1 (Digital Twin), ported Scenario 3 (Ambassador), and gave the hack its vocabulary: Altitudes, Hangar, Flight Plan, Cleared for Takeoff. He's also the repo's top committer by a wide margin.</p>
     <blockquote class="crew-quote"><p>"My army of agents created most of it."</p><span class="quote-tag is-real">Actually said</span></blockquote>
   </div>
 </article>
@@ -78,7 +78,7 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
     <h3 class="crew-name">Darrin Hanson</h3>
     <p class="crew-role">Rhythm guitar &amp; quality control · Scenario 2 owner</p>
     <p class="crew-summary">Took Scenario 2 from The Greenlight council concept through its rework into The Dispatch, then handled the GitHub build-out, tech prerequisites, and late-stage QC and triage. His constant question: will this actually work for a real participant?</p>
-    <blockquote class="crew-quote"><p>"It works on my machine. Now let's make it work on six hundred more."</p><span class="quote-tag">Liner notes</span></blockquote>
+    <blockquote class="crew-quote"><p>"you wanted options, I GOT options."</p><span class="quote-tag is-real">Actually said</span></blockquote>
   </div>
 </article>
 
@@ -90,8 +90,8 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
   <div class="crew-body">
     <h3 class="crew-name">Andrew Conniff</h3>
     <p class="crew-role">Bass &amp; booking agent · Scenario owner and coach operations</p>
-    <p class="crew-summary">Owned a scenario thread, ran coach and SME recruitment, built the signup automation and tracking, co-led Flight Checks, and co-presents the opening with Dipanjan. He claimed the callsign "Maverick" before anyone else could.</p>
-    <blockquote class="crew-quote"><p>"We need a head coach for the coaches. And a callsign for the head coach. Dibs."</p><span class="quote-tag">Liner notes</span></blockquote>
+    <p class="crew-summary">Designed the original Scenario 3 (Ambassador), ran coach and SME recruitment, built the signup automation and tracking, co-led Flight Checks, and co-presents the opening with Dipanjan. He claimed the callsign "Maverick" before anyone else could.</p>
+    <blockquote class="crew-quote"><p>"Matt sunk my battleship by eliminating copilot"</p><span class="quote-tag is-real">Actually said</span></blockquote>
   </div>
 </article>
 
@@ -103,8 +103,8 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
   <div class="crew-body">
     <h3 class="crew-name">Steve Luper</h3>
     <p class="crew-role">Frontman · MC and SME/coach program lead</p>
-    <p class="crew-summary">Ran the SME and coach program: onboarding, office hours, the final scenario test call, and the Know Before You Go email. He wrote the Autopilot-vs-Scout talk track, and he's the voice in the room in Anaheim.</p>
-    <blockquote class="crew-quote"><p>"Getting closer to Anaheim (time, not distance… yet)."</p><span class="quote-tag is-real">Actually said</span></blockquote>
+    <p class="crew-summary">Hosted the AI Flight Academy meetings and ran the SME and coach program: onboarded every SME and coach, wrangled more than 20 coaches, and kept pushing for feedback. He ran office hours and the final scenario test call. In Anaheim, he's the voice in the room.</p>
+    <blockquote class="crew-quote"><p>"Oh no... nobody should ever hover over our pictures."</p><span class="quote-tag is-real">Actually said</span></blockquote>
   </div>
 </article>
 
@@ -115,9 +115,9 @@ description: Meet the V-team behind the Imagineer Hack and AI Flight Academy.
   </div>
   <div class="crew-body">
     <h3 class="crew-name">Dipanjan Ghosh</h3>
-    <p class="crew-role">Drums &amp; stage tech · Run of show and judging</p>
-    <p class="crew-summary">Co-designed the run of show, handled the tech and dashboard, ran readiness sessions, and designed the submission and judging model: simple, optional, proof-based, and fair at every altitude. He co-presents the opening, too.</p>
-    <blockquote class="crew-quote"><p>"Guess who did that a few days back."</p><span class="quote-tag is-real">Actually said</span></blockquote>
+    <p class="crew-role">Drums &amp; stage tech · Run of show and tech</p>
+    <p class="crew-summary">Co-designed the run of show, handled the tech and dashboard, and ran readiness sessions. He co-presents the opening, too.</p>
+    <blockquote class="crew-quote"><p>"Whatever makes me look like maverick!"</p><span class="quote-tag is-real">Actually said</span></blockquote>
   </div>
 </article>
 
